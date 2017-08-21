@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BackupDialog</class>
+ <widget class="QDialog" name="BackupDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>828</width>
+    <height>424</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BackupDialog</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>4</y>
+     <width>820</width>
+     <height>416</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="labelStart">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>109</y>
+      <width>150</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string> Start</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelEnd">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>208</y>
+      <width>150</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>End</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>801</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label2">
+    <property name="geometry">
+     <rect>
+      <x>159</x>
+      <y>109</y>
+      <width>652</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label3">
+    <property name="geometry">
+     <rect>
+      <x>159</x>
+      <y>208</y>
+      <width>652</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>307</y>
+      <width>801</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBarBackup">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>14</y>
+      <width>790</width>
+      <height>92</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QDateTimeEdit" name="dateTimeStart">
+    <property name="geometry">
+     <rect>
+      <x>164</x>
+      <y>113</y>
+      <width>641</width>
+      <height>92</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonEnd">
+    <property name="geometry">
+     <rect>
+      <x>164</x>
+      <y>212</y>
+      <width>641</width>
+      <height>92</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1 minute</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonBackup">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>311</y>
+      <width>393</width>
+      <height>92</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Backup</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonClose">
+    <property name="geometry">
+     <rect>
+      <x>412</x>
+      <y>311</y>
+      <width>393</width>
+      <height>92</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

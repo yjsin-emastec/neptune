@@ -1,0 +1,16 @@
+#!/bin/sh
+
+/sbin/bootmode
+
+mount -t yaffs2 /dev/mtdblock2 /cfg
+
+touch /tmp/resolv.conf
+chmod 755 /tmp/resolv.conf
+
+PATH="/usr/bin:/usr/sbin:/bin:/sbin"
+LD_LIBRARY_PATH="/usr/local/lib:/usr/lib"
+export PATH
+export LD_LIBRARY_PATH
+export QT_PLUGIN_PATH=/lib
+
+/usr/sysinit.sh

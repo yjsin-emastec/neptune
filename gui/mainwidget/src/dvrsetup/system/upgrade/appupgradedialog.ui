@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AppUpgradeDialog</class>
+ <widget class="QDialog" name="AppUpgradeDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1108</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>APPUPGRADE PROPERTY</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>4</y>
+     <width>1100</width>
+     <height>592</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="buttonClose">
+    <property name="geometry">
+     <rect>
+      <x>843</x>
+      <y>495</y>
+      <width>250</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelStatus">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1081</width>
+      <height>180</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Please insert a USB memory.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUpgrade">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>495</y>
+      <width>250</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Upgrade</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonFind">
+    <property name="geometry">
+     <rect>
+      <x>337</x>
+      <y>495</y>
+      <width>250</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Find</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelModelName">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>197</y>
+      <width>270</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Model Name</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelModelNameValue">
+    <property name="geometry">
+     <rect>
+      <x>279</x>
+      <y>197</y>
+      <width>812</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelVersion">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>267</y>
+      <width>270</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Version</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelVersionValue">
+    <property name="geometry">
+     <rect>
+      <x>279</x>
+      <y>267</y>
+      <width>812</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFileName">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>337</y>
+      <width>270</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>File Name</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFileNameValue">
+    <property name="geometry">
+     <rect>
+      <x>279</x>
+      <y>337</y>
+      <width>812</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>284</x>
+      <y>410</y>
+      <width>801</width>
+      <height>66</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelProgress">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>407</y>
+      <width>270</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Progress</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelProgressValue">
+    <property name="geometry">
+     <rect>
+      <x>279</x>
+      <y>407</y>
+      <width>812</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>labelProgressValue</zorder>
+   <zorder>buttonClose</zorder>
+   <zorder>labelStatus</zorder>
+   <zorder>buttonUpgrade</zorder>
+   <zorder>buttonFind</zorder>
+   <zorder>labelModelName</zorder>
+   <zorder>labelModelNameValue</zorder>
+   <zorder>labelVersion</zorder>
+   <zorder>labelVersionValue</zorder>
+   <zorder>labelFileName</zorder>
+   <zorder>labelFileNameValue</zorder>
+   <zorder>progressBar</zorder>
+   <zorder>labelProgress</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

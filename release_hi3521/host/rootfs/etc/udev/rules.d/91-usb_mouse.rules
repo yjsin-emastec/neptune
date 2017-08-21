@@ -1,0 +1,1 @@
+ACTION!="add", KERNELS=="input*", SUBSYSTEMS=="input", RUN+="/usr/sbin/usbhid_reload.sh"

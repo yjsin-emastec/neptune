@@ -1,0 +1,46 @@
+#ifndef DEVICEPAGE_H
+#define DEVICEPAGE_H
+
+#include <QtGui/QWidget>
+#include "ui_devicepage.h"
+#include "DVR.h"
+
+class TextMessageDialog;
+class VideoInputDialog;
+class TriggerInputDialog;
+class GsensorDialog;
+class BuzzerDialog;
+
+class DevicePage : public QWidget, public Ui::DevicePage
+{
+    Q_OBJECT
+
+public:
+    DevicePage(QWidget *parent = 0);
+    ~DevicePage();
+
+signals:
+	void saveDevicePage(int type);
+	void escapeTabFocus(void);
+	void closeSetupMenu(void);
+
+public slots:
+
+private slots:
+	void onButtonVideo(void);
+	void onButtonTrigger(void);
+	void onButtonGsensor(void);
+	void onButtonBuzzer(void);
+	void onDiskFormat(void);
+	void onButtonClose(void);
+
+private:
+	TextMessageDialog   *msgBox;
+	VideoInputDialog    *videoInputDialog;
+	TriggerInputDialog  *triggerInputDialog;
+	GsensorDialog       *gsensorDialog;
+	BuzzerDialog        *buzzerDialog;
+	disk_used_info_t     diskInfo[MAX_HDD_COUNT];
+};
+
+#endif // DEVICEPAGE_H

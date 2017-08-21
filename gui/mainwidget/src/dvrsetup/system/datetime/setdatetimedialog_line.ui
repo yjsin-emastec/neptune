@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SetDateTimeDialog</class>
+ <widget class="QDialog" name="SetDateTimeDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>290</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SetDateTimeDialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="1" column="1">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="margin">
+      <number>6</number>
+     </property>
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="4" column="13" colspan="3">
+        <widget class="QComboBox" name="comboBoxEndHour">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QComboBox" name="comboBoxTime_1">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2" colspan="3">
+        <widget class="QComboBox" name="comboBoxEndMonth">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="9" colspan="4">
+        <widget class="QComboBox" name="comboBoxEndDay">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="labelEnd">
+         <property name="minimumSize">
+          <size>
+           <width>310</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>END</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <spacer name="horizontalSpacer_End">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>25</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="9" colspan="4">
+        <widget class="QComboBox" name="comboBoxBeginDay">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QLabel" name="labelTime_1">
+         <property name="text">
+          <string>/</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="13" colspan="3">
+        <widget class="QComboBox" name="comboBoxBeginHour">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="11">
+        <widget class="QLabel" name="labelTime_3">
+         <property name="text">
+          <string>:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="8" colspan="2">
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>17</width>
+           <height>25</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="5" column="6">
+        <widget class="QLabel" name="labelTime_2">
+         <property name="text">
+          <string>/</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="4" colspan="2">
+        <widget class="QComboBox" name="comboBoxTime_2">
+         <property name="minimumSize">
+          <size>
+           <width>55</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QLabel" name="label_5">
+         <property name="minimumSize">
+          <size>
+           <width>330</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>TIME ZONE</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2" colspan="14">
+        <widget class="QComboBox" name="comboBoxTimeZone">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>111</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QCheckBox" name="checkBoxSetTime">
+         <property name="minimumSize">
+          <size>
+           <width>330</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>SET DATE &amp;&amp; TIME</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="5" colspan="4">
+        <widget class="QComboBox" name="comboBoxEndWeek">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="12" colspan="2">
+        <widget class="QComboBox" name="comboBoxTime_5">
+         <property name="minimumSize">
+          <size>
+           <width>55</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="labelBegin">
+         <property name="minimumSize">
+          <size>
+           <width>310</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>BEGIN</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <spacer name="horizontalSpacer_Begin">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>25</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="5" column="10">
+        <widget class="QComboBox" name="comboBoxTime_4">
+         <property name="minimumSize">
+          <size>
+           <width>55</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="7">
+        <widget class="QComboBox" name="comboBoxTime_3">
+         <property name="minimumSize">
+          <size>
+           <width>55</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="15">
+        <widget class="QComboBox" name="comboBoxTime_6">
+         <property name="minimumSize">
+          <size>
+           <width>55</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="14">
+        <widget class="QLabel" name="labelTime_4">
+         <property name="text">
+          <string>:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QLabel" name="labelDls">
+         <property name="minimumSize">
+          <size>
+           <width>330</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>DAYLIGHT SAVING</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="5" colspan="4">
+        <widget class="QComboBox" name="comboBoxBeginWeek">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2" colspan="14">
+        <widget class="QComboBox" name="comboBoxDls">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>111</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2" colspan="3">
+        <widget class="QComboBox" name="comboBoxBeginMonth">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QLabel" name="labelTimeFormat">
+         <property name="text">
+          <string>TIME DISPLAY FORMAT</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2" colspan="14">
+        <widget class="QComboBox" name="comboBoxTimeFormat"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_Bottom">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>5</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="label">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>5</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>5</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" rowspan="3">
+    <widget class="QLabel" name="label_2">
+     <property name="minimumSize">
+      <size>
+       <width>5</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>5</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" rowspan="3">
+    <widget class="QLabel" name="label_3">
+     <property name="minimumSize">
+      <size>
+       <width>5</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>5</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLabel" name="label_4">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>5</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>5</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>buttonBox</tabstop>
+  <tabstop>comboBoxTimeFormat</tabstop>
+  <tabstop>comboBoxTimeZone</tabstop>
+  <tabstop>comboBoxDls</tabstop>
+  <tabstop>comboBoxBeginMonth</tabstop>
+  <tabstop>comboBoxBeginWeek</tabstop>
+  <tabstop>comboBoxBeginDay</tabstop>
+  <tabstop>comboBoxBeginHour</tabstop>
+  <tabstop>comboBoxEndMonth</tabstop>
+  <tabstop>comboBoxEndWeek</tabstop>
+  <tabstop>comboBoxEndDay</tabstop>
+  <tabstop>comboBoxEndHour</tabstop>
+  <tabstop>checkBoxSetTime</tabstop>
+  <tabstop>comboBoxTime_1</tabstop>
+  <tabstop>comboBoxTime_2</tabstop>
+  <tabstop>comboBoxTime_3</tabstop>
+  <tabstop>comboBoxTime_4</tabstop>
+  <tabstop>comboBoxTime_5</tabstop>
+  <tabstop>comboBoxTime_6</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

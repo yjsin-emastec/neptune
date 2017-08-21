@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VideoOutputDialog</class>
+ <widget class="QDialog" name="VideoOutputDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>818</width>
+    <height>652</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VIDEO OUTPUT PROPERTY</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>4</y>
+     <width>810</width>
+     <height>644</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="buttonClose">
+    <property name="geometry">
+     <rect>
+      <x>598</x>
+      <y>540</y>
+      <width>200</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSave">
+    <property name="geometry">
+     <rect>
+      <x>398</x>
+      <y>540</y>
+      <width>200</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>386</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label2">
+    <property name="geometry">
+     <rect>
+      <x>405</x>
+      <y>20</y>
+      <width>386</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonHdmi">
+    <property name="geometry">
+     <rect>
+      <x>34</x>
+      <y>34</y>
+      <width>356</width>
+      <height>190</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>HDMI
+1920x1080</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonCvbs">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>34</y>
+      <width>356</width>
+      <height>190</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>CVBS
+720x480</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>239</y>
+      <width>386</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label4">
+    <property name="geometry">
+     <rect>
+      <x>405</x>
+      <y>239</y>
+      <width>386</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>378</y>
+      <width>386</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label6">
+    <property name="geometry">
+     <rect>
+      <x>405</x>
+      <y>378</y>
+      <width>386</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_cvbs_x">
+    <property name="geometry">
+     <rect>
+      <x>34</x>
+      <y>248</y>
+      <width>356</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>110</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>X
+24</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_cvbs_y">
+    <property name="geometry">
+     <rect>
+      <x>34</x>
+      <y>388</y>
+      <width>356</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>110</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Y
+12</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_cvbs_width">
+    <property name="geometry">
+     <rect>
+      <x>421</x>
+      <y>248</y>
+      <width>356</width>
+      <height>119</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>110</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>WIDTH
+672</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_cvbs_height">
+    <property name="geometry">
+     <rect>
+      <x>422</x>
+      <y>387</y>
+      <width>356</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>110</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>HEIGHT
+456</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

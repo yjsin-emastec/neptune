@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NormalDialog</class>
+ <widget class="QDialog" name="NormalDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>888</width>
+    <height>594</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>NORMAL PROPERTY</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>20</y>
+     <width>851</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QPushButton" name="buttonFrameRate">
+      <property name="minimumSize">
+       <size>
+        <width>236</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Frame Rate
+5/15/20/25/30 Fps</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="buttonChannel">
+      <property name="minimumSize">
+       <size>
+        <width>236</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Channel
+1/2/3/4/</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="buttonDefault">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>236</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Default</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="buttonRecording">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>236</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Recording
+Off/On</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="buttonQuality">
+      <property name="minimumSize">
+       <size>
+        <width>236</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Quality
+L/M/H</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="buttonAudio">
+      <property name="minimumSize">
+       <size>
+        <width>236</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Audio
+Off/On</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="buttonSave">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>489</y>
+     <width>200</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonClose">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>489</y>
+     <width>200</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>4</y>
+     <width>880</width>
+     <height>586</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>gridLayoutWidget</zorder>
+  <zorder>buttonSave</zorder>
+  <zorder>buttonClose</zorder>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

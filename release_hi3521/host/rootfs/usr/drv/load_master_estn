@@ -1,0 +1,183 @@
+#!/bin/sh
+# Useage: ./load [ -r|-i|-a ][type]
+#         -r : rmmod all modules
+#         -i : insmod all modules
+#    default : rmmod all moules and then insmod them
+#        type: 16d1,16960h,4hd,8720p,8bt656,1hd12d1
+#
+
+SDK_TYPE=16d1
+DISK_FORMAT=`cat /tmp/disk_format`
+SUB_OEM=`cat /etc/SUB_OEM`
+
+if [ $# -ge 2 ]; then
+    SDK_TYPE=$2
+fi
+
+
+if [ $SDK_TYPE = "16d1" ]; then
+    echo "SDK_TYPE type is $SDK_TYPE"
+elif [ $SDK_TYPE = "4ahd" ]; then
+    echo "SDK_TYPE type is $SDK_TYPE" 
+else
+    SDK_TYPE=4ahd
+
+    echo "SDK_TYPE type is $SDK_TYPE"
+fi
+
+report_error()
+{
+    echo "******* Error!! Shell exit for error *****"
+    exit 1
+}
+
+insert_audio()
+{
+    insmod hidmac.ko
+    insmod hi3521_sio.ko
+    insmod hi3521_ai.ko
+    insmod hi3521_ao.ko
+    insmod hi3521_aenc.ko
+    insmod hi3521_adec.ko
+}
+
+remove_audio()
+{
+    rmmod hi3521_adec
+    rmmod hi3521_aenc
+    rmmod hi3521_ao
+    rmmod hi3521_ai
+    rmmod hi3521_sio
+    #rmmod acodec
+    #rmmod tlv_320aic31
+    rmmod hidmac
+}
+
+insert_ko()
+{
+    if [ $SDK_TYPE = "16d1" ]; then
+        sh ./pinmux_hi3521_16D1.sh > /dev/null
+		himm 0x20110168  0x03ff2
+		if [ $DISK_FORMAT == 0 ]; then
+			insmod mmz.ko mmz=anonymous,0,0x98000000,639M:jpeg,0,0xBff00000,1M anony=1 || report_error
+		else
+			insmod mmz.ko mmz=anonymous,0,0x98000000,639M:jpeg,0,0xBff00000,1M anony=1 || report_error
+		fi
+    fi
+
+	if [ $SDK_TYPE = "4ahd" ]; then
+        sh ./pinmux_hi3521_16D1.sh
+		himm 0x20110168  0x03ff2
+		if [ $DISK_FORMAT == 0 ]; then
+			#insmod mmz.ko mmz=anonymous,0,0x98000000,639M:jpeg,0,0xBff00000,1M anony=1 || report_error
+			#insmod mmz.ko mmz=anonymous,0,0x90000000,255M:jpeg,0,0x9ff00000,1M anony=1 || report_error
+			insmod mmz.ko mmz=anonymous,0,0xA0000000,511M:jpeg,0,0xBFF00000,1M anony=1 || report_error
+		else
+			#insmod mmz.ko mmz=anonymous,0,0x98000000,639M:jpeg,0,0xBff00000,1M anony=1 || report_error
+			#insmod mmz.ko mmz=anonymous,0,0x92000000,255M:jpeg,0,0x9ff00000,1M anony=1 || report_error
+			insmod mmz.ko mmz=anonymous,0,0xA0000000,511M:jpeg,0,0xBFF00000,1M anony=1 || report_error
+		fi
+    fi
+
+    if [ $SDK_TYPE = "8960h" ]; then
+       sh ./pinmux_hi3521_16D1.sh > /dev/null
+    fi
+   
+    if [ $SDK_TYPE = "2hd" ]; then
+       sh ./pinmux_hi3521_2X1080P.sh > /dev/null
+    fi
+   
+    if [ $SDK_TYPE = "4hd" ]; then
+       sh ./pinmux_hi3521_4X720P.sh > /dev/null
+    fi
+   
+    if [ $SDK_TYPE = "1hd7d1" ]; then
+        sh ./pinmux_hi3521_1XHD_7XD1.sh > /dev/null
+    fi
+    
+    sh ./clkcfg_hi3521.sh > /dev/null
+	
+	insmod hiuser.ko
+    insmod hi3521_base.ko
+    insmod hi3521_sys.ko
+    insmod hi3521_tde.ko g_u32TdeTmpBufW=0 g_u32TdeTmpBufH=0
+    insmod hi3521_dsu.ko
+    insmod hi3521_venc.ko
+    insmod hi3521_group.ko
+    insmod hi3521_chnl.ko
+    insmod hi3521_h264e.ko
+    insmod hi3521_rc.ko
+    insmod hi3521_jpege.ko
+    insmod hi3521_viu.ko
+    insmod hi3521_vou.ko
+    insmod hi3521_vpss.ko
+    insmod hi3521_ive.ko
+    insmod hi3521_vda.ko
+    insmod hi3521_region.ko
+    insmod vcmp.ko
+#   insmod hifb.ko video="hifb:vram0_size:14400,vram1_size:16,vram2_size:16,vram3_size:16" softcursor="off" u32VcmpBufNum=2
+#	insmod hifb.ko video="hifb:vram0_size:8400,vram1_size:16,vram2_size:16,vram3_size:16" softcursor="off" u32VcmpBufNum=2
+	insmod hifb.ko video="hifb:vram0_size:4200,vram1_size:16,vram2_size:16,vram3_size:16" softcursor="off" u32VcmpBufNum=1
+    insmod hi3521_vdec.ko
+    insmod hi3521_vfmw.ko
+    insmod hi3521_hdmi.ko
+    insmod jpeg.ko
+    insmod extdrv/gpioi2c.ko
+    insmod extdrv/gpiomisc.ko
+#    insmod extdrv/i2c.ko
+    insmod extdrv/gpio_devs20a.ko
+    insmod extdrv/hi_ir.ko
+    insmod extdrv/lis331dlh.ko
+    insmod extdrv/nvp6124_ex.ko nvp6124_mode=1
+	insmod extdrv/wdt.ko nodeamon=1
+
+    insert_audio
+    sh ./sysctl_hi3521.sh > /dev/null
+}
+
+remove_ko()
+{
+    remove_audio
+    rmmod gpioi2c
+    rmmod hifb
+    rmmod vcmp
+    rmmod hi3521_region
+    rmmod hi3521_ive
+    rmmod hi3521_vda
+    rmmod hi3521_vpss
+    rmmod hi3521_vou
+    rmmod hi3521_viu
+    rmmod jpeg
+    rmmod hi3521_hdmi.ko
+    rmmod hi3521_vfmw.ko
+    rmmod hi3521_vdec.ko   
+    rmmod hi3521_jpege
+    rmmod hi3521_rc
+    rmmod hi3521_h264e
+    #rmmod hi3526_mpeg4e
+    rmmod hi3521_chnl
+    rmmod hi3521_group
+    rmmod hi3521_venc
+    rmmod hi3521_dsu
+    rmmod hi3521_tde
+    rmmod hi3521_sys
+    rmmod hi3521_base
+    rmmod mmz
+}
+
+# load module.
+if [ "$1" = "-i" ]
+then
+    insert_ko
+fi
+
+if [ "$1" = "-r" ]
+then
+    remove_ko
+fi
+
+if [ $# -eq 0 ] || [ "$1" = "-a" ]
+then
+    remove_ko
+    insert_ko
+fi

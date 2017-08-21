@@ -1,0 +1,17 @@
+sh delink
+chmod 755 rootfs/bin/*
+sh mklink
+
+mknod rootfs/dev/console c 5 1
+mknod rootfs/dev/ttyAMA0 c 204 64
+mknod rootfs/dev/ttyAMA1 c 204 65
+mknod rootfs/dev/ttyS000 c 204 64
+
+../../mkimage_files/mkfs.ubifs -m 2048 -e 126976 -c 800 -r rootfs -x none ubifs.img
+../../mkimage_files/ubinize -o rootfs.img -m 2048 -p 131072 -s 2048 -O 2048 rootfs.ini
+rm ubifs.img
+mv rootfs.img images/
+
+cp -a images/* /tftpboot
+
+ls -al images

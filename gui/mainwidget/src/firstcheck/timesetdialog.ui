@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TimeSetDialog</class>
+ <widget class="QDialog" name="TimeSetDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1078</width>
+    <height>666</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TIME SET PROPERTY</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>4</y>
+     <width>1070</width>
+     <height>658</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="labelTimeTitle">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>1029</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string> Record Time Error</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSetTime">
+    <property name="geometry">
+     <rect>
+      <x>671</x>
+      <y>550</y>
+      <width>384</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Time</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSystemTime2">
+    <property name="geometry">
+     <rect>
+      <x>399</x>
+      <y>436</y>
+      <width>650</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QDateTimeEdit" name="dateTimeSystem">
+    <property name="geometry">
+     <rect>
+      <x>404</x>
+      <y>441</y>
+      <width>639</width>
+      <height>80</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTimeStatus">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>119</y>
+      <width>1029</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>24</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>System time is different from recording time.
+You must delete data or set time.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLastTime1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>357</y>
+      <width>380</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Last Time</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFirstTime1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>278</y>
+      <width>380</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>First Time</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFirstTime2">
+    <property name="geometry">
+     <rect>
+      <x>399</x>
+      <y>278</y>
+      <width>650</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>2017/02/15 18:00:00</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLastTime2">
+    <property name="geometry">
+     <rect>
+      <x>399</x>
+      <y>357</y>
+      <width>650</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>2017/02/15 18:00:00</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSystemTime1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>436</y>
+      <width>380</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>System Time</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDeleteData">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>550</y>
+      <width>384</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Data</string>
+    </property>
+   </widget>
+   <zorder>labelTimeTitle</zorder>
+   <zorder>buttonSetTime</zorder>
+   <zorder>labelTimeStatus</zorder>
+   <zorder>labelLastTime1</zorder>
+   <zorder>labelFirstTime1</zorder>
+   <zorder>labelFirstTime2</zorder>
+   <zorder>labelLastTime2</zorder>
+   <zorder>labelSystemTime1</zorder>
+   <zorder>labelSystemTime2</zorder>
+   <zorder>dateTimeSystem</zorder>
+   <zorder>buttonDeleteData</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

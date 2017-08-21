@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qss/darkstyle.qss</file>
+        <file>images/record_on.png</file>
+        <file>images/slider_handle.png</file>
+        <file>images/cursor.png</file>
+        <file>images/gps.png</file>
+        <file>images/audio.png</file>
+        <file>images/audio1.png</file>
+        <file>images/audio2.png</file>
+        <file>images/audio3.png</file>
+        <file>images/audio4.png</file>
+        <file>images/aomute.png</file>
+        <file>images/arrow_up.png</file>
+        <file>images/arrow_down.png</file>
+        <file>images/play.png</file>
+        <file>images/ff_frame.png</file>
+        <file>images/rew_frame.png</file>
+        <file>images/rew.png</file>
+        <file>images/ff.png</file>
+        <file>images/still_image.png</file>
+        <file>images/pause.png</file>
+        <file>images/close.png</file>
+    </qresource>
+</RCC>
