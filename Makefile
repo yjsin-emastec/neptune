@@ -17,8 +17,8 @@ Gui: dummy
 	@$(ECHO)  "QT MainWidget"
 	@$(CD)    gui/mainwidget; $(SH) build.sh
 	@$(CPARF) gui/mainwidget/mainwidget $(LIBDIR)
-ifeq (exist,$(shell [ -e $(TMP)/host/rootfs/usr/local/Trolltech/translator ] && echo exist))
-	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/* $(TMP)/host/rootfs/usr/local/Trolltech/translator
+ifeq (exist,$(shell [ -e $(TMP) ] && echo exist))
+	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator $(TMP)/host/rootfs/usr/local/Trolltech
 endif
 
 Install: $(TAG_INSTALL)
@@ -45,7 +45,7 @@ SetModelDep: dummy
 	@$(ECHO) $(EA_2ND_IFNAME) > $(TMP)/host/rootfs/etc/ifname2.conf
 
 CopyUserlib2Tmp: dummy
-	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/* $(TMP)/host/rootfs/usr/local/Trolltech/translator
+	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator   $(TMP)/host/rootfs/usr/local/Trolltech
 	@$(CD) $(LIBDIR); $(SH) script/export2usrlib.sh    $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
 	@$(ECHO) "QT BASE COPY!!!!!"
 	@$(CD) $(LIBDIR); $(SH) script/export2host.sh      $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
