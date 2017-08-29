@@ -19,15 +19,16 @@ then
 	V=`cat ver.txt`				# version
 	D=`date '+%Y%m%d'`			# date
 
+	BIN="cardvr_${M}_${v}_${V}_${D}.bin"
+	bin=`echo ${BIN} | tr A-Z a-z`
+
 	echo ""
-	echo "make cardvr.bin for \"${M}_${v}\""
+	echo "make ${bin} for \"${M}_${v}\""
+	echo ""
 
 	sh script/makeCarDvr.sh ${N}
 
-	BIN="cardvr_${M}_${v}_${V}_${D}.bin"
-	bin=`echo ${BIN} | tr A-Z a-z`
 	cp cardvr.bin ${bin}
-	ls
 else
 	echo "No such model_num.txt"
 	exit 1
