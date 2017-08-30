@@ -3,7 +3,7 @@ PROJECT_ROOT=..
 include rules.mk
 
 TAG_ALL     = Mklink Version Gui
-TAG_INSTALL	= ExportRelease2Tmp SetModelDep CopyUserlib2Tmp
+TAG_INSTALL = ExportRelease2Tmp SetModelDep CopyUserlib2Tmp
 
 all: $(TAG_ALL)
 
