@@ -100,6 +100,9 @@
     <property name="text">
      <string>License Plate</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">

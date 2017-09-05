@@ -229,7 +229,7 @@ void CalendarPage::UpdateMonthLabel()
         case 12:    str = tr("Dec");    break;
     }
 
-    str += tr(", %1").arg(calendarData[curMonthIndex].year);
+    str = tr("%1, %2").arg(str).arg(calendarData[curMonthIndex].year);
     lableDate->setText(str);
 }
 void CalendarPage::UpdateSelectTime()

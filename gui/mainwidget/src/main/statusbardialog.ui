@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>730</width>
+    <width>790</width>
     <height>80</height>
    </rect>
   </property>
@@ -28,9 +28,15 @@
     <rect>
      <x>4</x>
      <y>4</y>
-     <width>722</width>
+     <width>782</width>
      <height>72</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -43,7 +49,7 @@
      <rect>
       <x>10</x>
       <y>7</y>
-      <width>520</width>
+      <width>550</width>
       <height>59</height>
      </rect>
     </property>
@@ -80,14 +86,14 @@
    <widget class="QLabel" name="labelNoDisk">
     <property name="geometry">
      <rect>
-      <x>534</x>
+      <x>550</x>
       <y>8</y>
-      <width>180</width>
+      <width>225</width>
       <height>58</height>
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
@@ -110,11 +116,17 @@
    <widget class="QProgressBar" name="progressBarHdd">
     <property name="geometry">
      <rect>
-      <x>534</x>
+      <x>550</x>
       <y>8</y>
-      <width>180</width>
+      <width>225</width>
       <height>58</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="font">
      <font>
@@ -134,8 +146,6 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="../../mainwidget.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

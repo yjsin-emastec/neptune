@@ -26,20 +26,20 @@ void EventDialog::initEventConfig(void)
 {
     switch(cfgSetup.rec.pre_record[0])
     {
-        case 1: { buttonEventTime->setText(tr("%1\n%2: %3").arg(tr("Event"),tr("Time"),tr("15sec"))); indexEventTime = 1; } break;
-        case 2: { buttonEventTime->setText(tr("%1\n%2: %3").arg(tr("Event"),tr("Time"),tr("30sec"))); indexEventTime = 0; } break;
+        case 1: { buttonEventTime->setText(tr("%1%2%3").arg(tr("Event"),tr("\nTime: "),tr("15sec"))); indexEventTime = 1; } break;
+        case 2: { buttonEventTime->setText(tr("%1%2%3").arg(tr("Event"),tr("\nTime: "),tr("30sec"))); indexEventTime = 0; } break;
     }
 
     switch(utils_cfg_cmp_item(RecordCfg.event_impact, "OFF"))
     {
-        case 0:  { buttonGsensor->setText(tr("%1\n%2: %3").arg(tr("Impact"),tr("Record"),tr("Off"))); indexGsensor = 1; break; }
-        default: { buttonGsensor->setText(tr("%1\n%2: %3").arg(tr("Impact"),tr("Record"),tr("On" ))); indexGsensor = 0; break; }
+        case 0:  { buttonGsensor->setText(tr("%1%2%3").arg(tr("Impact"),tr("\nRecord: "),tr("Off"))); indexGsensor = 1; break; }
+        default: { buttonGsensor->setText(tr("%1%2%3").arg(tr("Impact"),tr("\nRecord: "),tr("On" ))); indexGsensor = 0; break; }
     }
 
     switch(utils_cfg_cmp_item(RecordCfg.event_trigger, "OFF"))
     {
-        case 0:  { buttonTrigger->setText(tr("%1\n%2: %3").arg(tr("Trigger"),tr("Record"),tr("Off"))); indexTrigger = 1; break; }
-        default: { buttonTrigger->setText(tr("%1\n%2: %3").arg(tr("Trigger"),tr("Record"),tr("On" ))); indexTrigger = 0; break; }
+        case 0:  { buttonTrigger->setText(tr("%1%2%3").arg(tr("Trigger"),tr("\nRecord: "),tr("Off"))); indexTrigger = 1; break; }
+        default: { buttonTrigger->setText(tr("%1%2%3").arg(tr("Trigger"),tr("\nRecord: "),tr("On" ))); indexTrigger = 0; break; }
     }
 }
 void EventDialog::onEventTime()
@@ -48,14 +48,14 @@ void EventDialog::onEventTime()
 
     if(indexEventTime == 0)
     {
-        buttonEventTime->setText(tr("%1\n%2: %3").arg(tr("Event"),tr("Time"),tr("15sec")));
+        buttonEventTime->setText(tr("%1%2%3").arg(tr("Event"),tr("\nTime: "),tr("15sec")));
         cfgSetup.rec.pre_record[ch]  = 1;
         cfgSetup.rec.post_record[ch] = 15;
         indexEventTime               = 1;
     }
     else if(indexEventTime == 1)
     {
-        buttonEventTime->setText(tr("%1\n%2: %3").arg(tr("Event"),tr("Time"),tr("30sec")));
+        buttonEventTime->setText(tr("%1%2%3").arg(tr("Event"),tr("\nTime: "),tr("30sec")));
         cfgSetup.rec.pre_record[ch]  = 2;
         cfgSetup.rec.post_record[ch] = 30;
         indexEventTime               = 0;
@@ -68,7 +68,7 @@ void EventDialog::onGsensor()
     {
         case 0:
 
-            buttonGsensor->setText(tr("%1\n%2: %3").arg(tr("Impact"),tr("Record"),tr("Off")));
+            buttonGsensor->setText(tr("%1%2%3").arg(tr("Impact"),tr("\nRecord: "),tr("Off")));
             utils_cfg_cpy_item(RecordCfg.event_impact, "OFF");
             indexGsensor = 1;
 
@@ -76,7 +76,7 @@ void EventDialog::onGsensor()
 
         case 1:
 
-            buttonGsensor->setText(tr("%1\n%2: %3").arg(tr("Impact"),tr("Record"),tr("On")));
+            buttonGsensor->setText(tr("%1%2%3").arg(tr("Impact"),tr("\nRecord: "),tr("On")));
             utils_cfg_cpy_item(RecordCfg.event_impact, "ON");
             indexGsensor = 0;
 
@@ -89,7 +89,7 @@ void EventDialog::onTrigger()
     {
         case 0:
 
-            buttonTrigger->setText(tr("%1\n%2: %3").arg(tr("Trigger"),tr("Record"),tr("Off")));
+            buttonTrigger->setText(tr("%1%2%3").arg(tr("Trigger"),tr("\nRecord: "),tr("Off")));
             utils_cfg_cpy_item(RecordCfg.event_trigger, "OFF");
             indexTrigger = 1;
 
@@ -97,7 +97,7 @@ void EventDialog::onTrigger()
 
         case 1:
 
-            buttonTrigger->setText(tr("%1\n%2: %3").arg(tr("Trigger"),tr("Record"),tr("On")));
+            buttonTrigger->setText(tr("%1%2%3").arg(tr("Trigger"),tr("\nRecord: "),tr("On")));
             utils_cfg_cpy_item(RecordCfg.event_trigger, "ON");
             indexGsensor = 0;
             indexTrigger = 0;

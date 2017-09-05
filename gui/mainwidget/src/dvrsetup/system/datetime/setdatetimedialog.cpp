@@ -284,7 +284,7 @@ void SetDateTimeDialog::initComboBox()
 
     monthDayCheck(4);
 
-    switch (timeFormat) 
+    switch (timeFormat)
     {
         case DF_A_YYYY_MM_DD:
         case DF_B_YYYY_MM_DD:
@@ -308,7 +308,7 @@ void SetDateTimeDialog::initComboBox()
             break;
     }
 
-    switch (timeFormat) 
+    switch (timeFormat)
     {
         case DF_A_YYYY_MM_DD:
         case DF_A_MM_DD_YYYY:
@@ -355,11 +355,11 @@ void SetDateTimeDialog::initComboBox()
         {
             if(isEndOverlap)
             {
-                comboBoxTime_4->setCurrentIndex(tmNow.tm_hour+1);  
+                comboBoxTime_4->setCurrentIndex(tmNow.tm_hour+1);
             }
             else
             {
-                comboBoxTime_4->setCurrentIndex(tmNow.tm_hour);  
+                comboBoxTime_4->setCurrentIndex(tmNow.tm_hour);
             }
         }
         else if(tmNow.tm_hour >= (dlsSetDate.dlsEndHour))
@@ -380,7 +380,7 @@ void SetDateTimeDialog::initComboBox()
     comboBoxTime_6->setCurrentIndex(tmNow.tm_sec);
 
     getChangedTime(&oldTime);
-}
+}//
 SetDateTimeDialog::~SetDateTimeDialog()
 {
 }
@@ -484,7 +484,7 @@ void SetDateTimeDialog::enableSetTime()
 
         memset(szDate, 0, 30);
 
-        switch (DateFormat) 
+        switch (DateFormat)
         {
             case 0:
             default : 	//YYYY/MM/DD
@@ -620,7 +620,7 @@ void SetDateTimeDialog::getChangedTime(time_t *newTime)
 
     if(dlsSetDate.isChecked && dlsSetDate.isDlsEnabled)
     {
-        if(when.tm_mon == dlsSetDate.dlsEndMonth && when.tm_mday == dlsSetDate.dlsEndDay) 
+        if(when.tm_mon == dlsSetDate.dlsEndMonth && when.tm_mday == dlsSetDate.dlsEndDay)
         {
             if(when.tm_hour < dlsSetDate.dlsEndHour)
             {
@@ -643,7 +643,7 @@ void SetDateTimeDialog::getChangedTime(time_t *newTime)
                 *newTime     = mktime(&when);
             }
         }
-        else if(when.tm_mon == dlsSetDate.dlsBeginMonth && when.tm_mday == dlsSetDate.dlsBeginDay) 
+        else if(when.tm_mon == dlsSetDate.dlsBeginMonth && when.tm_mday == dlsSetDate.dlsBeginDay)
         {
             when.tm_hour = comboBoxTime_4->currentIndex();
             when.tm_min  = comboBoxTime_5->currentIndex();
@@ -732,7 +732,7 @@ void SetDateTimeDialog::resetHour()
     prevHourLen = comboBoxTime_4->count();
     prevHour    = comboBoxTime_4->currentIndex();
 
-    switch (timeFormat) 
+    switch (timeFormat)
     {
         case DF_A_YYYY_MM_DD:
         case DF_B_YYYY_MM_DD:
@@ -781,7 +781,7 @@ void SetDateTimeDialog::resetHour()
                     comboBoxTime_4->addItem(str);
                 }
             }
-        } 
+        }
         else
         {
             if(prevHourLen != 24)
@@ -812,11 +812,11 @@ void SetDateTimeDialog::resetHour()
 
     if(prevHour >= comboBoxTime_4->count())
     {
-        comboBoxTime_4->setCurrentIndex(comboBoxTime_4->count() - 1);  
+        comboBoxTime_4->setCurrentIndex(comboBoxTime_4->count() - 1);
     }
     else
     {
-        comboBoxTime_4->setCurrentIndex(prevHour);  
+        comboBoxTime_4->setCurrentIndex(prevHour);
     }
 }
 void SetDateTimeDialog::time1Changed(int val)
@@ -825,7 +825,7 @@ void SetDateTimeDialog::time1Changed(int val)
 
     monthDayCheck(1);
 
-    resetHour();  
+    resetHour();
 }
 void SetDateTimeDialog::time2Changed(int val)
 {
@@ -833,7 +833,7 @@ void SetDateTimeDialog::time2Changed(int val)
 
     monthDayCheck(2);
 
-    resetHour();  
+    resetHour();
 }
 void SetDateTimeDialog::time3Changed(int val)
 {
@@ -841,7 +841,7 @@ void SetDateTimeDialog::time3Changed(int val)
 
     monthDayCheck(3);
 
-    resetHour();  
+    resetHour();
 }
 void SetDateTimeDialog::monthDayCheck(int type)
 {
@@ -850,7 +850,7 @@ void SetDateTimeDialog::monthDayCheck(int type)
     QString str;
     QComboBox *comboDay = NULL;
 
-    switch (timeFormat) 
+    switch (timeFormat)
     {
         case DF_A_YYYY_MM_DD:
         case DF_B_YYYY_MM_DD:

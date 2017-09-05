@@ -213,11 +213,8 @@ void SystemPage::onButtonLanguage(void)
     if(languageDialog->exec())
     {
         qDebug("%s has changed ......................", __func__);
-#if 1 // jungyver [16/12/12] Save only english temporally
-        emit saveSystemPage(0, 0);
-#else
+
         emit saveSystemPage(6, 0);
-#endif
     }
     else
     {

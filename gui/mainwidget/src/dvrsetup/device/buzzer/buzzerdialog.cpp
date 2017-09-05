@@ -24,8 +24,8 @@ void BuzzerDialog::initBuzzerConfig(void)
 {
     switch(utils_cfg_cmp_item(DeviceCfg.buzzer_output, "OFF"))
     {
-        case 0:  { buttonBuzzer->setText(tr("%1\n%2").arg(tr("Buzzer"),tr("Output: Off"))); indexBuzzer = 1; break; }
-        default: { buttonBuzzer->setText(tr("%1\n%2").arg(tr("Buzzer"),tr("Output: On")));  indexBuzzer = 0; break; }
+        case 0:  { buttonBuzzer->setText(tr("%1%2").arg(tr("Buzzer"),tr("\nOutput: Off"))); indexBuzzer = 1; break; }
+        default: { buttonBuzzer->setText(tr("%1%2").arg(tr("Buzzer"),tr("\nOutput: On")));  indexBuzzer = 0; break; }
     }
 }
 void BuzzerDialog::onButtonBuzzer()
@@ -34,7 +34,7 @@ void BuzzerDialog::onButtonBuzzer()
     {
         case 0:
 
-            buttonBuzzer->setText(tr("%1\n%2").arg(tr("Buzzer"),tr("Output: Off")));
+            buttonBuzzer->setText(tr("%1%2").arg(tr("Buzzer"),tr("\nOutput: Off")));
             utils_cfg_cpy_item(DeviceCfg.buzzer_output, "OFF");
             indexBuzzer = 1;
 
@@ -42,7 +42,7 @@ void BuzzerDialog::onButtonBuzzer()
 
         case 1:
 
-            buttonBuzzer->setText(tr("%1\n%2").arg(tr("Buzzer"),tr("Output: On")));
+            buttonBuzzer->setText(tr("%1%2").arg(tr("Buzzer"),tr("\nOutput: On")));
             utils_cfg_cpy_item(DeviceCfg.buzzer_output, "ON");
             indexBuzzer = 0;
 

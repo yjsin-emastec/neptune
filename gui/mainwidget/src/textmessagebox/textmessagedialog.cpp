@@ -276,6 +276,8 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
         case 13:
 
+
+
             break;
 
         case 14:
@@ -284,6 +286,19 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
             buttonOk->setMinimumSize(250,100);
             buttonLayout->addWidget(buttonOk);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
+
+            break;
+
+        case 15:    //LanguageDialog::onButtonLanguageSave
+qDebug("textmessagebox create");
+            buttonOk = new QPushButton(tr("Ok"));
+            buttonCancel = new QPushButton(tr("Cancel"));
+            buttonOk->setMinimumSize(250,100);
+            buttonCancel->setMinimumSize(250,100);
+            buttonLayout->addWidget(buttonOk);
+            buttonLayout->addWidget(buttonCancel);
+            connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
+            connect(buttonCancel, SIGNAL(clicked()), this, SLOT(buttonReject()));
 
             break;
 

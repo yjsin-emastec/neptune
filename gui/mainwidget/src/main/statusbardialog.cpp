@@ -7,56 +7,56 @@
 #include "dev/Ver.h"
 
 #define TIME_LABEL_STYLE			"color:white;font-weight: bold;font-size:42px;"
-		
+
 StatusBarDialog::StatusBarDialog(int timeFormat, QWidget *parent)
     : QDialog(parent)
 {
-	setupUi(this);
+    setupUi(this);
 
-	setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
+    setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
-	setPalette(QPalette(QColor(255, 128, 64)));
-	frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
+    setPalette(QPalette(QColor(255, 128, 64)));
+    frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
 
-	timeDisplayFormat = timeFormat;
+    timeDisplayFormat = timeFormat;
 
-	QString style;
+    QString style;
 
     style = QString(TIME_LABEL_STYLE);
 
-	setAutoFillBackground(true);
+    setAutoFillBackground(true);
 
-	labelTime->setStyleSheet(style);
-	labelTime->setText(updateTime_value());
-	progressBarHdd->setStyleSheet(style);
-	labelNoDisk->setStyleSheet(style);
+    labelTime->setStyleSheet(style);
+    labelTime->setText(updateTime_value());
+    progressBarHdd->setStyleSheet(style);
+    labelNoDisk->setStyleSheet(style);
 
-	progressBarHdd->setRange(0, 100);
-	progressBarHdd->setValue(0);
+    progressBarHdd->setRange(0, 100);
+    progressBarHdd->setValue(0);
 
-	isNoDisk    = 0;
+    isNoDisk    = 0;
 
-	labelNoDisk->setStyleSheet(style + "background: rgb(152, 14, 69);");
-	labelNoDisk->hide();
+    labelNoDisk->setStyleSheet(style + "background: rgb(152, 14, 69);");
+    labelNoDisk->hide();
 
     memset(diskInfo, 0, sizeof(disk_used_info_t) * MAX_HDD_COUNT);
-    appmgr_get_disk_info(diskInfo);	
+    appmgr_get_disk_info(diskInfo);
 }
 StatusBarDialog::~StatusBarDialog()
 {
 }
 void StatusBarDialog::setTimeFormat(int timeFormat)
 {
-	timeDisplayFormat = timeFormat;
+    timeDisplayFormat = timeFormat;
 
-	if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
-	{
-		this->is24HourMode = false;
-	}
-	else
-	{
-		this->is24HourMode = true;
-	}
+    if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
+    {
+        this->is24HourMode = false;
+    }
+    else
+    {
+        this->is24HourMode = true;
+    }
 }
 void StatusBarDialog::updateDiskProgress(unsigned int diskSize, unsigned int diskFree)
 {
@@ -66,8 +66,8 @@ void StatusBarDialog::updateDiskProgress(unsigned int diskSize, unsigned int dis
     if(used == -1000) // disk not found
     {
         qDebug("%s: used = -1000 \n", __func__);
-    } 
-    else 
+    }
+    else
     {
         if(isNoDisk > 0)
         {
@@ -122,7 +122,7 @@ void StatusBarDialog::updateDiskProgress(unsigned int diskSize, unsigned int dis
             {
                 labelNoDisk->hide();
             }
-        } 
+        }
         else
         {
             if(used < 0 || used > 100)
@@ -142,188 +142,188 @@ void StatusBarDialog::updateDiskProgress(unsigned int diskSize, unsigned int dis
 QString StatusBarDialog::updateTime_value()
 {
     QString str, strNoDisk;
-	char szDate[32];
-	char szTime[32];
-	QString sTime, sAmPm;
-	time_t now;
-	struct tm tmNow;
-	int dlsType = DLS_OFF, isEndOverlap = 0;
+    char szDate[32];
+    char szTime[32];
+    QString sTime, sAmPm;
+    time_t now;
+    struct tm tmNow;
+    int dlsType = DLS_OFF, isEndOverlap = 0;
 
-  	time(&now);
+    time(&now);
     localtime_r(&now, &tmNow);
- 
-	if(diskInfo[0].hddCount == 0)
-	{
-		if(isNoDisk > 0)
-		{
-			strNoDisk = "   "+tr("NO DISK")+"   ";
-			labelNoDisk->setText(strNoDisk);
-		}
-		else
-		{
+
+    if(diskInfo[0].hddCount == 0)
+    {
+        if(isNoDisk > 0)
+        {
+            strNoDisk = "   "+tr("NO DISK")+"   ";
+            labelNoDisk->setText(strNoDisk);
+        }
+        else
+        {
             isNoDisk = 1;
             progressBarHdd->hide();
             strNoDisk = "   "+tr("NO DISK")+"   ";
             labelNoDisk->setText(strNoDisk);
             labelNoDisk->show();
             qDebug("\n\t No Disk.... %d\n", isNoDisk);
-		}
-	}
-	else
-	{
-		if(progressBarHdd->isHidden())
-        {
-			progressBarHdd->show();
         }
-	}
-
-	if(dlsLive.isChecked && dlsLive.isDlsEnabled)
-	{
-		if(dlsLive.dlsCheckYear != tmNow.tm_year)
+    }
+    else
+    {
+        if(progressBarHdd->isHidden())
         {
-			appmgr_make_dls_time_info(tmNow.tm_year, 1, &dlsLive);
-		}
-
-		if(dlsLive.tDlsEnd > dlsLive.tDlsBegin)
-		{
-			if((now >= dlsLive.tDlsBegin) && (now < dlsLive.tDlsEnd))
-            {
-				dlsType = DLS_DAY;
-			}
-		} 
-		else 
-		{
-			if(!((now >= dlsLive.tDlsEnd) && (now < dlsLive.tDlsBegin)))
-            {
-				dlsType = DLS_DAY;
-			}
-		}
-
-		if(dlsType) 
-		{
-			if(tmNow.tm_mon == dlsLive.dlsEndMonth && tmNow.tm_mday == dlsLive.dlsEndDay && (tmNow.tm_hour == dlsLive.dlsEndHour-1))
-            {
-				isEndOverlap = 1;
-			}
-			else 
-			{
-				now += 3600;
-				localtime_r(&now, &tmNow);
-			}
-		}
-	}
-
-	memset(szDate, 0, 32);
-	memset(szTime, 0, 32);
-
-	//bool is24HourMode = false;
-	bool isAmPmFirst = false;
-	bool isDateFirst = true;
-
-	if(is24HourMode)
-	{
-		if(isEndOverlap)
-		{
-			sprintf(szTime, "%02d':%02d:%02d", tmNow.tm_hour, tmNow.tm_min, tmNow.tm_sec);
-		}
-		else
-		{
-			sprintf(szTime, "%02d:%02d:%02d", tmNow.tm_hour, tmNow.tm_min, tmNow.tm_sec);
-		}
-
-		sTime = QString::fromAscii(szTime);
-	}
-	else
-	{
-		if(tmNow.tm_hour < 12)
-		{
-			sAmPm = tr("AM");
-		}
-		else
-		{
-			sAmPm = tr("PM");
-		}
-
-		if((tmNow.tm_hour == 0)||(tmNow.tm_hour == 12))
-		{
-			if(isEndOverlap)
-			{
-				sprintf(szTime, "12':%02d:%02d", tmNow.tm_min, tmNow.tm_sec);
-			}
-			else
-			{
-				sprintf(szTime, "12:%02d:%02d", tmNow.tm_min, tmNow.tm_sec);
-			}
-		}
-		else
-		{
-			if(isEndOverlap)
-			{
-				sprintf(szTime, "%d':%02d:%02d", tmNow.tm_hour%12, tmNow.tm_min, tmNow.tm_sec);
-			}
-			else
-			{
-				sprintf(szTime, "%d:%02d:%02d", tmNow.tm_hour%12, tmNow.tm_min, tmNow.tm_sec);
-			}
-		}
-
-		if(isAmPmFirst)
-		{
-			sTime = sAmPm + " " + QString::fromAscii(szTime);
-		}
-		else
-		{
-			sTime = QString::fromAscii(szTime) + " " + sAmPm;
-		}
-	}
-
-	switch (timeDisplayFormat)
-	{
-		case 0: { sprintf(szDate, "%04d/%02d/%02d", tmNow.tm_year+1900, tmNow.tm_mon+1, tmNow.tm_mday);      break; } //YYYY/MM/DD
-		case 1: { sprintf(szDate, "%02d/%02d/%04d", tmNow.tm_mon+1,     tmNow.tm_mday,  tmNow.tm_year+1900); break; } //MM/DD/YYYY
-		case 2: { sprintf(szDate, "%02d/%02d/%04d", tmNow.tm_mday,      tmNow.tm_mon+1, tmNow.tm_year+1900); break; } //DD/MM/YYYY
-		case 3: { sprintf(szDate, "%04d-%02d-%02d", tmNow.tm_year+1900, tmNow.tm_mon+1, tmNow.tm_mday);      break; } //YYYY-MM-DD
-		case 4: { sprintf(szDate, "%02d-%02d-%04d", tmNow.tm_mon+1,     tmNow.tm_mday,  tmNow.tm_year+1900); break; } //MM-DD-YYYY
-		case 5: { sprintf(szDate, "%02d-%02d-%04d", tmNow.tm_mday,      tmNow.tm_mon+1, tmNow.tm_year+1900); break; } //DD-MM-YYYY
-
-		default :
-        {
-			qDebug("[ERROR] UNKNOWN timeDisplayFormat:%d   %s-%d", timeDisplayFormat, __func__, __LINE__);
-		    break;
+            progressBarHdd->show();
         }
-	}
+    }
 
-	if(isDateFirst)
-	{
-		str = QString::fromAscii(szDate) + " " + sTime;
-	}
-	else
-	{
-		str = sTime + " " + QString::fromAscii(szDate);
-	}
+    if(dlsLive.isChecked && dlsLive.isDlsEnabled)
+    {
+        if(dlsLive.dlsCheckYear != tmNow.tm_year)
+        {
+            appmgr_make_dls_time_info(tmNow.tm_year, 1, &dlsLive);
+        }
 
-	return str;
+        if(dlsLive.tDlsEnd > dlsLive.tDlsBegin)
+        {
+            if((now >= dlsLive.tDlsBegin) && (now < dlsLive.tDlsEnd))
+            {
+                dlsType = DLS_DAY;
+            }
+        }
+        else
+        {
+            if(!((now >= dlsLive.tDlsEnd) && (now < dlsLive.tDlsBegin)))
+            {
+                dlsType = DLS_DAY;
+            }
+        }
+
+        if(dlsType)
+        {
+            if(tmNow.tm_mon == dlsLive.dlsEndMonth && tmNow.tm_mday == dlsLive.dlsEndDay && (tmNow.tm_hour == dlsLive.dlsEndHour-1))
+            {
+                isEndOverlap = 1;
+            }
+            else
+            {
+                now += 3600;
+                localtime_r(&now, &tmNow);
+            }
+        }
+    }
+
+    memset(szDate, 0, 32);
+    memset(szTime, 0, 32);
+
+    //bool is24HourMode = false;
+    bool isAmPmFirst = false;
+    bool isDateFirst = true;
+
+    if(is24HourMode)
+    {
+        if(isEndOverlap)
+        {
+            sprintf(szTime, "%02d':%02d:%02d", tmNow.tm_hour, tmNow.tm_min, tmNow.tm_sec);
+        }
+        else
+        {
+            sprintf(szTime, "%02d:%02d:%02d", tmNow.tm_hour, tmNow.tm_min, tmNow.tm_sec);
+        }
+
+        sTime = QString::fromAscii(szTime);
+    }
+    else
+    {
+        if(tmNow.tm_hour < 12)
+        {
+            sAmPm = tr("AM");
+        }
+        else
+        {
+            sAmPm = tr("PM");
+        }
+
+        if((tmNow.tm_hour == 0)||(tmNow.tm_hour == 12))
+        {
+            if(isEndOverlap)
+            {
+                sprintf(szTime, "12':%02d:%02d", tmNow.tm_min, tmNow.tm_sec);
+            }
+            else
+            {
+                sprintf(szTime, "12:%02d:%02d", tmNow.tm_min, tmNow.tm_sec);
+            }
+        }
+        else
+        {
+            if(isEndOverlap)
+            {
+                sprintf(szTime, "%d':%02d:%02d", tmNow.tm_hour%12, tmNow.tm_min, tmNow.tm_sec);
+            }
+            else
+            {
+                sprintf(szTime, "%d:%02d:%02d", tmNow.tm_hour%12, tmNow.tm_min, tmNow.tm_sec);
+            }
+        }
+
+        if(isAmPmFirst)
+        {
+            sTime = sAmPm + " " + QString::fromAscii(szTime);
+        }
+        else
+        {
+            sTime = QString::fromAscii(szTime) + " " + sAmPm;
+        }
+    }
+
+    switch (timeDisplayFormat)
+    {
+        case 0: { sprintf(szDate, "%04d/%02d/%02d", tmNow.tm_year+1900, tmNow.tm_mon+1, tmNow.tm_mday);      break; } //YYYY/MM/DD
+        case 1: { sprintf(szDate, "%02d/%02d/%04d", tmNow.tm_mon+1,     tmNow.tm_mday,  tmNow.tm_year+1900); break; } //MM/DD/YYYY
+        case 2: { sprintf(szDate, "%02d/%02d/%04d", tmNow.tm_mday,      tmNow.tm_mon+1, tmNow.tm_year+1900); break; } //DD/MM/YYYY
+        case 3: { sprintf(szDate, "%04d-%02d-%02d", tmNow.tm_year+1900, tmNow.tm_mon+1, tmNow.tm_mday);      break; } //YYYY-MM-DD
+        case 4: { sprintf(szDate, "%02d-%02d-%04d", tmNow.tm_mon+1,     tmNow.tm_mday,  tmNow.tm_year+1900); break; } //MM-DD-YYYY
+        case 5: { sprintf(szDate, "%02d-%02d-%04d", tmNow.tm_mday,      tmNow.tm_mon+1, tmNow.tm_year+1900); break; } //DD-MM-YYYY
+
+        default :
+        {
+            qDebug("[ERROR] UNKNOWN timeDisplayFormat:%d   %s-%d", timeDisplayFormat, __func__, __LINE__);
+            break;
+        }
+    }
+
+    if(isDateFirst)
+    {
+        str = QString::fromAscii(szDate) + " " + sTime;
+    }
+    else
+    {
+        str = sTime + " " + QString::fromAscii(szDate);
+    }
+
+    return str;
 }
 void StatusBarDialog::updateTime()
 {
-	time_t now;
-	struct tm tmNow;
-	QString str;
+    time_t now;
+    struct tm tmNow;
+    QString str;
 
-	if(this->isVisible())
-	{
-		time(&now);
-		localtime_r(&now, &tmNow);
-		appmgr_set_live_system_time(now);
+    if(this->isVisible())
+    {
+        time(&now);
+        localtime_r(&now, &tmNow);
+        appmgr_set_live_system_time(now);
 
-		// Live Time Draw
-		labelTime->setText(updateTime_value());
-	}
-	else
-	{
-		if(diskInfo[0].hddCount == 0)
-		{
+        // Live Time Draw
+        labelTime->setText(updateTime_value());
+    }
+    else
+    {
+        if(diskInfo[0].hddCount == 0)
+        {
             //qDebug("[Warning] : Not exist HDD");
-		}
-	}
+        }
+    }
 }

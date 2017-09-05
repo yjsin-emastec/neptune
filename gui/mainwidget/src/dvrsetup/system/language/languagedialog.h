@@ -5,6 +5,8 @@
 #include "ui_languagedialog.h"
 #include "DVR.h"
 
+class TextMessageDialog;
+
 class LanguageDialog : public QDialog, public Ui::LanguageDialog
 {
     Q_OBJECT
@@ -19,6 +21,7 @@ signals:
 public slots:
 	void onButtonLanguageUp(void);
 	void onButtonLanguageDown(void);
+    void onButtonLanguageSave(void);
 
 protected:
 	void keyPressEvent(QKeyEvent *event);
@@ -26,6 +29,8 @@ protected:
 	
 private:
 	int indexLanguage;
+    TextMessageDialog *msgBox;
+    QString previousLanguage;
 };
 
 #endif // LANGUAGEDIALOG_H

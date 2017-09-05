@@ -273,6 +273,16 @@ void MainWidget::onSaveSystemPage(int type, int val)
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
+
+        for(int ch = 0; ch < devInfo.videoNum; ch++)
+        {
+            stop_all_record(ch);
+        }
+        qDebug("setup : change language");
+        //system_state = SYSTEM_CHANGE_LANGUAGE;
+
+        sync(); sync(); sync();
+        systemReboot();
     }
     else if(type == 7) // Load config
     {
@@ -1610,23 +1620,24 @@ void MainWidget::translatorChange(int lang)
 
     if(lang == LANGUAGE_ENGLISH)
     {
-        selTranslator->load("language_english");
+        selTranslator->load("./translator/language_english");
         qDebug("load English");
     }
     else if(lang == LANGUAGE_KOREAN)
     {
-        selTranslator->load("language_korean");
+        selTranslator->load("./translator/language_korean");
         qDebug("load Korean");
     }
     else
     {
-        selTranslator->load("language_english");
+        selTranslator->load("./translator/language_english");
         qDebug("unknown language(%d)selected....load english", lang);
         lang = 0;
     }
 
     QCoreApplication::installTranslator(selTranslator);
     loadedLanguage = lang;
+
 }
 int MainWidget::LanguageValueTransformation(void)
 {
