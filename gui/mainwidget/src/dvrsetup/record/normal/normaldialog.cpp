@@ -185,9 +185,8 @@ void NormalDialog::onButtonDefault(void)
     cfgSetup.rec.record_main.quality[ch] = QUALITY_ULTRA; indexQuality   = 0; buttonQuality   ->setText(tr("%1\n%2").arg(tr("Quality"  ),tr("High")));
     cfgSetup.rec.record_type[ch]         = true;          indexRecording = 0; buttonRecording ->setText(tr("%1\n%2").arg(tr("Recording"),tr("On"  )));
     cfgSetup.rec.audio[ch]               = true;          indexAudio     = 0; buttonAudio     ->setText(tr("%1\n%2").arg(tr("Audio"    ),tr("On"  )));
-    cfgSetup.rec.record_main.fr_hd[ch]   = 30;            indexFrameRate = 0; buttonFrameRate ->setText(tr("%1\n%2 %3").arg(tr("Frame Rate"),tr("30"  ),tr("Fps")));
 
-    if      ((arVIS[ch] == ver_vis_pal) || (arVIS[ch] == ver_vis_hd_720_25p) || (arVIS[ch] == ver_vis_hd_720_50p))    // pal
+    if((arVIS[ch] == ver_vis_pal) || (arVIS[ch] == ver_vis_hd_720_25p) || (arVIS[ch] == ver_vis_hd_720_50p))           // pal
     {
         cfgSetup.rec.record_main.fr_hd[ch] = 25; indexFrameRate = 5; buttonFrameRate->setText(tr("%1\n%2 %3").arg(tr("Frame Rate"),tr("25"),tr("Fps")));
     }
