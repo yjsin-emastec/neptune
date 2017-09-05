@@ -23,11 +23,11 @@ GsensorDialog::~GsensorDialog()
 }
 void GsensorDialog::initGsensorConfig(void)
 {
-         if(utils_cfg_cmp_item(DeviceCfg.gsensor_level, "1") == 0) { buttonGsensor->setText(tr("%1\n%2").arg(tr("Impact"),tr("Sensitivity: 1")));  indexGsensor = 0; }
-    else if(utils_cfg_cmp_item(DeviceCfg.gsensor_level, "2") == 0) { buttonGsensor->setText(tr("%1\n%2").arg(tr("Impact"),tr("Sensitivity: 2")));  indexGsensor = 1; }
-    else if(utils_cfg_cmp_item(DeviceCfg.gsensor_level, "3") == 0) { buttonGsensor->setText(tr("%1\n%2").arg(tr("Impact"),tr("Sensitivity: 3")));  indexGsensor = 2; }
-    else if(utils_cfg_cmp_item(DeviceCfg.gsensor_level, "4") == 0) { buttonGsensor->setText(tr("%1\n%2").arg(tr("Impact"),tr("Sensitivity: 4")));  indexGsensor = 3; }
-    else                                                           { buttonGsensor->setText(tr("%1\n%2").arg(tr("Impact"),tr("Sensitivity: 5")));  indexGsensor = 4; }
+         if(utils_cfg_cmp_item(DeviceCfg.gsensor_level, "1") == 0) { buttonGsensor->setText(tr("%1%2").arg(tr("Impact"),tr("\nSensitivity: 1")));  indexGsensor = 0; }
+    else if(utils_cfg_cmp_item(DeviceCfg.gsensor_level, "2") == 0) { buttonGsensor->setText(tr("%1%2").arg(tr("Impact"),tr("\nSensitivity: 2")));  indexGsensor = 1; }
+    else if(utils_cfg_cmp_item(DeviceCfg.gsensor_level, "3") == 0) { buttonGsensor->setText(tr("%1%2").arg(tr("Impact"),tr("\nSensitivity: 3")));  indexGsensor = 2; }
+    else if(utils_cfg_cmp_item(DeviceCfg.gsensor_level, "4") == 0) { buttonGsensor->setText(tr("%1%2").arg(tr("Impact"),tr("\nSensitivity: 4")));  indexGsensor = 3; }
+    else                                                           { buttonGsensor->setText(tr("%1%2").arg(tr("Impact"),tr("\nSensitivity: 5")));  indexGsensor = 4; }
 }
 void GsensorDialog::onButtonGsensor()
 {
@@ -35,7 +35,7 @@ void GsensorDialog::onButtonGsensor()
     {
         case 0:
 
-            buttonGsensor->setText(tr("%1\n%2").arg(tr("Impact"),tr("Sensitivity: 2")));
+            buttonGsensor->setText(tr("%1%2").arg(tr("Impact"),tr("\nSensitivity: 2")));
             utils_cfg_cpy_item(DeviceCfg.gsensor_level, "2");
             indexGsensor = 1;
 
@@ -43,7 +43,7 @@ void GsensorDialog::onButtonGsensor()
 
         case 1:
 
-            buttonGsensor->setText(tr("%1\n%2").arg(tr("Impact"),tr("Sensitivity: 3")));
+            buttonGsensor->setText(tr("%1%2").arg(tr("Impact"),tr("\nSensitivity: 3")));
             utils_cfg_cpy_item(DeviceCfg.gsensor_level, "3");
             indexGsensor = 2;
 
@@ -51,7 +51,7 @@ void GsensorDialog::onButtonGsensor()
 
         case 2:
 
-            buttonGsensor->setText(tr("%1\n%2").arg(tr("Impact"),tr("Sensitivity: 4")));
+            buttonGsensor->setText(tr("%1%2").arg(tr("Impact"),tr("\nSensitivity: 4")));
             utils_cfg_cpy_item(DeviceCfg.gsensor_level, "4");
             indexGsensor = 3;
 
@@ -59,7 +59,7 @@ void GsensorDialog::onButtonGsensor()
 
         case 3:
 
-            buttonGsensor->setText(tr("%1\n%2").arg(tr("Impact"),tr("Sensitivity: 5")));
+            buttonGsensor->setText(tr("%1%2").arg(tr("Impact"),tr("\nSensitivity: 5")));
             utils_cfg_cpy_item(DeviceCfg.gsensor_level, "5");
             indexGsensor = 4;
 
@@ -67,7 +67,7 @@ void GsensorDialog::onButtonGsensor()
 
         case 4:
 
-            buttonGsensor->setText(tr("%1\n%2").arg(tr("Impact"),tr("Sensitivity: 1")));
+            buttonGsensor->setText(tr("%1%2").arg(tr("Impact"),tr("\nSensitivity: 1")));
             utils_cfg_cpy_item(DeviceCfg.gsensor_level, "1");
             indexGsensor = 0;
 
