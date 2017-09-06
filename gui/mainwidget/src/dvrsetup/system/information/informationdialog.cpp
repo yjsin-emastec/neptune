@@ -52,11 +52,29 @@ void InformationDialog::initInformationConfig(void)
 
     memset(tmp, 0, sizeof(tmp));
     (void)utils_get_normal_total_size(tmp);
-    labelNormalSize2->setText(tr("%1").arg(tmp));
+    QString nomalCapacity=QString(tmp);
+
+    if( nomalCapacity.compare("No Disk")==0 )
+    {
+        labelNormalSize2->setText(tr("%1").arg(tr("No Disk")));
+    }
+    else
+    {
+        labelNormalSize2->setText(tr("%1").arg(tmp));
+    }
 
     memset(tmp, 0, sizeof(tmp));
     (void)utils_get_event_total_size(tmp);
-    labelEventSize2->setText(tr("%1").arg(tmp));
+    QString eventCapacity=QString(tmp);
+
+    if( eventCapacity.compare("No Disk")==0 )
+    {
+        labelEventSize2->setText(tr("%1").arg(tr("No Disk")));
+    }
+    else
+    {
+        labelEventSize2->setText(tr("%1").arg(tmp));
+    }
 
     onUpdateStatus();
 

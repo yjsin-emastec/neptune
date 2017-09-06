@@ -1144,8 +1144,9 @@ void MainWidget::runSearch()
         {
             msgBox = new TextMessageDialog(tr("SEARCH"),
                     tr("WARNING\n\n"
-                        "  No Disk\n"),
+                        "No Disk\n"),
                     2, this);
+            msgBox->setMsgAlignment(Qt::AlignCenter);
         }
 
         if(msgBox->exec())

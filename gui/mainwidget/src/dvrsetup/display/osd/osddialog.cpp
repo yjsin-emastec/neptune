@@ -39,8 +39,8 @@ void OsdDialog::initOsdConfig(void)
 
     switch(utils_cfg_cmp_item(DisplayCfg.osd_status, "OFF"))
     {
-        case 0:  { buttonStatusBar->setText(tr("%1\n%2%3").arg(tr("Status Bar"),tr("AutoHide: "),tr("Off")));   indexStatusBar    = 1;  break; }
-        default: { buttonStatusBar->setText(tr("%1\n%2%3").arg(tr("Status Bar"),tr("AutoHide: "),tr("On")));    indexStatusBar    = 0;  break; }
+        case 0:  { buttonStatusBar->setText(tr("%1%2%3").arg(tr("Status Bar"),tr("\nAutoHide: "),tr("Off ")));   indexStatusBar    = 1;  break; }
+        default: { buttonStatusBar->setText(tr("%1%2%3").arg(tr("Status Bar"),tr("\nAutoHide: "),tr("On ")));    indexStatusBar    = 0;  break; }
     }
 
     switch(utils_cfg_cmp_item(DisplayCfg.osd_record, "OFF"))
@@ -83,13 +83,14 @@ void OsdDialog::onStatusBar()
 {
     if(indexStatusBar == 0)
     {
-        buttonStatusBar->setText(tr("%1\n%2%3").arg(tr("Status Bar"),tr("AutoHide: "),tr("Off")));
+        qDebug("hi3");
+        buttonStatusBar->setText(tr("%1%2%3").arg(tr("Status Bar"),tr("\nAutoHide: "),tr("Off ")));
         utils_cfg_cpy_item(DisplayCfg.osd_status, "OFF");
         indexStatusBar = 1;
     }
     else if(indexStatusBar == 1)
     {
-        buttonStatusBar->setText(tr("%1\n%2%3").arg(tr("Status Bar"),tr("AutoHide: "),tr("On")));
+        buttonStatusBar->setText(tr("%1%2%3").arg(tr("Status Bar"),tr("\nAutoHide: "),tr("On ")));
         utils_cfg_cpy_item(DisplayCfg.osd_status, "ON");
         indexStatusBar = 0;
     }

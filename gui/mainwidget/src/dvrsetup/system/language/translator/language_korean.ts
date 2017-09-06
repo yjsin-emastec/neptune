@@ -1672,7 +1672,7 @@ Sensitivity: 5</source>
     <message>
         <location filename="src/dvrsetup/system/information/informationdialog.ui" line="121"/>
         <source>License Plate</source>
-        <translation>번호판</translation>
+        <translation type="unfinished">차량번호</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/system/information/informationdialog.ui" line="137"/>
@@ -1714,21 +1714,29 @@ Sensitivity: 5</source>
         <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="44"/>
         <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="47"/>
         <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="51"/>
-        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="55"/>
         <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="59"/>
-        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="73"/>
-        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="77"/>
+        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="63"/>
+        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="72"/>
+        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="76"/>
+        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="91"/>
+        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="95"/>
         <source>%1</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>%1</translation>
     </message>
     <message>
-        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="73"/>
+        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="59"/>
+        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="72"/>
+        <source>No Disk</source>
+        <translation type="unfinished">디스크 없음</translation>
+    </message>
+    <message>
+        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="91"/>
         <source>Connected</source>
         <translation>연결됨</translation>
     </message>
     <message>
-        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="77"/>
+        <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="95"/>
         <source>Not connected</source>
         <translation>연결 안 됨</translation>
     </message>
@@ -1845,8 +1853,7 @@ System will restart.</source>
     <message>
         <location filename="src/dvrsetup/system/licenseplate/licenseplatedialog.ui" line="101"/>
         <source>License Plate</source>
-        <translatorcomment>표시 안됨</translatorcomment>
-        <translation>번호판</translation>
+        <translation type="unfinished">차량번호</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/system/licenseplate/licenseplatedialog.ui" line="140"/>
@@ -2255,9 +2262,13 @@ Do you want to shutdown the system?</source>
         <location filename="src/main/mainwidget.cpp" line="1146"/>
         <source>WARNING
 
-  No Disk
+No Disk
 </source>
-        <translation type="unfinished">		 경고
+        <oldsource>WARNING
+
+  No Disk
+</oldsource>
+        <translation type="unfinished">경고
 
 저장장치가 없습니다. </translation>
     </message>
@@ -2746,14 +2757,14 @@ Off/On</source>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="31"/>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="36"/>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="37"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="48"/>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="49"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="50"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="57"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="63"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="72"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="78"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="104"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="110"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="56"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="62"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="71"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="77"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="102"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="108"/>
         <source>%1
 %2</source>
         <translatorcomment>표시 안됨</translatorcomment>
@@ -2763,68 +2774,68 @@ Off/On</source>
     <message>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="30"/>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="31"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="57"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="63"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="56"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="62"/>
         <source>Camera Name</source>
         <translation>카메라 이름</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="30"/>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="36"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="49"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="57"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="72"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="104"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="48"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="56"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="71"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="102"/>
         <source>Off</source>
         <translation type="unfinished">표시 안 함</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="31"/>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="37"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="50"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="63"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="78"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="110"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="49"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="62"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="77"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="108"/>
         <source>On</source>
         <translation type="unfinished">표시</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="36"/>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="37"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="72"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="78"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="71"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="77"/>
         <source>No Video</source>
         <translation type="unfinished">영상 없음</translation>
     </message>
     <message>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="42"/>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="43"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="44"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="88"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="95"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="87"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="93"/>
         <source>%1%2%3</source>
         <oldsource>%1
 %2%3</oldsource>
         <translation type="unfinished">%1%2%3</translation>
     </message>
     <message>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="43"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="88"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="42"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="87"/>
         <source>Off </source>
         <translation type="unfinished">
 표시</translation>
     </message>
     <message>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="42"/>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="43"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="44"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="88"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="95"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="87"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="93"/>
         <source>
 AutoHide: </source>
         <translation type="unfinished"> </translation>
     </message>
     <message>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="44"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="95"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="43"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="93"/>
         <source>On </source>
         <translation type="unfinished">
 표시 안 함</translation>
@@ -2859,10 +2870,10 @@ AutoHide: </source>
 %2 :%3</translation>
     </message>
     <message>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="42"/>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="43"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="44"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="88"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="95"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="87"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="93"/>
         <source>Status Bar</source>
         <translation type="unfinished">상태표시줄</translation>
     </message>
@@ -2871,10 +2882,10 @@ AutoHide: </source>
         <translation type="obsolete"> </translation>
     </message>
     <message>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="48"/>
         <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="49"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="50"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="104"/>
-        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="110"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="102"/>
+        <location filename="src/dvrsetup/display/osd/osddialog.cpp" line="108"/>
         <source>Record Status</source>
         <translation type="unfinished">녹화 아이콘</translation>
     </message>
@@ -3705,7 +3716,7 @@ Rec-end T/D : </oldsource>
         <location filename="src/dvrsetup/setup/systempage.ui" line="46"/>
         <source>License
 Plate</source>
-        <translation>번호판</translation>
+        <translation type="unfinished">차량번호</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/setup/systempage.ui" line="77"/>
