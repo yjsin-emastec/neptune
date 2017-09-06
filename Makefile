@@ -17,6 +17,9 @@ Gui: dummy
 	@$(ECHO)  "QT MainWidget"
 	@$(CD)    gui/mainwidget; $(SH) build.sh
 	@$(CPARF) gui/mainwidget/mainwidget $(LIBDIR)
+ifeq (exist,$(shell [ -e $(TMP) ] && echo exist))
+	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/*.qm $(TMP)/host/rootfs/usr/lib/translator
+endif
 
 Install: $(TAG_INSTALL)
 
@@ -42,9 +45,9 @@ SetModelDep: dummy
 	@$(ECHO) $(EA_2ND_IFNAME) > $(TMP)/host/rootfs/etc/ifname2.conf
 
 CopyUserlib2Tmp: dummy
+	@$(ECHO) "QT BASE COPY!!!!!"
 	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/*.qm   $(TMP)/host/rootfs/usr/lib/translator
 	@$(CD) $(LIBDIR); $(SH) script/export2usrlib.sh         $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
-	@$(ECHO) "QT BASE COPY!!!!!"
 	@$(CD) $(LIBDIR); $(SH) script/export2host.sh           $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
 	@$(CHMOD755R) $(TMP)/host/rootfs/usr/sbin
 	@$(CHMOD755R) $(TMP)/host/rootfs/usr/drv
