@@ -1641,7 +1641,7 @@ void MainWidget::translatorChange(int lang)
         else
         {
             selTranslator->load("./translator/language_korean");
-            qDebug("load Korean")
+            qDebug("load Korean");
         }
     }
     else
