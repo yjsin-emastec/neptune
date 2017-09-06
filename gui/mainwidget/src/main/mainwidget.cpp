@@ -1620,12 +1620,28 @@ void MainWidget::translatorChange(int lang)
 
     if(lang == LANGUAGE_ENGLISH)
     {
-        selTranslator->load("./translator/language_english");
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr/lib/translator/language_english");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_english");
+        }
+
         qDebug("load English");
     }
     else if(lang == LANGUAGE_KOREAN)
     {
-        selTranslator->load("./translator/language_korean");
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr/lib/translator/language_korean");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_korean");
+        }
+
         qDebug("load Korean");
     }
     else

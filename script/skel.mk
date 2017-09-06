@@ -40,6 +40,7 @@ LS                = ls -alh
 TARXC             = tar -x -C
 TARZXVF           = tar zxvf
 TMP               = tmp
+NFS               = nfs
 GIT               = git archive HEAD
 ECHO              = echo
 RMDIR             = rmdir
