@@ -11,7 +11,7 @@ Mklink:
 	@$(CD) $(LIBDIR); $(SH) script/mklink.sh
 
 Version: dummy
-	@$(SH) script/version.sh "0.0.6"
+	@$(SH) script/version.sh "0.0.8"
 
 Gui: dummy
 	@$(ECHO)  "QT MainWidget"
@@ -42,10 +42,10 @@ SetModelDep: dummy
 	@$(ECHO) $(EA_2ND_IFNAME) > $(TMP)/host/rootfs/etc/ifname2.conf
 
 CopyUserlib2Tmp: dummy
-	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator   $(TMP)/host/rootfs/usr/lib
-	@$(CD) $(LIBDIR); $(SH) script/export2usrlib.sh    $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
+	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/*.qm   $(TMP)/host/rootfs/usr/lib/translator
+	@$(CD) $(LIBDIR); $(SH) script/export2usrlib.sh         $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
 	@$(ECHO) "QT BASE COPY!!!!!"
-	@$(CD) $(LIBDIR); $(SH) script/export2host.sh      $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
+	@$(CD) $(LIBDIR); $(SH) script/export2host.sh           $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
 	@$(CHMOD755R) $(TMP)/host/rootfs/usr/sbin
 	@$(CHMOD755R) $(TMP)/host/rootfs/usr/drv
 	@$(CHMOD755R) $(TMP)/host/rootfs/usr/lib
