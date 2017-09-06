@@ -1623,26 +1623,26 @@ void MainWidget::translatorChange(int lang)
         if(access("/tmp/eastern", F_OK) == 0)
         {
             selTranslator->load("/tmp/eastern/usr/lib/translator/language_english");
+            qDebug("load English from nfs");
         }
         else
         {
             selTranslator->load("./translator/language_english");
+            qDebug("load English");
         }
-
-        qDebug("load English");
     }
     else if(lang == LANGUAGE_KOREAN)
     {
         if(access("/tmp/eastern", F_OK) == 0)
         {
             selTranslator->load("/tmp/eastern/usr/lib/translator/language_korean");
+            qDebug("load Korean from nfs");
         }
         else
         {
             selTranslator->load("./translator/language_korean");
+            qDebug("load Korean")
         }
-
-        qDebug("load Korean");
     }
     else
     {
