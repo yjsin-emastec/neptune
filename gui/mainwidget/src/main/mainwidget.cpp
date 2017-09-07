@@ -1647,6 +1647,16 @@ void MainWidget::translatorChange(int lang)
     }
     else
     {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr/lib/translator/language_english");
+            qDebug("load English from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_english");
+            qDebug("load English");
+        }
         selTranslator->load("./translator/language_english");
         qDebug("unknown language(%d)selected....load english", lang);
         lang = 0;
