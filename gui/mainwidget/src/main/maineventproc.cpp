@@ -713,7 +713,7 @@ void MainWidget::doDvrEvent(Event *e)
                 msgBox = new TextMessageDialog(tr("WARNING"), tr("%1\n\n%2\n%3\n%4").arg(tr("WARNING"),
                             tr("Please unplug USB memory.   "),
                             tr("If you click button of 'Ok',"),
-                            tr("System will restart.        ")), 2, this);
+                            tr("System will restart.")), 2, this);
             }
 
             msgBox->setMsgAlignment(Qt::AlignCenter);
