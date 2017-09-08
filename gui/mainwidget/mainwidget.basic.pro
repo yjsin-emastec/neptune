@@ -2,8 +2,8 @@ DEFINES      += _TTY_POSIX_                                                     
                 QT_BASE                                                                              \
                 QT_SHARED                                                                            \
 
-TRANSLATIONS  = language_english.ts                                                                  \
-                language_korean.ts                                                                   \
+TRANSLATIONS  = src/dvrsetup/system/language/translator/language_english.ts                          \
+                src/dvrsetup/system/language/translator/language_korean.ts                           \
 
 UI_DIR        = obj
 MOC_DIR       = obj
