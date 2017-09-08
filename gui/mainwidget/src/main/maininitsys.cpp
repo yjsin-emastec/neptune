@@ -148,7 +148,7 @@ void MainWidget::initializeSystem()
                             tr("Do you want to format the storage?")), 0, this);
 #else
                 msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2\n%3").arg(tr("WARNING"),
-                            tr("Storage was not formated.         "),
+                            tr("Storage was not formatted.         "),
                             tr("Do you want to format the storage?")), 0, this);
 #endif
 
@@ -201,12 +201,12 @@ void MainWidget::initializeSystem()
 #if 1 // jungyver [17/07/04] Display hexa code when occuring disk status temporarily
                 QString ss = QString("0x%1").arg(rv, 4, 16, QLatin1Char('0'));
                 msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2 (%3)\n%4").arg(tr("WARNING"),
-                            tr("Storage was not formated."),
+                            tr("Storage was not formatted."),
                             tr(ss.toStdString().c_str()),
                             tr("Do you want to format the storage?")), 0, this);
 #else
                 msgBox = new TextMessageDialog(tr("STORAGE FORMAT"), tr("%1\n\n%2\n%3").arg(tr("WARNING"),
-                            tr("Storage was not formated.         "),
+                            tr("Storage was not formatted.         "),
                             tr("Do you want to format the storage?")), 0, this);
 #endif
 

@@ -480,7 +480,7 @@ void SetDateTimeDialog::enableSetTime()
         }
 
         str = tr("If you set the time faster than recording data,\n"
-                "some data will be erased from stprage.\n");
+                "some data will be erased from storage.\n");
 
         memset(szDate, 0, 30);
 

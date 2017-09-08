@@ -2021,6 +2021,7 @@ Mute</source>
         <location filename="src/main/maineventproc.cpp" line="639"/>
         <location filename="src/main/maineventproc.cpp" line="663"/>
         <location filename="src/main/maineventproc.cpp" line="685"/>
+        <location filename="src/main/maineventproc.cpp" line="716"/>
         <source>System will restart.</source>
         <translation>시스템이 다시 시작됩니다.</translation>
     </message>
@@ -2066,11 +2067,6 @@ Mute</source>
         <location filename="src/main/maineventproc.cpp" line="715"/>
         <source>If you click button of &apos;Ok&apos;,</source>
         <translation>&apos;OK&apos; 버튼을 클릭하면,</translation>
-    </message>
-    <message>
-        <location filename="src/main/maineventproc.cpp" line="716"/>
-        <source>System will restart.        </source>
-        <translation>시스템이 다시 시작됩니다.        </translation>
     </message>
     <message>
         <location filename="src/main/maineventproc.cpp" line="740"/>
@@ -2180,6 +2176,7 @@ Current status is trigger.</source>
     </message>
     <message>
         <location filename="src/main/maininitsys.cpp" line="146"/>
+        <location filename="src/main/maininitsys.cpp" line="204"/>
         <source>Storage was not formatted.</source>
         <translation>저장장치가 포맷되지 않았습니다.</translation>
     </message>
@@ -2194,8 +2191,9 @@ Current status is trigger.</source>
     <message>
         <location filename="src/main/maininitsys.cpp" line="151"/>
         <location filename="src/main/maininitsys.cpp" line="209"/>
-        <source>Storage was not formated.         </source>
-        <translation>저장장치가 포맷되지 않았습니다.         </translation>
+        <source>Storage was not formatted.         </source>
+        <oldsource>Storage was not formated.         </oldsource>
+        <translation type="unfinished">저장장치가 포맷되지 않았습니다.         </translation>
     </message>
     <message>
         <location filename="src/main/maininitsys.cpp" line="181"/>
@@ -2205,11 +2203,6 @@ Current status is trigger.</source>
         <source>STORAGE STATUS</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>저장장치 상태</translation>
-    </message>
-    <message>
-        <location filename="src/main/maininitsys.cpp" line="204"/>
-        <source>Storage was not formated.</source>
-        <translation>저장장치가 포맷되지 않았습니다.</translation>
     </message>
     <message>
         <location filename="src/main/maininitsys.cpp" line="235"/>
@@ -3572,13 +3565,12 @@ Off</source>
     <message>
         <location filename="src/dvrsetup/system/datetime/setdatetimedialog.cpp" line="482"/>
         <source>If you set the time faster than recording data,
-some data will be erased from stprage.
+some data will be erased from storage.
 </source>
-        <oldsource>If you set the clock to the earlier time then HDD,
-some data willbe erased from HDD.
-
-Rec-end T/D : </oldsource>
-        <translation>저장장치보다 시간을 빠르게 설정하면,
+        <oldsource>If you set the time faster than recording data,
+some data will be erased from stprage.
+</oldsource>
+        <translation type="unfinished">저장장치보다 시간을 빠르게 설정하면,
 데이터 일부가 지워질 수 있습니다.
 </translation>
     </message>
