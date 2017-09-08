@@ -28,6 +28,7 @@ DiskFormatProcessDialog::DiskFormatProcessDialog(QWidget *parent)
 	diskformatProgressBar->setStyleSheet("QProgressBar {font:48px;color:white;} QProgressBar::chunk{font:48px;Background-color:rgb(152,14,69);}");
 	diskformatProgressBar->setMinimumWidth(840);
 	diskformatProgressBar->setMinimumHeight(100);
+    diskformatProgressBar->setTextVisible(true);
 
 	QVBoxLayout *layout = new QVBoxLayout;
 
