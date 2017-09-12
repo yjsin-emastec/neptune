@@ -54,7 +54,7 @@ void InformationDialog::initInformationConfig(void)
     (void)utils_get_normal_total_size(tmp);
     QString nomalCapacity=QString(tmp);
 
-    if( nomalCapacity.compare("No Disk")==0 )
+    if( nomalCapacity.compare("No Disk")==0 || nomalCapacity.compare("0 GigaByte")==0 )
     {
         labelNormalSize2->setText(tr("%1").arg(tr("No Disk")));
     }
@@ -67,7 +67,7 @@ void InformationDialog::initInformationConfig(void)
     (void)utils_get_event_total_size(tmp);
     QString eventCapacity=QString(tmp);
 
-    if( eventCapacity.compare("No Disk")==0 )
+    if( eventCapacity.compare("No Disk")==0 || eventCapacity.compare("0 GigaByte")==0 )
     {
         labelEventSize2->setText(tr("%1").arg(tr("No Disk")));
     }

@@ -1728,7 +1728,7 @@ Sensitivity: 5</source>
         <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="59"/>
         <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="72"/>
         <source>No Disk</source>
-        <translation type="unfinished">디스크 없음</translation>
+        <translation type="unfinished">저장장치 없음</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/system/information/informationdialog.cpp" line="91"/>
