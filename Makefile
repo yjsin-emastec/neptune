@@ -18,9 +18,11 @@ Gui: dummy
 	@$(CD)    gui/mainwidget; $(SH) build.sh
 	@$(CPARF) gui/mainwidget/mainwidget $(LIBDIR)
 	@$(MKDIR) $(NFS)/usr/lib/translator
-	@$(CPARF) gui/mainwidget/mainwidget $(NFS)/usr/lib
+	@$(CPARF) gui/mainwidget/mainwidget                                   $(NFS)/usr/lib
+	@$(CPARF) gui/mainwidget/qss/*.qss                                    $(NFS)/usr/lib
 	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/*.qm $(NFS)/usr/lib/translator
 ifeq (exist,$(shell [ -e $(TMP) ] && echo exist))
+	@$(CPARF) gui/mainwidget/qss/*.qss                                    $(TMP)/host/rootfs/usr/lib
 	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/*.qm $(TMP)/host/rootfs/usr/lib/translator
 endif
 
@@ -50,6 +52,7 @@ SetModelDep: dummy
 CopyUserlib2Tmp: dummy
 	@$(ECHO) "QT BASE COPY!!!!!"
 	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/*.qm   $(TMP)/host/rootfs/usr/lib/translator
+	@$(CPARF) gui/mainwidget/qss/*.qss                                      $(TMP)/host/rootfs/usr/lib
 	@$(CD) $(LIBDIR); $(SH) script/export2usrlib.sh         $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
 	@$(CD) $(LIBDIR); $(SH) script/export2host.sh           $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
 	@$(CHMOD755R) $(TMP)/host/rootfs/usr/sbin
