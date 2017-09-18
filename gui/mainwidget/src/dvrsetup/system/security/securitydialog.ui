@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>848</width>
+    <width>968</width>
     <height>668</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
     <rect>
      <x>4</x>
      <y>4</y>
-     <width>840</width>
+     <width>960</width>
      <height>660</height>
     </rect>
    </property>
@@ -31,10 +31,10 @@
    <widget class="QPushButton" name="buttonNewPassword">
     <property name="geometry">
      <rect>
-      <x>717</x>
+      <x>827</x>
       <y>190</y>
-      <width>100</width>
-      <height>100</height>
+      <width>110</width>
+      <height>110</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -53,10 +53,10 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>368</x>
+      <x>428</x>
       <y>190</y>
-      <width>350</width>
-      <height>100</height>
+      <width>400</width>
+      <height>110</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -83,7 +83,7 @@
      <rect>
       <x>25</x>
       <y>25</y>
-      <width>790</width>
+      <width>910</width>
       <height>150</height>
      </rect>
     </property>
@@ -97,7 +97,7 @@
    <widget class="QPushButton" name="buttonClose">
     <property name="geometry">
      <rect>
-      <x>618</x>
+      <x>738</x>
       <y>547</y>
       <width>200</width>
       <height>91</height>
@@ -110,7 +110,7 @@
    <widget class="QPushButton" name="buttonSave">
     <property name="geometry">
      <rect>
-      <x>418</x>
+      <x>538</x>
       <y>547</y>
       <width>200</width>
       <height>91</height>
@@ -126,10 +126,10 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>368</x>
-      <y>289</y>
-      <width>350</width>
-      <height>100</height>
+      <x>428</x>
+      <y>299</y>
+      <width>400</width>
+      <height>110</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -154,10 +154,10 @@
    <widget class="QPushButton" name="buttonConfirmPassword">
     <property name="geometry">
      <rect>
-      <x>717</x>
-      <y>289</y>
-      <width>100</width>
-      <height>100</height>
+      <x>827</x>
+      <y>299</y>
+      <width>110</width>
+      <height>110</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -175,8 +175,8 @@
      <rect>
       <x>25</x>
       <y>190</y>
-      <width>344</width>
-      <height>100</height>
+      <width>404</width>
+      <height>110</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -190,9 +190,9 @@
     <property name="geometry">
      <rect>
       <x>25</x>
-      <y>289</y>
-      <width>344</width>
-      <height>100</height>
+      <y>299</y>
+      <width>404</width>
+      <height>110</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -205,10 +205,10 @@
    <widget class="QPushButton" name="buttonSystemLock">
     <property name="geometry">
      <rect>
-      <x>367</x>
-      <y>388</y>
-      <width>450</width>
-      <height>100</height>
+      <x>427</x>
+      <y>408</y>
+      <width>510</width>
+      <height>110</height>
      </rect>
     </property>
     <property name="text">
@@ -219,9 +219,9 @@
     <property name="geometry">
      <rect>
       <x>25</x>
-      <y>388</y>
-      <width>344</width>
-      <height>100</height>
+      <y>408</y>
+      <width>404</width>
+      <height>110</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -234,10 +234,10 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>368</x>
-      <y>388</y>
-      <width>448</width>
-      <height>100</height>
+      <x>428</x>
+      <y>408</y>
+      <width>508</width>
+      <height>110</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -250,10 +250,10 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>716</x>
+      <x>826</x>
       <y>190</y>
-      <width>100</width>
-      <height>100</height>
+      <width>110</width>
+      <height>110</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -266,10 +266,10 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>716</x>
-      <y>289</y>
-      <width>100</width>
-      <height>100</height>
+      <x>826</x>
+      <y>299</y>
+      <width>110</width>
+      <height>110</height>
      </rect>
     </property>
     <property name="frameShape">

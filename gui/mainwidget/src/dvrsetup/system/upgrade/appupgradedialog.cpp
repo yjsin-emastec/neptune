@@ -30,6 +30,25 @@ AppUpgradeDialog::AppUpgradeDialog(QWidget *parent)
     labelFileNameValue->setStyleSheet("font:38px;color:white");
     labelProgressValue->setStyleSheet("font:40px;color:white");
 
+#if 1 //yjsin [17/09/13] if text is long, change font size and label location and size
+    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+    {
+        labelModelName->setStyleSheet("font:36px;color:white");
+        labelFileName->setStyleSheet("font:36px;color:white");
+        labelFileNameValue->setStyleSheet("font:35px;color:white");
+
+        labelModelName->setGeometry(10, 197, 341, 71);
+        labelModelNameValue->setGeometry(350, 197, 741, 71);
+        labelVersion->setGeometry(10, 267, 341, 71);
+        labelVersionValue->setGeometry(350, 267, 741, 71);
+        labelFileName->setGeometry(10, 337, 341, 71);
+        labelFileNameValue->setGeometry(350, 337, 741, 71);
+        labelProgress->setGeometry(10, 407, 341, 71);
+        labelProgressValue->setGeometry(350, 407, 741, 71);
+        progressBar->setGeometry(354, 410, 731, 66);
+    }
+#endif
+
     upgradeTimer = NULL;
     msgBox       = NULL;
 
@@ -118,7 +137,6 @@ void AppUpgradeDialog::onButtonFind(void)
 }
 int AppUpgradeDialog::ButtonFind(int isUnMount)
 {
-
     int rv;
     char tmp[256];
 

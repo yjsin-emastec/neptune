@@ -114,6 +114,14 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
     buttonPriority4Down->setIcon(QIcon(":/images/arrow_down.png"));
     buttonPriority4Down->setIconSize(QSize(42, 42));
 
+#if 1 //yjsin [17/09/13] if text is long, change font size and label location and size
+    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+    {
+        buttonDefault->setGeometry(7, 563, 304, 90);
+        buttonDefault->setStyleSheet("font:38px");
+    }
+#endif
+
     connect(buttonSource1Up,       SIGNAL(released()), this, SLOT(onButtonSource1Up()));
     connect(buttonSource1Down,     SIGNAL(released()), this, SLOT(onButtonSource1Down()));
     connect(buttonDelay1Up,        SIGNAL(released()), this, SLOT(onButtonDelay1Up()));

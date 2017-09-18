@@ -500,11 +500,29 @@ QSize MainWidget::sizeHint() const
 }
 void MainWidget::loadStyleSheet()
 {
-    QFile file(":/qss/darkstyle.qss");
+    QFile file;    
+
+    file.setFileName(":/qss/darkstyle.qss");
+
+#if 1   //yjsin [17/09/14] if text is long, change button font size 48px->44px
+    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            file.setFileName("/tmp/eastern/usr/lib/darkstyle_spanish.qss");
+            qDebug("load darkstyle_spanish.qss from nfs");
+        }
+        else
+        {
+            file.setFileName("/usr/lib/darkstyle_spanish.qss");
+            qDebug("load darkstyle_spanish.qss");
+        }
+    }
+#endif
+
     file.open(QFile::ReadOnly);
     QString styleSheet = QLatin1String(file.readAll());
     setStyleSheet(styleSheet);
-
     qDebug("-------------------- Dark Style");
 }
 void MainWidget::createStatusBar(int isReset)
@@ -1645,6 +1663,19 @@ void MainWidget::translatorChange(int lang)
             qDebug("load Korean");
         }
     }
+    else if(lang == LANGUAGE_SPANISH)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr/lib/translator/language_spanish");
+            qDebug("load Spanish from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_spanish");
+            qDebug("load Spanish");
+        }
+    }
     else
     {
         if(access("/tmp/eastern", F_OK) == 0)
@@ -1679,6 +1710,10 @@ int MainWidget::LanguageValueTransformation(void)
     else if(utils_cfg_cmp_item(SystemCfg.language, "KOREAN")  == 0)
     {
         val = LANGUAGE_KOREAN;
+    }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH")  == 0)
+    {
+        val = LANGUAGE_SPANISH;
     }
 
     return val;

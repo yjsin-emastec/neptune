@@ -60,9 +60,9 @@
    <widget class="QPushButton" name="buttonSetRestart">
     <property name="geometry">
      <rect>
-      <x>467</x>
+      <x>417</x>
       <y>490</y>
-      <width>350</width>
+      <width>400</width>
       <height>91</height>
      </rect>
     </property>

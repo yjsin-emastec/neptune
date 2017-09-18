@@ -24,6 +24,14 @@ BackupDialog::BackupDialog(QWidget *parent)
     dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
     dateTimeStart->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
 
+#if 1 //yjsin [17/09/13] if text is long, change font size
+    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+    {
+        buttonBackup->setStyleSheet("font:39px");
+        labelStart->setStyleSheet("font:35px");
+    }
+#endif
+
     labelEnd->setStyleSheet("font:40px;color:white");
     labelEnd->setAlignment(Qt::AlignCenter);
 

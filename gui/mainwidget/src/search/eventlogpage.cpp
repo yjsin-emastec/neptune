@@ -29,7 +29,6 @@ EventLogPage::EventLogPage(QWidget *parent)
     labelEndTime = new QLabel(tr("End:"));
     labelEndTime->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
     labelEndTime->setMaximumSize(QSize(80, 90));
-
     searchEndTime = new QDateTimeEdit(QDateTime::currentDateTime());
     searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm");
     searchEndTime->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
@@ -86,6 +85,16 @@ EventLogPage::EventLogPage(QWidget *parent)
     buttonClose = new QPushButton(tr("Close"));
     buttonClose->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
     buttonClose->setMaximumSize(QSize(240, 90));
+
+#if 1 //yjsin [17/09/13] if text is long, change label size
+    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+    {
+        labelStartTime->setMaximumSize(QSize(100, 90));
+        labelEndTime->setMaximumSize(QSize(100, 90));
+        labelFilter->setMaximumSize(QSize(100, 90));
+        labelLog->setMaximumSize(QSize(130, 90));
+    }
+#endif
 
     QHBoxLayout *mainLayout   = new QHBoxLayout;
     QVBoxLayout *menuVLayout0 = new QVBoxLayout;

@@ -53,7 +53,7 @@ SetDateTimeDialog::SetDateTimeDialog(QWidget *parent, int dateFormat, cfg_dls_t 
     buttonBox->button(QDialogButtonBox::Cancel)->setMinimumSize(200,91);
 
     comboBoxTimeZone->setStyleSheet("QComboBox{font:38px;background:rgb(50,57,83);color:white;}QComboBox:focus{border-color:rgb(67,74,86);background-color:rgb(152,14,69);color:white;}");
-
+    comboBoxTimeZone->setView(new QListView);   //item width resize
     isKeyLock = 0;
 }
 void SetDateTimeDialog::initComboBox()
