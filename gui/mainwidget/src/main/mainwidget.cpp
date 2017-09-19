@@ -500,7 +500,7 @@ QSize MainWidget::sizeHint() const
 }
 void MainWidget::loadStyleSheet()
 {
-    QFile file;    
+    QFile file;
 
     file.setFileName(":/qss/darkstyle.qss");
 
