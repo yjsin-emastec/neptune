@@ -16,6 +16,8 @@ MainMenu::MainMenu(QWidget *parent)
     connect(buttonAudio,     SIGNAL(released()), this, SLOT(onButtonAudio()));
     connect(buttonShutdown,  SIGNAL(released()), this, SLOT(onButtonShutdown()));
     connect(buttonClose,     SIGNAL(released()), this, SLOT(onButtonClose()));
+
+    initMainMenu();
 }
 MainMenu::~MainMenu()
 {
