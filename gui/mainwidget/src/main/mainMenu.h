@@ -18,6 +18,7 @@ public:
 
 public slots:
 	void onButtonAudio();
+	void onButtonClose();
 
 signals:
 	void setupClicked();
@@ -39,7 +40,6 @@ private slots:
 	void onButtonSetup();
 	void onButtonSearch();
 	void onButtonShutdown();
-	void onButtonClose();
 };
 
 #endif // MAINMENU_H

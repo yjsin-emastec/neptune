@@ -19,6 +19,7 @@ public:
     void updateConfig(int checkMode);
     int  selUserId;
     QString PasswordString;
+    UiKeyboardDialog *keyboardDialog;
 
 public slots:
     void showKeyboard();
@@ -28,7 +29,6 @@ protected:
     void keyPressEvent(QKeyEvent *event);
 
 private:
-    UiKeyboardDialog *keyboardDialog;
 };
 
 #endif // LOGINDIALOG_H

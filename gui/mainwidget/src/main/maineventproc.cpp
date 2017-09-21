@@ -1145,6 +1145,31 @@ void MainWidget::keypadEvent(unsigned char code)
 
         case KPD_EVENT_AUDIO:
 
+            if(operationMode == OPMODE_LIVE && isTrigger)
+            {
+                if(msgBox)
+                {
+                    delete msgBox;
+                }
+
+                msgBox = new TextMessageDialog(tr("NOTICE"), tr("NOTICE\n\nCurrent status is trigger."), 2, this);
+                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
+
+                if(msgBox->exec())
+                {
+                    ;
+                }
+
+                if(msgBox)
+                {
+                    delete msgBox;
+                    msgBox = NULL;
+                }
+
+                break;
+            }
+
             if(operationMode == OPMODE_LIVE)
             {
                 mainMenu->onButtonAudio();
@@ -1207,6 +1232,31 @@ void MainWidget::keypadEvent(unsigned char code)
 
         case KPD_EVENT_SPLIT:
 
+            if(operationMode == OPMODE_LIVE && isTrigger)
+            {
+                if(msgBox)
+                {
+                    delete msgBox;
+                }
+
+                msgBox = new TextMessageDialog(tr("NOTICE"), tr("NOTICE\n\nCurrent status is trigger."), 2, this);
+                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
+
+                if(msgBox->exec())
+                {
+                    ;
+                }
+
+                if(msgBox)
+                {
+                    delete msgBox;
+                    msgBox = NULL;
+                }
+
+                break;
+            }
+
             rotateSplit();
 
             break;
@@ -1221,6 +1271,31 @@ void MainWidget::keypadEvent(unsigned char code)
         case KPD_EVENT_8:
         case KPD_EVENT_9:
         case KPD_EVENT_10:
+
+            if(operationMode == OPMODE_LIVE && isTrigger)
+            {
+                if(msgBox)
+                {
+                    delete msgBox;
+                }
+
+                msgBox = new TextMessageDialog(tr("NOTICE"), tr("NOTICE\n\nCurrent status is trigger."), 2, this);
+                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
+
+                if(msgBox->exec())
+                {
+                    ;
+                }
+
+                if(msgBox)
+                {
+                    delete msgBox;
+                    msgBox = NULL;
+                }
+
+                break;
+            }
 
             if(searchDialog->pbType == SEARCH_MENU_EVENT)
             {

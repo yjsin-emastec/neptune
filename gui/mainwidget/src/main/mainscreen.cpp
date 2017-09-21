@@ -4,6 +4,8 @@
 #include "mainwidget.h"
 #include "playbardialog.h"
 #include "search/searchdialog.h"
+#include "login/logindialog.h"
+#include "ui/keyboard/uikeyboarddialog.h"
 #include "mainglobal.h"
 #include "dev/Ver.h"
 #include <core/Core.h>
@@ -307,6 +309,30 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
     {
         if(type == EVENT_POPUP_SENSOR_ON)
         {
+            if(mainMenu)
+            {
+                if(mainMenu->isVisible())
+                {
+                    mainMenu->onButtonClose();
+                }
+            }
+
+            if(loginDialog)
+            {
+                if(loginDialog->isVisible())
+                {
+                    if(loginDialog->keyboardDialog)
+                    {
+                        if(loginDialog->keyboardDialog->isVisible())
+                        {
+                            loginDialog->keyboardDialog->reject();
+                        }
+                    }
+
+                    loginDialog->reject();
+                }
+            }
+
             isTrigger = 1;
 
             appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
