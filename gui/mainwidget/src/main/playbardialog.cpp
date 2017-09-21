@@ -36,115 +36,115 @@ PlayBarDialog::PlayBarDialog(QWidget *parent)
 
     createPlaySpeedControlButtons();
 
-    QHBoxLayout *buttonLayout = new QHBoxLayout;
-    buttonLayout->addSpacing(30);
-    buttonLayout->addWidget(labelSpeed);
-    buttonLayout->addWidget(buttonAudio);
-    buttonLayout->addSpacing(40);
-    buttonLayout->addWidget(buttonRewFrame);
-    buttonLayout->addWidget(buttonRew);
-    buttonLayout->addWidget(buttonPlay);
-    buttonLayout->addWidget(buttonFf);
-    buttonLayout->addWidget(buttonFfFrame);
-    buttonLayout->addSpacing(70);
-    buttonLayout->addWidget(buttonStill);
-    buttonLayout->addWidget(buttonClose);
-    buttonLayout->addSpacing(15);
+    QHBoxLayout  *buttonLayout = new QHBoxLayout;
+    buttonLayout ->addSpacing  (30);
+    buttonLayout ->addWidget   (labelSpeed);
+    buttonLayout ->addWidget   (buttonAudio);
+    buttonLayout ->addSpacing  (40);
+    buttonLayout ->addWidget   (buttonRewFrame);
+    buttonLayout ->addWidget   (buttonRew);
+    buttonLayout ->addWidget   (buttonPlay);
+    buttonLayout ->addWidget   (buttonFf);
+    buttonLayout ->addWidget   (buttonFfFrame);
+    buttonLayout ->addSpacing  (70);
+    buttonLayout ->addWidget   (buttonStill);
+    buttonLayout ->addWidget   (buttonClose);
+    buttonLayout ->addSpacing  (15);
 
     QVBoxLayout *layout = new QVBoxLayout;
-    layout->addWidget(timeBar);
-    layout->addLayout(buttonLayout);
+    layout->addWidget (timeBar);
+    layout->addLayout (buttonLayout);
 
-    connect(buttonAudio,    SIGNAL(clicked()),            this, SLOT(onButtonAudio()));
-    connect(buttonRew,      SIGNAL(clicked()),            this, SLOT(rewClicked()));
-    connect(buttonRewFrame, SIGNAL(clicked()),            this, SLOT(rewFrameClicked()));
-    connect(buttonPlay,     SIGNAL(clicked()),            this, SLOT(playpauseClicked()));
-    connect(buttonFf,       SIGNAL(clicked()),            this, SLOT(fastClicked()));
-    connect(buttonFfFrame,  SIGNAL(clicked()),            this, SLOT(fowardFrameClicked()));
-    connect(buttonStill,    SIGNAL(clicked()),            this, SLOT(clickBackup()));
-    connect(buttonClose,    SIGNAL(clicked()),            this, SLOT(closeSearchBar()));
-    connect(timeBar,        SIGNAL(playTimeChanged(int)), this, SLOT(changePlaybackTime(int)));
+    connect(buttonAudio,    SIGNAL(clicked()),            this, SLOT(onButtonAudio      (void)));
+    connect(buttonRew,      SIGNAL(clicked()),            this, SLOT(rewClicked         (void)));
+    connect(buttonRewFrame, SIGNAL(clicked()),            this, SLOT(rewFrameClicked    (void)));
+    connect(buttonPlay,     SIGNAL(clicked()),            this, SLOT(playpauseClicked   (void)));
+    connect(buttonFf,       SIGNAL(clicked()),            this, SLOT(fastClicked        (void)));
+    connect(buttonFfFrame,  SIGNAL(clicked()),            this, SLOT(fowardFrameClicked (void)));
+    connect(buttonStill,    SIGNAL(clicked()),            this, SLOT(clickBackup        (void)));
+    connect(buttonClose,    SIGNAL(clicked()),            this, SLOT(closeSearchBar     (void)));
+    connect(timeBar,        SIGNAL(playTimeChanged(int)), this, SLOT(changePlaybackTime (int )));
 
     setLayout(layout);
 
     indexAudio = 0;
 }
-PlayBarDialog::~PlayBarDialog()
+PlayBarDialog::~PlayBarDialog(void)
 {
 }
-void PlayBarDialog::createPlaySpeedControlButtons()
+void PlayBarDialog::createPlaySpeedControlButtons(void)
 {
     labelSpeed = new QLabel(tr("Pause"), this);
-    labelSpeed->setStyleSheet("font-weight:bold;font-size:32px;");
-    labelSpeed->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    labelSpeed->setMinimumSize(QSize(250, PLAYBAR_BTN_SIZE));
-    labelSpeed->setMaximumSize(QSize(250, PLAYBAR_BTN_SIZE));
-    labelSpeed->setAlignment(Qt::AlignLeft|Qt::AlignVCenter);
+    labelSpeed->setStyleSheet  ("font-weight:bold;font-size:32px;");
+    labelSpeed->setSizePolicy  (QSizePolicy::Fixed, QSizePolicy::Fixed);
+    labelSpeed->setMinimumSize (QSize(250, PLAYBAR_BTN_SIZE));
+    labelSpeed->setMaximumSize (QSize(250, PLAYBAR_BTN_SIZE));
+    labelSpeed->setAlignment   (Qt::AlignLeft|Qt::AlignVCenter);
 
-    buttonAudio     = new QPushButton(this);  buttonAudio->setFocusPolicy(Qt::NoFocus);
-    buttonRew       = new QPushButton(this);  buttonRew->setFocusPolicy(Qt::NoFocus);
-    buttonRewFrame  = new QPushButton(this);  buttonRewFrame->setFocusPolicy(Qt::NoFocus);
-    buttonPlay      = new QPushButton(this);  buttonPlay->setFocusPolicy(Qt::NoFocus);
-    buttonFfFrame   = new QPushButton(this);  buttonFfFrame->setFocusPolicy(Qt::NoFocus);
-    buttonFf        = new QPushButton(this);  buttonFf->setFocusPolicy(Qt::NoFocus);
-    buttonStill     = new QPushButton(this);  buttonStill->setFocusPolicy(Qt::NoFocus);
-    buttonClose     = new QPushButton(this);  buttonClose->setFocusPolicy(Qt::NoFocus);
+    buttonAudio     = new QPushButton(this);  buttonAudio    ->setFocusPolicy(Qt::NoFocus);
+    buttonRew       = new QPushButton(this);  buttonRew      ->setFocusPolicy(Qt::NoFocus);
+    buttonRewFrame  = new QPushButton(this);  buttonRewFrame ->setFocusPolicy(Qt::NoFocus);
+    buttonPlay      = new QPushButton(this);  buttonPlay     ->setFocusPolicy(Qt::NoFocus);
+    buttonFfFrame   = new QPushButton(this);  buttonFfFrame  ->setFocusPolicy(Qt::NoFocus);
+    buttonFf        = new QPushButton(this);  buttonFf       ->setFocusPolicy(Qt::NoFocus);
+    buttonStill     = new QPushButton(this);  buttonStill    ->setFocusPolicy(Qt::NoFocus);
+    buttonClose     = new QPushButton(this);  buttonClose    ->setFocusPolicy(Qt::NoFocus);
 
-    buttonAudio->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonAudio->setMinimumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonAudio->setMaximumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonAudio->setIconSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonAudio->setIcon(QIcon(":/images/aomute.png"));
-    buttonAudio->adjustSize();
+    buttonAudio    ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
+    buttonAudio    ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonAudio    ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonAudio    ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonAudio    ->setIcon         (QIcon(":/images/aomute.png"));
+    buttonAudio    ->adjustSize      ();
 
-    buttonRew->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonRew->setMinimumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonRew->setMaximumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonRew->setIconSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonRew->setIcon(QIcon(":/images/rew.png"));
-    buttonRew->adjustSize();
+    buttonRew      ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
+    buttonRew      ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonRew      ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonRew      ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonRew      ->setIcon         (QIcon(":/images/rew.png"));
+    buttonRew      ->adjustSize      ();
 
-    buttonRewFrame->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonRewFrame->setMinimumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonRewFrame->setMaximumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonRewFrame->setIconSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonRewFrame->setIcon(QIcon(":/images/rew_frame.png"));
-    buttonRewFrame->adjustSize();
+    buttonRewFrame ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
+    buttonRewFrame ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonRewFrame ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonRewFrame ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonRewFrame ->setIcon         (QIcon(":/images/rew_frame.png"));
+    buttonRewFrame ->adjustSize      ();
 
-    buttonPlay->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonPlay->setMinimumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonPlay->setMaximumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonPlay->setIconSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonPlay->setIcon(QIcon(":/images/play.png"));
-    buttonPlay->adjustSize();
+    buttonPlay     ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
+    buttonPlay     ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonPlay     ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonPlay     ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonPlay     ->setIcon         (QIcon(":/images/play.png"));
+    buttonPlay     ->adjustSize      ();
 
-    buttonFfFrame->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonFfFrame->setMinimumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonFfFrame->setMaximumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonFfFrame->setIconSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonFfFrame->setIcon(QIcon(":/images/ff_frame.png"));
-    buttonFfFrame->adjustSize();
+    buttonFfFrame  ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
+    buttonFfFrame  ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonFfFrame  ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonFfFrame  ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonFfFrame  ->setIcon         (QIcon(":/images/ff_frame.png"));
+    buttonFfFrame  ->adjustSize      ();
 
-    buttonFf->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonFf->setMinimumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonFf->setMaximumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonFf->setIconSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonFf->setIcon(QIcon(":/images/ff.png"));
-    buttonFf->adjustSize();
+    buttonFf       ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
+    buttonFf       ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonFf       ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonFf       ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonFf       ->setIcon         (QIcon(":/images/ff.png"));
+    buttonFf       ->adjustSize      ();
 
-    buttonStill->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonStill->setMinimumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonStill->setMaximumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonStill->setIconSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonStill->setIcon(QIcon(":/images/still_image.png"));
-    buttonStill->adjustSize();
+    buttonStill    ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
+    buttonStill    ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonStill    ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonStill    ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonStill    ->setIcon         (QIcon(":/images/still_image.png"));
+    buttonStill    ->adjustSize      ();
 
-    buttonClose->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonClose->setMinimumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonClose->setMaximumSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonClose->setIconSize(QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonClose->setIcon(QIcon(":/images/close.png"));
-    buttonClose->adjustSize();
+    buttonClose    ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
+    buttonClose    ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonClose    ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonClose    ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonClose    ->setIcon         (QIcon(":/images/close.png"));
+    buttonClose    ->adjustSize      ();
 }
 void PlayBarDialog::setTimeFormat(int timeFormat)
 {
@@ -174,7 +174,7 @@ void PlayBarDialog::setTimeFormat(int timeFormat)
 
     timeBar->sliderPlayTimeChange();
 }
-void PlayBarDialog::closeSearchBar()
+void PlayBarDialog::closeSearchBar(void)
 {
     struct tm tmNow;
     int chBit = 0;
@@ -186,8 +186,8 @@ void PlayBarDialog::closeSearchBar()
 
     if(indexAudio != 1)
     {
-        OutputAudio(currentChannelNum);
-        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, currentChannelNum);
+        OutputAudio(19);
+        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
     }
 
     playbackSpeed_old  = playbackSpeed;
@@ -265,6 +265,18 @@ void PlayBarDialog::resumePlayback(int isAviBackup, int sec)
         appmgr_search_set_speed(playbackSpeed_old, chBit);
     }
 }
+void PlayBarDialog::SetAudioIcon(int ch)
+{
+    switch(ch)
+    {
+        case  0: { buttonAudio->setIcon(QIcon(":/images/audio1.png")); break; }
+        case  1: { buttonAudio->setIcon(QIcon(":/images/audio2.png")); break; }
+        case  2: { buttonAudio->setIcon(QIcon(":/images/audio3.png")); break; }
+        case  3: { buttonAudio->setIcon(QIcon(":/images/audio4.png")); break; }
+        case 19: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); break; }
+        default: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); break; }
+    }
+}
 void PlayBarDialog::OutputAudio(int ch)
 {
     switch(ch)
@@ -273,6 +285,7 @@ void PlayBarDialog::OutputAudio(int ch)
         case  1: { buttonAudio->setIcon(QIcon(":/images/audio2.png")); indexAudio = 3; break; }
         case  2: { buttonAudio->setIcon(QIcon(":/images/audio3.png")); indexAudio = 4; break; }
         case  3: { buttonAudio->setIcon(QIcon(":/images/audio4.png")); indexAudio = 5; break; }
+        case 19: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); indexAudio = 1; break; }
         default: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); indexAudio = 1; break; }
     }
 }
@@ -325,14 +338,14 @@ void PlayBarDialog::onButtonAudio(void)
         }
     }
 }
-void PlayBarDialog::clickBackup()
+void PlayBarDialog::clickBackup(void)
 {
     int chBit = 0;
 
     if(indexAudio != 1)
     {
-        OutputAudio(currentChannelNum);
-        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, currentChannelNum);
+        SetAudioIcon(19);
+        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
     }
 
     chBit = getPlaybackChannel();
@@ -346,7 +359,7 @@ void PlayBarDialog::clickBackup()
 
     emit backupClicked();
 }
-void PlayBarDialog::displaySpeed()
+void PlayBarDialog::displaySpeed(void)
 {
     QString str;
 
@@ -397,14 +410,14 @@ void PlayBarDialog::displaySpeed()
 
     labelSpeed->setText(str);
 }
-void PlayBarDialog::rewClicked()
+void PlayBarDialog::rewClicked(void)
 {
     int chBit = 0;
 
     if(indexAudio != 1)
     {
-        OutputAudio(currentChannelNum);
-        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, currentChannelNum);
+        SetAudioIcon(19);
+        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
     }
 
     chBit = getPlaybackChannel();
@@ -443,12 +456,15 @@ void PlayBarDialog::rewClicked()
 
     displaySpeed();
 }
-void PlayBarDialog::rewFrameClicked()
+void PlayBarDialog::rewFrameClicked(void)
 {
-    if(indexAudio != 1)
+    if(playbackState == PB_PLAY)
     {
-        OutputAudio(currentChannelNum);
-        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, currentChannelNum);
+        if(indexAudio != 1)
+        {
+            SetAudioIcon(19);
+            appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
+        }
     }
 
     if(playbackState == PB_PLAY)
@@ -464,15 +480,50 @@ void PlayBarDialog::rewFrameClicked()
     }
 
     displaySpeed();
+
+    if(playbackState == PB_PLAY)
+    {
+        if(indexAudio == 1)
+        {
+            OutputAudio(19);
+            appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
+        }
+        else
+        {
+            if(currentSplit == Split_1)
+            {
+                OutputAudio(currentChannelNum);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
+            }
+            else if(currentSplit == Split_4)
+            {
+                OutputAudio(indexAudio-2);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
+            }
+        }
+    }
 }
-void PlayBarDialog::playClicked()
+void PlayBarDialog::playClicked(void)
 {
     int chBit = 0;
 
-    if(indexAudio != 1)
+    if(indexAudio == 1)
     {
-        OutputAudio(currentChannelNum);
-        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, currentChannelNum);
+        OutputAudio(19);
+        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
+    }
+    else
+    {
+        if(currentSplit == Split_1)
+        {
+            OutputAudio(currentChannelNum);
+            appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
+        }
+        else if(currentSplit == Split_4)
+        {
+            OutputAudio(indexAudio-2);
+            appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
+        }
     }
 
     chBit = getPlaybackChannel();
@@ -490,14 +541,14 @@ void PlayBarDialog::playClicked()
 
     displaySpeed();
 }
-void PlayBarDialog::pauseClicked()
+void PlayBarDialog::pauseClicked(void)
 {
     int chBit = 0;
 
     if(indexAudio != 1)
     {
-        OutputAudio(currentChannelNum);
-        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, currentChannelNum);
+        SetAudioIcon(19);
+        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
     }
 
     chBit = getPlaybackChannel();
@@ -514,14 +565,35 @@ void PlayBarDialog::pauseClicked()
 
     displaySpeed();
 }
-void PlayBarDialog::playpauseClicked()
+void PlayBarDialog::playpauseClicked(void)
 {
     int chBit = 0;
 
-    if(indexAudio != 1)
+    if((playbackState == PB_PLAY) && (playbackDirection == PB_FF) && (playbackSpeed == PB_SPEED_1))
     {
-        OutputAudio(currentChannelNum);
-        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, currentChannelNum);
+        SetAudioIcon(19);
+        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
+    }
+    else
+    {
+        if(indexAudio == 1)
+        {
+            OutputAudio(19);
+            appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
+        }
+        else
+        {
+            if(currentSplit == Split_1)
+            {
+                OutputAudio(currentChannelNum);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
+            }
+            else if(currentSplit == Split_4)
+            {
+                OutputAudio(indexAudio-2);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
+            }
+        }
     }
 
     chBit = getPlaybackChannel();
@@ -552,12 +624,15 @@ void PlayBarDialog::playpauseClicked()
 
     displaySpeed();
 }
-void PlayBarDialog::fowardFrameClicked()
+void PlayBarDialog::fowardFrameClicked(void)
 {
-    if(indexAudio != 1)
+    if(playbackState == PB_PLAY)
     {
-        OutputAudio(currentChannelNum);
-        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, currentChannelNum);
+        if(indexAudio != 1)
+        {
+            SetAudioIcon(19);
+            appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
+        }
     }
 
     if(playbackState == PB_PLAY)
@@ -573,15 +648,37 @@ void PlayBarDialog::fowardFrameClicked()
     }
 
     displaySpeed();
+
+    if(playbackState == PB_PLAY)
+    {
+        if(indexAudio == 1)
+        {
+            OutputAudio(19);
+            appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
+        }
+        else
+        {
+            if(currentSplit == Split_1)
+            {
+                OutputAudio(currentChannelNum);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
+            }
+            else if(currentSplit == Split_4)
+            {
+                OutputAudio(indexAudio-2);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
+            }
+        }
+    }
 }
-void PlayBarDialog::fastClicked()
+void PlayBarDialog::fastClicked(void)
 {
     int chBit = 0;
 
     if(indexAudio != 1)
     {
-        OutputAudio(currentChannelNum);
-        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, currentChannelNum);
+        SetAudioIcon(19);
+        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
     }
 
     chBit = getPlaybackChannel();
@@ -625,7 +722,7 @@ void PlayBarDialog::setMaxSplit(int startCh, int split)
     playbackStartCh  = startCh;
     playbackMaxSplit = split;
 }
-void PlayBarDialog::updateTimeLine()
+void PlayBarDialog::updateTimeLine(void)
 {
     int dlsEndHour = -1;
     struct tm tmNow;
@@ -863,10 +960,15 @@ void PlayBarDialog::PausePlayChange(int state)
 {
     int chBit = 0;
 
-    if(indexAudio != 1)
+    if(state == PB_PLAY)
     {
         OutputAudio(currentChannelNum);
-        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, currentChannelNum);
+        appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
+    }
+    else if(state == PB_PAUSE)
+    {
+        OutputAudio(19);
+        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
     }
 
     chBit = getPlaybackChannel();
@@ -886,7 +988,7 @@ int PlayBarDialog::GetStatePausePlay(void)
 {
     return playbackState;
 }
-int PlayBarDialog::getPlaybackChannel()
+int PlayBarDialog::getPlaybackChannel(void)
 {
     int chBit = 0;
     qDebug("\n %s: splitStartChNum = %d, currentSplit = %d \n", __func__, splitStartChNum, currentSplit);

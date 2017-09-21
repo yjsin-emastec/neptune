@@ -1091,6 +1091,25 @@ void MainWidget::runBackup()
 
     rv = backupDialog->exec();
 
+    if(playBar->indexAudio == 1)
+    {
+        playBar->OutputAudio(19);
+        appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
+    }
+    else
+    {
+        if(currentSplit == Split_1)
+        {
+            playBar->OutputAudio(currentChannelNum);
+            appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
+        }
+        else if(currentSplit == Split_4)
+        {
+            playBar->OutputAudio(playBar->indexAudio-2);
+            appmgr_search_set_audio_mute_on_off(AUDIO_PB, playBar->indexAudio-2);
+        }
+    }
+
     if(type == 1) 
     {
         if(backupPopupShow == 0)
