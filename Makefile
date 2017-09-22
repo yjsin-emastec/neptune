@@ -11,7 +11,7 @@ Mklink:
 	@$(CD) $(LIBDIR); $(SH) script/mklink.sh
 
 Version: dummy
-	@$(SH) script/version.sh "0.0.8"
+	@$(SH) script/version.sh "0.0.9"
 
 Gui: dummy
 	@$(ECHO)  "QT MainWidget"
