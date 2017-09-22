@@ -1604,49 +1604,55 @@ System will restart.</source>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="118"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="136"/>
         <source>Korean</source>
-        <translation type="unfinished">한국어</translation>
+        <translation>한국어</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="81"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="120"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="138"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="86"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="121"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="139"/>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>ñ이 î으로 출력됨
+Español
+-&gt; Espanol</translatorcomment>
+        <translation type="unfinished">Espanol</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="91"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="122"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="140"/>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>ç 깨짐
+Français
+-&gt;Francais</translatorcomment>
+        <translation type="unfinished">Francais</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="96"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="123"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="141"/>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation>Italiano</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="101"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="124"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="142"/>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Português</translation>
     </message>
     <message>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="106"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="125"/>
         <location filename="src/dvrsetup/system/language/languagedialog.cpp" line="143"/>
         <source>Japanese</source>
-        <translation type="unfinished"></translation>
+        <translation>日本語</translation>
     </message>
 </context>
 <context>
