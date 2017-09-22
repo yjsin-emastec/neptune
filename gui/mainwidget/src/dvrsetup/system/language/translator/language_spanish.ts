@@ -1140,7 +1140,7 @@ En caso afirmativo, el sistema se reiniciará.</translation>
         <source>Event
 Time: 15/30sec</source>
         <translation>Hora del
-Evento :
+Evento
 15/30 seg</translation>
     </message>
     <message>
@@ -1153,7 +1153,7 @@ Evento :
         <source>Trigger
 Record: Off/On</source>
         <translation>Grabar de
-Activado :
+Activado
 Apagar / Encender</translation>
     </message>
     <message>
@@ -1161,7 +1161,7 @@ Apagar / Encender</translation>
         <source>G-Sensor
 Record: Off/On</source>
         <translation>Grabar de
-Impacto:
+Impacto
 Apagar / Encender</translation>
     </message>
     <message>
@@ -1189,7 +1189,7 @@ Apagar / Encender</translation>
         <location filename="../../../record/event/eventdialog.cpp" line="100"/>
         <source>%1%2%3</source>
         <translation>%2
-%1:
+%1
 %3</translation>
     </message>
     <message>
@@ -1488,7 +1488,8 @@ al impacto : 3</translation>
         <source>
 Sensitivity: 1</source>
         <translation>
-al impacto : 1</translation>
+al impacto
+1</translation>
     </message>
     <message>
         <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
@@ -1496,7 +1497,8 @@ al impacto : 1</translation>
         <source>
 Sensitivity: 2</source>
         <translation>
-al impacto : 2</translation>
+al impacto
+2</translation>
     </message>
     <message>
         <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
@@ -1504,7 +1506,8 @@ al impacto : 2</translation>
         <source>
 Sensitivity: 3</source>
         <translation>
-al impacto : 3</translation>
+al impacto
+3</translation>
     </message>
     <message>
         <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
@@ -1512,7 +1515,8 @@ al impacto : 3</translation>
         <source>
 Sensitivity: 4</source>
         <translation>
-al impacto : 4</translation>
+al impacto
+4</translation>
     </message>
     <message>
         <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
@@ -1520,7 +1524,8 @@ al impacto : 4</translation>
         <source>
 Sensitivity: 5</source>
         <translation>
-al impacto : 5</translation>
+al impacto
+5</translation>
     </message>
 </context>
 <context>
@@ -1692,7 +1697,10 @@ Español
         <location filename="../languagedialog.cpp" line="123"/>
         <location filename="../languagedialog.cpp" line="142"/>
         <source>French</source>
-        <translation>français</translation>
+        <translatorcomment>ç 깨짐
+Français
+-&gt;Francais</translatorcomment>
+        <translation type="unfinished">Francais</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="96"/>
