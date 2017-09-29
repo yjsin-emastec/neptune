@@ -2,7 +2,7 @@ PROJECT_ROOT=..
 
 include rules.mk
 
-TAG_ALL     = Mklink Version Gui
+TAG_ALL     = Mklink Version Utils Gui
 TAG_INSTALL = ExportRelease2Tmp SetModelDep CopyUserlib2Tmp
 
 all: $(TAG_ALL)
@@ -11,7 +11,10 @@ Mklink:
 	@$(CD) $(LIBDIR); $(SH) script/mklink.sh
 
 Version: dummy
-	@$(SH) script/version.sh "0.0.9"
+	@$(SH) script/version.sh "0.1.0"
+
+Utils:   dummy
+	@$(CD) utils;   $(MAKE)
 
 Gui: dummy
 	@$(ECHO)  "QT MainWidget"
@@ -63,9 +66,11 @@ Mkimg: dummy
 	@$(CD) $(TMP); $(MAKE)
 
 clean:
+	@$(MAKE) -C utils            clean
 	@$(MAKE) -C gui/mainwidget   clean
 	@$(RMF)  include/eaVersion.h
 	@$(RMF)  gui/mainwidget/Makefile gui/mainwidget/mainwidget gui/mainwidget/mainwidget.pro;
+	@$(RMF)  include/utils/*.h
 	@$(RMF)  *.txt
 	@$(RMF)  *.bin
 	@$(CD)   $(LIBDIR); $(SH) script/delink.sh

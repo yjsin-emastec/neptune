@@ -5,12 +5,12 @@
 extern "C"{
 #endif
 
-#define	EA_CONFIG_FREE	0
-#define	EA_CONFIG_LOCK	1
-
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+
+#define    EA_CONFIG_FREE    0
+#define    EA_CONFIG_LOCK    1
 
 typedef struct {
     unsigned char   *stream;
@@ -30,7 +30,6 @@ int           utils_net_set_hwaddr                (char *ifname, char *mac);
 char         *utils_inet_ntoa_r                   (struct in_addr in, char *buf);
 void          utils_net_local_live_send           (unsigned char *buf, int len, int channel, int mainStream);
 void          utils_net_local_live_initialize     (int count, int portStart);
-void          utils_live_audio_initialize         (void);
 int           utils_sysid_get_unitid_host         (unsigned *unitid);
 int           utils_sysid_get_unitid_slav         (unsigned *unitid);
 int           utils_sysid_get_unitid              (unsigned *unitid);
@@ -38,6 +37,8 @@ int           utils_sysid_get_hw_version          (char *ver);
 int           utils_sysid_get_sw_version          (char *ver);
 int           utils_set_hw_revision               (int rev);
 int           utils_get_hw_revision               (void);
+int           utils_get_work_link_up_ready        (void);
+int           utils_set_work_link_up_ready        (int num);
 int           utils_get_video_mask                (void);
 int           utils_set_video_mask                (int mask);
 int           utils_get_node_mask                 (void);
@@ -85,37 +86,41 @@ int           utils_get_sub_model                 (void);
 int           utils_get_oem_num                   (void);
 char         *utils_get_model_name                (void);
 unsigned int  utils_get_mouse_event_count         (void);
+int           utils_system                        (const char *command);
+int           utils_read_date_file                (int *year, int *mon, int *day, int *hour, int *min, int *sec);
 int           utils_mark_skip_timemismatch        (void);
 int           utils_get_1st_ifname                (char *ifname);
 int           utils_get_2nd_ifname                (char *ifname);
+int           utils_get_sata_link                 (void);
+int           utils_exist_usb_stick               (void);
+int           utils_get_last_scsi_id              (void);
 int           utils_appup_device_check            (void);
 int           utils_appup_device_mount            (void);
 int           utils_appup_device_unmount          (void);
 int           utils_appup_file_check              (char *fname, int len);
+int           utils_test_get_firmware_model       (int *model);
+int           utils_test_file_check               (char *fname, int len);
 int           utils_appup_file_copy               (void);
 int           utils_appup_file_copy_target        (const char *fname, int len);
 int           utils_upgrade_firmware              (void);
 int           utils_upgrade_firmware_pre_check    (int *);
 int           utils_upgrade_firmware_check        (void);
+int           utils_test_upgrade_firmware_check   (void);
 int           utils_salv_upgrade_firmware         (void);
+int           utils_test_upgrade_firmware         (void);
 int           nand_erase                          (const char *mtd_device, int start_block, int block_count, int *ratio, int *percent);
 int           nand_erase_no_skip_badblock         (const char *mtd_device, int start_block, int block_count);
 int           nand_write                          (const char *mtd_device, int ifd, int isize, int *ratio, int *percent);
 int           nand_read                           (const char *mtddev, char *rbuf, long long start, int length);
-int           utils_get_work_link_up_ready        (void);
-int           utils_set_work_link_up_ready        (int num);
+void          utils_live_audio_initialize         (void);
 void          utils_live_initialize               (int count, int keyCount, int bytesMain, int bytesSub);
+void         *utils_live_get_audio                (unsigned char channel);
 void          utils_live_put_audio                (int channel, unsigned char *payload, int bytes, unsigned long long pts, int mainStream, int add);
 void          utils_live_put_audio2               (int channel, unsigned char *payload, int bytes, unsigned long long pts, int mainStream, int add);
 void          utils_live_put_audio3               (int channel, unsigned char *payload, int bytes, unsigned long pts, int mainStream, int add);
 void          utils_live_put_ntp                  (int channel, unsigned long timestamp, int interleaved, int mainStream, int add);
 void          utils_live_put_video                (int channel, unsigned char *payload, int bytes, unsigned long pts, int mainStream, int add, int codecype);
 EaLiveNode   *utils_live_get                      (int channel, int mainStream);
-void         *utils_live_get_audio                (unsigned char channel);
-int           utils_get_sata_link                 (void);
-int           utils_exist_usb_stick               (void);
-int           utils_get_last_scsi_id              (void);
-int           utils_system                        (const char *command);
 
 #ifdef __cplusplus
 }
