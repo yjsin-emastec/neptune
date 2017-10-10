@@ -209,6 +209,7 @@ int           appmgr_get_default_rec_type               (int ch);
 int           appmgr_set_event_popup_split              (int *chSeq, int split);
 void          appmgr_gsensor_config                     (void);
 int           appmgr_get_gps_connected                  (void);
+int           appmgr_get_board_temperature              (void);
 
 #ifdef __cplusplus
 }

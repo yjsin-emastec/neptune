@@ -520,6 +520,7 @@ typedef struct _SmartInfo {
     int                pending_sectors;
     int                uncorrectable_sectors;
     int                spin_retry_count;
+    int                ata_id;
     unsigned long long total_sectors;
 } SmartInfo_t;
 

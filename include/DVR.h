@@ -381,6 +381,7 @@ typedef struct _disk_used_info {
     int                      smartInfo_pending_sectors;
     int                      smartInfo_uncorrectable_sectors;
     int                      smartInfo_spin_retry_count;
+    int                      smartInfo_ata_id;
 
     char                     hddInfo_model   [32];       // model name
     int                      hddInfo_slot;               // slot number [1~8]

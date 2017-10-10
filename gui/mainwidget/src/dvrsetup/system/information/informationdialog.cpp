@@ -39,6 +39,19 @@ void InformationDialog::initInformationConfig(void)
 {
     char tmp[32], *modelName = NULL;
 
+#if 1 // GyverJeong [17/10/10] TODO: Change name of item by either HDD or SSD size
+    appmgr_get_disk_info(&diskInfo);
+
+    if(diskInfo.smartInfo_ata_id)
+    {
+        qDebug("HDD Size");
+    }
+    else
+    {
+        qDebug("SSD Size");
+    }
+#endif
+
     QByteArray text = QByteArray::fromHex(SystemCfg.license_plate);
     QString    str  = QString::fromUtf8(text.data());
     labelLicensePlate2->setText(tr("%1").arg(str));
@@ -96,6 +109,23 @@ void InformationDialog::onUpdateStatus(void)
     {
         labelGps2->setText(tr("%1").arg(tr("Not connected")));
     }
+
+#if 1 // GyverJeong [17/10/10] TODO: Update temperature of both storage and board
+    appmgr_get_disk_info(&diskInfo);
+
+    qDebug("ATA   ID   = %d", diskInfo.smartInfo_ata_id);
+
+    if(diskInfo.smartInfo_ata_id)
+    {
+        qDebug("HDD   Temp = %d Celsius", diskInfo.smartInfo_temperature);
+    }
+    else
+    {
+        qDebug("SSD   Temp = %d Celsius", diskInfo.smartInfo_temperature);
+    }
+
+    qDebug("Board Temp = %d", appmgr_get_board_temperature());
+#endif
 }
 void InformationDialog::onClose(void)
 {

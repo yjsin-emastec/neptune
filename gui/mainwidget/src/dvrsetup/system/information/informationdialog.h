@@ -15,7 +15,7 @@ class InformationDialog : public QDialog, public Ui::InformationDialog
 public:
     InformationDialog(QWidget *parent = 0);
     ~InformationDialog();
-	void initInformationConfig(void);
+    void initInformationConfig(void);
 
 signals:
 
@@ -25,7 +25,8 @@ protected:
     void keyPressEvent(QKeyEvent *event);
 
 private:
-    QTimer *updateTimer;
+    QTimer             *updateTimer;
+    disk_used_info_t    diskInfo;
 
 private slots:
     void onUpdateStatus(void);
