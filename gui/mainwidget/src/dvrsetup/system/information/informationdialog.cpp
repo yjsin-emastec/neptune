@@ -29,6 +29,10 @@ InformationDialog::InformationDialog(QWidget *parent)
     labelNormalSize2    ->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
     labelEventSize2     ->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
     labelGps2           ->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
+    labelDiskTemperature->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
+    labelDVRTemperature ->setStyleSheet("font:48px;color:white");
+    labelDVRTemperature ->setAlignment(Qt::AlignCenter);
+    labelDVRTemperature2->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
 
     connect(buttonClose, SIGNAL(released()), this, SLOT(onClose()));
 }
@@ -70,7 +74,7 @@ void InformationDialog::initInformationConfig(void)
     if( nomalCapacity.compare("No Disk")==0 || nomalCapacity.compare("0 GigaByte")==0 )
     {
         labelNormalSize2->setText(tr("%1").arg(tr("No Disk")));
-        labelNormalSize2->setGeometry(370,325,700,100);
+        labelNormalSize2->setGeometry(370,280,700,85);
     }
     else
     {
@@ -117,13 +121,18 @@ void InformationDialog::onUpdateStatus(void)
 
     if(diskInfo.smartInfo_ata_id)
     {
+        labelHddSize->setText(tr("HDD Size"));
+        labelDiskTemperature->setText(tr("%1%2%3").arg("HDD: ").arg(diskInfo.smartInfo_temperature).arg(tr(" ℃")));
         qDebug("HDD   Temp = %d Celsius", diskInfo.smartInfo_temperature);
     }
     else
     {
+        labelHddSize->setText(tr("SSD Size"));
+        labelDiskTemperature->setText(tr("%1%2%3").arg("SSD: ").arg(diskInfo.smartInfo_temperature).arg(tr(" ℃")));
         qDebug("SSD   Temp = %d Celsius", diskInfo.smartInfo_temperature);
     }
 
+    labelDVRTemperature2->setText(tr("%1%2%3").arg("DVR: ").arg(appmgr_get_board_temperature()).arg(tr(" ℃")));
     qDebug("Board Temp = %d", appmgr_get_board_temperature());
 #endif
 }
