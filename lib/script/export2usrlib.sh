@@ -9,6 +9,7 @@ cp libdevmanager.so    $1 &&
 cp libevent.so         $1 &&
 cp librtc.so           $1 &&
 cp libgsensor.so       $1 &&
+cp libtemperature.so   $1 &&
 cp libnmea.so          $1 &&
 cp libdiskmgr.so       $1 &&
 cp libgps.so           $1 &&

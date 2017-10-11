@@ -35,6 +35,7 @@ LIBS         += -L../../lib                                                     
                 -lkeypad                                                                             \
                 -lrtc                                                                                \
                 -lgsensor                                                                            \
+                -ltemperature                                                                        \
                 -lnmea                                                                               \
                 -lgps                                                                                \
                 -lver                                                                                \
