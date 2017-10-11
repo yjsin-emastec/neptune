@@ -43,19 +43,6 @@ void InformationDialog::initInformationConfig(void)
 {
     char tmp[32], *modelName = NULL;
 
-#if 1 // GyverJeong [17/10/10] TODO: Change name of item by either HDD or SSD size
-    appmgr_get_disk_info(&diskInfo);
-
-    if(diskInfo.smartInfo_ata_id)
-    {
-        qDebug("HDD Size");
-    }
-    else
-    {
-        qDebug("SSD Size");
-    }
-#endif
-
     QByteArray text = QByteArray::fromHex(SystemCfg.license_plate);
     QString    str  = QString::fromUtf8(text.data());
     labelLicensePlate2->setText(tr("%1").arg(str));
@@ -114,27 +101,20 @@ void InformationDialog::onUpdateStatus(void)
         labelGps2->setText(tr("%1").arg(tr("Not connected")));
     }
 
-#if 1 // GyverJeong [17/10/10] TODO: Update temperature of both storage and board
     appmgr_get_disk_info(&diskInfo);
-
-    qDebug("ATA   ID   = %d", diskInfo.smartInfo_ata_id);
 
     if(diskInfo.smartInfo_ata_id)
     {
         labelHddSize->setText(tr("HDD Size"));
         labelDiskTemperature->setText(tr("%1%2%3").arg("HDD: ").arg(diskInfo.smartInfo_temperature).arg(tr(" ℃")));
-        qDebug("HDD   Temp = %d Celsius", diskInfo.smartInfo_temperature);
     }
     else
     {
         labelHddSize->setText(tr("SSD Size"));
         labelDiskTemperature->setText(tr("%1%2%3").arg("SSD: ").arg(diskInfo.smartInfo_temperature).arg(tr(" ℃")));
-        qDebug("SSD   Temp = %d Celsius", diskInfo.smartInfo_temperature);
     }
 
     labelDVRTemperature2->setText(tr("%1%2%3").arg("DVR: ").arg(appmgr_get_board_temperature()).arg(tr(" ℃")));
-    qDebug("Board Temp = %d", appmgr_get_board_temperature());
-#endif
 }
 void InformationDialog::onClose(void)
 {
