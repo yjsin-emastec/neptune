@@ -30,6 +30,13 @@ SystemPage::SystemPage(QWidget *parent)
     licensePlateDialog  = NULL;
     informationDialog   = NULL;
 
+#if 1 //yjsin [17/10/12] if text is long, change font size
+    if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+    {
+        buttonLicensePlate->setStyleSheet("font:43px;color:white");
+    }
+#endif
+
     connect(buttonDateTime,       SIGNAL(released()), this, SLOT(onButtonDateTime()));
     connect(buttonSecurity,       SIGNAL(released()), this, SLOT(onButtonSecurity()));
     connect(buttonConfig,         SIGNAL(released()), this, SLOT(onButtonConfig()));

@@ -94,6 +94,14 @@ EventLogPage::EventLogPage(QWidget *parent)
         labelFilter->setMaximumSize(QSize(100, 90));
         labelLog->setMaximumSize(QSize(130, 90));
     }
+    //yjsin [17/10/12] if text is long, change label size
+    else if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+    {
+        labelStartTime->setMaximumSize(QSize(100, 90));
+        labelEndTime->setMaximumSize(QSize(100, 90));
+        labelFilter->setMaximumSize(QSize(100, 90));
+        labelLog->setMaximumSize(QSize(130, 90));
+    }
 #endif
 
     QHBoxLayout *mainLayout   = new QHBoxLayout;

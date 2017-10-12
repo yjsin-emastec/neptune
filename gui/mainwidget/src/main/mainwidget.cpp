@@ -1695,6 +1695,19 @@ void MainWidget::translatorChange(int lang)
             qDebug("load Spanish");
         }
     }
+    else if(lang == LANGUAGE_FRENCH)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr/lib/translator/language_french");
+            qDebug("load French from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_french");
+            qDebug("load French");
+        }
+    }
     else
     {
         if(access("/tmp/eastern", F_OK) == 0)
@@ -1733,6 +1746,10 @@ int MainWidget::LanguageValueTransformation(void)
     else if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH")  == 0)
     {
         val = LANGUAGE_SPANISH;
+    }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH")  == 0)
+    {
+        val = LANGUAGE_FRENCH;
     }
 
     return val;

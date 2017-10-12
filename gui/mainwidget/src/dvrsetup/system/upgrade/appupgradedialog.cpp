@@ -47,6 +47,24 @@ AppUpgradeDialog::AppUpgradeDialog(QWidget *parent)
         labelProgressValue->setGeometry(350, 407, 741, 71);
         progressBar->setGeometry(354, 410, 731, 66);
     }
+    //yjsin [17/10/12] if text is long, change label size
+    else if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+    {
+        labelModelName->setGeometry(10, 197, 320, 71);
+        labelModelNameValue->setGeometry(329, 197, 761, 71);
+        labelVersion->setGeometry(10, 267, 320, 71);
+        labelVersionValue->setGeometry(329, 267, 761, 71);
+        labelFileName->setGeometry(10, 337, 320, 71);
+        labelFileNameValue->setGeometry(329, 337, 761, 71);
+        labelFileNameValue->setStyleSheet("font:36px;color:white");
+        labelProgress->setGeometry(10, 407, 320, 71);
+        labelProgressValue->setGeometry(329, 407, 761, 71);
+        progressBar->setGeometry(334, 410, 751, 66);
+
+        buttonFind->setGeometry(287, 495, 250, 90);
+        buttonUpgrade->setGeometry(540, 495, 300, 90);
+        buttonUpgrade->setStyleSheet("font:42px;");
+    }
 #endif
 
     upgradeTimer = NULL;

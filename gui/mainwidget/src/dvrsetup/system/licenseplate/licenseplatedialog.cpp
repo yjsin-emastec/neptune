@@ -17,6 +17,13 @@ LicensePlateDialog::LicensePlateDialog(QWidget *parent)
     labelLicensePlate->setStyleSheet("font:54px;color:white");
     lineEditLicensePlate->setAlignment(Qt::AlignCenter);
 
+#if 1 //yjsin [17/10/12] if text is long, change font size
+    if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+    {
+        labelLicensePlate->setStyleSheet("font:43px;color:white");
+    }
+#endif
+
     keyboard = NULL;
 
     connect(buttonLicensePlate, SIGNAL(released()), this, SLOT(onButtonLicensePlate()));

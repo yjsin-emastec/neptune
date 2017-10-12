@@ -110,13 +110,14 @@ void LanguageDialog::initLanguageConfig(void)
 void LanguageDialog::onButtonLanguageUp()
 {
 //    if(indexLanguage <= 1) { indexLanguage = 9; }
-    if(indexLanguage <= 1) { indexLanguage = 4; }
+    if(indexLanguage <= 1) { indexLanguage = 5; }
 
 	switch(--indexLanguage)
 	{
 		case 1: { lineEditLanguage->setText(tr("English"   ));  utils_cfg_cpy_item(SystemCfg.language, "ENGLISH"   );  break; }
 		case 2: { lineEditLanguage->setText(tr("Korean"    ));  utils_cfg_cpy_item(SystemCfg.language, "KOREAN"    );  break; }
         case 3: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }
+        case 4: { lineEditLanguage->setText(tr("French"    ));  utils_cfg_cpy_item(SystemCfg.language, "FRENCH"    );  break; }
 #if 0    //yjsin [17/08/31] temporary use only english, korean
         case 3: { lineEditLanguage->setText(tr("German"    ));  utils_cfg_cpy_item(SystemCfg.language, "GERMAN"    );  break; }
 		case 4: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }
@@ -133,17 +134,25 @@ void LanguageDialog::onButtonLanguageUp()
      * 3. check the stylesheet and MainWidget::loadStyleSheet(). Qbutton font was modified to small.
      * 4. check the search/eventlogpage. label size was modified.
      * 5. check the device/triggerinputdialog. Qbutton size and font was modified
+     *
+     * when you change the language to french, see below code.
+     * 1. check the dvrsetup/system/upgrade/appupgradedialog. label size was modified.
+     * 2. check the search/eventlogpage. label size was modified.
+     * 3. check the dvrsetup/system/information/informationdialog. font size was modified.
+     * 4. check the dvrsetup/system/licenseplate/licenseplatedialog. font size was modified.
+     *
      */
 }
 void LanguageDialog::onButtonLanguageDown()
 {
-    if(indexLanguage >= 3) { indexLanguage = 0; }
+    if(indexLanguage >= 4) { indexLanguage = 0; }
 //    if(indexLanguage >= 8) { indexLanguage = 0; }
 	switch(++indexLanguage)
 	{
 		case 1: { lineEditLanguage->setText(tr("English"   ));  utils_cfg_cpy_item(SystemCfg.language, "ENGLISH"   );  break; }
 		case 2: { lineEditLanguage->setText(tr("Korean"    ));  utils_cfg_cpy_item(SystemCfg.language, "KOREAN"    );  break; }
         case 3: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }
+        case 4: { lineEditLanguage->setText(tr("French"    ));  utils_cfg_cpy_item(SystemCfg.language, "FRENCH"    );  break; }
 #if 0   //yjsin [17/08/31] temporary use only english, korean
         case 3: { lineEditLanguage->setText(tr("German"    ));  utils_cfg_cpy_item(SystemCfg.language, "GERMAN"    );  break; }
 		case 4: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }

@@ -41,6 +41,13 @@ InformationDialog::~InformationDialog()
 }
 void InformationDialog::initInformationConfig(void)
 {
+#if 1 //yjsin [17/10/12] if text is long, change font size
+    if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+    {
+        labelLicensePlate->setStyleSheet("font:35px;color:white");
+    }
+#endif
+
     char tmp[32], *modelName = NULL;
 
     QByteArray text = QByteArray::fromHex(SystemCfg.license_plate);
