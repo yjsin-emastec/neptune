@@ -9,9 +9,13 @@ EA_2ND_IFNAME     = eth1
 #-----------------------------------------------------------
 SYS_TYPE          = 0
 
+ifeq ($(EA_MODEL), 0)
+ARCH              = arm
+CODEC_CHIP        = HI3521
+endif
+
 ifeq ($(EA_MODEL), 1)
 ARCH              = arm
-MODEL_NAME        = EMD-S10
 CODEC_CHIP        = HI3521
 endif
 
@@ -27,6 +31,8 @@ ARFLAGS           = rcv
 RANLIB            = $(CROSS)ranlib
 STRIP             = $(CROSS)strip
 LIBDIR            = lib
+MODEL             = model
+EA_LOGO           = btlogo-$(EA_MODEL).img
 
 CD                = cd
 MV                = mv

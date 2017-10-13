@@ -3,6 +3,7 @@
 /sbin/bootmode
 
 mount -t yaffs2 /dev/mtdblock2 /cfg
+mount -t yaffs2 /dev/mtdblock8 /misc
 
 touch /tmp/resolv.conf
 chmod 755 /tmp/resolv.conf
