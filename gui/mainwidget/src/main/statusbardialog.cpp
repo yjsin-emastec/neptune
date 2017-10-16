@@ -156,14 +156,14 @@ QString StatusBarDialog::updateTime_value()
     {
         if(isNoDisk > 0)
         {
-            strNoDisk = "   "+tr("NO DISK")+"   ";
+            strNoDisk = "   "+tr("NO SSD")+"   ";
             labelNoDisk->setText(strNoDisk);
         }
         else
         {
             isNoDisk = 1;
             progressBarHdd->hide();
-            strNoDisk = "   "+tr("NO DISK")+"   ";
+            strNoDisk = "   "+tr("NO SSD")+"   ";
             labelNoDisk->setText(strNoDisk);
             labelNoDisk->show();
             qDebug("\n\t No Disk.... %d\n", isNoDisk);
@@ -232,6 +232,11 @@ QString StatusBarDialog::updateTime_value()
         }
 
         sTime = QString::fromAscii(szTime);
+
+        this->resize(680,80);
+        frame->resize(672,72);
+        labelNoDisk->setGeometry(485,8,180,58);
+        progressBarHdd->setGeometry(485,8,180,58);
     }
     else
     {
@@ -275,6 +280,10 @@ QString StatusBarDialog::updateTime_value()
         {
             sTime = QString::fromAscii(szTime) + " " + sAmPm;
         }
+        this->resize(755,80);
+        frame->resize(747,72);
+        labelNoDisk->setGeometry(560,8,180,58);
+        progressBarHdd->setGeometry(560,8,180,58);
     }
 
     switch (timeDisplayFormat)

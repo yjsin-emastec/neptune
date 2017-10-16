@@ -3481,8 +3481,12 @@ certaines données seront effacées du stockage.</translation>
         <location filename="../../../../main/statusbardialog.ui" line="110"/>
         <location filename="../../../../main/statusbardialog.cpp" line="159"/>
         <location filename="../../../../main/statusbardialog.cpp" line="166"/>
+        <source>NO SSD</source>
+        <translation type="unfinished">NO SSD</translation>
+    </message>
+    <message>
         <source>NO DISK</source>
-        <translation>Pas</translation>
+        <translation type="obsolete">Pas</translation>
     </message>
     <message>
         <location filename="../../../../main/statusbardialog.cpp" line="102"/>
@@ -3490,12 +3494,12 @@ certaines données seront effacées du stockage.</translation>
         <translation>PLEIN</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.cpp" line="240"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="245"/>
         <source>AM</source>
         <translation>AM</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.cpp" line="244"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="249"/>
         <source>PM</source>
         <translation>PM</translation>
     </message>
@@ -3558,12 +3562,12 @@ Surclassement</translation>
         <translation>Date &amp;&amp; Heure</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="79"/>
+        <location filename="../../../setup/systempage.cpp" line="86"/>
         <source>SET DATE &amp; TIME</source>
         <translation>Régler la date et l&apos;heure</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="80"/>
+        <location filename="../../../setup/systempage.cpp" line="87"/>
         <source>			WARNING
 
 Do you want to change time?
@@ -3577,12 +3581,12 @@ Si oui, le système redémarre.
 </translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="185"/>
+        <location filename="../../../setup/systempage.cpp" line="192"/>
         <source>FACTORY DEFAULT</source>
         <translation>Réinitialisation</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="185"/>
+        <location filename="../../../setup/systempage.cpp" line="192"/>
         <source>			WARNING
 
 Do you want to set factory default?

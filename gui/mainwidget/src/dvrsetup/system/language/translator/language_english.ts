@@ -15,7 +15,7 @@
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.ui" line="57"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="104"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="122"/>
         <source>Please insert a USB memory.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -50,122 +50,122 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="102"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="103"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="106"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="112"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="120"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="121"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="124"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="130"/>
         <source>%1
 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="102"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="120"/>
         <source>After upgrading firmware,</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="102"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="120"/>
         <source>System will restart.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="103"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="121"/>
         <source>Please insert a USB memory and then</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="103"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="121"/>
         <source>click &apos;Find&apos; button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="104"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="105"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="107"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="108"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="109"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="110"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="111"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="113"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="114"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="179"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="122"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="123"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="125"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="126"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="127"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="128"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="129"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="131"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="132"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="197"/>
         <source>%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="105"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="123"/>
         <source>Please reinsert a USB memory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="106"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="124"/>
         <source>A file was found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="106"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="124"/>
         <source>Please select &apos;Upgrade&apos; button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="107"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="125"/>
         <source>Directory does not exist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="108"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="126"/>
         <source>File does not exist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="109"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="127"/>
         <source>File is invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="110"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="128"/>
         <source>List overflowed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="111"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="129"/>
         <source>Please do not remove USB memory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="112"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="130"/>
         <source>Please do not turn off system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="112"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="130"/>
         <source>System will restart after upgrading.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="113"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="131"/>
         <source>UPGRADE SUCCESS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="114"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="132"/>
         <source>UPGRADE FAIL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="315"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="333"/>
         <source>NOTICE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="315"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="333"/>
         <source>%1
 
 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="315"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="333"/>
         <source>Please unplug USB memory.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1234,15 +1234,15 @@ Record: </source>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="42"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="480"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="589"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="488"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="597"/>
         <source>All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="46"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="435"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="590"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="443"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="598"/>
         <source>Desc</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1253,7 +1253,7 @@ Record: </source>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="54"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="585"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="593"/>
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1288,91 +1288,91 @@ Record: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="196"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="248"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="204"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="256"/>
         <source>IMPACT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="197"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="249"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="205"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="257"/>
         <source>TRIGGER1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="198"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="250"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="206"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="258"/>
         <source>TRIGGER2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="199"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="251"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="207"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="259"/>
         <source>TRIGGER3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="200"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="252"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="208"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="260"/>
         <source>TRIGGER4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="201"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="253"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="209"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="261"/>
         <source>PARKING</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="202"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="254"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="210"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="262"/>
         <source>MOTION</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="208"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="260"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="216"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="268"/>
         <source>30 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="208"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="209"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="260"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="261"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="216"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="217"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="268"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="269"/>
         <source>SEC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="209"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="261"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="217"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="269"/>
         <source>60 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="223"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="227"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="269"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="231"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="235"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="277"/>
         <source>(%1/%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="436"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="444"/>
         <source>Asce</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="481"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="489"/>
         <source>Impact</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="482"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="490"/>
         <source>Trigger</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="584"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="592"/>
         <source>(0/0)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1488,7 +1488,7 @@ Sensitivity: 5</source>
     </message>
     <message>
         <location filename="../../information/informationdialog.ui" line="89"/>
-        <location filename="../../information/informationdialog.cpp" line="130"/>
+        <location filename="../../information/informationdialog.cpp" line="120"/>
         <source>SSD Size</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1548,50 +1548,50 @@ Sensitivity: 5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../information/informationdialog.cpp" line="61"/>
-        <location filename="../../information/informationdialog.cpp" line="64"/>
-        <location filename="../../information/informationdialog.cpp" line="68"/>
-        <location filename="../../information/informationdialog.cpp" line="76"/>
-        <location filename="../../information/informationdialog.cpp" line="81"/>
-        <location filename="../../information/informationdialog.cpp" line="90"/>
-        <location filename="../../information/informationdialog.cpp" line="95"/>
-        <location filename="../../information/informationdialog.cpp" line="110"/>
-        <location filename="../../information/informationdialog.cpp" line="114"/>
+        <location filename="../../information/informationdialog.cpp" line="55"/>
+        <location filename="../../information/informationdialog.cpp" line="58"/>
+        <location filename="../../information/informationdialog.cpp" line="62"/>
+        <location filename="../../information/informationdialog.cpp" line="70"/>
+        <location filename="../../information/informationdialog.cpp" line="75"/>
+        <location filename="../../information/informationdialog.cpp" line="84"/>
+        <location filename="../../information/informationdialog.cpp" line="89"/>
+        <location filename="../../information/informationdialog.cpp" line="104"/>
+        <location filename="../../information/informationdialog.cpp" line="108"/>
         <source>%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../information/informationdialog.cpp" line="76"/>
-        <location filename="../../information/informationdialog.cpp" line="90"/>
+        <location filename="../../information/informationdialog.cpp" line="70"/>
+        <location filename="../../information/informationdialog.cpp" line="84"/>
         <source>No Disk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../information/informationdialog.cpp" line="110"/>
+        <location filename="../../information/informationdialog.cpp" line="104"/>
         <source>Connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../information/informationdialog.cpp" line="114"/>
+        <location filename="../../information/informationdialog.cpp" line="108"/>
         <source>Not connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../information/informationdialog.cpp" line="124"/>
+        <location filename="../../information/informationdialog.cpp" line="115"/>
         <source>HDD Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../information/informationdialog.cpp" line="125"/>
-        <location filename="../../information/informationdialog.cpp" line="131"/>
-        <location filename="../../information/informationdialog.cpp" line="135"/>
+        <location filename="../../information/informationdialog.cpp" line="116"/>
+        <location filename="../../information/informationdialog.cpp" line="121"/>
+        <location filename="../../information/informationdialog.cpp" line="124"/>
         <source>%1%2%3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../information/informationdialog.cpp" line="125"/>
-        <location filename="../../information/informationdialog.cpp" line="131"/>
-        <location filename="../../information/informationdialog.cpp" line="135"/>
+        <location filename="../../information/informationdialog.cpp" line="116"/>
+        <location filename="../../information/informationdialog.cpp" line="121"/>
+        <location filename="../../information/informationdialog.cpp" line="124"/>
         <source> â</source>
         <translation> ℃</translation>
     </message>
@@ -1617,7 +1617,7 @@ Sensitivity: 5</source>
         <location filename="../languagedialog.ui" line="126"/>
         <location filename="../languagedialog.cpp" line="71"/>
         <location filename="../languagedialog.cpp" line="117"/>
-        <location filename="../languagedialog.cpp" line="144"/>
+        <location filename="../languagedialog.cpp" line="152"/>
         <source>English</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1637,23 +1637,23 @@ System will restart.</source>
     <message>
         <location filename="../languagedialog.cpp" line="76"/>
         <location filename="../languagedialog.cpp" line="118"/>
-        <location filename="../languagedialog.cpp" line="145"/>
+        <location filename="../languagedialog.cpp" line="153"/>
         <source>Korean</source>
         <translation>한국어</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="81"/>
-        <location filename="../languagedialog.cpp" line="121"/>
-        <location filename="../languagedialog.cpp" line="148"/>
+        <location filename="../languagedialog.cpp" line="122"/>
+        <location filename="../languagedialog.cpp" line="157"/>
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="86"/>
         <location filename="../languagedialog.cpp" line="119"/>
-        <location filename="../languagedialog.cpp" line="122"/>
-        <location filename="../languagedialog.cpp" line="146"/>
-        <location filename="../languagedialog.cpp" line="149"/>
+        <location filename="../languagedialog.cpp" line="123"/>
+        <location filename="../languagedialog.cpp" line="154"/>
+        <location filename="../languagedialog.cpp" line="158"/>
         <source>Spanish</source>
         <translatorcomment>ñ이 î으로 출력됨
 Español
@@ -1662,8 +1662,10 @@ Español
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="91"/>
-        <location filename="../languagedialog.cpp" line="123"/>
-        <location filename="../languagedialog.cpp" line="150"/>
+        <location filename="../languagedialog.cpp" line="120"/>
+        <location filename="../languagedialog.cpp" line="124"/>
+        <location filename="../languagedialog.cpp" line="155"/>
+        <location filename="../languagedialog.cpp" line="159"/>
         <source>French</source>
         <translatorcomment>ç 깨짐
 Français
@@ -1672,22 +1674,22 @@ Français
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="96"/>
-        <location filename="../languagedialog.cpp" line="124"/>
-        <location filename="../languagedialog.cpp" line="151"/>
+        <location filename="../languagedialog.cpp" line="125"/>
+        <location filename="../languagedialog.cpp" line="160"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="101"/>
-        <location filename="../languagedialog.cpp" line="125"/>
-        <location filename="../languagedialog.cpp" line="152"/>
+        <location filename="../languagedialog.cpp" line="126"/>
+        <location filename="../languagedialog.cpp" line="161"/>
         <source>Portuguese</source>
         <translation>Português</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="106"/>
-        <location filename="../languagedialog.cpp" line="126"/>
-        <location filename="../languagedialog.cpp" line="153"/>
+        <location filename="../languagedialog.cpp" line="127"/>
+        <location filename="../languagedialog.cpp" line="162"/>
         <source>Japanese</source>
         <translation>日本語</translation>
     </message>
@@ -2776,22 +2778,22 @@ AutoHide: </source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="623"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="631"/>
         <source>EVENT TIME</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="625"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="633"/>
         <source>LOG TYPE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="627"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="635"/>
         <source>DURATION</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="629"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="637"/>
         <source>NUM</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3372,7 +3374,7 @@ some data will be erased from storage.
         <location filename="../../../../main/statusbardialog.ui" line="110"/>
         <location filename="../../../../main/statusbardialog.cpp" line="159"/>
         <location filename="../../../../main/statusbardialog.cpp" line="166"/>
-        <source>NO DISK</source>
+        <source>NO SSD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3381,12 +3383,12 @@ some data will be erased from storage.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.cpp" line="240"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="245"/>
         <source>AM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.cpp" line="244"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="249"/>
         <source>PM</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3447,12 +3449,12 @@ Upgrade</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="79"/>
+        <location filename="../../../setup/systempage.cpp" line="86"/>
         <source>SET DATE &amp; TIME</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="80"/>
+        <location filename="../../../setup/systempage.cpp" line="87"/>
         <source>			WARNING
 
 Do you want to change time?
@@ -3462,12 +3464,12 @@ If yes, system will restart.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="185"/>
+        <location filename="../../../setup/systempage.cpp" line="192"/>
         <source>FACTORY DEFAULT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="185"/>
+        <location filename="../../../setup/systempage.cpp" line="192"/>
         <source>			WARNING
 
 Do you want to set factory default?
@@ -3729,7 +3731,7 @@ You must delete data or set time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="217"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="221"/>
         <source>System Time must be later than record last time.</source>
         <translation type="unfinished"></translation>
     </message>
