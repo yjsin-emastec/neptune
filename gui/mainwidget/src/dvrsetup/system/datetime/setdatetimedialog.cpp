@@ -334,6 +334,35 @@ void SetDateTimeDialog::initComboBox()
         str = tr("Hour: %1").arg(i);
         comboBoxTime_4->addItem(str);
 
+/*
+        // yjsin [17/10/18] Change ComboBox text when time format changed.
+        if(indexTimeFormat==1 && i>=0 && i<10)          //12H, 0~9 AM
+        {
+            str=tr("Hour: %1  AM").arg(i);
+        }
+        else if(indexTimeFormat==1 && i>=10 && i<13)    //12H, 10~12 AM
+        {
+            str=tr("Hour: %1 AM").arg(i);
+        }
+        else if(indexTimeFormat==1 && i>=13 && i<22)    //12H, 1~9 PM
+        {
+            str=tr("Hour: %1  PM").arg(i-12);
+        }
+        else if(indexTimeFormat==1 && i>=22 && i<24)    //12H, 10~12 PM
+        {
+            str=tr("Hour: %1 PM").arg(i-12);
+        }
+        else if(indexTimeFormat==0 && i>=0 && i<24)     //24H, 0~24
+        {
+            str=tr("Hour: %1").arg(i);
+        }
+        else                                            //Error
+        {
+            str=tr("Hour: %1").arg(i);
+            qDebug("[ERROR]SetDateTimeDialog::initComboBox()");
+        }
+        comboBoxTime_4->addItem(str);
+*/
         if(dlsZone == DLS_END_DAY && (i == (dlsSetDate.dlsEndHour - 1)))
         {
             str = tr("Hour: %1").arg(i);
