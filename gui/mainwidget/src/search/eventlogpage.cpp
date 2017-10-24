@@ -3,6 +3,7 @@
 #include "eventsortfilterproxymodel.h"
 #include "main/mainglobal.h"
 #include "Event.h"
+#include "DVR.h"
 
 EventLogPage::EventLogPage(QWidget *parent)
     : QWidget(parent)
@@ -17,92 +18,86 @@ EventLogPage::EventLogPage(QWidget *parent)
     log_sort = EVENT_LOG_DESC;
 
     labelStartTime = new QLabel(tr("Start:"));
-    labelStartTime->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    labelStartTime->setMaximumSize(QSize(80, 90));
+    labelStartTime->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    labelStartTime->setFixedSize(QSize(90, 90));
 
     searchStartTime = new QDateTimeEdit(QDateTime::currentDateTime());
-    searchStartTime->setDisplayFormat("yyyy.MM.dd hh:mm");
-    searchStartTime->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    searchStartTime->setStyleSheet("QDateTimeEdit {font:33px; selection-color:white; selection-background-color:rgb(152,14,69);}");
-    searchStartTime->setMaximumSize(QSize(400, 90));
+    searchStartTime->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    searchStartTime->setFixedSize(QSize(430, 90));
+    searchStartTime->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
 
     labelEndTime = new QLabel(tr("End:"));
-    labelEndTime->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    labelEndTime->setMaximumSize(QSize(80, 90));
+    labelEndTime->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    labelEndTime->setFixedSize(QSize(90, 90));
+
     searchEndTime = new QDateTimeEdit(QDateTime::currentDateTime());
-    searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm");
-    searchEndTime->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    searchEndTime->setStyleSheet("QDateTimeEdit {font:33px; selection-color:white; selection-background-color:rgb(152,14,69);}");
-    searchEndTime->setMaximumSize(QSize(400, 90));
+    searchEndTime->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+
+    searchEndTime->setFixedSize(QSize(430, 90));
+    searchEndTime->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+
+    if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
+    {
+        searchStartTime->setDisplayFormat("yyyy.MM.dd hh:mm AP");
+        searchStartTime->setStyleSheet("QDateTimeEdit {font:33px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm AP");
+        searchEndTime->setStyleSheet("QDateTimeEdit {font:33px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+    }
+    else                                                            //24H
+    {
+        searchStartTime->setDisplayFormat("yyyy.MM.dd hh:mm");
+        searchStartTime->setStyleSheet("QDateTimeEdit {font:40px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm");
+        searchEndTime->setStyleSheet("QDateTimeEdit {font:40px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+    }
 
     labelFilter = new QLabel(tr("Filter:"));
-    labelFilter->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    labelFilter->setMaximumSize(QSize(80, 90));
+    labelFilter->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    labelFilter->setFixedSize(QSize(90, 90));
 
     buttonFilter = new QPushButton(tr("All"));
-    buttonFilter->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    buttonFilter->setMaximumSize(QSize(200, 90));
+    buttonFilter->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonFilter->setFixedSize(QSize(215, 90));
 
     buttonSort = new QPushButton(tr("Desc"));
-    buttonSort->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    buttonSort->setMaximumSize(QSize(200, 90));
+    buttonSort->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonSort->setFixedSize(QSize(215, 90));
 
     labelLog = new QLabel(tr("Log:"));
-    labelLog->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    labelLog->setMaximumSize(QSize(80, 90));
-
-    labelLogResult = new QLabel(tr("0"));
-    labelLogResult->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    labelLogResult->setMaximumSize(QSize(160, 90));
-    labelLogResult->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+    labelLog->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    labelLog->setFixedSize(QSize(260, 90));
 
     buttonSearch = new QPushButton(tr("Search"));
-    buttonSearch->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    buttonSearch->setMaximumSize(QSize(240, 90));
+    buttonSearch->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonSearch->setFixedSize(QSize(260, 90));
 
     buttonPrevLogPage = new QPushButton(tr("<"));
-    buttonPrevLogPage->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    buttonPrevLogPage->setMaximumSize(QSize(150, 90));
+    buttonPrevLogPage->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonPrevLogPage->setFixedSize(QSize(150, 90));
     buttonPrevLogPage->setEnabled(false);
+
     labelPage = new QLabel("(0/0)");
-    labelPage->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    labelPage->setMaximumSize(QSize(180, 90));
+    labelPage->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    labelPage->setFixedSize(QSize(220, 90));
     labelPage->setAlignment(Qt::AlignCenter);
+
     buttonNextLogPage = new QPushButton(tr(">"));
-    buttonNextLogPage->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    buttonNextLogPage->setMaximumSize(QSize(150, 90));
+    buttonNextLogPage->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonNextLogPage->setFixedSize(QSize(150, 90));
     buttonNextLogPage->setEnabled(false);
 
     buttonPlay = new QPushButton(tr("Play"));
-    buttonPlay->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    buttonPlay->setMaximumSize(QSize(480, 90));
+    buttonPlay->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonPlay->setFixedSize(QSize(530, 100));
     buttonPlay->setEnabled(false);
 
     buttonPrevious = new QPushButton(tr("Previous"));
-    buttonPrevious->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    buttonPrevious->setMaximumSize(QSize(240, 90));
+    buttonPrevious->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonPrevious->setFixedSize(QSize(260, 90));
 
     buttonClose = new QPushButton(tr("Close"));
-    buttonClose->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-    buttonClose->setMaximumSize(QSize(240, 90));
-
-#if 1 //yjsin [17/09/13] if text is long, change label size
-    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
-    {
-        labelStartTime->setMaximumSize(QSize(100, 90));
-        labelEndTime->setMaximumSize(QSize(100, 90));
-        labelFilter->setMaximumSize(QSize(100, 90));
-        labelLog->setMaximumSize(QSize(130, 90));
-    }
-    //yjsin [17/10/12] if text is long, change label size
-    else if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
-    {
-        labelStartTime->setMaximumSize(QSize(100, 90));
-        labelEndTime->setMaximumSize(QSize(100, 90));
-        labelFilter->setMaximumSize(QSize(100, 90));
-        labelLog->setMaximumSize(QSize(130, 90));
-    }
-#endif
+    buttonClose->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonClose->setFixedSize(QSize(260, 90));
 
     QHBoxLayout *mainLayout   = new QHBoxLayout;
     QVBoxLayout *menuVLayout0 = new QVBoxLayout;
@@ -125,7 +120,6 @@ EventLogPage::EventLogPage(QWidget *parent)
     menuHLayout3->addWidget(buttonSort);
 
     menuHLayout4->addWidget(labelLog);
-    menuHLayout4->addWidget(labelLogResult);
     menuHLayout4->addWidget(buttonSearch);
 
     menuHLayout5->addWidget(buttonPrevLogPage);
@@ -151,9 +145,9 @@ EventLogPage::EventLogPage(QWidget *parent)
     setLayout(mainLayout);
 
     proxyModel->setSourceModel(eventLogModel);
-    eventLogView->setColumnWidth(0, 330);
-    eventLogView->setColumnWidth(1, 235);
-    eventLogView->setColumnWidth(2, 235);
+    eventLogView->setColumnWidth(0, 375);
+    eventLogView->setColumnWidth(1, 195);
+    eventLogView->setColumnWidth(2, 110);
     eventLogView->setColumnHidden(3, true);
 
     connect(buttonFilter, SIGNAL(clicked()), this, SLOT(onButtonFilter()));
@@ -218,7 +212,15 @@ void EventLogPage::onQueryLogCount()
             default: strEventTime = tr("");                         break;
         }
 
-        addEventLog(gEventLog[ii].event_time, strEventLog, strEventTime, ii);
+        if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
+        {
+            QString eventTime=changeTimeformat(gEventLog[ii].event_time);
+            addEventLog(QString("%1 %2").arg(eventTime).arg(ampmStatus).toStdString().c_str(), strEventLog, strEventTime, ii);
+        }
+        else
+        {
+            addEventLog(gEventLog[ii].event_time, strEventLog, strEventTime, ii);
+        }
     }
 
     if(logPageNum > 0)
@@ -236,7 +238,7 @@ void EventLogPage::onQueryLogCount()
     }
 
     buttonPlay->setEnabled(false);
-    labelLogResult->setNum(logCount);
+    labelLog->setText(tr("%1 %2").arg(tr("Log:")).arg(logCount));
 }
 void EventLogPage::onQueryLogData()
 {
@@ -270,7 +272,15 @@ void EventLogPage::onQueryLogData()
             default: strEventTime = tr("");                         break;
         }
 
-        addEventLog(gEventLog[ii].event_time, strEventLog, strEventTime, ii);
+        if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
+        {
+            QString eventTime=changeTimeformat(gEventLog[ii].event_time);
+            addEventLog(QString("%1 %2").arg(eventTime).arg(ampmStatus).toStdString().c_str(), strEventLog, strEventTime, ii);
+        }
+        else
+        {
+            addEventLog(gEventLog[ii].event_time, strEventLog, strEventTime, ii);
+        }
     }
 
     buttonPlay->setEnabled(false);
@@ -586,11 +596,24 @@ void EventLogPage::resetSearch()
 {
     eventLogModel->removeRows(0, eventLogModel->rowCount());
     searchStartTime->setDateTime(QDateTime::currentDateTime());
-    searchStartTime->setDisplayFormat("yyyy.MM.dd hh:mm");
     searchEndTime->setDateTime(QDateTime::currentDateTime());
-    searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm");
+
+    if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
+    {
+        searchStartTime->setDisplayFormat("yyyy.MM.dd hh:mm AP");
+        searchStartTime->setStyleSheet("QDateTimeEdit {font:33px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm AP");
+        searchEndTime->setStyleSheet("QDateTimeEdit {font:33px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+    }
+    else                                                            //24H
+    {
+        searchStartTime->setDisplayFormat("yyyy.MM.dd hh:mm");
+        searchStartTime->setStyleSheet("QDateTimeEdit {font:40px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm");
+        searchEndTime->setStyleSheet("QDateTimeEdit {font:40px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+    }
+
     labelPage->setText(tr("(0/0)"));
-    labelLogResult->setText(tr("0"));
     buttonPrevLogPage->setEnabled(false);
     buttonNextLogPage->setEnabled(false);
     buttonPlay->setEnabled(false);
@@ -694,6 +717,56 @@ void EventLogPage::itemViewSelectChange(int isForward)
     index = eventLogView->model()->index(curRow, 0); eventLogView->selectionModel()->setCurrentIndex(index, QItemSelectionModel::ClearAndSelect);
     index = eventLogView->model()->index(curRow, 1); eventLogView->selectionModel()->setCurrentIndex(index, QItemSelectionModel::Select);
     index = eventLogView->model()->index(curRow, 2); eventLogView->selectionModel()->setCurrentIndex(index, QItemSelectionModel::Select);
+}
+QString EventLogPage::changeTimeformat(char event_time[])
+{
+    QString qEventTime=QString(event_time);
+    QRegExp rx("[- :]");
+    QStringList parseList=qEventTime.split(rx, QString::SkipEmptyParts);
+
+    QList<QString> dateTimeList;
+    for(int i=0;i<parseList.size();i++)
+    {
+        dateTimeList.append(parseList.at(i));
+    }
+
+    if( dateTimeList.value(3).toInt()==0 ) // 0 AM
+    {
+        dateTimeList.replace(3, "12");
+        ampmStatus="AM";
+    }
+    else if( dateTimeList.value(3).toInt()>0 && dateTimeList.value(3).toInt()<12 ) // 1~11 AM
+    {
+        ampmStatus="AM";
+    }
+    else if( dateTimeList.value(3).toInt()==12) // 12 PM
+    {
+        ampmStatus="PM";
+    }
+    else if( dateTimeList.value(3).toInt()>12 && dateTimeList.value(3).toInt()<22) // 13~21 PM
+    {
+        dateTimeList.replace(3, QString("%1%2").arg("0").arg(QString::number( dateTimeList.value(3).toInt()-12 )));
+        ampmStatus="PM";
+    }
+    else if( dateTimeList.value(3).toInt()>21 && dateTimeList.value(3).toInt()<24) // 22~23 PM
+    {
+        dateTimeList.replace(3, QString::number( dateTimeList.value(3).toInt()-12 ));
+        ampmStatus="PM";
+    }
+    else // Error
+    {
+        qDebug("[ERROR]EventLogPage::parseDateTime()");
+    }
+
+    qEventTime=QString("%1-%2-%3 %4:%5:%6")
+            .arg(dateTimeList.value(0))
+            .arg(dateTimeList.value(1))
+            .arg(dateTimeList.value(2))
+            .arg(dateTimeList.value(3))
+            .arg(dateTimeList.value(4))
+            .arg(dateTimeList.value(5));
+
+    return qEventTime;
 }
 void EventLogPage::KeyPressEvent(int key)
 {

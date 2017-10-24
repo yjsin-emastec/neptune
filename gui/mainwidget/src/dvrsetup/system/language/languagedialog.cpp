@@ -132,14 +132,12 @@ void LanguageDialog::onButtonLanguageUp()
      * 1. check the dvrsetup/system/upgrade/appupgradedialog. label size was modified.
      * 2. check the search/backupdialog. label size and button size was modified.
      * 3. check the stylesheet and MainWidget::loadStyleSheet(). Qbutton font was modified to small.
-     * 4. check the search/eventlogpage. label size was modified.
-     * 5. check the device/triggerinputdialog. Qbutton size and font was modified
+     * 4. check the device/triggerinputdialog. Qbutton size and font was modified
      *
      * when you change the language to french, see below code.
      * 1. check the dvrsetup/system/upgrade/appupgradedialog. label size was modified.
-     * 2. check the search/eventlogpage. label size was modified.
-     * 3. check the dvrsetup/system/information/informationdialog. font size was modified.
-     * 4. check the dvrsetup/system/licenseplate/licenseplatedialog. font size was modified.
+     * 2. check the dvrsetup/system/information/informationdialog. font size was modified.
+     * 3. check the dvrsetup/system/licenseplate/licenseplatedialog. font size was modified.
      *
      */
 }

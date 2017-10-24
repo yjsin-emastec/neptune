@@ -70,19 +70,19 @@
      <rect>
       <x>19</x>
       <y>430</y>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
@@ -120,19 +120,25 @@
      <rect>
       <x>19</x>
       <y>340</y>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="minimumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
@@ -174,21 +180,21 @@
    <widget class="QComboBox" name="comboBoxTime_5">
     <property name="geometry">
      <rect>
-      <x>389</x>
+      <x>379</x>
       <y>430</y>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
@@ -196,21 +202,21 @@
    <widget class="QComboBox" name="comboBoxTime_2">
     <property name="geometry">
      <rect>
-      <x>388</x>
+      <x>378</x>
       <y>340</y>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
@@ -218,21 +224,21 @@
    <widget class="QComboBox" name="comboBoxTime_3">
     <property name="geometry">
      <rect>
-      <x>751</x>
+      <x>741</x>
       <y>340</y>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
@@ -240,21 +246,21 @@
    <widget class="QComboBox" name="comboBoxTime_6">
     <property name="geometry">
      <rect>
-      <x>751</x>
+      <x>741</x>
       <y>430</y>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>300</width>
+      <width>310</width>
       <height>80</height>
      </size>
     </property>
@@ -262,7 +268,7 @@
    <widget class="QLabel" name="labelTime_3">
     <property name="geometry">
      <rect>
-      <x>706</x>
+      <x>701</x>
       <y>430</y>
       <width>25</width>
       <height>80</height>
@@ -330,7 +336,7 @@
    <widget class="QLabel" name="labelTime_2">
     <property name="geometry">
      <rect>
-      <x>706</x>
+      <x>701</x>
       <y>339</y>
       <width>25</width>
       <height>80</height>

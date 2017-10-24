@@ -189,8 +189,8 @@
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="160"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="90"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="190"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="115"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="215"/>
         <source>1 minute</source>
         <translation type="unfinished"></translation>
     </message>
@@ -205,108 +205,108 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="63"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="88"/>
         <source>Insert a USB memory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="65"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="90"/>
         <source>Please insert a USB memory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="71"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="96"/>
         <source>Insert a USB memory and Select time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="73"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="98"/>
         <source>Please insert a USB memory and Select time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="91"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="116"/>
         <source>2 minutes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="92"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="117"/>
         <source>3 minutes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="93"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="118"/>
         <source>4 minutes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="94"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="119"/>
         <source>5 minutes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="95"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="120"/>
         <source>6 minutes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="96"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="121"/>
         <source>7 minutes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="97"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="122"/>
         <source>8 minutes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="98"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="123"/>
         <source>9 minutes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="99"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="124"/>
         <source>10 minutes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="179"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="204"/>
         <source>seconds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="228"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="268"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="253"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="293"/>
         <source>CAM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="240"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="265"/>
         <source>Not found USB memory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="268"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="293"/>
         <source>No Data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="275"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="300"/>
         <source>Lack of USB Capacity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="283"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="308"/>
         <source>Don&apos;t remove USB memory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="289"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="314"/>
         <source>Preparing...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="299"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="324"/>
         <source>Completion</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1218,7 +1218,7 @@ Record: </source>
 <context>
     <name>EventLogPage</name>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="19"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="20"/>
         <source>Start:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1228,151 +1228,151 @@ Record: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="38"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="54"/>
         <source>Filter:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="42"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="488"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="597"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="58"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="498"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="620"/>
         <source>All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="46"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="443"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="598"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="62"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="453"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="621"/>
         <source>Desc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="50"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="66"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="241"/>
         <source>Log:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="54"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="593"/>
-        <source>0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="59"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="70"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="63"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="74"/>
         <source>&lt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="71"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="84"/>
         <source>&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="76"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="89"/>
         <source>Play</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="81"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="94"/>
         <source>Previous</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="85"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="98"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="204"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="256"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="198"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="258"/>
         <source>IMPACT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="205"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="257"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="199"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="259"/>
         <source>TRIGGER1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="206"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="258"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="200"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="260"/>
         <source>TRIGGER2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="207"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="259"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="201"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="261"/>
         <source>TRIGGER3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="208"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="260"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="202"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="262"/>
         <source>TRIGGER4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="209"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="261"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="203"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="263"/>
         <source>PARKING</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="210"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="262"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="204"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="264"/>
         <source>MOTION</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="216"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="268"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="210"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="270"/>
         <source>30 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="216"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="217"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="268"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="269"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="210"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="211"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="270"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="271"/>
         <source>SEC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="217"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="269"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="211"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="271"/>
         <source>60 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="231"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="235"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="277"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="233"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="237"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="287"/>
         <source>(%1/%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="444"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="241"/>
+        <source>%1 %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../search/eventlogpage.cpp" line="454"/>
         <source>Asce</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="489"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="499"/>
         <source>Impact</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="490"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="500"/>
         <source>Trigger</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="592"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="616"/>
         <source>(0/0)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1617,7 +1617,7 @@ Sensitivity: 5</source>
         <location filename="../languagedialog.ui" line="126"/>
         <location filename="../languagedialog.cpp" line="71"/>
         <location filename="../languagedialog.cpp" line="117"/>
-        <location filename="../languagedialog.cpp" line="152"/>
+        <location filename="../languagedialog.cpp" line="150"/>
         <source>English</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1637,14 +1637,14 @@ System will restart.</source>
     <message>
         <location filename="../languagedialog.cpp" line="76"/>
         <location filename="../languagedialog.cpp" line="118"/>
-        <location filename="../languagedialog.cpp" line="153"/>
+        <location filename="../languagedialog.cpp" line="151"/>
         <source>Korean</source>
         <translation>한국어</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="81"/>
         <location filename="../languagedialog.cpp" line="122"/>
-        <location filename="../languagedialog.cpp" line="157"/>
+        <location filename="../languagedialog.cpp" line="155"/>
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
@@ -1652,8 +1652,8 @@ System will restart.</source>
         <location filename="../languagedialog.cpp" line="86"/>
         <location filename="../languagedialog.cpp" line="119"/>
         <location filename="../languagedialog.cpp" line="123"/>
-        <location filename="../languagedialog.cpp" line="154"/>
-        <location filename="../languagedialog.cpp" line="158"/>
+        <location filename="../languagedialog.cpp" line="152"/>
+        <location filename="../languagedialog.cpp" line="156"/>
         <source>Spanish</source>
         <translatorcomment>ñ이 î으로 출력됨
 Español
@@ -1664,8 +1664,8 @@ Español
         <location filename="../languagedialog.cpp" line="91"/>
         <location filename="../languagedialog.cpp" line="120"/>
         <location filename="../languagedialog.cpp" line="124"/>
-        <location filename="../languagedialog.cpp" line="155"/>
-        <location filename="../languagedialog.cpp" line="159"/>
+        <location filename="../languagedialog.cpp" line="153"/>
+        <location filename="../languagedialog.cpp" line="157"/>
         <source>French</source>
         <translatorcomment>ç 깨짐
 Français
@@ -1675,21 +1675,21 @@ Français
     <message>
         <location filename="../languagedialog.cpp" line="96"/>
         <location filename="../languagedialog.cpp" line="125"/>
-        <location filename="../languagedialog.cpp" line="160"/>
+        <location filename="../languagedialog.cpp" line="158"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="101"/>
         <location filename="../languagedialog.cpp" line="126"/>
-        <location filename="../languagedialog.cpp" line="161"/>
+        <location filename="../languagedialog.cpp" line="159"/>
         <source>Portuguese</source>
         <translation>Português</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="106"/>
         <location filename="../languagedialog.cpp" line="127"/>
-        <location filename="../languagedialog.cpp" line="162"/>
+        <location filename="../languagedialog.cpp" line="160"/>
         <source>Japanese</source>
         <translation>日本語</translation>
     </message>
@@ -2025,7 +2025,7 @@ Current status is trigger.</source>
     </message>
     <message>
         <location filename="../../../../main/mainwidget.cpp" line="485"/>
-        <location filename="../../../../main/mainwidget.cpp" line="738"/>
+        <location filename="../../../../main/mainwidget.cpp" line="742"/>
         <source>POWER OFF</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2038,19 +2038,19 @@ Turn off the power.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="738"/>
+        <location filename="../../../../main/mainwidget.cpp" line="742"/>
         <source>				WARNING
 
 Do you want to shutdown the system?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1182"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1190"/>
         <source>SEARCH</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1183"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1191"/>
         <source>WARNING
 
 No Disk
@@ -2778,22 +2778,22 @@ AutoHide: </source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="631"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="654"/>
         <source>EVENT TIME</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="633"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="656"/>
         <source>LOG TYPE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="635"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="658"/>
         <source>DURATION</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="637"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="660"/>
         <source>NUM</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2955,8 +2955,8 @@ Please try again.</source>
         <location filename="../../datetime/setdatetimedialog.ui" line="358"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="112"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="152"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="317"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="318"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="357"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="358"/>
         <source>/</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3022,28 +3022,28 @@ On</source>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="74"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1288"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="1381"/>
         <source>Time Format
 12 Hour</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="75"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1296"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="1389"/>
         <source>Time Format
 24 Hour</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="80"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1318"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="1411"/>
         <source>GPS Synchronization
 On</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="85"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1310"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="1403"/>
         <source>GPS Synchronization
 Off</source>
         <translation type="unfinished"></translation>
@@ -3220,67 +3220,87 @@ Off</source>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="182"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="218"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="254"/>
-        <source>Year: %1</source>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="257"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="306"/>
+        <source>Year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="188"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="224"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="260"/>
-        <source>Month: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="190"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="194"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="230"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="266"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="968"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="233"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="237"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="295"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="299"/>
+        <source>Month</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="203"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="207"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="246"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="250"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="282"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="286"/>
+        <source>Day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="1061"/>
         <source>Day: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="217"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="253"/>
-        <source>%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="326"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="327"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="366"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="367"/>
         <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="334"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="339"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="775"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="780"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="793"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="807"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="378"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="382"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="386"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="398"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="402"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="406"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="410"/>
+        <source>Hour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="417"/>
+        <source>Hour : %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="426"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="430"/>
+        <source>Minute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="436"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="440"/>
+        <source>Second</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="868"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="873"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="886"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="900"/>
         <source>Hour: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="346"/>
-        <source>Minute: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="348"/>
-        <source>Second: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="482"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="575"/>
         <source>If you set the time faster than recording data,
 some data will be erased from storage.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="570"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="663"/>
         <source>SET DATE &amp; TIME</source>
         <translation type="unfinished"></translation>
     </message>

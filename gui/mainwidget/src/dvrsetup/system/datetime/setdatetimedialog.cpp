@@ -179,19 +179,33 @@ void SetDateTimeDialog::initComboBox()
 
             for(int i = ver_get_ref_year(); i < MAX_YEAR; i++)
             {
-                str = tr("Year: %1").arg(i);
+                str= QString("%1: %2").arg(tr("Year")).arg(i);
                 comboBoxTime_1->addItem(str);
             }
 
             for(int i = 0; i < 12; i++)
             {
-                str = tr("Month: %1").arg(i+1);
+                if(i<9)
+                {
+                    str=QString("%1: 0%2").arg(tr("Month")).arg(i+1);
+                }
+                else
+                {
+                    str=QString("%1: %2").arg(tr("Month")).arg(i+1);
+                }
                 comboBoxTime_2->addItem(str);
             }
 
             for(int i = 0; i < 31; i++)
             {
-                str = tr("Day: %1").arg(i+1);
+                if(i<9)
+                {
+                    str=QString("%1: 0%2").arg(tr("Day")).arg(i+1);
+                }
+                else
+                {
+                    str=QString("%1: %2").arg(tr("Day")).arg(i+1);
+                }
                 comboBoxTime_3->addItem(str);
             }
 
@@ -214,20 +228,33 @@ void SetDateTimeDialog::initComboBox()
 
             for(int i = 0; i < 12; i++)
             {
-                str = tr("%1").arg(i+1);
-                str = tr("Year: %1").arg(i);
+                if(i<9)
+                {
+                    str=QString("%1: 0%2").arg(tr("Month")).arg(i+1);
+                }
+                else
+                {
+                    str=QString("%1: %2").arg(tr("Month")).arg(i+1);
+                }
                 comboBoxTime_1->addItem(str);
             }
 
             for(int i = 0; i < 31; i++)
             {
-                str = tr("Month: %1").arg(i+1);
+                if(i<9)
+                {
+                    str=QString("%1: 0%2").arg(tr("Day")).arg(i+1);
+                }
+                else
+                {
+                    str=QString("%1: %2").arg(tr("Day")).arg(i+1);
+                }
                 comboBoxTime_2->addItem(str);
             }
 
             for(int i = ver_get_ref_year(); i < MAX_YEAR; i++)
             {
-                str = tr("Day: %1").arg(i+1);
+                str= QString("%1: %2").arg(tr("Year")).arg(i);
                 comboBoxTime_3->addItem(str);
             }
 
@@ -250,20 +277,33 @@ void SetDateTimeDialog::initComboBox()
 
             for(int i = 0; i < 31; i++)
             {
-                str = tr("%1").arg(i+1);
-                str = tr("Year: %1").arg(i);
+                if(i<9)
+                {
+                    str=QString("%1: 0%2").arg(tr("Day")).arg(i+1);
+                }
+                else
+                {
+                    str=QString("%1: %2").arg(tr("Day")).arg(i+1);
+                }
                 comboBoxTime_1->addItem(str);
             }
 
             for(int i = 0; i < 12; i++)
             {
-                str = tr("Month: %1").arg(i+1);
+                if(i<9)
+                {
+                    str=QString("%1: 0%2").arg(tr("Month")).arg(i+1);
+                }
+                else
+                {
+                    str=QString("%1: %2").arg(tr("Month")).arg(i+1);
+                }
                 comboBoxTime_2->addItem(str);
             }
 
             for(int i = ver_get_ref_year(); i < MAX_YEAR; i++)
             {
-                str = tr("Day: %1").arg(i+1);
+                str=QString("%1: %2").arg(tr("Year")).arg(i);
                 comboBoxTime_3->addItem(str);
             }
 
@@ -329,40 +369,49 @@ void SetDateTimeDialog::initComboBox()
             break;
     }
 
+    // yjsin [17/10/24] Change ComboBox text when time format changed.
+    // but DayightSavingTime(DTS) part are not changeed.
     for(int i = 0; i < 24; i++)
     {
-        str = tr("Hour: %1").arg(i);
-        comboBoxTime_4->addItem(str);
-
-/*
-        // yjsin [17/10/18] Change ComboBox text when time format changed.
-        if(indexTimeFormat==1 && i>=0 && i<10)          //12H, 0~9 AM
+        if(indexTimeFormat==1 && i==0)                  //12H, 12 AM
         {
-            str=tr("Hour: %1  AM").arg(i);
+            str=QString("%1: AM %2").arg(tr("Hour")).arg(i+12);
         }
-        else if(indexTimeFormat==1 && i>=10 && i<13)    //12H, 10~12 AM
+        else if(indexTimeFormat==1 && i>0 && i<10)      //12H, 1~9 AM
         {
-            str=tr("Hour: %1 AM").arg(i);
+            str=QString("%1: AM 0%2").arg(tr("Hour")).arg(i);
         }
-        else if(indexTimeFormat==1 && i>=13 && i<22)    //12H, 1~9 PM
+        else if(indexTimeFormat==1 && i>=10 && i<12)    //12H, 10~11 AM
         {
-            str=tr("Hour: %1  PM").arg(i-12);
+            str=QString("%1: AM %2").arg(tr("Hour")).arg(i);
         }
-        else if(indexTimeFormat==1 && i>=22 && i<24)    //12H, 10~12 PM
+        else if(indexTimeFormat==1 && i==12)            //12H, 12 PM
         {
-            str=tr("Hour: %1 PM").arg(i-12);
+            str=QString("%1: PM %2").arg(tr("Hour")).arg(i);
         }
-        else if(indexTimeFormat==0 && i>=0 && i<24)     //24H, 0~24
+        else if(indexTimeFormat==1 && i>12 && i<22)     //12H, 1~9 PM
         {
-            str=tr("Hour: %1").arg(i);
+            str=QString("%1: PM 0%2").arg(tr("Hour")).arg(i-12);
+        }
+        else if(indexTimeFormat==1 && i>=22 && i<24)    //12H, 10~11 PM
+        {
+            str=QString("%1: PM %2").arg(tr("Hour")).arg(i-12);
+        }
+        else if(indexTimeFormat==0 && i>=0 && i<10)     //24H, 0~9
+        {
+            str=QString("%1: 0%2").arg(tr("Hour")).arg(i);
+        }
+        else if(indexTimeFormat==0 && i>=10 && i<24)    //24H, 10~23
+        {
+            str=QString("%1: %2").arg(tr("Hour")).arg(i);
         }
         else                                            //Error
         {
-            str=tr("Hour: %1").arg(i);
+            str=QString("%1: %2").arg(tr("Hour")).arg(i);
             qDebug("[ERROR]SetDateTimeDialog::initComboBox()");
         }
         comboBoxTime_4->addItem(str);
-*/
+
         if(dlsZone == DLS_END_DAY && (i == (dlsSetDate.dlsEndHour - 1)))
         {
             str = tr("Hour: %1").arg(i);
@@ -372,9 +421,24 @@ void SetDateTimeDialog::initComboBox()
 
     for(int i = 0; i < 60; i++)
     {
-        str = tr("Minute: %1").arg(i);
+        if(i<10)
+        {
+            str=QString("%1: 0%2").arg(tr("Minute")).arg(i);
+        }
+        else
+        {
+            str=QString("%1: %2").arg(tr("Minute")).arg(i);
+        }
         comboBoxTime_5->addItem(str);
-        str = tr("Second: %1").arg(i);
+
+        if(i<10)
+        {
+            str=QString("%1: 0%2").arg(tr("Second")).arg(i);
+        }
+        else
+        {
+            str=QString("%1: %2").arg(tr("Second")).arg(i);
+        }
         comboBoxTime_6->addItem(str);
     }
 

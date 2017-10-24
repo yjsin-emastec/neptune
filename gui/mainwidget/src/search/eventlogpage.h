@@ -46,6 +46,7 @@ private:
 	void addEventLog(const QString &eventDateTime, const QString &eventLog, const QString &eventTime, int idx);
     void itemViewSelectChange(int isForward);
     void setFocusToLogView(void);
+    QString changeTimeformat(char event_time[20]);
 
     EventSortFilterProxyModel  *proxyModel;
     QTreeView                  *eventLogView;
@@ -58,7 +59,6 @@ private:
                                *labelEndTime,
                                *labelFilter,
                                *labelLog,
-                               *labelLogResult,
                                *labelPage;
 
     QPushButton                *buttonFilter,
@@ -81,7 +81,8 @@ private:
                                 oldIndexSort;
 
     QString                     startTime,
-                                endTime;
+                                endTime,
+                                ampmStatus;
 
     bool                        isKeyLock;
 };

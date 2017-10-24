@@ -646,6 +646,10 @@ void MainWidget::createPopupDialog()
         connect(this, SIGNAL(backupProgress(int, int)),                             backupDialog, SLOT(updateBackupProgress(int, int)));
         connect(this, SIGNAL(backupCalculation(int, unsigned long, unsigned long)), backupDialog, SLOT(updateBackupCalcution(int, unsigned long, unsigned long)));
     }
+    else
+    {
+        backupDialog->updateBackupDialog();
+    }
 
     if(!loginDialog)
     {
@@ -1083,6 +1087,10 @@ void MainWidget::runBackup()
     if(!backupDialog)
     {
         backupDialog = new BackupDialog(this);
+    }
+    else
+    {
+        backupDialog->updateBackupDialog();
     }
 
     qDebug("%s: type.%d, split.%d, channel.%d, timestamp.%s \n", __func__, type, split, channel, atime(now));

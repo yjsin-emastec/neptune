@@ -54,6 +54,8 @@ void SearchDialog::onButtonClose(void)
 	buttonNormal->show();
 	buttonEvent->show();
 	buttonClose->show();
+    buttonNotAvailable->show();
+    labelSearch->show();
 
 	calendarPage->hide();
 	eventPage->hide();
@@ -67,6 +69,8 @@ void SearchDialog::onHideCalendarPage(int type)
 	buttonNormal->show();
 	buttonEvent->show();
 	buttonClose->show();
+    buttonNotAvailable->show();
+    labelSearch->show();
 
 	calendarPage->hide();
 	eventPage->hide();
@@ -82,6 +86,9 @@ void SearchDialog::onEvent(void)
 	buttonNormal->hide();
 	buttonEvent->hide();
 	buttonClose->hide();
+    buttonNotAvailable->hide();
+    labelSearch->hide();
+
 	eventPage->resetSearch();
     stackedLayout->setCurrentWidget(eventPage);
 	eventPage->show();
@@ -91,6 +98,9 @@ void SearchDialog::onNormal(void)
 	buttonNormal->hide();
 	buttonEvent->hide();
 	buttonClose->hide();
+    buttonNotAvailable->hide();
+    labelSearch->hide();
+
 	calendarPage->ResetSearch();
 	calendarPage->QuerySearchData(0);
 	calendarPage->UpdateSelectTime();

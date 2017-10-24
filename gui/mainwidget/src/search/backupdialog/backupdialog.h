@@ -13,7 +13,7 @@ public:
 	BackupDialog(QWidget *parent = 0);
 	~BackupDialog();
 	void setCaptureMode(int type, int ch, int split, time_t pbTime);
-		
+    void updateBackupDialog();
 signals:
 
 public slots:

@@ -21,14 +21,23 @@ BackupDialog::BackupDialog(QWidget *parent)
     labelStart->setStyleSheet("font:40px;color:white");
     labelStart->setAlignment(Qt::AlignCenter);
 
-    dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
-    dateTimeStart->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+    if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
+    {
+        dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss AP");
+        dateTimeStart->setStyleSheet("QDateTimeEdit {font:43px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+    }
+    else                                                            // 24H
+    {
+        dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
+        dateTimeStart->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+    }
 
 #if 1 //yjsin [17/09/13] if text is long, change font size
     if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
     {
         buttonBackup->setStyleSheet("font:39px");
-        labelStart->setStyleSheet("font:35px");
     }
 #endif
 
@@ -47,6 +56,22 @@ BackupDialog::BackupDialog(QWidget *parent)
     flagPrepare    = 0;
     indexEnd       = 1;
     isKeyLock      = false;
+}
+
+void BackupDialog::updateBackupDialog()
+{
+    if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
+    {
+        dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss AP");
+        dateTimeStart->setStyleSheet("QDateTimeEdit {font:43px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+    }
+    else                                                            // 24H
+    {
+        dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
+        dateTimeStart->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+    }
 }
 
 BackupDialog::~BackupDialog()
