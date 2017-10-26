@@ -110,7 +110,7 @@ void LanguageDialog::initLanguageConfig(void)
 void LanguageDialog::onButtonLanguageUp()
 {
 //    if(indexLanguage <= 1) { indexLanguage = 9; }
-    if(indexLanguage <= 1) { indexLanguage = 5; }
+    if(indexLanguage <= 1) { indexLanguage = 6; }
 
     switch(--indexLanguage)
     {
@@ -118,6 +118,8 @@ void LanguageDialog::onButtonLanguageUp()
         case 2: { lineEditLanguage->setText(tr("Korean"    ));  utils_cfg_cpy_item(SystemCfg.language, "KOREAN"    );  break; }
         case 3: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }
         case 4: { lineEditLanguage->setText(tr("French"    ));  utils_cfg_cpy_item(SystemCfg.language, "FRENCH"    );  break; }
+        case 5: { lineEditLanguage->setText(tr("Italian"    ));  utils_cfg_cpy_item(SystemCfg.language, "ITALIAN"    );  break; }
+
 #if 0    //yjsin [17/08/31] temporary use only english, korean
         case 3: { lineEditLanguage->setText(tr("German"    ));  utils_cfg_cpy_item(SystemCfg.language, "GERMAN"    );  break; }
         case 4: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }
@@ -132,18 +134,20 @@ void LanguageDialog::onButtonLanguageUp()
      * 1. check the dvrsetup/system/upgrade/appupgradedialog. label size was modified.
      * 2. check the search/backupdialog. label size and button size was modified.
      * 3. check the stylesheet and MainWidget::loadStyleSheet(). Qbutton font was modified to small.
-     * 4. check the device/triggerinputdialog. Qbutton size and font was modified
+     * 4. check the device/triggerinputdialog. Qbutton size and font was modified.
      *
      * when you change the language to french, see below code.
      * 1. check the dvrsetup/system/upgrade/appupgradedialog. label size was modified.
      * 2. check the dvrsetup/system/information/informationdialog. font size was modified.
      * 3. check the dvrsetup/system/licenseplate/licenseplatedialog. font size was modified.
      *
+     * when you change the language to Italian, see below code.
+     * 1. check the device/triggerinputdialog. Qbutton size and font was modified.
      */
 }
 void LanguageDialog::onButtonLanguageDown()
 {
-    if(indexLanguage >= 4) { indexLanguage = 0; }
+    if(indexLanguage >= 5) { indexLanguage = 0; }
     //if(indexLanguage >= 8) { indexLanguage = 0; }
     switch(++indexLanguage)
     {
@@ -151,6 +155,7 @@ void LanguageDialog::onButtonLanguageDown()
         case 2: { lineEditLanguage->setText(tr("Korean"    ));  utils_cfg_cpy_item(SystemCfg.language, "KOREAN"    );  break; }
         case 3: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }
         case 4: { lineEditLanguage->setText(tr("French"    ));  utils_cfg_cpy_item(SystemCfg.language, "FRENCH"    );  break; }
+        case 5: { lineEditLanguage->setText(tr("Italian"   ));  utils_cfg_cpy_item(SystemCfg.language, "ITALIAN"   );  break; }
 #if 0   //yjsin [17/08/31] temporary use only english, korean
         case 3: { lineEditLanguage->setText(tr("German"    ));  utils_cfg_cpy_item(SystemCfg.language, "GERMAN"    );  break; }
         case 4: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }

@@ -6,6 +6,8 @@ TRANSLATIONS  = src/dvrsetup/system/language/translator/language_english.ts     
                 src/dvrsetup/system/language/translator/language_korean.ts                           \
                 src/dvrsetup/system/language/translator/language_spanish.ts                          \
                 src/dvrsetup/system/language/translator/language_french.ts                           \
+                src/dvrsetup/system/language/translator/language_italian.ts                          \
+
 UI_DIR        = obj
 MOC_DIR       = obj
 RCC_DIR       = obj

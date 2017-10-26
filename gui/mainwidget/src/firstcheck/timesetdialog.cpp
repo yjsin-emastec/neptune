@@ -195,6 +195,10 @@ void TimeSetDialog::onButtonSetTime(void)
         {
             val = LANGUAGE_FRENCH;
         }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN")  == 0)
+        {
+            val = LANGUAGE_ITALIAN;
+        }
         else
         {
             val = LANGUAGE_ENGLISH;
