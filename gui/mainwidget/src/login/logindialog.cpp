@@ -21,14 +21,14 @@ LoginDialog::LoginDialog(QWidget *parent)
     lineEditPassword->setAlignment(Qt::AlignCenter);
 
     connect(buttonEdit, SIGNAL(clicked()),  this, SLOT(showKeyboard()));
-    connect(buttonBox,  SIGNAL(accepted()), this, SLOT(checkPassword()));
-    connect(buttonBox,  SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonOk,  SIGNAL(clicked()), this, SLOT(checkPassword()));
+    connect(buttonCancel,  SIGNAL(clicked()), this, SLOT(reject()));
 
-    buttonBox->button(QDialogButtonBox::Ok)->setText(tr("Ok"));
-    buttonBox->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
+    buttonOk->setText(tr("Ok"));
+    buttonCancel->setText(tr("Cancel"));
 
-    buttonBox->button(QDialogButtonBox::Ok)->setMinimumSize(200,100);
-    buttonBox->button(QDialogButtonBox::Cancel)->setMinimumSize(200,100);
+    buttonOk->setMinimumSize(200,100);
+    buttonCancel->setMinimumSize(200,100);
 
     if(parent->isLeftToRight() && isRightToLeft())
     {
@@ -82,7 +82,7 @@ void LoginDialog::showKeyboard()
 
     delete keyboardDialog;
     keyboardDialog = NULL;
-    buttonBox->button(QDialogButtonBox::Ok)->setFocus();
+    buttonOk->setFocus();
 }
 void LoginDialog::checkPassword()
 {
