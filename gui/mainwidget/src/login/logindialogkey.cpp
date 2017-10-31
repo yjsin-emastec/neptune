@@ -164,28 +164,13 @@ void LoginDialog::keyPressEvent(QKeyEvent *event)
 
         case Qt::Key_Escape:
 
-            if(lineEditPassword->hasFocus())
+            if(lineEditPassword->hasFocus()==1 && lineEditPassword->text()!="")
             {
-                if(lineEditPassword->text() != "")
-                {
-                    lineEditPassword->setText("");
-                }
-                else
-                {
-                    buttonOk->setFocus();
-                }
-            }
-            else if(buttonOk->hasFocus())
-            {
-                reject();
-            }
-            else if(buttonCancel->hasFocus())
-            {
-                reject();
+                lineEditPassword->setText("");
             }
             else
             {
-                buttonOk->setFocus();
+                reject();
             }
 
             return;
