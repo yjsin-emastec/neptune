@@ -90,31 +90,6 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QDialogButtonBox" name="buttonBox">
-    <property name="geometry">
-     <rect>
-      <x>273</x>
-      <y>340</y>
-      <width>430</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>0</width>
-      <height>100</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>16777215</width>
-      <height>100</height>
-     </size>
-    </property>
-    <property name="standardButtons">
-     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-    </property>
-   </widget>
    <widget class="QPushButton" name="buttonEdit">
     <property name="geometry">
      <rect>
@@ -156,17 +131,48 @@
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="buttonOk">
+    <property name="geometry">
+     <rect>
+      <x>298</x>
+      <y>340</y>
+      <width>200</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="text">
+     <string>Ok</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonCancel">
+    <property name="geometry">
+     <rect>
+      <x>503</x>
+      <y>340</y>
+      <width>200</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>lineEditPassword</zorder>
-   <zorder>buttonBox</zorder>
    <zorder>buttonEdit</zorder>
+   <zorder>buttonOk</zorder>
+   <zorder>buttonCancel</zorder>
   </widget>
   <zorder>frame</zorder>
   <zorder>labelPassword</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="../../mainwidget.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

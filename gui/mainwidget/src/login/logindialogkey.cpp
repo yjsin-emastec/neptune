@@ -9,37 +9,37 @@ void LoginDialog::keyPressEvent(QKeyEvent *event)
     {
         case Qt::Key_Up:
 
-                 if(lineEditPassword->hasFocus())                             { buttonBox->button(QDialogButtonBox::Ok)->setFocus();      }
-            else if(buttonEdit->hasFocus())                                   { buttonBox->button(QDialogButtonBox::Cancel)->setFocus();  }
-            else if(buttonBox->button(QDialogButtonBox::Cancel)->hasFocus())  { buttonEdit->setFocus();                                   }
-            else if(buttonBox->button(QDialogButtonBox::Ok)->hasFocus())      { lineEditPassword->setFocus();                             }
+                 if(lineEditPassword->hasFocus()) { buttonOk->setFocus();         }
+            else if(buttonEdit->hasFocus())       { buttonCancel->setFocus();     }
+            else if(buttonCancel->hasFocus())     { buttonEdit->setFocus();       }
+            else if(buttonOk->hasFocus())         { lineEditPassword->setFocus(); }
 
             return;
 
         case Qt::Key_Down:
 
-                 if(lineEditPassword->hasFocus())                             { buttonBox->button(QDialogButtonBox::Ok)->setFocus();      }
-            else if(buttonEdit->hasFocus())                                   { buttonBox->button(QDialogButtonBox::Cancel)->setFocus();  }
-            else if(buttonBox->button(QDialogButtonBox::Cancel)->hasFocus())  { buttonEdit->setFocus();                                   }
-            else if(buttonBox->button(QDialogButtonBox::Ok)->hasFocus())      { lineEditPassword->setFocus();                             }
+                 if(lineEditPassword->hasFocus()) { buttonOk->setFocus();         }
+            else if(buttonEdit->hasFocus())       { buttonCancel->setFocus();     }
+            else if(buttonCancel->hasFocus())     { buttonEdit->setFocus();       }
+            else if(buttonOk->hasFocus())         { lineEditPassword->setFocus(); }
 
             return;
 
         case Qt::Key_Right:
 
-                 if(buttonBox->button(QDialogButtonBox::Ok)->hasFocus())      { buttonBox->button(QDialogButtonBox::Cancel)->setFocus();  }
-            else if(buttonBox->button(QDialogButtonBox::Cancel)->hasFocus())  { buttonBox->button(QDialogButtonBox::Ok)->setFocus();      }
-            else if(buttonEdit->hasFocus())                                   { lineEditPassword->setFocus();                             }
-            else if(lineEditPassword->hasFocus())                             { buttonEdit->setFocus();                                   }
+                 if(buttonOk->hasFocus())         { buttonCancel->setFocus();     }
+            else if(buttonCancel->hasFocus())     { buttonOk->setFocus();         }
+            else if(buttonEdit->hasFocus())       { lineEditPassword->setFocus(); }
+            else if(lineEditPassword->hasFocus()) { buttonEdit->setFocus();       }
 
             return;
 
         case Qt::Key_Left:
 
-                 if(buttonBox->button(QDialogButtonBox::Ok)->hasFocus())      { buttonBox->button(QDialogButtonBox::Cancel)->setFocus();  }
-            else if(buttonBox->button(QDialogButtonBox::Cancel)->hasFocus())  { buttonBox->button(QDialogButtonBox::Ok)->setFocus();      }
-            else if(buttonEdit->hasFocus())                                   { lineEditPassword->setFocus();                             }
-            else if(lineEditPassword->hasFocus())                             { buttonEdit->setFocus();                                   }
+                 if(buttonOk->hasFocus())         { buttonCancel->setFocus();     }
+            else if(buttonCancel->hasFocus())     { buttonOk->setFocus();         }
+            else if(buttonEdit->hasFocus())       { lineEditPassword->setFocus(); }
+            else if(lineEditPassword->hasFocus()) { buttonEdit->setFocus();       }
 
             return;
 
@@ -147,11 +147,11 @@ void LoginDialog::keyPressEvent(QKeyEvent *event)
                     checkPassword();
                 }
             }
-            else if(buttonBox->button(QDialogButtonBox::Ok)->hasFocus())
+            else if(buttonOk->hasFocus())
             {
                 checkPassword();
             }
-            else if(buttonBox->button(QDialogButtonBox::Cancel)->hasFocus())
+            else if(buttonCancel->hasFocus())
             {
                 reject();
             }
@@ -164,28 +164,13 @@ void LoginDialog::keyPressEvent(QKeyEvent *event)
 
         case Qt::Key_Escape:
 
-            if(lineEditPassword->hasFocus())
+            if(lineEditPassword->hasFocus()==1 && lineEditPassword->text()!="")
             {
-                if(lineEditPassword->text() != "")
-                {
-                    lineEditPassword->setText("");
-                }
-                else
-                {
-                    buttonBox->button(QDialogButtonBox::Ok)->setFocus();
-                }
-            }
-            else if(buttonBox->button(QDialogButtonBox::Ok)->hasFocus())
-            {
-                reject();
-            }
-            else if(buttonBox->button(QDialogButtonBox::Cancel)->hasFocus())
-            {
-                reject();
+                lineEditPassword->setText("");
             }
             else
             {
-                buttonBox->button(QDialogButtonBox::Ok)->setFocus();
+                reject();
             }
 
             return;
