@@ -745,6 +745,11 @@ void MainWidget::doDvrEvent(Event *e)
 
             break;
         }
+        case Send_QT_SET_RECORD_ICON:
+        {
+            int *pSetRecordIcon = (int *)e->data;
+            videoPane[*pSetRecordIcon]->setRecordingDetect(1, 0, 0, 0);
+        }
         default:
         {
             qDebug("main : event receive %x", eType);
@@ -932,13 +937,28 @@ void MainWidget::updateDvrEvent(live_event_t *live)
                 {
                     if(diskInfo[0].hddCount == 0)
                     {
+#if 1 // GyverJeong [17/11/14]
+                        int *pResetRecordIcon = g_new0(int, 1);
+                        *pResetRecordIcon     = i;
+                        event_send(QUEUE_QT_CORE, QUEUE_WORK, WORK_EVENT_RESET_RECORD_ICON, pResetRecordIcon, g_free, NULL);
+#endif
                         record_icon_draw = 1;
                         videoPane[i]->setRecordingDetect(0x0, 0x0, 0x0, 0x0);
                     }
                     else
                     {
+#if 1 // GyverJeong [17/11/14]
+                        if(!record)
+                        {
+                            int *pResetRecordIcon = g_new0(int, 1);
+                            *pResetRecordIcon     = i;
+                            event_send(QUEUE_QT_CORE, QUEUE_WORK, WORK_EVENT_RESET_RECORD_ICON, pResetRecordIcon, g_free, NULL);
+                            videoPane[i]->setRecordingDetect(record, 0, 0, prerecord);
+                        }
+#else
                         record_icon_draw = 0;
                         videoPane[i]->setRecordingDetect(record, 0, 0, prerecord);
+#endif
                     }
                 }
             }
