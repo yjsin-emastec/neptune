@@ -12,7 +12,7 @@ void LoginDialog::keyPressEvent(QKeyEvent *event)
                  if(lineEditPassword->hasFocus()) { buttonOk->setFocus();         }
             else if(buttonEdit->hasFocus())       { buttonCancel->setFocus();     }
             else if(buttonCancel->hasFocus())     { buttonEdit->setFocus();       }
-            else if(buttonOk->hasFocus())         { lineEditPassword->setFocus(); }
+            else if(buttonOk->hasFocus())         { buttonOk->setFocusPolicy(Qt::NoFocus); lineEditPassword->setFocus(); }
 
             return;
 
@@ -21,7 +21,7 @@ void LoginDialog::keyPressEvent(QKeyEvent *event)
                  if(lineEditPassword->hasFocus()) { buttonOk->setFocus();         }
             else if(buttonEdit->hasFocus())       { buttonCancel->setFocus();     }
             else if(buttonCancel->hasFocus())     { buttonEdit->setFocus();       }
-            else if(buttonOk->hasFocus())         { lineEditPassword->setFocus(); }
+            else if(buttonOk->hasFocus())         { buttonOk->setFocusPolicy(Qt::NoFocus); lineEditPassword->setFocus(); }
 
             return;
 
@@ -29,7 +29,7 @@ void LoginDialog::keyPressEvent(QKeyEvent *event)
 
                  if(buttonOk->hasFocus())         { buttonCancel->setFocus();     }
             else if(buttonCancel->hasFocus())     { buttonOk->setFocus();         }
-            else if(buttonEdit->hasFocus())       { lineEditPassword->setFocus(); }
+            else if(buttonEdit->hasFocus())       { buttonOk->setFocusPolicy(Qt::NoFocus); lineEditPassword->setFocus(); }
             else if(lineEditPassword->hasFocus()) { buttonEdit->setFocus();       }
 
             return;
@@ -38,7 +38,7 @@ void LoginDialog::keyPressEvent(QKeyEvent *event)
 
                  if(buttonOk->hasFocus())         { buttonCancel->setFocus();     }
             else if(buttonCancel->hasFocus())     { buttonOk->setFocus();         }
-            else if(buttonEdit->hasFocus())       { lineEditPassword->setFocus(); }
+            else if(buttonEdit->hasFocus())       { buttonOk->setFocusPolicy(Qt::NoFocus); lineEditPassword->setFocus(); }
             else if(lineEditPassword->hasFocus()) { buttonEdit->setFocus();       }
 
             return;

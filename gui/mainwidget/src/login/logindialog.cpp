@@ -82,6 +82,7 @@ void LoginDialog::showKeyboard()
 
     delete keyboardDialog;
     keyboardDialog = NULL;
+    buttonOk->setFocusPolicy(Qt::StrongFocus);
     buttonOk->setFocus();
 }
 void LoginDialog::checkPassword()
