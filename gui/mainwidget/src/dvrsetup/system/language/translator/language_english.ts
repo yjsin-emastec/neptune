@@ -1149,32 +1149,40 @@ Record: Off/On</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../record/event/eventdialog.cpp" line="29"/>
-        <location filename="../../../record/event/eventdialog.cpp" line="30"/>
-        <location filename="../../../record/event/eventdialog.cpp" line="51"/>
-        <location filename="../../../record/event/eventdialog.cpp" line="58"/>
-        <source>
-Time: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../record/event/eventdialog.cpp" line="29"/>
-        <location filename="../../../record/event/eventdialog.cpp" line="51"/>
-        <source>15sec</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../record/event/eventdialog.cpp" line="30"/>
-        <location filename="../../../record/event/eventdialog.cpp" line="58"/>
-        <source>30sec</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../../record/event/eventdialog.cpp" line="35"/>
         <location filename="../../../record/event/eventdialog.cpp" line="36"/>
         <location filename="../../../record/event/eventdialog.cpp" line="71"/>
         <location filename="../../../record/event/eventdialog.cpp" line="79"/>
         <source>Impact</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../record/event/eventdialog.cpp" line="29"/>
+        <location filename="../../../record/event/eventdialog.cpp" line="30"/>
+        <location filename="../../../record/event/eventdialog.cpp" line="51"/>
+        <location filename="../../../record/event/eventdialog.cpp" line="58"/>
+        <source> Duration
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../record/event/eventdialog.cpp" line="29"/>
+        <location filename="../../../record/event/eventdialog.cpp" line="51"/>
+        <source>30 sec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../record/event/eventdialog.cpp" line="30"/>
+        <location filename="../../../record/event/eventdialog.cpp" line="58"/>
+        <source>60 sec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../record/event/eventdialog.cpp" line="35"/>
+        <location filename="../../../record/event/eventdialog.cpp" line="41"/>
+        <location filename="../../../record/event/eventdialog.cpp" line="71"/>
+        <location filename="../../../record/event/eventdialog.cpp" line="92"/>
+        <source>Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1186,16 +1194,8 @@ Time: </source>
         <location filename="../../../record/event/eventdialog.cpp" line="79"/>
         <location filename="../../../record/event/eventdialog.cpp" line="92"/>
         <location filename="../../../record/event/eventdialog.cpp" line="100"/>
-        <source>
-Record: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../record/event/eventdialog.cpp" line="35"/>
-        <location filename="../../../record/event/eventdialog.cpp" line="41"/>
-        <location filename="../../../record/event/eventdialog.cpp" line="71"/>
-        <location filename="../../../record/event/eventdialog.cpp" line="92"/>
-        <source>Off</source>
+        <source> Record
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1617,7 +1617,7 @@ Sensitivity: 5</source>
         <location filename="../languagedialog.ui" line="126"/>
         <location filename="../languagedialog.cpp" line="71"/>
         <location filename="../languagedialog.cpp" line="117"/>
-        <location filename="../languagedialog.cpp" line="150"/>
+        <location filename="../languagedialog.cpp" line="154"/>
         <source>English</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1637,23 +1637,23 @@ System will restart.</source>
     <message>
         <location filename="../languagedialog.cpp" line="76"/>
         <location filename="../languagedialog.cpp" line="118"/>
-        <location filename="../languagedialog.cpp" line="151"/>
+        <location filename="../languagedialog.cpp" line="155"/>
         <source>Korean</source>
         <translation>한국어</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="81"/>
-        <location filename="../languagedialog.cpp" line="122"/>
-        <location filename="../languagedialog.cpp" line="155"/>
+        <location filename="../languagedialog.cpp" line="124"/>
+        <location filename="../languagedialog.cpp" line="160"/>
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="86"/>
         <location filename="../languagedialog.cpp" line="119"/>
-        <location filename="../languagedialog.cpp" line="123"/>
-        <location filename="../languagedialog.cpp" line="152"/>
+        <location filename="../languagedialog.cpp" line="125"/>
         <location filename="../languagedialog.cpp" line="156"/>
+        <location filename="../languagedialog.cpp" line="161"/>
         <source>Spanish</source>
         <translatorcomment>ñ이 î으로 출력됨
 Español
@@ -1663,9 +1663,9 @@ Español
     <message>
         <location filename="../languagedialog.cpp" line="91"/>
         <location filename="../languagedialog.cpp" line="120"/>
-        <location filename="../languagedialog.cpp" line="124"/>
-        <location filename="../languagedialog.cpp" line="153"/>
+        <location filename="../languagedialog.cpp" line="126"/>
         <location filename="../languagedialog.cpp" line="157"/>
+        <location filename="../languagedialog.cpp" line="162"/>
         <source>French</source>
         <translatorcomment>ç 깨짐
 Français
@@ -1674,22 +1674,24 @@ Français
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="96"/>
-        <location filename="../languagedialog.cpp" line="125"/>
+        <location filename="../languagedialog.cpp" line="121"/>
+        <location filename="../languagedialog.cpp" line="127"/>
         <location filename="../languagedialog.cpp" line="158"/>
+        <location filename="../languagedialog.cpp" line="163"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="101"/>
-        <location filename="../languagedialog.cpp" line="126"/>
-        <location filename="../languagedialog.cpp" line="159"/>
+        <location filename="../languagedialog.cpp" line="128"/>
+        <location filename="../languagedialog.cpp" line="164"/>
         <source>Portuguese</source>
         <translation>Português</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="106"/>
-        <location filename="../languagedialog.cpp" line="127"/>
-        <location filename="../languagedialog.cpp" line="160"/>
+        <location filename="../languagedialog.cpp" line="129"/>
+        <location filename="../languagedialog.cpp" line="165"/>
         <source>Japanese</source>
         <translation>日本語</translation>
     </message>
@@ -1735,16 +1737,18 @@ Français
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../login/logindialog.ui" line="140"/>
+        <location filename="../../../../login/logindialog.ui" line="115"/>
         <source>...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../../../login/logindialog.ui" line="147"/>
         <location filename="../../../../login/logindialog.cpp" line="27"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../../../login/logindialog.ui" line="163"/>
         <location filename="../../../../login/logindialog.cpp" line="28"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
@@ -1756,7 +1760,7 @@ Français
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../login/logindialog.cpp" line="149"/>
+        <location filename="../../../../login/logindialog.cpp" line="150"/>
         <source>Incorrect Password.
 Please try again.</source>
         <translation type="unfinished"></translation>
@@ -1912,11 +1916,11 @@ Mute</source>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="740"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1060"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1094"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1155"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1242"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1282"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1080"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1114"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1175"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1262"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1302"/>
         <location filename="../../../../main/mainscreen.cpp" line="143"/>
         <location filename="../../../../main/mainscreen.cpp" line="187"/>
         <source>NOTICE</source>
@@ -1946,11 +1950,11 @@ Mute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1060"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1094"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1155"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1242"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1282"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1080"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1114"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1175"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1262"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1302"/>
         <location filename="../../../../main/mainscreen.cpp" line="143"/>
         <location filename="../../../../main/mainscreen.cpp" line="187"/>
         <source>NOTICE
@@ -2951,8 +2955,8 @@ Please try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="168"/>
-        <location filename="../../datetime/setdatetimedialog.ui" line="358"/>
+        <location filename="../../datetime/setdatetimedialog.ui" line="174"/>
+        <location filename="../../datetime/setdatetimedialog.ui" line="364"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="112"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="152"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="357"/>
@@ -2961,21 +2965,21 @@ Please try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="290"/>
-        <location filename="../../datetime/setdatetimedialog.ui" line="324"/>
+        <location filename="../../datetime/setdatetimedialog.ui" line="296"/>
+        <location filename="../../datetime/setdatetimedialog.ui" line="330"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="129"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="290"/>
         <source>:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="406"/>
+        <location filename="../../datetime/setdatetimedialog.ui" line="412"/>
         <source>Time Format
 24-Hour</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="420"/>
+        <location filename="../../datetime/setdatetimedialog.ui" line="426"/>
         <source> GPS Synchronization
 On</source>
         <translation type="unfinished"></translation>
@@ -3260,16 +3264,13 @@ Off</source>
         <location filename="../../datetime/setdatetimedialog.cpp" line="378"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="382"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="386"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="390"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="394"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="398"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="402"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="406"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="410"/>
         <source>Hour</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="417"/>
-        <source>Hour : %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3285,6 +3286,7 @@ Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="417"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="868"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="873"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="886"/>
@@ -3751,7 +3753,7 @@ You must delete data or set time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="221"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="225"/>
         <source>System Time must be later than record last time.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3819,12 +3821,12 @@ You must delete data or set time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="216"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="220"/>
         <source>PRIORITY REDUNDANT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="217"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="221"/>
         <source>		%1
 
 %2
@@ -3833,23 +3835,21 @@ You must delete data or set time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="217"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="221"/>
         <source>WARNING</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="217"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="221"/>
         <source>Priority is redundant.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="217"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="221"/>
         <source>Please check priority.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="266"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="268"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="270"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="272"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="274"/>
@@ -3858,8 +3858,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="280"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="282"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="284"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="286"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="288"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="290"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="292"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="294"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="296"/>
@@ -3868,8 +3868,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="302"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="304"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="306"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="308"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="310"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="312"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="314"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="316"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="318"/>
@@ -3878,8 +3878,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="324"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="326"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="328"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="330"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="332"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="334"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="336"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="338"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="340"/>
@@ -3888,8 +3888,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="346"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="348"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="350"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="352"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="354"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="356"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="358"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="360"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="362"/>
@@ -3909,8 +3909,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="390"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="392"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="394"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="396"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="398"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="400"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="402"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="404"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="406"/>
@@ -3930,8 +3930,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="434"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="436"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="438"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="440"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="442"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="444"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="446"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="448"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="450"/>
@@ -3951,8 +3951,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="478"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="480"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="482"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="484"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="486"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="488"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="490"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="492"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="494"/>
@@ -3972,118 +3972,116 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="522"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="524"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="526"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="528"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="530"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="532"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="534"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="536"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="538"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="540"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="542"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="544"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="546"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="548"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="550"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="552"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="554"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="556"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="558"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="560"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="562"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="564"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="566"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="571"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="574"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="577"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="580"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="583"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="586"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="589"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="592"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="595"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="598"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="601"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="604"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="617"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="618"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="619"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="620"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="568"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="570"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="575"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="578"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="581"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="584"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="587"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="590"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="593"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="596"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="599"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="602"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="605"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="608"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="621"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="622"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="623"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="624"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="625"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="626"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="627"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="641"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="642"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="643"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="644"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="628"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="629"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="630"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="631"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="645"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="646"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="647"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="648"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="649"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="650"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="651"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="666"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="667"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="668"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="669"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="652"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="653"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="654"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="655"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="670"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="671"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="672"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="673"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="674"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="675"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="676"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="690"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="691"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="692"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="693"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="677"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="678"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="679"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="680"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="694"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="695"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="696"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="697"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="698"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="699"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="700"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="714"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="715"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="716"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="717"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="701"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="702"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="703"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="704"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="718"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="719"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="720"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="721"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="722"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="723"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="724"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="738"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="739"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="740"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="741"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="725"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="726"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="727"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="728"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="742"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="743"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="744"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="745"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="746"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="747"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="748"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="762"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="763"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="764"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="765"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="749"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="750"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="751"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="752"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="766"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="767"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="768"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="769"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="770"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="771"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="772"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="786"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="787"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="788"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="789"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="773"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="774"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="775"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="776"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="790"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="791"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="792"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="793"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="794"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="795"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="796"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="806"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="807"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="808"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="809"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="797"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="798"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="799"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="800"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="810"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="811"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="812"/>
@@ -4101,10 +4099,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="824"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="825"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="826"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="835"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="836"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="837"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="838"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="827"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="828"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="829"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="830"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="839"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="840"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="841"/>
@@ -4122,10 +4120,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="853"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="854"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="855"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="864"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="865"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="866"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="867"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="856"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="857"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="858"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="859"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="868"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="869"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="870"/>
@@ -4143,10 +4141,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="882"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="883"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="884"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="893"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="894"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="895"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="896"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="885"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="886"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="887"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="888"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="897"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="898"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="899"/>
@@ -4164,10 +4162,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="911"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="912"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="913"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="922"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="923"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="924"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="925"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="914"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="915"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="916"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="917"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="926"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="927"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="928"/>
@@ -4185,10 +4183,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="940"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="941"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="942"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="951"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="952"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="953"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="954"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="943"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="944"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="945"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="946"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="955"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="956"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="957"/>
@@ -4206,10 +4204,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="969"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="970"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="971"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="980"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="981"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="982"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="983"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="972"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="973"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="974"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="975"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="984"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="985"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="986"/>
@@ -4227,10 +4225,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="998"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="999"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1000"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1009"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1010"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1011"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1012"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1001"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1002"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1003"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1004"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1013"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1014"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1015"/>
@@ -4248,45 +4246,47 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1027"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1028"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1029"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1037"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1038"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1039"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1040"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1048"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1049"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1050"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1051"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1059"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1060"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1061"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1062"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1070"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1071"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1072"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1073"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1081"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1082"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1083"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1084"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1092"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1093"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1094"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1095"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1103"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1104"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1105"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1106"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1114"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1115"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1116"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1117"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1030"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1031"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1032"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1033"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1042"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1043"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1044"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1052"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1053"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1054"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1055"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1063"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1064"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1065"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1066"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1074"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1075"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1076"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1077"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1085"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1086"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1087"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1088"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1096"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1097"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1098"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1099"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1107"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1108"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1109"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1110"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1118"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1119"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1120"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1121"/>
         <source>%1
 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="266"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="268"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="270"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="272"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="274"/>
@@ -4295,8 +4295,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="280"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="282"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="284"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="286"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="288"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="290"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="292"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="294"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="296"/>
@@ -4305,8 +4305,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="302"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="304"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="306"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="308"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="310"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="312"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="314"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="316"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="318"/>
@@ -4315,8 +4315,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="324"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="326"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="328"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="330"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="332"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="334"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="336"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="338"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="340"/>
@@ -4325,142 +4325,110 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="346"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="348"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="350"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="571"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="574"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="577"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="580"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="617"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="618"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="619"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="620"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="352"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="354"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="575"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="578"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="581"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="584"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="621"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="622"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="623"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="624"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="625"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="626"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="627"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="641"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="642"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="643"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="644"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="628"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="629"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="630"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="631"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="645"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="646"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="647"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="648"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="649"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="650"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="651"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="666"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="667"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="668"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="669"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="652"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="653"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="654"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="655"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="670"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="671"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="672"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="673"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="674"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="675"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="676"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="690"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="691"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="692"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="693"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="677"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="678"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="679"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="680"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="694"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="695"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="696"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="697"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="698"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="699"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="700"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="714"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="715"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="716"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="717"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="701"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="702"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="703"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="704"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="718"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="719"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="720"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="721"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="722"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="723"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="724"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="738"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="739"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="740"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="741"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="725"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="726"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="727"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="728"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="742"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="743"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="744"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="745"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="746"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="747"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="748"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="762"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="763"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="764"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="765"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="749"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="750"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="751"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="752"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="766"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="767"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="768"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="769"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="770"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="771"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="772"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="786"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="787"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="788"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="789"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="773"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="774"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="775"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="776"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="790"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="791"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="792"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="793"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="794"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="795"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="796"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="797"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="798"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="799"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="800"/>
         <source>Source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="266"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="288"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="310"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="332"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="571"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="617"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="641"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="666"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="690"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="714"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="738"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="762"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="786"/>
-        <source>CAM 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="268"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="290"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="312"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="334"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="574"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="618"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="642"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="667"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="691"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="715"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="739"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="763"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="787"/>
-        <source>CAM 2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="270"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="292"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="314"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="336"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="577"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="619"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="643"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="668"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="692"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="716"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="740"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="764"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="788"/>
-        <source>CAM 3</source>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="575"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="621"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="645"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="670"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="694"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="718"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="742"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="766"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="790"/>
+        <source>CAM 1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4468,23 +4436,7 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="294"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="316"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="338"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="580"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="620"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="644"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="669"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="693"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="717"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="741"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="765"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="789"/>
-        <source>CAM 4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="274"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="296"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="318"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="340"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="578"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="622"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="646"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="671"/>
@@ -4493,14 +4445,15 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="743"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="767"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="791"/>
-        <source>Split 1</source>
+        <source>CAM 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="276"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="298"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="320"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="342"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="274"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="296"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="318"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="340"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="581"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="623"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="647"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="672"/>
@@ -4509,14 +4462,15 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="744"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="768"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="792"/>
-        <source>Split 2</source>
+        <source>CAM 3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="278"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="300"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="322"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="344"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="276"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="298"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="320"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="342"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="584"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="624"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="648"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="673"/>
@@ -4525,30 +4479,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="745"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="769"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="793"/>
-        <source>Split 3</source>
+        <source>CAM 4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="280"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="302"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="324"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="346"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="625"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="649"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="674"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="698"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="722"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="746"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="770"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="794"/>
-        <source>Split 4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="282"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="304"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="326"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="348"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="278"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="300"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="322"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="344"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="626"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="650"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="675"/>
@@ -4557,14 +4495,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="747"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="771"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="795"/>
-        <source>Split 5</source>
+        <source>Split 1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="284"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="306"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="328"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="350"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="280"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="302"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="324"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="346"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="627"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="651"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="676"/>
@@ -4573,12 +4511,74 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="748"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="772"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="796"/>
+        <source>Split 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="282"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="304"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="326"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="348"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="628"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="652"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="677"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="701"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="725"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="749"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="773"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="797"/>
+        <source>Split 3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="284"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="306"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="328"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="350"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="629"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="653"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="678"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="702"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="726"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="750"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="774"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="798"/>
+        <source>Split 4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="286"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="308"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="330"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="352"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="630"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="654"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="679"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="703"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="727"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="751"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="775"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="799"/>
+        <source>Split 5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="288"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="310"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="332"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="354"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="631"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="655"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="680"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="704"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="728"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="752"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="776"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="800"/>
         <source>Split 6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="354"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="356"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="358"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="360"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="362"/>
@@ -4598,8 +4598,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="390"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="392"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="394"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="396"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="398"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="400"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="402"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="404"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="406"/>
@@ -4619,8 +4619,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="434"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="436"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="438"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="440"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="442"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="444"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="446"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="448"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="450"/>
@@ -4640,8 +4640,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="478"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="480"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="482"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="484"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="486"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="488"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="490"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="492"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="494"/>
@@ -4661,14 +4661,12 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="522"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="524"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="526"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="583"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="586"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="589"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="592"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="806"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="807"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="808"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="809"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="528"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="530"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="587"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="590"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="593"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="596"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="810"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="811"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="812"/>
@@ -4686,10 +4684,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="824"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="825"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="826"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="835"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="836"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="837"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="838"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="827"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="828"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="829"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="830"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="839"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="840"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="841"/>
@@ -4707,10 +4705,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="853"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="854"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="855"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="864"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="865"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="866"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="867"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="856"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="857"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="858"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="859"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="868"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="869"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="870"/>
@@ -4728,10 +4726,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="882"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="883"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="884"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="893"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="894"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="895"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="896"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="885"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="886"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="887"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="888"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="897"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="898"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="899"/>
@@ -4749,10 +4747,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="911"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="912"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="913"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="922"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="923"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="924"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="925"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="914"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="915"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="916"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="917"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="926"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="927"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="928"/>
@@ -4770,10 +4768,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="940"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="941"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="942"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="951"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="952"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="953"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="954"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="943"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="944"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="945"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="946"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="955"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="956"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="957"/>
@@ -4791,10 +4789,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="969"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="970"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="971"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="980"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="981"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="982"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="983"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="972"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="973"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="974"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="975"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="984"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="985"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="986"/>
@@ -4812,10 +4810,10 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="998"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="999"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1000"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1009"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1010"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1011"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1012"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1001"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1002"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1003"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1004"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1013"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1014"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1015"/>
@@ -4833,82 +4831,18 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1027"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1028"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1029"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1030"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1031"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1032"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1033"/>
         <source>Delay</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="354"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="398"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="442"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="486"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="806"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="835"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="864"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="893"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="922"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="951"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="980"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1009"/>
-        <source>0 sec</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="356"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="400"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="444"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="488"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="807"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="836"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="865"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="894"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="923"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="952"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="981"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1010"/>
-        <source>1 sec</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="358"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="402"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="446"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="490"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="583"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="586"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="589"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="592"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="808"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="837"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="866"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="895"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="924"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="953"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="982"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1011"/>
-        <source>2 sec</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="360"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="404"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="448"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="492"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="809"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="838"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="867"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="896"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="925"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="954"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="983"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1012"/>
-        <source>3 sec</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="362"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="406"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="450"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="494"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="810"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="839"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="868"/>
@@ -4917,14 +4851,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="955"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="984"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1013"/>
-        <source>4 sec</source>
+        <source>0 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="364"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="408"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="452"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="496"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="360"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="404"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="448"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="492"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="811"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="840"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="869"/>
@@ -4933,14 +4867,18 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="956"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="985"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1014"/>
-        <source>5 sec</source>
+        <source>1 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="366"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="410"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="454"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="498"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="362"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="406"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="450"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="494"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="587"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="590"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="593"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="596"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="812"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="841"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="870"/>
@@ -4949,14 +4887,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="957"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="986"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1015"/>
-        <source>6 sec</source>
+        <source>2 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="368"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="412"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="456"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="500"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="364"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="408"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="452"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="496"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="813"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="842"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="871"/>
@@ -4965,14 +4903,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="958"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="987"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1016"/>
-        <source>7 sec</source>
+        <source>3 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="370"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="414"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="458"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="502"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="366"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="410"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="454"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="498"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="814"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="843"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="872"/>
@@ -4981,14 +4919,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="959"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="988"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1017"/>
-        <source>8 sec</source>
+        <source>4 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="372"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="416"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="460"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="504"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="368"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="412"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="456"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="500"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="815"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="844"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="873"/>
@@ -4997,14 +4935,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="960"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="989"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1018"/>
-        <source>9 sec</source>
+        <source>5 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="374"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="418"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="462"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="506"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="370"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="414"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="458"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="502"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="816"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="845"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="874"/>
@@ -5013,14 +4951,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="961"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="990"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1019"/>
-        <source>10 sec</source>
+        <source>6 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="376"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="420"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="464"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="508"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="372"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="416"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="460"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="504"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="817"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="846"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="875"/>
@@ -5029,14 +4967,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="962"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="991"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1020"/>
-        <source>11 sec</source>
+        <source>7 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="378"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="422"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="466"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="510"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="374"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="418"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="462"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="506"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="818"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="847"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="876"/>
@@ -5045,14 +4983,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="963"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="992"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1021"/>
-        <source>12 sec</source>
+        <source>8 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="380"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="424"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="468"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="512"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="376"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="420"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="464"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="508"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="819"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="848"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="877"/>
@@ -5061,14 +4999,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="964"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="993"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1022"/>
-        <source>13 sec</source>
+        <source>9 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="382"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="426"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="470"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="514"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="378"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="422"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="466"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="510"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="820"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="849"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="878"/>
@@ -5077,14 +5015,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="965"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="994"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1023"/>
-        <source>14 sec</source>
+        <source>10 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="384"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="428"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="472"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="516"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="380"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="424"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="468"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="512"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="821"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="850"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="879"/>
@@ -5093,14 +5031,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="966"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="995"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1024"/>
-        <source>15 sec</source>
+        <source>11 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="386"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="430"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="474"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="518"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="382"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="426"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="470"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="514"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="822"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="851"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="880"/>
@@ -5109,14 +5047,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="967"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="996"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1025"/>
-        <source>16 sec</source>
+        <source>12 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="388"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="432"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="476"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="520"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="384"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="428"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="472"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="516"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="823"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="852"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="881"/>
@@ -5125,14 +5063,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="968"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="997"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1026"/>
-        <source>17 sec</source>
+        <source>13 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="390"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="434"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="478"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="522"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="386"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="430"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="474"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="518"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="824"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="853"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="882"/>
@@ -5141,14 +5079,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="969"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="998"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1027"/>
-        <source>18 sec</source>
+        <source>14 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="392"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="436"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="480"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="524"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="388"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="432"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="476"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="520"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="825"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="854"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="883"/>
@@ -5157,14 +5095,14 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="970"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="999"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1028"/>
-        <source>19 sec</source>
+        <source>15 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="394"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="438"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="482"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="526"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="390"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="434"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="478"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="522"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="826"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="855"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="884"/>
@@ -5173,114 +5111,144 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="971"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1000"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1029"/>
+        <source>16 sec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="392"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="436"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="480"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="524"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="827"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="856"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="885"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="914"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="943"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="972"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1001"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1030"/>
+        <source>17 sec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="394"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="438"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="482"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="526"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="828"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="857"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="886"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="915"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="944"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="973"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1002"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1031"/>
+        <source>18 sec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="396"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="440"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="484"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="528"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="829"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="858"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="887"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="916"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="945"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="974"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1003"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1032"/>
+        <source>19 sec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="398"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="442"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="486"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="530"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="830"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="859"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="888"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="917"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="946"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="975"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1004"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1033"/>
         <source>20 sec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="530"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="532"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="534"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="536"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="538"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="540"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="542"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="544"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="546"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="548"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="550"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="552"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="554"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="556"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="558"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="560"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="562"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="564"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="566"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="595"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="598"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="601"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="604"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1037"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1038"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1039"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1040"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1048"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1049"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1050"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1051"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1059"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1060"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1061"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1062"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1070"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1071"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1072"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1073"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1081"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1082"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1083"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1084"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1092"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1093"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1094"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1095"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1103"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1104"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1105"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1106"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1114"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1115"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1116"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1117"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="568"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="570"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="599"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="602"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="605"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="608"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1042"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1043"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1044"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1052"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1053"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1054"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1055"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1063"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1064"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1065"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1066"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1074"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1075"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1076"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1077"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1085"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1086"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1087"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1088"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1096"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1097"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1098"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1099"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1107"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1108"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1109"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1110"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1118"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1119"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1120"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1121"/>
         <source>Priority</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="530"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="540"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="550"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="560"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="595"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1037"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1048"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1059"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1070"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1081"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1092"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1103"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1114"/>
-        <source>1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="532"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="542"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="552"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="562"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="598"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1038"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1049"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1060"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1071"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1082"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1093"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1104"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1115"/>
-        <source>2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="534"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="544"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="554"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="564"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="601"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1039"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1050"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1061"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1072"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1083"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1094"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1105"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1116"/>
-        <source>3</source>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="599"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1052"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1063"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1074"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1085"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1096"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1107"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1118"/>
+        <source>1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5288,15 +5256,49 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="546"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="556"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="566"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="604"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1040"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1051"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1062"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1073"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1084"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1095"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1106"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1117"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="602"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1042"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1053"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1064"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1075"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1086"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1097"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1108"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1119"/>
+        <source>2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="538"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="548"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="558"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="568"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="605"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1043"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1054"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1065"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1076"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1087"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1098"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1109"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1120"/>
+        <source>3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="540"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="550"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="560"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="570"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="608"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1044"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1055"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1066"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1077"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1088"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1099"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1110"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1121"/>
         <source>4</source>
         <translation type="unfinished"></translation>
     </message>

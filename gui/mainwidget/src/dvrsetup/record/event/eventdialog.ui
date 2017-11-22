@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>774</width>
+    <width>868</width>
     <height>594</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
     <rect>
      <x>22</x>
      <y>20</y>
-     <width>721</width>
+     <width>821</width>
      <height>451</height>
     </rect>
    </property>
@@ -92,7 +92,7 @@ Record: Off/On</string>
   <widget class="QPushButton" name="buttonSave">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>434</x>
      <y>489</y>
      <width>200</width>
      <height>91</height>
@@ -105,7 +105,7 @@ Record: Off/On</string>
   <widget class="QPushButton" name="buttonClose">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>644</x>
      <y>489</y>
      <width>200</width>
      <height>91</height>
@@ -120,7 +120,7 @@ Record: Off/On</string>
     <rect>
      <x>4</x>
      <y>4</y>
-     <width>766</width>
+     <width>860</width>
      <height>586</height>
     </rect>
    </property>
