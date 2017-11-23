@@ -1714,7 +1714,7 @@ Il sistema verrà riavviato.</translation>
         <location filename="../languagedialog.cpp" line="156"/>
         <location filename="../languagedialog.cpp" line="161"/>
         <source>Spanish</source>
-        <translation>Espanol</translation>
+        <translation type="unfinished">Espanol</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="91"/>
@@ -1723,7 +1723,7 @@ Il sistema verrà riavviato.</translation>
         <location filename="../languagedialog.cpp" line="157"/>
         <location filename="../languagedialog.cpp" line="162"/>
         <source>French</source>
-        <translation>Francais</translation>
+        <translation type="unfinished">Francais</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="96"/>

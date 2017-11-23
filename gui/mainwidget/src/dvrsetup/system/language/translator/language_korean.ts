@@ -29,7 +29,7 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.ui" line="83"/>
         <source>Find</source>
-        <translation type="unfinished">파일 찾기</translation>
+        <translation>파일 찾기</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.ui" line="99"/>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="121"/>
         <source>click &apos;Find&apos; button.</source>
-        <translation type="unfinished">&apos;파일 찾기&apos;버튼을 누르십시오.</translation>
+        <translation>&apos;파일 찾기&apos;버튼을 누르십시오.</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="122"/>
@@ -354,14 +354,14 @@
         <location filename="../../../device/buzzer/buzzerdialog.ui" line="14"/>
         <source>BUZZER PROPERTY</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">버저 속성</translation>
+        <translation>버저 속성</translation>
     </message>
     <message>
         <location filename="../../../device/buzzer/buzzerdialog.ui" line="56"/>
         <source>Buzzer
 Output: Off/On</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">버저 알림
+        <translation>버저 알림
 꺼짐/켜짐</translation>
     </message>
     <message>
@@ -383,7 +383,7 @@ Output: Off/On</source>
         <oldsource>%1
 %2</oldsource>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">%1%2</translation>
+        <translation>%1%2</translation>
     </message>
     <message>
         <location filename="../../../device/buzzer/buzzerdialog.cpp" line="27"/>
@@ -391,14 +391,14 @@ Output: Off/On</source>
         <location filename="../../../device/buzzer/buzzerdialog.cpp" line="37"/>
         <location filename="../../../device/buzzer/buzzerdialog.cpp" line="45"/>
         <source>Buzzer</source>
-        <translation type="unfinished">버저 알림</translation>
+        <translation>버저 알림</translation>
     </message>
     <message>
         <location filename="../../../device/buzzer/buzzerdialog.cpp" line="27"/>
         <location filename="../../../device/buzzer/buzzerdialog.cpp" line="37"/>
         <source>
 Output: Off</source>
-        <translation type="unfinished">
+        <translation>
 끄기</translation>
     </message>
     <message>
@@ -406,7 +406,7 @@ Output: Off</source>
         <location filename="../../../device/buzzer/buzzerdialog.cpp" line="45"/>
         <source>
 Output: On</source>
-        <translation type="unfinished">
+        <translation>
 켜기</translation>
     </message>
     <message>
@@ -507,7 +507,7 @@ Output: On</source>
         <source>%1, %2</source>
         <oldsource>%1%2%3</oldsource>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">%2년 %1</translation>
+        <translation>%2년 %1</translation>
     </message>
 </context>
 <context>
@@ -732,7 +732,7 @@ System will restart.        </source>
     <message>
         <location filename="../../../setup/devicepage.ui" line="73"/>
         <source>Disk Format</source>
-        <translation type="unfinished">저장장치 포맷</translation>
+        <translation>저장장치 포맷</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="103"/>
@@ -743,12 +743,12 @@ System will restart.        </source>
         <location filename="../../../setup/devicepage.ui" line="133"/>
         <source>Impact
 Sensitivity</source>
-        <translation type="unfinished">충격 감도</translation>
+        <translation>충격 감도</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="164"/>
         <source>Buzzer Output</source>
-        <translation type="unfinished">버저 알림</translation>
+        <translation>버저 알림</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="200"/>
@@ -760,7 +760,7 @@ Sensitivity</source>
         <location filename="../../../setup/devicepage.cpp" line="181"/>
         <source>DISK FORMAT</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">저장장치 포맷</translation>
+        <translation>저장장치 포맷</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="160"/>
@@ -770,7 +770,7 @@ Are you sure to format DISK?
 
 System will restart after format.
 </source>
-        <translation type="unfinished">			  경고
+        <translation>			  경고
 
 저장장치를 포맷 하시겠습니까?
 
@@ -795,7 +795,7 @@ System will restart after format
 
 DISK is not existed.
 </source>
-        <translation type="unfinished">		 알림
+        <translation>		 알림
 
 저장장치가 없습니다.</translation>
     </message>
@@ -1112,22 +1112,22 @@ DISK is not existed.
     <message>
         <location filename="../../../device/diskformat/diskformatprocess.cpp" line="50"/>
         <source>Please don&apos;t turn off system.</source>
-        <translation type="unfinished">포맷 중 시스템을 끄지 마십시오.</translation>
+        <translation>포맷 중 시스템을 끄지 마십시오.</translation>
     </message>
     <message>
         <location filename="../../../device/diskformat/diskformatprocess.cpp" line="50"/>
         <source>System will restart after formatting.</source>
-        <translation type="unfinished">포맷 후 시스템이 재부팅됩니다.</translation>
+        <translation>포맷 후 시스템이 재부팅됩니다.</translation>
     </message>
     <message>
         <location filename="../../../device/diskformat/diskformatprocess.cpp" line="57"/>
         <source>You must not turn off system.</source>
-        <translation type="unfinished">시스템을 끄지 마십시오.</translation>
+        <translation>시스템을 끄지 마십시오.</translation>
     </message>
     <message>
         <location filename="../../../device/diskformat/diskformatprocess.cpp" line="57"/>
         <source>Please wait during formatting.</source>
-        <translation type="unfinished">잠시만 기다려주십시오.</translation>
+        <translation>잠시만 기다려주십시오.</translation>
     </message>
     <message>
         <location filename="../../../device/diskformat/diskformatprocess.cpp" line="128"/>
@@ -1164,7 +1164,7 @@ DISK is not existed.
         <location filename="../../../setup/displaypage.ui" line="112"/>
         <location filename="../../../setup/displaypage.ui" line="196"/>
         <source>N/A</source>
-        <translation type="unfinished">N/A</translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="../../../setup/displaypage.ui" line="139"/>
@@ -1190,7 +1190,7 @@ Are you sure to change the HDMI resolution?
 
 If yes, the system will restart.
 </source>
-        <translation type="unfinished">				  경고
+        <translation>				  경고
 
 HDMI 해상도를 변경하시겠습니까?
 
@@ -1216,7 +1216,7 @@ Time: 15/30sec</source>
     <message>
         <location filename="../../../record/event/eventdialog.ui" line="52"/>
         <source>N/A</source>
-        <translation type="unfinished">N/A</translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="../../../record/event/eventdialog.ui" line="68"/>
@@ -1549,7 +1549,7 @@ Record: </source>
         <source>Gsensor
 Sensitivity: LEVEL3</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">충격 감도
+        <translation>충격 감도
 3</translation>
     </message>
     <message>
@@ -1577,7 +1577,7 @@ Sensitivity: LEVEL3</source>
         <oldsource>%1
 %2</oldsource>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">%1%2</translation>
+        <translation>%1%2</translation>
     </message>
     <message>
         <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
@@ -1598,7 +1598,7 @@ Sensitivity: LEVEL3</source>
         <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
         <source>
 Sensitivity: 1</source>
-        <translation type="unfinished"> 감도
+        <translation> 감도
 1</translation>
     </message>
     <message>
@@ -1606,7 +1606,7 @@ Sensitivity: 1</source>
         <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
         <source>
 Sensitivity: 2</source>
-        <translation type="unfinished"> 감도
+        <translation> 감도
 2</translation>
     </message>
     <message>
@@ -1614,7 +1614,7 @@ Sensitivity: 2</source>
         <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
         <source>
 Sensitivity: 3</source>
-        <translation type="unfinished"> 감도
+        <translation> 감도
 3</translation>
     </message>
     <message>
@@ -1622,7 +1622,7 @@ Sensitivity: 3</source>
         <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
         <source>
 Sensitivity: 4</source>
-        <translation type="unfinished"> 감도
+        <translation> 감도
 4</translation>
     </message>
     <message>
@@ -1630,7 +1630,7 @@ Sensitivity: 4</source>
         <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
         <source>
 Sensitivity: 5</source>
-        <translation type="unfinished"> 감도
+        <translation> 감도
 5</translation>
     </message>
     <message>
@@ -1696,7 +1696,7 @@ Sensitivity: 5</source>
     <message>
         <location filename="../../information/informationdialog.ui" line="121"/>
         <source>License Plate</source>
-        <translation type="unfinished">차량번호</translation>
+        <translation>차량번호</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.ui" line="137"/>
@@ -1726,7 +1726,7 @@ Sensitivity: 5</source>
         <location filename="../../information/informationdialog.ui" line="201"/>
         <source>555 GigaByte</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">555 GigaByte</translation>
+        <translation>555 GigaByte</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.ui" line="217"/>
@@ -1767,7 +1767,7 @@ Sensitivity: 5</source>
         <location filename="../../information/informationdialog.cpp" line="70"/>
         <location filename="../../information/informationdialog.cpp" line="84"/>
         <source>No Disk</source>
-        <translation type="unfinished">저장장치 없음</translation>
+        <translation>저장장치 없음</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.cpp" line="104"/>
@@ -1918,7 +1918,7 @@ Français
     <message>
         <location filename="../../licenseplate/licenseplatedialog.ui" line="101"/>
         <source>License Plate</source>
-        <translation type="unfinished">차량번호</translation>
+        <translation>차량번호</translation>
     </message>
     <message>
         <location filename="../../licenseplate/licenseplatedialog.ui" line="140"/>
@@ -1994,7 +1994,7 @@ Mute/1/2/3/4</source>
     <message>
         <location filename="../../../../main/mainMenu.ui" line="134"/>
         <source>N/A</source>
-        <translation type="unfinished">N/A</translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="../../../../main/mainMenu.ui" line="158"/>
@@ -2061,7 +2061,7 @@ Mute</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="509"/>
         <source>NO DISK</source>
-        <translation type="unfinished">저장장치가 없습니다.</translation>
+        <translation>저장장치가 없습니다.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
@@ -2082,7 +2082,7 @@ Mute</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <source>DISK was attached.</source>
-        <translation type="unfinished">저장장치가 연결됐습니다.</translation>
+        <translation>저장장치가 연결됐습니다.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
@@ -2095,7 +2095,7 @@ Mute</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
         <source>DISK was detached.</source>
-        <translation type="unfinished">저장장치가 분리됐습니다.</translation>
+        <translation>저장장치가 분리됐습니다.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="685"/>
@@ -2128,7 +2128,7 @@ Mute</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="714"/>
         <source>Please unplug USB memory.   </source>
-        <translation type="unfinished">USB 메모리를 분리하십시오.</translation>
+        <translation>USB 메모리를 분리하십시오.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="715"/>
@@ -2242,7 +2242,7 @@ Current status is trigger.</source>
 %2 (%3)
 %4</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">%1
+        <translation>%1
 
 %2
 %4(%3)</translation>
@@ -2266,7 +2266,7 @@ Current status is trigger.</source>
         <location filename="../../../../main/maininitsys.cpp" line="209"/>
         <source>Storage was not formatted.         </source>
         <oldsource>Storage was not formated.         </oldsource>
-        <translation type="unfinished">저장장치가 포맷되지 않았습니다.         </translation>
+        <translation>저장장치가 포맷되지 않았습니다.         </translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="181"/>
@@ -2305,7 +2305,7 @@ Current status is trigger.</source>
 
 System was shutdown successfully.
 Turn off the power.</source>
-        <translation type="unfinished">				알림
+        <translation>				알림
 
 정상적으로 종료됐습니다.
 전원을 끄십시오.</translation>
@@ -2315,7 +2315,7 @@ Turn off the power.</source>
         <source>				WARNING
 
 Do you want to shutdown the system?</source>
-        <translation type="unfinished">			경고
+        <translation>			경고
 
 시스템을 종료하시겠습니까?</translation>
     </message>
@@ -2334,7 +2334,7 @@ No Disk
 
   No Disk
 </oldsource>
-        <translation type="unfinished">경고
+        <translation>경고
 
 저장장치가 없습니다. </translation>
     </message>
@@ -2352,7 +2352,7 @@ No Disk
         <source>Frame Rate
 5/15/20/25/30 Fps</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">프레임
+        <translation>프레임
 5/15/20/25/30 Fps</translation>
     </message>
     <message>
@@ -2381,7 +2381,7 @@ Off/On</source>
         <source>Quality
 L/M/H</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">화질
+        <translation>화질
 고/중/저</translation>
     </message>
     <message>
@@ -2505,7 +2505,7 @@ Off/On</source>
         <location filename="../../../record/normal/normaldialog.cpp" line="199"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="204"/>
         <source>Frame Rate</source>
-        <translation type="unfinished">프레임</translation>
+        <translation>프레임</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="35"/>
@@ -2686,7 +2686,7 @@ Off/On</source>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="120"/>
         <source>Delete</source>
-        <translation type="unfinished">&lt;-</translation>
+        <translation>&lt;-</translation>
     </message>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="161"/>
@@ -2696,12 +2696,12 @@ Off/On</source>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="203"/>
         <source>Enter</source>
-        <translation type="unfinished">확인</translation>
+        <translation>확인</translation>
     </message>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="244"/>
         <source>Close</source>
-        <translation type="unfinished">취소</translation>
+        <translation>취소</translation>
     </message>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="325"/>
@@ -2764,7 +2764,7 @@ Off/On</source>
         <source>
 Please input below 65535.
 </source>
-        <translation type="unfinished">
+        <translation>
 65535이하로 입력하십시오.</translation>
     </message>
 </context>
@@ -2853,7 +2853,7 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.cpp" line="71"/>
         <location filename="../../../display/osd/osddialog.cpp" line="102"/>
         <source>Off</source>
-        <translation type="unfinished">표시 안 함</translation>
+        <translation>표시 안 함</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="31"/>
@@ -2863,7 +2863,7 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.cpp" line="77"/>
         <location filename="../../../display/osd/osddialog.cpp" line="108"/>
         <source>On</source>
-        <translation type="unfinished">표시</translation>
+        <translation>표시</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="36"/>
@@ -2871,7 +2871,7 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.cpp" line="71"/>
         <location filename="../../../display/osd/osddialog.cpp" line="77"/>
         <source>No Video</source>
-        <translation type="unfinished">영상 없음</translation>
+        <translation>영상 없음</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="42"/>
@@ -2881,13 +2881,13 @@ Off/On</source>
         <source>%1%2%3</source>
         <oldsource>%1
 %2%3</oldsource>
-        <translation type="unfinished">%1%2%3</translation>
+        <translation>%1%2%3</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="42"/>
         <location filename="../../../display/osd/osddialog.cpp" line="87"/>
         <source>Off </source>
-        <translation type="unfinished">
+        <translation>
 표시</translation>
     </message>
     <message>
@@ -2897,13 +2897,13 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.cpp" line="93"/>
         <source>
 AutoHide: </source>
-        <translation type="unfinished"> </translation>
+        <translation> </translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="43"/>
         <location filename="../../../display/osd/osddialog.cpp" line="93"/>
         <source>On </source>
-        <translation type="unfinished">
+        <translation>
 표시 안 함</translation>
     </message>
     <message>
@@ -2941,7 +2941,7 @@ AutoHide: </source>
         <location filename="../../../display/osd/osddialog.cpp" line="87"/>
         <location filename="../../../display/osd/osddialog.cpp" line="93"/>
         <source>Status Bar</source>
-        <translation type="unfinished">상태표시줄</translation>
+        <translation>상태표시줄</translation>
     </message>
     <message>
         <source>AutoHide</source>
@@ -2953,7 +2953,7 @@ AutoHide: </source>
         <location filename="../../../display/osd/osddialog.cpp" line="102"/>
         <location filename="../../../display/osd/osddialog.cpp" line="108"/>
         <source>Record Status</source>
-        <translation type="unfinished">녹화 아이콘</translation>
+        <translation>녹화 아이콘</translation>
     </message>
 </context>
 <context>
@@ -3114,12 +3114,12 @@ AutoHide: </source>
         <location filename="../../../../main/playtimebar.cpp" line="638"/>
         <location filename="../../../../main/playtimebar.cpp" line="689"/>
         <source>PM</source>
-        <translation type="unfinished">PM</translation>
+        <translation>PM</translation>
     </message>
     <message>
         <location filename="../../../../main/playtimebar.cpp" line="685"/>
         <source>AM</source>
-        <translation type="unfinished">AM</translation>
+        <translation>AM</translation>
     </message>
 </context>
 <context>
@@ -3291,7 +3291,7 @@ AutoHide: </source>
         <location filename="../../security/securitydialog.cpp" line="169"/>
         <source>Password did not match.
 Please try again.</source>
-        <translation type="unfinished">비밀번호가 일치하지 않습니다.
+        <translation>비밀번호가 일치하지 않습니다.
 비밀번호를 다시 입력하십시오.</translation>
     </message>
 </context>
@@ -3468,7 +3468,7 @@ Off</source>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="100"/>
         <source>TimeZone [UTC -03:00 Buenos Aires/Rio de Janero]</source>
-        <translation type="unfinished">표준 시간대 [UTC -03:00 리우 데 자네이루]</translation>
+        <translation>표준 시간대 [UTC -03:00 리우 데 자네이루]</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="101"/>
@@ -3788,7 +3788,7 @@ some data will be erased from stprage.
         <location filename="../../../../main/statusbardialog.cpp" line="159"/>
         <location filename="../../../../main/statusbardialog.cpp" line="166"/>
         <source>NO SSD</source>
-        <translation type="unfinished">NO SSD</translation>
+        <translation>NO SSD</translation>
     </message>
     <message>
         <source>NO DISK</source>
@@ -3803,12 +3803,12 @@ some data will be erased from stprage.
     <message>
         <location filename="../../../../main/statusbardialog.cpp" line="245"/>
         <source>AM</source>
-        <translation type="unfinished">AM</translation>
+        <translation>AM</translation>
     </message>
     <message>
         <location filename="../../../../main/statusbardialog.cpp" line="249"/>
         <source>PM</source>
-        <translation type="unfinished">PM</translation>
+        <translation>PM</translation>
     </message>
 </context>
 <context>
@@ -3823,7 +3823,7 @@ some data will be erased from stprage.
         <location filename="../../../setup/systempage.ui" line="46"/>
         <source>License
 Plate</source>
-        <translation type="unfinished">차량번호</translation>
+        <translation>차량번호</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.ui" line="77"/>
@@ -3884,7 +3884,7 @@ Do you want to change time?
 If yes, system will restart.
 </source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">				 경고
+        <translation>				 경고
 
 시간을 변경하시겠습니까?
 
@@ -3904,7 +3904,7 @@ Do you want to set factory default?
 If yes, system will restart.
 </source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">			   경고
+        <translation>			   경고
 
 공장 초기화를 하시겠습니까?
 
@@ -4141,24 +4141,24 @@ If yes, system will restart.
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="70"/>
         <source>Set Time</source>
-        <translation type="unfinished">시간 재설정</translation>
+        <translation>시간 재설정</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="119"/>
         <source>System time is different from recording time.
 You must delete data or set time.</source>
-        <translation type="unfinished">시스템 시간이 녹화된 시간과 다릅니다.
+        <translation>시스템 시간이 녹화된 시간과 다릅니다.
 미래데이터를 삭제하거나 시간을 재설정해야합니다. </translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="143"/>
         <source>Last Time</source>
-        <translation type="unfinished">마지막 저장시간</translation>
+        <translation>마지막 저장시간</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="166"/>
         <source>First Time</source>
-        <translation type="unfinished">첫 저장시간</translation>
+        <translation>첫 저장시간</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="192"/>
@@ -4188,7 +4188,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.cpp" line="129"/>
         <source>System is deleting data.</source>
-        <translation type="unfinished">데이터를 삭제하는 중입니다.</translation>
+        <translation>데이터를 삭제하는 중입니다.</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.cpp" line="129"/>
@@ -4209,7 +4209,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.cpp" line="225"/>
         <source>System Time must be later than record last time.</source>
-        <translation type="unfinished">시스템 시간이 마지막 시간보다 나중이여야 합니다.</translation>
+        <translation>시스템 시간이 마지막 시간보다 나중이여야 합니다.</translation>
     </message>
 </context>
 <context>
@@ -4259,22 +4259,22 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="18"/>
         <source>Trigger1</source>
-        <translation type="unfinished">트리거 1</translation>
+        <translation>트리거 1</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="22"/>
         <source>Trigger2</source>
-        <translation type="unfinished">트리거 2</translation>
+        <translation>트리거 2</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="26"/>
         <source>Trigger3</source>
-        <translation type="unfinished">트리거 3</translation>
+        <translation>트리거 3</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="30"/>
         <source>Trigger4</source>
-        <translation type="unfinished">트리거 4</translation>
+        <translation>트리거 4</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="220"/>
@@ -4298,7 +4298,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="221"/>
         <source>WARNING</source>
-        <translation type="unfinished">  경고</translation>
+        <translation>  경고</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="221"/>
@@ -4875,7 +4875,7 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="799"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="800"/>
         <source>Source</source>
-        <translation type="unfinished">대상</translation>
+        <translation>대상</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="270"/>
@@ -5855,7 +5855,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="543"/>
         <source>Del</source>
-        <translation type="unfinished">&lt;-</translation>
+        <translation>&lt;-</translation>
     </message>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="581"/>
@@ -6069,7 +6069,7 @@ You must delete data or set time.</source>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="50"/>
         <source>Normal/Mirror</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation type="unfinished">반전안함/좌우반전</translation>
+        <translation>반전안함/좌우반전</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="69"/>
@@ -6104,7 +6104,7 @@ You must delete data or set time.</source>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="27"/>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="53"/>
         <source>Camera1</source>
-        <translation type="unfinished">카메라 1</translation>
+        <translation>카메라 1</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="31"/>
@@ -6149,17 +6149,17 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="54"/>
         <source>Camera2</source>
-        <translation type="unfinished">카메라 2</translation>
+        <translation>카메라 2</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="55"/>
         <source>Camera3</source>
-        <translation type="unfinished">카메라 3</translation>
+        <translation>카메라 3</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="56"/>
         <source>Camera4</source>
-        <translation type="unfinished">카메라 4</translation>
+        <translation>카메라 4</translation>
     </message>
 </context>
 <context>
@@ -6413,7 +6413,7 @@ Please check Y or Height value!
 
 Total vertical pixel should be below 480.
 </source>
-        <translation type="unfinished">
+        <translation>
  Y 또는 높이값를 확인하십시오!
 
 총합을 480 이하로 설정해야 합니다.</translation>
@@ -6425,7 +6425,7 @@ Please check Y or Height value!
 
 Total vertical pixel should be below 576.
 </source>
-        <translation type="unfinished">
+        <translation>
  Y 또는 높이값를 확인하십시오!
 
 총합을 480 이하로 설정해야 합니다.</translation>
@@ -6442,7 +6442,7 @@ Please check X or Width value!
 
 Total horizontal pixel should be below 720.
 </source>
-        <translation type="unfinished">
+        <translation>
 X 또는 너비값를 확인하십시오!
 
 총합을 480 이하로 설정해야 합니다.</translation>

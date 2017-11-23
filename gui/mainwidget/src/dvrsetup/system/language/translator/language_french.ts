@@ -692,7 +692,7 @@ Sensibilité</translation>
     <message>
         <location filename="../../../setup/devicepage.ui" line="200"/>
         <source>Trigger Input</source>
-        <translation type="unfinished">Entrée Trigger</translation>
+        <translation>Entrée Trigger</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="160"/>
@@ -709,7 +709,7 @@ Are you sure to format DISK?
 
 System will restart after format.
 </source>
-        <translation type="unfinished">				ATTENTION
+        <translation>				ATTENTION
 
 Êtes-vous sûr de formater le stockage?
 Le système redémarrera après le format.</translation>
@@ -3545,7 +3545,7 @@ certaines données seront effacées du stockage.</translation>
         <location filename="../../../../main/statusbardialog.cpp" line="159"/>
         <location filename="../../../../main/statusbardialog.cpp" line="166"/>
         <source>NO SSD</source>
-        <translation type="unfinished">NO SSD</translation>
+        <translation>NO SSD</translation>
     </message>
     <message>
         <source>NO DISK</source>

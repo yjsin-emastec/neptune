@@ -2893,37 +2893,37 @@ AutoHide: </source>
         <location filename="../../../../main/playtimebar.cpp" line="359"/>
         <location filename="../../../../main/playtimebar.cpp" line="389"/>
         <source>0%1:</source>
-        <translation type="unfinished">0%1:</translation>
+        <translation>0%1:</translation>
     </message>
     <message>
         <location filename="../../../../main/playtimebar.cpp" line="329"/>
         <location filename="../../../../main/playtimebar.cpp" line="363"/>
         <location filename="../../../../main/playtimebar.cpp" line="393"/>
         <source>%1:</source>
-        <translation type="unfinished">%1:</translation>
+        <translation>%1:</translation>
     </message>
     <message>
         <location filename="../../../../main/playtimebar.cpp" line="339"/>
         <location filename="../../../../main/playtimebar.cpp" line="351"/>
         <source>%1&apos;:</source>
-        <translation type="unfinished">%1&apos;:</translation>
+        <translation>%1&apos;:</translation>
     </message>
     <message>
         <location filename="../../../../main/playtimebar.cpp" line="347"/>
         <source>0%1&apos;:</source>
-        <translation type="unfinished">0%1&apos;:</translation>
+        <translation>0%1&apos;:</translation>
     </message>
     <message>
         <location filename="../../../../main/playtimebar.cpp" line="370"/>
         <location filename="../../../../main/playtimebar.cpp" line="398"/>
         <source>0%1:00</source>
-        <translation type="unfinished">0%1:00</translation>
+        <translation>0%1:00</translation>
     </message>
     <message>
         <location filename="../../../../main/playtimebar.cpp" line="374"/>
         <location filename="../../../../main/playtimebar.cpp" line="402"/>
         <source>%1:00</source>
-        <translation type="unfinished">%1:00</translation>
+        <translation>%1:00</translation>
     </message>
     <message>
         <location filename="../../../../main/playtimebar.cpp" line="638"/>
@@ -3240,7 +3240,7 @@ Apagar</translation>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="89"/>
         <source>TimeZone [UTC -12:00 Eniwetok/Kwajalein]</source>
-        <translation type="unfinished">Zona Horaria [UTC -12:00 Eniwetok/Kwajalein]</translation>
+        <translation>Zona Horaria [UTC -12:00 Eniwetok/Kwajalein]</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="90"/>
@@ -3270,7 +3270,7 @@ Apagar</translation>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="95"/>
         <source>TimeZone [UTC -06:00 Chicago/Houston/Mexico City]</source>
-        <translation type="unfinished">Zona Horaria [UTC -06:00 Chicago/Houston]</translation>
+        <translation>Zona Horaria [UTC -06:00 Chicago/Houston]</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="96"/>
@@ -3326,7 +3326,7 @@ Zona Horaria [UTC + 01: 00 Berlín / París / Roma]
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="105"/>
         <source>TimeZone [UTC +02:00 Athens/Cape Town/Istanbul]</source>
-        <translation type="unfinished">Zona Horaria [UTC +02:00 Atenas/Estambul]</translation>
+        <translation>Zona Horaria [UTC +02:00 Atenas/Estambul]</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="106"/>
@@ -3621,7 +3621,7 @@ Algunos datos se borran del almacenamiento.</translation>
         <location filename="../../../../main/statusbardialog.cpp" line="159"/>
         <location filename="../../../../main/statusbardialog.cpp" line="166"/>
         <source>NO SSD</source>
-        <translation type="unfinished">NO SSD</translation>
+        <translation>NO SSD</translation>
     </message>
     <message>
         <source>NO DISK</source>
