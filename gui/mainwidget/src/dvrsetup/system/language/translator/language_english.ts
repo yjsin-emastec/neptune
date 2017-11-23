@@ -649,7 +649,8 @@ System will restart.        </source>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="73"/>
-        <source>Disk Format</source>
+        <location filename="../../../setup/devicepage.cpp" line="26"/>
+        <source>SSD Format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -674,27 +675,46 @@ Sensitivity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="160"/>
-        <location filename="../../../setup/devicepage.cpp" line="181"/>
-        <source>DISK FORMAT</source>
+        <location filename="../../../setup/devicepage.cpp" line="25"/>
+        <source>HDD Format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="160"/>
+        <location filename="../../../setup/devicepage.cpp" line="164"/>
+        <source>HDD FORMAT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="164"/>
         <source>			WARNING
 
-Are you sure to format DISK?
+Are you sure to format HDD?
 
 System will restart after format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="181"/>
+        <location filename="../../../setup/devicepage.cpp" line="165"/>
+        <location filename="../../../setup/devicepage.cpp" line="186"/>
+        <source>SSD FORMAT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="165"/>
+        <source>			WARNING
+
+Are you sure to format SSD?
+
+System will restart after format.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="186"/>
         <source>		NOTICE
 
-DISK is not existed.
-</source>
+SSD does not exist.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1563,7 +1583,7 @@ Sensitivity: 5</source>
     <message>
         <location filename="../../information/informationdialog.cpp" line="70"/>
         <location filename="../../information/informationdialog.cpp" line="84"/>
-        <source>No Disk</source>
+        <source>No SSD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1842,19 +1862,16 @@ Mute</source>
         <location filename="../../../../main/maineventproc.cpp" line="509"/>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
         <source>ERROR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../main/maineventproc.cpp" line="509"/>
-        <source>NO DISK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
         <location filename="../../../../main/maininitsys.cpp" line="150"/>
         <location filename="../../../../main/maininitsys.cpp" line="208"/>
         <source>%1
@@ -1865,29 +1882,40 @@ Mute</source>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
-        <source>DISK was attached.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
-        <location filename="../../../../main/maineventproc.cpp" line="716"/>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
+        <location filename="../../../../main/maineventproc.cpp" line="717"/>
         <source>System will restart.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="663"/>
-        <source>DISK was detached.</source>
+        <location filename="../../../../main/maineventproc.cpp" line="509"/>
+        <source>NO SSD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
+        <location filename="../../../../main/maineventproc.cpp" line="639"/>
+        <source>Storage was attached.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="663"/>
+        <source>HDD was detached.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <source>SSD was detached.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
         <source>IO Error occurred.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="713"/>
+        <location filename="../../../../main/maineventproc.cpp" line="714"/>
         <location filename="../../../../main/maininitsys.cpp" line="145"/>
         <location filename="../../../../main/maininitsys.cpp" line="150"/>
         <location filename="../../../../main/maininitsys.cpp" line="203"/>
@@ -1896,7 +1924,7 @@ Mute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="713"/>
+        <location filename="../../../../main/maineventproc.cpp" line="714"/>
         <source>%1
 
 %2
@@ -1905,29 +1933,29 @@ Mute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="714"/>
+        <location filename="../../../../main/maineventproc.cpp" line="715"/>
         <source>Please unplug USB memory.   </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="715"/>
+        <location filename="../../../../main/maineventproc.cpp" line="716"/>
         <source>If you click button of &apos;Ok&apos;,</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1080"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1114"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1175"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1262"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1302"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1081"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1115"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1176"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1303"/>
         <location filename="../../../../main/mainscreen.cpp" line="143"/>
         <location filename="../../../../main/mainscreen.cpp" line="187"/>
         <source>NOTICE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>%1
 
 %2%3
@@ -1935,26 +1963,26 @@ Mute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>Power Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>Elapsed Time : </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>System will shutdown.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1080"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1114"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1175"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1262"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1302"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1081"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1115"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1176"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1303"/>
         <location filename="../../../../main/mainscreen.cpp" line="143"/>
         <location filename="../../../../main/mainscreen.cpp" line="187"/>
         <source>NOTICE
@@ -2057,8 +2085,7 @@ Do you want to shutdown the system?</source>
         <location filename="../../../../main/mainwidget.cpp" line="1191"/>
         <source>WARNING
 
-No Disk
-</source>
+No SSD</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

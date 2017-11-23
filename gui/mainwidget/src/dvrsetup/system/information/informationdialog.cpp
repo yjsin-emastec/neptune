@@ -67,7 +67,7 @@ void InformationDialog::initInformationConfig(void)
 
     if( nomalCapacity.compare("No Disk")==0 || nomalCapacity.compare("0 GigaByte")==0 )
     {
-        labelNormalSize2->setText(tr("%1").arg(tr("No Disk")));
+        labelNormalSize2->setText(tr("%1").arg(tr("No SSD")));
         labelNormalSize2->setGeometry(370,280,700,85);
     }
     else
@@ -81,7 +81,7 @@ void InformationDialog::initInformationConfig(void)
 
     if( eventCapacity.compare("No Disk")==0 || eventCapacity.compare("0 GigaByte")==0 )
     {
-        labelEventSize2->setText(tr("%1").arg(tr("No Disk")));
+        labelEventSize2->setText(tr("%1").arg(tr("No SSD")));
         labelEventSize2->setVisible(false);
     }
     else

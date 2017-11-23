@@ -70,7 +70,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Disk Format</string>
+    <string>SSD Format</string>
    </property>
   </widget>
   <widget class="QPushButton" name="buttonVideo">

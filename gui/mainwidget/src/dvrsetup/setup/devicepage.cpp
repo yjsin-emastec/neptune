@@ -21,6 +21,10 @@ DevicePage::DevicePage(QWidget *parent)
     gsensorDialog       = NULL;
     buzzerDialog        = NULL;
 
+    appmgr_get_disk_info(&diskInfo[0]);
+    if(diskInfo[0].smartInfo_ata_id)    { buttonDiskFormat->setText(tr("HDD Format")); }
+    else                                { buttonDiskFormat->setText(tr("SSD Format")); }
+
     connect(buttonVideo,       SIGNAL(released()), this, SLOT(onButtonVideo()));
     connect(buttonTrigger,     SIGNAL(released()), this, SLOT(onButtonTrigger()));
     connect(buttonGsensor,     SIGNAL(released()), this, SLOT(onButtonGsensor()));
@@ -157,7 +161,8 @@ void DevicePage::onDiskFormat(void)
 
     if(!msgBox)
     {
-        msgBox = new TextMessageDialog(tr("DISK FORMAT"), tr("\t\t\tWARNING\n\n" "Are you sure to format DISK?\n\n" "System will restart after format.\n"), 0, this);
+        if(diskInfo[0].smartInfo_ata_id)    { msgBox = new TextMessageDialog(tr("HDD FORMAT"), tr("\t\t\tWARNING\n\n" "Are you sure to format HDD?\n\n" "System will restart after format.\n"), 0, this); }
+        else                                { msgBox = new TextMessageDialog(tr("SSD FORMAT"), tr("\t\t\tWARNING\n\n" "Are you sure to format SSD?\n\n" "System will restart after format.\n"), 0, this); }
     }
 
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
@@ -178,7 +183,7 @@ void DevicePage::onDiskFormat(void)
             msgBox = NULL;
             msgBoxEsckey = 0;
             msgBoxEsckey = 1;
-            msgBox = new TextMessageDialog(tr("DISK FORMAT"), tr("\t\tNOTICE\n\n" "DISK is not existed.\n"), 2, this);
+            msgBox = new TextMessageDialog(tr("SSD FORMAT"), tr("\t\tNOTICE\n\n" "SSD does not exist."), 2, this);
             msgBox->exec();
         }
     }

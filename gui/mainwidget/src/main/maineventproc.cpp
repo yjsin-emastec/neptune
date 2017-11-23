@@ -506,7 +506,7 @@ void MainWidget::doDvrEvent(Event *e)
 
                     appmgr_set_beep_no_disk(1);
 
-                    msgBoxDisk = new TextMessageDialog(tr("ERROR"), tr("NO DISK"), 2, this);
+                    msgBoxDisk = new TextMessageDialog(tr("ERROR"), tr("NO SSD"), 2, this);
                     msgBoxDisk->setMsgAlignment(Qt::AlignCenter);
                     msgBoxDisk->move((appmgr_get_mainwidget_width()-msgBoxDisk->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBoxDisk->sizeHint().height())/2);
 
@@ -636,7 +636,7 @@ void MainWidget::doDvrEvent(Event *e)
                     delete msgBox;
                 }
 
-                msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("DISK was attached."), tr("System will restart.")), 3, this);
+                msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("Storage was attached."), tr("System will restart.")), 3, this);
                 msgBox->setMsgAlignment(Qt::AlignCenter);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
@@ -660,7 +660,8 @@ void MainWidget::doDvrEvent(Event *e)
                     delete msgBox;
                 }
 
-                msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("DISK was detached."), tr("System will restart.")), 3, this);
+                if(diskInfo[0].smartInfo_ata_id)    { msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("HDD was detached."), tr("System will restart.")), 3, this); }
+                else                                { msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("SSD was detached."), tr("System will restart.")), 3, this); }
                 msgBox->setMsgAlignment(Qt::AlignCenter);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 

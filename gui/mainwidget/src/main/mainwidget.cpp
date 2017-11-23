@@ -1189,7 +1189,7 @@ void MainWidget::runSearch()
         {
             msgBox = new TextMessageDialog(tr("SEARCH"),
                     tr("WARNING\n\n"
-                        "No Disk\n"),
+                        "No SSD"),
                     2, this);
             msgBox->setMsgAlignment(Qt::AlignCenter);
         }

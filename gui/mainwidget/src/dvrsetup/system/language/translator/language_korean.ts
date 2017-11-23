@@ -730,9 +730,14 @@ System will restart.        </source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="73"/>
         <source>Disk Format</source>
-        <translation>저장장치 포맷</translation>
+        <translation type="obsolete">저장장치 포맷</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.ui" line="73"/>
+        <location filename="../../../setup/devicepage.cpp" line="26"/>
+        <source>SSD Format</source>
+        <translation type="unfinished">SSD 포맷</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="103"/>
@@ -756,21 +761,18 @@ Sensitivity</source>
         <translation>트리거 입력</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="160"/>
-        <location filename="../../../setup/devicepage.cpp" line="181"/>
         <source>DISK FORMAT</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>저장장치 포맷</translation>
+        <translation type="obsolete">저장장치 포맷</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="160"/>
         <source>			WARNING
 
 Are you sure to format DISK?
 
 System will restart after format.
 </source>
-        <translation>			  경고
+        <translation type="obsolete">			  경고
 
 저장장치를 포맷 하시겠습니까?
 
@@ -790,12 +792,82 @@ System will restart after format
 포맷 후에 시스템이 다시 시작됩니다.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="181"/>
         <source>		NOTICE
 
 DISK is not existed.
 </source>
-        <translation>		 알림
+        <translation type="obsolete">		 알림
+
+저장장치가 없습니다.</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="25"/>
+        <source>HDD Format</source>
+        <translation type="unfinished">HDD 포맷</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="164"/>
+        <source>HDD FORMAT</source>
+        <translation type="unfinished">HDD 포맷</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="164"/>
+        <source>			WARNING
+
+Are you sure to format HDD?
+
+System will restart after format.
+</source>
+        <translation type="unfinished">			  경고
+
+HDD를 포맷 하시겠습니까?
+
+포맷 후 시스템을 재시작합니다.</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="165"/>
+        <location filename="../../../setup/devicepage.cpp" line="186"/>
+        <source>SSD FORMAT</source>
+        <translation type="unfinished">SSD 포맷</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="165"/>
+        <source>			WARNING
+
+Are you sure to format SSD?
+
+System will restart after format.
+</source>
+        <translation type="unfinished">			  경고
+
+SSD를 포맷 하시겠습니까?
+
+포맷 후 시스템을 재시작합니다.</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="186"/>
+        <source>		NOTICE
+
+SSD does not exist.</source>
+        <translation type="unfinished">	  알림
+
+SSD가 없습니다.</translation>
+    </message>
+    <message>
+        <source>		NOTICE
+
+SSD does not exist.
+</source>
+        <translation type="obsolete">		 알림
+
+SSD가 없습니다.</translation>
+    </message>
+    <message>
+        <source>		NOTICE
+
+SSD is not existed.
+</source>
+        <translation type="obsolete">		 알림
 
 저장장치가 없습니다.</translation>
     </message>
@@ -1764,10 +1836,14 @@ Sensitivity: 5</source>
         <translation>%1</translation>
     </message>
     <message>
+        <source>No Disk</source>
+        <translation type="obsolete">저장장치 없음</translation>
+    </message>
+    <message>
         <location filename="../../information/informationdialog.cpp" line="70"/>
         <location filename="../../information/informationdialog.cpp" line="84"/>
-        <source>No Disk</source>
-        <translation>저장장치 없음</translation>
+        <source>No SSD</source>
+        <translation type="unfinished">저장장치 없음</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.cpp" line="104"/>
@@ -2054,19 +2130,20 @@ Mute</source>
         <location filename="../../../../main/maineventproc.cpp" line="509"/>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
         <source>ERROR</source>
         <translation>오류</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="509"/>
         <source>NO DISK</source>
-        <translation>저장장치가 없습니다.</translation>
+        <translation type="obsolete">저장장치가 없습니다.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
         <location filename="../../../../main/maininitsys.cpp" line="150"/>
         <location filename="../../../../main/maininitsys.cpp" line="208"/>
         <source>%1
@@ -2080,30 +2157,49 @@ Mute</source>
 %3</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <source>DISK was attached.</source>
-        <translation>저장장치가 연결됐습니다.</translation>
+        <translation type="obsolete">저장장치가 연결됐습니다.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
-        <location filename="../../../../main/maineventproc.cpp" line="716"/>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
+        <location filename="../../../../main/maineventproc.cpp" line="717"/>
         <source>System will restart.</source>
         <translation>시스템이 다시 시작됩니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="663"/>
         <source>DISK was detached.</source>
-        <translation>저장장치가 분리됐습니다.</translation>
+        <translation type="obsolete">저장장치가 분리됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
+        <location filename="../../../../main/maineventproc.cpp" line="509"/>
+        <source>NO SSD</source>
+        <translation type="unfinished">SSD가 없습니다</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="639"/>
+        <source>Storage was attached.</source>
+        <translation type="unfinished">저장장치가 연결됐습니다.</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="663"/>
+        <source>HDD was detached.</source>
+        <translation type="unfinished">HDD가 분리됐습니다.</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <source>SSD was detached.</source>
+        <translation type="unfinished">SSD가 분리됐습니다.</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
         <source>IO Error occurred.</source>
         <translation>IO 오류가 발생했습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="713"/>
+        <location filename="../../../../main/maineventproc.cpp" line="714"/>
         <location filename="../../../../main/maininitsys.cpp" line="145"/>
         <location filename="../../../../main/maininitsys.cpp" line="150"/>
         <location filename="../../../../main/maininitsys.cpp" line="203"/>
@@ -2112,7 +2208,7 @@ Mute</source>
         <translation>경고</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="713"/>
+        <location filename="../../../../main/maineventproc.cpp" line="714"/>
         <source>%1
 
 %2
@@ -2126,22 +2222,22 @@ Mute</source>
 %4</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="714"/>
+        <location filename="../../../../main/maineventproc.cpp" line="715"/>
         <source>Please unplug USB memory.   </source>
         <translation>USB 메모리를 분리하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="715"/>
+        <location filename="../../../../main/maineventproc.cpp" line="716"/>
         <source>If you click button of &apos;Ok&apos;,</source>
         <translation>&apos;OK&apos; 버튼을 클릭하면,</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1080"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1114"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1175"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1262"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1302"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1081"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1115"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1176"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1303"/>
         <location filename="../../../../main/mainscreen.cpp" line="143"/>
         <location filename="../../../../main/mainscreen.cpp" line="187"/>
         <source>NOTICE</source>
@@ -2157,17 +2253,17 @@ Mute</source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>Power Off</source>
         <translation>전원 종료</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>System will shutdown.</source>
         <translation>시스템이 종료됩니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>%1
 
 %2%3
@@ -2179,16 +2275,16 @@ Mute</source>
 %4</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>Elapsed Time : </source>
         <translation>경과 시간 : </translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1080"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1114"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1175"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1262"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1302"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1081"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1115"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1176"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1303"/>
         <location filename="../../../../main/mainscreen.cpp" line="143"/>
         <location filename="../../../../main/mainscreen.cpp" line="187"/>
         <source>NOTICE
@@ -2325,7 +2421,23 @@ Do you want to shutdown the system?</source>
         <translation>검색</translation>
     </message>
     <message>
+        <source>WARNING
+
+No Storage</source>
+        <translation type="obsolete">경고
+
+저장장치가 없습니다.</translation>
+    </message>
+    <message>
         <location filename="../../../../main/mainwidget.cpp" line="1191"/>
+        <source>WARNING
+
+No SSD</source>
+        <translation type="unfinished">경고
+
+SSD가 없습니다.</translation>
+    </message>
+    <message>
         <source>WARNING
 
 No Disk
@@ -2334,7 +2446,7 @@ No Disk
 
   No Disk
 </oldsource>
-        <translation>경고
+        <translation type="obsolete">경고
 
 저장장치가 없습니다. </translation>
     </message>

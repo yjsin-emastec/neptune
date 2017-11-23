@@ -662,10 +662,15 @@ Il sistema verrà riavviato. </translation>
         <translation>Vicino</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="73"/>
         <source>Disk Format</source>
-        <translation>Formatoi
+        <translation type="obsolete">Formatoi
 Archiviazione</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.ui" line="73"/>
+        <location filename="../../../setup/devicepage.cpp" line="26"/>
+        <source>SSD Format</source>
+        <translation type="unfinished">Formatoi SSD</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="103"/>
@@ -692,32 +697,99 @@ Sensibilità</translation>
 Input</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="160"/>
-        <location filename="../../../setup/devicepage.cpp" line="181"/>
         <source>DISK FORMAT</source>
-        <translation>Formato Archiviazione</translation>
+        <translation type="obsolete">Formato Archiviazione</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="160"/>
         <source>			WARNING
 
 Are you sure to format DISK?
 
 System will restart after format.
 </source>
-        <translation>			 AVVERTIMENTO
+        <translation type="obsolete">			 AVVERTIMENTO
 
 Sei sicuro di formattare archiviazione?
 
 Il sistema si riavvia dopo il formato.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="181"/>
         <source>		NOTICE
 
 DISK is not existed.
 </source>
-        <translation>		 AVVISO
+        <translation type="obsolete">		 AVVISO
+
+Archiviazione non esiste.</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="25"/>
+        <source>HDD Format</source>
+        <translation type="unfinished">Formatoi HDD</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="164"/>
+        <source>HDD FORMAT</source>
+        <translation type="unfinished">Formatoi HDD</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="164"/>
+        <source>			WARNING
+
+Are you sure to format HDD?
+
+System will restart after format.
+</source>
+        <translation type="unfinished">			 AVVERTIMENTO
+
+Sei sicuro di formattare HDD?
+
+Il sistema si riavvia dopo il formato.</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="165"/>
+        <location filename="../../../setup/devicepage.cpp" line="186"/>
+        <source>SSD FORMAT</source>
+        <translation type="unfinished">Formatoi SSD</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="165"/>
+        <source>			WARNING
+
+Are you sure to format SSD?
+
+System will restart after format.
+</source>
+        <translation type="unfinished">			 AVVERTIMENTO
+
+Sei sicuro di formattare SSD?
+
+Il sistema si riavvia dopo il formato.</translation>
+    </message>
+    <message>
+        <location filename="../../../setup/devicepage.cpp" line="186"/>
+        <source>		NOTICE
+
+SSD does not exist.</source>
+        <translation type="unfinished">	 AVVISO
+
+SSD non esiste.</translation>
+    </message>
+    <message>
+        <source>		NOTICE
+
+SSD does not exist.
+</source>
+        <translation type="obsolete">	 AVVISO
+
+SSD non esiste.</translation>
+    </message>
+    <message>
+        <source>		NOTICE
+
+SSD is not existed.
+</source>
+        <translation type="obsolete">		 AVVISO
 
 Archiviazione non esiste.</translation>
     </message>
@@ -1617,10 +1689,14 @@ Sensitivity: 5</source>
         <translation>%1</translation>
     </message>
     <message>
+        <source>No Disk</source>
+        <translation type="obsolete">Archiviazione non esiste</translation>
+    </message>
+    <message>
         <location filename="../../information/informationdialog.cpp" line="70"/>
         <location filename="../../information/informationdialog.cpp" line="84"/>
-        <source>No Disk</source>
-        <translation>Archiviazione non esiste</translation>
+        <source>No SSD</source>
+        <translation type="unfinished">Archiviazione non esiste</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.cpp" line="104"/>
@@ -1901,19 +1977,20 @@ Mute</translation>
         <location filename="../../../../main/maineventproc.cpp" line="509"/>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
         <source>ERROR</source>
         <translation>ERRORE</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="509"/>
         <source>NO DISK</source>
-        <translation>Archiviazione non esiste.</translation>
+        <translation type="obsolete">Archiviazione non esiste.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
         <location filename="../../../../main/maininitsys.cpp" line="150"/>
         <location filename="../../../../main/maininitsys.cpp" line="208"/>
         <source>%1
@@ -1926,30 +2003,49 @@ Mute</translation>
 %3</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <source>DISK was attached.</source>
-        <translation>Archiviazione è stato allegato.</translation>
+        <translation type="obsolete">Archiviazione è stato allegato.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
-        <location filename="../../../../main/maineventproc.cpp" line="716"/>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
+        <location filename="../../../../main/maineventproc.cpp" line="717"/>
         <source>System will restart.</source>
         <translation>Il sistema verrà riavviato.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="663"/>
         <source>DISK was detached.</source>
-        <translation>Archiviazione è stato staccato.</translation>
+        <translation type="obsolete">Archiviazione è stato staccato.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="685"/>
+        <location filename="../../../../main/maineventproc.cpp" line="509"/>
+        <source>NO SSD</source>
+        <translation type="unfinished">SSD non esiste.</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="639"/>
+        <source>Storage was attached.</source>
+        <translation type="unfinished">Archiviazione è stato allegato.</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="663"/>
+        <source>HDD was detached.</source>
+        <translation type="unfinished">HDD è stato staccato.</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="664"/>
+        <source>SSD was detached.</source>
+        <translation type="unfinished">SSD è stato staccato.</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="686"/>
         <source>IO Error occurred.</source>
         <translation>IO Errore si è verificato.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="713"/>
+        <location filename="../../../../main/maineventproc.cpp" line="714"/>
         <location filename="../../../../main/maininitsys.cpp" line="145"/>
         <location filename="../../../../main/maininitsys.cpp" line="150"/>
         <location filename="../../../../main/maininitsys.cpp" line="203"/>
@@ -1958,7 +2054,7 @@ Mute</translation>
         <translation>AVVERTIMENTO</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="713"/>
+        <location filename="../../../../main/maineventproc.cpp" line="714"/>
         <source>%1
 
 %2
@@ -1971,29 +2067,29 @@ Mute</translation>
 %4</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="714"/>
+        <location filename="../../../../main/maineventproc.cpp" line="715"/>
         <source>Please unplug USB memory.   </source>
         <translation>Scollegare la memoria USB.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="715"/>
+        <location filename="../../../../main/maineventproc.cpp" line="716"/>
         <source>If you click button of &apos;Ok&apos;,</source>
         <translation>Se fai clic sul pulsante di &apos;Ok&apos;,</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1080"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1114"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1175"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1262"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1302"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1081"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1115"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1176"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1303"/>
         <location filename="../../../../main/mainscreen.cpp" line="143"/>
         <location filename="../../../../main/mainscreen.cpp" line="187"/>
         <source>NOTICE</source>
         <translation>AVVISO</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>%1
 
 %2%3
@@ -2004,26 +2100,26 @@ Mute</translation>
 %4</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>Power Off</source>
         <translation>Spegni</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>Elapsed Time : </source>
         <translation>Tèmpo trascorso : </translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="740"/>
+        <location filename="../../../../main/maineventproc.cpp" line="741"/>
         <source>System will shutdown.</source>
         <translation>Il sistema si spegne.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1080"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1114"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1175"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1262"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1302"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1081"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1115"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1176"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1303"/>
         <location filename="../../../../main/mainscreen.cpp" line="143"/>
         <location filename="../../../../main/mainscreen.cpp" line="187"/>
         <source>NOTICE
@@ -2133,12 +2229,28 @@ Vuoi spegnere il sistema? </translation>
         <translation>RICERCA</translation>
     </message>
     <message>
+        <source>WARNING
+
+No Storage</source>
+        <translation type="obsolete">AVVERTIMENTO
+
+Archiviazione non esiste.</translation>
+    </message>
+    <message>
         <location filename="../../../../main/mainwidget.cpp" line="1191"/>
+        <source>WARNING
+
+No SSD</source>
+        <translation type="unfinished">AVVERTIMENTO
+
+SSD non esiste.</translation>
+    </message>
+    <message>
         <source>WARNING
 
 No Disk
 </source>
-        <translation>AVVERTIMENTO
+        <translation type="obsolete">AVVERTIMENTO
 
 Archiviazione non esiste.</translation>
     </message>
