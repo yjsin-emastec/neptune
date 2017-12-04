@@ -22,62 +22,62 @@ public:
     void            resumePlayback        (int isAviBackup, int sec);
     void            PausePlayChange       (int state);
     void            OutputAudio           (int ch);
+    void            displaySpeed          (void);
     int             GetStatePausePlay     (void);
     int             getPlaybackChannel    (void);
 
-    time_t          curPbTime,
-                    backupStartTime;
+    time_t          curPbTime;
+    time_t          backupStartTime;
 
-    int             playbackMaxSplit,
-                    playbackStartCh,
-                    playbackSpeed,
-                    playbackSpeed_old,
-                    playbackState,
-                    indexAudio;
+    int             playbackMaxSplit;
+    int             playbackStartCh;
+    int             playbackSpeed;
+    int             playbackSpeed_old;
+    int             playbackState;
+    int             indexAudio;
 
 signals:
-    void            exitSearchBar(void);
-    void            backupClicked(void);
+    void            exitSearchBar         (void);
+    void            backupClicked         (void);
 
 public slots:
-    void            clickBackup(void);
-    void            rewClicked(void);
-    void            rewFrameClicked(void);
-    void            playClicked(void);
-    void            pauseClicked(void);
-    void            playpauseClicked(void);
-    void            fowardFrameClicked(void);
-    void            fastClicked(void);
-    void            onButtonAudio(void);
-    void            playbackTimeUpdate(time_t pbTime);
-    void            searchDataUpdate(int type);
-    void            closeSearchBar(void);
+    void            clickBackup           (void);
+    void            rewClicked            (void);
+    void            rewFrameClicked       (void);
+    void            playClicked           (void);
+    void            pauseClicked          (void);
+    void            playpauseClicked      (void);
+    void            fowardFrameClicked    (void);
+    void            fastClicked           (void);
+    void            onButtonAudio         (void);
+    void            playbackTimeUpdate    (time_t pbTime);
+    void            searchDataUpdate      (int type);
+    void            closeSearchBar        (void);
 
 private slots:
-    void            changePlaybackTime(int pos);
+    void            changePlaybackTime    (int pos);
 
 private:
-    void            createPlaySpeedControlButtons(void);
-    void            displaySpeed(void);
-    void            checkDayChanged(time_t pbTime, time_t prevTime, int expired);
-    void            SetAudioIcon(int ch);
+    void            createPlaySpeedControlButtons    (void);
+    void            checkDayChanged                  (time_t pbTime, time_t prevTime, int expired);
+    void            SetAudioIcon                     (int ch);
 
-    int             playbackDirection,
-                    changeDay;
+    int             playbackDirection;
+    int             changeDay;
 
     PlayTimeBar    *timeBar;
 
     QLabel         *labelSpeed;
 
-    QPushButton    *buttonAudio,
-                   *buttonRew,
-                   *buttonRewFrame,
-                   *buttonPlay,
-                   *buttonFfFrame,
-                   *buttonFf,
-                   *buttonSlow,
-                   *buttonStill,
-                   *buttonClose;
+    QPushButton    *buttonAudio;
+    QPushButton    *buttonRew;
+    QPushButton    *buttonRewFrame;
+    QPushButton    *buttonPlay;
+    QPushButton    *buttonFfFrame;
+    QPushButton    *buttonFf;
+    QPushButton    *buttonSlow;
+    QPushButton    *buttonStill;
+    QPushButton    *buttonClose;
 };
 
 #endif // PLAYBARDIALOG_H

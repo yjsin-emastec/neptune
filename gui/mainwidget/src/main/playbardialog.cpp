@@ -354,8 +354,19 @@ void PlayBarDialog::clickBackup(void)
 
     playbackSpeed_old = playbackSpeed;
     playbackSpeed     = PB_PAUSE;
+#if 1 // GyverJeong [17/12/04]
+    playbackState     = PB_PAUSE;
+    pbState           = PB_PAUSE;
 
+    if(playbackSpeed_old == PB_SPEED_1)
+    {
+        buttonPlay->setIcon(QIcon(":/images/play.png"));
+    }
+
+    displaySpeed();
+#else
     buttonPlay->setIcon(QIcon(":/images/play.png"));
+#endif
 
     emit backupClicked();
 }

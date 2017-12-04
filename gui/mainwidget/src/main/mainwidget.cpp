@@ -1144,7 +1144,14 @@ void MainWidget::runBackup()
         }
         else
         {
+#if 1 // GyverJeong [17/12/04]
+            playBar->playbackState = PB_PLAY;
+            pbState                = PB_PLAY;
+#endif
             playBar->resumePlayback(0, 0);
+#if 1 // GyverJeong [17/12/04]
+            playBar->displaySpeed();
+#endif
         }
     }
     else
