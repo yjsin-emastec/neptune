@@ -1279,6 +1279,18 @@ void MainWidget::startPlayback()
 {
     int i = 0;
 
+#if 1 // GyverJeong [17/12/04]
+    if(playBar->isHidden())
+    {
+        playBarState(1);
+        appmgr_set_playber_bar_status(1);
+    }
+    else if(playBar->isVisible())
+    {
+        playBarState(0);
+        appmgr_set_playber_bar_status(0);
+    }
+#endif
     for(i = 0; i < devInfo.videoNum; i++)
     {
         videoPane[i]->zoomAction = false;
