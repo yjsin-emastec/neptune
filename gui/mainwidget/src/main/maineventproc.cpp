@@ -1328,6 +1328,15 @@ void MainWidget::keypadEvent(unsigned char code)
                 break;
             }
 
+            if(operationMode == OPMODE_PLAYBACK)
+            {
+                if(!(mainPbChannel & 0x01<<(code-KPD_EVENT_1)))
+                {
+                    qDebug("%s(%d)", "No Data", code-KPD_EVENT_1);
+                    break;
+                }
+            }
+
             oneChannelSplit(code - KPD_EVENT_1);
 
             break;

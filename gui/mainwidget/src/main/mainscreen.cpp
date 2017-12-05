@@ -156,6 +156,15 @@ void MainWidget::videoPaneDoubleClicked(int ch)
         return;
     }
 
+    if(operationMode == OPMODE_PLAYBACK)
+    {
+        if(!(mainPbChannel & (0x01<<ch)))
+        {
+            qDebug("%s(%d)", "No Data", ch);
+            return;
+        }
+    }
+
     currentChannelNum = ch;
 
     mouseDoubleClickedFlag = 1;
