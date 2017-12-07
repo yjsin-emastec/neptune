@@ -826,6 +826,11 @@ void PlayTimeBar::mousePressEvent(QMouseEvent *event)
     time_t now      = 0;
     int sliderValue = 0;
 
+    if(EventSearchPB)
+    {
+        return;
+    }
+
     if(event->button() == Qt::LeftButton)
     {
         sliderValue = sliderPlayTime->value();
