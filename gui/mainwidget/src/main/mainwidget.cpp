@@ -250,6 +250,8 @@ void MainWidget::onSaveSystemPage(int type, int val)
 
         system_state = SYSTEM_LOAD_FACTORY_DEFAULT;
 
+        appmgr_sysinfo_set_factory_default();
+
         sync(); sync(); sync();
         sleep(1);
 

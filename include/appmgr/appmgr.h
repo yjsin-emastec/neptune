@@ -210,6 +210,7 @@ int           appmgr_set_event_popup_split              (int *chSeq, int split);
 void          appmgr_gsensor_config                     (void);
 int           appmgr_get_gps_connected                  (void);
 int           appmgr_get_board_temperature              (void);
+int           appmgr_sysinfo_set_factory_default        (void);
 
 #ifdef __cplusplus
 }
