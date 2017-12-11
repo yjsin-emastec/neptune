@@ -63,7 +63,7 @@ EventLogPage::EventLogPage(QWidget *parent)
     buttonSort->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     buttonSort->setFixedSize(QSize(215, 90));
 
-    labelLog = new QLabel(tr("Log:"));
+    labelLog = new QLabel(tr("Log:   0"));
     labelLog->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     labelLog->setFixedSize(QSize(260, 90));
 
@@ -238,7 +238,7 @@ void EventLogPage::onQueryLogCount()
     }
 
     buttonPlay->setEnabled(false);
-    labelLog->setText(tr("%1 %2").arg(tr("Log:")).arg(logCount));
+    labelLog->setText(tr("%1%2").arg(tr("Log:   ")).arg(logCount));
 }
 void EventLogPage::onQueryLogData()
 {
@@ -613,6 +613,7 @@ void EventLogPage::resetSearch()
         searchEndTime->setStyleSheet("QDateTimeEdit {font:40px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     }
 
+    labelLog->setText(tr("Log:   0"));
     labelPage->setText(tr("(0/0)"));
     buttonPrevLogPage->setEnabled(false);
     buttonNextLogPage->setEnabled(false);

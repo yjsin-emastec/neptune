@@ -1378,26 +1378,30 @@ Record: </source>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="58"/>
         <location filename="../../../../search/eventlogpage.cpp" line="498"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="620"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="621"/>
         <source>All</source>
         <translation>Tout</translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="62"/>
         <location filename="../../../../search/eventlogpage.cpp" line="453"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="621"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="622"/>
         <source>Desc</source>
         <translation>Desc</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="66"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="241"/>
         <source>Log:</source>
-        <translation>Registre:</translation>
+        <translation type="obsolete">Registre:</translation>
     </message>
     <message>
         <source>0</source>
         <translation type="obsolete">0</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/eventlogpage.cpp" line="66"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="616"/>
+        <source>Log:   0</source>
+        <translation>Registre: 0</translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="70"/>
@@ -1500,8 +1504,21 @@ Record: </source>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="241"/>
+        <source>%1%2</source>
+        <translation>%1%2</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/eventlogpage.cpp" line="241"/>
+        <source>Log:   </source>
+        <translation>Registre: </translation>
+    </message>
+    <message>
         <source>%1 %2</source>
-        <translation>%1 %2</translation>
+        <translation type="obsolete">%1 %2</translation>
+    </message>
+    <message>
+        <source>Log:  </source>
+        <translation type="obsolete">Registre: </translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="454"/>
@@ -1519,7 +1536,7 @@ Record: </source>
         <translation>Trigger</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="616"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="617"/>
         <source>(0/0)</source>
         <translation>(0/0)</translation>
     </message>
@@ -2113,7 +2130,7 @@ Muet</translation>
         <location filename="../../../../main/maineventproc.cpp" line="1263"/>
         <location filename="../../../../main/maineventproc.cpp" line="1303"/>
         <location filename="../../../../main/mainscreen.cpp" line="143"/>
-        <location filename="../../../../main/mainscreen.cpp" line="187"/>
+        <location filename="../../../../main/mainscreen.cpp" line="196"/>
         <source>NOTICE</source>
         <translation>REMARQUER</translation>
     </message>
@@ -2150,7 +2167,7 @@ Muet</translation>
         <location filename="../../../../main/maineventproc.cpp" line="1263"/>
         <location filename="../../../../main/maineventproc.cpp" line="1303"/>
         <location filename="../../../../main/mainscreen.cpp" line="143"/>
-        <location filename="../../../../main/mainscreen.cpp" line="187"/>
+        <location filename="../../../../main/mainscreen.cpp" line="196"/>
         <source>NOTICE
 
 Current status is trigger.</source>
@@ -2252,7 +2269,7 @@ Do you want to shutdown the system?</source>
 Voulez-vous arrêter le système?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1190"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1193"/>
         <source>SEARCH</source>
         <translation>CHERCHER</translation>
     </message>
@@ -2265,7 +2282,7 @@ No Storage</source>
 Pas de Stockage</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1191"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1194"/>
         <source>WARNING
 
 No SSD</source>
@@ -2860,107 +2877,108 @@ Enregistré</translation>
     </message>
     <message>
         <location filename="../../../../main/playbardialog.cpp" line="77"/>
-        <location filename="../../../../main/playbardialog.cpp" line="368"/>
+        <location filename="../../../../main/playbardialog.cpp" line="358"/>
+        <location filename="../../../../main/playbardialog.cpp" line="370"/>
         <source>Pause</source>
         <translation>Pause</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="379"/>
+        <location filename="../../../../main/playbardialog.cpp" line="381"/>
         <source>Play</source>
         <translation>Jouer</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="380"/>
+        <location filename="../../../../main/playbardialog.cpp" line="382"/>
         <source>FF x2</source>
         <translation>Rapide x2</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="381"/>
+        <location filename="../../../../main/playbardialog.cpp" line="383"/>
         <source>FF x4</source>
         <translation>Rapide x4</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="382"/>
+        <location filename="../../../../main/playbardialog.cpp" line="384"/>
         <source>FF x8</source>
         <translation>Rapide x8</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="383"/>
+        <location filename="../../../../main/playbardialog.cpp" line="385"/>
         <source>FF x16</source>
         <translation>Rapide x16</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="384"/>
+        <location filename="../../../../main/playbardialog.cpp" line="386"/>
         <source>FF x32</source>
         <translation>Rapide x32</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="385"/>
+        <location filename="../../../../main/playbardialog.cpp" line="387"/>
         <source>FF x64</source>
         <translation>Rapide x64</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="386"/>
+        <location filename="../../../../main/playbardialog.cpp" line="388"/>
         <source>FF x128</source>
         <translation>Rapide x128</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="387"/>
+        <location filename="../../../../main/playbardialog.cpp" line="389"/>
         <source>FF x256</source>
         <translation>Rapide x256</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="388"/>
+        <location filename="../../../../main/playbardialog.cpp" line="390"/>
         <source>FF x1024</source>
         <translation>Rapide x1024</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="396"/>
+        <location filename="../../../../main/playbardialog.cpp" line="398"/>
         <source>REW x1</source>
         <translation>Rebobiner x1</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="397"/>
+        <location filename="../../../../main/playbardialog.cpp" line="399"/>
         <source>REW x2</source>
         <translation>Rebobiner x2</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="398"/>
+        <location filename="../../../../main/playbardialog.cpp" line="400"/>
         <source>REW x4</source>
         <translation>Rebobiner x4</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="399"/>
+        <location filename="../../../../main/playbardialog.cpp" line="401"/>
         <source>REW x8</source>
         <translation>Rebobiner x8</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="400"/>
+        <location filename="../../../../main/playbardialog.cpp" line="402"/>
         <source>REW x16</source>
         <translation>Rebobiner x16</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="401"/>
+        <location filename="../../../../main/playbardialog.cpp" line="403"/>
         <source>REW x32</source>
         <translation>Rebobiner x32</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="402"/>
+        <location filename="../../../../main/playbardialog.cpp" line="404"/>
         <source>REW x64</source>
         <translation>Rebobiner x64</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="403"/>
+        <location filename="../../../../main/playbardialog.cpp" line="405"/>
         <source>REW x128</source>
         <translation>Rebobiner x128</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="404"/>
+        <location filename="../../../../main/playbardialog.cpp" line="406"/>
         <source>REW x256</source>
         <translation>Rebobiner x256</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="405"/>
+        <location filename="../../../../main/playbardialog.cpp" line="407"/>
         <source>REW x1024</source>
         <translation>Rebobiner x1024</translation>
     </message>
@@ -3019,22 +3037,22 @@ Enregistré</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="654"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="655"/>
         <source>EVENT TIME</source>
         <translation>HEURE DE L&apos;ÉVÈNEMENT</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="656"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="657"/>
         <source>LOG TYPE</source>
         <translation>TYPE</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="658"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="659"/>
         <source>DURATION</source>
         <translation>DURÉE</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="660"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="661"/>
         <source>NUM</source>
         <translation>NOMBRE</translation>
     </message>
