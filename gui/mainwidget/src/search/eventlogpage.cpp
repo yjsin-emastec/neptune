@@ -503,7 +503,11 @@ void EventLogPage::onButtonFilter()
     log_type = indexFilter;
     buttonPlay->setEnabled(false);
     eventLogView->clearSelection();
-    buttonSearch->setFocus();
+
+    if(logCount)
+    {
+        buttonSearch->setFocus();
+    }
 
     //qDebug("%s,%d===>logPageNum=%d,oIdxFt=%d,idxFt=%d,oIdxSt=%d,idxSt=%d\n",__func__,__LINE__,logPageNum,oldIndexFilter,indexFilter,oldIndexSort,indexSort);
 
