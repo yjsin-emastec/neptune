@@ -613,8 +613,11 @@ void EventLogPage::resetSearch()
         searchEndTime->setStyleSheet("QDateTimeEdit {font:40px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     }
 
-    labelLog->setText(tr("Log:   0"));
-    labelPage->setText(tr("(0/0)"));
+    logCount=0;
+    labelLog->setText(tr("%1%2").arg(tr("Log:   ")).arg(logCount));
+    logPageNow=0;
+    logPageNum=0;
+    labelPage->setText(tr("(%1/%2)").arg(logPageNow).arg(logPageNum));
     buttonPrevLogPage->setEnabled(false);
     buttonNextLogPage->setEnabled(false);
     buttonPlay->setEnabled(false);
