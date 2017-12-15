@@ -73,7 +73,7 @@ DiagMainDialog::DiagMainDialog(QWidget *parent)
 
     char tmp[128];
     testmgr_get_mac(tmp);
-    buttonMac2->setText(tmp);
+    buttonMac2->setText(tr("%1 [%2]").arg(tr("Set")).arg(QString::fromUtf8(tmp)));
     buttonMac2->setFocus();
 
     QTimer *timer = new QTimer(this);
