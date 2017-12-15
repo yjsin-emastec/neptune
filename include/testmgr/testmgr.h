@@ -42,6 +42,8 @@ void            testmgr_set_audio                  (int mode, int channel);
 int             testmgr_gsensor_data_read          (int *x, int *y, int *z);
 int             testmgr_buzzer_ctrl                (int onoff);
 int             testmgr_led_ctrl                   (int sel);
+int             testmgr_set_mac                    (char *mac);
+int             testmgr_get_mac                    (char *mac);
 
 #ifdef __cplusplus
 }

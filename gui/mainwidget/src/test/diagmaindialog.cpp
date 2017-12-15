@@ -60,8 +60,6 @@ DiagMainDialog::DiagMainDialog(QWidget *parent)
     connect(buttonFactoryDefault2, SIGNAL(clicked(void)), this, SLOT(onButtonFactoryDefault2 (void)));
     connect(buttonApplication2,    SIGNAL(clicked(void)), this, SLOT(onButtonApplication2    (void)));
 
-    buttonNetworkPing2->setFocus();
-
     pTestWidget = (TestWidget *)Main;
 
     if(hdd_num == 0)
@@ -72,6 +70,11 @@ DiagMainDialog::DiagMainDialog(QWidget *parent)
     {
         buttonSata->setText(tr("Detected"));
     }
+
+    char tmp[128];
+    testmgr_get_mac(tmp);
+    buttonMac2->setText(tmp);
+    buttonMac2->setFocus();
 
     QTimer *timer = new QTimer(this);
 
@@ -310,12 +313,8 @@ void DiagMainDialog::keyPressEvent(QKeyEvent *event)
     {
         case Qt::Key_Up:
 
-#if 1 // jungyver [17/07/18]
-                 if(buttonNetworkPing2    ->hasFocus()) { buttonApplication2    ->setFocus(); }
-#else
                  if(buttonMac2            ->hasFocus()) { buttonApplication2    ->setFocus(); }
             else if(buttonNetworkPing2    ->hasFocus()) { buttonMac2            ->setFocus(); }
-#endif
             else if(buttonAudio2          ->hasFocus()) { buttonNetworkPing2    ->setFocus(); }
             else if(buttonLedBuzzer2      ->hasFocus()) { buttonAudio2          ->setFocus(); }
             else if(buttonFormat2         ->hasFocus()) { buttonLedBuzzer2      ->setFocus(); }
@@ -326,32 +325,20 @@ void DiagMainDialog::keyPressEvent(QKeyEvent *event)
 
         case Qt::Key_Down:
 
-#if 1 // jungyver [17/07/18]
-                 if(buttonNetworkPing2    ->hasFocus()) { buttonAudio2          ->setFocus(); }
-#else
                  if(buttonMac2            ->hasFocus()) { buttonNetworkPing2    ->setFocus(); }
             else if(buttonNetworkPing2    ->hasFocus()) { buttonAudio2          ->setFocus(); }
-#endif
             else if(buttonAudio2          ->hasFocus()) { buttonLedBuzzer2      ->setFocus(); }
             else if(buttonLedBuzzer2      ->hasFocus()) { buttonFormat2         ->setFocus(); }
             else if(buttonFormat2         ->hasFocus()) { buttonFactoryDefault2 ->setFocus(); }
             else if(buttonFactoryDefault2 ->hasFocus()) { buttonApplication2    ->setFocus(); }
-#if 1 // jungyver [17/07/18]
-            else if(buttonApplication2    ->hasFocus()) { buttonNetworkPing2    ->setFocus(); }
-#else
             else if(buttonApplication2    ->hasFocus()) { buttonMac2            ->setFocus(); }
-#endif
 
             return;
 
         case Qt::Key_Enter:
 
-#if 1 // jungyver [17/07/18]
-                 if(buttonNetworkPing2    ->hasFocus())  onButtonNetworkPing2    ();
-#else
                  if(buttonMac2            ->hasFocus())  onButtonMac2            ();
             else if(buttonNetworkPing2    ->hasFocus())  onButtonNetworkPing2    ();
-#endif
             else if(buttonAudio2          ->hasFocus())  onButtonAudio2          ();
             else if(buttonLedBuzzer2      ->hasFocus())  onButtonLedBuzzer2      ();
             else if(buttonFormat2         ->hasFocus())  onButtonFormat2         ();
