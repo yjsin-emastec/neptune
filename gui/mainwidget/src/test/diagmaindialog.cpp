@@ -4,6 +4,7 @@
 #include <dev/Ver.h>
 #include <testmgr.h>
 #include <utils.h>
+#include <appmgr.h>
 #include "diagmaindialog.h"
 #include "testwidget.h"
 
@@ -25,8 +26,9 @@ DiagMainDialog::DiagMainDialog(QWidget *parent)
     buttonGps2             ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
     buttonDateTime1        ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(39,0,79);color:white;}");
     buttonDateTime2        ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
-    buttonStorage1         ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(39,0,79);color:white;}");
-    buttonStorage2         ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
+    buttonSataTemp         ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(39,0,79);color:white;}");
+    buttonSata             ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
+    buttonTemperature      ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
     buttonGsensor1         ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(39,0,79);color:white;}");
     buttonGsensor2         ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
     buttonUsbMouse1        ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(39,0,79);color:white;}");
@@ -64,11 +66,11 @@ DiagMainDialog::DiagMainDialog(QWidget *parent)
 
     if(hdd_num == 0)
     {
-        buttonStorage2->setText(tr("Not Detected"));
+        buttonSata->setText(tr("Not Detected"));
     }
     else
     {
-        buttonStorage2->setText(tr("Detected"));
+        buttonSata->setText(tr("Detected"));
     }
 
     QTimer *timer = new QTimer(this);
@@ -288,12 +290,14 @@ void DiagMainDialog::onCheckStart()
 
     if(sata_link)
     {
-        buttonStorage2->setText(tr("%1 [%2: %3]").arg(tr("Detected")).arg("Slot").arg(sata_link));
+        buttonSata->setText(tr("%1 [%2: %3]").arg(tr("Detected")).arg("Slot").arg(sata_link));
     }
     else
     {
-        buttonStorage2->setText(tr("Not Detected"));
+        buttonSata->setText(tr("Not Detected"));
     }
+
+    buttonTemperature->setText(tr("%1 %2").arg(appmgr_get_board_temperature()).arg(QString::fromUtf8("℃")));
 
     buttonFormat2->setText(tr("Start"));
 }
