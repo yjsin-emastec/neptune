@@ -107,6 +107,7 @@ SOURCES      += src/main.cpp                                                    
                 src/search/calendarwidget.cpp                                                        \
                 src/search/backupdialog/backupdialog.cpp                                             \
                 src/test/diagmaindialog.cpp                                                          \
+                src/test/macdialog.cpp                                                               \
                 src/test/testwidget.cpp                                                              \
                 src/test/testeventcontroller.cpp                                                     \
 
@@ -154,6 +155,7 @@ HEADERS      += src/login/logindialog.h                                         
                 src/search/calendarwidget.h                                                          \
                 src/search/backupdialog/backupdialog.h                                               \
                 src/test/diagmaindialog.h                                                            \
+                src/test/macdialog.h                                                                 \
                 src/test/testwidget.h                                                                \
                 src/test/testeventcontroller.h                                                       \
 
@@ -193,6 +195,7 @@ FORMS        += src/login/logindialog.ui                                        
                 src/search/calendarpage.ui                                                           \
                 src/search/backupdialog/backupdialog.ui                                              \
                 src/test/diagmaindialog.ui                                                           \
+                src/test/macdialog.ui                                                                \
 
 RESOURCES    += mainwidget.qrc
 

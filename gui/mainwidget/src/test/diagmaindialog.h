@@ -6,6 +6,7 @@
 
 class TestModeDialog;
 class TestWidget;
+class MacDialog;
 
 class DiagMainDialog : public QDialog, public Ui::DiagMainDialog
 {
@@ -34,6 +35,7 @@ private slots:
 
 private:
     TestWidget   *pTestWidget;
+    MacDialog    *macDialog;
     int           flagBuzzLed;
 
 protected:

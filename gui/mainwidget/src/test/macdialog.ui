@@ -1,0 +1,1974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MacDialog</class>
+ <widget class="QDialog" name="MacDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>998</width>
+    <height>408</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TRIGGER INPUT PROPERTY</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>4</y>
+     <width>990</width>
+     <height>400</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="buttonSave">
+    <property name="geometry">
+     <rect>
+      <x>531</x>
+      <y>300</y>
+      <width>200</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonCancel">
+    <property name="geometry">
+     <rect>
+      <x>781</x>
+      <y>300</y>
+      <width>200</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonAllClear">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>299</y>
+      <width>200</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>All Clear</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac1">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label1_1">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDefault">
+    <property name="geometry">
+     <rect>
+      <x>281</x>
+      <y>300</y>
+      <width>200</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Default</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label1_2">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac2">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelColon1">
+    <property name="geometry">
+     <rect>
+      <x>153</x>
+      <y>32</y>
+      <width>40</width>
+      <height>184</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac3">
+    <property name="geometry">
+     <rect>
+      <x>192</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac4">
+    <property name="geometry">
+     <rect>
+      <x>253</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelColon2">
+    <property name="geometry">
+     <rect>
+      <x>314</x>
+      <y>32</y>
+      <width>40</width>
+      <height>184</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac5">
+    <property name="geometry">
+     <rect>
+      <x>353</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac6">
+    <property name="geometry">
+     <rect>
+      <x>414</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac7">
+    <property name="geometry">
+     <rect>
+      <x>514</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac8">
+    <property name="geometry">
+     <rect>
+      <x>575</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label1_4">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label1_5">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label3_1">
+    <property name="geometry">
+     <rect>
+      <x>192</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label4_1">
+    <property name="geometry">
+     <rect>
+      <x>253</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label4_2">
+    <property name="geometry">
+     <rect>
+      <x>253</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label3_2">
+    <property name="geometry">
+     <rect>
+      <x>192</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label6_1">
+    <property name="geometry">
+     <rect>
+      <x>414</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label6_2">
+    <property name="geometry">
+     <rect>
+      <x>414</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label5_2">
+    <property name="geometry">
+     <rect>
+      <x>353</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label5_1">
+    <property name="geometry">
+     <rect>
+      <x>353</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label7_1">
+    <property name="geometry">
+     <rect>
+      <x>514</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label8_2">
+    <property name="geometry">
+     <rect>
+      <x>575</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label8_1">
+    <property name="geometry">
+     <rect>
+      <x>575</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label7_2">
+    <property name="geometry">
+     <rect>
+      <x>514</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label10_2">
+    <property name="geometry">
+     <rect>
+      <x>736</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label10_1">
+    <property name="geometry">
+     <rect>
+      <x>736</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label9_1">
+    <property name="geometry">
+     <rect>
+      <x>675</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label9_2">
+    <property name="geometry">
+     <rect>
+      <x>675</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label12_1">
+    <property name="geometry">
+     <rect>
+      <x>897</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label11_2">
+    <property name="geometry">
+     <rect>
+      <x>836</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label12_2">
+    <property name="geometry">
+     <rect>
+      <x>897</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label11_1">
+    <property name="geometry">
+     <rect>
+      <x>836</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelColon3">
+    <property name="geometry">
+     <rect>
+      <x>475</x>
+      <y>32</y>
+      <width>40</width>
+      <height>184</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelColon4">
+    <property name="geometry">
+     <rect>
+      <x>636</x>
+      <y>32</y>
+      <width>40</width>
+      <height>184</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelColon5">
+    <property name="geometry">
+     <rect>
+      <x>797</x>
+      <y>32</y>
+      <width>40</width>
+      <height>184</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac9">
+    <property name="geometry">
+     <rect>
+      <x>675</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac10">
+    <property name="geometry">
+     <rect>
+      <x>736</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac12">
+    <property name="geometry">
+     <rect>
+      <x>897</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMac11">
+    <property name="geometry">
+     <rect>
+      <x>836</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>192</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>192</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>253</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>253</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp5">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>353</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn5">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>353</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp6">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>414</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn6">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>414</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn7">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>514</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp7">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>514</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn8">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>575</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp8">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>575</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn9">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>675</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp9">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>675</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp10">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>736</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn10">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>736</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn11">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>836</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp11">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>836</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonUp12">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>897</x>
+      <y>32</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDn12">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>897</x>
+      <y>154</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>192</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>253</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac5">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>353</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac6">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>414</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac7">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>514</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac8">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>575</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac9">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>675</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac10">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>736</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac11">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>836</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>6</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonMac12">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>897</x>
+      <y>93</y>
+      <width>62</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>62</width>
+      <height>62</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>6</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <zorder>label1_2</zorder>
+   <zorder>buttonSave</zorder>
+   <zorder>buttonCancel</zorder>
+   <zorder>buttonAllClear</zorder>
+   <zorder>labelMac1</zorder>
+   <zorder>label1_1</zorder>
+   <zorder>buttonDefault</zorder>
+   <zorder>labelMac2</zorder>
+   <zorder>labelColon1</zorder>
+   <zorder>labelMac3</zorder>
+   <zorder>labelMac4</zorder>
+   <zorder>labelColon2</zorder>
+   <zorder>labelMac5</zorder>
+   <zorder>labelMac6</zorder>
+   <zorder>labelMac7</zorder>
+   <zorder>labelMac8</zorder>
+   <zorder>label1_4</zorder>
+   <zorder>label1_5</zorder>
+   <zorder>label3_1</zorder>
+   <zorder>label4_1</zorder>
+   <zorder>label4_2</zorder>
+   <zorder>label3_2</zorder>
+   <zorder>label6_1</zorder>
+   <zorder>label6_2</zorder>
+   <zorder>label5_2</zorder>
+   <zorder>label5_1</zorder>
+   <zorder>label7_1</zorder>
+   <zorder>label8_2</zorder>
+   <zorder>label8_1</zorder>
+   <zorder>label7_2</zorder>
+   <zorder>label10_2</zorder>
+   <zorder>label10_1</zorder>
+   <zorder>label9_1</zorder>
+   <zorder>label9_2</zorder>
+   <zorder>label12_1</zorder>
+   <zorder>label11_2</zorder>
+   <zorder>label12_2</zorder>
+   <zorder>label11_1</zorder>
+   <zorder>labelColon3</zorder>
+   <zorder>labelColon4</zorder>
+   <zorder>labelColon5</zorder>
+   <zorder>labelMac9</zorder>
+   <zorder>labelMac10</zorder>
+   <zorder>labelMac12</zorder>
+   <zorder>labelMac11</zorder>
+   <zorder>buttonUp1</zorder>
+   <zorder>buttonDn1</zorder>
+   <zorder>buttonUp2</zorder>
+   <zorder>buttonDn2</zorder>
+   <zorder>buttonDn3</zorder>
+   <zorder>buttonUp3</zorder>
+   <zorder>buttonDn4</zorder>
+   <zorder>buttonUp4</zorder>
+   <zorder>buttonUp5</zorder>
+   <zorder>buttonDn5</zorder>
+   <zorder>buttonUp6</zorder>
+   <zorder>buttonDn6</zorder>
+   <zorder>buttonDn7</zorder>
+   <zorder>buttonUp7</zorder>
+   <zorder>buttonDn8</zorder>
+   <zorder>buttonUp8</zorder>
+   <zorder>buttonDn9</zorder>
+   <zorder>buttonUp9</zorder>
+   <zorder>buttonUp10</zorder>
+   <zorder>buttonDn10</zorder>
+   <zorder>buttonDn11</zorder>
+   <zorder>buttonUp11</zorder>
+   <zorder>buttonUp12</zorder>
+   <zorder>buttonDn12</zorder>
+   <zorder>buttonMac1</zorder>
+   <zorder>buttonMac2</zorder>
+   <zorder>buttonMac3</zorder>
+   <zorder>buttonMac9</zorder>
+   <zorder>buttonMac12</zorder>
+   <zorder>buttonMac10</zorder>
+   <zorder>buttonMac6</zorder>
+   <zorder>buttonMac5</zorder>
+   <zorder>buttonMac8</zorder>
+   <zorder>buttonMac7</zorder>
+   <zorder>buttonMac4</zorder>
+   <zorder>buttonMac11</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

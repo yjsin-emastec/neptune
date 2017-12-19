@@ -7,6 +7,7 @@
 #include <appmgr.h>
 #include "diagmaindialog.h"
 #include "testwidget.h"
+#include "macdialog.h"
 
 DiagMainDialog::DiagMainDialog(QWidget *parent)
     : QDialog(parent)
@@ -21,6 +22,7 @@ DiagMainDialog::DiagMainDialog(QWidget *parent)
     flagBuzzLed = 0;
     flagAudio   = 0;
     int hdd_num = utils_get_hdd_nums();
+    macDialog   = NULL;
 
     buttonGps1             ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(39,0,79);color:white;}");
     buttonGps2             ->setStyleSheet("QPushButton{font-size:32px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
@@ -73,7 +75,7 @@ DiagMainDialog::DiagMainDialog(QWidget *parent)
 
     char tmp[128];
     testmgr_get_mac(tmp);
-    buttonMac2->setText(tr("%1 [%2]").arg(tr("Set")).arg(QString::fromUtf8(tmp)));
+    buttonMac2->setText(tr("%1 [%2]").arg(tr("Set")).arg(QString::fromUtf8(tmp).toUpper()));
     buttonMac2->setFocus();
 
     QTimer *timer = new QTimer(this);
@@ -95,6 +97,35 @@ void DiagMainDialog::DisplayRemoteCtrl2(QString str)
 }
 void DiagMainDialog::onButtonMac2()
 {
+    char tmp[128];
+    int  width, height;
+
+    testmgr_checking_resolution(&width, &height);
+
+    if(!macDialog)
+    {
+        macDialog = new MacDialog(this);
+    }
+
+    macDialog->move((width-macDialog->width())/2,(height-macDialog->height())/2);
+
+    memset(tmp, 0, sizeof(tmp));
+    testmgr_get_mac(tmp);
+    macDialog->initMac(tmp);
+
+    if(macDialog->exec())
+    {
+        memset(tmp, 0, sizeof(tmp));
+        memcpy(tmp, macDialog->mac.toStdString().c_str(), macDialog->mac.size());
+        testmgr_set_mac(tmp);
+
+        memset(tmp, 0, sizeof(tmp));
+        testmgr_get_mac(tmp);
+        buttonMac2->setText(tr("%1 [%2]").arg(tr("Set")).arg(QString::fromUtf8(tmp).toUpper()));
+    }
+
+    delete macDialog;
+    macDialog = NULL;
 }
 void DiagMainDialog::onButtonNetworkPing2()
 {
