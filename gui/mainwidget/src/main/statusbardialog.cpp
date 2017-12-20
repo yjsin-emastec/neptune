@@ -335,12 +335,4 @@ void StatusBarDialog::updateTime()
             //qDebug("[Warning] : Not exist HDD");
         }
     }
-
-#if 1 //yjsin [17/12/15] update widget every 1 second to clear mouse afterimage
-    foreach (QWidget *widget, QApplication::allWidgets())
-    {
-        widget->update();
-    }
-    //qDebug() << "update Widget";
-#endif
 }
