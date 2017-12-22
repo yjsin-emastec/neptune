@@ -84,7 +84,7 @@ void UiKeyboardDialog::keyPressEvent(QKeyEvent *event)
             else if(ui->pushButton_clear->hasFocus())           { ui->pushButton_shift_left->setFocus();      }
             else if(ui->pushButton_enter->hasFocus())           { ui->pushButton_space->setFocus();           }
 #if 1 // GyverJeong [17/12/22]
-            else if(ui->pushButton_close->hasFocus())           { ui->pushButton_y->setFocus();               }
+            else if(ui->pushButton_close->hasFocus())           { ui->pushButton_x->setFocus();               }
 #else
             else if(ui->pushButton_close->hasFocus())           { ui->pushButton_period->setFocus();          }
 #endif
