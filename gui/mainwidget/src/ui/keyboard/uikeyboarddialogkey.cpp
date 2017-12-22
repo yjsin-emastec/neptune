@@ -28,7 +28,9 @@ void UiKeyboardDialog::keyPressEvent(QKeyEvent *event)
             else if(ui->pushButton_9->hasFocus())               { ui->pushButton_enter->setFocus();           }
             else if(ui->pushButton_0->hasFocus())               { ui->pushButton_enter->setFocus();           }
             else if(ui->pushButton_hyphen->hasFocus())          { ui->pushButton_close->setFocus();           }
+#if 0 // GyverJeong [17/12/22]
             else if(ui->pushButton_equal->hasFocus())           { ui->pushButton_close->setFocus();           }
+#endif
             else if(ui->pushButton_backspace->hasFocus())       { ui->pushButton_close->setFocus();           }
             else if(ui->pushButton_a->hasFocus())               { ui->pushButton_1->setFocus();               }
             else if(ui->pushButton_b->hasFocus())               { ui->pushButton_2->setFocus();               }
@@ -53,9 +55,13 @@ void UiKeyboardDialog::keyPressEvent(QKeyEvent *event)
                    !ui->pushButton_0->isEnabled())              { ui->pushButton_enter->setFocus();           }
             else if(ui->pushButton_j->hasFocus())               { ui->pushButton_0->setFocus();               }
             else if(ui->pushButton_k->hasFocus())               { ui->pushButton_hyphen->setFocus();          }
+#if 1 // GyverJeong [17/12/22]
+            else if(ui->pushButton_l->hasFocus())               { ui->pushButton_close->setFocus();           }
+#else
             else if(ui->pushButton_l->hasFocus() &&
                    !ui->pushButton_equal->isEnabled())          { ui->pushButton_close->setFocus();           }
             else if(ui->pushButton_l->hasFocus())               { ui->pushButton_equal->setFocus();           }
+#endif
             else if(ui->pushButton_m->hasFocus())               { ui->pushButton_backspace->setFocus();       }
             else if(ui->pushButton_n->hasFocus())               { ui->pushButton_a->setFocus();               }
             else if(ui->pushButton_o->hasFocus())               { ui->pushButton_b->setFocus();               }
@@ -98,7 +104,9 @@ void UiKeyboardDialog::keyPressEvent(QKeyEvent *event)
             else if(ui->pushButton_9->hasFocus())               { ui->pushButton_i->setFocus();               }
             else if(ui->pushButton_0->hasFocus())               { ui->pushButton_j->setFocus();               }
             else if(ui->pushButton_hyphen->hasFocus())          { ui->pushButton_k->setFocus();               }
+#if 0 // GyverJeong [17/12/22]
             else if(ui->pushButton_equal->hasFocus())           { ui->pushButton_l->setFocus();               }
+#endif
             else if(ui->pushButton_backspace->hasFocus())       { ui->pushButton_m->setFocus();               }
             else if(ui->pushButton_a->hasFocus())               { ui->pushButton_n->setFocus();               }
             else if(ui->pushButton_b->hasFocus())               { ui->pushButton_o->setFocus();               }
@@ -143,9 +151,13 @@ void UiKeyboardDialog::keyPressEvent(QKeyEvent *event)
             else if(ui->pushButton_enter->hasFocus() &&
                    !ui->pushButton_8->isEnabled())              { ui->pushButton_h->setFocus();               }
             else if(ui->pushButton_enter->hasFocus())           { ui->pushButton_8->setFocus();               }
+#if 1 // GyverJeong [17/12/22]
+            else if(ui->pushButton_close->hasFocus())           { ui->pushButton_hyphen->setFocus();          }
+#else
             else if(ui->pushButton_close->hasFocus() &&
                    !ui->pushButton_equal->isEnabled())          { ui->pushButton_l->setFocus();               }
             else if(ui->pushButton_close->hasFocus())           { ui->pushButton_equal->setFocus();           }
+#endif
 
             break;
 		}
@@ -166,7 +178,9 @@ void UiKeyboardDialog::keyPressEvent(QKeyEvent *event)
             else if(ui->pushButton_hyphen->hasFocus() &&
                    !ui->pushButton_0->isEnabled())              { ui->pushButton_5->setFocus();               }
             else if(ui->pushButton_hyphen->hasFocus())          { ui->pushButton_0->setFocus();               }
+#if 0 // GyverJeong [17/12/22]
             else if(ui->pushButton_equal->hasFocus())           { ui->pushButton_hyphen->setFocus();          }
+#endif
             else if(ui->pushButton_backspace->hasFocus() &&
                    !ui->pushButton_equal->isEnabled())          { ui->pushButton_hyphen->setFocus();          }
             else if(ui->pushButton_backspace->hasFocus())       { ui->pushButton_equal->setFocus();           }
@@ -232,7 +246,9 @@ void UiKeyboardDialog::keyPressEvent(QKeyEvent *event)
             else if(ui->pushButton_hyphen->hasFocus() &&
                    !ui->pushButton_equal->isEnabled())          { ui->pushButton_backspace->setFocus();       }
             else if(ui->pushButton_hyphen->hasFocus())          { ui->pushButton_equal->setFocus();           }
+#if 0 // GyverJeong [17/12/22]
             else if(ui->pushButton_equal->hasFocus())           { ui->pushButton_backspace->setFocus();       }
+#endif
             else if(ui->pushButton_backspace->hasFocus())       { ui->pushButton_1->setFocus();               }
             else if(ui->pushButton_a->hasFocus())               { ui->pushButton_b->setFocus();               }
             else if(ui->pushButton_b->hasFocus())               { ui->pushButton_c->setFocus();               }

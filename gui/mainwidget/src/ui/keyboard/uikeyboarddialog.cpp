@@ -176,8 +176,10 @@ void UiKeyboardDialog::on_pushButton_hyphen_clicked()
 }
 void UiKeyboardDialog::on_pushButton_equal_clicked()
 {
+#if 0 // GyverJeong [17/12/22]
     ui->pushButton_equal->setFocus();
     buttonPressed(ui->pushButton_equal->text());
+#endif
 }
 void UiKeyboardDialog::on_pushButton_backspace_clicked()
 {
@@ -335,7 +337,9 @@ void UiKeyboardDialog::buttonShift(bool shift)
         ui->pushButton_9->setText("(");
         ui->pushButton_0->setText(")");
         ui->pushButton_hyphen->setText("_");
+#if 0 // GyverJeong [17/12/22]
         ui->pushButton_equal->setText("+");
+#endif
 
         ui->pushButton_a->setText("A");
         ui->pushButton_b->setText("B");
@@ -385,7 +389,9 @@ void UiKeyboardDialog::buttonShift(bool shift)
         ui->pushButton_9->setText("9");
         ui->pushButton_0->setText("0");
         ui->pushButton_hyphen->setText("-");
+#if 0 // GyverJeong [17/12/22]
         ui->pushButton_equal->setText("=");
+#endif
 
         ui->pushButton_a->setText("a");
         ui->pushButton_b->setText("b");
@@ -536,12 +542,13 @@ void UiKeyboardDialog::disableForbiddenChar()
         ui->pushButton_8->setEnabled(true);  // *
         ui->pushButton_9->setEnabled(true);  // (
         ui->pushButton_0->setEnabled(true);  // )
-        ui->pushButton_equal->setEnabled(true);  // +
 #if 1 // GyverJeong [17/12/22]
+        ui->pushButton_equal->setEnabled(false);  // +
         ui->pushButton_comma->setEnabled(false);
         ui->pushButton_period->setEnabled(false);
         ui->pushButton_forward_slash->setEnabled(false);  // ?
 #else
+        ui->pushButton_equal->setEnabled(true);  // +
         ui->pushButton_forward_slash->setEnabled(true);  // ?
 #endif
         ui->pushButton_4->setText("4");  // $
@@ -549,12 +556,13 @@ void UiKeyboardDialog::disableForbiddenChar()
         ui->pushButton_8->setText("8");  // *
         ui->pushButton_9->setText("9");  // (
         ui->pushButton_0->setText("0");  // )
-        ui->pushButton_equal->setText("=");  // +
 #if 1 // GyverJeong [17/12/22]
+        ui->pushButton_equal->setText("");  // +
         ui->pushButton_comma->setText("");
         ui->pushButton_period->setText("");
         ui->pushButton_forward_slash->setText("");  // ?
 #else
+        ui->pushButton_equal->setText("=");  // +
         ui->pushButton_forward_slash->setText("/");  // ?
 #endif
     }
