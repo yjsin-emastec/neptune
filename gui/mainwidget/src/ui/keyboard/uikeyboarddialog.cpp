@@ -365,9 +365,11 @@ void UiKeyboardDialog::buttonShift(bool shift)
         ui->pushButton_y->setText("Y");
         ui->pushButton_z->setText("Z");
 
+#if 0 // GyverJeong [17/12/22]
         ui->pushButton_comma->setText(",");
         ui->pushButton_period->setText(".");
         ui->pushButton_forward_slash->setText("?");
+#endif
     }
     else
     {
@@ -413,9 +415,11 @@ void UiKeyboardDialog::buttonShift(bool shift)
         ui->pushButton_y->setText("y");
         ui->pushButton_z->setText("z");
 
+#if 0 // GyverJeong [17/12/22]
         ui->pushButton_comma->setText(",");
         ui->pushButton_period->setText(".");
         ui->pushButton_forward_slash->setText("/");
+#endif
     }
 
     disableForbiddenChar();
@@ -427,18 +431,24 @@ void UiKeyboardDialog::on_pushButton_space_clicked()
 }
 void UiKeyboardDialog::on_pushButton_comma_clicked()
 {
+#if 0 // GyverJeong [17/12/22]
     ui->pushButton_comma->setFocus();
     buttonPressed(ui->pushButton_comma->text());
+#endif
 }
 void UiKeyboardDialog::on_pushButton_period_clicked()
 {
+#if 0 // GyverJeong [17/12/22]
     ui->pushButton_period->setFocus();
     buttonPressed(ui->pushButton_period->text());
+#endif
 }
 void UiKeyboardDialog::on_pushButton_forward_slash_clicked()
 {
+#if 0 // GyverJeong [17/12/22]
     ui->pushButton_forward_slash->setFocus();
     buttonPressed(ui->pushButton_forward_slash->text());
+#endif
 }
 void UiKeyboardDialog::on_pushButton_clear_clicked()
 {
@@ -527,14 +537,26 @@ void UiKeyboardDialog::disableForbiddenChar()
         ui->pushButton_9->setEnabled(true);  // (
         ui->pushButton_0->setEnabled(true);  // )
         ui->pushButton_equal->setEnabled(true);  // +
+#if 1 // GyverJeong [17/12/22]
+        ui->pushButton_comma->setEnabled(false);
+        ui->pushButton_period->setEnabled(false);
+        ui->pushButton_forward_slash->setEnabled(false);  // ?
+#else
         ui->pushButton_forward_slash->setEnabled(true);  // ?
+#endif
         ui->pushButton_4->setText("4");  // $
         ui->pushButton_6->setText("6");  // ^
         ui->pushButton_8->setText("8");  // *
         ui->pushButton_9->setText("9");  // (
         ui->pushButton_0->setText("0");  // )
         ui->pushButton_equal->setText("=");  // +
+#if 1 // GyverJeong [17/12/22]
+        ui->pushButton_comma->setText("");
+        ui->pushButton_period->setText("");
+        ui->pushButton_forward_slash->setText("");  // ?
+#else
         ui->pushButton_forward_slash->setText("/");  // ?
+#endif
     }
 
     if(capsStatus ^ shiftStatus)
@@ -545,6 +567,10 @@ void UiKeyboardDialog::disableForbiddenChar()
         ui->pushButton_9->setEnabled(false);  // (
         ui->pushButton_0->setEnabled(false);  // )
         ui->pushButton_equal->setEnabled(false);  // +
+#if 1 // GyverJeong [17/12/22]
+        ui->pushButton_comma->setEnabled(false);
+        ui->pushButton_period->setEnabled(false);
+#endif
         ui->pushButton_forward_slash->setEnabled(false);  // ?
         ui->pushButton_4->setText("");  // $
         ui->pushButton_6->setText("");  // ^
@@ -552,6 +578,10 @@ void UiKeyboardDialog::disableForbiddenChar()
         ui->pushButton_9->setText("");  // (
         ui->pushButton_0->setText("");  // )
         ui->pushButton_equal->setText("");  // +
+#if 1 // GyverJeong [17/12/22]
+        ui->pushButton_comma->setText("");
+        ui->pushButton_period->setText("");
+#endif
         ui->pushButton_forward_slash->setText("");  // ?
     }
 }
