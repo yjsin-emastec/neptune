@@ -76,12 +76,11 @@ void CameraNameDialog::onCameraName1()
 	if(keyboard->exec())
 	{
 		QString str = keyboard->text;
-		lineEditName1->setText(str);
+		lineEditName1->setText(str.trimmed());
 
 		printf("%s \n", qPrintable(str));
-		QByteArray text = str.toUtf8().toHex();
 		memset(DisplayCfg.channel_name[0], 0, sizeof(DisplayCfg.channel_name[0]));
-		memcpy(DisplayCfg.channel_name[0], str.toUtf8().toHex(), text.size());
+		memcpy(DisplayCfg.channel_name[0], str.trimmed().toUtf8().toHex(), str.size());
 	}
 
 	delete keyboard;
@@ -103,12 +102,11 @@ void CameraNameDialog::onCameraName2()
 	if(keyboard->exec())
 	{
 		QString str = keyboard->text;
-		lineEditName2->setText(str);
+		lineEditName2->setText(str.trimmed());
 
 		printf("%s \n", qPrintable(str));
-		QByteArray text = str.toUtf8().toHex();
 		memset(DisplayCfg.channel_name[1], 0, sizeof(DisplayCfg.channel_name[1]));
-		memcpy(DisplayCfg.channel_name[1], str.toUtf8().toHex(), text.size());
+		memcpy(DisplayCfg.channel_name[1], str.trimmed().toUtf8().toHex(), str.size());
 	}
 
 	delete keyboard;
@@ -130,12 +128,11 @@ void CameraNameDialog::onCameraName3()
 	if(keyboard->exec())
 	{
 		QString str = keyboard->text;
-		lineEditName3->setText(str);
+		lineEditName3->setText(str.trimmed());
 
 		printf("%s \n", qPrintable(str));
-		QByteArray text = str.toUtf8().toHex();
 		memset(DisplayCfg.channel_name[2], 0, sizeof(DisplayCfg.channel_name[2]));
-		memcpy(DisplayCfg.channel_name[2], str.toUtf8().toHex(), text.size());
+		memcpy(DisplayCfg.channel_name[2], str.trimmed().toUtf8().toHex(), str.size());
 	}
 
 	delete keyboard;
@@ -157,12 +154,11 @@ void CameraNameDialog::onCameraName4()
 	if(keyboard->exec())
 	{
 		QString str = keyboard->text;
-		lineEditName4->setText(str);
+		lineEditName4->setText(str.trimmed());
 
 		printf("%s \n", qPrintable(str));
-		QByteArray text = str.toUtf8().toHex();
 		memset(DisplayCfg.channel_name[3], 0, sizeof(DisplayCfg.channel_name[3]));
-		memcpy(DisplayCfg.channel_name[3], str.toUtf8().toHex(), text.size());
+		memcpy(DisplayCfg.channel_name[3], str.trimmed().toUtf8().toHex(), str.size());
 	}
 
 	delete keyboard;

@@ -58,12 +58,11 @@ void LicensePlateDialog::onButtonLicensePlate()
     if(keyboard->exec())
     {
         QString str = keyboard->text;
-        lineEditLicensePlate->setText(str);
+        lineEditLicensePlate->setText(str.trimmed());
 
         printf("%s \n", qPrintable(str));
-        QByteArray text = str.toUtf8().toHex();
         memset(SystemCfg.license_plate, 0, sizeof(SystemCfg.license_plate));
-        memcpy(SystemCfg.license_plate, str.toUtf8().toHex(), text.size());
+        memcpy(SystemCfg.license_plate, str.trimmed().toUtf8().toHex(), str.size());
     }
 
     delete keyboard;
