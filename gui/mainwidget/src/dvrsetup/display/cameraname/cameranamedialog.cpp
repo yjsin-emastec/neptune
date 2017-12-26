@@ -79,8 +79,9 @@ void CameraNameDialog::onCameraName1()
 		lineEditName1->setText(str.trimmed());
 
 		printf("%s \n", qPrintable(str));
+        QByteArray text = str.trimmed().toUtf8().toHex();
 		memset(DisplayCfg.channel_name[0], 0, sizeof(DisplayCfg.channel_name[0]));
-		memcpy(DisplayCfg.channel_name[0], str.trimmed().toUtf8().toHex(), str.size());
+		memcpy(DisplayCfg.channel_name[0], str.trimmed().toUtf8().toHex(), text.size());
 	}
 
 	delete keyboard;
@@ -105,8 +106,9 @@ void CameraNameDialog::onCameraName2()
 		lineEditName2->setText(str.trimmed());
 
 		printf("%s \n", qPrintable(str));
+        QByteArray text = str.trimmed().toUtf8().toHex();
 		memset(DisplayCfg.channel_name[1], 0, sizeof(DisplayCfg.channel_name[1]));
-		memcpy(DisplayCfg.channel_name[1], str.trimmed().toUtf8().toHex(), str.size());
+		memcpy(DisplayCfg.channel_name[1], str.trimmed().toUtf8().toHex(), text.size());
 	}
 
 	delete keyboard;
@@ -131,8 +133,9 @@ void CameraNameDialog::onCameraName3()
 		lineEditName3->setText(str.trimmed());
 
 		printf("%s \n", qPrintable(str));
+        QByteArray text = str.trimmed().toUtf8().toHex();
 		memset(DisplayCfg.channel_name[2], 0, sizeof(DisplayCfg.channel_name[2]));
-		memcpy(DisplayCfg.channel_name[2], str.trimmed().toUtf8().toHex(), str.size());
+		memcpy(DisplayCfg.channel_name[2], str.trimmed().toUtf8().toHex(), text.size());
 	}
 
 	delete keyboard;
@@ -157,8 +160,9 @@ void CameraNameDialog::onCameraName4()
 		lineEditName4->setText(str.trimmed());
 
 		printf("%s \n", qPrintable(str));
+        QByteArray text = str.trimmed().toUtf8().toHex();
 		memset(DisplayCfg.channel_name[3], 0, sizeof(DisplayCfg.channel_name[3]));
-		memcpy(DisplayCfg.channel_name[3], str.trimmed().toUtf8().toHex(), str.size());
+		memcpy(DisplayCfg.channel_name[3], str.trimmed().toUtf8().toHex(), text.size());
 	}
 
 	delete keyboard;

@@ -61,8 +61,9 @@ void LicensePlateDialog::onButtonLicensePlate()
         lineEditLicensePlate->setText(str.trimmed());
 
         printf("%s \n", qPrintable(str));
+        QByteArray text = str.trimmed().toUtf8().toHex();
         memset(SystemCfg.license_plate, 0, sizeof(SystemCfg.license_plate));
-        memcpy(SystemCfg.license_plate, str.trimmed().toUtf8().toHex(), str.size());
+        memcpy(SystemCfg.license_plate, str.trimmed().toUtf8().toHex(), text.size());
     }
 
     delete keyboard;
