@@ -110,7 +110,7 @@ void LanguageDialog::initLanguageConfig(void)
 void LanguageDialog::onButtonLanguageUp()
 {
 //    if(indexLanguage <= 1) { indexLanguage = 9; }
-    if(indexLanguage <= 1) { indexLanguage = 6; }
+    if(indexLanguage <= 1) { indexLanguage = 7; }
 
     switch(--indexLanguage)
     {
@@ -118,7 +118,8 @@ void LanguageDialog::onButtonLanguageUp()
         case 2: { lineEditLanguage->setText(tr("Korean"    ));  utils_cfg_cpy_item(SystemCfg.language, "KOREAN"    );  break; }
         case 3: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }
         case 4: { lineEditLanguage->setText(tr("French"    ));  utils_cfg_cpy_item(SystemCfg.language, "FRENCH"    );  break; }
-        case 5: { lineEditLanguage->setText(tr("Italian"    ));  utils_cfg_cpy_item(SystemCfg.language, "ITALIAN"    );  break; }
+        case 5: { lineEditLanguage->setText(tr("Italian"   ));  utils_cfg_cpy_item(SystemCfg.language, "ITALIAN"   );  break; }
+        case 6: { lineEditLanguage->setText(tr("Portuguese"));  utils_cfg_cpy_item(SystemCfg.language, "PORTUGUESE");  break; }
 
 #if 0    //yjsin [17/08/31] temporary use only english, korean
         case 3: { lineEditLanguage->setText(tr("German"    ));  utils_cfg_cpy_item(SystemCfg.language, "GERMAN"    );  break; }
@@ -147,7 +148,7 @@ void LanguageDialog::onButtonLanguageUp()
 }
 void LanguageDialog::onButtonLanguageDown()
 {
-    if(indexLanguage >= 5) { indexLanguage = 0; }
+    if(indexLanguage >= 6) { indexLanguage = 0; }
     //if(indexLanguage >= 8) { indexLanguage = 0; }
     switch(++indexLanguage)
     {
@@ -156,6 +157,8 @@ void LanguageDialog::onButtonLanguageDown()
         case 3: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }
         case 4: { lineEditLanguage->setText(tr("French"    ));  utils_cfg_cpy_item(SystemCfg.language, "FRENCH"    );  break; }
         case 5: { lineEditLanguage->setText(tr("Italian"   ));  utils_cfg_cpy_item(SystemCfg.language, "ITALIAN"   );  break; }
+        case 6: { lineEditLanguage->setText(tr("Portuguese"));  utils_cfg_cpy_item(SystemCfg.language, "PORTUGUESE");  break; }
+
 #if 0   //yjsin [17/08/31] temporary use only english, korean
         case 3: { lineEditLanguage->setText(tr("German"    ));  utils_cfg_cpy_item(SystemCfg.language, "GERMAN"    );  break; }
         case 4: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }

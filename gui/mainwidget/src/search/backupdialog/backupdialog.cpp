@@ -35,7 +35,7 @@ BackupDialog::BackupDialog(QWidget *parent)
     }
 
 #if 1 //yjsin [17/09/13] if text is long, change font size
-    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
     {
         buttonBackup->setStyleSheet("font:39px");
     }

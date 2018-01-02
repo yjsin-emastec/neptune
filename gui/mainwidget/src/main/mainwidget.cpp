@@ -507,17 +507,17 @@ void MainWidget::loadStyleSheet()
     file.setFileName(":/qss/darkstyle.qss");
 
 #if 1   //yjsin [17/09/14] if text is long, change button font size 48px->44px
-    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
     {
         if(access("/tmp/eastern", F_OK) == 0)
         {
-            file.setFileName("/tmp/eastern/usr/lib/darkstyle_spanish.qss");
-            qDebug("load darkstyle_spanish.qss from nfs");
+            file.setFileName("/tmp/eastern/usr/lib/darkstyle_button_font_small.qss");
+            qDebug("load darkstyle_button_font_small.qss from nfs");
         }
         else
         {
-            file.setFileName("/usr/lib/darkstyle_spanish.qss");
-            qDebug("load darkstyle_spanish.qss");
+            file.setFileName("/usr/lib/darkstyle_button_font_small.qss");
+            qDebug("load darkstyle_button_font_small.qss");
         }
     }
 #endif
@@ -1746,6 +1746,19 @@ void MainWidget::translatorChange(int lang)
             qDebug("load Italian");
         }
     }
+    else if(lang == LANGUAGE_PORTUGUESE)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr/lib/translator/language_portuguese");
+            qDebug("load Portuguese from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_portuguese");
+            qDebug("load Portuguese");
+        }
+    }
     else
     {
         if(access("/tmp/eastern", F_OK) == 0)
@@ -1792,6 +1805,10 @@ int MainWidget::LanguageValueTransformation(void)
     else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN")  == 0)
     {
         val = LANGUAGE_ITALIAN;
+    }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE")  == 0)
+    {
+        val = LANGUAGE_PORTUGUESE;
     }
 
     return val;
