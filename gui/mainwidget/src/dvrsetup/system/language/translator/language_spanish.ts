@@ -687,7 +687,7 @@ de Video</translation>
         <source>Impact
 Sensitivity</source>
         <translation>Sensibilidad
-al impacto</translation>
+al Impacto</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="164"/>
@@ -1209,7 +1209,7 @@ Are you sure to change the resolution?
 
 If yes, the system will restart.
 </source>
-        <translation type="unfinished">  				  Advertencia
+        <translation>  				  Advertencia
 
 ¿Está seguro de cambiar la resolución?
 En caso afirmativo, el sistema se reiniciará.</translation>
@@ -3926,14 +3926,14 @@ Plate</source>
         <source>Factory
 Default</source>
         <translation>Predeterminado
-de fábrica</translation>
+de Fábrica</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.ui" line="204"/>
         <source>Firmware
 Upgrade</source>
         <translation>Actualización
-de firmware</translation>
+de Firmware</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.ui" line="235"/>
@@ -4063,7 +4063,7 @@ Sí
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="130"/>
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="197"/>
         <source>System Shutdown</source>
-        <translation>Apagado del sistema</translation>
+        <translation>Apagado del Sistema</translation>
     </message>
     <message>
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="139"/>

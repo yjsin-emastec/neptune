@@ -1276,7 +1276,7 @@ Are you sure to change the resolution?
 
 If yes, the system will restart.
 </source>
-        <translation type="unfinished">				  경고
+        <translation>				  경고
 
 해상도를 변경하시겠습니까?
 해상도 변경 후 시스템을 재부팅합니다.

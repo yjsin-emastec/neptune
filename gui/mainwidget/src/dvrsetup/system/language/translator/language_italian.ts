@@ -1193,7 +1193,7 @@ Are you sure to change the resolution?
 
 If yes, the system will restart.
 </source>
-        <translation type="unfinished">			AVVERTIMENTO
+        <translation>			AVVERTIMENTO
 
 Sei sicuro di cambiare la risoluzione?
 Se sì, il sistema si riavvia.</translation>
@@ -3774,7 +3774,7 @@ Una parte dei dati può essere cancellata.
     <message>
         <location filename="../../../setup/systempage.ui" line="14"/>
         <source>Form</source>
-        <translation>formattazione</translation>
+        <translation>Formattazione</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.ui" line="46"/>
@@ -3927,7 +3927,7 @@ Se sì, il sistema riavvierà.
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="130"/>
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="197"/>
         <source>System Shutdown</source>
-        <translation>Arresto del sistema</translation>
+        <translation>Arresto del Sistema</translation>
     </message>
     <message>
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="139"/>

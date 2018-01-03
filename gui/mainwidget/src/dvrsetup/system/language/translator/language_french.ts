@@ -1208,7 +1208,7 @@ Are you sure to change the resolution?
 
 If yes, the system will restart.
 </source>
-        <translation type="unfinished">				ATTENTION
+        <translation>				ATTENTION
 
 Êtes-vous sûr de changer la résolution?
 Si oui, le système redémarre.

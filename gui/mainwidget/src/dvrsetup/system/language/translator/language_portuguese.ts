@@ -1148,7 +1148,7 @@ Are you sure to change the resolution?
 
 If yes, the system will restart.
 </source>
-        <translation type="unfinished">			  ATENÇÃO
+        <translation>			  ATENÇÃO
 
 Tem certeza de mudar a resolucão?
 Se sim, o sistema irá reiniciar.
