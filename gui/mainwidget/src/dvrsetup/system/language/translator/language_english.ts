@@ -726,280 +726,294 @@ SSD does not exist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="60"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="155"/>
         <source>USB[1/2]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="87"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="218"/>
         <source>Ping Test [192.168.0.1]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="116"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="850"/>
         <source>Network</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="145"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="794"/>
         <source>MAC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="181"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="668"/>
         <source> Application </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="218"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="488"/>
         <source>Test OFF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="264"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="300"/>
         <source>Output Test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="325"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="117"/>
         <source>X[0] Y[0] Z[0]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="386"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="983"/>
+        <source>RTC Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/diagmaindialog.ui" line="1080"/>
+        <source>SATA/Temp.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/diagmaindialog.ui" line="1132"/>
         <source>1:None</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="447"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="1035"/>
         <source>2017/01/27/ 16:58:05</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="508"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="249"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="938"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="285"/>
         <source>Not Connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="553"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="298"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="560"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="336"/>
         <source>Start</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="589"/>
-        <source>Date Time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="625"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="886"/>
         <source>GPS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="661"/>
-        <source>Storage</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="697"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="65"/>
         <source>G-Sensor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="733"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="254"/>
         <source>Audio</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="769"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="451"/>
         <source>LED/Buzzer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="805"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="704"/>
         <source>Booting Set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="857"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="756"/>
         <source>[0][0][0][0]</source>
         <translation type="unfinished"></translation>
     </message>
+    <message utf8="true">
+        <location filename="../../../../test/diagmaindialog.ui" line="1175"/>
+        <source>0 ℃</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="902"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="596"/>
         <source>Factory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="938"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="632"/>
         <source>Default Set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="974"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="191"/>
         <source>Trigger</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="1004"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="339"/>
         <source>Mouse [Move out of button box]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="1040"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="524"/>
         <source>Format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="1106"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="375"/>
         <source>Remote</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.ui" line="1146"/>
+        <location filename="../../../../test/diagmaindialog.ui" line="415"/>
         <source>Controller [Key Select]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="67"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="295"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="69"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="331"/>
         <source>Not Detected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="71"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="291"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="73"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="327"/>
         <source>Detected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="85"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="92"/>
         <source>%1 [X:%2 Y:%3]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="85"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="92"/>
         <source>Mouse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="89"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="78"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="96"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="124"/>
         <source>%1 [%2]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="89"/>
-        <source>Controller</source>
+        <location filename="../../../../test/diagmaindialog.cpp" line="78"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="124"/>
+        <source>Set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../../test/diagmaindialog.cpp" line="96"/>
-        <source>Please wait a moment.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="102"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="106"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="148"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="153"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="180"/>
-        <source>%1 %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="102"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="106"/>
-        <source>Ping Test</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="102"/>
-        <source>Success</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="106"/>
-        <source>Fail</source>
+        <source>Controller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../../test/diagmaindialog.cpp" line="132"/>
+        <source>Please wait a moment.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/diagmaindialog.cpp" line="138"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="142"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="184"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="189"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="216"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="334"/>
+        <source>%1 %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/diagmaindialog.cpp" line="138"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="142"/>
+        <source>Ping Test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/diagmaindialog.cpp" line="138"/>
+        <source>Success</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/diagmaindialog.cpp" line="142"/>
+        <source>Fail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/diagmaindialog.cpp" line="168"/>
         <source>%1 : %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="139"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="241"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="249"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="175"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="277"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="285"/>
         <source>%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="148"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="153"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="184"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="189"/>
         <source>Test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="148"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="184"/>
         <source>ON</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="153"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="189"/>
         <source>OFF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="163"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="199"/>
         <source>Unplug USB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="174"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="210"/>
         <source>No Storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="180"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="216"/>
         <source>Default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="180"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="216"/>
         <source>Completion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="185"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="221"/>
         <source>Rebooting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="236"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="272"/>
         <source>%1 &amp;&amp; %2 %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="236"/>
-        <location filename="../../../../test/diagmaindialog.cpp" line="241"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="272"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="277"/>
         <source>Connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="236"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="272"/>
         <source>Synchronized</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="236"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="272"/>
         <source>RTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../test/diagmaindialog.cpp" line="291"/>
+        <location filename="../../../../test/diagmaindialog.cpp" line="327"/>
         <source>%1 [%2: %3]</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1097,7 +1111,7 @@ SSD does not exist.</source>
         <location filename="../../../setup/displaypage.cpp" line="49"/>
         <source>				WARNING
 
-Are you sure to change the HDMI resolution?
+Are you sure to change the resolution?
 
 If yes, the system will restart.
 </source>
@@ -1255,20 +1269,19 @@ Record: Off/On</source>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="58"/>
         <location filename="../../../../search/eventlogpage.cpp" line="498"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="621"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="628"/>
         <source>All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="62"/>
         <location filename="../../../../search/eventlogpage.cpp" line="453"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="622"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="629"/>
         <source>Desc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="66"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="616"/>
         <source>Log:   0</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1368,16 +1381,19 @@ Record: Off/On</source>
         <location filename="../../../../search/eventlogpage.cpp" line="233"/>
         <location filename="../../../../search/eventlogpage.cpp" line="237"/>
         <location filename="../../../../search/eventlogpage.cpp" line="287"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="624"/>
         <source>(%1/%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="241"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="621"/>
         <source>%1%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="241"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="621"/>
         <source>Log:   </source>
         <translation type="unfinished"></translation>
     </message>
@@ -1394,11 +1410,6 @@ Record: Off/On</source>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="500"/>
         <source>Trigger</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="617"/>
-        <source>(0/0)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1642,7 +1653,7 @@ Sensitivity: 5</source>
         <location filename="../languagedialog.ui" line="126"/>
         <location filename="../languagedialog.cpp" line="71"/>
         <location filename="../languagedialog.cpp" line="117"/>
-        <location filename="../languagedialog.cpp" line="154"/>
+        <location filename="../languagedialog.cpp" line="155"/>
         <source>English</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1662,23 +1673,23 @@ System will restart.</source>
     <message>
         <location filename="../languagedialog.cpp" line="76"/>
         <location filename="../languagedialog.cpp" line="118"/>
-        <location filename="../languagedialog.cpp" line="155"/>
+        <location filename="../languagedialog.cpp" line="156"/>
         <source>Korean</source>
         <translation>한국어</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="81"/>
-        <location filename="../languagedialog.cpp" line="124"/>
-        <location filename="../languagedialog.cpp" line="160"/>
+        <location filename="../languagedialog.cpp" line="125"/>
+        <location filename="../languagedialog.cpp" line="163"/>
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="86"/>
         <location filename="../languagedialog.cpp" line="119"/>
-        <location filename="../languagedialog.cpp" line="125"/>
-        <location filename="../languagedialog.cpp" line="156"/>
-        <location filename="../languagedialog.cpp" line="161"/>
+        <location filename="../languagedialog.cpp" line="126"/>
+        <location filename="../languagedialog.cpp" line="157"/>
+        <location filename="../languagedialog.cpp" line="164"/>
         <source>Spanish</source>
         <translatorcomment>ñ이 î으로 출력됨
 Español
@@ -1688,9 +1699,9 @@ Español
     <message>
         <location filename="../languagedialog.cpp" line="91"/>
         <location filename="../languagedialog.cpp" line="120"/>
-        <location filename="../languagedialog.cpp" line="126"/>
-        <location filename="../languagedialog.cpp" line="157"/>
-        <location filename="../languagedialog.cpp" line="162"/>
+        <location filename="../languagedialog.cpp" line="127"/>
+        <location filename="../languagedialog.cpp" line="158"/>
+        <location filename="../languagedialog.cpp" line="165"/>
         <source>French</source>
         <translatorcomment>ç 깨짐
 Français
@@ -1700,23 +1711,25 @@ Français
     <message>
         <location filename="../languagedialog.cpp" line="96"/>
         <location filename="../languagedialog.cpp" line="121"/>
-        <location filename="../languagedialog.cpp" line="127"/>
-        <location filename="../languagedialog.cpp" line="158"/>
-        <location filename="../languagedialog.cpp" line="163"/>
+        <location filename="../languagedialog.cpp" line="128"/>
+        <location filename="../languagedialog.cpp" line="159"/>
+        <location filename="../languagedialog.cpp" line="166"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="101"/>
-        <location filename="../languagedialog.cpp" line="128"/>
-        <location filename="../languagedialog.cpp" line="164"/>
+        <location filename="../languagedialog.cpp" line="122"/>
+        <location filename="../languagedialog.cpp" line="129"/>
+        <location filename="../languagedialog.cpp" line="160"/>
+        <location filename="../languagedialog.cpp" line="167"/>
         <source>Portuguese</source>
         <translation>Português</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="106"/>
-        <location filename="../languagedialog.cpp" line="129"/>
-        <location filename="../languagedialog.cpp" line="165"/>
+        <location filename="../languagedialog.cpp" line="130"/>
+        <location filename="../languagedialog.cpp" line="168"/>
         <source>Japanese</source>
         <translation>日本語</translation>
     </message>
@@ -1788,6 +1801,95 @@ Français
         <location filename="../../../../login/logindialog.cpp" line="150"/>
         <source>Incorrect Password.
 Please try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MacDialog</name>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="14"/>
+        <source>TRIGGER INPUT PROPERTY</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="47"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="60"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="73"/>
+        <source>All Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="124"/>
+        <source>Default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="178"/>
+        <location filename="../../../../test/macdialog.ui" line="241"/>
+        <location filename="../../../../test/macdialog.ui" line="700"/>
+        <location filename="../../../../test/macdialog.ui" line="719"/>
+        <location filename="../../../../test/macdialog.ui" line="738"/>
+        <source>:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="1529"/>
+        <location filename="../../../../test/macdialog.ui" line="1566"/>
+        <location filename="../../../../test/macdialog.ui" line="1600"/>
+        <location filename="../../../../test/macdialog.ui" line="1634"/>
+        <source>0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="1665"/>
+        <source>2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="1696"/>
+        <location filename="../../../../test/macdialog.ui" line="1727"/>
+        <source>3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="1758"/>
+        <location filename="../../../../test/macdialog.ui" line="1789"/>
+        <source>4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="1820"/>
+        <source>5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.ui" line="1851"/>
+        <location filename="../../../../test/macdialog.ui" line="1882"/>
+        <source>6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../test/macdialog.cpp" line="157"/>
+        <location filename="../../../../test/macdialog.cpp" line="158"/>
+        <location filename="../../../../test/macdialog.cpp" line="159"/>
+        <location filename="../../../../test/macdialog.cpp" line="160"/>
+        <location filename="../../../../test/macdialog.cpp" line="161"/>
+        <location filename="../../../../test/macdialog.cpp" line="162"/>
+        <location filename="../../../../test/macdialog.cpp" line="163"/>
+        <location filename="../../../../test/macdialog.cpp" line="164"/>
+        <location filename="../../../../test/macdialog.cpp" line="165"/>
+        <location filename="../../../../test/macdialog.cpp" line="166"/>
+        <location filename="../../../../test/macdialog.cpp" line="167"/>
+        <location filename="../../../../test/macdialog.cpp" line="168"/>
+        <source>%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2061,13 +2163,13 @@ Current status is trigger.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="485"/>
-        <location filename="../../../../main/mainwidget.cpp" line="742"/>
+        <location filename="../../../../main/mainwidget.cpp" line="487"/>
+        <location filename="../../../../main/mainwidget.cpp" line="744"/>
         <source>POWER OFF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="485"/>
+        <location filename="../../../../main/mainwidget.cpp" line="487"/>
         <source>				NOTICE
 
 System was shutdown successfully.
@@ -2075,19 +2177,19 @@ Turn off the power.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="742"/>
+        <location filename="../../../../main/mainwidget.cpp" line="744"/>
         <source>				WARNING
 
 Do you want to shutdown the system?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1193"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1195"/>
         <source>SEARCH</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1194"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1196"/>
         <source>WARNING
 
 No SSD</source>
@@ -2815,22 +2917,22 @@ AutoHide: </source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="655"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="662"/>
         <source>EVENT TIME</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="657"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="664"/>
         <source>LOG TYPE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="659"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="666"/>
         <source>DURATION</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="661"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="668"/>
         <source>NUM</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3786,7 +3888,7 @@ You must delete data or set time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="225"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="229"/>
         <source>System Time must be later than record last time.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5404,182 +5506,162 @@ You must delete data or set time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="509"/>
-        <source>=</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="543"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="546"/>
         <source>Del</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="581"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="584"/>
         <source>a</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="615"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="618"/>
         <source>b</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="649"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="652"/>
         <source>c</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="683"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="686"/>
         <source>d</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="717"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="720"/>
         <source>e</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="751"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="754"/>
         <source>f</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="785"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="788"/>
         <source>g</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="819"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="822"/>
         <source>h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="853"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="856"/>
         <source>i</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="887"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="890"/>
         <source>j</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="921"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="924"/>
         <source>k</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="955"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="958"/>
         <source>l</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="989"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="992"/>
         <source>m</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1027"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1030"/>
         <source>n</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1061"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1064"/>
         <source>o</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1095"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1098"/>
         <source>p</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1129"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1132"/>
         <source>q</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1163"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1166"/>
         <source>r</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1197"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1200"/>
         <source>s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1231"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1234"/>
         <source>t</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1265"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1268"/>
         <source>u</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1299"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1302"/>
         <source>v</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1333"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1336"/>
         <source>w</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1367"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1370"/>
         <source>x</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1401"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1404"/>
         <source>y</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1435"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1438"/>
         <source>z</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1473"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1476"/>
         <source>Shift</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1507"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1510"/>
         <source>Space</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1541"/>
-        <source>,</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1575"/>
-        <source>.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1609"/>
-        <source>/</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1647"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1659"/>
         <source>All Clear</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1681"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1693"/>
         <source>Enter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1715"/>
+        <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1727"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5755,22 +5837,26 @@ You must delete data or set time.</source>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="38"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="44"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="98"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
-        <source>HDMI</source>
+        <source>HD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="38"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="98"/>
-        <source>HD(720p)</source>
+        <source>720p</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="44"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
-        <source>FHD(1080p)</source>
+        <source>FHD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="44"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
+        <source>1080p</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

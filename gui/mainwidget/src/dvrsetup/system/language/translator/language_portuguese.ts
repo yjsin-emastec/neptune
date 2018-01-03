@@ -1144,11 +1144,24 @@ Câmera</translation>
         <location filename="../../../setup/displaypage.cpp" line="49"/>
         <source>				WARNING
 
+Are you sure to change the resolution?
+
+If yes, the system will restart.
+</source>
+        <translation type="unfinished">			  ATENÇÃO
+
+Tem certeza de mudar a resolucão?
+Se sim, o sistema irá reiniciar.
+</translation>
+    </message>
+    <message>
+        <source>				WARNING
+
 Are you sure to change the HDMI resolution?
 
 If yes, the system will restart.
 </source>
-        <translation>				  ATENÇÃO
+        <translation type="obsolete">				  ATENÇÃO
 
 Tem certeza de mudar a resolucão HDMI?
 
@@ -6043,24 +6056,40 @@ Você deve excluir dados ou definir tempo.</translation>
 %2</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="38"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="44"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="98"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
         <source>HDMI</source>
-        <translation>HDMI</translation>
+        <translation type="obsolete">HDMI</translation>
+    </message>
+    <message>
+        <source>HD(720p)</source>
+        <translation type="obsolete">HD(720p)</translation>
+    </message>
+    <message>
+        <source>FHD(1080p)</source>
+        <translation type="obsolete">FHD(1080p)</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="38"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="98"/>
-        <source>HD(720p)</source>
-        <translation>HD(720p)</translation>
+        <source>HD</source>
+        <translation>HD</translation>
+    </message>
+    <message>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="38"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="98"/>
+        <source>720p</source>
+        <translation>720p</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="44"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
-        <source>FHD(1080p)</source>
-        <translation>FHD(1080p)</translation>
+        <source>FHD</source>
+        <translation>FHD</translation>
+    </message>
+    <message>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="44"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
+        <source>1080p</source>
+        <translation>1080p</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="49"/>

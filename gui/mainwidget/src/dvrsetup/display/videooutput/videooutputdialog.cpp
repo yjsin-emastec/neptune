@@ -35,13 +35,13 @@ void VideoOutputDialog::initVideoOutputConfig(void)
 
     if(utils_cfg_cmp_item(DisplayCfg.video_output_hdmi, "1280 x 720") == 0)
     {
-        buttonHdmi->setText(tr("%1\n%2").arg(tr("HDMI"), tr("HD(720p)")));
+        buttonHdmi->setText(tr("%1\n%2").arg(tr("HD"), tr("720p")));
         indexHdmi = 1;
         oldHdmi   = 1;
     }
     else if(utils_cfg_cmp_item(DisplayCfg.video_output_hdmi, "1920 x 1080") == 0)
     {
-        buttonHdmi->setText(tr("%1\n%2").arg(tr("HDMI"), tr("FHD(1080p)")));
+        buttonHdmi->setText(tr("%1\n%2").arg(tr("FHD"), tr("1080p")));
         indexHdmi = 0;
         oldHdmi   = 0;
     }
@@ -95,13 +95,13 @@ void VideoOutputDialog::onVideoOutputHdmi()
 {
     if(indexHdmi == 0)
     {
-        buttonHdmi->setText(tr("%1\n%2").arg(tr("HDMI"), tr("HD(720p)")));
+        buttonHdmi->setText(tr("%1\n%2").arg(tr("HD"), tr("720p")));
         utils_cfg_cpy_item(DisplayCfg.video_output_hdmi, "1280 x 720");
         indexHdmi = 1;
     }
     else if(indexHdmi == 1)
     {
-        buttonHdmi->setText(tr("%1\n%2").arg(tr("HDMI"), tr("FHD(1080p)")));
+        buttonHdmi->setText(tr("%1\n%2").arg(tr("FHD"), tr("1080p")));
         utils_cfg_cpy_item(DisplayCfg.video_output_hdmi, "1920 x 1080");
         indexHdmi = 0;
     }

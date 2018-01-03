@@ -46,7 +46,7 @@ void DisplayPage::onButtonVideoOutput(void)
             if(!msgBox)
             {
                 msgBox = new TextMessageDialog(tr("RESOLUTION CHANGE"),
-                        tr("\t\t\t\tWARNING\n\nAre you sure to change the HDMI resolution?\n\nIf yes, the system will restart.\n"), 0, this);
+                        tr("\t\t\t\tWARNING\n\nAre you sure to change the resolution?\n\nIf yes, the system will restart.\n"), 0, this);
             }
 
             msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
