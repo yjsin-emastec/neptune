@@ -76,34 +76,34 @@ void LanguageDialog::initLanguageConfig(void)
         lineEditLanguage->setText(tr("Korean"));
         indexLanguage = 2;
     }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-    {
-        lineEditLanguage->setText(tr("German"));
-        indexLanguage = 3;
-    }
     else if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
     {
         lineEditLanguage->setText(tr("Spanish"));
-        indexLanguage = 4;
+        indexLanguage = 3;
     }
     else if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
     {
         lineEditLanguage->setText(tr("French"));
-        indexLanguage = 5;
+        indexLanguage = 4;
     }
     else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
     {
         lineEditLanguage->setText(tr("Italian"));
-        indexLanguage = 6;
+        indexLanguage = 5;
     }
     else if(utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
     {
         lineEditLanguage->setText(tr("Portuguese"));
-        indexLanguage = 7;
+        indexLanguage = 6;
     }
     else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
     {
         lineEditLanguage->setText(tr("Japanese"));
+        indexLanguage = 7;
+    }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+    {
+        lineEditLanguage->setText(tr("German"));
         indexLanguage = 8;
     }
 }
