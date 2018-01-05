@@ -48,6 +48,13 @@ void DiskFormatProcessDialog::DiskFormatInit()
 	labelStatus->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
 	diskformatProgressBar->setValue(0);
 	labelStatus->setText(tr("%1\n%2").arg(tr("Please don't turn off system."), tr("System will restart after formatting.")));
+
+#if 1 //yjsin [18/01/05] if text is long, change font size
+    if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+    {
+        labelStatus->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+    }
+#endif
 }
 void DiskFormatProcessDialog::TestDiskFormatInit()
 {

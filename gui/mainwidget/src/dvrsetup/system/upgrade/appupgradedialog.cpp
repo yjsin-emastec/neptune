@@ -65,6 +65,13 @@ AppUpgradeDialog::AppUpgradeDialog(QWidget *parent)
         buttonUpgrade->setGeometry(540, 495, 300, 90);
         buttonUpgrade->setStyleSheet("font:42px;");
     }
+    //yjsin [18/01/05] if text is long, change font size
+    else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+    {
+        buttonFind->setGeometry(287, 495, 250, 90);
+        buttonUpgrade->setGeometry(540, 495, 300, 90);
+        buttonUpgrade->setStyleSheet("font:35px;");
+    }
 #endif
 
     upgradeTimer = NULL;

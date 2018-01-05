@@ -21,6 +21,13 @@ RtcSetDialog::RtcSetDialog(QWidget *parent)
 
     label->setStyleSheet("font:40px;color:white");
 
+#if 1 //yjsin [18/01/05] if text is long, change font size
+    if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+    {
+        labelRtcStatus->setStyleSheet("font:35px;color:white");
+    }
+#endif
+
     dateTimeRtc->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
     dateTimeRtc->setDateTime(QDateTime::currentDateTime());
     dateTimeRtc->setAlignment(Qt::AlignCenter);

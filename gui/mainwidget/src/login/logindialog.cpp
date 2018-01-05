@@ -20,6 +20,13 @@ LoginDialog::LoginDialog(QWidget *parent)
     labelPassword->setStyleSheet("font:48px;color:white");
     lineEditPassword->setAlignment(Qt::AlignCenter);
 
+#if 1 //yjsin [18/01/05] if text is long, change font size
+    if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+    {
+        labelPassword->setStyleSheet("font:45px;color:white");
+    }
+#endif
+
     connect(buttonEdit, SIGNAL(clicked()),  this, SLOT(showKeyboard()));
     connect(buttonOk,  SIGNAL(clicked()), this, SLOT(checkPassword()));
     connect(buttonCancel,  SIGNAL(clicked()), this, SLOT(reject()));

@@ -13,6 +13,13 @@ OsdDialog::OsdDialog(QWidget *parent)
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
     buttonCameraName->setFocus();
 
+#if 1 //yjsin [18/01/05] if text is long, change font size
+    if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+    {
+        buttonStatusBar->setStyleSheet("font:45px;color:white");
+    }
+#endif
+
     connect(buttonCameraName,   SIGNAL(released()), this, SLOT(onChannelName()));
     connect(buttonNoVideo,      SIGNAL(released()), this, SLOT(onNoVideo()));
     connect(buttonStatusBar,    SIGNAL(released()), this, SLOT(onStatusBar()));

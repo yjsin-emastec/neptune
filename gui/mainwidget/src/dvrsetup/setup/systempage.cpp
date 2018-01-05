@@ -35,6 +35,10 @@ SystemPage::SystemPage(QWidget *parent)
     {
         buttonLicensePlate->setStyleSheet("font:43px;color:white");
     }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+    {
+        buttonUpgrade->setStyleSheet("font:40px;color:white");
+    }
 #endif
 
     connect(buttonDateTime,       SIGNAL(released()), this, SLOT(onButtonDateTime()));
