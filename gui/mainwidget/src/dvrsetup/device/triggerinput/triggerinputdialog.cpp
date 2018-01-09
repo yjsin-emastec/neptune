@@ -128,6 +128,10 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
     {
         buttonDefault->setGeometry(7, 563, 304, 90);
     }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+    {
+        buttonDefault->setGeometry(7, 563, 304, 90);
+    }
 #endif
 
     connect(buttonSource1Up,       SIGNAL(released()), this, SLOT(onButtonSource1Up()));

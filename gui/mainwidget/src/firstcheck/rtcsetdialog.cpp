@@ -26,6 +26,11 @@ RtcSetDialog::RtcSetDialog(QWidget *parent)
     {
         labelRtcStatus->setStyleSheet("font:35px;color:white");
     }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+    {
+        labelRtcStatus->setStyleSheet("font:48px;color:white");
+        buttonSetRestart->setGeometry(25,490,790,91);
+    }
 #endif
 
     dateTimeRtc->setDisplayFormat("yyyy/MM/dd hh:mm:ss");

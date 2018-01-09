@@ -23,11 +23,21 @@ CalendarPage::CalendarPage(QWidget *parent)
 
     buttonPrevious = new QPushButton();
     buttonPrevious->setText(tr("Previous"));
-    buttonPrevious->setMaximumWidth(200);
+    //buttonPrevious->setMaximumWidth(200);
+    buttonPrevious->setFixedSize(200,76);
 
     buttonClose = new QPushButton();
     buttonClose->setText(tr("Close"));
-    buttonClose->setMaximumWidth(200);
+    //buttonClose->setMaximumWidth(200);
+    buttonClose->setFixedSize(200,76);
+
+#if 1 //yjsin [18/01/05] if text is long, change font size
+    if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+    {
+        buttonPrevious->setStyleSheet("font:40px;color:white");
+        buttonClose->setStyleSheet("font:38px;color:white");
+    }
+#endif
 
     connect(buttonPrevious, SIGNAL(released()), this, SLOT(onButtonPrevious()));
     connect(buttonClose, SIGNAL(released()), this, SLOT(onButtonClose()));

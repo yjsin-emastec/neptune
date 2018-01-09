@@ -10,8 +10,9 @@
 #define LANGUAGE_ITALIAN        4    // ITALIAN
 #define LANGUAGE_PORTUGUESE     5    // PORTUGUESE
 #define LANGUAGE_JAPANESE       6    // JAPANESE
+#define LANGUAGE_GERMAN         7    // German
 
-#define LANGUAGE_MAX			LANGUAGE_JAPANESE
+#define LANGUAGE_MAX			LANGUAGE_GERMAN
 
 
 #endif // LANGDEFINE_H

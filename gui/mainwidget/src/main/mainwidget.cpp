@@ -507,7 +507,7 @@ void MainWidget::loadStyleSheet()
     file.setFileName(":/qss/darkstyle.qss");
 
 #if 1   //yjsin [17/09/14] if text is long, change button font size 48px->44px
-    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
+    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0 || utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
     {
         if(access("/tmp/eastern", F_OK) == 0)
         {
@@ -1772,6 +1772,19 @@ void MainWidget::translatorChange(int lang)
             qDebug("load Japanese");
         }
     }
+    else if(lang == LANGUAGE_GERMAN)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr/lib/translator/language_german");
+            qDebug("load German from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_german");
+            qDebug("load German");
+        }
+    }
     else
     {
         if(access("/tmp/eastern", F_OK) == 0)
@@ -1826,6 +1839,10 @@ int MainWidget::LanguageValueTransformation(void)
     else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE")  == 0)
     {
         val = LANGUAGE_JAPANESE;
+    }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN")  == 0)
+    {
+        val = LANGUAGE_GERMAN;
     }
 
     return val;

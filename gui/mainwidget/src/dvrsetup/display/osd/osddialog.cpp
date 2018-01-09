@@ -18,6 +18,10 @@ OsdDialog::OsdDialog(QWidget *parent)
     {
         buttonStatusBar->setStyleSheet("font:45px;color:white");
     }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+    {
+        buttonRecordStatus->setStyleSheet("font:41px;color:white");
+    }
 #endif
 
     connect(buttonCameraName,   SIGNAL(released()), this, SLOT(onChannelName()));

@@ -207,6 +207,10 @@ void TimeSetDialog::onButtonSetTime(void)
         {
             val = LANGUAGE_JAPANESE;
         }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN")  == 0)
+        {
+            val = LANGUAGE_GERMAN;
+        }
         else
         {
             val = LANGUAGE_ENGLISH;

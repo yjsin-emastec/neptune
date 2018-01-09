@@ -109,8 +109,7 @@ void LanguageDialog::initLanguageConfig(void)
 }
 void LanguageDialog::onButtonLanguageUp()
 {
-//    if(indexLanguage <= 1) { indexLanguage = 9; }
-    if(indexLanguage <= 1) { indexLanguage = 8; }
+    if(indexLanguage <= 1) { indexLanguage = 9; }
 
     switch(--indexLanguage)
     {
@@ -121,15 +120,7 @@ void LanguageDialog::onButtonLanguageUp()
         case 5: { lineEditLanguage->setText(tr("Italian"   ));  utils_cfg_cpy_item(SystemCfg.language, "ITALIAN"   );  break; }
         case 6: { lineEditLanguage->setText(tr("Portuguese"));  utils_cfg_cpy_item(SystemCfg.language, "PORTUGUESE");  break; }
         case 7: { lineEditLanguage->setText(tr("Japanese"  ));  utils_cfg_cpy_item(SystemCfg.language, "JAPANESE"  );  break; }
-
-#if 0    //yjsin [17/08/31] temporary use only english, korean
-        case 3: { lineEditLanguage->setText(tr("German"    ));  utils_cfg_cpy_item(SystemCfg.language, "GERMAN"    );  break; }
-        case 4: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }
-        case 5: { lineEditLanguage->setText(tr("French"    ));  utils_cfg_cpy_item(SystemCfg.language, "FRENCH"    );  break; }
-        case 6: { lineEditLanguage->setText(tr("Italian"   ));  utils_cfg_cpy_item(SystemCfg.language, "ITALIAN"   );  break; }
-        case 7: { lineEditLanguage->setText(tr("Portuguese"));  utils_cfg_cpy_item(SystemCfg.language, "PORTUGUESE");  break; }
-        case 8: { lineEditLanguage->setText(tr("Japanese"  ));  utils_cfg_cpy_item(SystemCfg.language, "JAPANESE"  );  break; }
-#endif
+        case 8: { lineEditLanguage->setText(tr("German"  ));    utils_cfg_cpy_item(SystemCfg.language, "GERMAN"  );  break; }
     }
     /*
      * when you change the language to spanish, see below code.
@@ -158,12 +149,19 @@ void LanguageDialog::onButtonLanguageUp()
      * 5. check the dvrsetup/system/upgrade/appupgradedialog. label size was modified.
      * 6. check the firstcheck/rtcsetdialog. font size was modified.
      * 7. check the login/logindialog. font size was modified.
+     *
+     * when you change the language to German, see below code.
+     * 1. check the dvrsetup/system/upgrade/appupgradedialog. font size was modified.
+     * 2. check the search/calendarpage. font size was modified.
+     * 3. check the dvrsetup/device/diskformat/diskformatprocess. font size was modified.
+     * 4. check the dvrsetup/display/osd/osddialog. font size was modified.
+     * 5. check the firstcheck/rtcsetdialog. button size was modified.
+     * 6. check the dvrsetup/setup/systempage. font size was modified.
      */
 }
 void LanguageDialog::onButtonLanguageDown()
 {
-    if(indexLanguage >= 7) { indexLanguage = 0; }
-    //if(indexLanguage >= 8) { indexLanguage = 0; }
+    if(indexLanguage >= 8) { indexLanguage = 0; }
     switch(++indexLanguage)
     {
         case 1: { lineEditLanguage->setText(tr("English"   ));  utils_cfg_cpy_item(SystemCfg.language, "ENGLISH"   );  break; }
@@ -173,15 +171,7 @@ void LanguageDialog::onButtonLanguageDown()
         case 5: { lineEditLanguage->setText(tr("Italian"   ));  utils_cfg_cpy_item(SystemCfg.language, "ITALIAN"   );  break; }
         case 6: { lineEditLanguage->setText(tr("Portuguese"));  utils_cfg_cpy_item(SystemCfg.language, "PORTUGUESE");  break; }
         case 7: { lineEditLanguage->setText(tr("Japanese"  ));  utils_cfg_cpy_item(SystemCfg.language, "JAPANESE"  );  break; }
-
-#if 0   //yjsin [17/08/31] temporary use only english, korean
-        case 3: { lineEditLanguage->setText(tr("German"    ));  utils_cfg_cpy_item(SystemCfg.language, "GERMAN"    );  break; }
-        case 4: { lineEditLanguage->setText(tr("Spanish"   ));  utils_cfg_cpy_item(SystemCfg.language, "SPANISH"   );  break; }
-        case 5: { lineEditLanguage->setText(tr("French"    ));  utils_cfg_cpy_item(SystemCfg.language, "FRENCH"    );  break; }
-        case 6: { lineEditLanguage->setText(tr("Italian"   ));  utils_cfg_cpy_item(SystemCfg.language, "ITALIAN"   );  break; }
-        case 7: { lineEditLanguage->setText(tr("Portuguese"));  utils_cfg_cpy_item(SystemCfg.language, "PORTUGUESE");  break; }
-        case 8: { lineEditLanguage->setText(tr("Japanese"  ));  utils_cfg_cpy_item(SystemCfg.language, "JAPANESE"  );  break; }
-#endif
+        case 8: { lineEditLanguage->setText(tr("German"    ));  utils_cfg_cpy_item(SystemCfg.language, "GERMAN"    );  break; }
     }
 }
 void LanguageDialog::keyPressEvent(QKeyEvent *event)

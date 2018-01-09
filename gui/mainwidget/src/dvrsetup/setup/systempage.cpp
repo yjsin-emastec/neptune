@@ -39,6 +39,10 @@ SystemPage::SystemPage(QWidget *parent)
     {
         buttonUpgrade->setStyleSheet("font:40px;color:white");
     }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+    {
+        buttonFactoryDefault->setStyleSheet("font:40px;color:white");
+    }
 #endif
 
     connect(buttonDateTime,       SIGNAL(released()), this, SLOT(onButtonDateTime()));

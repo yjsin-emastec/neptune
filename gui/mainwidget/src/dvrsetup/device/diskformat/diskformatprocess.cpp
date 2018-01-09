@@ -54,6 +54,10 @@ void DiskFormatProcessDialog::DiskFormatInit()
     {
         labelStatus->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
     }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+    {
+        labelStatus->setStyleSheet("font:36px;background-color:rgb(50,57,83);color:white");
+    }
 #endif
 }
 void DiskFormatProcessDialog::TestDiskFormatInit()
