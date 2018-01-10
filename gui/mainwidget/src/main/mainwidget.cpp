@@ -576,6 +576,11 @@ void MainWidget::createPlayBar()
     connect(playBar, SIGNAL(exitSearchBar()),            this,    SLOT(stopPlayback()));
     connect(playBar, SIGNAL(backupClicked()),            this,    SLOT(runBackup()));
     connect(playBar, SIGNAL(channelClicked(int)),        this,    SLOT(oneChannelSplit(int)));
+    connect(playBar, SIGNAL(setPbAudio1()),              this,    SLOT(drawPbAudio1()));
+    connect(playBar, SIGNAL(setPbAudio2()),              this,    SLOT(drawPbAudio2()));
+    connect(playBar, SIGNAL(setPbAudio3()),              this,    SLOT(drawPbAudio3()));
+    connect(playBar, SIGNAL(setPbAudio4()),              this,    SLOT(drawPbAudio4()));
+    connect(playBar, SIGNAL(setPbAudioMute()),           this,    SLOT(drawPbAudioMute()));
     connect(this,    SIGNAL(playbackTimeNotify(time_t)), playBar, SLOT(playbackTimeUpdate(time_t)));
     connect(this,    SIGNAL(searchDataReady(int)),       playBar, SLOT(searchDataUpdate(int)));
     connect(this,    SIGNAL(playbackStopNotify()),       playBar, SLOT(closeSearchBar()));
@@ -2124,5 +2129,58 @@ void MainWidget::setAudioMode()
         case LIVE_AUDIO_SINGLE_2: { setAudio2();    break; }
         case LIVE_AUDIO_SINGLE_3: { setAudio3();    break; }
         case LIVE_AUDIO_SINGLE_4: { setAudio4();    break; }
+    }
+}
+void MainWidget::drawPbAudio1()
+{
+    qDebug() << "\nhi\n";
+
+    for(int ch = 0; ch < devInfo.videoNum; ch++)
+    {
+        videoPane[ch]->setAudioOutput(0);
+    }
+
+    videoPane[0]->setAudioOutput(1);
+}
+void MainWidget::drawPbAudio2()
+{
+    qDebug() << "\nhi\n";
+
+    for(int ch = 0; ch < devInfo.videoNum; ch++)
+    {
+        videoPane[ch]->setAudioOutput(0);
+    }
+
+    videoPane[1]->setAudioOutput(1);
+}
+void MainWidget::drawPbAudio3()
+{
+    qDebug() << "\nhi\n";
+
+    for(int ch = 0; ch < devInfo.videoNum; ch++)
+    {
+        videoPane[ch]->setAudioOutput(0);
+    }
+
+    videoPane[2]->setAudioOutput(1);
+}
+void MainWidget::drawPbAudio4()
+{
+    qDebug() << "\nhi\n";
+
+    for(int ch = 0; ch < devInfo.videoNum; ch++)
+    {
+        videoPane[ch]->setAudioOutput(0);
+    }
+
+    videoPane[3]->setAudioOutput(1);
+}
+void MainWidget::drawPbAudioMute()
+{
+    qDebug() << "\nhi\n";
+
+    for(int ch = 0; ch < devInfo.videoNum; ch++)
+    {
+        videoPane[ch]->setAudioOutput(0);
     }
 }

@@ -757,10 +757,7 @@ void VideoPane::setAudioOutput(int audio)
 {
     audioEnabled = audio ? true : false;
 
-    if(!isPlayback)
-    {
-        drawAudioIcon();
-    }
+    drawAudioIcon();
 }
 void VideoPane::setRecordingDetect(int record, int sensor, int motion, int prerecord)
 {

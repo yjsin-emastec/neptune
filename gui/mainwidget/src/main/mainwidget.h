@@ -59,6 +59,11 @@ public slots:
     void setAudio4();
     void setAudioOut();
     void setAudioMode();
+    void drawPbAudio1();
+    void drawPbAudio2();
+    void drawPbAudio3();
+    void drawPbAudio4();
+    void drawPbAudioMute();
     void runSetup();
     void runBackup();
     void runSearch();
