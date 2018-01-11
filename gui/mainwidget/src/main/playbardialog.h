@@ -39,11 +39,11 @@ public:
 signals:
     void            exitSearchBar         (void);
     void            backupClicked         (void);
-    void            setPbAudio1           (void);
-    void            setPbAudio2           (void);
-    void            setPbAudio3           (void);
-    void            setPbAudio4           (void);
-    void            setPbAudioMute        (void);
+    void            setAudio1             (void);
+    void            setAudio2             (void);
+    void            setAudio3             (void);
+    void            setAudio4             (void);
+    void            setAudioMute          (void);
 
 public slots:
     void            clickBackup           (void);
@@ -58,8 +58,6 @@ public slots:
     void            playbackTimeUpdate    (time_t pbTime);
     void            searchDataUpdate      (int type);
     void            closeSearchBar        (void);
-
-
 
 private slots:
     void            changePlaybackTime    (int pos);

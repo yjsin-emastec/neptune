@@ -576,11 +576,11 @@ void MainWidget::createPlayBar()
     connect(playBar, SIGNAL(exitSearchBar()),            this,    SLOT(stopPlayback()));
     connect(playBar, SIGNAL(backupClicked()),            this,    SLOT(runBackup()));
     connect(playBar, SIGNAL(channelClicked(int)),        this,    SLOT(oneChannelSplit(int)));
-    connect(playBar, SIGNAL(setPbAudio1()),              this,    SLOT(drawPbAudio1()));
-    connect(playBar, SIGNAL(setPbAudio2()),              this,    SLOT(drawPbAudio2()));
-    connect(playBar, SIGNAL(setPbAudio3()),              this,    SLOT(drawPbAudio3()));
-    connect(playBar, SIGNAL(setPbAudio4()),              this,    SLOT(drawPbAudio4()));
-    connect(playBar, SIGNAL(setPbAudioMute()),           this,    SLOT(drawPbAudioMute()));
+    connect(playBar, SIGNAL(setAudio1()),                this,    SLOT(onSetAudio1()));
+    connect(playBar, SIGNAL(setAudio2()),                this,    SLOT(onSetAudio2()));
+    connect(playBar, SIGNAL(setAudio3()),                this,    SLOT(onSetAudio3()));
+    connect(playBar, SIGNAL(setAudio4()),                this,    SLOT(onSetAudio4()));
+    connect(playBar, SIGNAL(setAudioMute()),             this,    SLOT(onSetAudioMute()));
     connect(this,    SIGNAL(playbackTimeNotify(time_t)), playBar, SLOT(playbackTimeUpdate(time_t)));
     connect(this,    SIGNAL(searchDataReady(int)),       playBar, SLOT(searchDataUpdate(int)));
     connect(this,    SIGNAL(playbackStopNotify()),       playBar, SLOT(closeSearchBar()));
@@ -601,11 +601,11 @@ void MainWidget::createMainMenu()
     connect(mainMenu, SIGNAL(setupClicked()),    this, SLOT(runSetup()));
     connect(mainMenu, SIGNAL(searchClicked()),   this, SLOT(runSearch()));
     connect(mainMenu, SIGNAL(shutdownClicked()), this, SLOT(systemShutdown()));
-    connect(mainMenu, SIGNAL(setAudioMute()),    this, SLOT(setAudioMute()));
-    connect(mainMenu, SIGNAL(setAudio1()),       this, SLOT(setAudio1()));
-    connect(mainMenu, SIGNAL(setAudio2()),       this, SLOT(setAudio2()));
-    connect(mainMenu, SIGNAL(setAudio3()),       this, SLOT(setAudio3()));
-    connect(mainMenu, SIGNAL(setAudio4()),       this, SLOT(setAudio4()));
+    connect(mainMenu, SIGNAL(setAudioMute()),    this, SLOT(onSetAudioMute()));
+    connect(mainMenu, SIGNAL(setAudio1()),       this, SLOT(onSetAudio1()));
+    connect(mainMenu, SIGNAL(setAudio2()),       this, SLOT(onSetAudio2()));
+    connect(mainMenu, SIGNAL(setAudio3()),       this, SLOT(onSetAudio3()));
+    connect(mainMenu, SIGNAL(setAudio4()),       this, SLOT(onSetAudio4()));
     connect(mainMenu, SIGNAL(enterMainMenu()),   this, SLOT(onHideStatusBar()));
     connect(mainMenu, SIGNAL(exitMainMenu()),    this, SLOT(onShowStatusBar()));
 
@@ -2005,11 +2005,16 @@ void MainWidget::noDataUpdate(int live)
         }
     }
 }
-void MainWidget::setAudioMute()
+void MainWidget::onSetAudioMute()
 {
     for(int ch = 0; ch < devInfo.videoNum; ch++)
     {
         videoPane[ch]->setAudioOutput(0);
+    }
+
+    if(operationMode == OPMODE_PLAYBACK)
+    {
+        return;
     }
 
     audioStatus          = LIVE_AUDIO_MUTE;
@@ -2021,14 +2026,18 @@ void MainWidget::setAudioMute()
 
     appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, currentChannelNum);
 }
-void MainWidget::setAudio1()
+void MainWidget::onSetAudio1()
 {
     for(int ch = 0; ch < devInfo.videoNum; ch++)
     {
         videoPane[ch]->setAudioOutput(0);
     }
-
     videoPane[0]->setAudioOutput(1);
+
+    if(operationMode == OPMODE_PLAYBACK)
+    {
+        return;
+    }
 
     audioStatus          = LIVE_AUDIO_SINGLE_1;
     cfgMain.gbl.audioOut = audioStatus;
@@ -2039,14 +2048,18 @@ void MainWidget::setAudio1()
 
     appmgr_set_audio_output_mix(AUDIO_LIVE, audioStatus-2);
 }
-void MainWidget::setAudio2()
+void MainWidget::onSetAudio2()
 {
     for(int ch = 0; ch < devInfo.videoNum; ch++)
     {
         videoPane[ch]->setAudioOutput(0);
     }
-
     videoPane[1]->setAudioOutput(1);
+
+    if(operationMode == OPMODE_PLAYBACK)
+    {
+        return;
+    }
 
     audioStatus          = LIVE_AUDIO_SINGLE_2;
     cfgMain.gbl.audioOut = audioStatus;
@@ -2057,14 +2070,18 @@ void MainWidget::setAudio2()
 
     appmgr_set_audio_output_mix(AUDIO_LIVE, audioStatus-2);
 }
-void MainWidget::setAudio3()
+void MainWidget::onSetAudio3()
 {
     for(int ch = 0; ch < devInfo.videoNum; ch++)
     {
         videoPane[ch]->setAudioOutput(0);
     }
-
     videoPane[2]->setAudioOutput(1);
+
+    if(operationMode == OPMODE_PLAYBACK)
+    {
+        return;
+    }
 
     audioStatus          = LIVE_AUDIO_SINGLE_3;
     cfgMain.gbl.audioOut = audioStatus;
@@ -2075,14 +2092,18 @@ void MainWidget::setAudio3()
 
     appmgr_set_audio_output_mix(AUDIO_LIVE, audioStatus-2);
 }
-void MainWidget::setAudio4()
+void MainWidget::onSetAudio4()
 {
     for(int ch = 0; ch < devInfo.videoNum; ch++)
     {
         videoPane[ch]->setAudioOutput(0);
     }
-
     videoPane[3]->setAudioOutput(1);
+
+    if(operationMode == OPMODE_PLAYBACK)
+    {
+        return;
+    }
 
     audioStatus          = LIVE_AUDIO_SINGLE_4;
     cfgMain.gbl.audioOut = audioStatus;
@@ -2111,11 +2132,11 @@ void MainWidget::setAudioOut()
 
     switch(audioStatus)
     {
-        case LIVE_AUDIO_MUTE:     { setAudioMute(); break; }
-        case LIVE_AUDIO_SINGLE_1: { setAudio1();    break; }
-        case LIVE_AUDIO_SINGLE_2: { setAudio2();    break; }
-        case LIVE_AUDIO_SINGLE_3: { setAudio3();    break; }
-        case LIVE_AUDIO_SINGLE_4: { setAudio4();    break; }
+        case LIVE_AUDIO_MUTE:     { onSetAudioMute(); break; }
+        case LIVE_AUDIO_SINGLE_1: { onSetAudio1();    break; }
+        case LIVE_AUDIO_SINGLE_2: { onSetAudio2();    break; }
+        case LIVE_AUDIO_SINGLE_3: { onSetAudio3();    break; }
+        case LIVE_AUDIO_SINGLE_4: { onSetAudio4();    break; }
     }
 }
 void MainWidget::setAudioMode()
@@ -2124,63 +2145,10 @@ void MainWidget::setAudioMode()
 
     switch(audioStatus)
     {
-        case LIVE_AUDIO_MUTE:     { setAudioMute(); break; }
-        case LIVE_AUDIO_SINGLE_1: { setAudio1();    break; }
-        case LIVE_AUDIO_SINGLE_2: { setAudio2();    break; }
-        case LIVE_AUDIO_SINGLE_3: { setAudio3();    break; }
-        case LIVE_AUDIO_SINGLE_4: { setAudio4();    break; }
-    }
-}
-void MainWidget::drawPbAudio1()
-{
-    qDebug() << "\nhi\n";
-
-    for(int ch = 0; ch < devInfo.videoNum; ch++)
-    {
-        videoPane[ch]->setAudioOutput(0);
-    }
-
-    videoPane[0]->setAudioOutput(1);
-}
-void MainWidget::drawPbAudio2()
-{
-    qDebug() << "\nhi\n";
-
-    for(int ch = 0; ch < devInfo.videoNum; ch++)
-    {
-        videoPane[ch]->setAudioOutput(0);
-    }
-
-    videoPane[1]->setAudioOutput(1);
-}
-void MainWidget::drawPbAudio3()
-{
-    qDebug() << "\nhi\n";
-
-    for(int ch = 0; ch < devInfo.videoNum; ch++)
-    {
-        videoPane[ch]->setAudioOutput(0);
-    }
-
-    videoPane[2]->setAudioOutput(1);
-}
-void MainWidget::drawPbAudio4()
-{
-    qDebug() << "\nhi\n";
-
-    for(int ch = 0; ch < devInfo.videoNum; ch++)
-    {
-        videoPane[ch]->setAudioOutput(0);
-    }
-
-    videoPane[3]->setAudioOutput(1);
-}
-void MainWidget::drawPbAudioMute()
-{
-    qDebug() << "\nhi\n";
-
-    for(int ch = 0; ch < devInfo.videoNum; ch++)
-    {
-        videoPane[ch]->setAudioOutput(0);
+        case LIVE_AUDIO_MUTE:     { onSetAudioMute(); break; }
+        case LIVE_AUDIO_SINGLE_1: { onSetAudio1();    break; }
+        case LIVE_AUDIO_SINGLE_2: { onSetAudio2();    break; }
+        case LIVE_AUDIO_SINGLE_3: { onSetAudio3();    break; }
+        case LIVE_AUDIO_SINGLE_4: { onSetAudio4();    break; }
     }
 }
