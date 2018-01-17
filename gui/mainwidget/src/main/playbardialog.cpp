@@ -251,6 +251,8 @@ void PlayBarDialog::resumePlayback(int isAviBackup, int sec)
     else
     {
         buttonPlay->setIcon(QIcon(":/images/play.png"));
+        buttonAudio->setIcon(QIcon(":/images/aomute.png"));
+        emit setAudioMute();
     }
 
     //fprintf(stderr, "\n\n\t playbackSpeed[%d], playbackSpeed_old[%d], playbackState[%d]\n", playbackSpeed, playbackSpeed_old, playbackState);
@@ -291,6 +293,11 @@ void PlayBarDialog::OutputAudio(int ch)
 }
 void PlayBarDialog::onButtonAudio(void)
 {
+    if(playbackState !=PB_PLAY || playbackSpeed != PB_SPEED_1 || playbackDirection != PB_FF)
+    {
+        return;
+    }
+
     if(currentSplit == 1)
     {
         if(indexAudio == currentChannelNum + 2)
