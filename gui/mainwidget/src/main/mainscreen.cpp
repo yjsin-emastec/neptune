@@ -344,6 +344,8 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
 
             isTrigger = 1;
 
+            videoPane[ch]->setGpsStatus(appmgr_get_gps_connected());
+
             appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
             videoPane[ch]->setAudioOutput(1);
 
@@ -364,6 +366,14 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
         {
             isTrigger = 0;
 
+            for(int ii = 0; ii < devInfo.videoNum; ii++)
+            {
+                if(ii != 1)
+                {
+                    videoPane[ii]->setGpsStatus(0);
+                }
+            }
+
             appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, sensorEventPopupCh);
 
             videoPane[sensorEventPopupCh]->setAudioOutput(0);
@@ -378,8 +388,6 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
 
             if(currentSplit == Split_1)
             {
-                currentSplit = Split_4;
-
                 splitScreen(Split_4);
             }
             else
@@ -1014,6 +1022,11 @@ int MainWidget::splitScreen(int split)
         appmgr_set_video_split(splitStartChNum, split * split);
     }
 
+    if(split == Split_1)
+    {
+        videoPane[currentChannelNum]->setGpsStatus(appmgr_get_gps_connected());
+    }
+
     for(i = 0; i < devInfo.videoNum; i++)
     {
         int vidCh = firstCh + i;
@@ -1021,6 +1034,11 @@ int MainWidget::splitScreen(int split)
         if(vidCh >= devInfo.videoNum)
         {
             vidCh -= devInfo.videoNum;
+        }
+
+        if(split == Split_4 && i != 1)
+        {
+            videoPane[i]->setGpsStatus(0);
         }
 
         videoPane[vidCh]->resize( paneWidth, paneHeight);
