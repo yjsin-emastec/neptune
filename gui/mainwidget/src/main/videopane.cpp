@@ -982,6 +982,13 @@ void VideoPane::drawRecordIcon(void)
         return;
     }
 
+#if 1 // GyverJeong [18/01/18] Fix bug of "Not display icon of record when detecting camera"
+    if((recordEnabled == true) && (novideoEnabled == true))
+    {
+        novideoEnabled = false;
+    }
+#endif
+
     if(novideoEnabled)
     {
         labelRecord->hide();
