@@ -346,8 +346,11 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
 
             videoPane[ch]->setGpsStatus(appmgr_get_gps_connected());
 
-            appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
-            videoPane[ch]->setAudioOutput(1);
+            if(audioStatus != LIVE_AUDIO_MUTE)
+            {
+                appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
+                videoPane[ch]->setAudioOutput(1);
+            }
 
             qDebug("\n\t %s() + : ch[%d], EVENT_POPUP_SENSOR_ON \n", __func__, ch);
 
