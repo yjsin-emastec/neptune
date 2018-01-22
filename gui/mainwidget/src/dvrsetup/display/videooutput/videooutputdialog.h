@@ -31,6 +31,7 @@ signals:
     void onVideoOutput_widthClicked(void);
     void onVideoOutput_heightClicked(void);
     void onVideoOutputSaveClicked(void);
+    void onVideoOutputDefaultClicked(void);
 
 protected:
     int indexCvbs;

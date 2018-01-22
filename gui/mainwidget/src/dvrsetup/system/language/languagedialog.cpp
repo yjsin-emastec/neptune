@@ -128,6 +128,7 @@ void LanguageDialog::onButtonLanguageUp()
      * 2. check the search/backupdialog. label size and button size was modified.
      * 3. check the stylesheet and MainWidget::loadStyleSheet(). Qbutton font was modified to small.
      * 4. check the device/triggerinputdialog. Qbutton size and font was modified.
+     * 5. check the display/videooutput/videooutputdialog. Qbutton size was modified.
      *
      * when you change the language to french, see below code.
      * 1. check the dvrsetup/system/upgrade/appupgradedialog. label size was modified.
@@ -136,6 +137,7 @@ void LanguageDialog::onButtonLanguageUp()
      *
      * when you change the language to Italian, see below code.
      * 1. check the device/triggerinputdialog. Qbutton size and font was modified.
+     * 2. check the display/videooutput/videooutputdialog. Qbutton size was modified.
      *
      * when you change the language to Portuguese, see below code.
      * 1. check the stylesheet and MainWidget::loadStyleSheet(). Qbutton font was modified to small.
@@ -149,6 +151,7 @@ void LanguageDialog::onButtonLanguageUp()
      * 5. check the dvrsetup/system/upgrade/appupgradedialog. label size was modified.
      * 6. check the firstcheck/rtcsetdialog. font size was modified.
      * 7. check the login/logindialog. font size was modified.
+     * 8. check the display/videooutput/videooutputdialog. Qbutton size was modified.
      *
      * when you change the language to German, see below code.
      * 1. check the dvrsetup/system/upgrade/appupgradedialog. font size was modified.
@@ -157,6 +160,7 @@ void LanguageDialog::onButtonLanguageUp()
      * 4. check the dvrsetup/display/osd/osddialog. font size was modified.
      * 5. check the firstcheck/rtcsetdialog. button size was modified.
      * 6. check the dvrsetup/setup/systempage. font size was modified.
+     * 7. check the display/videooutput/videooutputdialog. Qbutton size was modified.
      */
 }
 void LanguageDialog::onButtonLanguageDown()

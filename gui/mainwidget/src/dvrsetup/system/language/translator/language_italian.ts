@@ -15,7 +15,7 @@
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.ui" line="57"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="122"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="136"/>
         <source>Please insert a USB memory.</source>
         <translation>Inserire una memoria USB.</translation>
     </message>
@@ -50,116 +50,116 @@
         <translation>Progresso</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="120"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="121"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="124"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="130"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="134"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="135"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="138"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="144"/>
         <source>%1
 %2</source>
         <translation>%1
 %2</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="120"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="134"/>
         <source>After upgrading firmware,</source>
         <translation>Dopo aver aggiornato il firmware,</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="120"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="134"/>
         <source>System will restart.</source>
         <translation>Il sistema verrà riavviato.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="121"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="135"/>
         <source>Please insert a USB memory and then</source>
         <translation>Inserisci una memoria USB e poi</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="121"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="135"/>
         <source>click &apos;Find&apos; button.</source>
         <translation>fare clic sul pulsante &apos;Trova&apos;.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="122"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="123"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="125"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="126"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="127"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="128"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="129"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="131"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="132"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="197"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="136"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="137"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="139"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="140"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="141"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="142"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="143"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="145"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="146"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="211"/>
         <source>%1</source>
         <translation>%1</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="123"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="137"/>
         <source>Please reinsert a USB memory.</source>
         <translation>Reinserire una memoria USB.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="124"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="138"/>
         <source>A file was found.</source>
         <translation>È stato trovato un file.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="124"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="138"/>
         <source>Please select &apos;Upgrade&apos; button.</source>
         <translation>Seleziona il pulsante &apos;Upgrade&apos;.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="125"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="139"/>
         <source>Directory does not exist.</source>
         <translation>La directory non esiste.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="126"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="140"/>
         <source>File does not exist.</source>
         <translation>Il file non esiste.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="127"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="141"/>
         <source>File is invalid.</source>
         <translation>Il file non è valido.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="128"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="142"/>
         <source>List overflowed.</source>
         <translation>Elenco è traboccato.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="129"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="143"/>
         <source>Please do not remove USB memory.</source>
         <translation>Non rimuovere la memoria USB.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="130"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="144"/>
         <source>Please do not turn off system.</source>
         <translation>Non spegnere il sistema.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="130"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="144"/>
         <source>System will restart after upgrading.</source>
         <translation>Il sistema si riavvia dopo l&apos;aggiornamento.</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="131"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="145"/>
         <source>UPGRADE SUCCESS</source>
         <translation>SUCCESSO DI UPGRADE</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="132"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="146"/>
         <source>UPGRADE FAIL</source>
         <translation>FALLIMENTO DI UPGRADE</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="333"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="347"/>
         <source>NOTICE</source>
         <translation>AVVISO</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="333"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="347"/>
         <source>%1
 
 %2</source>
@@ -168,7 +168,7 @@
 %2</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="333"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="347"/>
         <source>Please unplug USB memory.</source>
         <translation>Scollegare la memoria USB.</translation>
     </message>
@@ -384,77 +384,77 @@ Accéso</translation>
         <translation>Indietro</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="29"/>
+        <location filename="../../../../search/calendarpage.cpp" line="30"/>
         <source>Close</source>
         <translation>Vicino</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="99"/>
+        <location filename="../../../../search/calendarpage.cpp" line="109"/>
         <source>Aug, 2016</source>
         <translation>Ago, 2016</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="218"/>
+        <location filename="../../../../search/calendarpage.cpp" line="228"/>
         <source>Jan</source>
         <translation>Gen</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="219"/>
+        <location filename="../../../../search/calendarpage.cpp" line="229"/>
         <source>Feb</source>
         <translation>Feb</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="220"/>
+        <location filename="../../../../search/calendarpage.cpp" line="230"/>
         <source>Mar</source>
         <translation>Mar</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="221"/>
+        <location filename="../../../../search/calendarpage.cpp" line="231"/>
         <source>Apr</source>
         <translation>Apr</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="222"/>
+        <location filename="../../../../search/calendarpage.cpp" line="232"/>
         <source>May</source>
         <translation>Mag</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="223"/>
+        <location filename="../../../../search/calendarpage.cpp" line="233"/>
         <source>Jun</source>
         <translation>Giu</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="224"/>
+        <location filename="../../../../search/calendarpage.cpp" line="234"/>
         <source>Jul</source>
         <translation>Lug</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="225"/>
+        <location filename="../../../../search/calendarpage.cpp" line="235"/>
         <source>Aug</source>
         <translation>Ago</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="226"/>
+        <location filename="../../../../search/calendarpage.cpp" line="236"/>
         <source>Sep</source>
         <translation>Set</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="227"/>
+        <location filename="../../../../search/calendarpage.cpp" line="237"/>
         <source>Oct</source>
         <translation>Ott</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="228"/>
+        <location filename="../../../../search/calendarpage.cpp" line="238"/>
         <source>Nov</source>
         <translation>Nov</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="229"/>
+        <location filename="../../../../search/calendarpage.cpp" line="239"/>
         <source>Dec</source>
         <translation>Dic</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="232"/>
+        <location filename="../../../../search/calendarpage.cpp" line="242"/>
         <source>%1, %2</source>
         <translation>%1. %2</translation>
     </message>
@@ -1103,13 +1103,13 @@ Archiviazione non esiste.</translation>
     </message>
     <message>
         <location filename="../../../device/diskformat/diskformatprocess.cpp" line="47"/>
-        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="54"/>
+        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="65"/>
         <source>Formatting...</source>
         <translation>Formattazione...</translation>
     </message>
     <message>
         <location filename="../../../device/diskformat/diskformatprocess.cpp" line="50"/>
-        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="57"/>
+        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="68"/>
         <source>%1
 %2</source>
         <translation>%1
@@ -1126,22 +1126,22 @@ Archiviazione non esiste.</translation>
         <translation>Il sistema si riavvia dopo la formato.</translation>
     </message>
     <message>
-        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="57"/>
+        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="68"/>
         <source>You must not turn off system.</source>
         <translation>Non spegnere il sistema.</translation>
     </message>
     <message>
-        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="57"/>
+        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="68"/>
         <source>Please wait during formatting.</source>
         <translation>Il sistema si riavvia dopo la formato.</translation>
     </message>
     <message>
-        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="128"/>
+        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="139"/>
         <source>Format Fail</source>
         <translation>FORMATO FALLIRE</translation>
     </message>
     <message>
-        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="129"/>
+        <location filename="../../../device/diskformat/diskformatprocess.cpp" line="140"/>
         <source>Format Success</source>
         <translation>FORMATO SUCCESSO</translation>
     </message>
@@ -1792,8 +1792,8 @@ Sensitivity: 5</source>
     <message>
         <location filename="../languagedialog.ui" line="126"/>
         <location filename="../languagedialog.cpp" line="71"/>
-        <location filename="../languagedialog.cpp" line="117"/>
-        <location filename="../languagedialog.cpp" line="155"/>
+        <location filename="../languagedialog.cpp" line="116"/>
+        <location filename="../languagedialog.cpp" line="167"/>
         <source>English</source>
         <translation>English</translation>
     </message>
@@ -1815,58 +1815,50 @@ Il sistema verrà riavviato.</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="76"/>
-        <location filename="../languagedialog.cpp" line="118"/>
-        <location filename="../languagedialog.cpp" line="156"/>
+        <location filename="../languagedialog.cpp" line="117"/>
+        <location filename="../languagedialog.cpp" line="168"/>
         <source>Korean</source>
         <translation>한국어</translation>
     </message>
     <message>
-        <location filename="../languagedialog.cpp" line="81"/>
-        <location filename="../languagedialog.cpp" line="125"/>
-        <location filename="../languagedialog.cpp" line="163"/>
+        <location filename="../languagedialog.cpp" line="106"/>
+        <location filename="../languagedialog.cpp" line="123"/>
+        <location filename="../languagedialog.cpp" line="174"/>
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
     <message>
-        <location filename="../languagedialog.cpp" line="86"/>
-        <location filename="../languagedialog.cpp" line="119"/>
-        <location filename="../languagedialog.cpp" line="126"/>
-        <location filename="../languagedialog.cpp" line="157"/>
-        <location filename="../languagedialog.cpp" line="164"/>
+        <location filename="../languagedialog.cpp" line="81"/>
+        <location filename="../languagedialog.cpp" line="118"/>
+        <location filename="../languagedialog.cpp" line="169"/>
         <source>Spanish</source>
         <translation type="unfinished">Espanol</translation>
     </message>
     <message>
-        <location filename="../languagedialog.cpp" line="91"/>
-        <location filename="../languagedialog.cpp" line="120"/>
-        <location filename="../languagedialog.cpp" line="127"/>
-        <location filename="../languagedialog.cpp" line="158"/>
-        <location filename="../languagedialog.cpp" line="165"/>
+        <location filename="../languagedialog.cpp" line="86"/>
+        <location filename="../languagedialog.cpp" line="119"/>
+        <location filename="../languagedialog.cpp" line="170"/>
         <source>French</source>
         <translation type="unfinished">Francais</translation>
     </message>
     <message>
-        <location filename="../languagedialog.cpp" line="96"/>
-        <location filename="../languagedialog.cpp" line="121"/>
-        <location filename="../languagedialog.cpp" line="128"/>
-        <location filename="../languagedialog.cpp" line="159"/>
-        <location filename="../languagedialog.cpp" line="166"/>
+        <location filename="../languagedialog.cpp" line="91"/>
+        <location filename="../languagedialog.cpp" line="120"/>
+        <location filename="../languagedialog.cpp" line="171"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
-        <location filename="../languagedialog.cpp" line="101"/>
-        <location filename="../languagedialog.cpp" line="122"/>
-        <location filename="../languagedialog.cpp" line="129"/>
-        <location filename="../languagedialog.cpp" line="160"/>
-        <location filename="../languagedialog.cpp" line="167"/>
+        <location filename="../languagedialog.cpp" line="96"/>
+        <location filename="../languagedialog.cpp" line="121"/>
+        <location filename="../languagedialog.cpp" line="172"/>
         <source>Portuguese</source>
         <translation>Português</translation>
     </message>
     <message>
-        <location filename="../languagedialog.cpp" line="106"/>
-        <location filename="../languagedialog.cpp" line="130"/>
-        <location filename="../languagedialog.cpp" line="168"/>
+        <location filename="../languagedialog.cpp" line="101"/>
+        <location filename="../languagedialog.cpp" line="122"/>
+        <location filename="../languagedialog.cpp" line="173"/>
         <source>Japanese</source>
         <translation>日本語</translation>
     </message>
@@ -1918,24 +1910,24 @@ Il sistema verrà riavviato.</translation>
     </message>
     <message>
         <location filename="../../../../login/logindialog.ui" line="147"/>
-        <location filename="../../../../login/logindialog.cpp" line="27"/>
+        <location filename="../../../../login/logindialog.cpp" line="34"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
         <location filename="../../../../login/logindialog.ui" line="163"/>
-        <location filename="../../../../login/logindialog.cpp" line="28"/>
+        <location filename="../../../../login/logindialog.cpp" line="35"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location filename="../../../../login/logindialog.cpp" line="61"/>
-        <location filename="../../../../login/logindialog.cpp" line="66"/>
+        <location filename="../../../../login/logindialog.cpp" line="68"/>
+        <location filename="../../../../login/logindialog.cpp" line="73"/>
         <source>Please input a password.</source>
         <translation>Inserisci una password.</translation>
     </message>
     <message>
-        <location filename="../../../../login/logindialog.cpp" line="150"/>
+        <location filename="../../../../login/logindialog.cpp" line="157"/>
         <source>Incorrect Password.
 Please try again.</source>
         <translation>Password errata. Riprova.</translation>
@@ -2334,7 +2326,7 @@ Lo stato attuale è scatto. </translation>
     </message>
     <message>
         <location filename="../../../../main/mainwidget.cpp" line="487"/>
-        <location filename="../../../../main/mainwidget.cpp" line="744"/>
+        <location filename="../../../../main/mainwidget.cpp" line="749"/>
         <source>POWER OFF</source>
         <translation>SPEGNI</translation>
     </message>
@@ -2350,7 +2342,7 @@ Il sistema è stato arrestato.
 Spegnere l&apos;alimentazione.</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="744"/>
+        <location filename="../../../../main/mainwidget.cpp" line="749"/>
         <source>				WARNING
 
 Do you want to shutdown the system?</source>
@@ -2359,7 +2351,7 @@ Do you want to shutdown the system?</source>
 Vuoi spegnere il sistema? </translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1195"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1200"/>
         <source>SEARCH</source>
         <translation>RICERCA</translation>
     </message>
@@ -2372,7 +2364,7 @@ No Storage</source>
 Archiviazione non esiste.</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1196"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1201"/>
         <source>WARNING
 
 No SSD</source>
@@ -2857,103 +2849,103 @@ Spento/Accéso</translation>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="30"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="31"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="36"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="37"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="41"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="42"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="47"/>
         <location filename="../../../display/osd/osddialog.cpp" line="48"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="49"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="56"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="62"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="71"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="77"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="102"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="108"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="59"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="60"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="67"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="73"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="82"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="88"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
         <source>%1
 %2</source>
         <translation>%1
 %2</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="30"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="31"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="56"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="62"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="41"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="42"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="67"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="73"/>
         <source>Camera Name</source>
         <translation>Nome del
 Telecàmera</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="30"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="36"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="48"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="56"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="71"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="102"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="41"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="47"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="59"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="67"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="82"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
         <source>Off</source>
         <translation>Spento</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="31"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="37"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="49"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="62"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="77"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="108"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="42"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="48"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="60"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="73"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="88"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
         <source>On</source>
         <translation>Accéso</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="36"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="37"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="71"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="77"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="47"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="48"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="82"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="88"/>
         <source>No Video</source>
         <translation>Nessun Video</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="42"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="43"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="87"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="93"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
         <source>%1%2%3</source>
         <translation>%1%2
 %3</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="42"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="43"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="87"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="93"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
         <source>Status Bar</source>
         <translation>Barra Stato</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="42"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="43"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="87"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="93"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
         <source>
 AutoHide: </source>
         <translation> </translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="42"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="87"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
         <source>Off </source>
         <translation>Accéso</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="43"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="93"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
         <source>On </source>
         <translation>Spento</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="48"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="49"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="102"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="108"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="59"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="60"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
         <source>Record Status</source>
         <translation>Stato Record</translation>
     </message>
@@ -2967,108 +2959,108 @@ AutoHide: </source>
     </message>
     <message>
         <location filename="../../../../main/playbardialog.cpp" line="77"/>
-        <location filename="../../../../main/playbardialog.cpp" line="358"/>
-        <location filename="../../../../main/playbardialog.cpp" line="370"/>
+        <location filename="../../../../main/playbardialog.cpp" line="365"/>
+        <location filename="../../../../main/playbardialog.cpp" line="377"/>
         <source>Pause</source>
         <translation>Pausa</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="381"/>
+        <location filename="../../../../main/playbardialog.cpp" line="388"/>
         <source>Play</source>
         <translation>Giocare</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="382"/>
+        <location filename="../../../../main/playbardialog.cpp" line="389"/>
         <source>FF x2</source>
         <translation>Velóce x2</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="383"/>
+        <location filename="../../../../main/playbardialog.cpp" line="390"/>
         <source>FF x4</source>
         <translation>Velóce x4</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="384"/>
+        <location filename="../../../../main/playbardialog.cpp" line="391"/>
         <source>FF x8</source>
         <translation>Velóce x8</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="385"/>
+        <location filename="../../../../main/playbardialog.cpp" line="392"/>
         <source>FF x16</source>
         <translation>Velóce x16</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="386"/>
+        <location filename="../../../../main/playbardialog.cpp" line="393"/>
         <source>FF x32</source>
         <translation>Velóce x32</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="387"/>
+        <location filename="../../../../main/playbardialog.cpp" line="394"/>
         <source>FF x64</source>
         <translation>Velóce x64</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="388"/>
+        <location filename="../../../../main/playbardialog.cpp" line="395"/>
         <source>FF x128</source>
         <translation>Velóce x128</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="389"/>
+        <location filename="../../../../main/playbardialog.cpp" line="396"/>
         <source>FF x256</source>
         <translation>Velóce x256</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="390"/>
+        <location filename="../../../../main/playbardialog.cpp" line="397"/>
         <source>FF x1024</source>
         <translation>Velóce x1024</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="398"/>
+        <location filename="../../../../main/playbardialog.cpp" line="405"/>
         <source>REW x1</source>
         <translation>Riavvolgere x1</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="399"/>
+        <location filename="../../../../main/playbardialog.cpp" line="406"/>
         <source>REW x2</source>
         <translation>Riavvolgere x2</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="400"/>
+        <location filename="../../../../main/playbardialog.cpp" line="407"/>
         <source>REW x4</source>
         <translation>Riavvolgere x4</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="401"/>
+        <location filename="../../../../main/playbardialog.cpp" line="408"/>
         <source>REW x8</source>
         <translation>Riavvolgere x8</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="402"/>
+        <location filename="../../../../main/playbardialog.cpp" line="409"/>
         <source>REW x16</source>
         <translation>Riavvolgere x16</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="403"/>
+        <location filename="../../../../main/playbardialog.cpp" line="410"/>
         <source>REW x32</source>
         <translation>Riavvolgere x32</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="404"/>
+        <location filename="../../../../main/playbardialog.cpp" line="411"/>
         <source>REW x64</source>
         <translation>Riavvolgere x64</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="405"/>
+        <location filename="../../../../main/playbardialog.cpp" line="412"/>
         <source>REW x128</source>
         <translation>Riavvolgere x128</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="406"/>
+        <location filename="../../../../main/playbardialog.cpp" line="413"/>
         <source>REW x256</source>
         <translation>Riavvolgere x256</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="407"/>
+        <location filename="../../../../main/playbardialog.cpp" line="414"/>
         <source>REW x1024</source>
         <translation>Riavvolgere x1024</translation>
     </message>
@@ -3828,12 +3820,12 @@ Upgrade </translation>
         <translation>Data &amp;&amp; Tempo</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="86"/>
+        <location filename="../../../setup/systempage.cpp" line="94"/>
         <source>SET DATE &amp; TIME</source>
         <translation>Imposta data e ora</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="87"/>
+        <location filename="../../../setup/systempage.cpp" line="95"/>
         <source>			WARNING
 
 Do you want to change time?
@@ -3848,12 +3840,12 @@ Riavvia il sistema dopo aver cambiato il tempo.
 </translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="192"/>
+        <location filename="../../../setup/systempage.cpp" line="200"/>
         <source>FACTORY DEFAULT</source>
         <translation>IMPOSTAZIONE DI FABBRICA</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="192"/>
+        <location filename="../../../setup/systempage.cpp" line="200"/>
         <source>			WARNING
 
 Do you want to set factory default?
@@ -4158,7 +4150,7 @@ Eliminare i dati o impostare l&apos;tèmpo.</translation>
         <translation>Completamento</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="229"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="237"/>
         <source>System Time must be later than record last time.</source>
         <translation>il tempo di sistema deve essere più tardi
 rispetto all&apos;ultimo tempo di registrazione.</translation>
@@ -4227,12 +4219,12 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <translation>Trigger4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="220"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="228"/>
         <source>PRIORITY REDUNDANT</source>
         <translation>PRIORITÀ REDUNDANT</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="221"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="229"/>
         <source>		%1
 
 %2
@@ -4244,65 +4236,61 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
 %3</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="221"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="229"/>
         <source>WARNING</source>
         <translation>AVVERTIMENTO</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="221"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="229"/>
         <source>Priority is redundant.</source>
         <translation>La priorità è ridondante.</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="221"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="229"/>
         <source>Please check priority.</source>
         <translation>Si prega di controllare la priorità.</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="270"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="272"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="274"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="276"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="278"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="280"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="282"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="284"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="286"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="288"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="290"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="292"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="294"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="296"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="298"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="300"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="302"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="304"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="306"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="308"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="310"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="312"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="314"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="316"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="318"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="320"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="322"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="324"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="326"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="328"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="330"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="332"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="334"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="336"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="338"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="340"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="342"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="344"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="346"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="348"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="350"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="352"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="354"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="356"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="358"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="360"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="362"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="364"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="366"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="368"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="370"/>
@@ -4320,10 +4308,10 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="394"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="396"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="398"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="400"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="402"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="404"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="406"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="408"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="410"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="412"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="414"/>
@@ -4341,10 +4329,10 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="438"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="440"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="442"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="444"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="446"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="448"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="450"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="452"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="454"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="456"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="458"/>
@@ -4362,10 +4350,10 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="482"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="484"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="486"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="488"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="490"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="492"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="494"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="496"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="498"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="500"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="502"/>
@@ -4383,122 +4371,118 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="526"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="528"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="530"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="532"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="534"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="536"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="538"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="540"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="542"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="544"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="546"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="548"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="550"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="552"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="554"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="556"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="558"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="560"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="562"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="564"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="566"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="568"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="570"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="575"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="572"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="574"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="576"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="578"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="581"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="584"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="587"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="590"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="593"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="596"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="599"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="602"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="605"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="608"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="621"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="622"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="623"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="624"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="626"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="627"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="628"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="583"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="586"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="589"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="592"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="595"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="598"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="601"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="604"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="607"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="610"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="613"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="616"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="629"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="630"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="631"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="645"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="646"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="647"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="648"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="650"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="651"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="652"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="632"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="634"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="635"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="636"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="637"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="638"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="639"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="653"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="654"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="655"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="670"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="671"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="672"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="673"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="675"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="676"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="677"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="656"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="658"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="659"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="660"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="661"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="662"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="663"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="678"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="679"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="680"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="694"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="695"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="696"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="697"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="699"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="700"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="701"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="681"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="683"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="684"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="685"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="686"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="687"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="688"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="702"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="703"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="704"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="718"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="719"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="720"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="721"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="723"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="724"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="725"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="705"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="707"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="708"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="709"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="710"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="711"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="712"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="726"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="727"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="728"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="742"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="743"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="744"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="745"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="747"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="748"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="749"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="729"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="731"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="732"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="733"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="734"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="735"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="736"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="750"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="751"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="752"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="766"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="767"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="768"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="769"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="771"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="772"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="773"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="753"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="755"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="756"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="757"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="758"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="759"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="760"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="774"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="775"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="776"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="790"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="791"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="792"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="793"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="795"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="796"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="797"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="777"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="779"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="780"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="781"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="782"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="783"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="784"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="798"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="799"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="800"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="810"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="811"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="812"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="813"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="814"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="815"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="816"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="817"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="801"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="803"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="804"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="805"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="806"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="807"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="808"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="818"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="819"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="820"/>
@@ -4512,14 +4496,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="828"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="829"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="830"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="839"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="840"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="841"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="842"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="843"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="844"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="845"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="846"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="831"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="832"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="833"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="834"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="835"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="836"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="837"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="838"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="847"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="848"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="849"/>
@@ -4533,14 +4517,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="857"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="858"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="859"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="868"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="869"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="870"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="871"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="872"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="873"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="874"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="875"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="860"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="861"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="862"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="863"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="864"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="865"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="866"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="867"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="876"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="877"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="878"/>
@@ -4554,14 +4538,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="886"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="887"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="888"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="897"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="898"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="899"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="900"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="901"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="902"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="903"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="904"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="889"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="890"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="891"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="892"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="893"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="894"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="895"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="896"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="905"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="906"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="907"/>
@@ -4575,14 +4559,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="915"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="916"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="917"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="926"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="927"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="928"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="929"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="931"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="932"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="933"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="918"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="919"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="920"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="921"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="922"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="923"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="924"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="925"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="934"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="935"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="936"/>
@@ -4596,14 +4580,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="944"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="945"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="946"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="955"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="956"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="957"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="958"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="959"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="960"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="961"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="962"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="947"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="948"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="949"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="950"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="951"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="952"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="953"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="954"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="963"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="964"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="965"/>
@@ -4617,14 +4601,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="973"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="974"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="975"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="984"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="985"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="986"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="987"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="988"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="989"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="990"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="991"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="976"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="977"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="978"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="979"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="980"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="981"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="982"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="983"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="992"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="993"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="994"/>
@@ -4638,14 +4622,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1002"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1003"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1004"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1013"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1014"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1015"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1016"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1017"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1018"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1019"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1020"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1005"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1006"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1007"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1008"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1009"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1010"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1011"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1012"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1021"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1022"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1023"/>
@@ -4659,292 +4643,185 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1031"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1032"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1033"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1034"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1035"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1036"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1037"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1038"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1039"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1040"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1042"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1043"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1044"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1049"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1050"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1051"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1052"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1053"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1054"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1055"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1060"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1061"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1062"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1063"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1064"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1065"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1066"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1071"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1072"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1073"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1074"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1075"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1076"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1077"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1082"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1083"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1084"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1085"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1086"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1087"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1088"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1093"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1094"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1095"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1096"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1097"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1098"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1099"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1104"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1105"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1106"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1107"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1108"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1109"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1110"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1115"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1116"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1117"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1118"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1119"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1120"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1121"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1126"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1127"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1128"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1129"/>
         <source>%1
 %2</source>
         <translation>%1
 %2</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="270"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="272"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="274"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="276"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="278"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="280"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="282"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="284"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="286"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="288"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="290"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="292"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="294"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="296"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="298"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="300"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="302"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="304"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="306"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="308"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="310"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="312"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="314"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="316"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="318"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="320"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="322"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="324"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="326"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="328"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="330"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="332"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="334"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="336"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="338"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="340"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="342"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="344"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="346"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="348"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="350"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="352"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="354"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="575"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="578"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="581"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="584"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="621"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="622"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="623"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="624"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="626"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="627"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="628"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="356"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="358"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="360"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="362"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="583"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="586"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="589"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="592"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="629"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="630"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="631"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="645"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="646"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="647"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="648"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="650"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="651"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="652"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="632"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="634"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="635"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="636"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="637"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="638"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="639"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="653"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="654"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="655"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="670"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="671"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="672"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="673"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="675"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="676"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="677"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="656"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="658"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="659"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="660"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="661"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="662"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="663"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="678"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="679"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="680"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="694"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="695"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="696"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="697"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="699"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="700"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="701"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="681"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="683"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="684"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="685"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="686"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="687"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="688"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="702"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="703"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="704"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="718"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="719"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="720"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="721"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="723"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="724"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="725"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="705"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="707"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="708"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="709"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="710"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="711"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="712"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="726"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="727"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="728"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="742"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="743"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="744"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="745"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="747"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="748"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="749"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="729"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="731"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="732"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="733"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="734"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="735"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="736"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="750"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="751"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="752"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="766"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="767"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="768"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="769"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="771"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="772"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="773"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="753"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="755"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="756"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="757"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="758"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="759"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="760"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="774"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="775"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="776"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="790"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="791"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="792"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="793"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="795"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="796"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="797"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="777"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="779"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="780"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="781"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="782"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="783"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="784"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="798"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="799"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="800"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="801"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="803"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="804"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="805"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="806"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="807"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="808"/>
         <source>Source</source>
         <translation>Oggetto</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="270"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="292"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="314"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="336"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="575"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="621"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="645"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="670"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="694"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="718"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="742"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="766"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="790"/>
-        <source>CAM 1</source>
-        <translation>CÀM 1</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="272"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="294"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="316"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="338"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="578"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="622"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="646"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="671"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="695"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="719"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="743"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="767"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="791"/>
-        <source>CAM 2</source>
-        <translation>CÀM 2</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="274"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="296"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="318"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="340"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="581"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="623"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="647"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="672"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="696"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="720"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="744"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="768"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="792"/>
-        <source>CAM 3</source>
-        <translation>CÀM 3</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="276"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="298"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="320"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="342"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="584"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="624"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="648"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="673"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="697"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="721"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="745"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="769"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="793"/>
-        <source>CAM 4</source>
-        <translation>CÀM 4</translation>
-    </message>
-    <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="278"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="300"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="322"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="344"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="626"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="650"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="675"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="699"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="723"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="747"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="771"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="795"/>
-        <source>Split 1</source>
-        <translation>Diviso 1</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="280"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="302"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="324"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="346"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="627"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="651"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="676"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="700"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="724"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="748"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="772"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="796"/>
-        <source>Split 2</source>
-        <translation>Diviso 2</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="282"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="304"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="326"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="348"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="628"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="652"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="677"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="701"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="725"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="749"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="773"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="797"/>
-        <source>Split 3</source>
-        <translation>Diviso 3</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="284"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="306"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="328"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="350"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="583"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="629"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="653"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="678"/>
@@ -4953,14 +4830,15 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="750"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="774"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="798"/>
-        <source>Split 4</source>
-        <translation>Diviso 4</translation>
+        <source>CAM 1</source>
+        <translation>CÀM 1</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="286"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="308"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="330"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="352"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="280"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="302"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="324"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="346"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="586"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="630"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="654"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="679"/>
@@ -4969,14 +4847,15 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="751"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="775"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="799"/>
-        <source>Split 5</source>
-        <translation>Diviso 5</translation>
+        <source>CAM 2</source>
+        <translation>CÀM 2</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="288"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="310"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="332"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="354"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="282"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="304"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="326"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="348"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="589"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="631"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="655"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="680"/>
@@ -4985,14 +4864,123 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="752"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="776"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="800"/>
+        <source>CAM 3</source>
+        <translation>CÀM 3</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="284"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="306"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="328"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="350"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="592"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="632"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="656"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="681"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="705"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="729"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="753"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="777"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="801"/>
+        <source>CAM 4</source>
+        <translation>CÀM 4</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="286"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="308"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="330"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="352"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="634"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="658"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="683"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="707"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="731"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="755"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="779"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="803"/>
+        <source>Split 1</source>
+        <translation>Diviso 1</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="288"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="310"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="332"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="354"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="635"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="659"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="684"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="708"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="732"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="756"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="780"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="804"/>
+        <source>Split 2</source>
+        <translation>Diviso 2</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="290"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="312"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="334"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="356"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="636"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="660"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="685"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="709"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="733"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="757"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="781"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="805"/>
+        <source>Split 3</source>
+        <translation>Diviso 3</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="292"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="314"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="336"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="358"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="637"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="661"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="686"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="710"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="734"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="758"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="782"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="806"/>
+        <source>Split 4</source>
+        <translation>Diviso 4</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="294"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="316"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="338"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="360"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="638"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="662"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="687"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="711"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="735"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="759"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="783"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="807"/>
+        <source>Split 5</source>
+        <translation>Diviso 5</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="296"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="318"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="340"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="362"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="639"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="663"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="688"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="712"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="736"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="760"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="784"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="808"/>
         <source>Split 6</source>
         <translation>Diviso 6</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="358"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="360"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="362"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="364"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="366"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="368"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="370"/>
@@ -5010,10 +4998,10 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="394"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="396"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="398"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="400"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="402"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="404"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="406"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="408"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="410"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="412"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="414"/>
@@ -5031,10 +5019,10 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="438"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="440"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="442"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="444"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="446"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="448"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="450"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="452"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="454"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="456"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="458"/>
@@ -5052,10 +5040,10 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="482"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="484"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="486"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="488"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="490"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="492"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="494"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="496"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="498"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="500"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="502"/>
@@ -5073,18 +5061,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="526"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="528"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="530"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="587"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="590"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="593"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="596"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="810"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="811"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="812"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="813"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="814"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="815"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="816"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="817"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="532"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="534"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="536"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="538"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="595"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="598"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="601"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="604"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="818"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="819"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="820"/>
@@ -5098,14 +5082,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="828"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="829"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="830"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="839"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="840"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="841"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="842"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="843"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="844"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="845"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="846"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="831"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="832"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="833"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="834"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="835"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="836"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="837"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="838"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="847"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="848"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="849"/>
@@ -5119,14 +5103,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="857"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="858"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="859"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="868"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="869"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="870"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="871"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="872"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="873"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="874"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="875"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="860"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="861"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="862"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="863"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="864"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="865"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="866"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="867"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="876"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="877"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="878"/>
@@ -5140,14 +5124,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="886"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="887"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="888"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="897"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="898"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="899"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="900"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="901"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="902"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="903"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="904"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="889"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="890"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="891"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="892"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="893"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="894"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="895"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="896"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="905"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="906"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="907"/>
@@ -5161,14 +5145,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="915"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="916"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="917"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="926"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="927"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="928"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="929"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="931"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="932"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="933"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="918"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="919"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="920"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="921"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="922"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="923"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="924"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="925"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="934"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="935"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="936"/>
@@ -5182,14 +5166,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="944"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="945"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="946"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="955"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="956"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="957"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="958"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="959"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="960"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="961"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="962"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="947"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="948"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="949"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="950"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="951"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="952"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="953"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="954"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="963"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="964"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="965"/>
@@ -5203,14 +5187,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="973"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="974"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="975"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="984"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="985"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="986"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="987"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="988"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="989"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="990"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="991"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="976"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="977"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="978"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="979"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="980"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="981"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="982"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="983"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="992"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="993"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="994"/>
@@ -5224,14 +5208,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1002"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1003"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1004"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1013"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1014"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1015"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1016"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1017"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1018"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1019"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1020"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1005"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1006"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1007"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1008"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1009"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1010"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1011"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1012"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1021"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1022"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1023"/>
@@ -5245,146 +5229,22 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1031"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1032"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1033"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1034"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1035"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1036"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1037"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1038"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1039"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1040"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
         <source>Delay</source>
         <translation>Ritardo</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="358"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="402"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="446"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="490"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="810"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="839"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="868"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="897"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="926"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="955"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="984"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1013"/>
-        <source>0 sec</source>
-        <translation>0 sec</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="360"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="404"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="448"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="492"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="811"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="840"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="869"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="898"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="927"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="956"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="985"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1014"/>
-        <source>1 sec</source>
-        <translation>1 sec</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="362"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="406"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="450"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="494"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="587"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="590"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="593"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="596"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="812"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="841"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="870"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="899"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="928"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="957"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="986"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1015"/>
-        <source>2 sec</source>
-        <translation>2 sec</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="364"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="408"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="452"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="496"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="813"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="842"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="871"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="900"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="929"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="958"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="987"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1016"/>
-        <source>3 sec</source>
-        <translation>3 sec</translation>
-    </message>
-    <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="366"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="410"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="454"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="498"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="814"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="843"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="872"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="901"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="959"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="988"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1017"/>
-        <source>4 sec</source>
-        <translation>4 sec</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="368"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="412"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="456"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="500"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="815"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="844"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="873"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="902"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="931"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="960"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="989"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1018"/>
-        <source>5 sec</source>
-        <translation>5 sec</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="370"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="414"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="458"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="502"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="816"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="845"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="874"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="903"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="932"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="961"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="990"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1019"/>
-        <source>6 sec</source>
-        <translation>6 sec</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="372"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="416"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="460"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="504"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="817"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="846"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="875"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="904"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="933"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="962"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="991"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1020"/>
-        <source>7 sec</source>
-        <translation>7 sec</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="374"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="418"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="462"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="506"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="818"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="847"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="876"/>
@@ -5393,14 +5253,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="963"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="992"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1021"/>
-        <source>8 sec</source>
-        <translation>8 sec</translation>
+        <source>0 sec</source>
+        <translation>0 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="376"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="420"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="464"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="508"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="368"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="412"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="456"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="500"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="819"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="848"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="877"/>
@@ -5409,14 +5269,18 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="964"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="993"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1022"/>
-        <source>9 sec</source>
-        <translation>9 sec</translation>
+        <source>1 sec</source>
+        <translation>1 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="378"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="422"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="466"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="510"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="370"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="414"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="458"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="502"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="595"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="598"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="601"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="604"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="820"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="849"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="878"/>
@@ -5425,14 +5289,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="965"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="994"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1023"/>
-        <source>10 sec</source>
-        <translation>10 sec</translation>
+        <source>2 sec</source>
+        <translation>2 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="380"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="424"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="468"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="512"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="372"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="416"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="460"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="504"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="821"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="850"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="879"/>
@@ -5441,14 +5305,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="966"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="995"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1024"/>
-        <source>11 sec</source>
-        <translation>11 sec</translation>
+        <source>3 sec</source>
+        <translation>3 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="382"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="426"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="470"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="514"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="374"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="418"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="462"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="506"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="822"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="851"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="880"/>
@@ -5457,14 +5321,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="967"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="996"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1025"/>
-        <source>12 sec</source>
-        <translation>12 sec</translation>
+        <source>4 sec</source>
+        <translation>4 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="384"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="428"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="472"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="516"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="376"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="420"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="464"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="508"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="823"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="852"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="881"/>
@@ -5473,14 +5337,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="968"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="997"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1026"/>
-        <source>13 sec</source>
-        <translation>13 sec</translation>
+        <source>5 sec</source>
+        <translation>5 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="386"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="430"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="474"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="518"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="378"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="422"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="466"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="510"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="824"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="853"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="882"/>
@@ -5489,14 +5353,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="969"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="998"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1027"/>
-        <source>14 sec</source>
-        <translation>14 sec</translation>
+        <source>6 sec</source>
+        <translation>6 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="388"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="432"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="476"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="520"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="380"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="424"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="468"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="512"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="825"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="854"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="883"/>
@@ -5505,14 +5369,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="970"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="999"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1028"/>
-        <source>15 sec</source>
-        <translation>15 sec</translation>
+        <source>7 sec</source>
+        <translation>7 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="390"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="434"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="478"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="522"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="382"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="426"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="470"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="514"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="826"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="855"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="884"/>
@@ -5521,14 +5385,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="971"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1000"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1029"/>
-        <source>16 sec</source>
-        <translation>16 sec</translation>
+        <source>8 sec</source>
+        <translation>8 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="392"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="436"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="480"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="524"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="384"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="428"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="472"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="516"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="827"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="856"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="885"/>
@@ -5537,14 +5401,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="972"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1001"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1030"/>
-        <source>17 sec</source>
-        <translation>17 sec</translation>
+        <source>9 sec</source>
+        <translation>9 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="394"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="438"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="482"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="526"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="386"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="430"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="474"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="518"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="828"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="857"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="886"/>
@@ -5553,14 +5417,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="973"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1002"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1031"/>
-        <source>18 sec</source>
-        <translation>18 sec</translation>
+        <source>10 sec</source>
+        <translation>10 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="396"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="440"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="484"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="528"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="388"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="432"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="476"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="520"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="829"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="858"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="887"/>
@@ -5569,14 +5433,14 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="974"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1003"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1032"/>
-        <source>19 sec</source>
-        <translation>19 sec</translation>
+        <source>11 sec</source>
+        <translation>11 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="398"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="442"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="486"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="530"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="390"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="434"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="478"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="522"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="830"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="859"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="888"/>
@@ -5585,72 +5449,250 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="975"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1004"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1033"/>
+        <source>12 sec</source>
+        <translation>12 sec</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="392"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="436"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="480"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="524"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="831"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="860"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="889"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="918"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="947"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="976"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1005"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1034"/>
+        <source>13 sec</source>
+        <translation>13 sec</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="394"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="438"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="482"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="526"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="832"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="861"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="890"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="919"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="948"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="977"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1006"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1035"/>
+        <source>14 sec</source>
+        <translation>14 sec</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="396"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="440"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="484"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="528"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="833"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="862"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="891"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="920"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="949"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="978"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1007"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1036"/>
+        <source>15 sec</source>
+        <translation>15 sec</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="398"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="442"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="486"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="530"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="834"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="863"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="892"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="921"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="950"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="979"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1008"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1037"/>
+        <source>16 sec</source>
+        <translation>16 sec</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="400"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="444"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="488"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="532"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="835"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="864"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="893"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="922"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="951"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="980"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1009"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1038"/>
+        <source>17 sec</source>
+        <translation>17 sec</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="402"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="446"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="490"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="534"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="836"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="865"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="894"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="923"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="952"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="981"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1010"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1039"/>
+        <source>18 sec</source>
+        <translation>18 sec</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="404"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="448"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="492"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="536"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="837"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="866"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="895"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="924"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="953"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="982"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1011"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1040"/>
+        <source>19 sec</source>
+        <translation>19 sec</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="406"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="450"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="494"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="538"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="838"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="867"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="896"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="925"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="954"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="983"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1012"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
         <source>20 sec</source>
         <translation>20 sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="534"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="536"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="538"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="540"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="542"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="544"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="546"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="548"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="550"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="552"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="554"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="556"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="558"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="560"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="562"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="564"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="566"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="568"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="570"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="599"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="602"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="605"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="608"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1042"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1043"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1044"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="572"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="574"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="576"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="578"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="607"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="610"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="613"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="616"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1049"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1050"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1051"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1052"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1053"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1054"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1055"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1060"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1061"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1062"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1063"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1064"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1065"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1066"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1071"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1072"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1073"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1074"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1075"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1076"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1077"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1082"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1083"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1084"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1085"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1086"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1087"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1088"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1093"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1094"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1095"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1096"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1097"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1098"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1099"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1104"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1105"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1106"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1107"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1108"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1109"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1110"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1115"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1116"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1117"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1118"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1119"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1120"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1121"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1126"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1127"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1128"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1129"/>
         <source>Priority</source>
         <translation>Priorità</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="534"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="542"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="552"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="562"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="572"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="607"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1049"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1060"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1071"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1082"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1093"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1104"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1115"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1126"/>
+        <source>1</source>
+        <translation>1</translation>
+    </message>
+    <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="544"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="554"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="564"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="599"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="574"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="610"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1050"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1061"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1072"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1083"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1094"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1105"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1116"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1127"/>
+        <source>2</source>
+        <translation>2</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="546"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="556"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="566"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="576"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="613"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1051"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1062"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1073"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1084"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1095"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1106"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1117"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1128"/>
+        <source>3</source>
+        <translation>3</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="548"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="558"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="568"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="578"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="616"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1052"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1063"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1074"/>
@@ -5658,57 +5700,7 @@ rispetto all&apos;ultimo tempo di registrazione.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1096"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1107"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1118"/>
-        <source>1</source>
-        <translation>1</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="536"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="546"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="556"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="566"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="602"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1042"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1053"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1064"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1075"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1086"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1097"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1108"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1119"/>
-        <source>2</source>
-        <translation>2</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="538"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="548"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="558"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="568"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="605"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1043"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1054"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1065"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1076"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1087"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1098"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1109"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1120"/>
-        <source>3</source>
-        <translation>3</translation>
-    </message>
-    <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="540"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="550"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="560"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="570"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="608"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1044"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1055"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1066"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1077"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1088"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1099"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1110"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1121"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1129"/>
         <source>4</source>
         <translation>4</translation>
     </message>
@@ -6122,17 +6114,22 @@ Rovescio</translation>
 456</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="38"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="44"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="49"/>
+        <location filename="../../../display/videooutput/videooutputdialog.ui" line="307"/>
+        <source>Default</source>
+        <translation>Predefinito</translation>
+    </message>
+    <message>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="39"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="45"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="50"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="51"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="52"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="98"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="119"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="139"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="171"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="53"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="101"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="107"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="122"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="143"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="176"/>
         <source>%1
 %2</source>
         <translation>%1
@@ -6151,145 +6148,161 @@ Rovescio</translation>
         <translation type="obsolete">FHD(1080p)</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="38"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="98"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="39"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="101"/>
         <source>HD</source>
         <translation>HD</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="38"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="98"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="39"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="101"/>
         <source>720p</source>
         <translation>720p</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="44"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="45"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="107"/>
         <source>FHD</source>
         <translation>FHD</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="44"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="45"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="107"/>
         <source>1080p</source>
         <translation>1080p</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="49"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="50"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="51"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="52"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="119"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="139"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="171"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="53"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="122"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="143"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="176"/>
         <source>CVBS</source>
         <translation>CVBS</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="49"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="171"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="50"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="176"/>
         <source>List1</source>
         <translation>Elenco1</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="50"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="119"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="51"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="122"/>
         <source>List2</source>
         <translation>Elenco2</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="51"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="139"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="52"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="143"/>
         <source>Manual</source>
         <translation>Manuale</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="52"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="53"/>
         <source>LIST1</source>
         <translation>Elenco1</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="61"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="80"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="87"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="121"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="148"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="155"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="173"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="202"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="62"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="83"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="90"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="124"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="153"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="160"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="178"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="208"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="436"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="448"/>
         <source>X</source>
         <translation>X</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="62"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="81"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="88"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="122"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="149"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="156"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="174"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="237"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="63"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="84"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="91"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="125"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="154"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="161"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="179"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="243"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="437"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="449"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="63"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="82"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="89"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="123"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="150"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="157"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="175"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="273"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="64"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="85"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="92"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="126"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="155"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="162"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="180"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="279"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="438"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="450"/>
         <source>WIDTH</source>
         <translation>LARGHEZZA</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="64"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="83"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="90"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="124"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="151"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="158"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="176"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="309"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="65"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="86"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="93"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="127"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="156"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="163"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="181"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="315"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="439"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="451"/>
         <source>HEIGHT</source>
         <translation>ALTEZZA</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="80"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="81"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="82"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="83"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="87"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="88"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="89"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="84"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="85"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="86"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="90"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="148"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="149"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="150"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="151"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="91"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="92"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="93"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="153"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="154"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="155"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="156"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="157"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="158"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="202"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="237"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="273"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="309"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="160"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="161"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="162"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="163"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="208"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="243"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="279"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="315"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="436"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="437"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="438"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="439"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="448"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="449"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="450"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="451"/>
         <source>%1
  %2 </source>
         <translation>%1
  %2 </translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="358"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="365"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="370"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="377"/>
         <source>INVALID Y OR HEIGHT</source>
         <translation>INVALIDO O ALTEZZA</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="359"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="371"/>
         <source>
 Please check Y or Height value!
 
@@ -6301,7 +6314,7 @@ Controllare Y o il valore dell&apos;altezza!
 Devi impostare il totale a 480 o meno.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="366"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="378"/>
         <source>
 Please check Y or Height value!
 
@@ -6313,12 +6326,46 @@ Controllare Y o il valore dell&apos;altezza!
 Devi impostare il totale a 576 o meno.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="387"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="388"/>
+        <source>INVALID WIDTH</source>
+        <translation>INVALIDÒ LA LARGHEZZA</translation>
+    </message>
+    <message>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="389"/>
+        <source>
+Please check Width value!
+
+Width pixel should be over 300.
+</source>
+        <translation>
+Si prega di controllare il valore di larghezza!
+
+Pixel di larghezza dovrebbe essere oltre 300.</translation>
+    </message>
+    <message>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="398"/>
+        <source>INVALID HEIGHT</source>
+        <translation>INVALIDÒ LA ALTEZZA</translation>
+    </message>
+    <message>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="399"/>
+        <source>
+Please check Height value!
+
+Height pixel should be over 200.
+</source>
+        <translation>
+Si prega di controllare il valore di altezza!
+
+Pixel di altezza dovrebbe essere oltre 200.</translation>
+    </message>
+    <message>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="358"/>
         <source>INVALID X OR WIDTH</source>
         <translation>INVALIDO X O LA LARGHEZZA</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="388"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="359"/>
         <source>
 Please check X or Width value!
 
@@ -6348,62 +6395,62 @@ Devi impostare il totale a 720 o meno.</translation>
         <translation>NESSUN DATO</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1173"/>
+        <location filename="../../../../main/videopane.cpp" line="1177"/>
         <source>PAL</source>
         <translation>PAL</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1174"/>
+        <location filename="../../../../main/videopane.cpp" line="1178"/>
         <source>NTSC</source>
         <translation>NTSC</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1175"/>
+        <location filename="../../../../main/videopane.cpp" line="1179"/>
         <source>720p25</source>
         <translation>720p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1176"/>
+        <location filename="../../../../main/videopane.cpp" line="1180"/>
         <source>720p30</source>
         <translation>720p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1177"/>
+        <location filename="../../../../main/videopane.cpp" line="1181"/>
         <source>720p50</source>
         <translation>720p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1178"/>
+        <location filename="../../../../main/videopane.cpp" line="1182"/>
         <source>720p60</source>
         <translation>720p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1179"/>
+        <location filename="../../../../main/videopane.cpp" line="1183"/>
         <source>1080p25</source>
         <translation>1080p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1180"/>
+        <location filename="../../../../main/videopane.cpp" line="1184"/>
         <source>1080p30</source>
         <translation>1080p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1181"/>
+        <location filename="../../../../main/videopane.cpp" line="1185"/>
         <source>1080p50</source>
         <translation>1080p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1182"/>
+        <location filename="../../../../main/videopane.cpp" line="1186"/>
         <source>1080p60</source>
         <translation>1080p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1183"/>
+        <location filename="../../../../main/videopane.cpp" line="1187"/>
         <source>1080i50</source>
         <translation>1080i50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1184"/>
+        <location filename="../../../../main/videopane.cpp" line="1188"/>
         <source>1080i60</source>
         <translation>1080i60</translation>
     </message>

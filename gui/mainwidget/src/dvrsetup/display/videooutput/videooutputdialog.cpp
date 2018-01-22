@@ -18,6 +18,26 @@ VideoOutputDialog::VideoOutputDialog(QWidget *parent)
     msgBox    = NULL;
     numKeypad = NULL;
 
+#if 1 //yjsin [18/01/22] if text is long, change button size.
+    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+    {
+        buttonDefault->setGeometry(13, 540, 340, 91);
+        //buttonDefault->setStyleSheet("font:38px");
+    }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+    {
+        buttonDefault->setGeometry(13, 540, 300, 91);
+    }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+    {
+        buttonDefault->setGeometry(13, 540, 300, 91);
+    }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+    {
+        buttonDefault->setGeometry(13, 540, 250, 91);
+    }
+#endif
+
     connect(buttonHdmi,         SIGNAL(released(void)), this, SLOT(onVideoOutputHdmi           (void)));
     connect(buttonCvbs,         SIGNAL(released(void)), this, SLOT(onVideoOutputCvbs           (void)));
     connect(button_cvbs_x,      SIGNAL(released(void)), this, SLOT(onVideoOutput_xClicked      (void)));
@@ -26,6 +46,7 @@ VideoOutputDialog::VideoOutputDialog(QWidget *parent)
     connect(button_cvbs_height, SIGNAL(released(void)), this, SLOT(onVideoOutput_heightClicked (void)));
     connect(buttonSave,         SIGNAL(released(void)), this, SLOT(onVideoOutputSaveClicked    (void)));
     connect(buttonClose,        SIGNAL(released(void)), this, SLOT(reject                      (void)));
+    connect(buttonDefault,      SIGNAL(released(void)), this, SLOT(onVideoOutputDefaultClicked (void)));
 }
 VideoOutputDialog::~VideoOutputDialog()
 {
@@ -66,6 +87,7 @@ void VideoOutputDialog::initVideoOutputConfig(void)
         button_cvbs_y      ->setEnabled(false);
         button_cvbs_width  ->setEnabled(false);
         button_cvbs_height ->setEnabled(false);
+        buttonDefault      ->hide();
     }
     else
     {
@@ -74,6 +96,7 @@ void VideoOutputDialog::initVideoOutputConfig(void)
         label4->setStyleSheet("background-color:rgb(50,57,83)");
         label5->setStyleSheet("background-color:rgb(50,57,83)");
         label6->setStyleSheet("background-color:rgb(50,57,83)");
+        buttonDefault->show();
 
         if(cfgSetup.gbl.ntsc)
         {
@@ -126,6 +149,7 @@ void VideoOutputDialog::onVideoOutputCvbs()
         button_cvbs_y      ->setEnabled(false);
         button_cvbs_width  ->setEnabled(false);
         button_cvbs_height ->setEnabled(false);
+        buttonDefault      ->hide();
         indexCvbs = 1;
     }
     else if(indexCvbs == 1)
@@ -142,6 +166,7 @@ void VideoOutputDialog::onVideoOutputCvbs()
         button_cvbs_y      ->setEnabled(true);
         button_cvbs_width  ->setEnabled(true);
         button_cvbs_height ->setEnabled(true);
+        buttonDefault      ->show();
 
         if(cfgSetup.gbl.ntsc)
         {
@@ -178,6 +203,7 @@ void VideoOutputDialog::onVideoOutputCvbs()
         button_cvbs_y      ->setEnabled(false);
         button_cvbs_width  ->setEnabled(false);
         button_cvbs_height ->setEnabled(false);
+        buttonDefault      ->hide();
         indexCvbs = 0;
     }
 }
@@ -327,6 +353,8 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
 {
     int maxValue_H = 720;
     int maxValue_V = (cfgSetup.gbl.ntsc) ? 480 : 576;
+    int minValue_H = 300;
+    int minValue_V = 200;
 
     if(indexCvbs == 2)
     {
@@ -343,44 +371,7 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
             msgBox = NULL;
         }
 
-        if((xstr.toInt() + wstr.toInt()) <= maxValue_H)
-        {
-            if((ystr.toInt() + hstr.toInt()) <= maxValue_V)
-            {
-                accept();
-            }
-            else
-            {
-                if(!msgBox)
-                {
-                    if(cfgSetup.gbl.ntsc)
-                    {
-                        msgBox = new TextMessageDialog(tr("INVALID Y OR HEIGHT"),
-                                tr("\nPlease check Y or Height value!\n"
-                                    "\nTotal vertical pixel should be below 480.\n"),
-                                2, this);
-                    }
-                    else
-                    {
-                        msgBox = new TextMessageDialog(tr("INVALID Y OR HEIGHT"),
-                                tr("\nPlease check Y or Height value!\n"
-                                    "\nTotal vertical pixel should be below 576.\n"),
-                                2, this);
-                    }
-                }
-
-                msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
-
-                if(msgBox->exec())
-                {
-                    ;
-                }
-
-                delete msgBox;
-                msgBox = NULL;
-            }
-        }
-        else
+        if((xstr.toInt() + wstr.toInt()) > maxValue_H)
         {
             if(!msgBox)
             {
@@ -389,7 +380,54 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
                             "\nTotal horizontal pixel should be below 720.\n"),
                         2, this);
             }
+        }
+        else if((ystr.toInt() + hstr.toInt()) > maxValue_V)
+        {
+            if(!msgBox)
+            {
+                if(cfgSetup.gbl.ntsc)
+                {
+                    msgBox = new TextMessageDialog(tr("INVALID Y OR HEIGHT"),
+                            tr("\nPlease check Y or Height value!\n"
+                                "\nTotal vertical pixel should be below 480.\n"),
+                            2, this);
+                }
+                else
+                {
+                    msgBox = new TextMessageDialog(tr("INVALID Y OR HEIGHT"),
+                            tr("\nPlease check Y or Height value!\n"
+                                "\nTotal vertical pixel should be below 576.\n"),
+                            2, this);
+                }
+            }
+        }
+        else if(wstr.toInt() < minValue_H)
+        {
+            if(!msgBox)
+            {
+                msgBox = new TextMessageDialog(tr("INVALID WIDTH"),
+                        tr("\nPlease check Width value!\n"
+                            "\nWidth pixel should be over 300.\n"),
+                        2, this);
+            }
+        }
+        else if(hstr.toInt() < minValue_V)
+        {
+            if(!msgBox)
+            {
+                msgBox = new TextMessageDialog(tr("INVALID HEIGHT"),
+                        tr("\nPlease check Height value!\n"
+                            "\nHeight pixel should be over 200.\n"),
+                        2, this);
+            }
+        }
+        else
+        {
+            accept();
+        }
 
+        if(msgBox)
+        {
             msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
             if(msgBox->exec())
@@ -404,6 +442,33 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
     else
     {
         accept();
+    }
+}
+void VideoOutputDialog::onVideoOutputDefaultClicked(void)
+{
+    if(cfgSetup.gbl.ntsc)
+    {
+        sprintf(DisplayCfg.cvbs_ntsc_x_value, "%s", "24");
+        sprintf(DisplayCfg.cvbs_ntsc_y_value, "%s", "12");
+        sprintf(DisplayCfg.cvbs_ntsc_width_value, "%s", "672");
+        sprintf(DisplayCfg.cvbs_ntsc_height_value, "%s", "456");
+
+        button_cvbs_x      ->setText(tr("%1\n %2 ").arg(tr("X"     )).arg(DisplayCfg.cvbs_ntsc_x_value     ));
+        button_cvbs_y      ->setText(tr("%1\n %2 ").arg(tr("Y"     )).arg(DisplayCfg.cvbs_ntsc_y_value     ));
+        button_cvbs_width  ->setText(tr("%1\n %2 ").arg(tr("WIDTH" )).arg(DisplayCfg.cvbs_ntsc_width_value ));
+        button_cvbs_height ->setText(tr("%1\n %2 ").arg(tr("HEIGHT")).arg(DisplayCfg.cvbs_ntsc_height_value));
+    }
+    else
+    {
+        sprintf(DisplayCfg.cvbs_pal_x_value, "%s", "24");
+        sprintf(DisplayCfg.cvbs_pal_y_value, "%s", "12");
+        sprintf(DisplayCfg.cvbs_pal_width_value, "%s", "672");
+        sprintf(DisplayCfg.cvbs_pal_height_value, "%s", "526");
+
+        button_cvbs_x      ->setText(tr("%1\n %2 ").arg(tr("X"     )).arg(DisplayCfg.cvbs_pal_x_value     ));
+        button_cvbs_y      ->setText(tr("%1\n %2 ").arg(tr("Y"     )).arg(DisplayCfg.cvbs_pal_y_value     ));
+        button_cvbs_width  ->setText(tr("%1\n %2 ").arg(tr("WIDTH" )).arg(DisplayCfg.cvbs_pal_width_value ));
+        button_cvbs_height ->setText(tr("%1\n %2 ").arg(tr("HEIGHT")).arg(DisplayCfg.cvbs_pal_height_value));
     }
 }
 void VideoOutputDialog::keyPressEvent(QKeyEvent *event)
