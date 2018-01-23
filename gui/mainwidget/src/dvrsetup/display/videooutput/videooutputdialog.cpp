@@ -353,8 +353,8 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
 {
     int maxValue_H = 720;
     int maxValue_V = (cfgSetup.gbl.ntsc) ? 480 : 576;
-    int minValue_H = 300;
-    int minValue_V = 200;
+    int minValue_H = 320;
+    int minValue_V = (cfgSetup.gbl.ntsc) ? 240 : 288;
 
     if(indexCvbs == 2)
     {
@@ -377,7 +377,7 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
             {
                 msgBox = new TextMessageDialog(tr("INVALID X OR WIDTH"),
                         tr("\nPlease check X or Width value!\n"
-                            "\nTotal horizontal pixel should be below 720.\n"),
+                            "\nTotal horizontal pixel should be below %1.\n").arg(maxValue_H),
                         2, this);
             }
         }
@@ -385,20 +385,10 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
         {
             if(!msgBox)
             {
-                if(cfgSetup.gbl.ntsc)
-                {
-                    msgBox = new TextMessageDialog(tr("INVALID Y OR HEIGHT"),
-                            tr("\nPlease check Y or Height value!\n"
-                                "\nTotal vertical pixel should be below 480.\n"),
-                            2, this);
-                }
-                else
-                {
-                    msgBox = new TextMessageDialog(tr("INVALID Y OR HEIGHT"),
-                            tr("\nPlease check Y or Height value!\n"
-                                "\nTotal vertical pixel should be below 576.\n"),
-                            2, this);
-                }
+                msgBox = new TextMessageDialog(tr("INVALID Y OR HEIGHT"),
+                        tr("\nPlease check Y or Height value!\n"
+                            "\nTotal vertical pixel should be below %1.\n").arg(maxValue_V),
+                        2, this);
             }
         }
         else if(wstr.toInt() < minValue_H)
@@ -407,7 +397,7 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
             {
                 msgBox = new TextMessageDialog(tr("INVALID WIDTH"),
                         tr("\nPlease check Width value!\n"
-                            "\nWidth pixel should be over 300.\n"),
+                            "\nWidth pixel should be over %1.\n").arg(minValue_H),
                         2, this);
             }
         }
@@ -417,7 +407,7 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
             {
                 msgBox = new TextMessageDialog(tr("INVALID HEIGHT"),
                         tr("\nPlease check Height value!\n"
-                            "\nHeight pixel should be over 200.\n"),
+                            "\nHeight pixel should be over %1.\n").arg(minValue_V),
                         2, this);
             }
         }

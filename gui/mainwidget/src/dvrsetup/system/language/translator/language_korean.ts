@@ -1937,7 +1937,7 @@ Sensitivity: 5</source>
         <location filename="../languagedialog.ui" line="126"/>
         <location filename="../languagedialog.cpp" line="71"/>
         <location filename="../languagedialog.cpp" line="116"/>
-        <location filename="../languagedialog.cpp" line="167"/>
+        <location filename="../languagedialog.cpp" line="171"/>
         <source>English</source>
         <translation>English</translation>
     </message>
@@ -1959,21 +1959,21 @@ System will restart.</source>
     <message>
         <location filename="../languagedialog.cpp" line="76"/>
         <location filename="../languagedialog.cpp" line="117"/>
-        <location filename="../languagedialog.cpp" line="168"/>
+        <location filename="../languagedialog.cpp" line="172"/>
         <source>Korean</source>
         <translation>한국어</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="106"/>
         <location filename="../languagedialog.cpp" line="123"/>
-        <location filename="../languagedialog.cpp" line="174"/>
+        <location filename="../languagedialog.cpp" line="178"/>
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="81"/>
         <location filename="../languagedialog.cpp" line="118"/>
-        <location filename="../languagedialog.cpp" line="169"/>
+        <location filename="../languagedialog.cpp" line="173"/>
         <source>Spanish</source>
         <translatorcomment>ñ이 î으로 출력됨
 Español
@@ -1983,7 +1983,7 @@ Español
     <message>
         <location filename="../languagedialog.cpp" line="86"/>
         <location filename="../languagedialog.cpp" line="119"/>
-        <location filename="../languagedialog.cpp" line="170"/>
+        <location filename="../languagedialog.cpp" line="174"/>
         <source>French</source>
         <translatorcomment>ç 깨짐
 Français
@@ -1993,21 +1993,21 @@ Français
     <message>
         <location filename="../languagedialog.cpp" line="91"/>
         <location filename="../languagedialog.cpp" line="120"/>
-        <location filename="../languagedialog.cpp" line="171"/>
+        <location filename="../languagedialog.cpp" line="175"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="96"/>
         <location filename="../languagedialog.cpp" line="121"/>
-        <location filename="../languagedialog.cpp" line="172"/>
+        <location filename="../languagedialog.cpp" line="176"/>
         <source>Portuguese</source>
         <translation>Português</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="101"/>
         <location filename="../languagedialog.cpp" line="122"/>
-        <location filename="../languagedialog.cpp" line="173"/>
+        <location filename="../languagedialog.cpp" line="177"/>
         <source>Japanese</source>
         <translation>日本語</translation>
     </message>
@@ -6471,17 +6471,17 @@ You must delete data or set time.</source>
         <translation>기본값</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="39"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="45"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="50"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="51"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="52"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="53"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="101"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="107"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="122"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="143"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="176"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="59"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="65"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="70"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="71"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="72"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="73"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="121"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="127"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="142"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="163"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="196"/>
         <source>%1
 %2</source>
         <translatorcomment>표시 안됨</translatorcomment>
@@ -6501,149 +6501,149 @@ You must delete data or set time.</source>
         <translation type="obsolete">FHD(1080p)</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="39"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="101"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="59"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="121"/>
         <source>HD</source>
         <translation>HD</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="39"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="101"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="59"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="121"/>
         <source>720p</source>
         <translation>720p</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="45"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="107"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="65"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="127"/>
         <source>FHD</source>
         <translation>FHD</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="45"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="107"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="65"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="127"/>
         <source>1080p</source>
         <translation>1080p</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="50"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="51"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="52"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="53"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="122"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="143"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="176"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="70"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="71"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="72"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="73"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="142"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="163"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="196"/>
         <source>CVBS</source>
         <translation>CVBS</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="50"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="176"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="70"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="196"/>
         <source>List1</source>
         <translation>목록1</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="51"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="122"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="71"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="142"/>
         <source>List2</source>
         <translation>목록2</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="52"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="143"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="72"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="163"/>
         <source>Manual</source>
         <translation>수동</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="53"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="73"/>
         <source>LIST1</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>목록1</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="62"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="83"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="90"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="124"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="153"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="160"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="178"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="208"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="436"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="448"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="82"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="103"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="110"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="144"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="173"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="180"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="198"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="228"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="446"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="458"/>
         <source>X</source>
         <translation>X</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="63"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="84"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="91"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="125"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="154"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="161"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="179"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="243"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="437"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="449"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="83"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="111"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="145"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="174"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="181"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="199"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="263"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="447"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="459"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="64"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="85"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="92"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="126"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="155"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="162"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="180"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="279"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="438"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="450"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="84"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="105"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="112"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="146"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="175"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="182"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="200"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="299"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="448"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="460"/>
         <source>WIDTH</source>
         <translation>너비</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="65"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="86"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="93"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="127"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="156"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="163"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="181"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="315"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="439"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="451"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="85"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="106"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="113"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="147"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="176"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="183"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="201"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="335"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="449"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="461"/>
         <source>HEIGHT</source>
         <translation>높이</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="83"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="84"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="85"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="86"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="90"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="91"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="92"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="93"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="153"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="154"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="155"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="156"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="160"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="161"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="162"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="163"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="208"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="243"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="279"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="315"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="436"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="437"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="438"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="439"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="103"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="105"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="106"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="110"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="111"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="112"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="113"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="173"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="174"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="175"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="176"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="180"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="181"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="182"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="183"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="228"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="263"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="299"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="335"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="446"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="447"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="448"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="449"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="450"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="451"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="458"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="459"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="460"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="461"/>
         <source>%1
  %2 </source>
         <translatorcomment>번역 안됨</translatorcomment>
@@ -6651,35 +6651,81 @@ You must delete data or set time.</source>
  %2 </translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="388"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="379"/>
+        <source>
+Please check X or Width value!
+
+Total horizontal pixel should be below %1.
+</source>
+        <translation>
+X 또는 너비값를 확인하십시오!
+
+총합을 %1 이하로 설정해야 합니다.</translation>
+    </message>
+    <message>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="389"/>
+        <source>
+Please check Y or Height value!
+
+Total vertical pixel should be below %1.
+</source>
+        <translation>
+ Y 또는 높이값를 확인하십시오!
+
+총합을 %1 이하로 설정해야 합니다.</translation>
+    </message>
+    <message>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="398"/>
         <source>INVALID WIDTH</source>
         <translation>잘못된 너비값입니다.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="389"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="399"/>
+        <source>
+Please check Width value!
+
+Width pixel should be over %1.
+</source>
+        <translation>
+너비값를 확인하십시오!
+
+너비를 %1 이하로 설정해야 합니다.</translation>
+    </message>
+    <message>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="409"/>
+        <source>
+Please check Height value!
+
+Height pixel should be over %1.
+</source>
+        <translation>
+높이값를 확인하십시오!
+
+높이를 %1 이하로 설정해야 합니다.</translation>
+    </message>
+    <message>
         <source>
 Please check Width value!
 
 Width pixel should be over 300.
 </source>
-        <translation>
+        <translation type="obsolete">
 너비값를 확인하십시오!
 
 너비를 300 이하로 설정해야 합니다.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="398"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="408"/>
         <source>INVALID HEIGHT</source>
         <translation>잘못된 높이값입니다.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="399"/>
         <source>
 Please check Height value!
 
 Height pixel should be over 200.
 </source>
-        <translation>
+        <translation type="obsolete">
 높이값를 확인하십시오!
 
 높이를 200 이하로 설정해야 합니다.</translation>
@@ -6709,48 +6755,44 @@ Height pixel should be over 200.
  %1 </translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="370"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="377"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="388"/>
         <source>INVALID Y OR HEIGHT</source>
         <translation>잘못된 Y 또는 높이값입니다.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="371"/>
         <source>
 Please check Y or Height value!
 
 Total vertical pixel should be below 480.
 </source>
-        <translation>
+        <translation type="obsolete">
+ Y 또는 높이값를 확인하십시오!
+
+총합을 480 이하로 설정해야 합니다.</translation>
+    </message>
+    <message>
+        <source>
+Please check Y or Height value!
+
+Total vertical pixel should be below 576.
+</source>
+        <translation type="obsolete">
  Y 또는 높이값를 확인하십시오!
 
 총합을 480 이하로 설정해야 합니다.</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="378"/>
-        <source>
-Please check Y or Height value!
-
-Total vertical pixel should be below 576.
-</source>
-        <translation>
- Y 또는 높이값를 확인하십시오!
-
-총합을 480 이하로 설정해야 합니다.</translation>
-    </message>
-    <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="358"/>
         <source>INVALID X OR WIDTH</source>
         <translation>잘못된 X 또는 너비값입니다.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="359"/>
         <source>
 Please check X or Width value!
 
 Total horizontal pixel should be below 720.
 </source>
-        <translation>
+        <translation type="obsolete">
 X 또는 너비값를 확인하십시오!
 
 총합을 480 이하로 설정해야 합니다.</translation>
