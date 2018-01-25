@@ -830,6 +830,11 @@ void PlayTimeBar::mousePressEvent(QMouseEvent *event)
     {
         return;
     }
+    else if(event->x()-TL_LEFT_MARGIN < 0 || event->x()-TL_LEFT_MARGIN > TL_WIDTH )
+    {
+        //When click outside of TimeLine, return event.
+        return;
+    }
 
     if(event->button() == Qt::LeftButton)
     {
