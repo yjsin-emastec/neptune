@@ -1598,7 +1598,7 @@ Sensitivity: 5</source>
     <message>
         <location filename="../../information/informationdialog.ui" line="121"/>
         <source>License Plate</source>
-        <translation>車両番号</translation>
+        <translation>車ばんごう</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.ui" line="137"/>
@@ -1805,7 +1805,7 @@ System will restart.</source>
     <message>
         <location filename="../../licenseplate/licenseplatedialog.ui" line="101"/>
         <source>License Plate</source>
-        <translation>車両番号</translation>
+        <translation>車ばんごう</translation>
     </message>
     <message>
         <location filename="../../licenseplate/licenseplatedialog.ui" line="140"/>
@@ -3663,7 +3663,7 @@ some data will be erased from storage.
         <location filename="../../../setup/systempage.ui" line="46"/>
         <source>License
 Plate</source>
-        <translation>車両番号</translation>
+        <translation>車ばんごう</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.ui" line="77"/>
