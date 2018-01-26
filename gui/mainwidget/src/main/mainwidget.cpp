@@ -782,38 +782,26 @@ void MainWidget::systemShutdown()
         }
     }
 
-    time_t          curr;
-    struct tm       _tmNow;
-    struct tm      *_ptmNow;
-    struct timeval  tv;
+    time_t          gpsTime;
+    struct tm       tmGps;
+    struct tm      *ptmGps;
 
-    ret = gps_get_time(&curr);
+    ret = gps_get_time(&gpsTime);
 
     if(ret)
     {
-        _ptmNow = localtime_r(&curr, &_tmNow);
+        ptmGps = localtime_r(&gpsTime, &tmGps);
         fprintf(stderr,"============================\n");
-        fprintf(stderr, "%04d/%02d/%02d %02d:%02d:%02d\n", _tmNow.tm_year+1900, _tmNow.tm_mon+1, _tmNow.tm_mday, _tmNow.tm_hour, _tmNow.tm_min, _tmNow.tm_sec);
+        fprintf(stderr, "GPS TIME : [%04d/%02d/%02d %02d:%02d:%02d]\n", tmGps.tm_year+1900, tmGps.tm_mon+1, tmGps.tm_mday, tmGps.tm_hour, tmGps.tm_min, tmGps.tm_sec);
         fprintf(stderr,"============================\n");
 
         if(utils_cfg_cmp_item(SystemCfg.gps_sync, "ON") == 0)
         {
-#if 1 // jungyver [17/07/11]
-            if(curr >= RTC_BASE_TIME && curr < RTC_Y2K38_TIME)
+            if(gpsTime >= RTC_BASE_TIME && gpsTime < RTC_Y2K38_TIME)
             {
-                tv.tv_sec  = curr;
-                tv.tv_usec = 500;
-                settimeofday(&tv, NULL);
-                rtc_set_time(curr);
-                fprintf(stderr, "Notice : GPS sync\n");
+                rtc_set_time(gpsTime);
+                fprintf(stderr, "Synchronize RTC with GPS time and then Shut down system\n");
             }
-#else
-            tv.tv_sec  = curr;
-            tv.tv_usec = 500;
-            settimeofday(&tv, NULL);
-            rtc_set_time(curr);
-            fprintf(stderr, "Notice : GPS sync\n");
-#endif
         }
     }
 
