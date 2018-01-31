@@ -52,7 +52,7 @@ ea_image_info_t eaImageInfo[EA_IMAGE_MAX] =
 };
 static const char *file_prefix[] =
 {
-    "cardvr", "bootld", "kernel", "btlogo", "rootfs", NULL
+    "mdvr", "cardvr", "bootld", "kernel", "btlogo", "rootfs", NULL
 };
 
 //----------------------------------------------------------------------------
@@ -70,9 +70,19 @@ static int upgrade_file_check(const char *file_name)
 
     for(ii = 0; file_prefix[ii]; ii++)
     {
-        if(strncmp(file_name, file_prefix[ii], 6) == 0)
+        if(ii == 0)
         {
-            return 0;
+            if(strncmp(file_name, file_prefix[ii], 4) == 0)
+            {
+                return 0;
+            }
+        }
+        else
+        {
+            if(strncmp(file_name, file_prefix[ii], 6) == 0)
+            {
+                return 0;
+            }
         }
     }
 
@@ -565,7 +575,7 @@ int utils_upgrade_firmware_pre_check(int *main_exist)
             break;
         }
 
-        if(!strncmp(dent->d_name, "cardvr", 6))
+        if(!strncmp(dent->d_name, "cardvr", 6) || !strncmp(dent->d_name, "mdvr", 4))
         {
             *main_exist = 1;
         }

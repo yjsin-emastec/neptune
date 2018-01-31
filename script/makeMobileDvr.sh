@@ -32,9 +32,9 @@ case "$1" in
         ;;
 esac
 
-cat bootld.tmp kernel.tmp btlogo.tmp rootfs.tmp > cardvr.bin
+cat bootld.tmp kernel.tmp btlogo.tmp rootfs.tmp > mdvr.bin
 rm -f *.tmp
-cp -a cardvr.bin /tftpboot
+cp -a mdvr.bin /tftpboot
 echo OK
 echo ""
 exit 0

@@ -41,7 +41,7 @@
 static char               device_node [32];
 static char               upfold_name [128];
 static char               upfile_name [MAX_UPFILES][MAX_UPFILE_NAME];
-static const char        *file_prefix [] = { "cardvr", "bootld", "kernel", "btlogo", "rootfs", NULL };
+static const char        *file_prefix [] = { "mdvr", "cardvr", "bootld", "kernel", "btlogo", "rootfs", NULL };
 
 //----------------------------------------------------------------------------
 // Internal function body:
@@ -52,9 +52,19 @@ static int file_check(const char *file_name)
 
     for(ii = 0; file_prefix[ii]; ii++)
     {
-        if(strncmp(file_name, file_prefix[ii], 6) == 0)
+        if(ii == 0)
         {
-            return 0;
+            if(strncmp(file_name, file_prefix[ii], 4) == 0)
+            {
+                return 0;
+            }
+        }
+        else
+        {
+            if(strncmp(file_name, file_prefix[ii], 6) == 0)
+            {
+                return 0;
+            }
         }
     }
 
@@ -308,6 +318,10 @@ int utils_appup_file_check(char *fname, int len)
         }
 
         if(strncmp(dent->d_name, "btlogo", 6) == 0)
+        {
+            sprintf(upfile_name[upfile_nums++], "%s", dent->d_name);
+        }
+        else if(strncmp(dent->d_name, "mdvr", 4) == 0)
         {
             sprintf(upfile_name[upfile_nums++], "%s", dent->d_name);
         }
