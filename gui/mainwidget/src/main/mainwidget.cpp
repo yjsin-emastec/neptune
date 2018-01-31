@@ -208,10 +208,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
 
-        for(int ch = 0; ch < devInfo.videoNum; ch++)
-        {
-            stop_all_record(ch);
-        }
+        ParkingSystem();
 
         sync(); sync(); sync();
         sleep(2);
@@ -241,10 +238,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 4) // Factory Default
     {
-        for(int ch = 0; ch < devInfo.videoNum; ch++)
-        {
-            stop_all_record(ch);
-        }
+        ParkingSystem();
 
         qDebug("setup : factory default");
 
@@ -276,10 +270,8 @@ void MainWidget::onSaveSystemPage(int type, int val)
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
 
-        for(int ch = 0; ch < devInfo.videoNum; ch++)
-        {
-            stop_all_record(ch);
-        }
+        ParkingSystem();
+
         qDebug("setup : change language");
         //system_state = SYSTEM_CHANGE_LANGUAGE;
 
@@ -288,10 +280,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 7) // Load config
     {
-        for(int ch = 0; ch < devInfo.videoNum; ch++)
-        {
-            stop_all_record(ch);
-        }
+        ParkingSystem();
 
         qDebug("setup : load config");
 
@@ -306,10 +295,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 8) // Firmware Upgrade
     {
-        for(int ch = 0; ch < devInfo.videoNum; ch++)
-        {
-            stop_all_record(ch);
-        }
+        ParkingSystem();
 
         qDebug("setup : firmware upgrade");
 
@@ -433,10 +419,7 @@ void MainWidget::onSaveDisplayPage(int type)
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
 
-        for(int ch = 0; ch < devInfo.videoNum; ch++)
-        {
-            stop_all_record(ch);
-        }
+        ParkingSystem();
 
         sync(); sync(); sync();
 
@@ -816,6 +799,12 @@ void MainWidget::systemShutdown()
     QTimer::singleShot(500 , this, SLOT(close()));
 
     return;
+}
+void MainWidget::ParkingSystem(void)
+{
+    appmgr_close_sensorlog();
+    appmgr_deinit_systemstate(SYSTEM_SHUTDOWN);
+    qDebug("Parking System Success!!");
 }
 void MainWidget::onHideStatusBar(void)
 {

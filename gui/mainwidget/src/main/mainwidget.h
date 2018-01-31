@@ -125,6 +125,7 @@ private:
     int  isMaxSplit();
     int  loadData();
     int  getMaxSplit();
+    void ParkingSystem(void);
 
     MainMenu                    *mainMenu;
     StatusBarDialog             *statusBar;

@@ -81,6 +81,7 @@ int           appmgr_init                               (int *width, int *height
 void          appmgr_record_start                       (void);
 void          appmgr_deinit                             (void);
 void          appmgr_deinit_systemstate                 (int state);
+void          appmgr_close_sensorlog                    (void);
 void          appmgr_start_system                       (void);
 int           appmgr_start_system_done                  (void);
 int           appmgr_reboot_system                      (int state);
