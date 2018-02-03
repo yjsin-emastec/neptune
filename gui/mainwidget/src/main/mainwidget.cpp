@@ -460,6 +460,7 @@ void MainWidget::onSaveDisplayPage(int type)
 }
 void MainWidget::closeEvent(QCloseEvent *event)
 {
+    appmgr_close_sensorlog();
     appmgr_deinit_systemstate(system_state);
 
     operationMode = OPMODE_MESSAGE;
