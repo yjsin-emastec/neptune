@@ -296,7 +296,14 @@ void MainWidget::oneChannelSplit(int ch)
 }
 void MainWidget::onSetGpsStatus(int gps)
 {
-    videoPane[1]->setGpsStatus(gps);
+    if(currentSplit == Split_1)
+    {
+        videoPane[currentChannelNum]->setGpsStatus(gps);
+    }
+    else
+    {
+        videoPane[1]->setGpsStatus(gps);
+    }
 }
 void MainWidget::eventPopupOneChannel(int type, int ch)
 {
