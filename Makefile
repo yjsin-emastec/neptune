@@ -11,7 +11,7 @@ Mklink:
 	@$(CD) $(LIBDIR); $(SH) script/mklink.sh
 
 Version: dummy
-	@$(SH) script/version.sh "1.0.1"
+	@$(SH) script/version.sh "1.0.0"
 
 Utils:   dummy
 	@$(CD) utils;   $(MAKE)
