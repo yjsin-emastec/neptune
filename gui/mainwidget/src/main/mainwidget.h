@@ -47,6 +47,7 @@ signals:
     void queryLogCount();
     void queryLogData();
     void queryLogBackup();
+    void updateAudioButton();
 
 public slots:
     void videoPaneClicked(int ch);
@@ -126,6 +127,7 @@ private:
     int  loadData();
     int  getMaxSplit();
     void ParkingSystem(void);
+    void setAudioOutCh(int ch);
 
     MainMenu                    *mainMenu;
     StatusBarDialog             *statusBar;
@@ -164,7 +166,9 @@ private:
                                  leftstatusBarEnable,
                                  isTrigger,
                                  isDisk,
-                                 backupType;
+                                 backupType,
+                                 previousAudioCh,
+                                 previousSplit;
 
     bool                         audioEnable,
                                  m_selectOther;

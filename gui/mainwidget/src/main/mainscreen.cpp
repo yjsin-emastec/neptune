@@ -115,6 +115,7 @@ void MainWidget::createVideoPane(int isReset)
         }
     }
 
+    previousAudioCh=cfgMain.gbl.audioOut;
     qDebug("%s - \n", __func__);
 }
 void MainWidget::videoPaneClicked(int ch)
@@ -1023,18 +1024,31 @@ int MainWidget::splitScreen(int split)
     if(split == Split_1)
     {
         appmgr_set_video_split(currentChannelNum, split * split);
+
+        if(previousSplit!=split)
+        {
+            previousAudioCh=audioStatus;
+        }
+
+        if(audioStatus!=0)
+        {
+            setAudioOutCh(currentChannelNum+2);
+        }
     }
     else if(split == Split_10)
     {
         appmgr_set_video_split(splitStartChNum, Split_10);
+        setAudioOutCh(previousAudioCh);
     }
     else if(split == Split_17)
     {
         appmgr_set_video_split(splitStartChNum, Split_17);
+        setAudioOutCh(previousAudioCh);
     }
     else
     {
         appmgr_set_video_split(splitStartChNum, split * split);
+        setAudioOutCh(previousAudioCh);
     }
 
     if(split == Split_1)
@@ -1077,6 +1091,9 @@ _end:
 
     qDebug("%s - \n", __func__);
 
+    previousSplit=split;
+
+    emit updateAudioButton();
     return split;
 }
 void MainWidget::setSplitScreen(int startCh, int selectCh, int split)

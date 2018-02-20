@@ -313,7 +313,6 @@ void PlayBarDialog::onButtonAudio(void)
         {
             indexAudio = currentChannelNum + 2;
         }
-
         switch(indexAudio)
         {
             case  1: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19); emit setAudioMute();  break; }
@@ -971,13 +970,45 @@ void PlayBarDialog::PausePlayChange(int state)
 
     if(state == PB_PLAY)
     {
-        OutputAudio(currentChannelNum);
-        appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
+        if(currentSplit==Split_1)
+        {
+            if(indexAudio==AUDIO_LIVE_MUTE-1)
+            {
+                OutputAudio(19);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, 19);
+            }
+            else
+            {
+                OutputAudio(currentChannelNum);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
+            }
+        }
+        else
+        {
+            if(pbPreviousAudio==AUDIO_LIVE_MUTE-1)
+            {
+                OutputAudio(19);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, 19);
+            }
+            else
+            {
+                OutputAudio(pbPreviousAudio-2);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, pbPreviousAudio-2);
+            }
+        }
     }
     else if(state == PB_PAUSE)
     {
+        if(currentSplit!=Split_1 && currentSplit!=pbPreviousSplit) //when split_4 -> split_1
+        {
+            pbPreviousAudio=indexAudio;
+        }
+
+        pbPreviousSplit=currentSplit;
+
         OutputAudio(19);
         appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
+        indexAudio=pbPreviousAudio;
     }
 
     chBit = getPlaybackChannel();

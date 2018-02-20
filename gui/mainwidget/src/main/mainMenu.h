@@ -16,9 +16,13 @@ public:
 	~MainMenu();
 	void initMainMenu(void);
 
+private:
+    int audioStatus;
+
 public slots:
 	void onButtonAudio();
 	void onButtonClose();
+    void onUpdateAudioButton();
 
 signals:
 	void setupClicked();

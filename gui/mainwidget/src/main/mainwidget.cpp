@@ -592,6 +592,7 @@ void MainWidget::createMainMenu()
     connect(mainMenu, SIGNAL(setAudio4()),       this, SLOT(onSetAudio4()));
     connect(mainMenu, SIGNAL(enterMainMenu()),   this, SLOT(onHideStatusBar()));
     connect(mainMenu, SIGNAL(exitMainMenu()),    this, SLOT(onShowStatusBar()));
+    connect(this,     SIGNAL(updateAudioButton()), mainMenu, SLOT(onUpdateAudioButton()));
 
     qDebug("%s - \n", __func__);
 }
@@ -2128,5 +2129,17 @@ void MainWidget::setAudioMode()
         case LIVE_AUDIO_SINGLE_2: { onSetAudio2();    break; }
         case LIVE_AUDIO_SINGLE_3: { onSetAudio3();    break; }
         case LIVE_AUDIO_SINGLE_4: { onSetAudio4();    break; }
+    }
+}
+void MainWidget::setAudioOutCh(int ch)
+{
+    switch(ch)
+    {
+        case LIVE_AUDIO_MUTE:     { onSetAudioMute(); break; }
+        case LIVE_AUDIO_SINGLE_1: { onSetAudio1();    break; }
+        case LIVE_AUDIO_SINGLE_2: { onSetAudio2();    break; }
+        case LIVE_AUDIO_SINGLE_3: { onSetAudio3();    break; }
+        case LIVE_AUDIO_SINGLE_4: { onSetAudio4();    break; }
+        default :   { onSetAudioMute(); break; }
     }
 }

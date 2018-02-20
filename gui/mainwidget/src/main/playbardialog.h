@@ -69,6 +69,8 @@ private:
 
     int             playbackDirection;
     int             changeDay;
+    int             pbPreviousAudio;
+    int             pbPreviousSplit;
 
     PlayTimeBar    *timeBar;
 

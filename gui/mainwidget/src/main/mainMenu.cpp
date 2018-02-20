@@ -36,13 +36,36 @@ void MainMenu::onButtonAudio()
 {
     if(indexAudio >= 5) { indexAudio = 0; }
 
-    switch(++indexAudio)
+    if(currentSplit==1)
     {
-        case 1: { buttonAudio->setText(tr("Audio\nMute")); emit setAudioMute(); break; }
-        case 2: { buttonAudio->setText(tr("Audio\n1"));    emit setAudio1();    break; }
-        case 3: { buttonAudio->setText(tr("Audio\n2"));    emit setAudio2();    break; }
-        case 4: { buttonAudio->setText(tr("Audio\n3"));    emit setAudio3();    break; }
-        case 5: { buttonAudio->setText(tr("Audio\n4"));    emit setAudio4();    break; }
+        if(indexAudio+1==AUDIO_LIVE_MUTE)
+        {
+            switch(currentChannelNum)
+            {
+                case 0: { buttonAudio->setText(tr("Audio\n1"));     indexAudio=2;       emit setAudio1();    break; }
+                case 1: { buttonAudio->setText(tr("Audio\n2"));     indexAudio=3;       emit setAudio2();    break; }
+                case 2: { buttonAudio->setText(tr("Audio\n3"));     indexAudio=4;       emit setAudio3();    break; }
+                case 3: { buttonAudio->setText(tr("Audio\n4"));     indexAudio=5;       emit setAudio4();    break; }
+            }
+        }
+        else
+        {
+            buttonAudio->setText(tr("Audio\nMute"));
+            indexAudio=1;
+
+            emit setAudioMute();
+        }
+    }
+    else
+    {
+        switch(++indexAudio)
+        {
+            case 1: { buttonAudio->setText(tr("Audio\nMute")); emit setAudioMute(); break; }
+            case 2: { buttonAudio->setText(tr("Audio\n1"));    emit setAudio1();    break; }
+            case 3: { buttonAudio->setText(tr("Audio\n2"));    emit setAudio2();    break; }
+            case 4: { buttonAudio->setText(tr("Audio\n3"));    emit setAudio3();    break; }
+            case 5: { buttonAudio->setText(tr("Audio\n4"));    emit setAudio4();    break; }
+        }
     }
 }
 void MainMenu::onButtonShutdown()
@@ -57,7 +80,7 @@ void MainMenu::onButtonClose()
 }
 void MainMenu::initMainMenu(void)
 {
-    int audioStatus = cfgMain.gbl.audioOut;
+    audioStatus = cfgMain.gbl.audioOut;
 
     emit enterMainMenu();
 
@@ -114,6 +137,17 @@ void MainMenu::initMainMenu(void)
             appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, indexAudio-1);
 
             break;
+    }
+}
+void MainMenu::onUpdateAudioButton()
+{
+    switch(cfgMain.gbl.audioOut)
+    {
+        case 0: { buttonAudio->setText(tr("Audio\nMute"));  break; }
+        case 2: { buttonAudio->setText(tr("Audio\n1"));     break; }
+        case 3: { buttonAudio->setText(tr("Audio\n2"));     break; }
+        case 4: { buttonAudio->setText(tr("Audio\n3"));     break; }
+        case 5: { buttonAudio->setText(tr("Audio\n4"));     break; }
     }
 }
 void MainMenu::keyPressEvent(QKeyEvent *event)
