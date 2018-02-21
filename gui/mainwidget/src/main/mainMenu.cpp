@@ -143,11 +143,11 @@ void MainMenu::onUpdateAudioButton()
 {
     switch(cfgMain.gbl.audioOut)
     {
-        case 0: { buttonAudio->setText(tr("Audio\nMute"));  break; }
-        case 2: { buttonAudio->setText(tr("Audio\n1"));     break; }
-        case 3: { buttonAudio->setText(tr("Audio\n2"));     break; }
-        case 4: { buttonAudio->setText(tr("Audio\n3"));     break; }
-        case 5: { buttonAudio->setText(tr("Audio\n4"));     break; }
+        case 0: { buttonAudio->setText(tr("Audio\nMute"));  indexAudio=1;   break; }
+        case 2: { buttonAudio->setText(tr("Audio\n1"));     indexAudio=2;   break; }
+        case 3: { buttonAudio->setText(tr("Audio\n2"));     indexAudio=3;   break; }
+        case 4: { buttonAudio->setText(tr("Audio\n3"));     indexAudio=4;   break; }
+        case 5: { buttonAudio->setText(tr("Audio\n4"));     indexAudio=5;   break; }
     }
 }
 void MainMenu::keyPressEvent(QKeyEvent *event)
