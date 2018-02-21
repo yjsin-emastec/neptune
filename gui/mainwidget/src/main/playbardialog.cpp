@@ -68,6 +68,7 @@ PlayBarDialog::PlayBarDialog(QWidget *parent)
     setLayout(layout);
 
     indexAudio = 0;
+    ispbMute=0;
 }
 PlayBarDialog::~PlayBarDialog(void)
 {
@@ -972,7 +973,7 @@ void PlayBarDialog::PausePlayChange(int state)
     {
         if(currentSplit==Split_1)
         {
-            if(indexAudio==AUDIO_LIVE_MUTE-1)
+            if(ispbMute)
             {
                 OutputAudio(19);
                 appmgr_search_set_audio_mute_on_off(AUDIO_PB, 19);
@@ -1002,6 +1003,15 @@ void PlayBarDialog::PausePlayChange(int state)
         if(currentSplit!=Split_1 && currentSplit!=pbPreviousSplit) //when split_4 -> split_1
         {
             pbPreviousAudio=indexAudio;
+        }
+
+        if(indexAudio==AUDIO_LIVE_MUTE-1) //when current playback Audio is mute
+        {
+            ispbMute=1;
+        }
+        else
+        {
+            ispbMute=0;
         }
 
         pbPreviousSplit=currentSplit;

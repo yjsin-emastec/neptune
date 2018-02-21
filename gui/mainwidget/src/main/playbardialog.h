@@ -71,6 +71,7 @@ private:
     int             changeDay;
     int             pbPreviousAudio;
     int             pbPreviousSplit;
+    int             ispbMute;
 
     PlayTimeBar    *timeBar;
 
