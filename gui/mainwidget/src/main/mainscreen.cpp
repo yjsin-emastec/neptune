@@ -352,6 +352,12 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
 
             isTrigger = 1;
 
+            //save previousAudioCh, when trigger occurred
+            if(currentSplit!=Split_1)
+            {
+                previousAudioCh=audioStatus;
+            }
+
             videoPane[ch]->setGpsStatus(appmgr_get_gps_connected());
 
 #if 0 //yjsin [18/01/19] Change audio scenarios during trigger operation. If audio mute, Trigger audio mute.
