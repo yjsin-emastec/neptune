@@ -360,16 +360,12 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
 
             videoPane[ch]->setGpsStatus(appmgr_get_gps_connected());
 
-#if 0 //yjsin [18/01/19] Change audio scenarios during trigger operation. If audio mute, Trigger audio mute.
+            //If audio mute, Trigger audio mute. If audio out, Trigger audio out.
             if(audioStatus != LIVE_AUDIO_MUTE)
             {
                 appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
                 videoPane[ch]->setAudioOutput(1);
             }
-#else
-            appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
-            videoPane[ch]->setAudioOutput(1);
-#endif
 
             qDebug("\n\t %s() + : ch[%d], EVENT_POPUP_SENSOR_ON \n", __func__, ch);
 
