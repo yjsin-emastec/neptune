@@ -1991,7 +1991,7 @@ void MainWidget::onSetAudioMute()
         videoPane[ch]->setAudioOutput(0);
     }
 
-    if(operationMode == OPMODE_PLAYBACK)
+    if(operationMode == OPMODE_PLAYBACK || operationMode == OPMODE_BACKUP)
     {
         return;
     }
@@ -2013,7 +2013,7 @@ void MainWidget::onSetAudio1()
     }
     videoPane[0]->setAudioOutput(1);
 
-    if(operationMode == OPMODE_PLAYBACK)
+    if(operationMode == OPMODE_PLAYBACK || operationMode == OPMODE_BACKUP)
     {
         return;
     }
@@ -2035,7 +2035,7 @@ void MainWidget::onSetAudio2()
     }
     videoPane[1]->setAudioOutput(1);
 
-    if(operationMode == OPMODE_PLAYBACK)
+    if(operationMode == OPMODE_PLAYBACK || operationMode == OPMODE_BACKUP)
     {
         return;
     }
@@ -2057,7 +2057,7 @@ void MainWidget::onSetAudio3()
     }
     videoPane[2]->setAudioOutput(1);
 
-    if(operationMode == OPMODE_PLAYBACK)
+    if(operationMode == OPMODE_PLAYBACK || operationMode == OPMODE_BACKUP)
     {
         return;
     }
@@ -2079,7 +2079,7 @@ void MainWidget::onSetAudio4()
     }
     videoPane[3]->setAudioOutput(1);
 
-    if(operationMode == OPMODE_PLAYBACK)
+    if(operationMode == OPMODE_PLAYBACK || operationMode == OPMODE_BACKUP)
     {
         return;
     }
