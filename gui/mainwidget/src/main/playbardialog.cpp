@@ -978,6 +978,12 @@ void PlayBarDialog::PausePlayChange(int state)
                 OutputAudio(19);
                 appmgr_search_set_audio_mute_on_off(AUDIO_PB, 19);
             }
+            else if(playbackDirection != PB_FF || playbackSpeed != PB_SPEED_1)
+            {
+                OutputAudio(19);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, 19);
+                indexAudio=currentChannelNum+2;
+            }
             else
             {
                 OutputAudio(currentChannelNum);
@@ -990,6 +996,12 @@ void PlayBarDialog::PausePlayChange(int state)
             {
                 OutputAudio(19);
                 appmgr_search_set_audio_mute_on_off(AUDIO_PB, 19);
+            }
+            else if(playbackDirection != PB_FF || playbackSpeed != PB_SPEED_1)
+            {
+                OutputAudio(19);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, 19);
+                indexAudio=pbPreviousAudio;
             }
             else
             {
