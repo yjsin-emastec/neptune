@@ -35,6 +35,10 @@ typedef struct
     char trigger2_priority      [8];
     char trigger3_priority      [8];
     char trigger4_priority      [8];
+    char trigger1_audio         [8]; // [OUTPUT | MUTE]
+    char trigger2_audio         [8]; // [OUTPUT | MUTE]
+    char trigger3_audio         [8]; // [OUTPUT | MUTE]
+    char trigger4_audio         [8]; // [OUTPUT | MUTE]
 } device_property_t;
 
 //----------------------------------------------------------------------------
