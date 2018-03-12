@@ -128,6 +128,7 @@ private:
     int  getMaxSplit();
     void ParkingSystem(void);
     void setAudioOutCh(int ch);
+    void triggerAudioOut(int ch);
 
     MainMenu                    *mainMenu;
     StatusBarDialog             *statusBar;

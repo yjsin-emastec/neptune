@@ -49,6 +49,15 @@ public slots:
 	void onButtonPriority4Up(void);
 	void onButtonPriority4Down(void);
 
+    void onButtonAudio1Up(void);
+    void onButtonAudio1Down(void);
+    void onButtonAudio2Up(void);
+    void onButtonAudio2Down(void);
+    void onButtonAudio3Up(void);
+    void onButtonAudio3Down(void);
+    void onButtonAudio4Up(void);
+    void onButtonAudio4Down(void);
+
 	void onButtonDefault(void);
 	void onButtonSave(void);
 
@@ -72,6 +81,11 @@ private:
         indexPriority3,
         indexPriority4,
         nPriority[EASTERN_MAXIMUM_PRIORITY];
+
+    bool triggerAudio1,
+         triggerAudio2,
+         triggerAudio3,
+         triggerAudio4;
 
     TextMessageDialog *msgBox;
 };

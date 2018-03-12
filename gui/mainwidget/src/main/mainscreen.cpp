@@ -360,12 +360,7 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
 
             videoPane[ch]->setGpsStatus(appmgr_get_gps_connected());
 
-            //If audio mute, Trigger audio mute. If audio out, Trigger audio out.
-            if(audioStatus != LIVE_AUDIO_MUTE)
-            {
-                appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
-                videoPane[ch]->setAudioOutput(1);
-            }
+            triggerAudioOut(ch);
 
             qDebug("\n\t %s() + : ch[%d], EVENT_POPUP_SENSOR_ON \n", __func__, ch);
 
@@ -1210,6 +1205,58 @@ void MainWidget::audioSetting(int preChannel, int curChannel)
         else
         {
             appmgr_set_audio_output_mix(AUDIO_LIVE, audioStatus-2);
+        }
+    }
+}
+void MainWidget::triggerAudioOut(int ch)
+{
+    appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
+    videoPane[ch]->setAudioOutput(1);
+
+    //if trigger_audio is mute, set Audio mute
+    switch(ch)
+    {
+        case 0 :
+        {
+            if(utils_cfg_cmp_item(DeviceCfg.trigger1_audio, "MUTE") == 0)
+            {
+                appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, ch);
+                videoPane[ch]->setAudioOutput(0);
+            }
+            break;
+        }
+        case 1 :
+        {
+            if(utils_cfg_cmp_item(DeviceCfg.trigger2_audio, "MUTE") == 0)
+            {
+                appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, ch);
+                videoPane[ch]->setAudioOutput(0);
+            }
+            break;
+        }
+        case 2 :
+        {
+            if(utils_cfg_cmp_item(DeviceCfg.trigger3_audio, "MUTE") == 0)
+            {
+                appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, ch);
+                videoPane[ch]->setAudioOutput(0);
+            }
+            break;
+        }
+        case 3 :
+        {
+            if(utils_cfg_cmp_item(DeviceCfg.trigger4_audio, "MUTE") == 0)
+            {
+                appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, ch);
+                videoPane[ch]->setAudioOutput(0);
+            }
+            break;
+        }
+        default :
+        {
+            appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
+            videoPane[ch]->setAudioOutput(1);
+            break;
         }
     }
 }
