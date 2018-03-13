@@ -1210,9 +1210,6 @@ void MainWidget::audioSetting(int preChannel, int curChannel)
 }
 void MainWidget::triggerAudioOut(int ch)
 {
-    appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
-    videoPane[ch]->setAudioOutput(1);
-
     //if trigger_audio is mute, set Audio mute
     switch(ch)
     {
@@ -1223,6 +1220,11 @@ void MainWidget::triggerAudioOut(int ch)
                 appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, ch);
                 videoPane[ch]->setAudioOutput(0);
             }
+            else
+            {
+                appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
+                videoPane[ch]->setAudioOutput(1);
+            }
             break;
         }
         case 1 :
@@ -1231,6 +1233,11 @@ void MainWidget::triggerAudioOut(int ch)
             {
                 appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, ch);
                 videoPane[ch]->setAudioOutput(0);
+            }
+            else
+            {
+                appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
+                videoPane[ch]->setAudioOutput(1);
             }
             break;
         }
@@ -1241,6 +1248,11 @@ void MainWidget::triggerAudioOut(int ch)
                 appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, ch);
                 videoPane[ch]->setAudioOutput(0);
             }
+            else
+            {
+                appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
+                videoPane[ch]->setAudioOutput(1);
+            }
             break;
         }
         case 3 :
@@ -1249,6 +1261,11 @@ void MainWidget::triggerAudioOut(int ch)
             {
                 appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, ch);
                 videoPane[ch]->setAudioOutput(0);
+            }
+            else
+            {
+                appmgr_set_audio_output_mix(AUDIO_LIVE, ch);
+                videoPane[ch]->setAudioOutput(1);
             }
             break;
         }
