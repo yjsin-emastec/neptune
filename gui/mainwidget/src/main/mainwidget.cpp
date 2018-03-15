@@ -137,6 +137,9 @@ MainWidget::MainWidget(int fbWidth, int fbHeight)
     controlBarAutoHide          = 1;
     statusBarEnable             = 0;
     isDisk                      = 1;
+#if 1 // GyverJeong [18/03/15]
+    isDrawRecordIcon            = 1;
+#endif
 
     (void) appmgr_set_control_bar_auto_Hide(controlBarAutoHide);
 

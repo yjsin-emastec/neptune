@@ -749,7 +749,26 @@ void MainWidget::doDvrEvent(Event *e)
         case Send_QT_SET_RECORD_ICON:
         {
             int *pSetRecordIcon = (int *)e->data;
+#if 1 // GyverJeong [18/03/15]
+            if(isDrawRecordIcon)
+            {
+                videoPane[*pSetRecordIcon]->setRecordingDetect(1, 0, 0, 0);
+            }
+#else
             videoPane[*pSetRecordIcon]->setRecordingDetect(1, 0, 0, 0);
+#endif
+
+            break;
+        }
+        case Send_QT_RESET_RECORD_ICON:
+        {
+            for(int ii = 0; ii < devInfo.videoNum; ii++)
+            {
+                isDrawRecordIcon = 0;
+                videoPane[ii]->setRecordingDetect(0x0, 0x0, 0x0, 0x0);
+            }
+
+            break;
         }
         default:
         {

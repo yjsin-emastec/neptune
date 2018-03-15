@@ -168,6 +168,7 @@ private:
                                  isTrigger,
                                  isDisk,
                                  backupType,
+                                 isDrawRecordIcon,
                                  previousAudioCh,
                                  previousSplit;
 
