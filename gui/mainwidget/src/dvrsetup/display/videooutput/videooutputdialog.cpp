@@ -87,6 +87,7 @@ void VideoOutputDialog::initVideoOutputConfig(void)
         button_cvbs_y      ->setEnabled(false);
         button_cvbs_width  ->setEnabled(false);
         button_cvbs_height ->setEnabled(false);
+        buttonDefault      ->setEnabled(false);
         buttonDefault      ->hide();
     }
     else
@@ -96,6 +97,7 @@ void VideoOutputDialog::initVideoOutputConfig(void)
         label4->setStyleSheet("background-color:rgb(50,57,83)");
         label5->setStyleSheet("background-color:rgb(50,57,83)");
         label6->setStyleSheet("background-color:rgb(50,57,83)");
+        buttonDefault->setEnabled(true);
         buttonDefault->show();
 
         if(cfgSetup.gbl.ntsc)
@@ -149,6 +151,7 @@ void VideoOutputDialog::onVideoOutputCvbs()
         button_cvbs_y      ->setEnabled(false);
         button_cvbs_width  ->setEnabled(false);
         button_cvbs_height ->setEnabled(false);
+        buttonDefault      ->setEnabled(false);
         buttonDefault      ->hide();
         indexCvbs = 1;
     }
@@ -166,6 +169,7 @@ void VideoOutputDialog::onVideoOutputCvbs()
         button_cvbs_y      ->setEnabled(true);
         button_cvbs_width  ->setEnabled(true);
         button_cvbs_height ->setEnabled(true);
+        buttonDefault      ->setEnabled(true);
         buttonDefault      ->show();
 
         if(cfgSetup.gbl.ntsc)
@@ -203,6 +207,7 @@ void VideoOutputDialog::onVideoOutputCvbs()
         button_cvbs_y      ->setEnabled(false);
         button_cvbs_width  ->setEnabled(false);
         button_cvbs_height ->setEnabled(false);
+        buttonDefault      ->setEnabled(false);
         buttonDefault      ->hide();
         indexCvbs = 0;
     }
@@ -467,61 +472,64 @@ void VideoOutputDialog::keyPressEvent(QKeyEvent *event)
     {
         case Qt::Key_Up:
 
-                 if(buttonHdmi->hasFocus())             { buttonSave->setFocus();            }
-            else if(button_cvbs_x->hasFocus())          { buttonHdmi->setFocus();            }
-            else if(button_cvbs_y->hasFocus())          { button_cvbs_x->setFocus();         }
-            else if(buttonSave->hasFocus() &&
-                   !button_cvbs_y->isEnabled())         { buttonHdmi->setFocus();            }
-            else if(buttonSave->hasFocus())             { button_cvbs_y->setFocus();         }
-            else if(buttonCvbs->hasFocus())             { buttonClose->setFocus();           }
-            else if(button_cvbs_width->hasFocus())      { buttonCvbs->setFocus();            }
-            else if(button_cvbs_height->hasFocus())     { button_cvbs_width->setFocus();     }
-            else if(buttonClose->hasFocus() &&
-                   !button_cvbs_height->isEnabled())    { buttonCvbs->setFocus();            }
-            else if(buttonClose->hasFocus())            { button_cvbs_height->setFocus();    }
+                 if(buttonHdmi->hasFocus() && buttonDefault->isEnabled())           { buttonDefault->setFocus();        }
+            else if(buttonHdmi->hasFocus() && !buttonDefault->isEnabled())          { buttonSave->setFocus();           }
+            else if(button_cvbs_x->hasFocus())                                      { buttonHdmi->setFocus();           }
+            else if(button_cvbs_y->hasFocus())                                      { button_cvbs_x->setFocus();        }
+            else if(buttonDefault->hasFocus())                                      { button_cvbs_y->setFocus();        }
+            else if(buttonCvbs->hasFocus())                                         { buttonClose->setFocus();          }
+            else if(button_cvbs_width->hasFocus())                                  { buttonCvbs->setFocus();           }
+            else if(button_cvbs_height->hasFocus())                                 { button_cvbs_width->setFocus();    }
+            else if(buttonSave->hasFocus() && button_cvbs_height->isEnabled())      { button_cvbs_height->setFocus();   }
+            else if(buttonSave->hasFocus() && !button_cvbs_height->isEnabled())     { buttonCvbs->setFocus();           }
+            else if(buttonClose->hasFocus() && button_cvbs_height->isEnabled())     { button_cvbs_height->setFocus();   }
+            else if(buttonClose->hasFocus() && !button_cvbs_height->isEnabled())    { buttonCvbs->setFocus();           }
 
             return;
 
         case Qt::Key_Down:
 
-                 if(buttonHdmi->hasFocus() &&
-                   !button_cvbs_x->isEnabled())         { buttonSave->setFocus();            }
-            else if(buttonHdmi->hasFocus())             { button_cvbs_x->setFocus();         }
-            else if(button_cvbs_x->hasFocus())          { button_cvbs_y->setFocus();         }
-            else if(button_cvbs_y->hasFocus())          { buttonSave->setFocus();            }
-            else if(buttonSave->hasFocus())             { buttonHdmi->setFocus();            }
-            else if(buttonCvbs->hasFocus() &&
-                   !button_cvbs_width->isEnabled())     { buttonClose->setFocus();           }
-            else if(buttonCvbs->hasFocus())             { button_cvbs_width->setFocus();     }
-            else if(button_cvbs_width->hasFocus())      { button_cvbs_height->setFocus();    }
-            else if(button_cvbs_height->hasFocus())     { buttonClose->setFocus();           }
-            else if(buttonClose->hasFocus())            { buttonCvbs->setFocus();            }
+                 if(buttonHdmi->hasFocus() && button_cvbs_x->isEnabled())           { button_cvbs_x->setFocus();        }
+            else if(buttonHdmi->hasFocus() && !button_cvbs_x->isEnabled())          { buttonSave->setFocus();           }
+            else if(button_cvbs_x->hasFocus())                                      { button_cvbs_y->setFocus();        }
+            else if(button_cvbs_y->hasFocus())                                      { buttonDefault->setFocus();        }
+            else if(buttonDefault->hasFocus())                                      { buttonHdmi->setFocus();           }
+            else if(buttonCvbs->hasFocus() && button_cvbs_width->isEnabled())       { button_cvbs_width->setFocus();    }
+            else if(buttonCvbs->hasFocus() && !button_cvbs_width->isEnabled())      { buttonClose->setFocus();          }
+            else if(button_cvbs_width->hasFocus())                                  { button_cvbs_height->setFocus();   }
+            else if(button_cvbs_height->hasFocus())                                 { buttonClose->setFocus();          }
+            else if(buttonSave->hasFocus())                                         { buttonCvbs->setFocus();           }
+            else if(buttonClose->hasFocus())                                        { buttonCvbs->setFocus();           }
 
             return;
 
         case Qt::Key_Left:
 
-                 if(buttonHdmi->hasFocus())             { buttonCvbs->setFocus();            }
-            else if(buttonCvbs->hasFocus())             { buttonHdmi->setFocus();            }
-            else if(button_cvbs_x->hasFocus())          { button_cvbs_width->setFocus();     }
-            else if(button_cvbs_width->hasFocus())      { button_cvbs_x->setFocus();         }
-            else if(button_cvbs_y->hasFocus())          { button_cvbs_height->setFocus();    }
-            else if(button_cvbs_height->hasFocus())     { button_cvbs_y->setFocus();         }
-            else if(buttonSave->hasFocus())             { buttonClose->setFocus();           }
-            else if(buttonClose->hasFocus())            { buttonSave->setFocus();            }
+                 if(buttonHdmi->hasFocus())                                         { buttonCvbs->setFocus();           }
+            else if(button_cvbs_x->hasFocus())                                      { button_cvbs_width->setFocus();    }
+            else if(button_cvbs_y->hasFocus())                                      { button_cvbs_height->setFocus();   }
+            else if(buttonDefault->hasFocus())                                      { buttonClose->setFocus();          }
+            else if(buttonCvbs->hasFocus())                                         { buttonHdmi->setFocus();           }
+            else if(button_cvbs_width->hasFocus())                                  { button_cvbs_x->setFocus();        }
+            else if(button_cvbs_height->hasFocus())                                 { button_cvbs_y->setFocus();        }
+            else if(buttonSave->hasFocus() && buttonDefault->isEnabled())           { buttonDefault->setFocus();        }
+            else if(buttonSave->hasFocus() && !buttonDefault->isEnabled())          { buttonClose->setFocus();          }
+            else if(buttonClose->hasFocus())                                        { buttonSave->setFocus();           }
 
             return;
 
         case Qt::Key_Right:
 
-                 if(buttonHdmi->hasFocus())             { buttonCvbs->setFocus();            }
-            else if(buttonCvbs->hasFocus())             { buttonHdmi->setFocus();            }
-            else if(button_cvbs_x->hasFocus())          { button_cvbs_width->setFocus();     }
-            else if(button_cvbs_width->hasFocus())      { button_cvbs_x->setFocus();         }
-            else if(button_cvbs_y->hasFocus())          { button_cvbs_height->setFocus();    }
-            else if(button_cvbs_height->hasFocus())     { button_cvbs_y->setFocus();         }
-            else if(buttonSave->hasFocus())             { buttonClose->setFocus();           }
-            else if(buttonClose->hasFocus())            { buttonSave->setFocus();            }
+                 if(buttonHdmi->hasFocus())                                         { buttonCvbs->setFocus();           }
+            else if(button_cvbs_x->hasFocus())                                      { button_cvbs_width->setFocus();    }
+            else if(button_cvbs_y->hasFocus())                                      { button_cvbs_height->setFocus();   }
+            else if(buttonDefault->hasFocus())                                      { buttonSave->setFocus();           }
+            else if(buttonCvbs->hasFocus())                                         { buttonHdmi->setFocus();           }
+            else if(button_cvbs_width->hasFocus())                                  { button_cvbs_x->setFocus();        }
+            else if(button_cvbs_height->hasFocus())                                 { button_cvbs_y->setFocus();        }
+            else if(buttonSave->hasFocus())                                         { buttonClose->setFocus();          }
+            else if(buttonClose->hasFocus() && buttonDefault->isEnabled())          { buttonDefault->setFocus();        }
+            else if(buttonClose->hasFocus() && !buttonDefault->isEnabled())         { buttonSave->setFocus();           }
 
             return;
 
