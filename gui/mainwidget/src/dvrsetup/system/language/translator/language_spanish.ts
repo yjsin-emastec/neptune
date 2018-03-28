@@ -518,7 +518,7 @@ Encender</translation>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="70"/>
         <source>Ch. 1</source>
-        <translation>Cn. 1</translation>
+        <translation>Ch. 1</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="114"/>
@@ -531,17 +531,17 @@ Encender</translation>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="130"/>
         <source>Ch. 2</source>
-        <translation>Cn. 2</translation>
+        <translation>Ch. 2</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="165"/>
         <source>Ch. 3</source>
-        <translation>Cn. 3</translation>
+        <translation>Ch. 3</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="200"/>
         <source>Ch. 4</source>
-        <translation>Cn. 4</translation>
+        <translation>Ch. 4</translation>
     </message>
 </context>
 <context>
@@ -3444,22 +3444,22 @@ AutoHide: </source>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="95"/>
         <source>Ch.1</source>
-        <translation>Cn.1</translation>
+        <translation>Ch.1</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="114"/>
         <source>Ch.2</source>
-        <translation>Cn.2</translation>
+        <translation>Ch.2</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="133"/>
         <source>Ch.3</source>
-        <translation>Cn.3</translation>
+        <translation>Ch.3</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="152"/>
         <source>Ch.4</source>
-        <translation>Cn.4</translation>
+        <translation>Ch.4</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="171"/>
