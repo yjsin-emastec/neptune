@@ -6,6 +6,7 @@
 
 class NormalDialog;
 class EventDialog;
+class RecordStatus;
 
 class RecordPage : public QWidget, public Ui::RecordPage
 {
@@ -26,10 +27,12 @@ private slots:
     void onButtonNormal(void);
     void onButtonEvent(void);
 	void onButtonClose(void);
+    void onRecordSave(void);
 	
 private:
 	NormalDialog *normalDialog;
 	EventDialog  *eventDialog;
+    RecordStatus *recordStatus;
 };
 
 #endif // RECORDPAGE_H

@@ -94,6 +94,7 @@ SOURCES      += src/main.cpp                                                    
                 src/dvrsetup/system/information/informationdialog.cpp                                \
                 src/dvrsetup/record/normal/normaldialog.cpp                                          \
                 src/dvrsetup/record/event/eventdialog.cpp                                            \
+                src/dvrsetup/record/normal/recordstatus.cpp                                          \
                 src/dvrsetup/display/cameraname/cameranamedialog.cpp                                 \
                 src/dvrsetup/display/videooutput/videooutputdialog.cpp                               \
                 src/dvrsetup/display/osd/osddialog.cpp                                               \
@@ -142,6 +143,7 @@ HEADERS      += src/login/logindialog.h                                         
                 src/dvrsetup/system/information/informationdialog.h                                  \
                 src/dvrsetup/record/normal/normaldialog.h                                            \
                 src/dvrsetup/record/event/eventdialog.h                                              \
+                src/dvrsetup/record/normal/recordstatus.h                                            \
                 src/dvrsetup/display/cameraname/cameranamedialog.h                                   \
                 src/dvrsetup/display/videooutput/videooutputdialog.h                                 \
                 src/dvrsetup/display/osd/osddialog.h                                                 \
@@ -186,6 +188,7 @@ FORMS        += src/login/logindialog.ui                                        
                 src/dvrsetup/system/information/informationdialog.ui                                 \
                 src/dvrsetup/record/normal/normaldialog.ui                                           \
                 src/dvrsetup/record/event/eventdialog.ui                                             \
+                src/dvrsetup/record/normal/recordstatus.ui                                           \
                 src/dvrsetup/display/cameraname/cameranamedialog.ui                                  \
                 src/dvrsetup/display/videooutput/videooutputdialog.ui                                \
                 src/dvrsetup/display/osd/osddialog.ui                                                \

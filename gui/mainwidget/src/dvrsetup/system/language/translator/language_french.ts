@@ -2245,11 +2245,11 @@ Muet</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="741"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1081"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1115"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1176"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1303"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1100"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1134"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1195"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1282"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1322"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
         <location filename="../../../../main/mainscreen.cpp" line="197"/>
         <source>NOTICE</source>
@@ -2282,11 +2282,11 @@ Muet</translation>
         <translation>Le système s&apos;arrête.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1081"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1115"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1176"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1303"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1100"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1134"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1195"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1282"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1322"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
         <location filename="../../../../main/mainscreen.cpp" line="197"/>
         <source>NOTICE
@@ -2365,13 +2365,13 @@ L&apos;état actuel est déclenché.</translation>
         <translation>[5072] Disque dur esclave changé</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="471"/>
-        <location filename="../../../../main/mainwidget.cpp" line="734"/>
+        <location filename="../../../../main/mainwidget.cpp" line="474"/>
+        <location filename="../../../../main/mainwidget.cpp" line="737"/>
         <source>POWER OFF</source>
         <translation>ÉTEINDRE</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="471"/>
+        <location filename="../../../../main/mainwidget.cpp" line="474"/>
         <source>				NOTICE
 
 System was shutdown successfully.
@@ -2381,7 +2381,7 @@ Le système a été arrêté avec succès.
 Éteignez l&apos;alimentation.</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="734"/>
+        <location filename="../../../../main/mainwidget.cpp" line="737"/>
         <source>				WARNING
 
 Do you want to shutdown the system?</source>
@@ -2390,7 +2390,7 @@ Do you want to shutdown the system?</source>
 Voulez-vous arrêter le système?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1179"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1182"/>
         <source>SEARCH</source>
         <translation>CHERCHER</translation>
     </message>
@@ -2403,7 +2403,7 @@ No Storage</source>
 Pas de Stockage</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1180"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1183"/>
         <source>WARNING
 
 No SSD</source>
@@ -2480,34 +2480,48 @@ Désactivé / Activé</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="31"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="44"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="45"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="46"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="47"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="52"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="53"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="58"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="59"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="68"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="69"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="70"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="71"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="93"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="62"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="63"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="64"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="65"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="66"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="94"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="95"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="96"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="100"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="101"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="105"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="106"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="107"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="147"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="148"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="149"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="160"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="161"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="172"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="173"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="185"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="186"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="187"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="134"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="135"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="136"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="140"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="141"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="145"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="146"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="231"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="232"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="233"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="245"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="246"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="247"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="263"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="264"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="276"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="277"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="293"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="294"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="306"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="307"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="326"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="327"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="328"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="338"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="339"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="340"/>
         <source>%1
 %2</source>
         <translation>%1
@@ -2515,16 +2529,16 @@ Désactivé / Activé</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="31"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="68"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="69"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="70"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="71"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="62"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="63"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="64"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="65"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="66"/>
         <source>Channel</source>
         <translation>Canal</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="31"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="68"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="66"/>
         <source>1</source>
         <translation>1</translation>
     </message>
@@ -2535,26 +2549,50 @@ Désactivé / Activé</translation>
         <location filename="../../../record/normal/normaldialog.cpp" line="38"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="39"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="40"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="83"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="84"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="85"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="86"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="87"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="88"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="131"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="132"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="133"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="134"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="135"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="136"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="191"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="195"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="199"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="204"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="89"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="90"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="125"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="126"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="127"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="128"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="129"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="130"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="180"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="181"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="182"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="183"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="184"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="185"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="209"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="210"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="211"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="212"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="213"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="214"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="317"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="318"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="319"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="320"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="321"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="322"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="345"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="349"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="353"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="358"/>
         <source>%1
 %2 %3</source>
         <translation>%1
 %2 %3</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/normaldialog.cpp" line="31"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="62"/>
+        <source>All</source>
+        <translation>Tout</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="35"/>
@@ -2563,29 +2601,50 @@ Désactivé / Activé</translation>
         <location filename="../../../record/normal/normaldialog.cpp" line="38"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="39"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="40"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="83"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="84"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="85"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="86"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="87"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="88"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="131"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="132"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="133"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="134"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="135"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="136"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="191"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="195"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="199"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="204"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="89"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="90"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="125"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="126"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="127"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="128"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="129"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="130"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="180"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="181"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="182"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="183"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="184"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="185"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="209"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="210"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="211"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="212"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="213"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="214"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="317"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="318"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="319"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="320"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="321"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="322"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="345"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="349"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="353"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="358"/>
         <source>Frame Rate</source>
-        <translation>Frame Rate</translation>
+        <translation>Charpente</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="35"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="83"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="131"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="85"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="125"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="180"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="209"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="317"/>
         <source> 5</source>
         <translation> 5</translation>
     </message>
@@ -2596,156 +2655,215 @@ Désactivé / Activé</translation>
         <location filename="../../../record/normal/normaldialog.cpp" line="38"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="39"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="40"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="83"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="84"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="85"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="86"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="87"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="88"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="131"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="132"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="133"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="134"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="135"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="136"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="191"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="195"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="199"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="204"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="89"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="90"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="125"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="126"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="127"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="128"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="129"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="130"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="180"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="181"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="182"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="183"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="184"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="185"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="209"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="210"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="211"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="212"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="213"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="214"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="317"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="318"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="319"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="320"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="321"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="322"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="345"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="349"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="353"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="358"/>
         <source>Fps</source>
         <translation>Fps</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="36"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="84"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="132"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="86"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="126"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="181"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="210"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="318"/>
         <source>10</source>
         <translation>10</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="37"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="85"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="133"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="199"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="87"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="127"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="182"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="211"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="319"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="345"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="358"/>
         <source>15</source>
         <translation>15</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="38"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="86"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="134"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="88"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="128"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="183"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="212"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="320"/>
         <source>20</source>
         <translation>20</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="39"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="87"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="135"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="191"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="89"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="129"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="184"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="213"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="321"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="349"/>
         <source>25</source>
         <translation>25</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="40"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="88"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="136"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="195"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="204"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="90"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="130"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="185"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="214"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="322"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="353"/>
         <source>30</source>
         <translation>30</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="45"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="46"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="47"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="93"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="44"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="94"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="95"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="147"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="148"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="149"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="185"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="96"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="134"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="135"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="136"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="231"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="232"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="233"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="245"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="246"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="247"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="326"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="338"/>
         <source>Quality</source>
         <translation>Qualité</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="45"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="93"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="147"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="94"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="134"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="231"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="245"/>
         <source>Low</source>
         <translation>Faible</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="46"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="94"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="148"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="95"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="135"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="232"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="246"/>
         <source>Middle</source>
         <translation>Milieu</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="47"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="95"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="149"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="185"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="44"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="96"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="136"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="233"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="247"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="326"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="338"/>
         <source>High</source>
         <translation>Haute</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="52"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="53"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="45"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="100"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="101"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="160"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="161"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="186"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="140"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="141"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="263"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="264"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="276"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="277"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="327"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="339"/>
         <source>Recording</source>
         <translation>Enregistrer</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="52"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="58"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="100"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="106"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="160"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="172"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="105"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="140"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="145"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="263"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="276"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="293"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="306"/>
         <source>Off</source>
         <translation>Désactivé</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="53"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="59"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="45"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="46"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="101"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="107"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="161"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="173"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="186"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="187"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="106"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="141"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="146"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="264"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="277"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="294"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="307"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="327"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="328"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="339"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="340"/>
         <source>On</source>
         <translation>Activé</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="58"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="59"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="46"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="105"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="106"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="107"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="172"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="173"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="187"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="145"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="146"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="293"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="294"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="306"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="307"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="328"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="340"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="69"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="63"/>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="70"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="64"/>
         <source>3</source>
         <translation>3</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="71"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="65"/>
         <source>4</source>
         <translation>4</translation>
     </message>
@@ -3179,6 +3297,77 @@ Enregistré</translation>
     </message>
 </context>
 <context>
+    <name>RecordInformation</name>
+    <message>
+        <source>Dialog</source>
+        <translation type="obsolete">Dialogue</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="obsolete">Stocker</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="obsolete">Annuler</translation>
+    </message>
+    <message>
+        <source> Check your settings.</source>
+        <translation type="obsolete"> Vérifiez vos paramètres.</translation>
+    </message>
+    <message>
+        <source>Ch.1</source>
+        <translation type="obsolete">Cn.1</translation>
+    </message>
+    <message>
+        <source>Ch.2</source>
+        <translation type="obsolete">Cn.2</translation>
+    </message>
+    <message>
+        <source>Ch.3</source>
+        <translation type="obsolete">Cn.3</translation>
+    </message>
+    <message>
+        <source>Ch.4</source>
+        <translation type="obsolete">Cn.4</translation>
+    </message>
+    <message>
+        <source>Frame Rate</source>
+        <translation type="obsolete">Charpente</translation>
+    </message>
+    <message>
+        <source>Quality</source>
+        <translation type="obsolete">Qualité</translation>
+    </message>
+    <message>
+        <source>Recording</source>
+        <translation type="obsolete">Enregistrer</translation>
+    </message>
+    <message>
+        <source>Audio</source>
+        <translation type="obsolete">Audio</translation>
+    </message>
+    <message>
+        <source>Low</source>
+        <translation type="obsolete">Faible</translation>
+    </message>
+    <message>
+        <source>Middle</source>
+        <translation type="obsolete">Milieu</translation>
+    </message>
+    <message>
+        <source>High</source>
+        <translation type="obsolete">Haute</translation>
+    </message>
+    <message>
+        <source>Off</source>
+        <translation type="obsolete">Désactivé</translation>
+    </message>
+    <message>
+        <source>On</source>
+        <translation type="obsolete">Activé</translation>
+    </message>
+</context>
+<context>
     <name>RecordPage</name>
     <message>
         <location filename="../../../setup/recordpage.ui" line="14"/>
@@ -3199,6 +3388,107 @@ Enregistré</translation>
         <location filename="../../../setup/recordpage.ui" line="106"/>
         <source>Normal</source>
         <translation>Normal</translation>
+    </message>
+</context>
+<context>
+    <name>RecordStatus</name>
+    <message>
+        <location filename="../../../record/normal/recordstatus.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Dialogue</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.ui" line="41"/>
+        <source>Close</source>
+        <translation>Fermer</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.ui" line="57"/>
+        <source>Record Status</source>
+        <translation>Enregistrér Statut</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.ui" line="95"/>
+        <source>Ch.1</source>
+        <translation>Cn.1</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.ui" line="114"/>
+        <source>Ch.2</source>
+        <translation>Cn.2</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.ui" line="133"/>
+        <source>Ch.3</source>
+        <translation>Cn.3</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.ui" line="152"/>
+        <source>Ch.4</source>
+        <translation>Cn.4</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.ui" line="171"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="247"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="266"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="285"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="304"/>
+        <source>Frame Rate</source>
+        <translation>Charpente</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.ui" line="190"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="323"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="342"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="361"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="380"/>
+        <source>Quality</source>
+        <translation>Qualité</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.ui" line="209"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="399"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="418"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="437"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="456"/>
+        <source>Recording</source>
+        <translation>Enregistrer</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.ui" line="228"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="475"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="494"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="513"/>
+        <location filename="../../../record/normal/recordstatus.ui" line="532"/>
+        <source>Audio</source>
+        <translation>Audio</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.cpp" line="72"/>
+        <source>Low</source>
+        <translation>Faible</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.cpp" line="73"/>
+        <source>Middle</source>
+        <translation>Milieu</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.cpp" line="74"/>
+        <source>High</source>
+        <translation>Haute</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.cpp" line="78"/>
+        <location filename="../../../record/normal/recordstatus.cpp" line="83"/>
+        <source>Off</source>
+        <translation>Désactivé</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/recordstatus.cpp" line="79"/>
+        <location filename="../../../record/normal/recordstatus.cpp" line="84"/>
+        <source>On</source>
+        <translation>Activé</translation>
     </message>
 </context>
 <context>
@@ -6283,11 +6573,11 @@ Verticale</translation>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="71"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="72"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="73"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="121"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="127"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="142"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="163"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="196"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="123"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="129"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="144"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="166"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="200"/>
         <source>%1
 %2</source>
         <translation>%1
@@ -6307,25 +6597,25 @@ Verticale</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="59"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="121"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="123"/>
         <source>HD</source>
         <translation>HD</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="59"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="121"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="123"/>
         <source>720p</source>
         <translation>720p</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="65"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="127"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="129"/>
         <source>FHD</source>
         <translation>FHD</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="65"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="127"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="129"/>
         <source>1080p</source>
         <translation>1080p</translation>
     </message>
@@ -6334,27 +6624,27 @@ Verticale</translation>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="71"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="72"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="73"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="142"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="163"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="196"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="144"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="166"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="200"/>
         <source>CVBS</source>
         <translation>CVBS</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="70"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="196"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="200"/>
         <source>List1</source>
         <translation>Liste1</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="71"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="142"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="144"/>
         <source>List2</source>
         <translation>Liste2</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="72"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="163"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="166"/>
         <source>Manual</source>
         <translation>Manuel</translation>
     </message>
@@ -6365,96 +6655,96 @@ Verticale</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="82"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="103"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="110"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="144"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="173"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="180"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="198"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="228"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="446"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="458"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="105"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="112"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="146"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="177"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="184"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="202"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="233"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="451"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="463"/>
         <source>X</source>
         <translation>X</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="83"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="111"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="145"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="174"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="181"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="199"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="263"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="447"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="459"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="106"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="113"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="147"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="178"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="185"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="203"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="268"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="452"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="464"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="84"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="105"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="112"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="146"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="175"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="182"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="200"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="299"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="448"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="460"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="107"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="114"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="148"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="179"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="186"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="204"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="304"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="453"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="465"/>
         <source>WIDTH</source>
         <translation>LARGEUR</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="85"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="106"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="113"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="147"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="176"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="183"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="201"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="335"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="449"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="461"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="108"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="115"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="149"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="180"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="187"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="205"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="340"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="454"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="466"/>
         <source>HEIGHT</source>
         <translation>HAUTEUR</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="103"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="104"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="105"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="106"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="110"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="111"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="107"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="108"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="112"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="113"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="173"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="174"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="175"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="176"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="114"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="115"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="177"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="178"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="179"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="180"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="181"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="182"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="183"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="228"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="263"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="299"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="335"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="446"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="447"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="448"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="449"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="458"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="459"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="460"/>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="461"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="184"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="185"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="186"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="187"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="233"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="268"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="304"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="340"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="451"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="452"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="453"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="454"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="463"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="464"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="465"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="466"/>
         <source>%1
  %2 </source>
         <translation>%1
  %2 </translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="379"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="384"/>
         <source>
 Please check X or Width value!
 
@@ -6466,12 +6756,12 @@ Veuillez vérifier la valeur X ou Largeur!
 Le pixel horizontal total doit être inférieur à %1.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="388"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="393"/>
         <source>INVALID Y OR HEIGHT</source>
         <translation>INVALIDE Y OU HAUTEUR</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="389"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="394"/>
         <source>
 Please check Y or Height value!
 
@@ -6483,7 +6773,7 @@ Veuillez vérifier valeur de Y ou Hauteur!
 Le pixel vertical total devrait être inférieur à %1.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="399"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="404"/>
         <source>
 Please check Width value!
 
@@ -6495,7 +6785,7 @@ Veuillez vérifier la valeur de la Largeur!
 Le pixel de Largeur devrait être plus de %1.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="409"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="414"/>
         <source>
 Please check Height value!
 
@@ -6529,7 +6819,7 @@ Veuillez vérifier valeur de Y ou hauteur!
 Le pixel vertical total doit être inférieur à 576.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="398"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="403"/>
         <source>INVALID WIDTH</source>
         <translation>INVALIDE LARGEUR</translation>
     </message>
@@ -6545,7 +6835,7 @@ Veuillez vérifier la valeur de la Largeur!
 Le pixel de Largeur devrait être plus de 300.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="408"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="413"/>
         <source>INVALID HEIGHT</source>
         <translation>INVALIDE HAUTEUR</translation>
     </message>
@@ -6561,7 +6851,7 @@ Veuillez vérifier la valeur de la Hauteur!
 Le pixel de Hauteur devrait être plus de 200.</translation>
     </message>
     <message>
-        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="378"/>
+        <location filename="../../../display/videooutput/videooutputdialog.cpp" line="383"/>
         <source>INVALID X OR WIDTH</source>
         <translation>INVALIDE X OU LARGEUR</translation>
     </message>

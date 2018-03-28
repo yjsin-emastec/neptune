@@ -1,5 +1,7 @@
+#include <QtGui>
 #include "recordpage.h"
 #include "dvrsetup/record/normal/normaldialog.h"
+#include "dvrsetup/record/normal/recordstatus.h"
 #include "dvrsetup/record/event/eventdialog.h"
 #include "main/mainglobal.h"
 #include "appmgr.h"
@@ -14,6 +16,7 @@ RecordPage::RecordPage(QWidget *parent)
 
     normalDialog = NULL;
     eventDialog  = NULL;
+    recordStatus =NULL;
 
     connect(buttonNormal, SIGNAL(released()), this, SLOT(onButtonNormal(void)));
     connect(buttonEvent,  SIGNAL(released()), this, SLOT(onButtonEvent(void)));
@@ -34,13 +37,27 @@ void RecordPage::onButtonNormal(void)
     normalDialog->initNormalConfig();
     normalDialog->move((appmgr_get_mainwidget_width()-normalDialog->width())/2,(appmgr_get_mainwidget_height()-normalDialog->height())/2);
 
-    if(normalDialog->exec())
+    if(normalDialog->exec())    //save
     {
-        emit saveRecordPage(1);
+        QTimer::singleShot(0, this, SLOT(onRecordSave()));
+
+        if(!recordStatus)
+        {
+            recordStatus = new RecordStatus(this);
+        }
+        recordStatus->updateRecordStatus();
+        recordStatus->move((appmgr_get_mainwidget_width()-recordStatus->width())/2,(appmgr_get_mainwidget_height()-recordStatus->height())/2);
+        recordStatus->exec();
     }
-    else
+    else    //reject
     {
         emit saveRecordPage(0);
+    }
+
+    if(recordStatus)
+    {
+        delete recordStatus;
+        recordStatus = NULL;
     }
 
     delete normalDialog;
@@ -74,4 +91,8 @@ void RecordPage::onButtonClose(void)
 {
     emit escapeTabFocus();
     emit closeSetupMenu();
+}
+void RecordPage::onRecordSave(void)
+{
+    emit saveRecordPage(1);
 }

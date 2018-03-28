@@ -23,6 +23,7 @@ public slots:
     void onButtonRecording(void);
     void onButtonAudio(void);
     void onButtonDefault(void);
+    void onButtonSave(void);
 
 protected:
     void keyPressEvent(QKeyEvent *event);
@@ -34,6 +35,13 @@ private:
     int indexQuality;
     int indexRecording;
     int indexAudio;
+    int ChAllFrameRate;
+    int ChAllQuality;
+    int ChAllRecording;
+    int ChAllAudio;
+
+    int getMaxFrame(void);
+
 };
 
 #endif // NORMALDIALOG_H
