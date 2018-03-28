@@ -1754,14 +1754,18 @@ System will restart.</source>
         <location filename="../languagedialog.cpp" line="118"/>
         <location filename="../languagedialog.cpp" line="173"/>
         <source>Spanish</source>
-        <translation>Espanol</translation>
+        <translatorcomment>Español
+-&gt; Espanol</translatorcomment>
+        <translation type="unfinished">Espanol</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="86"/>
         <location filename="../languagedialog.cpp" line="119"/>
         <location filename="../languagedialog.cpp" line="174"/>
         <source>French</source>
-        <translation>Francais</translation>
+        <translatorcomment>Français
+-&gt;Francais</translatorcomment>
+        <translation type="unfinished">Francais</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="91"/>

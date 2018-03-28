@@ -670,7 +670,7 @@ Archiviazione</translation>
         <location filename="../../../setup/devicepage.ui" line="73"/>
         <location filename="../../../setup/devicepage.cpp" line="26"/>
         <source>SSD Format</source>
-        <translation type="unfinished">Formatoi SSD</translation>
+        <translation>SSD Formatoi</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="103"/>
@@ -725,12 +725,12 @@ Archiviazione non esiste.</translation>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="25"/>
         <source>HDD Format</source>
-        <translation type="unfinished">Formatoi HDD</translation>
+        <translation>HDD Formatoi</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
         <source>HDD FORMAT</source>
-        <translation type="unfinished">Formatoi HDD</translation>
+        <translation>HDD Formatoi</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
@@ -740,7 +740,7 @@ Are you sure to format HDD?
 
 System will restart after format.
 </source>
-        <translation type="unfinished">			 AVVERTIMENTO
+        <translation>			 AVVERTIMENTO
 
 Sei sicuro di formattare HDD?
 
@@ -750,7 +750,7 @@ Il sistema si riavvia dopo il formato.</translation>
         <location filename="../../../setup/devicepage.cpp" line="165"/>
         <location filename="../../../setup/devicepage.cpp" line="186"/>
         <source>SSD FORMAT</source>
-        <translation type="unfinished">Formatoi SSD</translation>
+        <translation>SSD Formatoi</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="165"/>
@@ -760,7 +760,7 @@ Are you sure to format SSD?
 
 System will restart after format.
 </source>
-        <translation type="unfinished">			 AVVERTIMENTO
+        <translation>			 AVVERTIMENTO
 
 Sei sicuro di formattare SSD?
 
@@ -771,7 +771,7 @@ Il sistema si riavvia dopo il formato.</translation>
         <source>		NOTICE
 
 SSD does not exist.</source>
-        <translation type="unfinished">	 AVVISO
+        <translation>	 AVVISO
 
 SSD non esiste.</translation>
     </message>
@@ -1740,7 +1740,7 @@ Sensitivity: 5</source>
         <location filename="../../information/informationdialog.cpp" line="70"/>
         <location filename="../../information/informationdialog.cpp" line="84"/>
         <source>No SSD</source>
-        <translation type="unfinished">Archiviazione non esiste</translation>
+        <translation>Archiviazione non esiste</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.cpp" line="104"/>
@@ -1832,6 +1832,8 @@ Il sistema verrà riavviato.</translation>
         <location filename="../languagedialog.cpp" line="118"/>
         <location filename="../languagedialog.cpp" line="173"/>
         <source>Spanish</source>
+        <translatorcomment>Español
+-&gt; Espanol</translatorcomment>
         <translation type="unfinished">Espanol</translation>
     </message>
     <message>
@@ -1839,6 +1841,8 @@ Il sistema verrà riavviato.</translation>
         <location filename="../languagedialog.cpp" line="119"/>
         <location filename="../languagedialog.cpp" line="174"/>
         <source>French</source>
+        <translatorcomment>Français
+-&gt;Francais</translatorcomment>
         <translation type="unfinished">Francais</translation>
     </message>
     <message>
@@ -2159,22 +2163,22 @@ Mute</translation>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="509"/>
         <source>NO SSD</source>
-        <translation type="unfinished">SSD non esiste.</translation>
+        <translation>SSD non esiste.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <source>Storage was attached.</source>
-        <translation type="unfinished">Archiviazione è stato allegato.</translation>
+        <translation>Archiviazione è stato allegato.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
         <source>HDD was detached.</source>
-        <translation type="unfinished">HDD è stato staccato.</translation>
+        <translation>HDD è stato staccato.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="664"/>
         <source>SSD was detached.</source>
-        <translation type="unfinished">SSD è stato staccato.</translation>
+        <translation>SSD è stato staccato.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="686"/>
@@ -2378,7 +2382,7 @@ Archiviazione non esiste.</translation>
         <source>WARNING
 
 No SSD</source>
-        <translation type="unfinished">AVVERTIMENTO
+        <translation>AVVERTIMENTO
 
 SSD non esiste.</translation>
     </message>

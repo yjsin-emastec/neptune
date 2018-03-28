@@ -737,7 +737,7 @@ System will restart.        </source>
         <location filename="../../../setup/devicepage.ui" line="73"/>
         <location filename="../../../setup/devicepage.cpp" line="26"/>
         <source>SSD Format</source>
-        <translation type="unfinished">SSD 포맷</translation>
+        <translation>SSD 포맷</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="103"/>
@@ -803,12 +803,12 @@ DISK is not existed.
     <message>
         <location filename="../../../setup/devicepage.cpp" line="25"/>
         <source>HDD Format</source>
-        <translation type="unfinished">HDD 포맷</translation>
+        <translation>HDD 포맷</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
         <source>HDD FORMAT</source>
-        <translation type="unfinished">HDD 포맷</translation>
+        <translation>HDD 포맷</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
@@ -818,7 +818,7 @@ Are you sure to format HDD?
 
 System will restart after format.
 </source>
-        <translation type="unfinished">			  경고
+        <translation>			  경고
 
 HDD를 포맷 하시겠습니까?
 
@@ -828,7 +828,7 @@ HDD를 포맷 하시겠습니까?
         <location filename="../../../setup/devicepage.cpp" line="165"/>
         <location filename="../../../setup/devicepage.cpp" line="186"/>
         <source>SSD FORMAT</source>
-        <translation type="unfinished">SSD 포맷</translation>
+        <translation>SSD 포맷</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="165"/>
@@ -838,7 +838,7 @@ Are you sure to format SSD?
 
 System will restart after format.
 </source>
-        <translation type="unfinished">			  경고
+        <translation>			  경고
 
 SSD를 포맷 하시겠습니까?
 
@@ -849,7 +849,7 @@ SSD를 포맷 하시겠습니까?
         <source>		NOTICE
 
 SSD does not exist.</source>
-        <translation type="unfinished">	  알림
+        <translation>	  알림
 
 SSD가 없습니다.</translation>
     </message>
@@ -1888,7 +1888,7 @@ Sensitivity: 5</source>
         <location filename="../../information/informationdialog.cpp" line="70"/>
         <location filename="../../information/informationdialog.cpp" line="84"/>
         <source>No SSD</source>
-        <translation type="unfinished">저장장치 없음</translation>
+        <translation>저장장치 없음</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.cpp" line="104"/>
@@ -2314,22 +2314,22 @@ Mute</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="509"/>
         <source>NO SSD</source>
-        <translation type="unfinished">SSD가 없습니다</translation>
+        <translation>SSD가 없습니다</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <source>Storage was attached.</source>
-        <translation type="unfinished">저장장치가 연결됐습니다.</translation>
+        <translation>저장장치가 연결됐습니다.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
         <source>HDD was detached.</source>
-        <translation type="unfinished">HDD가 분리됐습니다.</translation>
+        <translation>HDD가 분리됐습니다.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="664"/>
         <source>SSD was detached.</source>
-        <translation type="unfinished">SSD가 분리됐습니다.</translation>
+        <translation>SSD가 분리됐습니다.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="686"/>
@@ -2571,7 +2571,7 @@ No Storage</source>
         <source>WARNING
 
 No SSD</source>
-        <translation type="unfinished">경고
+        <translation>경고
 
 SSD가 없습니다.</translation>
     </message>

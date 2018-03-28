@@ -669,7 +669,7 @@ almacenamiento</translation>
         <location filename="../../../setup/devicepage.ui" line="73"/>
         <location filename="../../../setup/devicepage.cpp" line="26"/>
         <source>SSD Format</source>
-        <translation type="unfinished">Formato SSD</translation>
+        <translation>SSD Formato</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="103"/>
@@ -732,12 +732,12 @@ El almacenamiento no existe.</translation>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="25"/>
         <source>HDD Format</source>
-        <translation type="unfinished">Formato HDD</translation>
+        <translation>HDD Formato</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
         <source>HDD FORMAT</source>
-        <translation type="unfinished">Formato HDD</translation>
+        <translation>HDD Formato</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
@@ -747,7 +747,7 @@ Are you sure to format HDD?
 
 System will restart after format.
 </source>
-        <translation type="unfinished">					Advertencia
+        <translation>					Advertencia
 
 ¿Está seguro de formatear el HDD?
 
@@ -758,7 +758,7 @@ El sistema se reinicia después del formateo.
         <location filename="../../../setup/devicepage.cpp" line="165"/>
         <location filename="../../../setup/devicepage.cpp" line="186"/>
         <source>SSD FORMAT</source>
-        <translation type="unfinished">Formato SSD</translation>
+        <translation>SSD Formato</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="165"/>
@@ -768,7 +768,7 @@ Are you sure to format SSD?
 
 System will restart after format.
 </source>
-        <translation type="unfinished">				  Advertencia
+        <translation>				  Advertencia
 
 ¿Está seguro de formatear el SSD?
 
@@ -780,7 +780,7 @@ El sistema se reinicia después del formateo.
         <source>		NOTICE
 
 SSD does not exist.</source>
-        <translation type="unfinished"> NOTIFICACIÓN
+        <translation> NOTIFICACIÓN
 
  SSD no existe.</translation>
     </message>
@@ -1776,7 +1776,7 @@ al impacto
         <location filename="../../information/informationdialog.cpp" line="70"/>
         <location filename="../../information/informationdialog.cpp" line="84"/>
         <source>No SSD</source>
-        <translation type="unfinished">No hay Almacenamiento</translation>
+        <translation>No hay Almacenamiento</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.cpp" line="104"/>
@@ -2207,22 +2207,22 @@ No hay almacenamiento</translation>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="509"/>
         <source>NO SSD</source>
-        <translation type="unfinished">SSD no existe.</translation>
+        <translation>SSD no existe.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <source>Storage was attached.</source>
-        <translation type="unfinished">El Almacenamiento se adjuntó.</translation>
+        <translation>El Almacenamiento se adjuntó.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
         <source>HDD was detached.</source>
-        <translation type="unfinished">HDD se separó.</translation>
+        <translation>HDD se separó.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="664"/>
         <source>SSD was detached.</source>
-        <translation type="unfinished">SSD se separó.</translation>
+        <translation>SSD se separó.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="686"/>
@@ -2432,7 +2432,7 @@ No hay almacenamiento</translation>
         <source>WARNING
 
 No SSD</source>
-        <translation type="unfinished">ADVERTENCIA
+        <translation>ADVERTENCIA
 
 SSD no existe.</translation>
     </message>

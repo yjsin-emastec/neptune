@@ -521,7 +521,7 @@ Ligado</translation>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="70"/>
         <source>Ch. 1</source>
-        <translation>Ch. 1</translation>
+        <translation>Cn. 1</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="114"/>
@@ -534,17 +534,17 @@ Ligado</translation>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="130"/>
         <source>Ch. 2</source>
-        <translation>Ch. 2</translation>
+        <translation>Cn. 2</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="165"/>
         <source>Ch. 3</source>
-        <translation>Ch. 3</translation>
+        <translation>Cn. 3</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="200"/>
         <source>Ch. 4</source>
-        <translation>Ch. 4</translation>
+        <translation>Cn. 4</translation>
     </message>
 </context>
 <context>
@@ -667,7 +667,7 @@ O sistema reiniciará. </translation>
         <location filename="../../../setup/devicepage.ui" line="73"/>
         <location filename="../../../setup/devicepage.cpp" line="26"/>
         <source>SSD Format</source>
-        <translation>Formato SSD</translation>
+        <translation>SSD Formato</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="103"/>
@@ -696,12 +696,12 @@ de Trigger</translation>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="25"/>
         <source>HDD Format</source>
-        <translation>Formato HDD</translation>
+        <translation>HDD Formato</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
         <source>HDD FORMAT</source>
-        <translation>FORMATO HDD</translation>
+        <translation>HDD Formato</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
@@ -722,7 +722,7 @@ O sistema reiniciará após o formato.
         <location filename="../../../setup/devicepage.cpp" line="165"/>
         <location filename="../../../setup/devicepage.cpp" line="186"/>
         <source>SSD FORMAT</source>
-        <translation>FORMATO SSD</translation>
+        <translation>SSD Formato</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="165"/>
@@ -1675,7 +1675,7 @@ Sensitivity: 5</source>
         <location filename="../../information/informationdialog.cpp" line="70"/>
         <location filename="../../information/informationdialog.cpp" line="84"/>
         <source>No SSD</source>
-        <translation>No SSD</translation>
+        <translation>SEM SSD</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.cpp" line="104"/>
@@ -1767,14 +1767,18 @@ O sistema reiniciará. </translation>
         <location filename="../languagedialog.cpp" line="118"/>
         <location filename="../languagedialog.cpp" line="173"/>
         <source>Spanish</source>
-        <translation>Espanol</translation>
+        <translatorcomment>Español
+-&gt; Espanol</translatorcomment>
+        <translation type="unfinished">Espanol</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="86"/>
         <location filename="../languagedialog.cpp" line="119"/>
         <location filename="../languagedialog.cpp" line="174"/>
         <source>French</source>
-        <translation>Francais</translation>
+        <translatorcomment>Français
+-&gt;Francais</translatorcomment>
+        <translation type="unfinished">Francais</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="91"/>
@@ -2085,7 +2089,7 @@ Mudo</translation>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="509"/>
         <source>NO SSD</source>
-        <translation>NO SSD</translation>
+        <translation>SEM SSD</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
@@ -2298,7 +2302,7 @@ Deseja desligar o sistema? </translation>
 No SSD</source>
         <translation>ATENÇÃO
 
-Sem SSD</translation>
+SEM SSD</translation>
     </message>
 </context>
 <context>
@@ -3291,22 +3295,22 @@ Desligado</translation>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="95"/>
         <source>Ch.1</source>
-        <translation>Ch.1</translation>
+        <translation>Cn.1</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="114"/>
         <source>Ch.2</source>
-        <translation>Ch.2</translation>
+        <translation>Cn.2</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="133"/>
         <source>Ch.3</source>
-        <translation>Ch.3</translation>
+        <translation>Cn.3</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="152"/>
         <source>Ch.4</source>
-        <translation>Ch.4</translation>
+        <translation>Cn.4</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="171"/>

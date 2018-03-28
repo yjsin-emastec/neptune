@@ -675,7 +675,7 @@ Stockage</translation>
         <location filename="../../../setup/devicepage.ui" line="73"/>
         <location filename="../../../setup/devicepage.cpp" line="26"/>
         <source>SSD Format</source>
-        <translation type="unfinished">Format SSD</translation>
+        <translation>SSD Format</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="103"/>
@@ -735,12 +735,12 @@ Le stockage n&apos;existe pas.</translation>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="25"/>
         <source>HDD Format</source>
-        <translation type="unfinished">Format HDD</translation>
+        <translation>HDD Format</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
         <source>HDD FORMAT</source>
-        <translation type="unfinished">Format HDD</translation>
+        <translation>HDD Format</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
@@ -750,7 +750,7 @@ Are you sure to format HDD?
 
 System will restart after format.
 </source>
-        <translation type="unfinished">				ATTENTION
+        <translation>				ATTENTION
 
 Êtes-vous sûr de formater le HDD?
 Le système redémarrera après le format.</translation>
@@ -759,7 +759,7 @@ Le système redémarrera après le format.</translation>
         <location filename="../../../setup/devicepage.cpp" line="165"/>
         <location filename="../../../setup/devicepage.cpp" line="186"/>
         <source>SSD FORMAT</source>
-        <translation type="unfinished">Format SSD</translation>
+        <translation>SSD Format</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="165"/>
@@ -769,7 +769,7 @@ Are you sure to format SSD?
 
 System will restart after format.
 </source>
-        <translation type="unfinished">				ATTENTION
+        <translation>				ATTENTION
 
 Êtes-vous sûr de formater le SSD?
 Le système redémarrera après le format.</translation>
@@ -1770,7 +1770,7 @@ Immatriculation</translation>
         <location filename="../../information/informationdialog.cpp" line="70"/>
         <location filename="../../information/informationdialog.cpp" line="84"/>
         <source>No SSD</source>
-        <translation type="unfinished">Pas de Stockage</translation>
+        <translation>Pas de Stockage</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.cpp" line="104"/>
@@ -2189,22 +2189,22 @@ Muet</translation>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="509"/>
         <source>NO SSD</source>
-        <translation type="unfinished">SSD n&apos;existe pas.</translation>
+        <translation>SSD n&apos;existe pas.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="639"/>
         <source>Storage was attached.</source>
-        <translation type="unfinished">Le stockage a été joint.</translation>
+        <translation>Le stockage a été joint.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="663"/>
         <source>HDD was detached.</source>
-        <translation type="unfinished">HDD a été détaché.</translation>
+        <translation>HDD a été détaché.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="664"/>
         <source>SSD was detached.</source>
-        <translation type="unfinished">SSD a été détaché.</translation>
+        <translation>SSD a été détaché.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="686"/>
@@ -2407,7 +2407,7 @@ Pas de Stockage</translation>
         <source>WARNING
 
 No SSD</source>
-        <translation type="unfinished">ATTENTION
+        <translation>ATTENTION
 
 SSD n&apos;existe pas.</translation>
     </message>

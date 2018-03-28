@@ -517,7 +517,7 @@ Output: On</source>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="70"/>
         <source>Ch. 1</source>
-        <translation>Ch. 1</translation>
+        <translation>Kn. 1</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="114"/>
@@ -530,17 +530,17 @@ Output: On</source>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="130"/>
         <source>Ch. 2</source>
-        <translation>Ch. 2</translation>
+        <translation>Kn. 2</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="165"/>
         <source>Ch. 3</source>
-        <translation>Ch. 3</translation>
+        <translation>Kn. 3</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="200"/>
         <source>Ch. 4</source>
-        <translation>Ch. 4</translation>
+        <translation>Kn. 4</translation>
     </message>
 </context>
 <context>
@@ -672,7 +672,7 @@ System wird neu gestartet.</translation>
         <location filename="../../../setup/devicepage.ui" line="73"/>
         <location filename="../../../setup/devicepage.cpp" line="26"/>
         <source>SSD Format</source>
-        <translation>SSD-Format</translation>
+        <translation>SSD Format</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="103"/>
@@ -725,12 +725,12 @@ Speicher  ist nicht vorhanden.</translation>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="25"/>
         <source>HDD Format</source>
-        <translation>HDD-Format</translation>
+        <translation>HDD Format</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
         <source>HDD FORMAT</source>
-        <translation>HDD-Format</translation>
+        <translation>HDD Format</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
@@ -750,7 +750,7 @@ Das System startet nach dem Formatieren neu.</translation>
         <location filename="../../../setup/devicepage.cpp" line="165"/>
         <location filename="../../../setup/devicepage.cpp" line="186"/>
         <source>SSD FORMAT</source>
-        <translation>SSD-Format</translation>
+        <translation>SSD Format</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="165"/>
@@ -1819,7 +1819,7 @@ System wird neu gestartet.</translation>
         <source>Spanish</source>
         <translatorcomment>Español
 -&gt; Espanol</translatorcomment>
-        <translation>Espanol</translation>
+        <translation type="unfinished">Espanol</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="86"/>
@@ -1828,7 +1828,7 @@ System wird neu gestartet.</translation>
         <source>French</source>
         <translatorcomment>Français
 -&gt;Francais</translatorcomment>
-        <translation>Francais</translation>
+        <translation type="unfinished">Francais</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="91"/>
@@ -3365,22 +3365,22 @@ Aus</translation>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="95"/>
         <source>Ch.1</source>
-        <translation>Ch.1</translation>
+        <translation>Kn.1</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="114"/>
         <source>Ch.2</source>
-        <translation>Ch.2</translation>
+        <translation>Kn.2</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="133"/>
         <source>Ch.3</source>
-        <translation>Ch.3</translation>
+        <translation>Kn.3</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="152"/>
         <source>Ch.4</source>
-        <translation>Ch.4</translation>
+        <translation>Kn.4</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="171"/>
