@@ -457,7 +457,6 @@ void EventLogPage::onButtonSort()
     log_sort = indexSort;
     buttonPlay->setEnabled(false);
     eventLogView->clearSelection();
-    buttonSearch->setFocus();
 
     //qDebug("%s,%d===>logPageNum=%d,oIdxFt=%d,idxFt=%d,oIdxSt=%d,idxSt=%d\n",__func__,__LINE__,logPageNum,oldIndexFilter,indexFilter,oldIndexSort,indexSort);
 
