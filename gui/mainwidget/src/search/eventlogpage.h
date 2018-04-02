@@ -46,6 +46,7 @@ private:
 	void addEventLog(const QString &eventDateTime, const QString &eventLog, const QString &eventTime, int idx);
     void itemViewSelectChange(int isForward);
     void setFocusToLogView(void);
+    void updateLogCount();
     QString changeTimeformat(char event_time[20]);
 
     EventSortFilterProxyModel  *proxyModel;
@@ -84,7 +85,8 @@ private:
                                 endTime,
                                 ampmStatus;
 
-    bool                        isKeyLock;
+    bool                        isKeyLock,
+                                isPageChange;
 };
 
 #endif // EVENTLOGPAGE_H
