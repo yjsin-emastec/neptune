@@ -165,7 +165,7 @@ EventLogPage::EventLogPage(QWidget *parent)
     oldIndexSort   = EVENT_LOG_DESC;
     indexSort      = EVENT_LOG_DESC;
     isKeyLock      = false;
-    isPageChange   = false;
+    isSearch       = false;
 }
 EventLogPage::~EventLogPage()
 {
@@ -188,7 +188,7 @@ void EventLogPage::onQueryLogCount()
         }
     }
 
-    if(!isPageChange)
+    if(isSearch)
     {
         eventLogModel->removeRows(0, eventLogModel->rowCount());
     }
@@ -216,7 +216,7 @@ void EventLogPage::onQueryLogCount()
             default: strEventTime = tr("");                         break;
         }
 
-        if(!isPageChange)
+        if(isSearch)
         {
             if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
             {
@@ -230,14 +230,21 @@ void EventLogPage::onQueryLogCount()
         }
     }
 
+    if(isSearch == true)
+    {
+        isSearch = false;
+    }
+
     if(logPageNum > 0)
     {
         buttonNextLogPage->setEnabled(true);
     }
+
     if(logPageNow >= logPageNum)
     {
         buttonNextLogPage->setEnabled(false);
     }
+
     if(logPageNow == 0)
     {
         buttonPrevLogPage->setEnabled(false);
@@ -306,6 +313,7 @@ void EventLogPage::onButtonSearch()
     startTime = QDateTime(searchStartTime->dateTime()).toString("yyyy-MM-dd hh:mm");
     endTime   = QDateTime(searchEndTime->dateTime()).toString("yyyy-MM-dd hh:mm");
 
+    isSearch       = true;
     logPageNow     = 0;
     logPageNum     = 0;
     oldIndexFilter = indexFilter;
@@ -327,13 +335,12 @@ void EventLogPage::onButtonSearch()
 
         pQuery->log_type = log_type;
         pQuery->log_sort = log_sort;
-        pQuery->offset     = 0;
-        pQuery->nLog       = MAX_EVENT_LOG_PAGE_DATA;
+        pQuery->offset   = 0;
+        pQuery->nLog     = MAX_EVENT_LOG_PAGE_DATA;
         event_send(QUEUE_QT_CORE, QUEUE_EVENT_LOG, EVENT_LOG_QUERY_COUNT, pQuery, g_free, NULL);
         buttonPrevLogPage->setEnabled(false);
         buttonNextLogPage->setEnabled(false);
-        buttonPlay->setEnabled(false);
-        isPageChange=false;
+        buttonPlay       ->setEnabled(false);
     }
 }
 void EventLogPage::onButtonPreviousPage()
@@ -384,8 +391,6 @@ void EventLogPage::onButtonPreviousPage()
         buttonPrevLogPage->setEnabled(false);
         buttonNextLogPage->setFocus();
     }
-
-    isPageChange=true;
 }
 void EventLogPage::onButtonNextPage()
 {
@@ -449,8 +454,6 @@ void EventLogPage::onButtonNextPage()
         buttonNextLogPage->setEnabled(false);
         buttonPrevLogPage->setFocus();
     }
-
-    isPageChange=true;
 }
 void EventLogPage::onTreeViewClicked(const QModelIndex &index)
 {

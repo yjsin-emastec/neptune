@@ -86,7 +86,7 @@ private:
                                 ampmStatus;
 
     bool                        isKeyLock,
-                                isPageChange;
+                                isSearch;
 };
 
 #endif // EVENTLOGPAGE_H
