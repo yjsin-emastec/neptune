@@ -25,6 +25,7 @@ EventLogPage::EventLogPage(QWidget *parent)
     searchStartTime->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     searchStartTime->setFixedSize(QSize(430, 90));
     searchStartTime->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+    searchStartTime->setWrapping(true);
 
     labelEndTime = new QLabel(tr("End:"));
     labelEndTime->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -32,9 +33,10 @@ EventLogPage::EventLogPage(QWidget *parent)
 
     searchEndTime = new QDateTimeEdit(QDateTime::currentDateTime());
     searchEndTime->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-
     searchEndTime->setFixedSize(QSize(430, 90));
     searchEndTime->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+    searchEndTime->setWrapping(true);
+
 
     if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
     {
