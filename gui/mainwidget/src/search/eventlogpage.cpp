@@ -858,7 +858,7 @@ void EventLogPage::KeyPressEvent(int key)
         }
         case Qt::Key_Down:
         {
-            if(searchStartTime->hasFocus() && isKeyLock)                           { searchStartTime->stepUp();      }
+            if(searchStartTime->hasFocus() && isKeyLock)                           { searchStartTime->stepDown();    }
             else if(searchEndTime->hasFocus() && isKeyLock)                        { searchEndTime->stepDown();      }
             else if(eventLogView->hasFocus())                                      { itemViewSelectChange(1);        }
             else if(searchStartTime->hasFocus())                                   { searchEndTime->setFocus();      }
