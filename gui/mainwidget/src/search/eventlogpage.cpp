@@ -37,7 +37,6 @@ EventLogPage::EventLogPage(QWidget *parent)
     searchEndTime->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     searchEndTime->setWrapping(true);
 
-
     if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
     {
         searchStartTime->setDisplayFormat("yyyy.MM.dd hh:mm AP");
@@ -833,28 +832,8 @@ void EventLogPage::KeyPressEvent(int key)
     {
         case Qt::Key_Up:
         {
-            if(searchStartTime->hasFocus() && isKeyLock)
-            {
-                switch(searchStartTime->currentSectionIndex())
-                {
-                    case 0: { searchStartTime->setDateTime(searchStartTime->dateTime().addYears(1));     break; }
-                    case 1: { searchStartTime->setDateTime(searchStartTime->dateTime().addMonths(1));    break; }
-                    case 2: { searchStartTime->setDateTime(searchStartTime->dateTime().addDays(1));      break; }
-                    case 3: { searchStartTime->setDateTime(searchStartTime->dateTime().addSecs(3600));   break; }
-                    case 4: { searchStartTime->setDateTime(searchStartTime->dateTime().addSecs(60));     break; }
-                }
-            }
-            else if(searchEndTime->hasFocus() && isKeyLock)
-            {
-                switch(searchEndTime->currentSectionIndex())
-                {
-                    case 0: { searchEndTime->setDateTime(searchEndTime->dateTime().addYears(1));         break; }
-                    case 1: { searchEndTime->setDateTime(searchEndTime->dateTime().addMonths(1));        break; }
-                    case 2: { searchEndTime->setDateTime(searchEndTime->dateTime().addDays(1));          break; }
-                    case 3: { searchEndTime->setDateTime(searchEndTime->dateTime().addSecs(3600));       break; }
-                    case 4: { searchEndTime->setDateTime(searchEndTime->dateTime().addSecs(60));         break; }
-                }
-            }
+            if(searchStartTime->hasFocus() && isKeyLock)                           { searchStartTime->stepUp();      }
+            else if(searchEndTime->hasFocus() && isKeyLock)                        { searchEndTime->stepUp();        }
             else if(eventLogView->hasFocus())                                      { itemViewSelectChange(0);        }
             else if(searchStartTime->hasFocus())                                   { buttonPrevious->setFocus();     }
             else if(searchEndTime->hasFocus())                                     { searchStartTime->setFocus();    }
@@ -879,44 +858,24 @@ void EventLogPage::KeyPressEvent(int key)
         }
         case Qt::Key_Down:
         {
-            if(searchStartTime->hasFocus() && isKeyLock)
-            {
-                switch(searchStartTime->currentSectionIndex())
-                {
-                    case 0: { searchStartTime->setDateTime(searchStartTime->dateTime().addYears(-1));    break; }
-                    case 1: { searchStartTime->setDateTime(searchStartTime->dateTime().addMonths(-1));   break; }
-                    case 2: { searchStartTime->setDateTime(searchStartTime->dateTime().addDays(-1));     break; }
-                    case 3: { searchStartTime->setDateTime(searchStartTime->dateTime().addSecs(-3600));  break; }
-                    case 4: { searchStartTime->setDateTime(searchStartTime->dateTime().addSecs(-60));    break; }
-                }
-            }
-            else if(searchEndTime->hasFocus() && isKeyLock)
-            {
-                switch(searchEndTime->currentSectionIndex())
-                {
-                    case 0: { searchEndTime->setDateTime(searchEndTime->dateTime().addYears(-1));        break; }
-                    case 1: { searchEndTime->setDateTime(searchEndTime->dateTime().addMonths(-1));       break; }
-                    case 2: { searchEndTime->setDateTime(searchEndTime->dateTime().addDays(-1));         break; }
-                    case 3: { searchEndTime->setDateTime(searchEndTime->dateTime().addSecs(-3600));      break; }
-                    case 4: { searchEndTime->setDateTime(searchEndTime->dateTime().addSecs(-60));        break; }
-                }
-            }
-            else if(eventLogView->hasFocus())                                         { itemViewSelectChange(1);       }
-            else if(searchStartTime->hasFocus())                                      { searchEndTime->setFocus();     }
-            else if(searchEndTime->hasFocus())                                        { buttonFilter->setFocus();      }
-            else if(buttonFilter->hasFocus())                                         { buttonSearch->setFocus();      }
-            else if(buttonSort->hasFocus())                                           { buttonSearch->setFocus();      }
-            else if(buttonSearch->hasFocus() && buttonNextLogPage->isEnabled())       { buttonNextLogPage->setFocus(); }
-            else if(buttonSearch->hasFocus() && buttonPrevLogPage->isEnabled())       { buttonPrevLogPage->setFocus(); }
-            else if(buttonSearch->hasFocus() && buttonPlay->isEnabled())              { buttonPlay->setFocus();        }
-            else if(buttonSearch->hasFocus())                                         { buttonPrevious->setFocus();    }
-            else if(buttonNextLogPage->hasFocus() && buttonPlay->isEnabled())         { buttonPlay->setFocus();        }
-            else if(buttonNextLogPage->hasFocus())                                    { buttonPrevious->setFocus();    }
-            else if(buttonPrevLogPage->hasFocus() && buttonPlay->isEnabled())         { buttonPlay->setFocus();        }
-            else if(buttonPrevLogPage->hasFocus())                                    { buttonPrevious->setFocus();    }
-            else if(buttonPlay->hasFocus())                                           { buttonPrevious->setFocus();    }
-            else if(buttonPrevious->hasFocus())                                       { searchStartTime->setFocus();   }
-            else if(buttonClose->hasFocus())                                          { searchStartTime->setFocus();   }
+            if(searchStartTime->hasFocus() && isKeyLock)                           { searchStartTime->stepUp();      }
+            else if(searchEndTime->hasFocus() && isKeyLock)                        { searchEndTime->stepDown();      }
+            else if(eventLogView->hasFocus())                                      { itemViewSelectChange(1);        }
+            else if(searchStartTime->hasFocus())                                   { searchEndTime->setFocus();      }
+            else if(searchEndTime->hasFocus())                                     { buttonFilter->setFocus();       }
+            else if(buttonFilter->hasFocus())                                      { buttonSearch->setFocus();       }
+            else if(buttonSort->hasFocus())                                        { buttonSearch->setFocus();       }
+            else if(buttonSearch->hasFocus() && buttonNextLogPage->isEnabled())    { buttonNextLogPage->setFocus();  }
+            else if(buttonSearch->hasFocus() && buttonPrevLogPage->isEnabled())    { buttonPrevLogPage->setFocus();  }
+            else if(buttonSearch->hasFocus() && buttonPlay->isEnabled())           { buttonPlay->setFocus();         }
+            else if(buttonSearch->hasFocus())                                      { buttonPrevious->setFocus();     }
+            else if(buttonNextLogPage->hasFocus() && buttonPlay->isEnabled())      { buttonPlay->setFocus();         }
+            else if(buttonNextLogPage->hasFocus())                                 { buttonPrevious->setFocus();     }
+            else if(buttonPrevLogPage->hasFocus() && buttonPlay->isEnabled())      { buttonPlay->setFocus();         }
+            else if(buttonPrevLogPage->hasFocus())                                 { buttonPrevious->setFocus();     }
+            else if(buttonPlay->hasFocus())                                        { buttonPrevious->setFocus();     }
+            else if(buttonPrevious->hasFocus())                                    { searchStartTime->setFocus();    }
+            else if(buttonClose->hasFocus())                                       { searchStartTime->setFocus();    }
 
             break;
         }
