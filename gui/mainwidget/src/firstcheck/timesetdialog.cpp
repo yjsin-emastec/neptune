@@ -43,6 +43,7 @@ TimeSetDialog::TimeSetDialog(QWidget *parent)
     dateTimeSystem->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
     dateTimeSystem->setDateRange(QDate(ver_get_ref_year(),1,1),QDate(MAX_YEAR-1,12,31));
     dateTimeSystem->setStyleSheet("QDateTimeEdit {font:44px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+    dateTimeSystem->setWrapping(true);
 
     buttonDeleteData->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
     buttonSetTime->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
@@ -249,15 +250,7 @@ void TimeSetDialog::keyPressEvent(QKeyEvent *event)
 
             if(dateTimeSystem->hasFocus() && isKeyLock)
             {
-                switch(dateTimeSystem->currentSectionIndex())
-                {
-                    case 0: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addYears(1));         break; }
-                    case 1: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addMonths(1));        break; }
-                    case 2: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addDays(1));          break; }
-                    case 3: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addSecs(3600));       break; }
-                    case 4: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addSecs(60));         break; }
-                    case 5: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addSecs(1));          break; }
-                }
+                dateTimeSystem->stepUp();
             }
             else if(dateTimeSystem->hasFocus())
             {
@@ -274,15 +267,7 @@ void TimeSetDialog::keyPressEvent(QKeyEvent *event)
 
             if(dateTimeSystem->hasFocus() && isKeyLock)
             {
-                switch(dateTimeSystem->currentSectionIndex())
-                {
-                    case 0: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addYears(-1));        break; }
-                    case 1: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addMonths(-1));       break; }
-                    case 2: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addDays(-1));         break; }
-                    case 3: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addSecs(-3600));      break; }
-                    case 4: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addSecs(-60));        break; }
-                    case 5: { dateTimeSystem->setDateTime(dateTimeSystem->dateTime().addSecs(-1));         break; }
-                }
+                dateTimeSystem->stepDown();
             }
             else if(dateTimeSystem->hasFocus())
             {

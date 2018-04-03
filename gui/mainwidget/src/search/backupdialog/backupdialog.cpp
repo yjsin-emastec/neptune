@@ -25,14 +25,15 @@ BackupDialog::BackupDialog(QWidget *parent)
     {
         dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss AP");
         dateTimeStart->setStyleSheet("QDateTimeEdit {font:43px; selection-color:white; selection-background-color:rgb(152,14,69);}");
-        dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     }
     else                                                            // 24H
     {
         dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
         dateTimeStart->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
-        dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+
     }
+    dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+    dateTimeStart->setWrapping(true);
 
 #if 1 //yjsin [17/09/13] if text is long, change font size
     if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
@@ -347,18 +348,7 @@ void BackupDialog::keyPressEvent(QKeyEvent *event)
     {
         case Qt::Key_Up:
         {
-            if(dateTimeStart->hasFocus() && isKeyLock)
-            {
-                switch(dateTimeStart->currentSectionIndex())
-                {
-                    case 0: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addYears(1));    break; }
-                    case 1: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addMonths(1));   break; }
-                    case 2: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addDays(1));     break; }
-                    case 3: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addSecs(3600));  break; }
-                    case 4: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addSecs(60));    break; }
-                    case 5: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addSecs(1));     break; }
-                }
-            }
+            if(dateTimeStart->hasFocus() && isKeyLock)                       { dateTimeStart->stepUp();    }
             else if(dateTimeStart->hasFocus())                               { buttonBackup->setFocus();   }
             else if(buttonBackup->hasFocus() && buttonEnd->isEnabled())      { buttonEnd->setFocus();      }
             else if(buttonEnd->hasFocus()    && dateTimeStart->isEnabled())  { dateTimeStart->setFocus();  }
@@ -368,18 +358,7 @@ void BackupDialog::keyPressEvent(QKeyEvent *event)
         }
         case Qt::Key_Down:
         {
-            if(dateTimeStart->hasFocus() && isKeyLock)
-            {
-                switch(dateTimeStart->currentSectionIndex())
-                {
-                    case 0: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addYears(-1));   break; }
-                    case 1: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addMonths(-1));  break; }
-                    case 2: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addDays(-1));    break; }
-                    case 3: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addSecs(-3600)); break; }
-                    case 4: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addSecs(-60));   break; }
-                    case 5: { dateTimeStart->setDateTime(dateTimeStart->dateTime().addSecs(-1));    break; }
-                }
-            }
+            if(dateTimeStart->hasFocus() && isKeyLock)                       { dateTimeStart->stepDown();  }
             else if(dateTimeStart->hasFocus() && buttonEnd->isEnabled())     { buttonEnd->setFocus();      }
             else if(buttonEnd->hasFocus())                                   { buttonBackup->setFocus();   }
             else if(buttonBackup->hasFocus()  && dateTimeStart->isEnabled()) { dateTimeStart->setFocus();  }

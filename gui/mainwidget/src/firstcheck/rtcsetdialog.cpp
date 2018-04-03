@@ -38,6 +38,7 @@ RtcSetDialog::RtcSetDialog(QWidget *parent)
     dateTimeRtc->setAlignment(Qt::AlignCenter);
     dateTimeRtc->setDateRange(QDate(ver_get_ref_year(),1,1),QDate(MAX_YEAR-1,12,31));
     dateTimeRtc->setStyleSheet("QDateTimeEdit {font:56px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+    dateTimeRtc->setWrapping(true);
 
     buttonSetRestart->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
 
@@ -87,15 +88,7 @@ void RtcSetDialog::keyPressEvent(QKeyEvent *event)
 
             if(dateTimeRtc->hasFocus() && isKeyLock)
             {
-                switch(dateTimeRtc->currentSectionIndex())
-                {
-                    case 0: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addYears(1));         break; }
-                    case 1: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addMonths(1));        break; }
-                    case 2: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addDays(1));          break; }
-                    case 3: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addSecs(3600));       break; }
-                    case 4: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addSecs(60));         break; }
-                    case 5: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addSecs(1));          break; }
-                }
+                dateTimeRtc->stepUp();
             }
             else if(dateTimeRtc->hasFocus())
             {
@@ -112,15 +105,7 @@ void RtcSetDialog::keyPressEvent(QKeyEvent *event)
 
             if(dateTimeRtc->hasFocus() && isKeyLock)
             {
-                switch(dateTimeRtc->currentSectionIndex())
-                {
-                    case 0: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addYears(-1));        break; }
-                    case 1: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addMonths(-1));       break; }
-                    case 2: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addDays(-1));         break; }
-                    case 3: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addSecs(-3600));      break; }
-                    case 4: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addSecs(-60));        break; }
-                    case 5: { dateTimeRtc->setDateTime(dateTimeRtc->dateTime().addSecs(-1));         break; }
-                }
+                dateTimeRtc->stepDown();
             }
             else if(dateTimeRtc->hasFocus())
             {
