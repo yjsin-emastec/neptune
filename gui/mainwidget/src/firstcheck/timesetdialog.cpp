@@ -45,6 +45,7 @@ TimeSetDialog::TimeSetDialog(QWidget *parent)
     dateTimeSystem->setStyleSheet("QDateTimeEdit {font:44px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     dateTimeSystem->setWrapping(true);
     dateTimeSystem->installEventFilter(this);
+    dateTimeSystem->setContextMenuPolicy(Qt::NoContextMenu);
 
     buttonDeleteData->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
     buttonSetTime->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");

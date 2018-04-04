@@ -40,6 +40,7 @@ RtcSetDialog::RtcSetDialog(QWidget *parent)
     dateTimeRtc->setStyleSheet("QDateTimeEdit {font:56px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     dateTimeRtc->setWrapping(true);
     dateTimeRtc->installEventFilter(this);
+    dateTimeRtc->setContextMenuPolicy(Qt::NoContextMenu);
 
     buttonSetRestart->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
 

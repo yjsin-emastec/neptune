@@ -27,6 +27,7 @@ EventLogPage::EventLogPage(QWidget *parent)
     searchStartTime->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     searchStartTime->setWrapping(true);
     searchStartTime->installEventFilter(this);
+    searchStartTime->setContextMenuPolicy(Qt::NoContextMenu);
 
     labelEndTime = new QLabel(tr("End:"));
     labelEndTime->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -38,6 +39,7 @@ EventLogPage::EventLogPage(QWidget *parent)
     searchEndTime->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     searchEndTime->setWrapping(true);
     searchEndTime->installEventFilter(this);
+    searchEndTime->setContextMenuPolicy(Qt::NoContextMenu);
 
     if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
     {

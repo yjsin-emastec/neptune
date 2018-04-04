@@ -35,6 +35,7 @@ BackupDialog::BackupDialog(QWidget *parent)
     dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     dateTimeStart->setWrapping(true);
     dateTimeStart->installEventFilter(this);
+    dateTimeStart->setContextMenuPolicy(Qt::NoContextMenu);
 
 #if 1 //yjsin [17/09/13] if text is long, change font size
     if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
