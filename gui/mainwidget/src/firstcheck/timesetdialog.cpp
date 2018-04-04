@@ -271,6 +271,10 @@ void TimeSetDialog::keyPressEvent(QKeyEvent *event)
             {
                 dateTimeSystem->setFocus();
             }
+            else if(buttonDeleteData->hasFocus())
+            {
+                dateTimeSystem->setFocus();
+            }
 
             return;
 
@@ -285,6 +289,10 @@ void TimeSetDialog::keyPressEvent(QKeyEvent *event)
                 buttonSetTime->setFocus();
             }
             else if(buttonSetTime->hasFocus())
+            {
+                dateTimeSystem->setFocus();
+            }
+            else if(buttonDeleteData->hasFocus())
             {
                 dateTimeSystem->setFocus();
             }
