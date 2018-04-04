@@ -34,6 +34,7 @@ private:
 	int indexEnd, flagPrepare, tmp_msg, tmp_progress;
 	bool isKeyLock;
 	aif_backup_context_t *pBackupContext;
+    bool eventFilter(QObject *obj, QEvent *event);
 };
 
 #endif // BACKUPDIALOG_H

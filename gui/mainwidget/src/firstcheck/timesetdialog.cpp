@@ -44,6 +44,7 @@ TimeSetDialog::TimeSetDialog(QWidget *parent)
     dateTimeSystem->setDateRange(QDate(ver_get_ref_year(),1,1),QDate(MAX_YEAR-1,12,31));
     dateTimeSystem->setStyleSheet("QDateTimeEdit {font:44px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     dateTimeSystem->setWrapping(true);
+    dateTimeSystem->installEventFilter(this);
 
     buttonDeleteData->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
     buttonSetTime->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
@@ -241,6 +242,15 @@ void TimeSetDialog::onButtonSetTime(void)
         buttonSetTime->setEnabled(true);
         dateTimeSystem->setFocus();
     }
+}
+bool TimeSetDialog::eventFilter(QObject *obj, QEvent *event)
+{
+    if((obj==dateTimeSystem) && (event->type()==QEvent::FocusOut))
+    {
+        isKeyLock=false;
+    }
+
+    return QDialog::eventFilter(obj, event);
 }
 void TimeSetDialog::keyPressEvent(QKeyEvent *event)
 {

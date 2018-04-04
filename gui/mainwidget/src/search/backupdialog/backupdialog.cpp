@@ -34,6 +34,7 @@ BackupDialog::BackupDialog(QWidget *parent)
     }
     dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     dateTimeStart->setWrapping(true);
+    dateTimeStart->installEventFilter(this);
 
 #if 1 //yjsin [17/09/13] if text is long, change font size
     if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
@@ -341,6 +342,15 @@ void BackupDialog::updateBackupProgress(int msg, int progress)
         buttonClose->setEnabled(true);
         buttonClose->setFocus();
     }
+}
+bool BackupDialog::eventFilter(QObject *obj, QEvent *event)
+{
+    if((obj==dateTimeStart) && (event->type()==QEvent::FocusOut))
+    {
+        isKeyLock=false;
+    }
+
+    return QDialog::eventFilter(obj, event);
 }
 void BackupDialog::keyPressEvent(QKeyEvent *event)
 {

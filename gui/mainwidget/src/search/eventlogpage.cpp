@@ -26,6 +26,7 @@ EventLogPage::EventLogPage(QWidget *parent)
     searchStartTime->setFixedSize(QSize(430, 90));
     searchStartTime->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     searchStartTime->setWrapping(true);
+    searchStartTime->installEventFilter(this);
 
     labelEndTime = new QLabel(tr("End:"));
     labelEndTime->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -36,6 +37,7 @@ EventLogPage::EventLogPage(QWidget *parent)
     searchEndTime->setFixedSize(QSize(430, 90));
     searchEndTime->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     searchEndTime->setWrapping(true);
+    searchEndTime->installEventFilter(this);
 
     if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
     {
@@ -825,6 +827,15 @@ qDebug() << "logPageNow * MAX_EVENT_LOG_PAGE_DATA : " << logPageNow * MAX_EVENT_
         pQuery->nLog     = MAX_EVENT_LOG_PAGE_DATA;
         event_send(QUEUE_QT_CORE, QUEUE_EVENT_LOG, EVENT_LOG_QUERY_COUNT, pQuery, g_free, NULL);
     }
+}
+bool EventLogPage::eventFilter(QObject *obj, QEvent *event)
+{
+    if((obj==searchStartTime || obj==searchEndTime) && (event->type()==QEvent::FocusOut))
+    {
+        isKeyLock=false;
+    }
+
+    return QWidget::eventFilter(obj, event);
 }
 void EventLogPage::KeyPressEvent(int key)
 {

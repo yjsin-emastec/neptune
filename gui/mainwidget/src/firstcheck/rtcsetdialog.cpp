@@ -39,6 +39,7 @@ RtcSetDialog::RtcSetDialog(QWidget *parent)
     dateTimeRtc->setDateRange(QDate(ver_get_ref_year(),1,1),QDate(MAX_YEAR-1,12,31));
     dateTimeRtc->setStyleSheet("QDateTimeEdit {font:56px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     dateTimeRtc->setWrapping(true);
+    dateTimeRtc->installEventFilter(this);
 
     buttonSetRestart->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
 
@@ -79,6 +80,15 @@ void RtcSetDialog::onUpdateStatus(void)
         }
 
     }
+}
+bool RtcSetDialog::eventFilter(QObject *obj, QEvent *event)
+{
+    if((obj==dateTimeRtc) && (event->type()==QEvent::FocusOut))
+    {
+        isKeyLock=false;
+    }
+
+    return QDialog::eventFilter(obj, event);
 }
 void RtcSetDialog::keyPressEvent(QKeyEvent *event)
 {

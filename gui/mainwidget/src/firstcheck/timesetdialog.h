@@ -33,6 +33,7 @@ private:
     void Delay(int millisecondsToWait);
     time_t tOld;
     QTimer *updateTimer;
+    bool eventFilter(QObject *obj, QEvent *event);
 };
 
 #endif // TIMESETDIALOG_H

@@ -47,6 +47,7 @@ private:
     void itemViewSelectChange(int isForward);
     void setFocusToLogView(void);
     void updateLogCount();
+    bool eventFilter(QObject *obj, QEvent *event);
     QString changeTimeformat(char event_time[20]);
 
     EventSortFilterProxyModel  *proxyModel;
