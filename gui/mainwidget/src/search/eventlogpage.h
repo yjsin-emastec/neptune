@@ -80,7 +80,8 @@ private:
                                 indexFilter,
                                 indexSort,
                                 oldIndexFilter,
-                                oldIndexSort;
+                                oldIndexSort,
+                                oldIndexRow;
 
     QString                     startTime,
                                 endTime,

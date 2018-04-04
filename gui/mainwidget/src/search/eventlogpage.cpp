@@ -154,6 +154,7 @@ EventLogPage::EventLogPage(QWidget *parent)
     eventLogView->setColumnWidth(1, 195);
     eventLogView->setColumnWidth(2, 110);
     eventLogView->setColumnHidden(3, true);
+    eventLogView->installEventFilter(this);
 
     connect(buttonFilter, SIGNAL(clicked()), this, SLOT(onButtonFilter()));
     connect(buttonSort, SIGNAL(clicked()), this, SLOT(onButtonSort()));
@@ -171,6 +172,7 @@ EventLogPage::EventLogPage(QWidget *parent)
     indexSort      = EVENT_LOG_DESC;
     isKeyLock      = false;
     isSearch       = false;
+    oldIndexRow    = 0;
 }
 EventLogPage::~EventLogPage()
 {
@@ -266,6 +268,7 @@ void EventLogPage::onQueryLogCount()
 
     buttonPlay->setEnabled(false);
     labelLog->setText(tr("%1%2").arg(tr("Log:   ")).arg(logCount));
+    oldIndexRow = 0;
 }
 void EventLogPage::onQueryLogData()
 {
@@ -665,9 +668,9 @@ void EventLogPage::resetSearch()
 void EventLogPage::setFocusToLogView(void)
 {
     QModelIndex index;
-    index = eventLogView->model()->index(0, 0); eventLogView->selectionModel()->setCurrentIndex(index, QItemSelectionModel::ClearAndSelect);
-    index = eventLogView->model()->index(0, 1); eventLogView->selectionModel()->setCurrentIndex(index, QItemSelectionModel::Select);
-    index = eventLogView->model()->index(0, 2); eventLogView->selectionModel()->setCurrentIndex(index, QItemSelectionModel::Select);
+    index = eventLogView->model()->index(oldIndexRow, 0); eventLogView->selectionModel()->setCurrentIndex(index, QItemSelectionModel::ClearAndSelect);
+    index = eventLogView->model()->index(oldIndexRow, 1); eventLogView->selectionModel()->setCurrentIndex(index, QItemSelectionModel::Select);
+    index = eventLogView->model()->index(oldIndexRow, 2); eventLogView->selectionModel()->setCurrentIndex(index, QItemSelectionModel::Select);
     eventLogView->setFocus();
     buttonPlay->setEnabled(true);
 }
@@ -836,6 +839,10 @@ bool EventLogPage::eventFilter(QObject *obj, QEvent *event)
     {
         isKeyLock=false;
     }
+    else if((obj==eventLogView) && (event->type()==QEvent::FocusOut))
+    {
+        oldIndexRow=eventLogView->currentIndex().row();
+    }
 
     return QWidget::eventFilter(obj, event);
 }
@@ -982,7 +989,7 @@ void EventLogPage::KeyPressEvent(int key)
         }
         case Qt::Key_Enter:
         {
-            if(searchStartTime->hasFocus() || searchEndTime->hasFocus())          { isKeyLock = true;               }
+            if(searchStartTime->hasFocus() || searchEndTime->hasFocus())               { isKeyLock = true;               }
             else if(buttonFilter->hasFocus())                                          { onButtonFilter();               }
             else if(buttonSort->hasFocus())                                            { onButtonSort();                 }
             else if(buttonSearch->hasFocus())                                          { onButtonSearch();               }
