@@ -15,72 +15,84 @@ MacDialog::MacDialog(QWidget *parent)
     buttonUp1->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp1->setIconSize(QSize(42, 42));
     buttonMac1->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac1->installEventFilter(this);
     buttonDn1->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn1->setIconSize(QSize(42, 42));
 
     buttonUp2->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp2->setIconSize(QSize(42, 42));
     buttonMac2->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac2->installEventFilter(this);
     buttonDn2->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn2->setIconSize(QSize(42, 42));
 
     buttonUp3->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp3->setIconSize(QSize(42, 42));
     buttonMac3->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac3->installEventFilter(this);
     buttonDn3->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn3->setIconSize(QSize(42, 42));
 
     buttonUp4->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp4->setIconSize(QSize(42, 42));
     buttonMac4->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac4->installEventFilter(this);
     buttonDn4->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn4->setIconSize(QSize(42, 42));
 
     buttonUp5->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp5->setIconSize(QSize(42, 42));
     buttonMac5->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac5->installEventFilter(this);
     buttonDn5->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn5->setIconSize(QSize(42, 42));
 
     buttonUp6->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp6->setIconSize(QSize(42, 42));
     buttonMac6->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac6->installEventFilter(this);
     buttonDn6->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn6->setIconSize(QSize(42, 42));
 
     buttonUp7->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp7->setIconSize(QSize(42, 42));
     buttonMac7->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac7->installEventFilter(this);
     buttonDn7->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn7->setIconSize(QSize(42, 42));
 
     buttonUp8->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp8->setIconSize(QSize(42, 42));
     buttonMac8->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac8->installEventFilter(this);
     buttonDn8->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn8->setIconSize(QSize(42, 42));
 
     buttonUp9->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp9->setIconSize(QSize(42, 42));
     buttonMac9->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac9->installEventFilter(this);
     buttonDn9->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn9->setIconSize(QSize(42, 42));
 
     buttonUp10->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp10->setIconSize(QSize(42, 42));
     buttonMac10->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac10->installEventFilter(this);
     buttonDn10->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn10->setIconSize(QSize(42, 42));
 
     buttonUp11->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp11->setIconSize(QSize(42, 42));
     buttonMac11->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac11->installEventFilter(this);
     buttonDn11->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn11->setIconSize(QSize(42, 42));
 
     buttonUp12->setIcon(QIcon(":/images/arrow_up.png"));
     buttonUp12->setIconSize(QSize(42, 42));
     buttonMac12->setStyleSheet("QPushButton{font:48px;background-color:rgb(39,0,79);color:white;}QPushButton:focus{color:white;background:rgb(152,14,69);}");
+    buttonMac12->installEventFilter(this);
     buttonDn12->setIcon(QIcon(":/images/arrow_down.png"));
     buttonDn12->setIconSize(QSize(42, 42));
 
@@ -118,7 +130,7 @@ MacDialog::MacDialog(QWidget *parent)
         idxMac[ii] = 0;
     }
 
-    isLockEsc = 1;
+    isLockEsc = false;
 
     buttonMac1->setFocus();
 }
@@ -948,6 +960,26 @@ void MacDialog::onButtonSave(void)
 
     QDialog::accept();
 }
+bool MacDialog::eventFilter(QObject *obj, QEvent *event)
+{
+    if(((obj==buttonMac1) || (obj==buttonMac2)  || (obj==buttonMac3)  || (obj==buttonMac4)   ||
+        (obj==buttonMac5) || (obj==buttonMac6)  || (obj==buttonMac7)  || (obj==buttonMac8)   ||
+        (obj==buttonMac9) || (obj==buttonMac10) || (obj==buttonMac11) || (obj==buttonMac12)) && (event->type()==QEvent::FocusOut))
+    {
+        if ((buttonMac1->hasFocus() || buttonMac2 ->hasFocus() || buttonMac3 ->hasFocus() || buttonMac4 ->hasFocus()  ||
+             buttonMac5->hasFocus() || buttonMac6 ->hasFocus() || buttonMac7 ->hasFocus() || buttonMac8 ->hasFocus()  ||
+             buttonMac9->hasFocus() || buttonMac10->hasFocus() || buttonMac11->hasFocus() || buttonMac12->hasFocus()) && (isLockEsc==true))
+        {
+            isLockEsc=true;
+        }
+        else
+        {
+            isLockEsc=false;
+        }
+    }
+
+    return QDialog::eventFilter(obj, event);
+}
 void MacDialog::keyPressEvent(QKeyEvent *event)
 {
     switch(event->key())
@@ -1060,18 +1092,18 @@ void MacDialog::keyPressEvent(QKeyEvent *event)
         {
             if(!isLockEsc)
             {
-                     if(buttonMac1 ->hasFocus())               { isLockEsc = 1;                         }
-                else if(buttonMac2 ->hasFocus())               { isLockEsc = 1;                         }
-                else if(buttonMac3 ->hasFocus())               { isLockEsc = 1;                         }
-                else if(buttonMac4 ->hasFocus())               { isLockEsc = 1;                         }
-                else if(buttonMac5 ->hasFocus())               { isLockEsc = 1;                         }
-                else if(buttonMac6 ->hasFocus())               { isLockEsc = 1;                         }
-                else if(buttonMac7 ->hasFocus())               { isLockEsc = 1;                         }
-                else if(buttonMac8 ->hasFocus())               { isLockEsc = 1;                         }
-                else if(buttonMac9 ->hasFocus())               { isLockEsc = 1;                         }
-                else if(buttonMac10->hasFocus())               { isLockEsc = 1;                         }
-                else if(buttonMac11->hasFocus())               { isLockEsc = 1;                         }
-                else if(buttonMac12->hasFocus())               { isLockEsc = 1;                         }
+                     if(buttonMac1 ->hasFocus())               { isLockEsc = true;                      }
+                else if(buttonMac2 ->hasFocus())               { isLockEsc = true;                      }
+                else if(buttonMac3 ->hasFocus())               { isLockEsc = true;                      }
+                else if(buttonMac4 ->hasFocus())               { isLockEsc = true;                      }
+                else if(buttonMac5 ->hasFocus())               { isLockEsc = true;                      }
+                else if(buttonMac6 ->hasFocus())               { isLockEsc = true;                      }
+                else if(buttonMac7 ->hasFocus())               { isLockEsc = true;                      }
+                else if(buttonMac8 ->hasFocus())               { isLockEsc = true;                      }
+                else if(buttonMac9 ->hasFocus())               { isLockEsc = true;                      }
+                else if(buttonMac10->hasFocus())               { isLockEsc = true;                      }
+                else if(buttonMac11->hasFocus())               { isLockEsc = true;                      }
+                else if(buttonMac12->hasFocus())               { isLockEsc = true;                      }
             }
 
             break;
@@ -1086,7 +1118,7 @@ void MacDialog::keyPressEvent(QKeyEvent *event)
                    buttonMac7 ->hasFocus() || buttonMac8 ->hasFocus() || buttonMac9 ->hasFocus() ||
                    buttonMac10->hasFocus() || buttonMac11->hasFocus() || buttonMac12->hasFocus())
                 {
-                    isLockEsc = 0;
+                    isLockEsc = false;
                     buttonSave->setFocus();
                 }
             }
@@ -1099,7 +1131,6 @@ void MacDialog::keyPressEvent(QKeyEvent *event)
         }
         default:
         {
-            reject();
             return;
         }
     }

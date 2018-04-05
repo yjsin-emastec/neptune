@@ -55,7 +55,9 @@ protected:
 private:
     char *Dec2Hex(char *val);
     char tmp[64];
-    int  idxMac[12], kk, ii, isLockEsc;
+    int  idxMac[12], kk, ii;
+    bool isLockEsc;
+    bool eventFilter(QObject *obj, QEvent *event);
 };
 
 #endif // MACDIALOG_H
