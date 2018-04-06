@@ -675,6 +675,7 @@ bool MainWidget::checkPassword(int mode, int *userId)
         case CHECK_POWER_OFF:
         case CHECK_LOCK:
         case CHECK_UNLOCK:
+        case CHECK_FORMAT:
             checkPw = 1;
             break;
         case CHECK_POWER_ON:

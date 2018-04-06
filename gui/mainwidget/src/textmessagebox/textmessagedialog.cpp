@@ -62,9 +62,7 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
         case 3:
 
-            //labelMsg->setStyleSheet(tr("font-size:16px;"));
-            //labelMsg->setStyleSheet(tr("color:white;font-weight:bold;font-size:16px;"));
-            //labelMsg->resize(300, 300);
+            QTimer::singleShot(3000, this, SLOT(buttonAccept()));
 
             break;
 

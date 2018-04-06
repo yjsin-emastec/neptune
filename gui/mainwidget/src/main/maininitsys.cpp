@@ -5,6 +5,7 @@
 #include "firstcheck/timesetdialog.h"
 #include "firstcheck/rtcsetdialog.h"
 #include "textmessagebox/textmessagedialog.h"
+#include "login/logindialog.h"
 #include "mainglobal.h"
 #include "languagedefine.h"
 #include "DVR.h"
@@ -75,12 +76,13 @@ int MainWidget::loadData()
 }
 void MainWidget::initializeSystem()
 {
-    int ret = 0;
-    struct timeval dvrtime;
-    struct tm when;
-    int lang = 0;
-    time_t now = 0;
-
+    int               ret                  = 0;
+    int               isAcceptFormat       = 0;
+    int               isApprovePassword    = 0;
+    int               lang                 = 0;
+    time_t            now                  = 0;
+    struct tm         when;
+    struct timeval    dvrtime;
 
     qDebug("\n\n\t initializeSystem() +++++ \n");
 
@@ -131,6 +133,48 @@ void MainWidget::initializeSystem()
         case DS_CODE_HDD_NOT_FOUND:
 
             break;
+
+#if 1 // GyverJeong [18/04/06] Format a storage over ESC key on remote controller during booting
+        case DS_CODE_HDD_FORMAT_NEED:
+
+            if(msgBox == NULL)
+            {
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("WARNING"), tr("Do you want to format a storage?")), 0, this);
+                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
+                isAcceptFormat = msgBox->exec();
+            }
+
+            if(isAcceptFormat)
+            {
+                int userId = 0;
+                isApprovePassword = checkPassword(CHECK_FORMAT, &userId);
+
+                if(isApprovePassword)
+                {
+                    DiskFormatNum  = 0;
+                    DiskFormatNum |= (1 << 0);
+                    DiskFormatProcessDlgOpen();
+                }
+            }
+
+            if(isAcceptFormat == 0 || isApprovePassword == 0)
+            {
+                delete msgBox;
+                msgBox = NULL;
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("NOTICE"),tr("System will restart")), 3, this);
+                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
+                msgBox->exec();
+            }
+
+            delete msgBox;
+            msgBox = NULL;
+
+            appmgr_reboot_system(0);
+
+            return;
+#endif
 
         case DS_CODE_HDD_FORMAT_START:
         case DS_CODE_SERIAL_MISMATCH:
@@ -460,7 +504,7 @@ void MainWidget::initializeSystem()
     }
 
     memset(diskInfo, 0, sizeof(disk_used_info_t) * MAX_HDD_COUNT);
-    appmgr_get_disk_info(diskInfo);	
+    appmgr_get_disk_info(diskInfo);
     qDebug("%s: disk state(%x), hdd cnt = %d \n", __func__, appmgr_get_boot_disk_state(), diskInfo[0].hddCount);
 
     appmgr_create_rs_config();
