@@ -77,8 +77,7 @@ int MainWidget::loadData()
 void MainWidget::initializeSystem()
 {
     int               ret                  = 0;
-    int               isAcceptFormat       = 0;
-    int               isApprovePassword    = 0;
+    bool              isFormat             = 1;
     int               lang                 = 0;
     time_t            now                  = 0;
     struct tm         when;
@@ -134,7 +133,7 @@ void MainWidget::initializeSystem()
 
             break;
 
-#if 1 // GyverJeong [18/04/06] Format a storage over ESC key on remote controller during booting
+#if 1 // GyverJeong [18/04/08] Format a storage over ESC key on remote controller during booting
         case DS_CODE_HDD_FORMAT_NEED:
 
             if(msgBox == NULL)
@@ -142,26 +141,37 @@ void MainWidget::initializeSystem()
                 msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("WARNING"), tr("Do you want to format a storage?")), 0, this);
                 msgBox->setMsgAlignment(Qt::AlignCenter);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
-                isAcceptFormat = msgBox->exec();
             }
 
-            if(isAcceptFormat)
+            if(msgBox->exec())
             {
-                int userId = 0;
-                isApprovePassword = checkPassword(CHECK_FORMAT, &userId);
+                if(utils_cfg_cmp_item(SystemCfg.system_lock, "YES") == 0)
+                {
+                    int userId = 0;
 
-                if(isApprovePassword)
+                    if(checkPassword(CHECK_FORMAT, &userId) == 0)
+                    {
+                        isFormat = 0;
+                    }
+                }
+
+                if(isFormat)
                 {
                     DiskFormatNum  = 0;
                     DiskFormatNum |= (1 << 0);
                     DiskFormatProcessDlgOpen();
                 }
             }
+            else
+            {
+                isFormat = 0;
+            }
 
-            if(isAcceptFormat == 0 || isApprovePassword == 0)
+            if(isFormat == 0)
             {
                 delete msgBox;
                 msgBox = NULL;
+
                 msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("NOTICE"),tr("System will restart")), 3, this);
                 msgBox->setMsgAlignment(Qt::AlignCenter);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
