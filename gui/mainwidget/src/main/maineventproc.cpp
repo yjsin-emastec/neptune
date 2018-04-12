@@ -13,7 +13,6 @@
 #include "KeypadCode.h"
 #include "DVR.h"
 #include "dvrsetup/device/diskformat/diskformatprocess.h"
-#include "textmessagebox/textmessagedialog.h"
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/sem.h>
@@ -461,6 +460,24 @@ void MainWidget::doDvrEvent(Event *e)
                 qDebug("receive DISK_FORMAT_END message\n");
                 emit diskformatEnd();
             }
+#if 1 // GyverJeong [18/04/11]
+            else if(Message == DISK_MOUNT_ERR)
+            {
+                qDebug("Receive DISK_MOUNT_ERR Message");
+
+                if(msgBoxDisk)
+                {
+                    delete msgBoxDisk;
+                }
+
+                msgBoxDisk = new TextMessageDialog(tr("MOUNT ERROR"), tr("%1").arg(tr("Mount Error")), 3, this);
+                msgBoxDisk->setMsgAlignment(Qt::AlignCenter);
+                msgBoxDisk->move((appmgr_get_mainwidget_width()-msgBoxDisk->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBoxDisk->sizeHint().height())/2);
+                msgBoxDisk->exec();
+                delete msgBoxDisk;
+                msgBoxDisk = NULL;
+            }
+#endif
 
             break;
         }
