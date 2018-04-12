@@ -212,6 +212,7 @@ void          appmgr_gsensor_config                     (void);
 int           appmgr_get_gps_connected                  (void);
 int           appmgr_get_board_temperature              (void);
 int           appmgr_sysinfo_set_factory_default        (void);
+int           appmgr_get_sata_phy                       (char *ata);
 
 #ifdef __cplusplus
 }
