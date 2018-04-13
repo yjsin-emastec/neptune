@@ -470,7 +470,7 @@ void MainWidget::doDvrEvent(Event *e)
                     delete msgBoxDisk;
                 }
 
-                msgBoxDisk = new TextMessageDialog(tr("MOUNT ERROR"), tr("%1").arg(tr("Mount Error")), 3, this);
+                msgBoxDisk = new TextMessageDialog(tr("MOUNT ERROR"), tr("%1").arg(tr("Format Error")), 2, this);
                 msgBoxDisk->setMsgAlignment(Qt::AlignCenter);
                 msgBoxDisk->move((appmgr_get_mainwidget_width()-msgBoxDisk->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBoxDisk->sizeHint().height())/2);
                 msgBoxDisk->exec();
