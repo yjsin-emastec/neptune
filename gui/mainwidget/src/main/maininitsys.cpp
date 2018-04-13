@@ -186,6 +186,7 @@ void MainWidget::initializeSystem()
             return;
 #endif
 
+        case DS_CODE_FILESYSTEM_BROKEN:
         case DS_CODE_HDD_FORMAT_START:
         case DS_CODE_SERIAL_MISMATCH:
         case DS_CODE_BAD_MAGIC:
@@ -216,6 +217,18 @@ void MainWidget::initializeSystem()
                 DiskFormatNum |= (1 << 0);
                 DiskFormatProcessDlgOpen();
             }
+#if 1 // GyverJeong [18/04/13]
+            else
+            {
+                delete msgBox;
+                msgBox = NULL;
+
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("NOTICE"),tr("System will restart")), 3, this);
+                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
+                msgBox->exec();
+            }
+#endif
 
             delete msgBox;
             msgBox = NULL;
