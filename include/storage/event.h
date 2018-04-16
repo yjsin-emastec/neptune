@@ -7,7 +7,8 @@ extern "C"{
 
 #include "sqlite3.h"
 
-int event_sql_init(int hddNum);
+int    event_sql_init    (int hddNum);
+int    event_sql_end     (void);
 
 #ifdef __cplusplus
 }
