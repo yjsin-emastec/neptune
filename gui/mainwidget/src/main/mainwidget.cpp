@@ -471,12 +471,15 @@ void MainWidget::closeEvent(QCloseEvent *event)
 
     if(!msgBox)
     {
-        msgBox = new TextMessageDialog(tr("POWER OFF"), tr("\t\t\t\tNOTICE\n\n" "System was shutdown successfully.\n" "Turn off the power."), 3, this);
+        msgBox = new TextMessageDialog(tr("POWER OFF"), tr("\t\t\t\tNOTICE\n\n" "System was shutdown successfully.\n" "Turn off the power."), 13, this);
     }
 
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
-    msgBox->exec();
+    while(1)
+    {
+        msgBox->exec();
+    }
 
     delete msgBox;
     msgBox = NULL;
