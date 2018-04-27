@@ -1243,3 +1243,7 @@ bool VideoPane::checkInvalidateRegion_Vis(QRect invalidatedRect)
 
     return invalidatedRect.intersects(rt);
 }
+int VideoPane::isVisibleRecordIcon(void)
+{
+    return labelRecord->isVisible();
+}

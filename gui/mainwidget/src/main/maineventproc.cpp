@@ -1005,6 +1005,22 @@ void MainWidget::updateDvrEvent(live_event_t *live)
             liveEvent.changeRecordType = live->changeRecordType;
         }
 
+#if 1 // GyverJeong [18/04/27]
+        if(operationMode == OPMODE_LIVE)
+        {
+            for(i = 0; i < devInfo.videoNum; i++)
+            {
+                if(videoPane[i]->isVisibleRecordIcon() != ((live->recordOn&(1<<i))?1:0))
+                {
+                    int *pResetRecordIcon = g_new0(int, 1);
+                    *pResetRecordIcon     = i;
+                    event_send(QUEUE_QT_CORE, QUEUE_WORK, WORK_EVENT_RESET_RECORD_ICON, pResetRecordIcon, g_free, NULL);
+                    videoPane[i]->setRecordingDetect(record, 0, 0, 0);
+                }
+            }
+        }
+#endif
+
         // HDD Remain Size Draw
         if(live->diskSize != liveEvent.diskSize || live->diskFree != liveEvent.diskFree)
         {

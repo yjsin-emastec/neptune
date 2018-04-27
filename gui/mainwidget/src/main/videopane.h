@@ -54,6 +54,7 @@ public:
     void updateStringVis                    (int vis);
     void setGpsStatus                       (int gps);
     void setAudioOutput                     (int audio);
+    int  isVisibleRecordIcon                (void);
 
     bool                                    inputExistHistory,
                                             zoomAction,
