@@ -218,8 +218,6 @@ void CameraNameDialog::keyPressEvent(QKeyEvent *event)
 
 		default:
 
-			reject();
-
 			return;
 	}
 

@@ -200,8 +200,6 @@ void ConfigDialog::keyPressEvent(QKeyEvent *event)
 
         default:
 
-            reject();
-
             return;
     }
 

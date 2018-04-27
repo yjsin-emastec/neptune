@@ -1477,7 +1477,6 @@ void TriggerInputDialog::keyPressEvent(QKeyEvent *event)
         }
         default:
         {
-            reject();
             return;
         }
     }

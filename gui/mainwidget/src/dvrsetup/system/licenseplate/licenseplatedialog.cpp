@@ -113,8 +113,6 @@ void LicensePlateDialog::keyPressEvent(QKeyEvent *event)
 
         default:
 
-            reject();
-
             return;
     }
 

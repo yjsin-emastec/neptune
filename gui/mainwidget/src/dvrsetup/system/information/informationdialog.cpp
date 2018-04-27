@@ -133,21 +133,22 @@ void InformationDialog::keyPressEvent(QKeyEvent *event)
 {
     switch(event->key())
     {
-        case Qt::Key_Up:
-        case Qt::Key_Down:
-        case Qt::Key_Left:
-        case Qt::Key_Right:
-
-            return;
-
-        default:
         case Qt::Key_Enter:
-        case Qt::Key_Escape:
-
+        {
             if(buttonClose->hasFocus())
             {
                 onClose();
             }
+
+            return;
+        }
+        case Qt::Key_Escape:
+        {
+            onClose();
+
+            return;
+        }
+        default:
 
             return;
     }

@@ -120,8 +120,6 @@ void GsensorDialog::keyPressEvent(QKeyEvent *event)
 
         default:
 
-            reject();
-
             return;
     }
 

@@ -553,8 +553,6 @@ void NormalDialog::keyPressEvent(QKeyEvent *event)
 
         default:
 
-            reject();
-
             return;
     }
 

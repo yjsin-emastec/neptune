@@ -219,7 +219,6 @@ void LanguageDialog::keyPressEvent(QKeyEvent *event)
         }
         default:
         {
-            reject();
             return;
         }
     }

@@ -239,8 +239,6 @@ void VideoInputDialog::keyPressEvent(QKeyEvent *event)
 
         default:
 
-            reject();
-
             return;
     }
 
