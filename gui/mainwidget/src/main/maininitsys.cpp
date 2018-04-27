@@ -138,7 +138,7 @@ void MainWidget::initializeSystem()
 
             if(msgBox == NULL)
             {
-                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("WARNING"), tr("Do you want to format a storage?")), 0, this);
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("WARNING"), tr("Do you want to format the storage?")), 0, this);
                 msgBox->setMsgAlignment(Qt::AlignCenter);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
             }
@@ -172,7 +172,7 @@ void MainWidget::initializeSystem()
                 delete msgBox;
                 msgBox = NULL;
 
-                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("NOTICE"),tr("System will restart")), 3, this);
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("NOTICE"),tr("System will restart.")), 3, this);
                 msgBox->setMsgAlignment(Qt::AlignCenter);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
                 msgBox->exec();
@@ -223,7 +223,7 @@ void MainWidget::initializeSystem()
                 delete msgBox;
                 msgBox = NULL;
 
-                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("NOTICE"),tr("System will restart")), 3, this);
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("NOTICE"),tr("System will restart.")), 3, this);
                 msgBox->setMsgAlignment(Qt::AlignCenter);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
                 msgBox->exec();
