@@ -1010,7 +1010,7 @@ void MainWidget::updateDvrEvent(live_event_t *live)
         {
             for(i = 0; i < devInfo.videoNum; i++)
             {
-                if(videoPane[i]->isVisibleRecordIcon() != ((live->recordOn&(1<<i))?1:0))
+                if(videoPane[i]->isVisibleRecordIcon() != (record = ((live->recordOn&(1<<i))?1:0)))
                 {
                     int *pResetRecordIcon = g_new0(int, 1);
                     *pResetRecordIcon     = i;
