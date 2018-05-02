@@ -2566,7 +2566,7 @@ Current status is trigger.</source>
 
 System was shutdown successfully.
 Turn off the power.</source>
-        <translation>				알림
+        <translation>			알림
 
 정상적으로 종료됐습니다.
 전원을 끄십시오.</translation>
