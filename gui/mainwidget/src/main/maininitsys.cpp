@@ -192,15 +192,33 @@ void MainWidget::initializeSystem()
         case DS_CODE_BAD_MAGIC:
         case DS_CODE_DATA_OLD:
         case DS_CODE_MASTER_MOVED:
+        case DS_CODE_MASTER_NOT_FOUND:
 
             if(msgBox == NULL)
             {
 #if 1 // jungyver [17/07/04] Display hexa code when occuring disk status temporarily
                 QString ss = QString("0x%1").arg(rv, 4, 16, QLatin1Char('0'));
+#if 1 // GyverJeong [18/05/04]
+                if(rv == DS_CODE_FILESYSTEM_BROKEN)
+                {
+                    msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2 (%3)\n%4").arg(tr("WARNING"),
+                                tr("FORMAT or MOUNT ERROR"),
+                                tr(ss.toStdString().c_str()),
+                                tr("If yes, system will format the storage.")), 0, this);
+                }
+                else
+                {
+                    msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2 (%3)\n%4").arg(tr("WARNING"),
+                                tr("Storage was not formatted."),
+                                tr(ss.toStdString().c_str()),
+                                tr("Do you want to format the storage?")), 0, this);
+                }
+#else
                 msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2 (%3)\n%4").arg(tr("WARNING"),
                             tr("Storage was not formatted."),
                             tr(ss.toStdString().c_str()),
                             tr("Do you want to format the storage?")), 0, this);
+#endif
 #else
                 msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2\n%3").arg(tr("WARNING"),
                             tr("Storage was not formatted.         "),
@@ -213,7 +231,7 @@ void MainWidget::initializeSystem()
 
             if(msgBox->exec())
             {
-                DiskFormatNum = 0;
+                DiskFormatNum  = 0;
                 DiskFormatNum |= (1 << 0);
                 DiskFormatProcessDlgOpen();
             }
@@ -261,6 +279,7 @@ void MainWidget::initializeSystem()
 
             break;
 
+#if 0 // GyverJeong [18/05/04]
         case DS_CODE_MASTER_NOT_FOUND:
 
             if(msgBox == NULL)
@@ -283,7 +302,7 @@ void MainWidget::initializeSystem()
 
             if(msgBox->exec())
             {
-                DiskFormatNum = 0;
+                DiskFormatNum  = 0;
                 DiskFormatNum |= (1 << 0);
                 DiskFormatProcessDlgOpen();
             }
@@ -294,6 +313,7 @@ void MainWidget::initializeSystem()
             appmgr_reboot_system(0);
 
             return;
+#endif
 
         case DS_CODE_DATA_LOST:
 
