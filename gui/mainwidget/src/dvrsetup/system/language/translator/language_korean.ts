@@ -2282,8 +2282,8 @@ Mute</source>
         <location filename="../../../../main/maineventproc.cpp" line="680"/>
         <location filename="../../../../main/maineventproc.cpp" line="681"/>
         <location filename="../../../../main/maineventproc.cpp" line="703"/>
-        <location filename="../../../../main/maininitsys.cpp" line="205"/>
-        <location filename="../../../../main/maininitsys.cpp" line="275"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="294"/>
         <source>%1
 
 %2
@@ -2305,7 +2305,7 @@ Mute</source>
         <location filename="../../../../main/maineventproc.cpp" line="703"/>
         <location filename="../../../../main/maineventproc.cpp" line="734"/>
         <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
+        <location filename="../../../../main/maininitsys.cpp" line="244"/>
         <source>System will restart.</source>
         <translation>시스템이 다시 시작됩니다.</translation>
     </message>
@@ -2326,7 +2326,7 @@ Mute</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="473"/>
         <source>Format Error</source>
-        <translation>포맷 에러</translation>
+        <translation>포맷 오류</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="526"/>
@@ -2356,10 +2356,12 @@ Mute</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="731"/>
         <location filename="../../../../main/maininitsys.cpp" line="141"/>
-        <location filename="../../../../main/maininitsys.cpp" line="200"/>
-        <location filename="../../../../main/maininitsys.cpp" line="205"/>
-        <location filename="../../../../main/maininitsys.cpp" line="270"/>
-        <location filename="../../../../main/maininitsys.cpp" line="275"/>
+        <location filename="../../../../main/maininitsys.cpp" line="204"/>
+        <location filename="../../../../main/maininitsys.cpp" line="211"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="289"/>
+        <location filename="../../../../main/maininitsys.cpp" line="294"/>
         <source>WARNING</source>
         <translation>경고</translation>
     </message>
@@ -2389,13 +2391,13 @@ Mute</source>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="758"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1117"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1151"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1212"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1299"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1339"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1133"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1167"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1228"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1315"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1355"/>
         <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
+        <location filename="../../../../main/maininitsys.cpp" line="244"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
         <location filename="../../../../main/mainscreen.cpp" line="197"/>
         <source>NOTICE</source>
@@ -2404,7 +2406,7 @@ Mute</source>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="141"/>
         <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
+        <location filename="../../../../main/maininitsys.cpp" line="244"/>
         <source>%1
 
 %2</source>
@@ -2441,11 +2443,11 @@ Mute</source>
         <translation>경과 시간 : </translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1117"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1151"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1212"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1299"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1339"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1133"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1167"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1228"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1315"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1355"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
         <location filename="../../../../main/mainscreen.cpp" line="197"/>
         <source>NOTICE
@@ -2474,7 +2476,7 @@ Current status is trigger.</source>
         <translation type="obsolete">디스크 상태</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="248"/>
+        <location filename="../../../../main/maininitsys.cpp" line="266"/>
         <source>[5014] Broken Filesystem</source>
         <translation>[5014] 손상된 파일시스템</translation>
     </message>
@@ -2485,18 +2487,21 @@ Current status is trigger.</source>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="141"/>
         <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="200"/>
-        <location filename="../../../../main/maininitsys.cpp" line="205"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
-        <location filename="../../../../main/maininitsys.cpp" line="270"/>
-        <location filename="../../../../main/maininitsys.cpp" line="275"/>
+        <location filename="../../../../main/maininitsys.cpp" line="204"/>
+        <location filename="../../../../main/maininitsys.cpp" line="211"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="244"/>
+        <location filename="../../../../main/maininitsys.cpp" line="289"/>
+        <location filename="../../../../main/maininitsys.cpp" line="294"/>
         <source>STORAGE FORMAT</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>저장장치 포맷</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="200"/>
-        <location filename="../../../../main/maininitsys.cpp" line="270"/>
+        <location filename="../../../../main/maininitsys.cpp" line="211"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="289"/>
         <source>%1
 
 %2 (%3)
@@ -2505,51 +2510,74 @@ Current status is trigger.</source>
         <translation>%1
 
 %2
-%4(%3)</translation>
+%4 (%3)</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="201"/>
-        <location filename="../../../../main/maininitsys.cpp" line="271"/>
+        <location filename="../../../../main/maininitsys.cpp" line="212"/>
+        <location filename="../../../../main/maininitsys.cpp" line="218"/>
+        <location filename="../../../../main/maininitsys.cpp" line="290"/>
         <source>Storage was not formatted.</source>
         <translation>저장장치가 포맷되지 않았습니다.</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="141"/>
-        <location filename="../../../../main/maininitsys.cpp" line="203"/>
-        <location filename="../../../../main/maininitsys.cpp" line="207"/>
-        <location filename="../../../../main/maininitsys.cpp" line="273"/>
-        <location filename="../../../../main/maininitsys.cpp" line="277"/>
+        <location filename="../../../../main/maininitsys.cpp" line="214"/>
+        <location filename="../../../../main/maininitsys.cpp" line="220"/>
+        <location filename="../../../../main/maininitsys.cpp" line="225"/>
+        <location filename="../../../../main/maininitsys.cpp" line="292"/>
+        <location filename="../../../../main/maininitsys.cpp" line="296"/>
         <source>Do you want to format the storage?</source>
         <translation>저장장치를 포맷하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="206"/>
-        <location filename="../../../../main/maininitsys.cpp" line="276"/>
+        <location filename="../../../../main/maininitsys.cpp" line="205"/>
+        <source>FORMAT or MOUNT ERROR</source>
+        <translation>포맷 또는 연결 오류</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maininitsys.cpp" line="207"/>
+        <source>If yes, system will format the storage.</source>
+        <translation>네를 선택하면 저장장치를 포맷합니다.</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maininitsys.cpp" line="204"/>
+        <source>%1
+
+%2(%3)
+%4</source>
+        <translation>%1
+
+%2 (%3)
+%4</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maininitsys.cpp" line="224"/>
+        <location filename="../../../../main/maininitsys.cpp" line="295"/>
         <source>Storage was not formatted.         </source>
         <oldsource>Storage was not formated.         </oldsource>
         <translation>저장장치가 포맷되지 않았습니다.         </translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="248"/>
-        <location filename="../../../../main/maininitsys.cpp" line="302"/>
+        <location filename="../../../../main/maininitsys.cpp" line="266"/>
         <location filename="../../../../main/maininitsys.cpp" line="322"/>
         <location filename="../../../../main/maininitsys.cpp" line="342"/>
+        <location filename="../../../../main/maininitsys.cpp" line="362"/>
         <source>STORAGE STATUS</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>저장장치 상태</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="302"/>
+        <location filename="../../../../main/maininitsys.cpp" line="322"/>
         <source>[5042] Data Lost</source>
         <translation>[5042] 데이터가 손실됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="322"/>
+        <location filename="../../../../main/maininitsys.cpp" line="342"/>
         <source>[5070] New HDD Inserted</source>
         <translation>[5070] 새 저장장치가 삽입됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="342"/>
+        <location filename="../../../../main/maininitsys.cpp" line="362"/>
         <source>[5072] Slave HDD Changed</source>
         <translation>[5072] 보조 저장장치가 변경됐습니다.</translation>
     </message>

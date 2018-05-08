@@ -2176,8 +2176,8 @@ No hay almacenamiento</translation>
         <location filename="../../../../main/maineventproc.cpp" line="680"/>
         <location filename="../../../../main/maineventproc.cpp" line="681"/>
         <location filename="../../../../main/maineventproc.cpp" line="703"/>
-        <location filename="../../../../main/maininitsys.cpp" line="205"/>
-        <location filename="../../../../main/maininitsys.cpp" line="275"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="294"/>
         <source>%1
 
 %2
@@ -2198,7 +2198,7 @@ No hay almacenamiento</translation>
         <location filename="../../../../main/maineventproc.cpp" line="703"/>
         <location filename="../../../../main/maineventproc.cpp" line="734"/>
         <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
+        <location filename="../../../../main/maininitsys.cpp" line="244"/>
         <source>System will restart.</source>
         <translation>El sistema se reiniciará.</translation>
     </message>
@@ -2209,7 +2209,7 @@ No hay almacenamiento</translation>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="473"/>
         <source>MOUNT ERROR</source>
-        <translation>Erro de montagem</translation>
+        <translation>Error de montaje</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="473"/>
@@ -2249,10 +2249,12 @@ No hay almacenamiento</translation>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="731"/>
         <location filename="../../../../main/maininitsys.cpp" line="141"/>
-        <location filename="../../../../main/maininitsys.cpp" line="200"/>
-        <location filename="../../../../main/maininitsys.cpp" line="205"/>
-        <location filename="../../../../main/maininitsys.cpp" line="270"/>
-        <location filename="../../../../main/maininitsys.cpp" line="275"/>
+        <location filename="../../../../main/maininitsys.cpp" line="204"/>
+        <location filename="../../../../main/maininitsys.cpp" line="211"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="289"/>
+        <location filename="../../../../main/maininitsys.cpp" line="294"/>
         <source>WARNING</source>
         <translation>ADVERTENCIA</translation>
     </message>
@@ -2284,13 +2286,13 @@ Sí hace clic en &apos;Acuerdo&apos;,
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="758"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1117"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1151"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1212"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1299"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1339"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1133"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1167"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1228"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1315"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1355"/>
         <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
+        <location filename="../../../../main/maininitsys.cpp" line="244"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
         <location filename="../../../../main/mainscreen.cpp" line="197"/>
         <source>NOTICE</source>
@@ -2323,11 +2325,11 @@ Sí hace clic en &apos;Acuerdo&apos;,
         <translation>El sistema se apagará.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1117"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1151"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1212"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1299"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1339"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1133"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1167"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1228"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1315"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1355"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
         <location filename="../../../../main/mainscreen.cpp" line="197"/>
         <source>NOTICE
@@ -2340,17 +2342,20 @@ El estado actual es Activado.</translation>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="141"/>
         <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="200"/>
-        <location filename="../../../../main/maininitsys.cpp" line="205"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
-        <location filename="../../../../main/maininitsys.cpp" line="270"/>
-        <location filename="../../../../main/maininitsys.cpp" line="275"/>
+        <location filename="../../../../main/maininitsys.cpp" line="204"/>
+        <location filename="../../../../main/maininitsys.cpp" line="211"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="244"/>
+        <location filename="../../../../main/maininitsys.cpp" line="289"/>
+        <location filename="../../../../main/maininitsys.cpp" line="294"/>
         <source>STORAGE FORMAT</source>
         <translation>FORMATO DE ALMACENAMIENTO</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="200"/>
-        <location filename="../../../../main/maininitsys.cpp" line="270"/>
+        <location filename="../../../../main/maininitsys.cpp" line="211"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="289"/>
         <source>%1
 
 %2 (%3)
@@ -2361,24 +2366,26 @@ El estado actual es Activado.</translation>
 %4</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="201"/>
-        <location filename="../../../../main/maininitsys.cpp" line="271"/>
+        <location filename="../../../../main/maininitsys.cpp" line="212"/>
+        <location filename="../../../../main/maininitsys.cpp" line="218"/>
+        <location filename="../../../../main/maininitsys.cpp" line="290"/>
         <source>Storage was not formatted.</source>
         <translation>El almacenamiento no se formateó.</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="141"/>
-        <location filename="../../../../main/maininitsys.cpp" line="203"/>
-        <location filename="../../../../main/maininitsys.cpp" line="207"/>
-        <location filename="../../../../main/maininitsys.cpp" line="273"/>
-        <location filename="../../../../main/maininitsys.cpp" line="277"/>
+        <location filename="../../../../main/maininitsys.cpp" line="214"/>
+        <location filename="../../../../main/maininitsys.cpp" line="220"/>
+        <location filename="../../../../main/maininitsys.cpp" line="225"/>
+        <location filename="../../../../main/maininitsys.cpp" line="292"/>
+        <location filename="../../../../main/maininitsys.cpp" line="296"/>
         <source>Do you want to format the storage?</source>
         <translation>¿Desea formatear el almacenamiento?</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="141"/>
         <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
+        <location filename="../../../../main/maininitsys.cpp" line="244"/>
         <source>%1
 
 %2</source>
@@ -2387,31 +2394,52 @@ El estado actual es Activado.</translation>
 %2</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="206"/>
-        <location filename="../../../../main/maininitsys.cpp" line="276"/>
+        <location filename="../../../../main/maininitsys.cpp" line="205"/>
+        <source>FORMAT or MOUNT ERROR</source>
+        <translation>Erro de Formato o Montaje</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maininitsys.cpp" line="207"/>
+        <source>If yes, system will format the storage.</source>
+        <translation>En caso Sì, el sistema formatear el almacenamiento.</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maininitsys.cpp" line="204"/>
+        <source>%1
+
+%2(%3)
+%4</source>
+        <translation>%1
+
+%2 (%3)
+%4</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maininitsys.cpp" line="224"/>
+        <location filename="../../../../main/maininitsys.cpp" line="295"/>
         <source>Storage was not formatted.         </source>
         <translation>El almacenamiento no se formateó. </translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="248"/>
-        <location filename="../../../../main/maininitsys.cpp" line="302"/>
+        <location filename="../../../../main/maininitsys.cpp" line="266"/>
         <location filename="../../../../main/maininitsys.cpp" line="322"/>
         <location filename="../../../../main/maininitsys.cpp" line="342"/>
+        <location filename="../../../../main/maininitsys.cpp" line="362"/>
         <source>STORAGE STATUS</source>
         <translation>ESTADO DE ALMACENAMIENTO</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="248"/>
+        <location filename="../../../../main/maininitsys.cpp" line="266"/>
         <source>[5014] Broken Filesystem</source>
         <translation>[5014] Sistema de archivos roto</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="302"/>
+        <location filename="../../../../main/maininitsys.cpp" line="322"/>
         <source>[5042] Data Lost</source>
         <translation>[5042] Pérdida de datos</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="322"/>
+        <location filename="../../../../main/maininitsys.cpp" line="342"/>
         <source>[5070] New HDD Inserted</source>
         <translatorcomment>ñ이 î으로 출력됨
 [5070] Se añadió nuevo almacenamiento
@@ -2419,7 +2447,7 @@ El estado actual es Activado.</translation>
         <translation type="unfinished">[5070] Se anadió nuevo almacenamiento</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="342"/>
+        <location filename="../../../../main/maininitsys.cpp" line="362"/>
         <source>[5072] Slave HDD Changed</source>
         <translation>[5072] Almacenamiento de esclavos modificado</translation>
     </message>
@@ -4339,10 +4367,7 @@ Después de la inicialización, el sistema se reinicia.
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="30"/>
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="88"/>
         <source>Yes</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-Sí
--&gt; Si</translatorcomment>
-        <translation>Si</translation>
+        <translation>Sì</translation>
     </message>
     <message>
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="31"/>

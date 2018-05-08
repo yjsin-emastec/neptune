@@ -201,7 +201,7 @@ void MainWidget::initializeSystem()
 #if 1 // GyverJeong [18/05/04]
                 if(rv == DS_CODE_FILESYSTEM_BROKEN)
                 {
-                    msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2 (%3)\n%4").arg(tr("WARNING"),
+                    msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2(%3)\n%4").arg(tr("WARNING"),
                                 tr("FORMAT or MOUNT ERROR"),
                                 tr(ss.toStdString().c_str()),
                                 tr("If yes, system will format the storage.")), 0, this);
