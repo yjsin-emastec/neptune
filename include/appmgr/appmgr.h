@@ -24,6 +24,8 @@ extern "C"{
 #define ESTN_HCMD_GOTO_TEST_MODE    "67761010"
 #define ESTN_HCMD_SET_OSD_VIS       "67762011"
 #define ESTN_HCMD_RES_OSD_VIS       "67762010"
+#define ESTN_HCMD_SET_IMPACT_TEST   "67762021"
+#define ESTN_HCMD_RES_IMPACT_TEST   "67762020"
 
 #define RECORD_OFF                  0
 #define PRE_RECORD                  1
