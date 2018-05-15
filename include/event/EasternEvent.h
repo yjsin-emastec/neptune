@@ -36,6 +36,7 @@ enum SendQTEvent {
     Send_QT_ACC_POWER_OFF,
     Send_QT_SET_RECORD_ICON,
     Send_QT_RESET_RECORD_ICON,
+    Send_QT_SATA_ERROR_COUNT,
     Send_QT_MAX,
 };
 

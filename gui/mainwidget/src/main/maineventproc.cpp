@@ -787,6 +787,34 @@ void MainWidget::doDvrEvent(Event *e)
 
             break;
         }
+#if 1 // GyverJeong [18/05/15]
+        case Send_QT_SATA_ERROR_COUNT:
+        {
+            int *pData = (int *)e->data;
+            char tmp[16] = {0,};
+            sprintf(tmp, "%d", *pData);
+
+            if(msgBox)
+            {
+                delete msgBox;
+                msgBox = NULL;
+            }
+
+            msgBox = new TextMessageDialog(tr("NOTICE"), tr("%1\n\n%2%3").arg(tr("NOTICE"), tr("SATA Error Count : "), tr(tmp)), 3, this);
+            msgBox->setMsgAlignment(Qt::AlignCenter);
+            msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
+
+            msgBox->exec();
+
+            if(msgBox)
+            {
+                delete msgBox;
+                msgBox = NULL;
+            }
+
+            break;
+        }
+#endif
         default:
         {
             qDebug("main : event receive %x", eType);
