@@ -1008,6 +1008,13 @@ void MainWidget::updateDvrEvent(live_event_t *live)
 #if 1 // GyverJeong [18/04/27]
         if(operationMode == OPMODE_LIVE)
         {
+#if 1 // GyverJeong [18/05/15]
+            if(diskInfo[0].hddCount == 0)
+            {
+                live->recordOn = 0;
+            }
+#endif
+
             for(i = 0; i < devInfo.videoNum; i++)
             {
                 if(videoPane[i]->isVisibleRecordIcon() != (record = ((live->recordOn&(1<<i))?1:0)))
