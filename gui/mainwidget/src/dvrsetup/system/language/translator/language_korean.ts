@@ -2391,11 +2391,12 @@ Mute</source>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="758"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1133"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1167"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1228"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1315"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1355"/>
+        <location filename="../../../../main/maineventproc.cpp" line="803"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1168"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1202"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1350"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1390"/>
         <location filename="../../../../main/maininitsys.cpp" line="175"/>
         <location filename="../../../../main/maininitsys.cpp" line="244"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
@@ -2443,11 +2444,26 @@ Mute</source>
         <translation>경과 시간 : </translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1133"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1167"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1228"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1315"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1355"/>
+        <location filename="../../../../main/maineventproc.cpp" line="803"/>
+        <source>%1
+
+%2%3</source>
+        <translation type="unfinished">%1
+
+%2%3 {1
+?}</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="803"/>
+        <source>SATA Error Count : </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../../main/maineventproc.cpp" line="1168"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1202"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1350"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1390"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
         <location filename="../../../../main/mainscreen.cpp" line="197"/>
         <source>NOTICE
@@ -4493,6 +4509,19 @@ If yes, system will restart.
     </message>
     <message>
         <location filename="../../../setup/systempage.cpp" line="200"/>
+        <source>			   WARNING
+
+Do you want to set factory default?
+
+If yes, system will restart.
+</source>
+        <translation>			   경고
+
+공장 초기화를 하시겠습니까?
+
+초기화 후 시스템을 재부팅합니다.</translation>
+    </message>
+    <message>
         <source>			WARNING
 
 Do you want to set factory default?
@@ -4500,7 +4529,7 @@ Do you want to set factory default?
 If yes, system will restart.
 </source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>			   경고
+        <translation type="obsolete">			   경고
 
 공장 초기화를 하시겠습니까?
 

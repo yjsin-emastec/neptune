@@ -197,7 +197,7 @@ void SystemPage::onButtonFactoryDefault(void)
 
     if(!msgBox)
     {
-        msgBox = new TextMessageDialog(tr("FACTORY DEFAULT"), tr("\t\t\tWARNING\n\n" "Do you want to set factory default?\n\n" "If yes, system will restart.\n"), 0, this);
+        msgBox = new TextMessageDialog(tr("FACTORY DEFAULT"), tr("\t\t\t   WARNING\n\n" "Do you want to set factory default?\n\n" "If yes, system will restart.\n"), 0, this);
     }
 
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
