@@ -63,7 +63,7 @@ void SetupDialog::resetTabFocus(int isUp, int tabCurInx)
 
                      if(indexRecord == 0)  { recordPage->buttonNormal->setFocus();          }
                 else if(indexRecord == 1)  { recordPage->buttonEvent->setFocus();           }
-                else if(indexRecord == 1)  { recordPage->buttonClose->setFocus();           }
+                else if(indexRecord == 2)  { recordPage->buttonClose->setFocus();           }
 
                 break;
 
