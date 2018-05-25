@@ -55,6 +55,14 @@ SetDateTimeDialog::SetDateTimeDialog(QWidget *parent, int dateFormat, cfg_dls_t 
     comboBoxTimeZone->setStyleSheet("QComboBox{font:38px;background:rgb(50,57,83);color:white;}QComboBox:focus{border-color:rgb(67,74,86);background-color:rgb(152,14,69);color:white;}");
     comboBoxTimeZone->setView(new QListView);   //item width resize
     isKeyLock = 0;
+
+    comboBoxTimeZone->installEventFilter(this);
+    comboBoxTime_1->installEventFilter(this);
+    comboBoxTime_2->installEventFilter(this);
+    comboBoxTime_3->installEventFilter(this);
+    comboBoxTime_4->installEventFilter(this);
+    comboBoxTime_5->installEventFilter(this);
+    comboBoxTime_6->installEventFilter(this);
 }
 void SetDateTimeDialog::initComboBox()
 {
@@ -1414,4 +1422,13 @@ void SetDateTimeDialog::onButtonGpsSync()
 
             break;
     }
+}
+bool SetDateTimeDialog::eventFilter(QObject *obj, QEvent *event)
+{
+    if((obj==comboBoxTimeZone || obj==comboBoxTime_1 || obj==comboBoxTime_2 || obj==comboBoxTime_3 ||
+        obj==comboBoxTime_4   || obj==comboBoxTime_5 || obj==comboBoxTime_6) && (event->type()==QEvent::FocusOut))
+    {
+        isKeyLock=false;
+    }
+    return QWidget::eventFilter(obj, event);
 }

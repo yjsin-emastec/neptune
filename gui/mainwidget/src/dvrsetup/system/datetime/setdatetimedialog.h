@@ -62,6 +62,7 @@ private:
     int indexTimeFormat, indexGpsSync;
     time_t oldTime;
     int isKeyLock;
+    bool eventFilter(QObject *obj, QEvent *event);
 };
 
 #endif // SETDATETIMEDIALOG_H
