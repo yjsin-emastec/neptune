@@ -34,13 +34,26 @@ SearchDialog::SearchDialog(QWidget *parent)
 	connect(eventPage, SIGNAL(closeSearch()), this, SLOT(onButtonClose()));
 	connect(eventPage, SIGNAL(startPlayback()), this, SLOT(onStartPlayback()));
 
+#if 0 // GyverJeong [18/06/20]
+    systemLogPage    = new SystemLogPage(this);
+	connect(systemLogPage, SIGNAL(previousSearch(int)), this, SLOT(onHideCalendarPage(int)));
+	connect(systemLogPage, SIGNAL(closeSearch()),       this, SLOT(onButtonClose()));
+	connect(systemLogPage, SIGNAL(startPlayback()),     this, SLOT(onStartPlayback()));
+#endif
+
 	connect(this, SIGNAL(searchDataRead()), calendarPage, SLOT(onUpdateTimeLine()));
 
     stackedLayout = new QStackedLayout;
     stackedLayout->addWidget(calendarPage);
     stackedLayout->addWidget(eventPage);
+#if 0 // GyverJeong [18/06/20]
+    stackedLayout->addWidget(systemLogPage);
+#endif
 	setLayout(stackedLayout);
 
+#if 0 // GyverJeong [18/06/20]
+    systemLogPage->hide();
+#endif
 	eventPage->hide();
 	calendarPage->hide();
 }
@@ -114,6 +127,18 @@ void SearchDialog::onQueryLogCount()
 void SearchDialog::onQueryLogData()
 {
 	eventPage->onQueryLogData();
+}
+void SearchDialog::onSystemLogCount()
+{
+    // systemLogPage->onQueryLogCount();
+}
+void SearchDialog::onSystemLogData()
+{
+    // systemLogPage->onQueryLogData();
+}
+void SearchDialog::onSystemLogBackup()
+{
+    // systemLogPage->onQueryLogBackup();
 }
 void SearchDialog::onSearchDataUpdate(int type)
 {

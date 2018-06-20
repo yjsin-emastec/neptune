@@ -86,6 +86,7 @@ int                             eventLogCount,
 struct _time_search_info_ext    timeLog[25];
 
 EVENT_LOG_DATA_S                gEventLog[MAX_EVENT_LOG_PAGE_DATA];
+SYSTEM_LOG_DATA_S               gSystemLog[SYSTEM_LOG_COUNT_PER_PAGE];
 
 struct _eventlog_info           eventLog[MAX_EVENT_SEARCH_LOG];
 struct _caldata                 calendarData[MAX_CAL_MONTH_DATA];
@@ -635,6 +636,9 @@ void MainWidget::createPopupDialog()
         connect(this, SIGNAL(queryLogCount()),          searchDialog, SLOT(onQueryLogCount()));
         connect(this, SIGNAL(queryLogData()),           searchDialog, SLOT(onQueryLogData()));
         connect(this, SIGNAL(queryLogBackup()),         searchDialog, SLOT(onQueryLogBackup()));
+        connect(this, SIGNAL(systemLogCount  ()),       searchDialog, SLOT(onSystemLogCount  ()));
+        connect(this, SIGNAL(systemLogData   ()),       searchDialog, SLOT(onSystemLogData   ()));
+        connect(this, SIGNAL(systemLogBackup ()),       searchDialog, SLOT(onSystemLogBackup ()));
     }
 
     if(!backupDialog)

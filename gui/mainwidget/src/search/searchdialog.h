@@ -27,6 +27,9 @@ public slots:
 	void onEvent();
 	void onQueryLogCount();
 	void onQueryLogData();
+	void onSystemLogCount  (void);
+	void onSystemLogData   (void);
+	void onSystemLogBackup (void);
 
 protected:
     void keyPressEvent(QKeyEvent *event);

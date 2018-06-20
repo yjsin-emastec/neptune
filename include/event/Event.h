@@ -33,6 +33,7 @@ enum EventQueue {
     QUEUE_AUDIO_SAMPLE,
     QUEUE_ACK,
     QUEUE_EVENT_LOG,
+    QUEUE_SYSTEM_LOG,
     QUEUE_MAX,
 };
 

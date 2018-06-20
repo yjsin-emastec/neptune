@@ -644,6 +644,37 @@ void MainWidget::doDvrEvent(Event *e)
 
             break;
         }
+        case Send_QT_SYSTEM_LOG_COUNT:
+        {
+            SYSTEM_LOG_DATA_S *pData = (SYSTEM_LOG_DATA_S *)e->data;
+            extern SYSTEM_LOG_DATA_S gSystemLog[SYSTEM_LOG_COUNT_PER_PAGE];
+            memset(gSystemLog, 0, sizeof(SYSTEM_LOG_DATA_S) * SYSTEM_LOG_COUNT_PER_PAGE);
+            memcpy(gSystemLog, pData, sizeof(SYSTEM_LOG_DATA_S) * ((pData+0)->count));
+            emit systemLogCount();
+
+            break;
+        }
+        case Send_QT_SYSTEM_LOG_DATA:
+        {
+
+            SYSTEM_LOG_DATA_S *pData = (SYSTEM_LOG_DATA_S *)e->data;
+            extern SYSTEM_LOG_DATA_S gSystemLog[SYSTEM_LOG_COUNT_PER_PAGE];
+            memset(gSystemLog, 0, sizeof(SYSTEM_LOG_DATA_S) * SYSTEM_LOG_COUNT_PER_PAGE);
+            memcpy(gSystemLog, pData, sizeof(SYSTEM_LOG_DATA_S) * ((pData+0)->count));
+            emit systemLogData();
+
+            break;
+        }
+        case Send_QT_SYSTEM_LOG_BACKUP:
+        {
+            SYSTEM_LOG_DATA_S *pData = (SYSTEM_LOG_DATA_S *)e->data;
+            extern SYSTEM_LOG_DATA_S gSystemLog[SYSTEM_LOG_COUNT_PER_PAGE];
+            memset(gSystemLog, 0, sizeof(SYSTEM_LOG_DATA_S) * SYSTEM_LOG_COUNT_PER_PAGE);
+            memcpy(gSystemLog, pData, sizeof(SYSTEM_LOG_DATA_S) * ((pData+0)->count));
+            emit systemLogBackup();
+
+            break;
+        }
         case Send_QT_EVENT_SATA_LINK_UP:
         {
             if(isDisk)

@@ -216,6 +216,11 @@ extern "C"{
 #define EVENT_LOG_DESC                 1
 #define EVENT_LOG_ASC                  2
 
+#define SYSTEM_LOG_DESC                "DESC"
+#define SYSTEM_LOG_ASC                 "ASC"
+#define SYSTEM_LOG_MAX_LEN             30
+#define SYSTEM_LOG_COUNT_PER_PAGE      15
+
 //=============================================================================================
 // Types and Enumerate
 //=============================================================================================
@@ -492,6 +497,14 @@ typedef struct _EVENT_LOG_DATA_S {
     char                     filler     [2];
 } EVENT_LOG_DATA_S;
 
+typedef struct _SYSTEM_LOG_DATA_S {
+    char                     time   [20];
+    char                     log    [30];
+    int                      total;
+    int                      count;
+    char                     filler [2];
+} SYSTEM_LOG_DATA_S;
+
 typedef struct _EVENT_LOG_QUERY_S {
     char                     start_time [20];
     char                     end_time   [20];
@@ -500,6 +513,16 @@ typedef struct _EVENT_LOG_QUERY_S {
     int                      offset;
     int                      nLog;
 } EVENT_LOG_QUERY_S;
+
+typedef struct _SYSTEM_LOG_QUERY_S {
+    char                     start [20];
+    char                     end   [20];
+    char                     filter[20];
+    int                      type;
+    char                     sort  [8];
+    int                      offset;
+    int                      nLog;
+} SYSTEM_LOG_QUERY_S;
 
 typedef struct _syslog_info {
     unsigned int             rev;
@@ -515,6 +538,12 @@ typedef struct _EVENT_LOG_OCCUR_S {
     struct tm                event_time;
     int                      event_type;
 } EVENT_LOG_OCCUR_S;
+
+typedef struct _SYSTEM_LOG_S {
+    unsigned int             type;
+    char                     log    [32];
+    char                     filler [4];
+} SYSTEM_LOG_S;
 
 //=============================================================================================
 // Global

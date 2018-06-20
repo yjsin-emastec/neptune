@@ -215,6 +215,7 @@ int           appmgr_get_gps_connected                  (void);
 int           appmgr_get_board_temperature              (void);
 int           appmgr_sysinfo_set_factory_default        (void);
 int           appmgr_get_sata_phy                       (void);
+int           appmgr_write_system_log                   (SYSTEM_LOG_TYPE_E type, char *log);
 
 #ifdef __cplusplus
 }

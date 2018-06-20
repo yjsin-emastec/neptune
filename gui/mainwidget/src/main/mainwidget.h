@@ -48,6 +48,9 @@ signals:
     void queryLogData();
     void queryLogBackup();
     void updateAudioButton();
+    void systemLogCount     (void);
+    void systemLogData      (void);
+    void systemLogBackup    (void);
 
 public slots:
     void videoPaneClicked(int ch);
