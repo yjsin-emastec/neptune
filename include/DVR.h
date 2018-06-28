@@ -218,7 +218,7 @@ extern "C"{
 
 #define SYSTEM_LOG_DESC                "DESC"
 #define SYSTEM_LOG_ASC                 "ASC"
-#define SYSTEM_LOG_MAX_LEN             30
+#define SYSTEM_LOG_MAX_LEN             40
 #define SYSTEM_LOG_COUNT_PER_PAGE      15
 
 //=============================================================================================
@@ -499,10 +499,10 @@ typedef struct _EVENT_LOG_DATA_S {
 
 typedef struct _SYSTEM_LOG_DATA_S {
     char                     time   [20];
-    char                     log    [30];
+    char                     log    [48];
+    char                     filler [4];
     int                      total;
     int                      count;
-    char                     filler [2];
 } SYSTEM_LOG_DATA_S;
 
 typedef struct _EVENT_LOG_QUERY_S {
@@ -541,8 +541,8 @@ typedef struct _EVENT_LOG_OCCUR_S {
 
 typedef struct _SYSTEM_LOG_S {
     unsigned int             type;
-    char                     log    [32];
-    char                     filler [4];
+    char                     log    [48];
+    char                     filler [8];
 } SYSTEM_LOG_S;
 
 //=============================================================================================
