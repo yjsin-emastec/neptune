@@ -9,6 +9,7 @@ extern "C"{
 
 int    system_log_init           (void);
 int    system_log_end            (void);
+int    system_log_flash_end      (void);
 int    system_log_event_start    (int hddNum);
 
 #ifdef __cplusplus

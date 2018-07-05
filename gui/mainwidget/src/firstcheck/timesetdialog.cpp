@@ -111,6 +111,11 @@ void TimeSetDialog::DisplayRecordTime(void)
     strFirst += QString::fromAscii(FirstDate);
     strLast  += QString::fromAscii(LastDate);
 
+    QString first = QString("First Rec: %1").arg(QString::fromUtf8(FirstDate));
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, first.toStdString().c_str());
+    QString last  = QString("Last  Rec: %1").arg(QString::fromUtf8(LastDate));
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, last.toStdString().c_str());
+
     labelFirstTime2->setText(strFirst);
     labelLastTime2->setText(strLast);
 }
@@ -153,6 +158,8 @@ void TimeSetDialog::onButtonDeleteData(void)
 
         this->Delay(1000);
     }
+
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Deletion Completion");
 
     labelTimeStatus->setText(tr("%1").arg(tr("Completion")));
 
@@ -221,6 +228,9 @@ void TimeSetDialog::onButtonSetTime(void)
 
         appmgr_firstrun_setting(tNow, val);
         appmgr_disk_file_deletion(0, 0, 2);
+
+        QString str = QString("Set %1 andThen Reboot").arg(QString::fromUtf8(atime(tNow)));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
 
         for(;;)
         {

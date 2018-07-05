@@ -21,8 +21,11 @@ SearchDialog::SearchDialog(QWidget *parent)
 	SelectPbSplit = pbType = recType = 0;
 
 	connect(buttonNormal, SIGNAL(released()), this, SLOT(onNormal()));
-	connect(buttonEvent, SIGNAL(released()), this, SLOT(onEvent()));
-	connect(buttonClose, SIGNAL(released()), this, SLOT(onButtonClose()));
+	connect(buttonEvent,  SIGNAL(released()), this, SLOT(onEvent()));
+#if 0 // GyverJeong [18/07/05]
+	connect(buttonLog,    SIGNAL(released()), this, SLOT(onLog()));
+#endif
+	connect(buttonClose,  SIGNAL(released()), this, SLOT(onButtonClose()));
 
     calendarPage = new CalendarPage(this);
 	connect(calendarPage, SIGNAL(previousSearch(int)), this, SLOT(onHideCalendarPage(int)));
@@ -90,8 +93,11 @@ void SearchDialog::onHideCalendarPage(int type)
 
 	switch(type)
 	{
-		case 0: { buttonNormal->setFocus(); } break;
-		case 1: { buttonEvent->setFocus();  } break;
+		case 0: { buttonNormal->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Normal Exit"); } break;
+		case 1: { buttonEvent ->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Event Exit" ); } break;
+#if 0 // GyverJeong [18/07/05]
+		case 2: { buttonLog   ->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Log Exit"   ); } break;
+#endif
 	}
 }
 void SearchDialog::onEvent(void)
@@ -102,6 +108,7 @@ void SearchDialog::onEvent(void)
     buttonNotAvailable->hide();
     labelSearch->hide();
 
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Event Enter" );
 	eventPage->resetSearch();
     stackedLayout->setCurrentWidget(eventPage);
 	eventPage->show();
@@ -114,12 +121,19 @@ void SearchDialog::onNormal(void)
     buttonNotAvailable->hide();
     labelSearch->hide();
 
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Normal Enter" );
 	calendarPage->ResetSearch();
 	calendarPage->QuerySearchData(0);
 	calendarPage->UpdateSelectTime();
 	stackedLayout->setCurrentWidget(calendarPage);
 	calendarPage->show();
 }
+#if 0 // GyverJeong [18/07/05]
+void SearchDialog::onLog(void)
+{
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Log Enter" );
+}
+#endif
 void SearchDialog::onQueryLogCount()
 {
 	eventPage->onQueryLogCount();

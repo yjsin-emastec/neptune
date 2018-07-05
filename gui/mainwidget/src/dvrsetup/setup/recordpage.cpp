@@ -77,7 +77,7 @@ void RecordPage::onButtonEvent(void)
 
     if(eventDialog->exec())
     {
-        emit saveRecordPage(1);
+        emit saveRecordPage(2);
     }
     else
     {

@@ -132,6 +132,7 @@ void ConfigDialog::onButtonLoadConfig()
 }
 void ConfigDialog::onButtonSaveConfig()
 {
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Config Saving Start");
     UpdateLabelConfig(1);
 
     buttonSaveConfig->setEnabled(false);
@@ -148,6 +149,7 @@ void ConfigDialog::onButtonSaveConfig()
     }
     else
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Config Saving End");
         UpdateLabelConfig(4);
     }
 

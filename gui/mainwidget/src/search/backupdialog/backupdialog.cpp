@@ -150,11 +150,21 @@ void BackupDialog::onButtonBackup()
     {
         pBackupContext->timestampPbStart  = eventBackupStartTime;
         pBackupContext->timestampPbEnd    = eventBackupEndTime;
+
+        QString eventStart = QString("Event Backup Start: %1").arg(QString::fromUtf8(atime(eventBackupStartTime)));
+        QString eventEnd   = QString("Event Backup End:   %1").arg(QString::fromUtf8(atime(eventBackupEndTime-2)));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, eventStart.toStdString().c_str());
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, eventEnd  .toStdString().c_str());
     }
     else
     {
         pBackupContext->timestampPbStart  = QDateTime(dateTimeStart->dateTime()).toTime_t();
         pBackupContext->timestampPbEnd    = QDateTime(dateTimeStart->dateTime().addSecs((60*indexEnd)+2)).toTime_t();
+
+        QString normalStart = QString("Normal Backup Start: %1").arg(QString::fromUtf8(atime(pBackupContext->timestampPbStart)));
+        QString normalEnd   = QString("Normal Backup End:   %1").arg(QString::fromUtf8(atime(pBackupContext->timestampPbEnd-2)));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, normalStart.toStdString().c_str());
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, normalEnd  .toStdString().c_str());
     }
 
     pBackupContext->progressEventQid  = QUEUE_QT_CORE;

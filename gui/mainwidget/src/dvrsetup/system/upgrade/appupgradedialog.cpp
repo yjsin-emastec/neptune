@@ -169,8 +169,8 @@ void AppUpgradeDialog::onButtonFind(void)
 }
 int AppUpgradeDialog::ButtonFind(int isUnMount)
 {
-    int rv;
-    char tmp[256];
+    int  rv, ii = 0, cnt = 0;
+    char tmp[256], buf[128];
 
     memset(fileName, 0, sizeof(fileName));
 
@@ -178,6 +178,7 @@ int AppUpgradeDialog::ButtonFind(int isUnMount)
 
     if(rv != 0)
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Upgrade device check: fail");
         qDebug(" FW_UPGRADE_DEVICE_CHECK_FAIL !! \n");
         buttonFind->setEnabled(true);
         buttonFind->setFocus();
@@ -192,6 +193,7 @@ int AppUpgradeDialog::ButtonFind(int isUnMount)
 
     if(rv != 0)
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Upgrade device mount: fail");
         qDebug(" FW_UPGRADE_DEVICE_MOUNT_FAIL !! \n");
         buttonFind->setEnabled(true);
         buttonFind->setFocus();
@@ -206,6 +208,34 @@ int AppUpgradeDialog::ButtonFind(int isUnMount)
 
     if(rv == 0)
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Upgrade file check: success");
+
+        while(fileName[ii])
+        {
+            if(fileName[ii] == '_')
+            {
+                cnt++;
+            }
+
+            if(cnt == 3)
+            {
+                memset(buf, 0, sizeof(buf));
+                memcpy(buf, fileName, ii);
+                ii++;
+                memset(tmp, 0, sizeof(tmp));
+                memcpy(tmp, &fileName[ii], strlen(&fileName[ii])-4);
+                break;
+            }
+
+            ii++;
+        }
+
+        QString oem = QString("Upgrade OEM: %1").arg(QString::fromUtf8(buf));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, oem.toStdString().c_str());
+
+        QString str = QString("Upgrade Ver: %1").arg(QString::fromUtf8(tmp));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+
         qDebug("[Check] FW_UPGRADE_FILE_CHECK_SUCCESS !!\n");
         UpdateLabelStatus(5);
         labelFileNameValue->setText(tr("%1").arg(fileName));
@@ -222,26 +252,31 @@ int AppUpgradeDialog::ButtonFind(int isUnMount)
     }
     else if(rv == -1)
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Upgrade file check fail: Folder");
         qDebug("[Check] FW_UPGRADE_FILE_CHECK_FAIL !! - FOLDER\n");
         UpdateLabelStatus(6);
     }
     else if(rv == -2)
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Upgrade file check fail: File");
         qDebug("[Check] FW_UPGRADE_FILE_CHECK_FAIL !! - FILE\n");
         UpdateLabelStatus(7);
     }
     else if(rv == -3)
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Upgrade file check fail: Invalid");
         qDebug("[Check] FW_UPGRADE_FILE_CHECK_FAIL !! - INVALID FILE\n");
         UpdateLabelStatus(8);
     }
     else if(rv == -4)
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Upgrade file check fail: Overflow");
         qDebug("[Check] FW_UPGRADE_FILE_CHECK_FAIL !! - FILE LIST OVERFLOW\n");
         UpdateLabelStatus(9);
     }
     else
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Upgrade file check fail: Unknown");
         qDebug("[Error] %s - %d UNKNOWN RETURN VALUE !!! - utils_appup_file_check()=%d\n", __func__, __LINE__, rv);
     }
 
@@ -311,6 +346,8 @@ void AppUpgradeDialog::ConfirmUpgradeResult(void)
 
         qDebug(" FW_UPGRADE_SUCCESS !! \n");
 
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Firmware Upgrade End: SUCCESS");
+
         progressBar->setValue(100);
 
         UpdateLabelStatus(12);
@@ -376,6 +413,8 @@ void AppUpgradeDialog::ConfirmUpgradeResult(void)
         labelStatus->setStyleSheet("font:72px;background-color:rgb(152,14,69);color:white");
 
         qDebug(" FW_UPGRADE_FAIL !! \n");
+
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Firmware Upgrade End: FAIL");
 
         progressBar->setValue(100);
 

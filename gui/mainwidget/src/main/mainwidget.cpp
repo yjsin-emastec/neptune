@@ -203,6 +203,11 @@ void MainWidget::onSaveSystemPage(int type, int val)
 {
     qDebug("setup.............> system setting");
 
+    if(type > 0)
+    {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "System Setting");
+    }
+
     if(type == 1 && val != 0)
     {
         qDebug("setup.............> time setting");
@@ -211,6 +216,8 @@ void MainWidget::onSaveSystemPage(int type, int val)
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
+        QString str = QString("Set %1 andThen Reboot").arg(QString::fromUtf8(atime(val)));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
 
         ParkingSystem();
 
@@ -224,6 +231,21 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 2)
     {
+        char tmp[64];
+        utils_cfg_get_item("sys.time_format", tmp);
+        if(memcmp(tmp, SystemCfg.time_format, strlen(SystemCfg.time_format)))
+        {
+            QString timeFormat = QString("Time Format: %1").arg(QString::fromUtf8(SystemCfg.time_format));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, timeFormat.toStdString().c_str());
+        }
+
+        utils_cfg_get_item("sys.gps_sync", tmp);
+        if(memcmp(tmp, SystemCfg.gps_sync, strlen(SystemCfg.gps_sync)))
+        {
+            QString gps = QString("GPS Sync: %1").arg(QString::fromUtf8(SystemCfg.gps_sync));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, gps.toStdString().c_str());
+        }
+
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -234,6 +256,8 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 3) // License Plate
     {
+        QString str = QString("License Plate: %1").arg(QString::fromUtf8(SystemCfg.license_plate));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -242,6 +266,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 4) // Factory Default
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Factory Default andThen Reboot");
         ParkingSystem();
 
         qDebug("setup : factory default");
@@ -260,6 +285,20 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 5) // Security
     {
+        char tmp[64];
+        utils_cfg_get_item("sys.system_lock", tmp);
+        if(memcmp(tmp, SystemCfg.system_lock, strlen(SystemCfg.system_lock)))
+        {
+            QString lock = QString("System Lock: %1").arg(QString::fromUtf8(memcmp(SystemCfg.system_lock,"NO",strlen(SystemCfg.system_lock))==0?"Off":"On"));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, lock.toStdString().c_str());
+        }
+
+        utils_cfg_get_item("sys.admin_passwd", tmp);
+        if(memcmp(tmp, SystemCfg.admin_passwd, strlen(SystemCfg.admin_passwd)))
+        {
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Password Change");
+        }
+
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -268,6 +307,9 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 6) // Language
     {
+        QString str = QString("Language Change: %1").arg(QString::fromUtf8(SystemCfg.language));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+        setConfigString();
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -284,6 +326,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 7) // Load config
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Load Config andThen Reboot");
         ParkingSystem();
 
         qDebug("setup : load config");
@@ -299,6 +342,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 8) // Firmware Upgrade
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Firmware Upgrade Start");
         ParkingSystem();
 
         qDebug("setup : firmware upgrade");
@@ -323,6 +367,30 @@ void MainWidget::onSaveRecordPage(int type)
 {
     if(type > 0)
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Record Setting");
+
+        if(type == 1)
+        {
+            for(int ch = 0; ch < devInfo.videoNum; ch++)
+            {
+                QString str = QString("Normal: ch:%1 F:%2 Q:%3 R:%4 A:%5").arg(
+                        QString::number(ch+1),
+                        QString::number(cfgSetup.rec.record_main.fr_hd[ch]),
+                        QString::fromUtf8(cfgSetup.rec.record_main.quality[ch]==QUALITY_ULTRA?"High":cfgSetup.rec.record_main.quality[ch]==QUALITY_HIGH?"Middle":"Low"),
+                        QString::fromUtf8(cfgSetup.rec.record_type[ch]==false?"Off":"On"),
+                        QString::fromUtf8(cfgSetup.rec.audio[ch]==false?"Off":"On"));
+                appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+            }
+        }
+        else if(type == 2)
+        {
+            QString str = QString("Event: D:%1 I:%2 T:%3").arg(
+                    QString::number(cfgSetup.rec.post_record[0]*2),
+                    QString::fromUtf8(RecordCfg.event_impact),
+                    QString::fromUtf8(RecordCfg.event_trigger));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+        }
+
         setConfigString();
         appmgr_cfg_change();
 
@@ -339,8 +407,14 @@ void MainWidget::onSaveRecordPage(int type)
 }
 void MainWidget::onSaveDevicePage(int type)
 {
+    if(type > 0)
+    {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Device Setting");
+    }
+
     if(type == 1) // Disk Format
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Format Start");
         DiskFormatNum = 0;
         DiskFormatNum |= (1 << 0);
         DiskFormatProcessDlgOpen();
@@ -352,6 +426,8 @@ void MainWidget::onSaveDevicePage(int type)
     }
     else if(type == 2) // Buzzer Output
     {
+        QString str = QString("Buzzer Output: %1").arg(QString::fromUtf8(DeviceCfg.buzzer_output));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -360,6 +436,8 @@ void MainWidget::onSaveDevicePage(int type)
     }
     else if(type == 3) // Gsensor Output
     {
+        QString str = QString("Impact Sensitivity: %1").arg(QString::fromUtf8(DeviceCfg.gsensor_level));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -369,6 +447,17 @@ void MainWidget::onSaveDevicePage(int type)
     }
     else if(type == 4) // Trigger Input
     {
+        for(int ii=0; ii < 4; ii++)
+        {
+            QString str = QString("Trg%1 S:%2 D:%3 P:%4 A:%5").arg(
+                    QString::number(ii+1),
+                    QString::fromUtf8(DeviceCfg.trigger1_source+ii*8),
+                    QString::fromUtf8(DeviceCfg.trigger1_delay+ii*8),
+                    QString::fromUtf8(DeviceCfg.trigger1_priority+ii*8),
+                    QString::fromUtf8(DeviceCfg.trigger1_audio+ii*8));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+        }
+
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -377,6 +466,15 @@ void MainWidget::onSaveDevicePage(int type)
     }
     else if(type == 5) // Video Input
     {
+        for(int ii=0; ii < devInfo.videoNum; ii++)
+        {
+            QString str = QString("VI%1 M:%2 F:%3").arg(
+                    QString::number(ii+1),
+                    QString::fromUtf8(DeviceCfg.camera_mirror00+ii*8),
+                    QString::fromUtf8(DeviceCfg.camera_flip00+ii*8));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+        }
+
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -393,10 +491,22 @@ void MainWidget::onSaveDevicePage(int type)
 }
 void MainWidget::onSaveDisplayPage(int type)
 {
+    if(type > 0)
+    {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Display Setting");
+    }
 
     if(type == 1) // Channel Name
     {
         qDebug("setup.............> Channel Name change");
+
+        for(int ii = 0; ii < devInfo.videoNum; ii++)
+        {
+            QByteArray CamName = QByteArray::fromHex((char *)DisplayCfg.channel_name[ii]);
+            QString str = QString("CAM%1 Name: %2").arg(QString::number(ii+1), QString::fromUtf8(CamName));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+        }
+
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -405,10 +515,8 @@ void MainWidget::onSaveDisplayPage(int type)
 
         for(int i = 0; i < devInfo.videoNum; i++)
         {
-            QString str;
             QByteArray text = QByteArray::fromHex((char *)DisplayCfg.channel_name[i]);
-            str = QString::fromUtf8(text.data());
-
+            QString str = QString::fromUtf8(text.data());
             videoPane[i]->setChannelName(str);
         }
 
@@ -417,6 +525,8 @@ void MainWidget::onSaveDisplayPage(int type)
     else if(type == 2) // Video Output HDMI
     {
         qDebug("setup.............> resolution change");
+        QString str = QString("VO HDMI: %1, Rebooting").arg(QString::fromUtf8(DisplayCfg.video_output_hdmi));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -437,6 +547,18 @@ void MainWidget::onSaveDisplayPage(int type)
     else if(type == 3) // Video Output CVBS
     {
         qDebug("setup.............> video out cvbs change");
+        char *x = cfgSetup.gbl.ntsc?DisplayCfg.cvbs_ntsc_x_value     :DisplayCfg.cvbs_pal_x_value;
+        char *y = cfgSetup.gbl.ntsc?DisplayCfg.cvbs_ntsc_y_value     :DisplayCfg.cvbs_pal_y_value;
+        char *w = cfgSetup.gbl.ntsc?DisplayCfg.cvbs_ntsc_width_value :DisplayCfg.cvbs_pal_width_value;
+        char *h = cfgSetup.gbl.ntsc?DisplayCfg.cvbs_ntsc_height_value:DisplayCfg.cvbs_pal_height_value;
+        QString str = QString("VO CVBS: %1 X=%2 Y=%3 W=%4 H=%5").arg(
+                QString::fromUtf8(DisplayCfg.video_output_cvbs),
+                QString::fromUtf8(x),
+                QString::fromUtf8(y),
+                QString::fromUtf8(w),
+                QString::fromUtf8(h));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -447,6 +569,13 @@ void MainWidget::onSaveDisplayPage(int type)
     }
     else if(type == 4) // OSD
     {
+        QString str = QString("OSD CAM:%1 NoV:%2 Bar:%3 Rec:%4").arg(
+                QString::fromUtf8(DisplayCfg.osd_chname),
+                QString::fromUtf8(DisplayCfg.osd_viloss),
+                QString::fromUtf8(DisplayCfg.osd_status),
+                QString::fromUtf8(DisplayCfg.osd_record));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -465,6 +594,7 @@ void MainWidget::onSaveDisplayPage(int type)
 void MainWidget::closeEvent(QCloseEvent *event)
 {
     appmgr_close_sensorlog();
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "System Shutdown by Menu");
     appmgr_deinit_systemstate(system_state);
 
     operationMode = OPMODE_MESSAGE;
@@ -982,7 +1112,7 @@ void MainWidget::runSetup()
     operationMode = OPMODE_SETUP;
     SetOperationMode(operationMode);
 
-    appmgr_setup_enter();
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Setup Enter");
 
     latestChannelNum       = currentChannelNum;
     latestSplit            = currentSplit;
@@ -1008,7 +1138,7 @@ void MainWidget::runSetup()
     setupDialog->move(((appmgr_get_mainwidget_width()-setupDialog->width())/2), ((appmgr_get_mainwidget_height()-setupDialog->height())/2));
     setupReturn = setupDialog->exec();
 
-    appmgr_setup_leave();
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Setup Exit");
 
     operationMode = OPMODE_LIVE;
     SetOperationMode(operationMode);
@@ -1094,7 +1224,11 @@ void MainWidget::runBackup()
 
     backupDialog->setCaptureMode(type, channel, split, now);
 
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Backup Enter");
+
     rv = backupDialog->exec();
+
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Backup Exit");
 
     if(playBar->indexAudio == 1)
     {
@@ -1229,7 +1363,7 @@ void MainWidget::runSearch()
     operationMode = OPMODE_SEARCH;
     SetOperationMode(operationMode);
 
-    appmgr_search_enter();
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Search Enter");
 
     if(!searchDialog)
     {
@@ -1259,7 +1393,7 @@ void MainWidget::runSearch()
         operationMode = OPMODE_LIVE;
         SetOperationMode(operationMode);
 
-        appmgr_search_leave();
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Search Exit");
 
         if(utils_cfg_cmp_item(DisplayCfg.osd_status, "OFF") == 0)
         {
@@ -1417,7 +1551,8 @@ void MainWidget::stopPlayback()
 
         operationMode = OPMODE_LIVE;
         SetOperationMode(operationMode);
-        appmgr_search_leave();
+
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Search Exit");
 
         if(utils_cfg_cmp_item(DisplayCfg.osd_status, "OFF") == 0)
         {
