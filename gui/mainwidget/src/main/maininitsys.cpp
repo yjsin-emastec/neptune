@@ -103,10 +103,13 @@ void MainWidget::initializeSystem()
         rtcSetDialog->move((appmgr_get_mainwidget_width()-rtcSetDialog->width())/2, (appmgr_get_mainwidget_height()-rtcSetDialog->height())/2);
 
         appmgr_set_beep_duration(BEEP_DURATION_MAX);
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "RTC Battery Error");
 
         if(rtcSetDialog->exec())
         {
             rtcSetDialog->GetTime(&now);
+            QString str = QString("RTC Set %1 and Reboot").arg(QString::fromUtf8(atime(now)));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
 
             delete rtcSetDialog;
             rtcSetDialog = NULL;
@@ -448,10 +451,13 @@ void MainWidget::initializeSystem()
             rtcSetDialog->move((appmgr_get_mainwidget_width()-rtcSetDialog->width())/2, (appmgr_get_mainwidget_height()-rtcSetDialog->height())/2);
 
             appmgr_set_beep_duration(BEEP_DURATION_MAX);
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Replace RTC battery");
 
             if(rtcSetDialog->exec())
             {
                 rtcSetDialog->GetTime(&now);
+                QString str = QString("RTC Set %1 and Reboot").arg(QString::fromUtf8(atime(now)));
+                appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
             }
 
             delete rtcSetDialog;
