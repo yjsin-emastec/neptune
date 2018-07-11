@@ -266,7 +266,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 4) // Factory Default
     {
-        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Factory Default andThen Reboot");
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Factory Default and then Reboot");
         ParkingSystem();
 
         qDebug("setup : factory default");
@@ -342,7 +342,6 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 8) // Firmware Upgrade
     {
-        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Firmware Upgrade Start");
         ParkingSystem();
 
         qDebug("setup : firmware upgrade");
@@ -1591,6 +1590,7 @@ void MainWidget::systemReboot()
         }
     }
 
+    this->Delay(2000);
     appmgr_reboot_system(system_state);
 
     return;
@@ -2048,6 +2048,15 @@ void MainWidget::DiskFormatProcessDlgOpen()
     if(diskformatprocessDialog->exec())
     {
         ;
+    }
+}
+void MainWidget::Delay(int millisecondsToWait)
+{
+    QTime dieTime = QTime::currentTime().addMSecs(millisecondsToWait);
+
+    while(QTime::currentTime() < dieTime)
+    {
+        QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
     }
 }
 void MainWidget::DiskFormatSystemReboot()

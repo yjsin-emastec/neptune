@@ -623,7 +623,7 @@ void EventLogPage::onButtonClose()
     eventBackupStartTime = 0;
     eventBackupEndTime   = 0;
 
-    emit closeSearch();
+    emit closeSearch(1);
 }
 void EventLogPage::resetSearch()
 {

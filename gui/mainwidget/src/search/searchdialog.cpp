@@ -25,17 +25,17 @@ SearchDialog::SearchDialog(QWidget *parent)
 #if 0 // GyverJeong [18/07/05]
 	connect(buttonLog,    SIGNAL(released()), this, SLOT(onLog()));
 #endif
-	connect(buttonClose,  SIGNAL(released()), this, SLOT(onButtonClose()));
+	connect(buttonClose,  SIGNAL(released()), this, SLOT(onButtonClose(int)));
 
     calendarPage = new CalendarPage(this);
-	connect(calendarPage, SIGNAL(previousSearch(int)), this, SLOT(onHideCalendarPage(int)));
-	connect(calendarPage, SIGNAL(closeSearch()), this, SLOT(onButtonClose()));
-	connect(calendarPage, SIGNAL(startPlayback()), this, SLOT(onStartPlayback()));
+	connect(calendarPage, SIGNAL(previousSearch (int)), this, SLOT(onHideCalendarPage (int)));
+	connect(calendarPage, SIGNAL(closeSearch    (int)), this, SLOT(onButtonClose      (int)));
+	connect(calendarPage, SIGNAL(startPlayback  ()),    this, SLOT(onStartPlayback    ()));
 
     eventPage    = new EventLogPage(this);
-	connect(eventPage, SIGNAL(previousSearch(int)), this, SLOT(onHideCalendarPage(int)));
-	connect(eventPage, SIGNAL(closeSearch()), this, SLOT(onButtonClose()));
-	connect(eventPage, SIGNAL(startPlayback()), this, SLOT(onStartPlayback()));
+	connect(eventPage, SIGNAL(previousSearch (int)), this, SLOT(onHideCalendarPage (int)));
+	connect(eventPage, SIGNAL(closeSearch    (int)), this, SLOT(onButtonClose      (int)));
+	connect(eventPage, SIGNAL(startPlayback  ()),    this, SLOT(onStartPlayback    ()));
 
 #if 0 // GyverJeong [18/06/20]
     systemLogPage    = new SystemLogPage(this);
@@ -63,7 +63,7 @@ SearchDialog::SearchDialog(QWidget *parent)
 SearchDialog::~SearchDialog()
 {
 }
-void SearchDialog::onButtonClose(void)
+void SearchDialog::onButtonClose(int type)
 {
 	QDialog::reject();
 
@@ -74,7 +74,13 @@ void SearchDialog::onButtonClose(void)
     labelSearch->show();
 
 	calendarPage->hide();
-	eventPage->hide();
+    eventPage->hide();
+
+    switch(type)
+    {
+        case 0: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Normal Exit"); } break;
+        case 1: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Event Exit" ); } break;
+    }
 }
 void SearchDialog::onStartPlayback(void)
 {
@@ -284,7 +290,7 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 				}
 				else if(buttonClose->hasFocus())
 				{
-					onButtonClose();
+					onButtonClose(-1);
 				}
 			}
 
@@ -302,7 +308,7 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 			}
 			else
 			{
-				onButtonClose();
+				onButtonClose(-1);
 			}
 
 			return;

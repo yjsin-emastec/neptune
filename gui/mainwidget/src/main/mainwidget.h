@@ -26,6 +26,7 @@ class MainWidget : public QMainWindow
 public:
     MainWidget(int fbWidth, int fbHeight);
     QSize sizeHint() const;
+    void Delay(int millisecondsToWait);
 
 signals:
     void initEvent(int type, int initType, int progress);

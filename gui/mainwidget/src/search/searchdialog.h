@@ -35,9 +35,9 @@ protected:
     void keyPressEvent(QKeyEvent *event);
 
 private slots:
-    void onButtonClose();
-    void onHideCalendarPage(int typ);
-    void onStartPlayback();
+    void onButtonClose      (int type);
+    void onHideCalendarPage (int type);
+    void onStartPlayback    ();
 
 private:
     QStackedLayout  *stackedLayout;

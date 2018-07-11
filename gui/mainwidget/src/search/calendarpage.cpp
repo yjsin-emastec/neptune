@@ -83,7 +83,7 @@ void CalendarPage::onButtonPrevious()
 }
 void CalendarPage::onButtonClose()
 {
-    emit closeSearch();
+    emit closeSearch(0);
 }
 void CalendarPage::onStartPlayback()
 {

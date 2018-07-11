@@ -25,9 +25,9 @@ public:
 	void KeyPressEvent(int key);
 
 signals:
-	void previousSearch(int type);
-	void closeSearch();
-	void startPlayback();
+	void previousSearch (int type);
+	void closeSearch    (int type);
+	void startPlayback  ();
 
 private slots:
 	void onButtonFilter();

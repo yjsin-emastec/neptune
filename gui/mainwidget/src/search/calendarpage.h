@@ -25,9 +25,9 @@ public:
 public slots:
 
 signals:
-    void previousSearch(int typ);
-    void closeSearch();
-    void startPlayback();
+    void previousSearch (int type);
+    void closeSearch    (int type);
+    void startPlayback  ();
 
 private slots:
     void onStartPlayback();

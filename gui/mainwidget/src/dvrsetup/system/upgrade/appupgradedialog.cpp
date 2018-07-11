@@ -310,6 +310,7 @@ void AppUpgradeDialog::onButtonUpgrade(void)
 
     if(rv == 0)
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Firmware Upgrade Start");
         UpdateLabelStatus(10);
         Delay(3000);
         qDebug("[Notice] FW_UPGRADE_START !!\n");

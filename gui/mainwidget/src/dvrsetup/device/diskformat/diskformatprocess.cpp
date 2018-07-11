@@ -136,8 +136,8 @@ void DiskFormatProcessDialog::onDiskFormatupdateEnd()
 
 	QString str;
 
-	if(DiskService::impl()->formatResult() == 0) { str = QString(tr("Format Fail"));    appmgr_write_system_log(SYSTEM_LOG_TYPE_FLASH, "Setup Format FAILURE"); }
-	else                                         { str = QString(tr("Format Success")); appmgr_write_system_log(SYSTEM_LOG_TYPE_FLASH, "Setup Format SUCCESS"); }
+	if(DiskService::impl()->formatResult() == 0) { str = QString(tr("Format Failure")); appmgr_write_system_log(SYSTEM_LOG_TYPE_FLASH, "Format Failure"); }
+	else                                         { str = QString(tr("Format Success")); appmgr_write_system_log(SYSTEM_LOG_TYPE_FLASH, "Format Success"); }
 
 	qDebug() << __func__ << str;
 
