@@ -35,6 +35,7 @@ protected:
     void keyPressEvent(QKeyEvent *event);
 
 private slots:
+    void onButtonClose      (void);
     void onButtonClose      (int type);
     void onHideCalendarPage (int type);
     void onStartPlayback    ();

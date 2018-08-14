@@ -25,7 +25,7 @@ SearchDialog::SearchDialog(QWidget *parent)
 #if 0 // GyverJeong [18/07/05]
 	connect(buttonLog,    SIGNAL(released()), this, SLOT(onLog()));
 #endif
-	connect(buttonClose,  SIGNAL(released()), this, SLOT(onButtonClose(int)));
+	connect(buttonClose,  SIGNAL(released()), this, SLOT(onButtonClose(void)));
 
     calendarPage = new CalendarPage(this);
 	connect(calendarPage, SIGNAL(previousSearch (int)), this, SLOT(onHideCalendarPage (int)));
@@ -63,18 +63,21 @@ SearchDialog::SearchDialog(QWidget *parent)
 SearchDialog::~SearchDialog()
 {
 }
+void SearchDialog::onButtonClose(void)
+{
+    QDialog::reject();
+
+    buttonNormal       ->show();
+    buttonEvent        ->show();
+    buttonClose        ->show();
+    buttonNotAvailable ->show();
+    labelSearch        ->show();
+    calendarPage       ->hide();
+    eventPage          ->hide();
+}
 void SearchDialog::onButtonClose(int type)
 {
-	QDialog::reject();
-
-	buttonNormal->show();
-	buttonEvent->show();
-	buttonClose->show();
-    buttonNotAvailable->show();
-    labelSearch->show();
-
-	calendarPage->hide();
-    eventPage->hide();
+    this->onButtonClose();
 
     switch(type)
     {
@@ -290,7 +293,7 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 				}
 				else if(buttonClose->hasFocus())
 				{
-					onButtonClose(-1);
+					this->onButtonClose();
 				}
 			}
 
@@ -308,7 +311,7 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 			}
 			else
 			{
-				onButtonClose(-1);
+				this->onButtonClose();
 			}
 
 			return;
