@@ -256,7 +256,8 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 3) // License Plate
     {
-        QString str = QString("License Plate: %1").arg(QString::fromUtf8(SystemCfg.license_plate));
+        QByteArray text = QByteArray::fromHex(SystemCfg.license_plate);
+        QString    str  = QString("License Plate: %1").arg(QString::fromUtf8(text.data()));
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
         setConfigString();
         appmgr_cfg_change();
