@@ -359,6 +359,8 @@ void MainWidget::onSaveSystemPage(int type, int val)
     else if(type == 7) // Load config
     {
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Load Config andThen Reboot");
+        this->Delay(3000);
+
         ParkingSystem();
 
         qDebug("setup : load config");
