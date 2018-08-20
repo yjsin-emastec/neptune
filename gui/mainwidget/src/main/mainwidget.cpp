@@ -242,6 +242,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
+        this->Delay(3000);
 
         ParkingSystem();
 
