@@ -244,13 +244,14 @@ void MainWidget::onSaveSystemPage(int type, int val)
         appmgr_cfg_sync();
         this->Delay(3000);
 
+        sync(); sync(); sync();
+
         ParkingSystem();
 
-        sync(); sync(); sync();
-        sleep(2);
         appmgr_set_system_rtc_time(val);
 
         system_state = SYSTEM_TIME_SET;
+        sleep(2);
         systemReboot();
         return;
     }
@@ -301,6 +302,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
     {
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Factory Default and then Reboot");
         this->Delay(3000);
+        sync(); sync(); sync();
         ParkingSystem();
 
         qDebug("setup : factory default");
@@ -309,7 +311,6 @@ void MainWidget::onSaveSystemPage(int type, int val)
 
         appmgr_sysinfo_set_factory_default();
 
-        sync(); sync(); sync();
         sleep(1);
 
         utils_system("rm -rf /cfg/*");
@@ -349,19 +350,20 @@ void MainWidget::onSaveSystemPage(int type, int val)
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
+        sync(); sync(); sync();
 
         ParkingSystem();
 
         qDebug("setup : change language");
         //system_state = SYSTEM_CHANGE_LANGUAGE;
 
-        sync(); sync(); sync();
         systemReboot();
     }
     else if(type == 7) // Load config
     {
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Load Config andThen Reboot");
         this->Delay(3000);
+        sync(); sync(); sync();
 
         ParkingSystem();
 
@@ -369,7 +371,6 @@ void MainWidget::onSaveSystemPage(int type, int val)
 
         system_state = SYSTEM_LOAD_CONFIG;
 
-        sync(); sync(); sync();
         sleep(1);
 
         systemReboot();
@@ -378,13 +379,13 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 8) // Firmware Upgrade
     {
+        sync(); sync(); sync();
         ParkingSystem();
 
         qDebug("setup : firmware upgrade");
 
         system_state = SYSTEM_SOFTWARE_UPGRADE;
 
-        sync(); sync(); sync();
         sleep(1);
 
         systemReboot();
@@ -568,9 +569,9 @@ void MainWidget::onSaveDisplayPage(int type)
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
 
-        ParkingSystem();
-
         sync(); sync(); sync();
+
+        ParkingSystem();
 
         sleep(1);
 
