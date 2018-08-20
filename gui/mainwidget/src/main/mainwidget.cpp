@@ -210,14 +210,38 @@ void MainWidget::onSaveSystemPage(int type, int val)
 
     if(type == 1 && val != 0)
     {
+        char tmp[64];
         qDebug("setup.............> time setting");
+
+        utils_cfg_get_item("sys.time_format", tmp);
+        if(memcmp(tmp, SystemCfg.time_format, strlen(SystemCfg.time_format)))
+        {
+            QString timeFormat = QString("Time Format: %1").arg(QString::fromUtf8(SystemCfg.time_format));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, timeFormat.toStdString().c_str());
+        }
+
+        utils_cfg_get_item("sys.gps_sync", tmp);
+        if(memcmp(tmp, SystemCfg.gps_sync, strlen(SystemCfg.gps_sync)))
+        {
+            QString gps = QString("GPS Sync: %1").arg(QString::fromUtf8(SystemCfg.gps_sync));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, gps.toStdString().c_str());
+        }
+
+        utils_cfg_get_item("sys.time_zone", tmp);
+        if(memcmp(tmp, SystemCfg.time_zone, strlen(SystemCfg.time_zone)))
+        {
+            QString timeZone = QString("Time Zone: %1").arg(QString::fromUtf8(SystemCfg.time_zone));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, timeZone.toStdString().c_str());
+        }
+
+        QString timeSet = QString("TimeSet %1 and Reboot").arg(QString::fromUtf8(atime(val)));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, timeSet.toStdString().c_str());
+
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
-        QString str = QString("Set %1 andThen Reboot").arg(QString::fromUtf8(atime(val)));
-        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
 
         ParkingSystem();
 
@@ -244,6 +268,13 @@ void MainWidget::onSaveSystemPage(int type, int val)
         {
             QString gps = QString("GPS Sync: %1").arg(QString::fromUtf8(SystemCfg.gps_sync));
             appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, gps.toStdString().c_str());
+        }
+
+        utils_cfg_get_item("sys.time_zone", tmp);
+        if(memcmp(tmp, SystemCfg.time_zone, strlen(SystemCfg.time_zone)))
+        {
+            QString timeZone = QString("Time Zone: %1").arg(QString::fromUtf8(SystemCfg.time_zone));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, timeZone.toStdString().c_str());
         }
 
         setConfigString();
