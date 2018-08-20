@@ -299,6 +299,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
     else if(type == 4) // Factory Default
     {
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Factory Default and then Reboot");
+        this->Delay(3000);
         ParkingSystem();
 
         qDebug("setup : factory default");
