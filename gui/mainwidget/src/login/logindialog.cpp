@@ -154,6 +154,7 @@ void LoginDialog::checkPassword()
 
     if(ret)
     {
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Incorrect Password");
         labelPassword->setText(tr("Incorrect Password.\nPlease try again."));
         this->lineEditPassword->setText("");
         buttonEdit->setFocus();
