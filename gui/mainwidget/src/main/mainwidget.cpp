@@ -961,6 +961,10 @@ void MainWidget::systemShutdown()
         {
             if(gpsTime >= RTC_BASE_TIME && gpsTime < RTC_Y2K38_TIME)
             {
+#if 1 // GyverJeong [18/08/21]
+                QString menuGpsSync = QString("Menu GPS Sync %1").arg(QString::fromUtf8(atime(gpsTime)));
+                appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, menuGpsSync.toStdString().c_str());
+#endif
                 rtc_set_time(gpsTime);
                 fprintf(stderr, "Synchronize RTC with GPS time and then Shut down system\n");
             }
