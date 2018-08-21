@@ -42,15 +42,15 @@ void MainMenu::onButtonAudio()
         {
             switch(currentChannelNum)
             {
-                case 0: { buttonAudio->setText(tr("Audio\n1")); indexAudio=2; emit setAudio1(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Live Audio Output 1"); break; }
-                case 1: { buttonAudio->setText(tr("Audio\n2")); indexAudio=3; emit setAudio2(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Live Audio Output 2"); break; }
-                case 2: { buttonAudio->setText(tr("Audio\n3")); indexAudio=4; emit setAudio3(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Live Audio Output 3"); break; }
-                case 3: { buttonAudio->setText(tr("Audio\n4")); indexAudio=5; emit setAudio4(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Live Audio Output 4"); break; }
+                case 0: { buttonAudio->setText(tr("Audio\n1")); indexAudio=2; emit setAudio1(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 1"); break; }
+                case 1: { buttonAudio->setText(tr("Audio\n2")); indexAudio=3; emit setAudio2(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 2"); break; }
+                case 2: { buttonAudio->setText(tr("Audio\n3")); indexAudio=4; emit setAudio3(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 3"); break; }
+                case 3: { buttonAudio->setText(tr("Audio\n4")); indexAudio=5; emit setAudio4(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 4"); break; }
             }
         }
         else
         {
-            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Live Audio Mute");
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Mute");
             buttonAudio->setText(tr("Audio\nMute"));
             indexAudio=1;
 
@@ -61,11 +61,11 @@ void MainMenu::onButtonAudio()
     {
         switch(++indexAudio)
         {
-            case 1: { buttonAudio->setText(tr("Audio\nMute")); emit setAudioMute(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Live Audio Mute"    ); break; }
-            case 2: { buttonAudio->setText(tr("Audio\n1"));    emit setAudio1();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Live Audio Output 1"); break; }
-            case 3: { buttonAudio->setText(tr("Audio\n2"));    emit setAudio2();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Live Audio Output 2"); break; }
-            case 4: { buttonAudio->setText(tr("Audio\n3"));    emit setAudio3();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Live Audio Output 3"); break; }
-            case 5: { buttonAudio->setText(tr("Audio\n4"));    emit setAudio4();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Live Audio Output 4"); break; }
+            case 1: { buttonAudio->setText(tr("Audio\nMute")); emit setAudioMute(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Mute"    ); break; }
+            case 2: { buttonAudio->setText(tr("Audio\n1"));    emit setAudio1();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 1"); break; }
+            case 3: { buttonAudio->setText(tr("Audio\n2"));    emit setAudio2();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 2"); break; }
+            case 4: { buttonAudio->setText(tr("Audio\n3"));    emit setAudio3();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 3"); break; }
+            case 5: { buttonAudio->setText(tr("Audio\n4"));    emit setAudio4();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 4"); break; }
         }
     }
 }
