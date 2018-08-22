@@ -143,6 +143,10 @@ void SetupDialog::onSaveSystemPage(int type, int val)
     {
         QDialog::accept();
     }
+    else if(type == 6)     // Language
+    {
+        QDialog::accept();
+    }
     else if(type == 7)     // Load Config
     {
         QDialog::accept();

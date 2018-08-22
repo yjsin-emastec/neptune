@@ -213,6 +213,9 @@ void MainWidget::onSaveSystemPage(int type, int val)
         char tmp[64];
         qDebug("setup.............> time setting");
 
+        operationMode = OPMODE_NONE;
+        SetOperationMode(operationMode);
+
         utils_cfg_get_item("sys.time_format", tmp);
         if(memcmp(tmp, SystemCfg.time_format, strlen(SystemCfg.time_format)))
         {
@@ -242,14 +245,10 @@ void MainWidget::onSaveSystemPage(int type, int val)
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
-        this->Delay(3000);
-
         sync(); sync(); sync();
-
+        this->Delay(3000);
         ParkingSystem();
-
         appmgr_set_system_rtc_time(val);
-
         system_state = SYSTEM_TIME_SET;
         sleep(2);
         systemReboot();
@@ -284,7 +283,6 @@ void MainWidget::onSaveSystemPage(int type, int val)
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
-
         statusBar->setTimeFormat(DateFormat);
     }
     else if(type == 3) // License Plate
@@ -300,21 +298,17 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 4) // Factory Default
     {
+        operationMode = OPMODE_NONE;
+        SetOperationMode(operationMode);
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Factory Default and then Reboot");
-        this->Delay(3000);
         sync(); sync(); sync();
+        this->Delay(3000);
         ParkingSystem();
-
         qDebug("setup : factory default");
-
         system_state = SYSTEM_LOAD_FACTORY_DEFAULT;
-
         appmgr_sysinfo_set_factory_default();
-
         sleep(1);
-
         utils_system("rm -rf /cfg/*");
-
         systemReboot();
         sleep(3);
     }
@@ -342,54 +336,44 @@ void MainWidget::onSaveSystemPage(int type, int val)
     }
     else if(type == 6) // Language
     {
+        operationMode = OPMODE_NONE;
+        SetOperationMode(operationMode);
         QString str = QString("Language Change: %1").arg(QString::fromUtf8(SystemCfg.language));
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
-        setConfigString();
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
         sync(); sync(); sync();
-
         ParkingSystem();
-
         qDebug("setup : change language");
-        //system_state = SYSTEM_CHANGE_LANGUAGE;
-
         systemReboot();
     }
     else if(type == 7) // Load config
     {
+        operationMode = OPMODE_NONE;
+        SetOperationMode(operationMode);
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Load Config andThen Reboot");
-        this->Delay(3000);
         sync(); sync(); sync();
-
+        this->Delay(3000);
         ParkingSystem();
-
         qDebug("setup : load config");
-
         system_state = SYSTEM_LOAD_CONFIG;
-
         sleep(1);
-
         systemReboot();
-
         sleep(3);
     }
     else if(type == 8) // Firmware Upgrade
     {
+        operationMode = OPMODE_NONE;
+        SetOperationMode(operationMode);
         sync(); sync(); sync();
         ParkingSystem();
-
         qDebug("setup : firmware upgrade");
-
         system_state = SYSTEM_SOFTWARE_UPGRADE;
-
         sleep(1);
-
         systemReboot();
-
         sleep(3);
     }
     else
@@ -429,7 +413,6 @@ void MainWidget::onSaveRecordPage(int type)
 
         setConfigString();
         appmgr_cfg_change();
-
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
@@ -450,14 +433,12 @@ void MainWidget::onSaveDevicePage(int type)
 
     if(type == 1) // Disk Format
     {
+        operationMode = OPMODE_NONE;
+        SetOperationMode(operationMode);
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Format Start");
-        DiskFormatNum = 0;
+        DiskFormatNum  = 0;
         DiskFormatNum |= (1 << 0);
         DiskFormatProcessDlgOpen();
-
-        operationMode = OPMODE_LIVE;
-        SetOperationMode(operationMode);
-
         return;
     }
     else if(type == 2) // Buzzer Output
@@ -561,6 +542,8 @@ void MainWidget::onSaveDisplayPage(int type)
     else if(type == 2) // Video Output HDMI
     {
         qDebug("setup.............> resolution change");
+        operationMode = OPMODE_NONE;
+        SetOperationMode(operationMode);
         QString str = QString("VO HDMI: %1, Rebooting").arg(QString::fromUtf8(DisplayCfg.video_output_hdmi));
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
         setConfigString();
@@ -568,15 +551,10 @@ void MainWidget::onSaveDisplayPage(int type)
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
-
         sync(); sync(); sync();
-
         ParkingSystem();
-
         sleep(1);
-
         system_state = SYSTEM_VGA_RESOLUTION;
-
         systemReboot();
         sleep(3);
     }
@@ -600,7 +578,6 @@ void MainWidget::onSaveDisplayPage(int type)
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
-
         appmgr_config_cvbs();
     }
     else if(type == 4) // OSD
@@ -617,7 +594,6 @@ void MainWidget::onSaveDisplayPage(int type)
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
-
         showOsd(cfgMain.live.osd_status);
     }
     else // Cancel
@@ -1180,8 +1156,15 @@ void MainWidget::runSetup()
 
     appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Setup Exit");
 
-    operationMode = OPMODE_LIVE;
-    SetOperationMode(operationMode);
+    if(operationMode == OPMODE_NONE)
+    {
+        ;
+    }
+    else
+    {
+        operationMode = OPMODE_LIVE;
+        SetOperationMode(operationMode);
+    }
 
     if(OverwriteRecordLimitDays)
     {
@@ -1490,7 +1473,7 @@ void MainWidget::startPlayback()
 
     if(searchDialog)
     {
-        qDebug("\n\t START	 startPlayback -> setSplitScreen");
+        qDebug("\n\t START startPlayback -> setSplitScreen");
 
         for(i = 0; i < devInfo.videoNum; i++)
         {
@@ -1702,20 +1685,20 @@ void MainWidget::setDateFormat()
 }
 void MainWidget::setStrogeOverwirte()
 {
-	if(utils_cfg_cmp_item(StorageCfg.overwrite, "ON") == 0)
+    if(utils_cfg_cmp_item(StorageCfg.overwrite, "ON") == 0)
     {
         StorageOverwrite = 1;
     }
-	else
+    else
     {
         StorageOverwrite = 0;
     }
 
-	if(utils_cfg_cmp_item(StorageCfg.recording_limit, "ON") == 0)
+    if(utils_cfg_cmp_item(StorageCfg.recording_limit, "ON") == 0)
     {
         StorageRecordingLimit = 1;
     }
-	else
+    else
     {
         StorageRecordingLimit = 0;
     }
@@ -2149,9 +2132,9 @@ void MainWidget::getConfigString()
     aif_storage_get_property(&StorageCfgTemp);
     aif_display_get_property(&DisplayCfg);
     aif_device_get_property(&DeviceCfg);
-}	
+}
 void MainWidget::noDataUpdate(int live)
-{	
+{
     int i = 0, cur = 0;
 
     if(live)
