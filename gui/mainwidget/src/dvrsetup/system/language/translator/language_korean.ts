@@ -4230,7 +4230,7 @@ Off</source>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="1061"/>
         <source>Day: %1</source>
-        <translation> %1 일</translation>
+        <translation type="unfinished">일: %1</translation>
     </message>
     <message>
         <source>%1</source>
@@ -4275,7 +4275,7 @@ Off</source>
         <location filename="../../datetime/setdatetimedialog.cpp" line="886"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="900"/>
         <source>Hour: %1</source>
-        <translation> %1 시</translation>
+        <translation type="unfinished">시: %1</translation>
     </message>
     <message>
         <source>Minute: %1</source>
