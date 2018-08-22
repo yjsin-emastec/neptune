@@ -131,20 +131,20 @@ void BackupDialog::onButtonEnd()
 }
 void BackupDialog::onButtonBackup()
 {
-    dateTimeStart->setEnabled(false);
-    buttonEnd->setEnabled(false);
-    buttonBackup->setEnabled(false);
-    buttonClose->setEnabled(false);
+    dateTimeStart  ->setEnabled(false);
+    buttonEnd      ->setEnabled(false);
+    buttonBackup   ->setEnabled(false);
+    buttonClose    ->setEnabled(false);
 
-    pBackupContext->deviceFreeMb      = 0;
-    pBackupContext->mediaBytes        = 0;
-    pBackupContext->indexBytes        = 0;
-    pBackupContext->eDevice           = AIF_BACKUP_DEVICE_USB;
-    pBackupContext->eType             = AIF_BACKUP_TYPE_PLAYBACK_VIDEO_AVI;
-    pBackupContext->split1            = 1;
-    pBackupContext->channel           = 0;
-    pBackupContext->dls               = 0;
-    pBackupContext->channelMask       = 0xf;
+    pBackupContext ->deviceFreeMb      = 0;
+    pBackupContext ->mediaBytes        = 0;
+    pBackupContext ->indexBytes        = 0;
+    pBackupContext ->eDevice           = AIF_BACKUP_DEVICE_USB;
+    pBackupContext ->eType             = AIF_BACKUP_TYPE_PLAYBACK_VIDEO_AVI;
+    pBackupContext ->split1            = 1;
+    pBackupContext ->channel           = 0;
+    pBackupContext ->dls               = 0;
+    pBackupContext ->channelMask       = 0xf;
 
     if(isEventSearch)
     {
@@ -452,7 +452,7 @@ void BackupDialog::keyPressEvent(QKeyEvent *event)
         case Qt::Key_Escape:
         {
             if(isKeyLock)                                                    { isKeyLock = false;          }
-            else                                                             { onButtonClose();            }
+            else if(buttonClose->isEnabled())                                { onButtonClose();            }
 
             break;
         }

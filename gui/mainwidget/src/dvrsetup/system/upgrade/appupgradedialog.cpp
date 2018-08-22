@@ -495,7 +495,10 @@ void AppUpgradeDialog::keyPressEvent(QKeyEvent *event)
 
         case Qt::Key_Escape:
 
-            reject();
+            if(buttonClose->isEnabled())
+            {
+                reject();
+            }
 
             return;
 

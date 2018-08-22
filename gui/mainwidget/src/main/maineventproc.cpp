@@ -116,6 +116,10 @@ void MainWidget::doDvrEvent(Event *e)
                 {
                     keypadEvent((unsigned char)keyCode);
                 }
+                else if(diskformatprocessDialog && diskformatprocessDialog->isVisible())
+                {
+                    qDebug("RC ESC Key Skip !!!!!!!!!!!!");
+                }
                 else if(operationMode == OPMODE_LOGIN)
                 {
                     passNumpadKeypadEvent(keyCode);
