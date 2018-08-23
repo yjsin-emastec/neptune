@@ -269,8 +269,8 @@ void BackupDialog::updateBackupProgress(int msg, int progress)
 
     if(progress == 100 && msg != AIF_BACKUP_END)
     {
-        QString str = QString("%1%2%3%4").arg(tr("CAM"), QString::number(currentChannel), " : ", "Success");
-        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+        QString successStr = QString("%1%2%3%4").arg("CAM", QString::number(currentChannel), " : ", "Success");
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, successStr.toStdString().c_str());
     }
 
     if(msg == AIF_BACKUP_FAILED)
@@ -282,7 +282,7 @@ void BackupDialog::updateBackupProgress(int msg, int progress)
             case AIF_BACKUP_DEVICE_READY:
             {
                 progressBarBackup->setFormat(tr("Not found USB memory."));
-                QString failureStr = QString("%1%2%3%4").arg(tr("CAM"), QString::number(currentChannel), " : ", "Failure (Not found USB memory)");
+                QString failureStr = QString("%1%2%3%4").arg("CAM", QString::number(currentChannel), " : ", "Failure (Not found USB memory)");
                 appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, failureStr.toStdString().c_str());
 
                 if(backupTimer)
@@ -312,20 +312,20 @@ void BackupDialog::updateBackupProgress(int msg, int progress)
             {
                 QString str = QString("%1%2%3%4").arg(tr("CAM"), QString::number(currentChannel), " : ", tr("No Data"));
                 progressBarBackup->setFormat(str);
-                QString failureStr = QString("%1%2%3%4").arg(tr("CAM"), QString::number(currentChannel), " : ", "Failure (No Data)");
+                QString failureStr = QString("%1%2%3%4").arg("CAM", QString::number(currentChannel), " : ", "Failure (No Data)");
                 appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, failureStr.toStdString().c_str());
                 break;
             }
             case AIF_BACKUP_SIZE_CHECK:
             {
                 progressBarBackup->setFormat(tr("Lack of USB Capacity"));
-                QString failureStr = QString("%1%2%3%4").arg(tr("CAM"), QString::number(currentChannel), " : ", "Failure (Lack of USB Capacity)");
+                QString failureStr = QString("%1%2%3%4").arg("CAM", QString::number(currentChannel), " : ", "Failure (Lack of USB Capacity)");
                 appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, failureStr.toStdString().c_str());
                 break;
             }
             default:
             {
-                QString failureStr = QString("%1%2%3%4 (%5)").arg(tr("CAM"), QString::number(currentChannel), " : ", "Failure", QString::number(oldStatus));
+                QString failureStr = QString("%1%2%3%4 (%5)").arg("CAM", QString::number(currentChannel), " : ", "Failure", QString::number(oldStatus));
                 appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, failureStr.toStdString().c_str());
                 break;;
             }
