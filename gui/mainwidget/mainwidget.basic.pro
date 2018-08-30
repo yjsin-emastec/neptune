@@ -114,6 +114,8 @@ SOURCES      += src/main.cpp                                                    
                 src/test/macdialog.cpp                                                               \
                 src/test/testwidget.cpp                                                              \
                 src/test/testeventcontroller.cpp                                                     \
+                src/search/systemlogpage.cpp \
+    src/search/functiondialog.cpp
 
 HEADERS      += src/login/logindialog.h                                                              \
                 src/ui/keyboard/uikeyboarddialog.h                                                   \
@@ -163,6 +165,8 @@ HEADERS      += src/login/logindialog.h                                         
                 src/test/macdialog.h                                                                 \
                 src/test/testwidget.h                                                                \
                 src/test/testeventcontroller.h                                                       \
+                src/search/systemlogpage.h \
+    src/search/functiondialog.h
 
 FORMS        += src/login/logindialog.ui                                                             \
                 src/ui/keyboard/uikeyboarddialog.ui                                                  \
@@ -202,6 +206,8 @@ FORMS        += src/login/logindialog.ui                                        
                 src/search/backupdialog/backupdialog.ui                                              \
                 src/test/diagmaindialog.ui                                                           \
                 src/test/macdialog.ui                                                                \
+                src/search/systemlogpage.ui \
+    src/search/functiondialog.ui
 
 RESOURCES    += mainwidget.qrc
 

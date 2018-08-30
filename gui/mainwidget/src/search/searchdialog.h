@@ -7,6 +7,7 @@
 class QStackedLayout;
 class CalendarPage;
 class EventLogPage;
+class SystemLogPage;
 
 class SearchDialog : public QDialog, public Ui::SearchDialog
 {
@@ -25,6 +26,7 @@ public slots:
     void onSearchCalendarUpdate(int type);
 	void onNormal();
 	void onEvent();
+    void onLog();
 	void onQueryLogCount();
 	void onQueryLogData();
 	void onSystemLogCount  (void);
@@ -44,6 +46,7 @@ private:
     QStackedLayout  *stackedLayout;
     CalendarPage    *calendarPage;
     EventLogPage    *eventPage;
+    SystemLogPage   *systemLogPage;
 };
 
 #endif // SEARCHDIALOG_H

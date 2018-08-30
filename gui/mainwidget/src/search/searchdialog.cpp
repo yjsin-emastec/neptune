@@ -2,6 +2,7 @@
 #include "searchdialog.h"
 #include "calendarpage.h"
 #include "eventlogpage.h"
+#include "systemlogpage.h"
 #include "Event.h"
 #include "main/mainglobal.h"
 
@@ -22,9 +23,7 @@ SearchDialog::SearchDialog(QWidget *parent)
 
 	connect(buttonNormal, SIGNAL(released()), this, SLOT(onNormal()));
 	connect(buttonEvent,  SIGNAL(released()), this, SLOT(onEvent()));
-#if 0 // GyverJeong [18/07/05]
 	connect(buttonLog,    SIGNAL(released()), this, SLOT(onLog()));
-#endif
 	connect(buttonClose,  SIGNAL(released()), this, SLOT(onButtonClose(void)));
 
     calendarPage = new CalendarPage(this);
@@ -37,28 +36,21 @@ SearchDialog::SearchDialog(QWidget *parent)
 	connect(eventPage, SIGNAL(closeSearch    (int)), this, SLOT(onButtonClose      (int)));
 	connect(eventPage, SIGNAL(startPlayback  ()),    this, SLOT(onStartPlayback    ()));
 
-#if 0 // GyverJeong [18/06/20]
-    systemLogPage    = new SystemLogPage(this);
-	connect(systemLogPage, SIGNAL(previousSearch(int)), this, SLOT(onHideCalendarPage(int)));
-	connect(systemLogPage, SIGNAL(closeSearch()),       this, SLOT(onButtonClose()));
-	connect(systemLogPage, SIGNAL(startPlayback()),     this, SLOT(onStartPlayback()));
-#endif
+    systemLogPage= new SystemLogPage(this);
+    connect(systemLogPage, SIGNAL(previousSearch(int)), this, SLOT(onHideCalendarPage(int)));
+    connect(systemLogPage, SIGNAL(closeSearch   (int)),       this, SLOT(onButtonClose(int)));
 
 	connect(this, SIGNAL(searchDataRead()), calendarPage, SLOT(onUpdateTimeLine()));
 
     stackedLayout = new QStackedLayout;
     stackedLayout->addWidget(calendarPage);
     stackedLayout->addWidget(eventPage);
-#if 0 // GyverJeong [18/06/20]
     stackedLayout->addWidget(systemLogPage);
-#endif
 	setLayout(stackedLayout);
 
-#if 0 // GyverJeong [18/06/20]
-    systemLogPage->hide();
-#endif
 	eventPage->hide();
 	calendarPage->hide();
+    systemLogPage->hide();
 }
 SearchDialog::~SearchDialog()
 {
@@ -70,10 +62,11 @@ void SearchDialog::onButtonClose(void)
     buttonNormal       ->show();
     buttonEvent        ->show();
     buttonClose        ->show();
-    buttonNotAvailable ->show();
+    buttonLog          ->show();
     labelSearch        ->show();
     calendarPage       ->hide();
     eventPage          ->hide();
+    systemLogPage      ->hide();
 }
 void SearchDialog::onButtonClose(int type)
 {
@@ -83,6 +76,7 @@ void SearchDialog::onButtonClose(int type)
     {
         case 0: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Normal Exit"); } break;
         case 1: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Event Exit" ); } break;
+        case 2: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Log Exit" ); } break;
     }
 }
 void SearchDialog::onStartPlayback(void)
@@ -94,19 +88,18 @@ void SearchDialog::onHideCalendarPage(int type)
 	buttonNormal->show();
 	buttonEvent->show();
 	buttonClose->show();
-    buttonNotAvailable->show();
+    buttonLog->show();
     labelSearch->show();
 
 	calendarPage->hide();
 	eventPage->hide();
+    systemLogPage->hide();
 
 	switch(type)
 	{
 		case 0: { buttonNormal->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Normal Exit"); } break;
 		case 1: { buttonEvent ->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Event Exit" ); } break;
-#if 0 // GyverJeong [18/07/05]
 		case 2: { buttonLog   ->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Log Exit"   ); } break;
-#endif
 	}
 }
 void SearchDialog::onEvent(void)
@@ -114,7 +107,7 @@ void SearchDialog::onEvent(void)
 	buttonNormal->hide();
 	buttonEvent->hide();
 	buttonClose->hide();
-    buttonNotAvailable->hide();
+    buttonLog->hide();
     labelSearch->hide();
 
     appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Event Enter" );
@@ -127,7 +120,7 @@ void SearchDialog::onNormal(void)
 	buttonNormal->hide();
 	buttonEvent->hide();
 	buttonClose->hide();
-    buttonNotAvailable->hide();
+    buttonLog->hide();
     labelSearch->hide();
 
     appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Normal Enter" );
@@ -137,12 +130,21 @@ void SearchDialog::onNormal(void)
 	stackedLayout->setCurrentWidget(calendarPage);
 	calendarPage->show();
 }
-#if 0 // GyverJeong [18/07/05]
+
 void SearchDialog::onLog(void)
 {
+    buttonNormal->hide();
+    buttonEvent->hide();
+    buttonClose->hide();
+    buttonLog->hide();
+    labelSearch->hide();
+
     appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Log Enter" );
+    systemLogPage->resetLog();
+    stackedLayout->setCurrentWidget(systemLogPage);
+    systemLogPage->show();
 }
-#endif
+
 void SearchDialog::onQueryLogCount()
 {
 	eventPage->onQueryLogCount();
@@ -153,11 +155,11 @@ void SearchDialog::onQueryLogData()
 }
 void SearchDialog::onSystemLogCount()
 {
-    // systemLogPage->onQueryLogCount();
+    systemLogPage->onQueryLogCount();
 }
 void SearchDialog::onSystemLogData()
 {
-    // systemLogPage->onQueryLogData();
+    systemLogPage->onQueryLogData();
 }
 void SearchDialog::onSystemLogBackup()
 {
@@ -185,6 +187,10 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 			{
 				eventPage->KeyPressEvent(Qt::Key_Up);
 			}
+            else if(systemLogPage->isVisible())
+            {
+                systemLogPage->KeyPressEvent(Qt::Key_Up);
+            }
 			else
 			{
 				if(buttonEvent->hasFocus())
@@ -209,6 +215,10 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 			{
 				eventPage->KeyPressEvent(Qt::Key_Down);
 			}
+            else if(systemLogPage->isVisible())
+            {
+                systemLogPage->KeyPressEvent(Qt::Key_Down);
+            }
 			else
 			{
 				if(buttonEvent->hasFocus())
@@ -233,6 +243,10 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 			{
 				eventPage->KeyPressEvent(Qt::Key_Left);
 			}
+            else if(systemLogPage->isVisible())
+            {
+                systemLogPage->KeyPressEvent(Qt::Key_Left);
+            }
 			else
 			{
 				if(buttonNormal->hasFocus())
@@ -257,6 +271,10 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 			{
 				eventPage->KeyPressEvent(Qt::Key_Right);
 			}
+            else if(systemLogPage->isVisible())
+            {
+                systemLogPage->KeyPressEvent(Qt::Key_Right);
+            }
 			else
 			{
 				if(buttonNormal->hasFocus())
@@ -281,6 +299,10 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 			{
 				eventPage->KeyPressEvent(Qt::Key_Enter);
 			}
+            else if(systemLogPage->isVisible())
+            {
+                systemLogPage->KeyPressEvent(Qt::Key_Enter);
+            }
 			else
 			{
 				if(buttonNormal->hasFocus())
@@ -309,6 +331,10 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 			{
 				eventPage->KeyPressEvent(Qt::Key_Escape);
 			}
+            else if(systemLogPage->isVisible())
+            {
+                systemLogPage->KeyPressEvent(Qt::Key_Escape);
+            }
 			else
 			{
 				this->onButtonClose();
@@ -326,6 +352,10 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 			{
 				eventPage->KeyPressEvent(Qt::Key_PageUp);
 			}
+            else if(systemLogPage->isVisible())
+            {
+                systemLogPage->KeyPressEvent(Qt::Key_PageUp);
+            }
 
 			return;
 		}
@@ -339,6 +369,10 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 			{
 				eventPage->KeyPressEvent(Qt::Key_PageDown);
 			}
+            else if(systemLogPage->isVisible())
+            {
+                systemLogPage->KeyPressEvent(Qt::Key_PageDown);
+            }
 
 			return;
 		}

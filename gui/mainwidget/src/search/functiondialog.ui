@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FunctionDialog</class>
+ <widget class="QDialog" name="FunctionDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>963</width>
+    <height>613</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>4</y>
+     <width>955</width>
+     <height>605</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="buttonCancel">
+    <property name="geometry">
+     <rect>
+      <x>735</x>
+      <y>495</y>
+      <width>200</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonOk">
+    <property name="geometry">
+     <rect>
+      <x>525</x>
+      <y>495</y>
+      <width>200</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OK</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonFilter">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>451</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Filter</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSort">
+    <property name="geometry">
+     <rect>
+      <x>485</x>
+      <y>20</y>
+      <width>451</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sort Order
+Decending</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonBackup">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>255</y>
+      <width>451</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Backup</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelete">
+    <property name="geometry">
+     <rect>
+      <x>485</x>
+      <y>255</y>
+      <width>451</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
