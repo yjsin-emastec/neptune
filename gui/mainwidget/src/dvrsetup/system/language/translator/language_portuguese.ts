@@ -89,7 +89,7 @@
         <location filename="../../upgrade/appupgradedialog.cpp" line="143"/>
         <location filename="../../upgrade/appupgradedialog.cpp" line="145"/>
         <location filename="../../upgrade/appupgradedialog.cpp" line="146"/>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="211"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="241"/>
         <source>%1</source>
         <translation>%1</translation>
     </message>
@@ -156,12 +156,12 @@
         <translation>FALHA DE ACTUALIZAÇÃO</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="347"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="385"/>
         <source>NOTICE</source>
         <translation>AVISO PRÉVIO</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="347"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="385"/>
         <source>%1
 
 %2</source>
@@ -170,7 +170,7 @@
 %2</translation>
     </message>
     <message>
-        <location filename="../../upgrade/appupgradedialog.cpp" line="347"/>
+        <location filename="../../upgrade/appupgradedialog.cpp" line="385"/>
         <source>Please unplug USB memory.</source>
         <translation>Desligue a memória USB.</translation>
     </message>
@@ -195,7 +195,7 @@
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="160"/>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="118"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="218"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="228"/>
         <source>1 minute</source>
         <translation>1 minuto</translation>
     </message>
@@ -277,43 +277,43 @@
         <translation>10 minutos</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="207"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="217"/>
         <source>seconds</source>
         <translation>segundos</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="256"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="296"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="266"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="313"/>
         <source>CAM</source>
         <translation>CÂM</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="268"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="284"/>
         <source>Not found USB memory.</source>
         <translation>Memória USB não encontrada.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="296"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="313"/>
         <source>No Data</source>
         <translation>Sem Dados</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="303"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="321"/>
         <source>Lack of USB Capacity</source>
         <translation>Falta Capacidade USB</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="311"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="336"/>
         <source>Don&apos;t remove USB memory.</source>
         <translation>Não remova a memória USB.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="317"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="342"/>
         <source>Preparing...</source>
         <translation>Preparando...</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="327"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="352"/>
         <source>Completion</source>
         <translation>Conclusão</translation>
     </message>
@@ -826,7 +826,7 @@ SSD não existe.</translation>
         <location filename="../../../../test/diagmaindialog.ui" line="560"/>
         <location filename="../../../../test/diagmaindialog.cpp" line="336"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inicio</translation>
     </message>
     <message>
         <location filename="../../../../test/diagmaindialog.ui" line="886"/>
@@ -1092,8 +1092,12 @@ SSD não existe.</translation>
     </message>
     <message>
         <location filename="../../../device/diskformat/diskformatprocess.cpp" line="139"/>
-        <source>Format Fail</source>
+        <source>Format Failure</source>
         <translation>Formato Fail</translation>
+    </message>
+    <message>
+        <source>Format Fail</source>
+        <translation type="obsolete">Formato Fail</translation>
     </message>
     <message>
         <location filename="../../../device/diskformat/diskformatprocess.cpp" line="140"/>
@@ -1481,6 +1485,82 @@ Desligado/Ligado</translation>
     </message>
 </context>
 <context>
+    <name>FunctionDialog</name>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Diálogo</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="41"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="54"/>
+        <source>OK</source>
+        <translation>Ok</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="67"/>
+        <location filename="../../../../search/functiondialog.cpp" line="73"/>
+        <location filename="../../../../search/functiondialog.cpp" line="77"/>
+        <source>Filter</source>
+        <translation>Filtro</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="93"/>
+        <source>Backup</source>
+        <translation>Cópia de seguranca</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="106"/>
+        <source>Delete</source>
+        <translation>Excluir</translation>
+    </message>
+    <message>
+        <source>%1
+%2</source>
+        <translation type="obsolete">%1
+%2</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="80"/>
+        <location filename="../../../../search/functiondialog.cpp" line="86"/>
+        <location filename="../../../../search/functiondialog.cpp" line="90"/>
+        <source>Sort Order</source>
+        <translation>Ordenar</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.cpp" line="86"/>
+        <source>Ascending</source>
+        <translation>Ascendente</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.cpp" line="90"/>
+        <source>Descending</source>
+        <translation>Descendente</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.cpp" line="124"/>
+        <source>			 WARNING
+
+Do you want to delete all logs?</source>
+        <translation>ATENÇÃO
+
+Você quer apagar todos os registros?</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.cpp" line="141"/>
+        <source>		Notice
+
+All log was deleted.</source>
+        <translation>AVISO PRÉVIO
+
+Todo o log foi excluído.</translation>
+    </message>
+</context>
+<context>
     <name>GsensorDialog</name>
     <message>
         <location filename="../../../device/gsensor/gsensordialog.ui" line="17"/>
@@ -1831,6 +1911,33 @@ O sistema reiniciará. </translation>
     </message>
 </context>
 <context>
+    <name>LogPage</name>
+    <message>
+        <source>Dialog</source>
+        <translation type="obsolete">Diálogo</translation>
+    </message>
+    <message>
+        <source>&lt;</source>
+        <translation type="obsolete">&lt;</translation>
+    </message>
+    <message>
+        <source>&gt;</source>
+        <translation type="obsolete">&gt;</translation>
+    </message>
+    <message>
+        <source>88888/88888</source>
+        <translation type="obsolete">1080p {88888/88888?}</translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="obsolete">Buscar</translation>
+    </message>
+    <message>
+        <source>End</source>
+        <translation type="obsolete">Fim</translation>
+    </message>
+</context>
+<context>
     <name>LoginDialog</name>
     <message>
         <location filename="../../../../login/logindialog.ui" line="14"/>
@@ -1866,7 +1973,7 @@ O sistema reiniciará. </translation>
         <translation>Digite uma senha.</translation>
     </message>
     <message>
-        <location filename="../../../../login/logindialog.cpp" line="157"/>
+        <location filename="../../../../login/logindialog.cpp" line="158"/>
         <source>Incorrect Password.
 Please try again.</source>
         <translation>Senha incorreta.
@@ -1999,11 +2106,11 @@ Mudo/1/2/3/4 </translation>
         <translation>Fechar</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="53"/>
-        <location filename="../../../../main/mainMenu.cpp" line="63"/>
-        <location filename="../../../../main/mainMenu.cpp" line="91"/>
-        <location filename="../../../../main/mainMenu.cpp" line="135"/>
-        <location filename="../../../../main/mainMenu.cpp" line="146"/>
+        <location filename="../../../../main/mainMenu.cpp" line="54"/>
+        <location filename="../../../../main/mainMenu.cpp" line="64"/>
+        <location filename="../../../../main/mainMenu.cpp" line="92"/>
+        <location filename="../../../../main/mainMenu.cpp" line="136"/>
+        <location filename="../../../../main/mainMenu.cpp" line="147"/>
         <source>Audio
 Mute</source>
         <translation>Áudio
@@ -2011,9 +2118,9 @@ Mudo</translation>
     </message>
     <message>
         <location filename="../../../../main/mainMenu.cpp" line="45"/>
-        <location filename="../../../../main/mainMenu.cpp" line="64"/>
-        <location filename="../../../../main/mainMenu.cpp" line="99"/>
-        <location filename="../../../../main/mainMenu.cpp" line="147"/>
+        <location filename="../../../../main/mainMenu.cpp" line="65"/>
+        <location filename="../../../../main/mainMenu.cpp" line="100"/>
+        <location filename="../../../../main/mainMenu.cpp" line="148"/>
         <source>Audio
 1</source>
         <translation>Áudio
@@ -2021,9 +2128,9 @@ Mudo</translation>
     </message>
     <message>
         <location filename="../../../../main/mainMenu.cpp" line="46"/>
-        <location filename="../../../../main/mainMenu.cpp" line="65"/>
-        <location filename="../../../../main/mainMenu.cpp" line="108"/>
-        <location filename="../../../../main/mainMenu.cpp" line="148"/>
+        <location filename="../../../../main/mainMenu.cpp" line="66"/>
+        <location filename="../../../../main/mainMenu.cpp" line="109"/>
+        <location filename="../../../../main/mainMenu.cpp" line="149"/>
         <source>Audio
 2</source>
         <translation>Áudio
@@ -2031,9 +2138,9 @@ Mudo</translation>
     </message>
     <message>
         <location filename="../../../../main/mainMenu.cpp" line="47"/>
-        <location filename="../../../../main/mainMenu.cpp" line="66"/>
-        <location filename="../../../../main/mainMenu.cpp" line="117"/>
-        <location filename="../../../../main/mainMenu.cpp" line="149"/>
+        <location filename="../../../../main/mainMenu.cpp" line="67"/>
+        <location filename="../../../../main/mainMenu.cpp" line="118"/>
+        <location filename="../../../../main/mainMenu.cpp" line="150"/>
         <source>Audio
 3</source>
         <translation>Áudio
@@ -2041,9 +2148,9 @@ Mudo</translation>
     </message>
     <message>
         <location filename="../../../../main/mainMenu.cpp" line="48"/>
-        <location filename="../../../../main/mainMenu.cpp" line="67"/>
-        <location filename="../../../../main/mainMenu.cpp" line="126"/>
-        <location filename="../../../../main/mainMenu.cpp" line="150"/>
+        <location filename="../../../../main/mainMenu.cpp" line="68"/>
+        <location filename="../../../../main/mainMenu.cpp" line="127"/>
+        <location filename="../../../../main/mainMenu.cpp" line="151"/>
         <source>Audio
 4</source>
         <translation>Áudio
@@ -2053,21 +2160,21 @@ Mudo</translation>
 <context>
     <name>MainWidget</name>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="526"/>
-        <location filename="../../../../main/maineventproc.cpp" line="656"/>
-        <location filename="../../../../main/maineventproc.cpp" line="680"/>
-        <location filename="../../../../main/maineventproc.cpp" line="681"/>
-        <location filename="../../../../main/maineventproc.cpp" line="703"/>
+        <location filename="../../../../main/maineventproc.cpp" line="530"/>
+        <location filename="../../../../main/maineventproc.cpp" line="691"/>
+        <location filename="../../../../main/maineventproc.cpp" line="715"/>
+        <location filename="../../../../main/maineventproc.cpp" line="716"/>
+        <location filename="../../../../main/maineventproc.cpp" line="738"/>
         <source>ERROR</source>
         <translation>ERRO</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="656"/>
-        <location filename="../../../../main/maineventproc.cpp" line="680"/>
-        <location filename="../../../../main/maineventproc.cpp" line="681"/>
-        <location filename="../../../../main/maineventproc.cpp" line="703"/>
-        <location filename="../../../../main/maininitsys.cpp" line="223"/>
-        <location filename="../../../../main/maininitsys.cpp" line="294"/>
+        <location filename="../../../../main/maineventproc.cpp" line="691"/>
+        <location filename="../../../../main/maineventproc.cpp" line="715"/>
+        <location filename="../../../../main/maineventproc.cpp" line="716"/>
+        <location filename="../../../../main/maineventproc.cpp" line="738"/>
+        <location filename="../../../../main/maininitsys.cpp" line="226"/>
+        <location filename="../../../../main/maininitsys.cpp" line="297"/>
         <source>%1
 
 %2
@@ -2078,70 +2185,70 @@ Mudo</translation>
 %3</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="656"/>
-        <location filename="../../../../main/maineventproc.cpp" line="680"/>
-        <location filename="../../../../main/maineventproc.cpp" line="681"/>
-        <location filename="../../../../main/maineventproc.cpp" line="703"/>
-        <location filename="../../../../main/maineventproc.cpp" line="734"/>
-        <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="244"/>
+        <location filename="../../../../main/maineventproc.cpp" line="691"/>
+        <location filename="../../../../main/maineventproc.cpp" line="715"/>
+        <location filename="../../../../main/maineventproc.cpp" line="716"/>
+        <location filename="../../../../main/maineventproc.cpp" line="738"/>
+        <location filename="../../../../main/maineventproc.cpp" line="769"/>
+        <location filename="../../../../main/maininitsys.cpp" line="178"/>
+        <location filename="../../../../main/maininitsys.cpp" line="247"/>
         <source>System will restart.</source>
         <translation>O sistema reiniciará.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="526"/>
+        <location filename="../../../../main/maineventproc.cpp" line="530"/>
         <source>NO SSD</source>
         <translation>SEM SSD</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="473"/>
+        <location filename="../../../../main/maineventproc.cpp" line="477"/>
         <source>MOUNT ERROR</source>
         <translation>Erro de montagem</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="473"/>
+        <location filename="../../../../main/maineventproc.cpp" line="477"/>
         <source>%1</source>
         <translation>%1</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="473"/>
+        <location filename="../../../../main/maineventproc.cpp" line="477"/>
         <source>Format Error</source>
         <translation>Erro de formato</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="656"/>
+        <location filename="../../../../main/maineventproc.cpp" line="691"/>
         <source>Storage was attached.</source>
         <translation>O armazenamento foi anexado.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="680"/>
+        <location filename="../../../../main/maineventproc.cpp" line="715"/>
         <source>HDD was detached.</source>
         <translation>O HDD foi destacado.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="681"/>
+        <location filename="../../../../main/maineventproc.cpp" line="716"/>
         <source>SSD was detached.</source>
         <translation>O SSD foi destacado.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="703"/>
+        <location filename="../../../../main/maineventproc.cpp" line="738"/>
         <source>IO Error occurred.</source>
         <translation>IO Ocorreu um erro.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="731"/>
-        <location filename="../../../../main/maininitsys.cpp" line="141"/>
-        <location filename="../../../../main/maininitsys.cpp" line="204"/>
-        <location filename="../../../../main/maininitsys.cpp" line="211"/>
-        <location filename="../../../../main/maininitsys.cpp" line="217"/>
-        <location filename="../../../../main/maininitsys.cpp" line="223"/>
-        <location filename="../../../../main/maininitsys.cpp" line="289"/>
-        <location filename="../../../../main/maininitsys.cpp" line="294"/>
+        <location filename="../../../../main/maineventproc.cpp" line="766"/>
+        <location filename="../../../../main/maininitsys.cpp" line="144"/>
+        <location filename="../../../../main/maininitsys.cpp" line="207"/>
+        <location filename="../../../../main/maininitsys.cpp" line="214"/>
+        <location filename="../../../../main/maininitsys.cpp" line="220"/>
+        <location filename="../../../../main/maininitsys.cpp" line="226"/>
+        <location filename="../../../../main/maininitsys.cpp" line="292"/>
+        <location filename="../../../../main/maininitsys.cpp" line="297"/>
         <source>WARNING</source>
         <translation>ATENÇÃO</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="731"/>
+        <location filename="../../../../main/maineventproc.cpp" line="766"/>
         <source>%1
 
 %2
@@ -2154,32 +2261,32 @@ Mudo</translation>
 %4</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="732"/>
+        <location filename="../../../../main/maineventproc.cpp" line="767"/>
         <source>Please unplug USB memory.   </source>
         <translation>Desligue a memória USB.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="733"/>
+        <location filename="../../../../main/maineventproc.cpp" line="768"/>
         <source>If you click button of &apos;Ok&apos;,</source>
         <translation>Se você clicar no botão &apos;Ok&apos;,</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="758"/>
-        <location filename="../../../../main/maineventproc.cpp" line="803"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1168"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1202"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1350"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1390"/>
-        <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="244"/>
+        <location filename="../../../../main/maineventproc.cpp" line="793"/>
+        <location filename="../../../../main/maineventproc.cpp" line="838"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1203"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1237"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1298"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1385"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1425"/>
+        <location filename="../../../../main/maininitsys.cpp" line="178"/>
+        <location filename="../../../../main/maininitsys.cpp" line="247"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
         <location filename="../../../../main/mainscreen.cpp" line="197"/>
         <source>NOTICE</source>
         <translation>AVISO PRÉVIO</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="758"/>
+        <location filename="../../../../main/maineventproc.cpp" line="793"/>
         <source>%1
 
 %2%3
@@ -2190,41 +2297,40 @@ Mudo</translation>
 %4</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="758"/>
+        <location filename="../../../../main/maineventproc.cpp" line="793"/>
         <source>Power Off</source>
         <translation>Desligar</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="758"/>
+        <location filename="../../../../main/maineventproc.cpp" line="793"/>
         <source>Elapsed Time : </source>
         <translation>Tempo gasto : </translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="758"/>
+        <location filename="../../../../main/maineventproc.cpp" line="793"/>
         <source>System will shutdown.</source>
         <translation>O sistema irá desligar.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="803"/>
         <source>%1
 
 %2%3</source>
-        <translation type="unfinished">%1
+        <translation type="obsolete">%1
 
 %2%3 {1
 ?}</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="803"/>
+        <location filename="../../../../main/maineventproc.cpp" line="838"/>
         <source>SATA Error Count : </source>
-        <translation type="unfinished"></translation>
+        <translation>Contagem de erros SATA : </translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1168"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1202"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1263"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1350"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1390"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1203"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1237"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1298"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1385"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1425"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
         <location filename="../../../../main/mainscreen.cpp" line="197"/>
         <source>NOTICE
@@ -2235,22 +2341,22 @@ Current status is trigger.</source>
 O status atual é o gatilho.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="141"/>
-        <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="204"/>
-        <location filename="../../../../main/maininitsys.cpp" line="211"/>
-        <location filename="../../../../main/maininitsys.cpp" line="217"/>
-        <location filename="../../../../main/maininitsys.cpp" line="223"/>
-        <location filename="../../../../main/maininitsys.cpp" line="244"/>
-        <location filename="../../../../main/maininitsys.cpp" line="289"/>
-        <location filename="../../../../main/maininitsys.cpp" line="294"/>
+        <location filename="../../../../main/maininitsys.cpp" line="144"/>
+        <location filename="../../../../main/maininitsys.cpp" line="178"/>
+        <location filename="../../../../main/maininitsys.cpp" line="207"/>
+        <location filename="../../../../main/maininitsys.cpp" line="214"/>
+        <location filename="../../../../main/maininitsys.cpp" line="220"/>
+        <location filename="../../../../main/maininitsys.cpp" line="226"/>
+        <location filename="../../../../main/maininitsys.cpp" line="247"/>
+        <location filename="../../../../main/maininitsys.cpp" line="292"/>
+        <location filename="../../../../main/maininitsys.cpp" line="297"/>
         <source>STORAGE FORMAT</source>
         <translation>FORMATO DE ARMAZENAMENTO</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="211"/>
-        <location filename="../../../../main/maininitsys.cpp" line="217"/>
-        <location filename="../../../../main/maininitsys.cpp" line="289"/>
+        <location filename="../../../../main/maininitsys.cpp" line="214"/>
+        <location filename="../../../../main/maininitsys.cpp" line="220"/>
+        <location filename="../../../../main/maininitsys.cpp" line="292"/>
         <source>%1
 
 %2 (%3)
@@ -2261,26 +2367,26 @@ O status atual é o gatilho.</translation>
 %4 (%3)</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="212"/>
-        <location filename="../../../../main/maininitsys.cpp" line="218"/>
-        <location filename="../../../../main/maininitsys.cpp" line="290"/>
+        <location filename="../../../../main/maininitsys.cpp" line="215"/>
+        <location filename="../../../../main/maininitsys.cpp" line="221"/>
+        <location filename="../../../../main/maininitsys.cpp" line="293"/>
         <source>Storage was not formatted.</source>
         <translation>O armazenamento não foi formatado.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="141"/>
-        <location filename="../../../../main/maininitsys.cpp" line="214"/>
-        <location filename="../../../../main/maininitsys.cpp" line="220"/>
-        <location filename="../../../../main/maininitsys.cpp" line="225"/>
-        <location filename="../../../../main/maininitsys.cpp" line="292"/>
-        <location filename="../../../../main/maininitsys.cpp" line="296"/>
+        <location filename="../../../../main/maininitsys.cpp" line="144"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="228"/>
+        <location filename="../../../../main/maininitsys.cpp" line="295"/>
+        <location filename="../../../../main/maininitsys.cpp" line="299"/>
         <source>Do you want to format the storage?</source>
         <translation>Deseja formatar o armazenamento?</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="141"/>
-        <location filename="../../../../main/maininitsys.cpp" line="175"/>
-        <location filename="../../../../main/maininitsys.cpp" line="244"/>
+        <location filename="../../../../main/maininitsys.cpp" line="144"/>
+        <location filename="../../../../main/maininitsys.cpp" line="178"/>
+        <location filename="../../../../main/maininitsys.cpp" line="247"/>
         <source>%1
 
 %2</source>
@@ -2289,17 +2395,17 @@ O status atual é o gatilho.</translation>
 %2</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="205"/>
+        <location filename="../../../../main/maininitsys.cpp" line="208"/>
         <source>FORMAT or MOUNT ERROR</source>
         <translation>Erro de Formato ou Montagem</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="207"/>
+        <location filename="../../../../main/maininitsys.cpp" line="210"/>
         <source>If yes, system will format the storage.</source>
         <translation>Caso Sim, o sistema irá formatar o armazenamento.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="204"/>
+        <location filename="../../../../main/maininitsys.cpp" line="207"/>
         <source>%1
 
 %2(%3)
@@ -2310,47 +2416,47 @@ O status atual é o gatilho.</translation>
 %4</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="224"/>
-        <location filename="../../../../main/maininitsys.cpp" line="295"/>
+        <location filename="../../../../main/maininitsys.cpp" line="227"/>
+        <location filename="../../../../main/maininitsys.cpp" line="298"/>
         <source>Storage was not formatted.         </source>
         <translation>O armazenamento não foi formatado.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="266"/>
-        <location filename="../../../../main/maininitsys.cpp" line="322"/>
-        <location filename="../../../../main/maininitsys.cpp" line="342"/>
-        <location filename="../../../../main/maininitsys.cpp" line="362"/>
+        <location filename="../../../../main/maininitsys.cpp" line="269"/>
+        <location filename="../../../../main/maininitsys.cpp" line="325"/>
+        <location filename="../../../../main/maininitsys.cpp" line="345"/>
+        <location filename="../../../../main/maininitsys.cpp" line="365"/>
         <source>STORAGE STATUS</source>
         <translation>ESTATUTO DE ARMAZENAGEM</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="266"/>
+        <location filename="../../../../main/maininitsys.cpp" line="269"/>
         <source>[5014] Broken Filesystem</source>
         <translation>[5014] Sistema de arquivos quebrado</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="322"/>
+        <location filename="../../../../main/maininitsys.cpp" line="325"/>
         <source>[5042] Data Lost</source>
         <translation>[5042] Dados perdidos</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="342"/>
+        <location filename="../../../../main/maininitsys.cpp" line="345"/>
         <source>[5070] New HDD Inserted</source>
         <translation>[5070] Novo HDD Inserido</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="362"/>
+        <location filename="../../../../main/maininitsys.cpp" line="365"/>
         <source>[5072] Slave HDD Changed</source>
         <translation>[5072] HDD do escravo alterado</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="474"/>
-        <location filename="../../../../main/mainwidget.cpp" line="741"/>
+        <location filename="../../../../main/mainwidget.cpp" line="617"/>
+        <location filename="../../../../main/mainwidget.cpp" line="887"/>
         <source>POWER OFF</source>
         <translation>DESLIGAR</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="474"/>
+        <location filename="../../../../main/mainwidget.cpp" line="617"/>
         <source>				NOTICE
 
 System was shutdown successfully.
@@ -2361,7 +2467,7 @@ O sistema foi desligado com sucesso.
 Desligue o poder. </translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="741"/>
+        <location filename="../../../../main/mainwidget.cpp" line="887"/>
         <source>				WARNING
 
 Do you want to shutdown the system?</source>
@@ -2370,12 +2476,12 @@ Do you want to shutdown the system?</source>
 Deseja desligar o sistema? </translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1186"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1347"/>
         <source>SEARCH</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1187"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1348"/>
         <source>WARNING
 
 No SSD</source>
@@ -3239,6 +3345,7 @@ Desligado</translation>
     <name>QObject</name>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="691"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="69"/>
         <source>EVENT TIME</source>
         <translation>HORA DO EVENTO</translation>
     </message>
@@ -3256,6 +3363,11 @@ Desligado</translation>
         <location filename="../../../../search/eventlogpage.cpp" line="697"/>
         <source>NUM</source>
         <translation>NUM</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.cpp" line="71"/>
+        <source>CONTENT</source>
+        <translation>CONTEÚDO</translation>
     </message>
 </context>
 <context>
@@ -3590,8 +3702,8 @@ Por favor, tente novamente.</translation>
         <location filename="../../datetime/setdatetimedialog.ui" line="364"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="112"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="152"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="357"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="358"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="365"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="366"/>
         <source>/</source>
         <translation>/</translation>
     </message>
@@ -3658,243 +3770,241 @@ Ligado</translation>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="74"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1381"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="82"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="1389"/>
         <source>Time Format
 12 Hour</source>
         <translation>Formato de Hora
 12 horas</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="75"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1389"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="83"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="1397"/>
         <source>Time Format
 24 Hour</source>
         <translation>Formato de Hora
 24 horas</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="80"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1411"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="88"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="1419"/>
         <source>GPS Synchronization
 On</source>
         <translation>Sincronizacão GPS
 Ligado</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="85"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1403"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="93"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="1411"/>
         <source>GPS Synchronization
 Off</source>
         <translation>Sincronizacão GPS
 Desligado</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="89"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="97"/>
         <source>TimeZone [UTC -12:00 Eniwetok/Kwajalein]</source>
         <translation>Fuso Horário [UTC -12:00 Eniwetok/Kwajalein]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="90"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="98"/>
         <source>TimeZone [UTC -11:00 Niue]</source>
         <translation>Fuso Horário [UTC -11:00 Niue]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="91"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="99"/>
         <source>TimeZone [UTC -10:00 Hawaii]</source>
         <translation>Fuso Horário [UTC -10:00 Havaí]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="92"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="100"/>
         <source>TimeZone [UTC -09:00 Alaska]</source>
         <translation>Fuso Horário [UTC -09:00 Alaska]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="93"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="101"/>
         <source>TimeZone [UTC -08:00 Los Angeles/Vancouver]</source>
         <translation>Fuso Horário [UTC -08:00 Los Angeles/Vancouver]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="94"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="102"/>
         <source>TimeZone [UTC -07:00 Arizona]</source>
         <translation>Fuso Horário [UTC -07:00 Arizona]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="95"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="103"/>
         <source>TimeZone [UTC -06:00 Chicago/Houston/Mexico City]</source>
         <translation>Fuso Horário [UTC -06:00 Chicago/Houston]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="96"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="104"/>
         <source>TimeZone [UTC -05:00 Boston/Montreal/New York]</source>
         <translation>Fuso Horário [UTC -05:00 Boston/Montreal/New York]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="97"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="105"/>
         <source>TimeZone [UTC -04:30 Caracas]</source>
         <translation>Fuso Horário [UTC -04:30 Caracas]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="98"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="106"/>
         <source>TimeZone [UTC -04:00 Santiago]</source>
         <translation>Fuso Horário [UTC -04:00 Santiago]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="99"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="107"/>
         <source>TimeZone [UTC -03:30 Newfoundland]</source>
         <translation>Fuso Horário [UTC -03:30 Newfoundland]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="100"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="108"/>
         <source>TimeZone [UTC -03:00 Buenos Aires/Rio de Janero]</source>
         <translation>Fuso Horário [UTC -03:00 Buenos Aires / Rio de Janeiro]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="101"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="109"/>
         <source>TimeZone [UTC -02:00 Fernando de Noronha]</source>
         <translation>Fuso Horário [UTC -02:00 Fernando de Noronha]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="102"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="110"/>
         <source>TimeZone [UTC -01:00 Azores]</source>
         <translation>Fuso Horário [UTC -01:00 Azores]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="103"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="111"/>
         <source>TimeZone [UTC +00:00 Lisbon/London/Monaco]</source>
         <translation>Fuso Horário [UTC +00:00 Lisboa/Londres/Mônaco]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="104"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="112"/>
         <source>TimeZone [UTC +01:00 Berlin/Paris/Rome]</source>
         <translation>Fuso Horário [UTC +01:00 Berlim/Paris/ Roma]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="105"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="113"/>
         <source>TimeZone [UTC +02:00 Athens/Cape Town/Istanbul]</source>
         <translation>Fuso Horário [UTC +02:00 Atenas/Cidade do Cabo]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="106"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="114"/>
         <source>TimeZone [UTC +03:00 Moscow/Baghdad/Kuwait]</source>
         <translation>Fuso Horário [UTC +03:00 Moscou/Bagdá/Kuwait]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="107"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="115"/>
         <source>TimeZone [UTC +03:30 Teheran]</source>
         <translation>Fuso Horário [UTC +03:30 Teheran]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="108"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="116"/>
         <source>TimeZone [UTC +04:00 Abu Dhabi/Muscat]</source>
         <translation>Fuso Horário [UTC +04:00 Abu Dhabi/Muscat]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="109"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="117"/>
         <source>TimeZone [UTC +04:30 Kabul]</source>
         <translation>Fuso Horário [UTC +04:30 Kabul]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="110"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="118"/>
         <source>TimeZone [UTC +05:00 Islamabad/Karachi]</source>
         <translation>Fuso Horário [UTC +05:00 Islamabad/Karachi]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="111"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="119"/>
         <source>TimeZone [UTC +05:30 Chennai]</source>
         <translation>Fuso Horário [UTC +05:30 Chennai]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="112"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="120"/>
         <source>TimeZone [UTC +05:45 Kathmandu]</source>
         <translation>Fuso Horário [UTC +05:45 Katmandu]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="113"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="121"/>
         <source>TimeZone [UTC +06:00 Astana/Dhaka/Almaty]</source>
         <translation>Fuso Horário [UTC +06:00 Astana/Dhaka/Almaty]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="114"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="122"/>
         <source>TimeZone [UTC +06:30 Rangoon]</source>
         <translation>Fuso Horário [UTC +06:30 Rangoon]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="115"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="123"/>
         <source>TimeZone [UTC +07:00 Bangkok/Hanoi/Jakarta]</source>
         <translation>Fuso Horário [UTC +07:00 Bangkok/Hanói/Jacarta]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="116"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="124"/>
         <source>TimeZone [UTC +08:00 Beijing/Singapore/Taipei]</source>
         <translation>Fuso Horário [UTC +00:00 Pequim/Cingapura/Taipei]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="117"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="125"/>
         <source>TimeZone [UTC +09:00 Seoul/Tokyo]</source>
         <translation>Fuso Horário [UTC +09:00 Seul/Tóquio]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="118"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="126"/>
         <source>TimeZone [UTC +09:30 Darwin]</source>
         <translation>Fuso Horário [UTC +09:30 Darwin]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="119"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="127"/>
         <source>TimeZone [UTC +10:00 Guam/Canberra/Sydney]</source>
         <translation>Fuso Horário [UTC +10:00 Guam/Canberra/Sydney]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="120"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="128"/>
         <source>TimeZone [UTC +11:00 Magadan/Solomon]</source>
         <translation>Fuso Horário [UTC +11:00 Magadan/Solomon]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="121"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="129"/>
         <source>TimeZone [UTC +12:00 Fiji/Marshall]</source>
         <translation>Fuso Horário [UTC +12:00 Fiji/Marshall]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="122"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="130"/>
         <source>TimeZone [UTC +13:00 Nuku&apos;alofa]</source>
         <translation>Fuso Horário [UTC +13:00 Nuku&apos;alofa]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="182"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="257"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="306"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="190"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="265"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="314"/>
         <source>Year</source>
         <translation>Ano</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="190"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="194"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="233"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="237"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="295"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="299"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="198"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="202"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="241"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="245"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="303"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="307"/>
         <source>Month</source>
         <translation>Mês</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="203"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="207"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="246"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="250"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="282"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="286"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="211"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="215"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="254"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="258"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="290"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="294"/>
         <source>Day</source>
         <translation>Dia</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="366"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="367"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="374"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="375"/>
         <source>-</source>
         <translation>-</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="378"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="382"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="386"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="390"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="394"/>
@@ -3902,32 +4012,34 @@ Desligado</translation>
         <location filename="../../datetime/setdatetimedialog.cpp" line="402"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="406"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="410"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="414"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="418"/>
         <source>Hour</source>
         <translation>Hora</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="417"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="868"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="873"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="886"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="900"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="425"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="876"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="881"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="894"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="908"/>
         <source>Hour: %1</source>
         <translation>Hora: %1</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="426"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="430"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="434"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="438"/>
         <source>Minute</source>
         <translation>Minuto</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="436"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="440"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="444"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="448"/>
         <source>Second</source>
         <translation>Segundo</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="575"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="583"/>
         <source>If you set the time faster than recording data,
 some data will be erased from storage.
 </source>
@@ -3935,12 +4047,12 @@ some data will be erased from storage.
 alguns dados serão apagados do armazenamento.</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="663"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="671"/>
         <source>SET DATE &amp; TIME</source>
         <translation>DEFINIR DATE &amp;&amp; HORA</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1061"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="1069"/>
         <source>Day: %1</source>
         <translation>Dia: %1</translation>
     </message>
@@ -4053,6 +4165,75 @@ alguns dados serão apagados do armazenamento.</translation>
         <location filename="../../../../main/statusbardialog.cpp" line="249"/>
         <source>PM</source>
         <translation>PM</translation>
+    </message>
+</context>
+<context>
+    <name>SystemLogPage</name>
+    <message>
+        <location filename="../../../../search/systemlogpage.cpp" line="119"/>
+        <source>
+Descending</source>
+        <translation>
+Descendente</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.cpp" line="301"/>
+        <source>Ascending</source>
+        <translation>Ascendente</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.cpp" line="305"/>
+        <source>Descending</source>
+        <translation>Descendente</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Diálogo</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="60"/>
+        <source>&lt;</source>
+        <translation>&lt;</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="73"/>
+        <source>&gt;</source>
+        <translation>&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="89"/>
+        <source>88888/88888</source>
+        <translation>88888/88888</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="105"/>
+        <source>Search</source>
+        <translation>Buscar</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="186"/>
+        <source>Start</source>
+        <translation>Inicio</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="202"/>
+        <source>End</source>
+        <translation>Fim</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="218"/>
+        <source>Filter
+Sort</source>
+        <translation>Filtro
+Ordenar</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="344"/>
+        <source>:
+:</source>
+        <translation>:
+:</translation>
     </message>
 </context>
 <context>
@@ -4443,34 +4624,34 @@ Você deve excluir dados ou definir tempo.</translation>
         <translation>Excluir Dados</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="132"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="137"/>
         <source>%1
 %2</source>
         <translation>%1
 %2</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="132"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="137"/>
         <source>System is deleting data.</source>
         <translation>O sistema está excluindo dados.</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="132"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="137"/>
         <source>Do not turn off system.</source>
         <translation>Não desligue o sistema.</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="157"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="164"/>
         <source>%1</source>
         <translation>%1</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="157"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="164"/>
         <source>Completion</source>
         <translation>Conclusão</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="240"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="250"/>
         <source>System Time must be later than record last time.</source>
         <translation>Sistema tempo deve ser posterior à última hora.</translation>
     </message>

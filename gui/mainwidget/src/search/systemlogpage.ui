@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LogPage</class>
- <widget class="QWidget" name="LogPage">
+ <class>SystemLogPage</class>
+ <widget class="QWidget" name="SystemLogPage">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -358,14 +358,14 @@ Sort</string>
      <string/>
     </property>
    </widget>
-   <zorder>labelFilter4</zorder>
+   <zorder>searchStartTime</zorder>
+   <zorder>searchEndTime</zorder>
    <zorder>labelClose</zorder>
    <zorder>labelPageDn</zorder>
    <zorder>labelPageUp</zorder>
    <zorder>labelFunction</zorder>
    <zorder>buttonFunction</zorder>
    <zorder>labelSerarch</zorder>
-   <zorder>searchEndTime</zorder>
    <zorder>labelPrevious</zorder>
    <zorder>eventLogView</zorder>
    <zorder>buttonPageDn</zorder>
@@ -374,12 +374,12 @@ Sort</string>
    <zorder>buttonSearch</zorder>
    <zorder>buttonPrevious</zorder>
    <zorder>buttonClose</zorder>
-   <zorder>searchStartTime</zorder>
    <zorder>labelStart</zorder>
    <zorder>labelEnd</zorder>
    <zorder>labelFilter1</zorder>
    <zorder>labelFilter3</zorder>
    <zorder>labelFilter2</zorder>
+   <zorder>labelFilter4</zorder>
   </widget>
  </widget>
  <resources/>

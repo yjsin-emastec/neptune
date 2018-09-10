@@ -74,7 +74,7 @@ void FunctionDialog::setLogFilter(QString filter)
     }
     else
     {
-        buttonFilter->setText(tr("%1\n%2").arg("Filter").arg(logFilter));
+        buttonFilter->setText(QString("%1\n%2").arg(tr("Filter")).arg(logFilter));
     }
 }
 void FunctionDialog::setLogSort(QString sort)
@@ -103,8 +103,9 @@ void FunctionDialog::onButtonBackup()
 
     if(!msgBox)
     {
-        msgBox = new TextMessageDialog("Log Backup", tr("onButtonBackup()"), 2, this);
+        msgBox = new TextMessageDialog("Log Backup", "onButtonBackup()", 2, this);
     }
+    msgBox->setMsgAlignment(Qt::AlignCenter);
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
     if(msgBox->exec())
@@ -122,7 +123,9 @@ void FunctionDialog::onButtonDelete()
     {
         msgBox = new TextMessageDialog("Log Delete", tr("\t\t\t WARNING\n\n" "Do you want to delete all logs?"), 0, this);
     }
+    msgBox->setMsgAlignment(Qt::AlignCenter);
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
+
 
     if(msgBox->exec())
     {
@@ -136,6 +139,9 @@ void FunctionDialog::onButtonDelete()
 
         //print result message
         msgBox = new TextMessageDialog("Log Delete", tr("\t\tNotice\n\n" "All log was deleted."), 2, this);
+        msgBox->setMsgAlignment(Qt::AlignCenter);
+        msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
+
         msgBox->exec();
     }
 

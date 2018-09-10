@@ -40,6 +40,22 @@ SystemLogPage::SystemLogPage(QWidget *parent)
     buttonClose    ->setIconSize(QSize(70,70));
     buttonClose    ->adjustSize ();
 
+#if 1 //yjsin [18/09/10] if text is long, change label size
+    if( (utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0) || (utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0) )
+    {
+        labelFilter1->setGeometry(530, 530, 91, 91);
+        labelFilter3->setGeometry(620, 530, 31, 91);
+        labelFilter2->setGeometry(650, 530, 291, 91);
+    }
+    else if( (utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)  || (utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
+          || (utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0) || (utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0) )
+    {
+        labelFilter1->setGeometry(530, 530, 101, 91);
+        labelFilter3->setGeometry(640, 530, 20, 91);
+        labelFilter2->setGeometry(660, 530, 281, 91);
+    }
+#endif
+
     proxyModel = new EventSortFilterProxyModel;
 
     eventLogView->setRootIsDecorated(false);

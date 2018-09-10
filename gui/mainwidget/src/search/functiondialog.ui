@@ -77,8 +77,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Sort Order
-Decending</string>
+     <string>Sort Order</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonBackup">

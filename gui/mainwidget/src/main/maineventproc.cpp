@@ -835,7 +835,7 @@ void MainWidget::doDvrEvent(Event *e)
                 msgBox = NULL;
             }
 
-            msgBox = new TextMessageDialog(tr("NOTICE"), tr("%1\n\n%2%3").arg(tr("NOTICE"), tr("SATA Error Count : "), tr(tmp)), 3, this);
+            msgBox = new TextMessageDialog( tr("NOTICE"), QString("%1\n\n%2%3").arg( tr("NOTICE") ).arg( tr("SATA Error Count : ") ).arg(tmp) , 3, this );
             msgBox->setMsgAlignment(Qt::AlignCenter);
             msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 

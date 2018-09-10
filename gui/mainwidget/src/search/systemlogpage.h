@@ -9,7 +9,7 @@
 class EventSortFilterProxyModel;
 class QTreeView;
 class FunctionDialog;
-class SystemLogPage : public QWidget, public Ui::LogPage
+class SystemLogPage : public QWidget, public Ui::SystemLogPage
 {
     Q_OBJECT
 
