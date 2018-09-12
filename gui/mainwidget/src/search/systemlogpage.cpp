@@ -59,6 +59,15 @@ SystemLogPage::SystemLogPage(QWidget *parent)
         labelFilter3->setGeometry(640, 530, 20, 91);
         labelFilter2->setGeometry(660, 530, 281, 91);
     }
+
+    if( (utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0) )
+    {
+        labelStart->setStyleSheet("font:28px;");
+    }
+    else if( (utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0 ) )
+    {
+        labelStart->setStyleSheet("font:30px;");
+    }
 #endif
 
     proxyModel = new EventSortFilterProxyModel;

@@ -135,7 +135,7 @@ void LanguageDialog::onButtonLanguageUp()
      * 1. check the dvrsetup/system/upgrade/appupgradedialog. label size was modified.
      * 2. check the dvrsetup/system/information/informationdialog. font size was modified.
      * 3. check the dvrsetup/system/licenseplate/licenseplatedialog. font size was modified.
-     * 4. check the search/systemlogpage. QLabel size was modified.
+     * 4. check the search/systemlogpage. QLabel size and font size was modified.
      *
      * when you change the language to Italian, see below code.
      * 1. check the device/triggerinputdialog. Qbutton size and font was modified.
@@ -145,7 +145,7 @@ void LanguageDialog::onButtonLanguageUp()
      * when you change the language to Portuguese, see below code.
      * 1. check the stylesheet and MainWidget::loadStyleSheet(). Qbutton font was modified to small.
      * 2. check the search/backupdialog. font size was modified.
-     * 3. check the search/systemlogpage. QLabel size was modified.
+     * 3. check the search/systemlogpage. QLabel size and font size was modified.
      *
      * when you change the language to Japanese, see below code.
      * 1. check the dvrsetup/device/diskformat/diskformatprocess. font size was modified.
