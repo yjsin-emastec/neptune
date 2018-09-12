@@ -81,6 +81,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="buttonBackup">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -90,7 +93,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Backup</string>
+     <string>N/A</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonDelete">

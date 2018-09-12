@@ -173,214 +173,116 @@ void SearchDialog::onSearchCalendarUpdate(int type)
 {
 	calendarPage->UpdateDates(type);
 }
+
 void SearchDialog::keyPressEvent(QKeyEvent *event)
 {
-	switch(event->key())
-	{
-		case Qt::Key_Up:
-		{
-			if(calendarPage->isVisible())
-			{
-				calendarPage->KeyPressEvent(Qt::Key_Up);
-			}
-			else if(eventPage->isVisible())
-			{
-				eventPage->KeyPressEvent(Qt::Key_Up);
-			}
-            else if(systemLogPage->isVisible())
+    switch(event->key())
+    {
+        case Qt::Key_Up:
+        {
+            if(calendarPage->isVisible())   			{ calendarPage->KeyPressEvent(Qt::Key_Up);      }
+            else if(eventPage->isVisible())             { eventPage->KeyPressEvent(Qt::Key_Up);         }
+            else if(systemLogPage->isVisible())         { systemLogPage->KeyPressEvent(Qt::Key_Up);     }
+            else
             {
-                systemLogPage->KeyPressEvent(Qt::Key_Up);
-            }
-			else
-			{
-				if(buttonEvent->hasFocus())
-				{
-					buttonClose->setFocus();
-				}
-				else if(buttonClose->hasFocus())
-				{
-					buttonEvent->setFocus();
-				}
-			}
-
-			return;
-		}
-		case Qt::Key_Down:
-		{
-			if(calendarPage->isVisible())
-			{
-				calendarPage->KeyPressEvent(Qt::Key_Down);
-			}
-			else if(eventPage->isVisible())
-			{
-				eventPage->KeyPressEvent(Qt::Key_Down);
-			}
-            else if(systemLogPage->isVisible())
-            {
-                systemLogPage->KeyPressEvent(Qt::Key_Down);
-            }
-			else
-			{
-				if(buttonEvent->hasFocus())
-				{
-					buttonClose->setFocus();
-				}
-				else if(buttonClose->hasFocus())
-				{
-					buttonEvent->setFocus();
-				}
-			}
-
-			return;
-		}
-		case Qt::Key_Left:
-		{
-			if(calendarPage->isVisible())
-			{
-				calendarPage->KeyPressEvent(Qt::Key_Left);
-			}
-			else if(eventPage->isVisible())
-			{
-				eventPage->KeyPressEvent(Qt::Key_Left);
-			}
-            else if(systemLogPage->isVisible())
-            {
-                systemLogPage->KeyPressEvent(Qt::Key_Left);
-            }
-			else
-			{
-				if(buttonNormal->hasFocus())
-				{
-					buttonEvent->setFocus();
-				}
-				else if(buttonEvent->hasFocus())
-				{
-					buttonNormal->setFocus();
-				}
-			}
-
-			return;
-		}
-		case Qt::Key_Right:
-		{
-			if(calendarPage->isVisible())
-			{
-				calendarPage->KeyPressEvent(Qt::Key_Right);
-			}
-			else if(eventPage->isVisible())
-			{
-				eventPage->KeyPressEvent(Qt::Key_Right);
-			}
-            else if(systemLogPage->isVisible())
-            {
-                systemLogPage->KeyPressEvent(Qt::Key_Right);
-            }
-			else
-			{
-				if(buttonNormal->hasFocus())
-				{
-					buttonEvent->setFocus();
-				}
-				else if(buttonEvent->hasFocus())
-				{
-					buttonNormal->setFocus();
-				}
-			}
-
-			return;
-		}
-		case Qt::Key_Enter:
-		{
-			if(calendarPage->isVisible())
-			{
-				calendarPage->KeyPressEvent(Qt::Key_Enter);
-			}
-			else if(eventPage->isVisible())
-			{
-				eventPage->KeyPressEvent(Qt::Key_Enter);
-			}
-            else if(systemLogPage->isVisible())
-            {
-                systemLogPage->KeyPressEvent(Qt::Key_Enter);
-            }
-			else
-			{
-				if(buttonNormal->hasFocus())
-				{
-					onNormal();
-				}
-				else if(buttonEvent->hasFocus())
-				{
-					onEvent();
-				}
-				else if(buttonClose->hasFocus())
-				{
-					this->onButtonClose();
-				}
-			}
-
-			return;
-		}
-		case Qt::Key_Escape:
-		{
-			if(calendarPage->isVisible())
-			{
-				calendarPage->KeyPressEvent(Qt::Key_Escape);
-			}
-			else if(eventPage->isVisible())
-			{
-				eventPage->KeyPressEvent(Qt::Key_Escape);
-			}
-            else if(systemLogPage->isVisible())
-            {
-                systemLogPage->KeyPressEvent(Qt::Key_Escape);
-            }
-			else
-			{
-				this->onButtonClose();
-			}
-
-			return;
-		}
-		case Qt::Key_PageUp:
-		{
-			if(calendarPage->isVisible())
-			{
-				calendarPage->KeyPressEvent(Qt::Key_PageUp);
-			}
-			else if(eventPage->isVisible())
-			{
-				eventPage->KeyPressEvent(Qt::Key_PageUp);
-			}
-            else if(systemLogPage->isVisible())
-            {
-                systemLogPage->KeyPressEvent(Qt::Key_PageUp);
+                if(buttonNormal->hasFocus())            { buttonLog->setFocus();    }
+                else if(buttonEvent->hasFocus())        { buttonClose->setFocus();  }
+                else if(buttonLog->hasFocus())          { buttonNormal->setFocus(); }
+                else if(buttonClose->hasFocus())        { buttonEvent->setFocus();  }
             }
 
-			return;
-		}
-		case Qt::Key_PageDown:
-		{
-			if(calendarPage->isVisible())
-			{
-				calendarPage->KeyPressEvent(Qt::Key_PageDown);
-			}
-			else if(eventPage->isVisible())
-			{
-				eventPage->KeyPressEvent(Qt::Key_PageDown);
-			}
-            else if(systemLogPage->isVisible())
+            return;
+        }
+        case Qt::Key_Down:
+        {
+            if(calendarPage->isVisible())               { calendarPage->KeyPressEvent(Qt::Key_Down);    }
+            else if(eventPage->isVisible()) 			{ eventPage->KeyPressEvent(Qt::Key_Down);       }
+            else if(systemLogPage->isVisible())         { systemLogPage->KeyPressEvent(Qt::Key_Down);   }
+            else
             {
-                systemLogPage->KeyPressEvent(Qt::Key_PageDown);
+                if(buttonNormal->hasFocus())            { buttonLog->setFocus();    }
+                else if(buttonEvent->hasFocus())        { buttonClose->setFocus();  }
+                else if(buttonLog->hasFocus())          { buttonNormal->setFocus(); }
+                else if(buttonClose->hasFocus())        { buttonEvent->setFocus();  }
             }
 
-			return;
-		}
-		default:
-		{
-			return;
-		}
-	}
+            return;
+        }
+        case Qt::Key_Left:
+        {
+            if(calendarPage->isVisible())           	{ calendarPage->KeyPressEvent(Qt::Key_Left);    }
+            else if(eventPage->isVisible())             { eventPage->KeyPressEvent(Qt::Key_Left);       }
+            else if(systemLogPage->isVisible())         { systemLogPage->KeyPressEvent(Qt::Key_Left);   }
+            else
+            {
+                if(buttonNormal->hasFocus())            { buttonEvent->setFocus();  }
+                else if(buttonEvent->hasFocus())		{ buttonNormal->setFocus(); }
+                else if(buttonLog->hasFocus())          { buttonClose->setFocus();  }
+                else if(buttonClose->hasFocus())        { buttonLog->setFocus();    }
+            }
 
-	QDialog::keyPressEvent(event);
+            return;
+        }
+        case Qt::Key_Right:
+        {
+            if(calendarPage->isVisible())   			{ calendarPage->KeyPressEvent(Qt::Key_Right);   }
+            else if(eventPage->isVisible())             { eventPage->KeyPressEvent(Qt::Key_Right);      }
+            else if(systemLogPage->isVisible())         { systemLogPage->KeyPressEvent(Qt::Key_Right);  }
+            else
+            {
+                if(buttonNormal->hasFocus())            { buttonEvent->setFocus();  }
+                else if(buttonEvent->hasFocus())		{ buttonNormal->setFocus(); }
+                else if(buttonLog->hasFocus())          { buttonClose->setFocus();  }
+                else if(buttonClose->hasFocus())        { buttonLog->setFocus();    }
+            }
+
+            return;
+        }
+        case Qt::Key_Enter:
+        {
+            if(calendarPage->isVisible())               { calendarPage->KeyPressEvent(Qt::Key_Enter);   }
+            else if(eventPage->isVisible())             { eventPage->KeyPressEvent(Qt::Key_Enter);      }
+            else if(systemLogPage->isVisible())         { systemLogPage->KeyPressEvent(Qt::Key_Enter);  }
+            else
+            {
+                if(buttonNormal->hasFocus())            { onNormal();               }
+                else if(buttonEvent->hasFocus())        { onEvent();                }
+                else if(buttonLog->hasFocus())          { onLog();                  }
+                else if(buttonClose->hasFocus())        { this->onButtonClose();    }
+            }
+
+            return;
+        }
+        case Qt::Key_Escape:
+        {
+            if(calendarPage->isVisible())               { calendarPage->KeyPressEvent(Qt::Key_Escape);  }
+            else if(eventPage->isVisible())             { eventPage->KeyPressEvent(Qt::Key_Escape);     }
+            else if(systemLogPage->isVisible())         { systemLogPage->KeyPressEvent(Qt::Key_Escape); }
+            else                                        { this->onButtonClose();                        }
+
+            return;
+        }
+        case Qt::Key_PageUp:
+        {
+            if(calendarPage->isVisible())               { calendarPage->KeyPressEvent(Qt::Key_PageUp);  }
+            else if(eventPage->isVisible())             { eventPage->KeyPressEvent(Qt::Key_PageUp);     }
+            else if(systemLogPage->isVisible())         { systemLogPage->KeyPressEvent(Qt::Key_PageUp); }
+
+            return;
+        }
+        case Qt::Key_PageDown:
+        {
+            if(calendarPage->isVisible())               { calendarPage->KeyPressEvent(Qt::Key_PageDown);    }
+            else if(eventPage->isVisible())             { eventPage->KeyPressEvent(Qt::Key_PageDown);       }
+            else if(systemLogPage->isVisible())         { systemLogPage->KeyPressEvent(Qt::Key_PageDown);   }
+
+            return;
+        }
+        default:
+        {
+            return;
+        }
+    }
+
+    QDialog::keyPressEvent(event);
 }

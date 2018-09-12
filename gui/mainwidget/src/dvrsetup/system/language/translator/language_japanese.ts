@@ -1498,12 +1498,16 @@ Record: Off/On</source>
         <translation>フィルタ</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="93"/>
-        <source>Backup</source>
-        <translation>バックアップ</translation>
+        <location filename="../../../../search/functiondialog.ui" line="96"/>
+        <source>N/A</source>
+        <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="106"/>
+        <source>Backup</source>
+        <translation type="obsolete">バックアップ</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="109"/>
         <source>Delete</source>
         <translation>さくじょ</translation>
     </message>
@@ -1795,7 +1799,7 @@ Sensitivity: 5</source>
         <location filename="../languagedialog.ui" line="126"/>
         <location filename="../languagedialog.cpp" line="71"/>
         <location filename="../languagedialog.cpp" line="116"/>
-        <location filename="../languagedialog.cpp" line="171"/>
+        <location filename="../languagedialog.cpp" line="177"/>
         <source>English</source>
         <translation>English</translation>
     </message>
@@ -1818,21 +1822,21 @@ System will restart.</source>
     <message>
         <location filename="../languagedialog.cpp" line="76"/>
         <location filename="../languagedialog.cpp" line="117"/>
-        <location filename="../languagedialog.cpp" line="172"/>
+        <location filename="../languagedialog.cpp" line="178"/>
         <source>Korean</source>
         <translation>한국어</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="106"/>
         <location filename="../languagedialog.cpp" line="123"/>
-        <location filename="../languagedialog.cpp" line="178"/>
+        <location filename="../languagedialog.cpp" line="184"/>
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="81"/>
         <location filename="../languagedialog.cpp" line="118"/>
-        <location filename="../languagedialog.cpp" line="173"/>
+        <location filename="../languagedialog.cpp" line="179"/>
         <source>Spanish</source>
         <translatorcomment>Español
 -&gt; Espanol</translatorcomment>
@@ -1841,7 +1845,7 @@ System will restart.</source>
     <message>
         <location filename="../languagedialog.cpp" line="86"/>
         <location filename="../languagedialog.cpp" line="119"/>
-        <location filename="../languagedialog.cpp" line="174"/>
+        <location filename="../languagedialog.cpp" line="180"/>
         <source>French</source>
         <translatorcomment>Français
 -&gt;Francais</translatorcomment>
@@ -1850,21 +1854,21 @@ System will restart.</source>
     <message>
         <location filename="../languagedialog.cpp" line="91"/>
         <location filename="../languagedialog.cpp" line="120"/>
-        <location filename="../languagedialog.cpp" line="175"/>
+        <location filename="../languagedialog.cpp" line="181"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="96"/>
         <location filename="../languagedialog.cpp" line="121"/>
-        <location filename="../languagedialog.cpp" line="176"/>
+        <location filename="../languagedialog.cpp" line="182"/>
         <source>Portuguese</source>
         <translation>Português</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="101"/>
         <location filename="../languagedialog.cpp" line="122"/>
-        <location filename="../languagedialog.cpp" line="177"/>
+        <location filename="../languagedialog.cpp" line="183"/>
         <source>Japanese</source>
         <translation>日本語</translation>
     </message>
@@ -3325,7 +3329,7 @@ AutoHide: </source>
     <name>QObject</name>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="691"/>
-        <location filename="../../../../search/systemlogpage.cpp" line="69"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="73"/>
         <source>EVENT TIME</source>
         <translation>イベントじかん</translation>
     </message>
@@ -3345,7 +3349,7 @@ AutoHide: </source>
         <translation>ばんごう</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="71"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="75"/>
         <source>CONTENT</source>
         <translation>ないよう</translation>
     </message>
@@ -3592,8 +3596,12 @@ AutoHide: </source>
     </message>
     <message>
         <location filename="../../../../search/searchdialog.ui" line="176"/>
+        <source>Log</source>
+        <translation>ログ</translation>
+    </message>
+    <message>
         <source>N/A</source>
-        <translation>N/A</translation>
+        <translation type="obsolete">N/A</translation>
     </message>
 </context>
 <context>
@@ -4146,19 +4154,19 @@ some data will be erased from storage.
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="119"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="123"/>
         <source>
 Descending</source>
         <translation>
 かこうせい</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="301"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="307"/>
         <source>Ascending</source>
         <translation>しょうじゅん</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="305"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="311"/>
         <source>Descending</source>
         <translation>かこうせい</translation>
     </message>

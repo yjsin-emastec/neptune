@@ -162,7 +162,7 @@ void FunctionDialog::onButtonCancel()
     reject();
 }
 
-
+#if 0   // yjsin [18/08/12] disable backupbutton
 void FunctionDialog::KeyPressEvent(int key)
 {
     switch(key)
@@ -235,3 +235,77 @@ void FunctionDialog::KeyPressEvent(int key)
     }
     return;
 }
+#else
+void FunctionDialog::KeyPressEvent(int key)
+{
+    switch(key)
+    {
+        case Qt::Key_Up:
+        {
+            if(buttonFilter->hasFocus())        { buttonOk->setFocus(); }
+            else if(buttonSort->hasFocus())     { buttonCancel->setFocus(); }
+            else if(buttonBackup->hasFocus())   { buttonFilter->setFocus(); }
+            else if(buttonDelete->hasFocus())   { buttonSort->setFocus();   }
+            else if(buttonOk->hasFocus())       { buttonDelete->setFocus(); }
+            else if(buttonCancel->hasFocus())   { buttonDelete->setFocus(); }
+
+            break;
+        }
+        case Qt::Key_Down:
+        {
+            if(buttonFilter->hasFocus())        { buttonOk->setFocus(); }
+            else if(buttonSort->hasFocus())     { buttonDelete->setFocus(); }
+            else if(buttonBackup->hasFocus())   { buttonFilter->setFocus(); }
+            else if(buttonDelete->hasFocus())   { buttonCancel->setFocus(); }
+            else if(buttonOk->hasFocus())       { buttonSort->setFocus();   }
+            else if(buttonCancel->hasFocus())   { buttonSort->setFocus();   }
+
+            break;
+        }
+        case Qt::Key_Left:
+        {
+            if(buttonFilter->hasFocus())        { buttonSort->setFocus();   }
+            else if(buttonSort->hasFocus())     { buttonFilter->setFocus(); }
+            else if(buttonBackup->hasFocus())   { buttonDelete->setFocus(); }
+            else if(buttonDelete->hasFocus())   { buttonDelete->setFocus(); }
+            else if(buttonOk->hasFocus())       { buttonCancel->setFocus(); }
+            else if(buttonCancel->hasFocus())   { buttonOk->setFocus();     }
+
+            break;
+        }
+        case Qt::Key_Right:
+        {
+            if(buttonFilter->hasFocus())        { buttonSort->setFocus();   }
+            else if(buttonSort->hasFocus())     { buttonFilter->setFocus(); }
+            else if(buttonBackup->hasFocus())   { buttonDelete->setFocus(); }
+            else if(buttonDelete->hasFocus())   { buttonDelete->setFocus(); }
+            else if(buttonOk->hasFocus())       { buttonCancel->setFocus(); }
+            else if(buttonCancel->hasFocus())   { buttonOk->setFocus();     }
+
+            break;
+        }
+        case Qt::Key_Enter:
+        {
+            if(buttonFilter->hasFocus())        { onButtonFilter();         }
+            else if(buttonSort->hasFocus())     { onButtonSort();           }
+            else if(buttonBackup->hasFocus())   { onButtonBackup();         }
+            else if(buttonDelete->hasFocus())   { onButtonDelete();         }
+            else if(buttonOk->hasFocus())       { onButtonOk();             }
+            else if(buttonCancel->hasFocus())   { onButtonCancel();         }
+
+            break;
+        }
+        case Qt::Key_Escape:
+        {
+            onButtonCancel();
+
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
+    return;
+}
+#endif

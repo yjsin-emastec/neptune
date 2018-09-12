@@ -148,7 +148,7 @@
    </widget>
    <widget class="QPushButton" name="buttonLog">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -173,7 +173,7 @@
      </font>
     </property>
     <property name="text">
-     <string>N/A</string>
+     <string>Log</string>
     </property>
     <property name="flat">
      <bool>false</bool>
