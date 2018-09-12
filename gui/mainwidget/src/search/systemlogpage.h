@@ -46,10 +46,10 @@ private:
     QString ampmStatus;
     bool isKeyLock, isSearch;
 
-
     void updateLogCount();
     void addEventLog(const QString &logDateTime, const QString &log);
     QString changeTimeformat(char event_time[20]);
+    bool eventFilter(QObject *obj, QEvent *event);
 };
 
 

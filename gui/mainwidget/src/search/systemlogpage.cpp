@@ -22,11 +22,13 @@ SystemLogPage::SystemLogPage(QWidget *parent)
     searchStartTime->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     searchStartTime->setWrapping(true);
     searchStartTime->setContextMenuPolicy(Qt::NoContextMenu);
+    searchStartTime->installEventFilter(this);
 
     searchEndTime  ->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     searchEndTime  ->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     searchEndTime  ->setWrapping(true);
     searchEndTime  ->setContextMenuPolicy(Qt::NoContextMenu);
+    searchEndTime  ->installEventFilter(this);
 
     buttonFunction ->setIcon    (QIcon(":/images/function.png"));
     buttonFunction ->setIconSize(QSize(70,70));
@@ -127,6 +129,7 @@ void SystemLogPage::resetLog()
     logSort=SYSTEM_LOG_DESC;
     ampmStatus="";
     isSearch=true;
+    isKeyLock=false;
 
     labelPage->setText("(0/0)");
     labelFilter2->setText(tr("\nDescending"));
@@ -537,6 +540,14 @@ QString SystemLogPage::changeTimeformat(char event_time[])
             .arg(dateTimeList.value(5));
 
     return qEventTime;
+}
+bool SystemLogPage::eventFilter(QObject *obj, QEvent *event)
+{
+    if((obj==searchStartTime || obj==searchEndTime) && (event->type()==QEvent::FocusOut))
+    {
+        isKeyLock=false;
+    }
+    return QWidget::eventFilter(obj, event);
 }
 void SystemLogPage::KeyPressEvent(int key)
 {
