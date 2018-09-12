@@ -380,7 +380,26 @@ Sort</string>
    <zorder>labelFilter3</zorder>
    <zorder>labelFilter2</zorder>
    <zorder>labelFilter4</zorder>
+   <zorder>maskFrame</zorder>
   </widget>
+  <widget class="QFrame" name="maskFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>maskFrame</zorder>
+  <zorder>frame</zorder>
  </widget>
  <resources/>
  <connections/>

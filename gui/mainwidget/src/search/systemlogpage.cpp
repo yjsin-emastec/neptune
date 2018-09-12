@@ -40,6 +40,11 @@ SystemLogPage::SystemLogPage(QWidget *parent)
     buttonClose    ->setIconSize(QSize(70,70));
     buttonClose    ->adjustSize ();
 
+    maskFrame->setGeometry(0,0,appmgr_get_mainwidget_width(),appmgr_get_mainwidget_height());
+    maskFrame->setWindowOpacity(0);
+    maskFrame->setAttribute(Qt::WA_TranslucentBackground, true);
+    maskFrame->lower();
+
 #if 1 //yjsin [18/09/10] if text is long, change label size
     if( (utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0) || (utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0) )
     {
@@ -273,6 +278,8 @@ void SystemLogPage::onButtonFunction()
     isSearch=true;
 #endif
 
+    maskFrame->raise();
+
     if( functionDialog )
     {
         delete functionDialog;
@@ -310,6 +317,7 @@ void SystemLogPage::onButtonFunction()
     delete functionDialog;
     functionDialog = NULL;
 
+    maskFrame->lower();
     buttonFunction->setFocus();
 }
 void SystemLogPage::onButtonPageDn()
