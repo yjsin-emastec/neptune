@@ -300,7 +300,7 @@ void SystemLogPage::onButtonFunction()
     //create new dialog
     functionDialog=new FunctionDialog();
     functionDialog->setParent(this);
-    functionDialog->move((appmgr_get_mainwidget_width()-functionDialog->width())/2,(appmgr_get_mainwidget_height()-functionDialog->height())/2);
+    functionDialog->move((this->width()-functionDialog->size().width())/2,(this->height()-functionDialog->size().height())/2);
 
     functionDialog->setWindowModality(Qt::WindowModal);
     functionDialog->setModal(true);
