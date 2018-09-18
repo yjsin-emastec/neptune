@@ -74,11 +74,11 @@ SystemLogPage::SystemLogPage(QWidget *parent)
 
     proxyModel = new EventSortFilterProxyModel;
 
-    eventLogView->setRootIsDecorated(false);
-    eventLogView->setAlternatingRowColors(true);
-    eventLogView->setModel(proxyModel);
-    eventLogView->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    eventLogView->setStyleSheet("QHeaderView{font:27px;} QTreeView{font:26px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+    systemLogView->setRootIsDecorated(false);
+    systemLogView->setAlternatingRowColors(true);
+    systemLogView->setModel(proxyModel);
+    systemLogView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    systemLogView->setStyleSheet("QHeaderView{font:27px;} QTreeView{font:26px;} QTreeView::item:selected{background:rgb(152,14,69);}");
 
     systemLogModel = new QStandardItemModel(0, 2, this);
     systemLogModel->setHeaderData(0, Qt::Horizontal, QObject::tr("TIME"));
@@ -87,8 +87,8 @@ SystemLogPage::SystemLogPage(QWidget *parent)
     systemLogModel->setHeaderData(1, Qt::Horizontal, Qt::AlignCenter, Qt::TextAlignmentRole);
 
     proxyModel->setSourceModel(systemLogModel);
-    eventLogView->setColumnWidth(0, 335);
-    eventLogView->setColumnWidth(1, 914);
+    systemLogView->setColumnWidth(0, 335);
+    systemLogView->setColumnWidth(1, 914);
 
     connect(buttonPrevious, SIGNAL(released()), this, SLOT(onButtonPrevious()));
     connect(buttonClose, SIGNAL(released()), this, SLOT(onButtonClose()));

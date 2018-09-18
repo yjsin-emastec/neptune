@@ -28,7 +28,7 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QTreeView" name="eventLogView">
+   <widget class="QTreeView" name="systemLogView">
     <property name="geometry">
      <rect>
       <x>4</x>
@@ -367,7 +367,7 @@ Sort</string>
    <zorder>buttonFunction</zorder>
    <zorder>labelSerarch</zorder>
    <zorder>labelPrevious</zorder>
-   <zorder>eventLogView</zorder>
+   <zorder>systemLogView</zorder>
    <zorder>buttonPageDn</zorder>
    <zorder>buttonPageUp</zorder>
    <zorder>labelPage</zorder>
@@ -380,7 +380,6 @@ Sort</string>
    <zorder>labelFilter3</zorder>
    <zorder>labelFilter2</zorder>
    <zorder>labelFilter4</zorder>
-   <zorder>maskFrame</zorder>
   </widget>
   <widget class="QFrame" name="maskFrame">
    <property name="geometry">
