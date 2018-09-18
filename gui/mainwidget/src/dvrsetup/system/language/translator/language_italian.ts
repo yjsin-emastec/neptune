@@ -3441,7 +3441,6 @@ AutoHide: </source>
     <name>QObject</name>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="691"/>
-        <location filename="../../../../search/systemlogpage.cpp" line="73"/>
         <source>EVENT TIME</source>
         <translation>TEMPO DELL EVENTO</translation>
     </message>
@@ -3461,8 +3460,17 @@ AutoHide: </source>
         <translation>NUM</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="75"/>
         <source>CONTENT</source>
+        <translation type="obsolete">CONTENUTO</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.cpp" line="84"/>
+        <source>TIME</source>
+        <translation>TEMPO</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
+        <source>CONTENTS</source>
         <translation>CONTENUTO</translation>
     </message>
 </context>
@@ -4267,19 +4275,19 @@ Una parte dei dati può essere cancellata.
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="123"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="135"/>
         <source>
 Descending</source>
         <translation>
 Discendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="307"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="319"/>
         <source>Ascending</source>
         <translation>Ascendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="311"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="323"/>
         <source>Descending</source>
         <translation>Discendente</translation>
     </message>

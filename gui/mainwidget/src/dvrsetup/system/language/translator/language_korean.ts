@@ -3676,7 +3676,6 @@ AutoHide: </source>
     <name>QObject</name>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="691"/>
-        <location filename="../../../../search/systemlogpage.cpp" line="73"/>
         <source>EVENT TIME</source>
         <translation>이벤트 발생시간</translation>
     </message>
@@ -3697,8 +3696,17 @@ AutoHide: </source>
         <translation>번호</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="75"/>
         <source>CONTENT</source>
+        <translation type="obsolete">내용</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.cpp" line="84"/>
+        <source>TIME</source>
+        <translation>시간</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
+        <source>CONTENTS</source>
         <translation>내용</translation>
     </message>
 </context>
@@ -4546,19 +4554,19 @@ some data will be erased from stprage.
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="123"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="135"/>
         <source>
 Descending</source>
         <translation>
 내림차순</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="307"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="319"/>
         <source>Ascending</source>
         <translation>오름차순</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="311"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="323"/>
         <source>Descending</source>
         <translation>내림차순</translation>
     </message>

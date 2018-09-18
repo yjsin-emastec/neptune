@@ -3417,7 +3417,6 @@ Aus</translation>
     <name>QObject</name>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="691"/>
-        <location filename="../../../../search/systemlogpage.cpp" line="73"/>
         <source>EVENT TIME</source>
         <translation>EVENT ZEIT</translation>
     </message>
@@ -3437,8 +3436,17 @@ Aus</translation>
         <translation>NUM</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="75"/>
         <source>CONTENT</source>
+        <translation type="obsolete">INHALT</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.cpp" line="84"/>
+        <source>TIME</source>
+        <translation>ZEIT</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
+        <source>CONTENTS</source>
         <translation>INHALT</translation>
     </message>
 </context>
@@ -4267,19 +4275,19 @@ Einige Daten werden aus dem Speicher gelöscht.</translation>
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="123"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="135"/>
         <source>
 Descending</source>
         <translation>
 Absteigend</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="307"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="319"/>
         <source>Ascending</source>
         <translation>Aufsteigend</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="311"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="323"/>
         <source>Descending</source>
         <translation>Absteigend</translation>
     </message>

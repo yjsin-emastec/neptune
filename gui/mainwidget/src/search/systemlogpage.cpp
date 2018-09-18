@@ -81,9 +81,9 @@ SystemLogPage::SystemLogPage(QWidget *parent)
     eventLogView->setStyleSheet("QHeaderView{font:27px;} QTreeView{font:26px;} QTreeView::item:selected{background:rgb(152,14,69);}");
 
     systemLogModel = new QStandardItemModel(0, 2, this);
-    systemLogModel->setHeaderData(0, Qt::Horizontal, QObject::tr("EVENT TIME"));
+    systemLogModel->setHeaderData(0, Qt::Horizontal, QObject::tr("TIME"));
     systemLogModel->setHeaderData(0, Qt::Horizontal, Qt::AlignCenter, Qt::TextAlignmentRole);
-    systemLogModel->setHeaderData(1, Qt::Horizontal, QObject::tr("CONTENT"));
+    systemLogModel->setHeaderData(1, Qt::Horizontal, QObject::tr("CONTENTS"));
     systemLogModel->setHeaderData(1, Qt::Horizontal, Qt::AlignCenter, Qt::TextAlignmentRole);
 
     proxyModel->setSourceModel(systemLogModel);
