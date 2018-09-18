@@ -684,6 +684,8 @@ void EventLogPage::createEventLogView()
     eventLogView->setModel(proxyModel);
     eventLogView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     eventLogView->setStyleSheet("QHeaderView{font:27px;} QTreeView{font:27px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+    eventLogView->header()->setMovable(false);
+    eventLogView->header()->setResizeMode(QHeaderView::Fixed);
 }
 void EventLogPage::createEventLogModel()
 {

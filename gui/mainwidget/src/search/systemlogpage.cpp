@@ -79,6 +79,8 @@ SystemLogPage::SystemLogPage(QWidget *parent)
     systemLogView->setModel(proxyModel);
     systemLogView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     systemLogView->setStyleSheet("QHeaderView{font:27px;} QTreeView{font:26px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+    systemLogView->header()->setMovable(false);
+    systemLogView->header()->setResizeMode(QHeaderView::Fixed);
 
     systemLogModel = new QStandardItemModel(0, 2, this);
     systemLogModel->setHeaderData(0, Qt::Horizontal, QObject::tr("TIME"));
