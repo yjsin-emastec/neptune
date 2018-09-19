@@ -128,9 +128,9 @@
    <widget class="QLabel" name="labelSearch">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>0</x>
       <y>323</y>
-      <width>201</width>
+      <width>1272</width>
       <height>61</height>
      </rect>
     </property>
@@ -144,6 +144,9 @@
     </property>
     <property name="text">
      <string>Search</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonLog">
