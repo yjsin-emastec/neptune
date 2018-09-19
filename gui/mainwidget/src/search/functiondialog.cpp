@@ -121,11 +121,10 @@ void FunctionDialog::onButtonDelete()
     //confirm message
     if(!msgBox)
     {
-        msgBox = new TextMessageDialog("Log Delete", tr("\t\t\t WARNING\n\n" "Do you want to delete all logs?"), 0, this);
+        msgBox = new TextMessageDialog("System Log Delete", tr("WARNING\n\n" "Do you want to delete all system logs?"), 0, this);
     }
     msgBox->setMsgAlignment(Qt::AlignCenter);
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
-
 
     if(msgBox->exec())
     {
@@ -138,7 +137,7 @@ void FunctionDialog::onButtonDelete()
         msgBox=NULL;
 
         //print result message
-        msgBox = new TextMessageDialog("Log Delete", tr("\t\tNotice\n\n" "All log was deleted."), 2, this);
+        msgBox = new TextMessageDialog("System Log Delete", tr("Notice\n\n" "All system logs were deleted."), 2, this);
         msgBox->setMsgAlignment(Qt::AlignCenter);
         msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 

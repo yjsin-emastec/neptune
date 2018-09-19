@@ -1720,19 +1720,35 @@ Record: </source>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.cpp" line="124"/>
+        <source>WARNING
+
+Do you want to delete all system logs?</source>
+        <translation>경고
+
+모든 시스템 로그를 삭제 하시겠습니까?</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.cpp" line="140"/>
+        <source>Notice
+
+All system logs were deleted.</source>
+        <translation>알림
+
+모든 시스템 로그가 삭제되었습니다.</translation>
+    </message>
+    <message>
         <source>			 WARNING
 
 Do you want to delete all logs?</source>
-        <translation>경고
+        <translation type="obsolete">경고
 
 모든 로그를 삭제 하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="141"/>
         <source>		Notice
 
 All log was deleted.</source>
-        <translation>알림
+        <translation type="obsolete">알림
 
 모든 로그가 삭제되었습니다.</translation>
     </message>
@@ -3675,22 +3691,22 @@ AutoHide: </source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="691"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="693"/>
         <source>EVENT TIME</source>
         <translation>이벤트 발생시간</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="693"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="695"/>
         <source>LOG TYPE</source>
         <translation>로그 종류</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="695"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="697"/>
         <source>DURATION</source>
         <translation>지속시간</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="697"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="699"/>
         <source>NUM</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>번호</translation>
@@ -3700,14 +3716,18 @@ AutoHide: </source>
         <translation type="obsolete">내용</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="84"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
         <source>TIME</source>
         <translation>시간</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="88"/>
+        <source>SYSTEM LOG LIST</source>
+        <translation>시스템 로그 항목</translation>
+    </message>
+    <message>
         <source>CONTENTS</source>
-        <translation>내용</translation>
+        <translation type="obsolete">내용</translation>
     </message>
 </context>
 <context>
@@ -3954,8 +3974,12 @@ AutoHide: </source>
     </message>
     <message>
         <location filename="../../../../search/searchdialog.ui" line="176"/>
+        <source>System Log</source>
+        <translation>시스템 로그</translation>
+    </message>
+    <message>
         <source>Log</source>
-        <translation>로그</translation>
+        <translation type="obsolete">로그</translation>
     </message>
     <message>
         <source>N/A</source>
@@ -4554,19 +4578,19 @@ some data will be erased from stprage.
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="135"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="137"/>
         <source>
 Descending</source>
         <translation>
 내림차순</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="319"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="321"/>
         <source>Ascending</source>
         <translation>오름차순</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="323"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="325"/>
         <source>Descending</source>
         <translation>내림차순</translation>
     </message>

@@ -173,7 +173,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Log</string>
+     <string>System Log</string>
     </property>
     <property name="flat">
      <bool>false</bool>

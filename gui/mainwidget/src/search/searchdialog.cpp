@@ -74,9 +74,9 @@ void SearchDialog::onButtonClose(int type)
 
     switch(type)
     {
-        case 0: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Normal Exit"); } break;
-        case 1: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Event Exit" ); } break;
-        case 2: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Log Exit" ); } break;
+        case 0: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Normal Exit"); }        break;
+        case 1: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Event Exit" ); }        break;
+        case 2: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "System Log Exit" ); }   break;
     }
 }
 void SearchDialog::onStartPlayback(void)
@@ -97,9 +97,9 @@ void SearchDialog::onHideCalendarPage(int type)
 
 	switch(type)
 	{
-		case 0: { buttonNormal->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Normal Exit"); } break;
-		case 1: { buttonEvent ->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Event Exit" ); } break;
-		case 2: { buttonLog   ->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Log Exit"   ); } break;
+        case 0: { buttonNormal->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Normal Exit"); }      break;
+        case 1: { buttonEvent ->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Event Exit" ); }      break;
+        case 2: { buttonLog   ->setFocus(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "System Log Exit" ); } break;
 	}
 }
 void SearchDialog::onEvent(void)
@@ -139,7 +139,7 @@ void SearchDialog::onLog(void)
     buttonLog->hide();
     labelSearch->hide();
 
-    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Log Enter" );
+    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "System Log Enter" );
     systemLogPage->resetLog();
     stackedLayout->setCurrentWidget(systemLogPage);
     systemLogPage->show();

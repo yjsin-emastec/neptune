@@ -1466,16 +1466,16 @@ Record: Off/On</source>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.cpp" line="124"/>
-        <source>			 WARNING
+        <source>WARNING
 
-Do you want to delete all logs?</source>
+Do you want to delete all system logs?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="141"/>
-        <source>		Notice
+        <location filename="../../../../search/functiondialog.cpp" line="140"/>
+        <source>Notice
 
-All log was deleted.</source>
+All system logs were deleted.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3170,33 +3170,33 @@ AutoHide: </source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="691"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="693"/>
         <source>EVENT TIME</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="693"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="695"/>
         <source>LOG TYPE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="695"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="697"/>
         <source>DURATION</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="697"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="699"/>
         <source>NUM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="84"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
         <source>TIME</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
-        <source>CONTENTS</source>
+        <location filename="../../../../search/systemlogpage.cpp" line="88"/>
+        <source>SYSTEM LOG LIST</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3371,7 +3371,7 @@ AutoHide: </source>
     </message>
     <message>
         <location filename="../../../../search/searchdialog.ui" line="176"/>
-        <source>Log</source>
+        <source>System Log</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3917,18 +3917,18 @@ some data will be erased from storage.
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="135"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="137"/>
         <source>
 Descending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="319"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="321"/>
         <source>Ascending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="323"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="325"/>
         <source>Descending</source>
         <translation type="unfinished"></translation>
     </message>

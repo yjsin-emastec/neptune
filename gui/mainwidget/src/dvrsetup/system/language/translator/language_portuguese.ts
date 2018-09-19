@@ -1547,19 +1547,35 @@ Desligado/Ligado</translation>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.cpp" line="124"/>
+        <source>WARNING
+
+Do you want to delete all system logs?</source>
+        <translation>ATENÇÃO
+
+Você deseja excluir todos os registros do sistema?</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.cpp" line="140"/>
+        <source>Notice
+
+All system logs were deleted.</source>
+        <translation>AVISO PRÉVIO
+
+Todos os logs do sistema foram excluídos.</translation>
+    </message>
+    <message>
         <source>			 WARNING
 
 Do you want to delete all logs?</source>
-        <translation>ATENÇÃO
+        <translation type="obsolete">ATENÇÃO
 
 Você quer apagar todos os registros?</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="141"/>
         <source>		Notice
 
 All log was deleted.</source>
-        <translation>AVISO PRÉVIO
+        <translation type="obsolete">AVISO PRÉVIO
 
 Todo o log foi excluído.</translation>
     </message>
@@ -3348,22 +3364,22 @@ Desligado</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="691"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="693"/>
         <source>EVENT TIME</source>
         <translation>HORA DO EVENTO</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="693"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="695"/>
         <source>LOG TYPE</source>
         <translation>LOG TIPO</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="695"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="697"/>
         <source>DURATION</source>
         <translation>DURAÇÃO</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="697"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="699"/>
         <source>NUM</source>
         <translation>NUM</translation>
     </message>
@@ -3372,14 +3388,18 @@ Desligado</translation>
         <translation type="obsolete">CONTEÚDO</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="84"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
         <source>TIME</source>
         <translation>HORA</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="88"/>
+        <source>SYSTEM LOG LIST</source>
+        <translation>SISTEMA REGISTRO LISTA</translation>
+    </message>
+    <message>
         <source>CONTENTS</source>
-        <translation>CONTEÚDO</translation>
+        <translation type="obsolete">CONTEÚDO</translation>
     </message>
 </context>
 <context>
@@ -3626,8 +3646,13 @@ Desligado</translation>
     </message>
     <message>
         <location filename="../../../../search/searchdialog.ui" line="176"/>
+        <source>System Log</source>
+        <translation>Sistema
+Registro</translation>
+    </message>
+    <message>
         <source>Log</source>
-        <translation>Registro</translation>
+        <translation type="obsolete">Registro</translation>
     </message>
     <message>
         <source>N/A</source>
@@ -4186,19 +4211,19 @@ alguns dados serão apagados do armazenamento.</translation>
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="135"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="137"/>
         <source>
 Descending</source>
         <translation>
 Descendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="319"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="321"/>
         <source>Ascending</source>
         <translation>Ascendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="323"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="325"/>
         <source>Descending</source>
         <translation>Descendente</translation>
     </message>

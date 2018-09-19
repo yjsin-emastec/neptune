@@ -1536,19 +1536,35 @@ Record: Off/On</source>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.cpp" line="124"/>
+        <source>WARNING
+
+Do you want to delete all system logs?</source>
+        <translation>警告
+
+すべてのシステムログをさくじょしますか？</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.cpp" line="140"/>
+        <source>Notice
+
+All system logs were deleted.</source>
+        <translation>通知
+
+すべてのシステムログが削除されました。</translation>
+    </message>
+    <message>
         <source>			 WARNING
 
 Do you want to delete all logs?</source>
-        <translation>警告
+        <translation type="obsolete">警告
 
 すべてのログをさくじょしますか？</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="141"/>
         <source>		Notice
 
 All log was deleted.</source>
-        <translation>通知
+        <translation type="obsolete">通知
 
 ログ全体がさくじょされました。</translation>
     </message>
@@ -3328,22 +3344,22 @@ AutoHide: </source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="691"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="693"/>
         <source>EVENT TIME</source>
         <translation>イベントじかん</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="693"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="695"/>
         <source>LOG TYPE</source>
         <translation>ログタイプ</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="695"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="697"/>
         <source>DURATION</source>
         <translation>きかん</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="697"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="699"/>
         <source>NUM</source>
         <translation>ばんごう</translation>
     </message>
@@ -3352,14 +3368,18 @@ AutoHide: </source>
         <translation type="obsolete">ないよう</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="84"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
         <source>TIME</source>
         <translation>じかん</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="88"/>
+        <source>SYSTEM LOG LIST</source>
+        <translation>システム ログ リスト</translation>
+    </message>
+    <message>
         <source>CONTENTS</source>
-        <translation>ないよう</translation>
+        <translation type="obsolete">ないよう</translation>
     </message>
 </context>
 <context>
@@ -3604,8 +3624,12 @@ AutoHide: </source>
     </message>
     <message>
         <location filename="../../../../search/searchdialog.ui" line="176"/>
+        <source>System Log</source>
+        <translation>システム ログ</translation>
+    </message>
+    <message>
         <source>Log</source>
-        <translation>ログ</translation>
+        <translation type="obsolete">ログ</translation>
     </message>
     <message>
         <source>N/A</source>
@@ -4162,19 +4186,19 @@ some data will be erased from storage.
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="135"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="137"/>
         <source>
 Descending</source>
         <translation>
 かこうせい</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="319"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="321"/>
         <source>Ascending</source>
         <translation>しょうじゅん</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="323"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="325"/>
         <source>Descending</source>
         <translation>かこうせい</translation>
     </message>
