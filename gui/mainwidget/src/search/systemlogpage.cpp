@@ -267,7 +267,14 @@ void SystemLogPage::onButtonSearch()
             memcpy(pQuery->end,   startTime.toStdString().c_str(),  startTime.size());
         }
         memcpy(pQuery->filter, logFilter.toStdString().c_str(), logFilter.size());
-        memcpy(pQuery->sort,   logSort.toStdString().c_str(),   logSort.size());
+        if(logSort.compare(SYSTEM_LOG_ASC) == 0)
+        {
+            memcpy(pQuery->sort, SYSTEM_LOG_ASC, strlen(SYSTEM_LOG_ASC));
+        }
+        else
+        {
+            memcpy(pQuery->sort, SYSTEM_LOG_DESC, strlen(SYSTEM_LOG_DESC));
+        }
 
         pQuery->offset = 0;
         pQuery->nLog  = SYSTEM_LOG_COUNT_PER_PAGE;
@@ -316,7 +323,7 @@ void SystemLogPage::onButtonFunction()
         logFilter=functionDialog->getLogFilter();
         logSort=functionDialog->getLogSort();
 
-        if(logSort.compare(SYSTEM_LOG_DESC))
+        if(logSort.compare(SYSTEM_LOG_ASC) == 0)
         {
             labelFilter2->setText(QString("%1\n%2").arg(logFilter).arg(tr("Ascending")));
         }
@@ -368,7 +375,14 @@ void SystemLogPage::onButtonPageDn()
                 memcpy(pQuery->end,   startTime.toStdString().c_str(), startTime.size());
             }
             memcpy(pQuery->filter, logFilter.toStdString().c_str(), logFilter.size());
-            memcpy(pQuery->sort,   logSort.toStdString().c_str(),   logSort.size());
+            if(logSort.compare(SYSTEM_LOG_ASC) == 0)
+            {
+                memcpy(pQuery->sort, SYSTEM_LOG_ASC, strlen(SYSTEM_LOG_ASC));
+            }
+            else
+            {
+                memcpy(pQuery->sort, SYSTEM_LOG_DESC, strlen(SYSTEM_LOG_DESC));
+            }
 
             pQuery->offset = logPageNow * SYSTEM_LOG_COUNT_PER_PAGE;
             pQuery->nLog   = SYSTEM_LOG_COUNT_PER_PAGE;
@@ -422,7 +436,14 @@ void SystemLogPage::onButtonPageUp()
                 memcpy(pQuery->end,   startTime.toStdString().c_str(), startTime.size());
             }
             memcpy(pQuery->filter, logFilter.toStdString().c_str(), logFilter.size());
-            memcpy(pQuery->sort,   logSort.toStdString().c_str(),   logSort.size());
+            if(logSort.compare(SYSTEM_LOG_ASC) == 0)
+            {
+                memcpy(pQuery->sort, SYSTEM_LOG_ASC, strlen(SYSTEM_LOG_ASC));
+            }
+            else
+            {
+                memcpy(pQuery->sort, SYSTEM_LOG_DESC, strlen(SYSTEM_LOG_DESC));
+            }
 
             pQuery->offset   = logPageNow * SYSTEM_LOG_COUNT_PER_PAGE;
 
@@ -475,7 +496,14 @@ void SystemLogPage::updateLogCount()
             memcpy(pQuery->end,   startTime.toStdString().c_str(), startTime.size());
         }
         memcpy(pQuery->filter, logFilter.toStdString().c_str(), logFilter.size());
-        memcpy(pQuery->sort,   logSort.toStdString().c_str(),   logSort.size());
+        if(logSort.compare(SYSTEM_LOG_ASC) == 0)
+        {
+            memcpy(pQuery->sort, SYSTEM_LOG_ASC, strlen(SYSTEM_LOG_ASC));
+        }
+        else
+        {
+            memcpy(pQuery->sort, SYSTEM_LOG_DESC, strlen(SYSTEM_LOG_DESC));
+        }
 
         pQuery->offset=0;
         pQuery->nLog=SYSTEM_LOG_COUNT_PER_PAGE;

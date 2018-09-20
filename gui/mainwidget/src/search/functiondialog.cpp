@@ -81,7 +81,7 @@ void FunctionDialog::setLogSort(QString sort)
 {
     logSort=sort;
 
-    if(logSort.compare(SYSTEM_LOG_DESC))
+    if( logSort.compare(SYSTEM_LOG_ASC) == 0 )
     {
         buttonSort->setText(QString("%1\n%2").arg(tr("Sort Order")).arg(tr("Ascending")));
     }
@@ -93,8 +93,8 @@ void FunctionDialog::setLogSort(QString sort)
 
 void FunctionDialog::onButtonSort()
 {
-    if( logSort.compare(SYSTEM_LOG_DESC) )  { setLogSort(SYSTEM_LOG_DESC); }
-    else                                    { setLogSort(SYSTEM_LOG_ASC);  }
+    if( logSort.compare(SYSTEM_LOG_ASC) == 0 )  { setLogSort(SYSTEM_LOG_DESC); }
+    else                                        { setLogSort(SYSTEM_LOG_ASC);  }
 }
 
 void FunctionDialog::onButtonBackup()
