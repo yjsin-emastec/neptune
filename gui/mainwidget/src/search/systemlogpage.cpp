@@ -317,9 +317,9 @@ void SystemLogPage::onButtonFunction()
     functionDialog->setLogSort(logSort);
     functionDialog->buttonFilter->setFocus();
 
-    if(functionDialog->exec())
+    if(functionDialog->exec() == 1)
     {
-        //when click OK
+        //when click Close
         logFilter=functionDialog->getLogFilter();
         logSort=functionDialog->getLogSort();
 

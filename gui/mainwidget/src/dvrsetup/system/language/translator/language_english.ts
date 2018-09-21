@@ -1422,60 +1422,48 @@ Record: Off/On</source>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.ui" line="41"/>
-        <source>Cancel</source>
+        <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.ui" line="54"/>
-        <source>OK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../search/functiondialog.ui" line="67"/>
-        <location filename="../../../../search/functiondialog.cpp" line="73"/>
-        <location filename="../../../../search/functiondialog.cpp" line="77"/>
+        <location filename="../../../../search/functiondialog.cpp" line="72"/>
+        <location filename="../../../../search/functiondialog.cpp" line="76"/>
         <source>Filter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="96"/>
+        <location filename="../../../../search/functiondialog.ui" line="83"/>
         <source>N/A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="109"/>
-        <source>Delete</source>
+        <location filename="../../../../search/functiondialog.ui" line="96"/>
+        <source>Delete All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="80"/>
-        <location filename="../../../../search/functiondialog.cpp" line="86"/>
-        <location filename="../../../../search/functiondialog.cpp" line="90"/>
+        <location filename="../../../../search/functiondialog.ui" line="67"/>
+        <location filename="../../../../search/functiondialog.cpp" line="85"/>
+        <location filename="../../../../search/functiondialog.cpp" line="89"/>
         <source>Sort Order</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="86"/>
+        <location filename="../../../../search/functiondialog.cpp" line="85"/>
         <source>Ascending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="90"/>
+        <location filename="../../../../search/functiondialog.cpp" line="89"/>
         <source>Descending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="124"/>
+        <location filename="../../../../search/functiondialog.cpp" line="123"/>
         <source>WARNING
 
 Do you want to delete all system logs?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../../search/functiondialog.cpp" line="140"/>
-        <source>Notice
-
-All system logs were deleted.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3370,7 +3358,7 @@ AutoHide: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="176"/>
+        <location filename="../../../../search/searchdialog.ui" line="179"/>
         <source>System Log</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3923,12 +3911,12 @@ Descending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="321"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="328"/>
         <source>Ascending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="325"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="332"/>
         <source>Descending</source>
         <translation type="unfinished"></translation>
     </message>

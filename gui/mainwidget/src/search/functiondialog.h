@@ -30,8 +30,7 @@ private slots:
     void onButtonSort();
     void onButtonBackup();
     void onButtonDelete();
-    void onButtonOk();
-    void onButtonCancel();
+    void onButtonClose();
 
 private:
     UiKeyboardDialog *keyboard;

@@ -28,7 +28,7 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPushButton" name="buttonCancel">
+   <widget class="QPushButton" name="buttonClose">
     <property name="geometry">
      <rect>
       <x>735</x>
@@ -38,20 +38,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Cancel</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonOk">
-    <property name="geometry">
-     <rect>
-      <x>525</x>
-      <y>495</y>
-      <width>200</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>OK</string>
+     <string>Close</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonFilter">
@@ -106,7 +93,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Delete</string>
+     <string>Delete All</string>
     </property>
    </widget>
   </widget>

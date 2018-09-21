@@ -167,6 +167,7 @@ void LanguageDialog::onButtonLanguageUp()
      * 6. check the dvrsetup/setup/systempage. font size was modified.
      * 7. check the display/videooutput/videooutputdialog. Qbutton size was modified.
      * 8. check the search/systemlogpage. QLabel size was modified.
+     * 9. check the search/functiondialog. Qbutton size was modified.
      */
 }
 void LanguageDialog::onButtonLanguageDown()

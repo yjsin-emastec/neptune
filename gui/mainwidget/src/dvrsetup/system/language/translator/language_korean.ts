@@ -1665,35 +1665,42 @@ Record: </source>
         <translation>대화상자</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="41"/>
         <source>Cancel</source>
-        <translation>취소</translation>
+        <translation type="obsolete">취소</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="obsolete">확인</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="41"/>
+        <source>Close</source>
+        <translation>닫기</translation>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.ui" line="54"/>
-        <source>OK</source>
-        <translation>확인</translation>
-    </message>
-    <message>
-        <location filename="../../../../search/functiondialog.ui" line="67"/>
-        <location filename="../../../../search/functiondialog.cpp" line="73"/>
-        <location filename="../../../../search/functiondialog.cpp" line="77"/>
+        <location filename="../../../../search/functiondialog.cpp" line="72"/>
+        <location filename="../../../../search/functiondialog.cpp" line="76"/>
         <source>Filter</source>
         <translation>필터</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="96"/>
+        <location filename="../../../../search/functiondialog.ui" line="83"/>
         <source>N/A</source>
         <translation>N/A</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="96"/>
+        <source>Delete All</source>
+        <translation>모두 삭제</translation>
     </message>
     <message>
         <source>Backup</source>
         <translation type="obsolete">백업</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="109"/>
         <source>Delete</source>
-        <translation>삭제</translation>
+        <translation type="obsolete">삭제</translation>
     </message>
     <message>
         <source>%1
@@ -1702,24 +1709,24 @@ Record: </source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="80"/>
-        <location filename="../../../../search/functiondialog.cpp" line="86"/>
-        <location filename="../../../../search/functiondialog.cpp" line="90"/>
+        <location filename="../../../../search/functiondialog.ui" line="67"/>
+        <location filename="../../../../search/functiondialog.cpp" line="85"/>
+        <location filename="../../../../search/functiondialog.cpp" line="89"/>
         <source>Sort Order</source>
         <translation>정렬</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="86"/>
+        <location filename="../../../../search/functiondialog.cpp" line="85"/>
         <source>Ascending</source>
         <translation>오름차순</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="90"/>
+        <location filename="../../../../search/functiondialog.cpp" line="89"/>
         <source>Descending</source>
         <translation>내림차순</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="124"/>
+        <location filename="../../../../search/functiondialog.cpp" line="123"/>
         <source>WARNING
 
 Do you want to delete all system logs?</source>
@@ -1728,11 +1735,10 @@ Do you want to delete all system logs?</source>
 모든 시스템 로그를 삭제 하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="140"/>
         <source>Notice
 
 All system logs were deleted.</source>
-        <translation>알림
+        <translation type="obsolete">알림
 
 모든 시스템 로그가 삭제되었습니다.</translation>
     </message>
@@ -3973,7 +3979,7 @@ AutoHide: </source>
         <translation>검색</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="176"/>
+        <location filename="../../../../search/searchdialog.ui" line="179"/>
         <source>System Log</source>
         <translation>시스템 로그</translation>
     </message>
@@ -4585,12 +4591,12 @@ Descending</source>
 내림차순</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="321"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="328"/>
         <source>Ascending</source>
         <translation>오름차순</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="325"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="332"/>
         <source>Descending</source>
         <translation>내림차순</translation>
     </message>

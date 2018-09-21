@@ -1481,35 +1481,42 @@ Record: Off/On</source>
         <translation>ダイアログ</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="41"/>
         <source>Cancel</source>
+        <translation type="obsolete">しめる</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="obsolete">確認</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="41"/>
+        <source>Close</source>
         <translation>しめる</translation>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.ui" line="54"/>
-        <source>OK</source>
-        <translation>確認</translation>
-    </message>
-    <message>
-        <location filename="../../../../search/functiondialog.ui" line="67"/>
-        <location filename="../../../../search/functiondialog.cpp" line="73"/>
-        <location filename="../../../../search/functiondialog.cpp" line="77"/>
+        <location filename="../../../../search/functiondialog.cpp" line="72"/>
+        <location filename="../../../../search/functiondialog.cpp" line="76"/>
         <source>Filter</source>
         <translation>フィルタ</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="96"/>
+        <location filename="../../../../search/functiondialog.ui" line="83"/>
         <source>N/A</source>
         <translation>N/A</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/functiondialog.ui" line="96"/>
+        <source>Delete All</source>
+        <translation>すべてさくじょ</translation>
     </message>
     <message>
         <source>Backup</source>
         <translation type="obsolete">バックアップ</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="109"/>
         <source>Delete</source>
-        <translation>さくじょ</translation>
+        <translation type="obsolete">さくじょ</translation>
     </message>
     <message>
         <source>%1
@@ -1518,24 +1525,24 @@ Record: Off/On</source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.ui" line="80"/>
-        <location filename="../../../../search/functiondialog.cpp" line="86"/>
-        <location filename="../../../../search/functiondialog.cpp" line="90"/>
+        <location filename="../../../../search/functiondialog.ui" line="67"/>
+        <location filename="../../../../search/functiondialog.cpp" line="85"/>
+        <location filename="../../../../search/functiondialog.cpp" line="89"/>
         <source>Sort Order</source>
         <translation>ソート</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="86"/>
+        <location filename="../../../../search/functiondialog.cpp" line="85"/>
         <source>Ascending</source>
         <translation>しょうじゅん</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="90"/>
+        <location filename="../../../../search/functiondialog.cpp" line="89"/>
         <source>Descending</source>
         <translation>かこうせい</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="124"/>
+        <location filename="../../../../search/functiondialog.cpp" line="123"/>
         <source>WARNING
 
 Do you want to delete all system logs?</source>
@@ -1544,11 +1551,10 @@ Do you want to delete all system logs?</source>
 すべてのシステムログをさくじょしますか？</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="140"/>
         <source>Notice
 
 All system logs were deleted.</source>
-        <translation>通知
+        <translation type="obsolete">通知
 
 すべてのシステムログが削除されました。</translation>
     </message>
@@ -3623,7 +3629,7 @@ AutoHide: </source>
         <translation>けんさく</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="176"/>
+        <location filename="../../../../search/searchdialog.ui" line="179"/>
         <source>System Log</source>
         <translation>システム ログ</translation>
     </message>
@@ -4193,12 +4199,12 @@ Descending</source>
 かこうせい</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="321"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="328"/>
         <source>Ascending</source>
         <translation>しょうじゅん</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="325"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="332"/>
         <source>Descending</source>
         <translation>かこうせい</translation>
     </message>

@@ -16,12 +16,20 @@ FunctionDialog::FunctionDialog(QWidget *parent)
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
     setAutoFillBackground(true);
 
+#if 1 //yjsin [18/09/21] if text is long, change button size
+
+    if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+    {
+        buttonClose->setGeometry(705,495,230,91);
+    }
+#endif
+
+
     connect(buttonFilter, SIGNAL(clicked()), this, SLOT(onButtonFilter()));
     connect(buttonSort, SIGNAL(clicked()), this, SLOT(onButtonSort()));
     connect(buttonBackup, SIGNAL(clicked()), this, SLOT(onButtonBackup()));
     connect(buttonDelete, SIGNAL(clicked()), this, SLOT(onButtonDelete()));
-    connect(buttonOk, SIGNAL(clicked()), this, SLOT(onButtonOk()));
-    connect(buttonCancel, SIGNAL(clicked()), this, SLOT(onButtonCancel()));
+    connect(buttonClose, SIGNAL(clicked()), this, SLOT(onButtonClose()));
 
     logSort="";
     logFilter="";
@@ -132,16 +140,6 @@ void FunctionDialog::onButtonDelete()
         SYSTEM_LOG_QUERY_S *pQuery = g_new0(SYSTEM_LOG_QUERY_S, 1);
         pQuery->type = SYSTEM_LOG_TYPE_EVENT;
         event_send(QUEUE_QT_CORE, QUEUE_SYSTEM_LOG, SYSTEM_LOG_DELETE_ALL, pQuery, g_free, NULL);
-
-        delete msgBox;
-        msgBox=NULL;
-
-        //print result message
-        msgBox = new TextMessageDialog("System Log Delete", tr("Notice\n\n" "All system logs were deleted."), 2, this);
-        msgBox->setMsgAlignment(Qt::AlignCenter);
-        msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
-
-        msgBox->exec();
     }
 
     if(msgBox)
@@ -151,113 +149,33 @@ void FunctionDialog::onButtonDelete()
     }
 }
 
-void FunctionDialog::onButtonOk()
+void FunctionDialog::onButtonClose()
 {
-    accept();
+    done(1);
 }
 
-void FunctionDialog::onButtonCancel()
-{
-    reject();
-}
 
-#if 0   // yjsin [18/08/12] disable backupbutton
 void FunctionDialog::KeyPressEvent(int key)
 {
     switch(key)
     {
         case Qt::Key_Up:
         {
-            if(buttonFilter->hasFocus())        { buttonBackup->setFocus(); }
-            else if(buttonSort->hasFocus())     { buttonCancel->setFocus(); }
+            if(buttonFilter->hasFocus())        { buttonFilter->setFocus(); }
+            else if(buttonSort->hasFocus())     { buttonClose->setFocus();  }
             else if(buttonBackup->hasFocus())   { buttonFilter->setFocus(); }
             else if(buttonDelete->hasFocus())   { buttonSort->setFocus();   }
-            else if(buttonOk->hasFocus())       { buttonDelete->setFocus(); }
-            else if(buttonCancel->hasFocus())   { buttonDelete->setFocus(); }
+            else if(buttonClose->hasFocus())    { buttonDelete->setFocus(); }
 
             break;
         }
         case Qt::Key_Down:
         {
-            if(buttonFilter->hasFocus())        { buttonBackup->setFocus(); }
+            if(buttonFilter->hasFocus())        { buttonFilter->setFocus(); }
             else if(buttonSort->hasFocus())     { buttonDelete->setFocus(); }
             else if(buttonBackup->hasFocus())   { buttonFilter->setFocus(); }
-            else if(buttonDelete->hasFocus())   { buttonCancel->setFocus(); }
-            else if(buttonOk->hasFocus())       { buttonSort->setFocus();   }
-            else if(buttonCancel->hasFocus())   { buttonSort->setFocus();   }
-
-            break;
-        }
-        case Qt::Key_Left:
-        {
-            if(buttonFilter->hasFocus())        { buttonSort->setFocus();   }
-            else if(buttonSort->hasFocus())     { buttonFilter->setFocus(); }
-            else if(buttonBackup->hasFocus())   { buttonDelete->setFocus(); }
-            else if(buttonDelete->hasFocus())   { buttonBackup->setFocus(); }
-            else if(buttonOk->hasFocus())       { buttonCancel->setFocus(); }
-            else if(buttonCancel->hasFocus())   { buttonOk->setFocus();     }
-
-            break;
-        }
-        case Qt::Key_Right:
-        {
-            if(buttonFilter->hasFocus())        { buttonSort->setFocus();   }
-            else if(buttonSort->hasFocus())     { buttonFilter->setFocus(); }
-            else if(buttonBackup->hasFocus())   { buttonDelete->setFocus(); }
-            else if(buttonDelete->hasFocus())   { buttonBackup->setFocus(); }
-            else if(buttonOk->hasFocus())       { buttonCancel->setFocus(); }
-            else if(buttonCancel->hasFocus())   { buttonOk->setFocus();     }
-
-            break;
-        }
-        case Qt::Key_Enter:
-        {
-            if(buttonFilter->hasFocus())        { onButtonFilter();         }
-            else if(buttonSort->hasFocus())     { onButtonSort();           }
-            else if(buttonBackup->hasFocus())   { onButtonBackup();         }
-            else if(buttonDelete->hasFocus())   { onButtonDelete();         }
-            else if(buttonOk->hasFocus())       { onButtonOk();             }
-            else if(buttonCancel->hasFocus())   { onButtonCancel();         }
-
-            break;
-        }
-        case Qt::Key_Escape:
-        {
-            onButtonCancel();
-
-            break;
-        }
-        default:
-        {
-            return;
-        }
-    }
-    return;
-}
-#else
-void FunctionDialog::KeyPressEvent(int key)
-{
-    switch(key)
-    {
-        case Qt::Key_Up:
-        {
-            if(buttonFilter->hasFocus())        { buttonOk->setFocus(); }
-            else if(buttonSort->hasFocus())     { buttonCancel->setFocus(); }
-            else if(buttonBackup->hasFocus())   { buttonFilter->setFocus(); }
-            else if(buttonDelete->hasFocus())   { buttonSort->setFocus();   }
-            else if(buttonOk->hasFocus())       { buttonDelete->setFocus(); }
-            else if(buttonCancel->hasFocus())   { buttonDelete->setFocus(); }
-
-            break;
-        }
-        case Qt::Key_Down:
-        {
-            if(buttonFilter->hasFocus())        { buttonOk->setFocus(); }
-            else if(buttonSort->hasFocus())     { buttonDelete->setFocus(); }
-            else if(buttonBackup->hasFocus())   { buttonFilter->setFocus(); }
-            else if(buttonDelete->hasFocus())   { buttonCancel->setFocus(); }
-            else if(buttonOk->hasFocus())       { buttonSort->setFocus();   }
-            else if(buttonCancel->hasFocus())   { buttonSort->setFocus();   }
+            else if(buttonDelete->hasFocus())   { buttonClose->setFocus();  }
+            else if(buttonClose->hasFocus())    { buttonSort->setFocus();   }
 
             break;
         }
@@ -267,8 +185,7 @@ void FunctionDialog::KeyPressEvent(int key)
             else if(buttonSort->hasFocus())     { buttonFilter->setFocus(); }
             else if(buttonBackup->hasFocus())   { buttonDelete->setFocus(); }
             else if(buttonDelete->hasFocus())   { buttonDelete->setFocus(); }
-            else if(buttonOk->hasFocus())       { buttonCancel->setFocus(); }
-            else if(buttonCancel->hasFocus())   { buttonOk->setFocus();     }
+            else if(buttonClose->hasFocus())    { buttonClose->setFocus();  }
 
             break;
         }
@@ -278,25 +195,23 @@ void FunctionDialog::KeyPressEvent(int key)
             else if(buttonSort->hasFocus())     { buttonFilter->setFocus(); }
             else if(buttonBackup->hasFocus())   { buttonDelete->setFocus(); }
             else if(buttonDelete->hasFocus())   { buttonDelete->setFocus(); }
-            else if(buttonOk->hasFocus())       { buttonCancel->setFocus(); }
-            else if(buttonCancel->hasFocus())   { buttonOk->setFocus();     }
+            else if(buttonClose->hasFocus())    { buttonClose->setFocus();  }
 
             break;
         }
         case Qt::Key_Enter:
         {
-            if(buttonFilter->hasFocus())        { onButtonFilter();         }
-            else if(buttonSort->hasFocus())     { onButtonSort();           }
-            else if(buttonBackup->hasFocus())   { onButtonBackup();         }
-            else if(buttonDelete->hasFocus())   { onButtonDelete();         }
-            else if(buttonOk->hasFocus())       { onButtonOk();             }
-            else if(buttonCancel->hasFocus())   { onButtonCancel();         }
+            if(buttonFilter->hasFocus())        { onButtonFilter(); }
+            else if(buttonSort->hasFocus())     { onButtonSort();   }
+            else if(buttonBackup->hasFocus())   { onButtonBackup(); }
+            else if(buttonDelete->hasFocus())   { onButtonDelete(); }
+            else if(buttonClose->hasFocus())    { onButtonClose();  }
 
             break;
         }
         case Qt::Key_Escape:
         {
-            onButtonCancel();
+            onButtonClose();
 
             break;
         }
@@ -307,4 +222,4 @@ void FunctionDialog::KeyPressEvent(int key)
     }
     return;
 }
-#endif
+
