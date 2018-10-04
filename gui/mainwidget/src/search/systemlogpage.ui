@@ -86,7 +86,8 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>88888/88888</string>
+     <string>99999
+88888/88888</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

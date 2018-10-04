@@ -133,7 +133,7 @@ void SystemLogPage::resetLog()
     isSearch=true;
     isKeyLock=false;
 
-    labelPage->setText("(0/0)");
+    labelPage->setText("0\n(0/0)");
     labelFilter2->setText(tr("\nDescending"));
 
     buttonPageDn->setEnabled(false);
@@ -230,11 +230,11 @@ void SystemLogPage::onQueryLogCount()
     //display page count
     if(logCount > 0)
     {
-        labelPage->setText(QString("(%1/%2)").arg(logPageNow+1).arg(logPageNum+1));
+        labelPage->setText(QString("%1\n(%2/%3)").arg(logCount).arg(logPageNow+1).arg(logPageNum+1));
     }
     else
     {
-        labelPage->setText(QString("(%1/%2)").arg(logPageNow).arg(logPageNum));
+        labelPage->setText(QString("%1\n(%2/%3)").arg(logCount).arg(logPageNow).arg(logPageNum));
     }
 }
 void SystemLogPage::onQueryLogData()
