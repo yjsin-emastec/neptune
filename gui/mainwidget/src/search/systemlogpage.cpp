@@ -163,38 +163,19 @@ void SystemLogPage::onQueryLogCount()
     {
         //print log
         systemLogModel->removeRows(0, systemLogModel->rowCount());
-#if 1 // GyverJeong [18/10/02]
-        if(logSort.compare(SYSTEM_LOG_ASC) == 0)
+
+        for(ii = 0; ii < pageCount; ii++)
         {
-            for(ii = 0; ii < pageCount; ii++)
+            if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
             {
-                if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
-                {
-                    QString logTime=changeTimeformat(gSystemLog[ii].time);
-                    addEventLog(QString("%1 %2").arg(logTime).arg(ampmStatus).toStdString().c_str(), gSystemLog[ii].log);
-                }
-                else
-                {
-                    addEventLog(QString(gSystemLog[ii].time), QString(gSystemLog[ii].log));
-                }
+                QString logTime=changeTimeformat(gSystemLog[ii].time);
+                addEventLog(QString("%1 %2").arg(logTime).arg(ampmStatus).toStdString().c_str(), gSystemLog[ii].log);
+            }
+            else
+            {
+                addEventLog(QString(gSystemLog[ii].time), QString(gSystemLog[ii].log));
             }
         }
-        else
-        {
-            for(ii = pageCount-1; ii >= 0; ii--)
-            {
-                if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
-                {
-                    QString logTime=changeTimeformat(gSystemLog[ii].time);
-                    addEventLog(QString("%1 %2").arg(logTime).arg(ampmStatus).toStdString().c_str(), gSystemLog[ii].log);
-                }
-                else
-                {
-                    addEventLog(QString(gSystemLog[ii].time), QString(gSystemLog[ii].log));
-                }
-            }
-        }
-#endif
     }
 #else
     //print log
@@ -243,38 +224,19 @@ void SystemLogPage::onQueryLogData()
     pageCount=gSystemLog[0].count;
 
     systemLogModel->removeRows(0, systemLogModel->rowCount());
-#if 1 // GyverJeong [18/10/02]
-    if(logSort.compare(SYSTEM_LOG_ASC) == 0)
+
+    for(ii = 0; ii < pageCount; ii++)
     {
-        for(ii = 0; ii < pageCount; ii++)
+        if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
         {
-            if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
-            {
-                QString logTime=changeTimeformat(gSystemLog[ii].time);
-                addEventLog(QString("%1 %2").arg(logTime).arg(ampmStatus).toStdString().c_str(), gSystemLog[ii].log);
-            }
-            else
-            {
-                addEventLog(QString(gSystemLog[ii].time), QString(gSystemLog[ii].log));
-            }
+            QString logTime=changeTimeformat(gSystemLog[ii].time);
+            addEventLog(QString("%1 %2").arg(logTime).arg(ampmStatus).toStdString().c_str(), gSystemLog[ii].log);
+        }
+        else
+        {
+            addEventLog(QString(gSystemLog[ii].time), QString(gSystemLog[ii].log));
         }
     }
-    else
-    {
-        for(ii = pageCount-1; ii >= 0; ii--)
-        {
-            if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
-            {
-                QString logTime=changeTimeformat(gSystemLog[ii].time);
-                addEventLog(QString("%1 %2").arg(logTime).arg(ampmStatus).toStdString().c_str(), gSystemLog[ii].log);
-            }
-            else
-            {
-                addEventLog(QString(gSystemLog[ii].time), QString(gSystemLog[ii].log));
-            }
-        }
-    }
-#endif
 }
 
 void SystemLogPage::onButtonSearch()
