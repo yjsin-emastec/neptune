@@ -208,6 +208,9 @@ void MainWidget::initializeSystem()
                                 tr("FORMAT or MOUNT ERROR"),
                                 tr(ss.toStdString().c_str()),
                                 tr("If yes, system will format the storage.")), 0, this);
+#if 1 // GyverJeong [18/10/25]
+                    msgBox->buttonCancel->setFocus();
+#endif
                 }
                 else
                 {
