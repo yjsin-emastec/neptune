@@ -60,6 +60,7 @@ int appl_main(int argc, char *argv[])
 
     app.setOverrideCursor(QCursor(QPixmap(":/images/cursor.png"), 1, 1));
 
+    utils_system("load_master_estn 1");
     return app.exec();
 }
 int test_main(int argc, char *argv[])
@@ -82,6 +83,7 @@ int test_main(int argc, char *argv[])
 
     app.setOverrideCursor(QCursor(QPixmap(":/images/cursor.png"), 1, 1));
 
+    utils_system("load_master_estn 1");
     return app.exec();
 }
 int main(int argc, char *argv[])

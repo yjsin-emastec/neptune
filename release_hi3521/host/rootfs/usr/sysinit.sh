@@ -33,7 +33,8 @@ mkdir -m 0755 /dev/mjpeg
 ln -s /proc/self/fd /dev/fd
 
 echo "load hi libs"
-cd /usr/drv; ./load_master_estn -i 4ahd
+#cd /usr/drv; ./load_master_estn -i 4ahd
+/usr/sbin/load_master_estn 0
 
 echo "start sata_link"
 /usr/sbin/sata &
