@@ -141,9 +141,7 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="144"/>
         <source>System will restart after upgrading.</source>
-        <translatorcomment>O sistema reiniciará após a atualização.
--&gt; O sistema reiniciará após a atualizacão.</translatorcomment>
-        <translation type="unfinished">O sistema reiniciará após a atualizacão.</translation>
+        <translation>O sistema reiniciará após a atualização.</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="145"/>
@@ -185,7 +183,7 @@
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="44"/>
         <source> Start</source>
-        <translation>Inicio</translation>
+        <translation>Início</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="60"/>
@@ -202,9 +200,7 @@
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="173"/>
         <source>Backup</source>
-        <translatorcomment>Cópia de segurança
--&gt; Cópia de seguranca</translatorcomment>
-        <translation type="unfinished">Cópia de seguranca</translation>
+        <translation>Cópia de segurança</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="186"/>
@@ -673,7 +669,7 @@ O sistema reiniciará. </translation>
         <location filename="../../../setup/devicepage.ui" line="103"/>
         <source>Video Input</source>
         <translation>Entrada
-de Video</translation>
+de Vídeo</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="133"/>
@@ -741,10 +737,18 @@ O sistema reiniciará após o formato.
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="186"/>
-        <source>		NOTICE
+        <source>NOTICE
 
 SSD does not exist.</source>
         <translation> AVISO PRÉVIO
+
+SSD não existe.</translation>
+    </message>
+    <message>
+        <source>		NOTICE
+
+SSD does not exist.</source>
+        <translation type="obsolete"> AVISO PRÉVIO
 
 SSD não existe.</translation>
     </message>
@@ -1506,8 +1510,8 @@ Desligado/Ligado</translation>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.ui" line="54"/>
-        <location filename="../../../../search/functiondialog.cpp" line="72"/>
-        <location filename="../../../../search/functiondialog.cpp" line="76"/>
+        <location filename="../../../../search/functiondialog.cpp" line="81"/>
+        <location filename="../../../../search/functiondialog.cpp" line="85"/>
         <source>Filter</source>
         <translation>Filtro</translation>
     </message>
@@ -1537,23 +1541,23 @@ Desligado/Ligado</translation>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.ui" line="67"/>
-        <location filename="../../../../search/functiondialog.cpp" line="85"/>
-        <location filename="../../../../search/functiondialog.cpp" line="89"/>
+        <location filename="../../../../search/functiondialog.cpp" line="94"/>
+        <location filename="../../../../search/functiondialog.cpp" line="98"/>
         <source>Sort Order</source>
         <translation>Ordenar</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="85"/>
+        <location filename="../../../../search/functiondialog.cpp" line="94"/>
         <source>Ascending</source>
         <translation>Ascendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="89"/>
+        <location filename="../../../../search/functiondialog.cpp" line="98"/>
         <source>Descending</source>
         <translation>Descendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="123"/>
+        <location filename="../../../../search/functiondialog.cpp" line="132"/>
         <source>WARNING
 
 Do you want to delete all system logs?</source>
@@ -1612,73 +1616,74 @@ Sensibilidade
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
         <source>%1%2</source>
-        <translation>%1
+        <translation type="obsolete">%1
 %2</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
         <source>Impact</source>
-        <translation>Impacto</translation>
+        <translation type="obsolete">Impacto</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
         <source>
 Sensitivity: 1</source>
-        <translation>Sensibilidade
+        <translation type="obsolete">Sensibilidade
 1</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
         <source>
 Sensitivity: 2</source>
-        <translation>Sensibilidade
+        <translation type="obsolete">Sensibilidade
 2</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
         <source>
 Sensitivity: 3</source>
-        <translation>Sensibilidade
+        <translation type="obsolete">Sensibilidade
 3</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
         <source>
 Sensitivity: 4</source>
-        <translation>Sensibilidade
+        <translation type="obsolete">Sensibilidade
 4</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
         <source>
 Sensitivity: 5</source>
-        <translation>Sensibilidade
+        <translation type="obsolete">Sensibilidade
 5</translation>
+    </message>
+    <message>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
+        <source>Impact
+Sensitivity</source>
+        <translation>Impacto
+Sensibilidade</translation>
+    </message>
+    <message>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
+        <source>%1: %2</source>
+        <translation>%1
+%2</translation>
     </message>
 </context>
 <context>
@@ -1834,7 +1839,7 @@ Sensitivity: 5</source>
         <location filename="../languagedialog.ui" line="126"/>
         <location filename="../languagedialog.cpp" line="71"/>
         <location filename="../languagedialog.cpp" line="116"/>
-        <location filename="../languagedialog.cpp" line="177"/>
+        <location filename="../languagedialog.cpp" line="178"/>
         <source>English</source>
         <translation>English</translation>
     </message>
@@ -1857,53 +1862,49 @@ O sistema reiniciará. </translation>
     <message>
         <location filename="../languagedialog.cpp" line="76"/>
         <location filename="../languagedialog.cpp" line="117"/>
-        <location filename="../languagedialog.cpp" line="178"/>
+        <location filename="../languagedialog.cpp" line="179"/>
         <source>Korean</source>
         <translation>한국어</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="106"/>
         <location filename="../languagedialog.cpp" line="123"/>
-        <location filename="../languagedialog.cpp" line="184"/>
+        <location filename="../languagedialog.cpp" line="185"/>
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="81"/>
         <location filename="../languagedialog.cpp" line="118"/>
-        <location filename="../languagedialog.cpp" line="179"/>
+        <location filename="../languagedialog.cpp" line="180"/>
         <source>Spanish</source>
-        <translatorcomment>Español
--&gt; Espanol</translatorcomment>
-        <translation type="unfinished">Espanol</translation>
+        <translation>Español</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="86"/>
         <location filename="../languagedialog.cpp" line="119"/>
-        <location filename="../languagedialog.cpp" line="180"/>
+        <location filename="../languagedialog.cpp" line="181"/>
         <source>French</source>
-        <translatorcomment>Français
--&gt;Francais</translatorcomment>
-        <translation type="unfinished">Francais</translation>
+        <translation>Français</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="91"/>
         <location filename="../languagedialog.cpp" line="120"/>
-        <location filename="../languagedialog.cpp" line="181"/>
+        <location filename="../languagedialog.cpp" line="182"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="96"/>
         <location filename="../languagedialog.cpp" line="121"/>
-        <location filename="../languagedialog.cpp" line="182"/>
+        <location filename="../languagedialog.cpp" line="183"/>
         <source>Portuguese</source>
         <translation>Português</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="101"/>
         <location filename="../languagedialog.cpp" line="122"/>
-        <location filename="../languagedialog.cpp" line="183"/>
+        <location filename="../languagedialog.cpp" line="184"/>
         <source>Japanese</source>
         <translation>日本語</translation>
     </message>
@@ -2100,9 +2101,7 @@ Por favor, tente novamente.</translation>
     <message>
         <location filename="../../../../main/mainMenu.ui" line="46"/>
         <source>Setup</source>
-        <translatorcomment>Configuração
--&gt; Configuracão</translatorcomment>
-        <translation>Configuracão</translation>
+        <translation>Configuração</translation>
     </message>
     <message>
         <location filename="../../../../main/mainMenu.ui" line="70"/>
@@ -2973,7 +2972,7 @@ Desligado/Ligado</translation>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="120"/>
         <source>Delete</source>
-        <translation>Excluir</translation>
+        <translation>←</translation>
     </message>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="161"/>
@@ -3104,14 +3103,18 @@ Desligado/Ligado</translation>
         <location filename="../../../display/osd/osddialog.cpp" line="42"/>
         <location filename="../../../display/osd/osddialog.cpp" line="47"/>
         <location filename="../../../display/osd/osddialog.cpp" line="48"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
         <location filename="../../../display/osd/osddialog.cpp" line="59"/>
         <location filename="../../../display/osd/osddialog.cpp" line="60"/>
         <location filename="../../../display/osd/osddialog.cpp" line="67"/>
         <location filename="../../../display/osd/osddialog.cpp" line="73"/>
         <location filename="../../../display/osd/osddialog.cpp" line="82"/>
         <location filename="../../../display/osd/osddialog.cpp" line="88"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="103"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="118"/>
         <source>%1
 %2</source>
         <translation>%1
@@ -3131,7 +3134,7 @@ Desligado/Ligado</translation>
         <location filename="../../../display/osd/osddialog.cpp" line="59"/>
         <location filename="../../../display/osd/osddialog.cpp" line="67"/>
         <location filename="../../../display/osd/osddialog.cpp" line="82"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
         <source>Off</source>
         <translation>Desligado</translation>
     </message>
@@ -3141,7 +3144,7 @@ Desligado/Ligado</translation>
         <location filename="../../../display/osd/osddialog.cpp" line="60"/>
         <location filename="../../../display/osd/osddialog.cpp" line="73"/>
         <location filename="../../../display/osd/osddialog.cpp" line="88"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="118"/>
         <source>On</source>
         <translation>Ligado</translation>
     </message>
@@ -3151,52 +3154,67 @@ Desligado/Ligado</translation>
         <location filename="../../../display/osd/osddialog.cpp" line="82"/>
         <location filename="../../../display/osd/osddialog.cpp" line="88"/>
         <source>No Video</source>
-        <translation>Nenhum Video</translation>
+        <translation>Nenhum Vídeo</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="53"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
+        <source>AutoHide: Off</source>
+        <translation>Ligado</translation>
+    </message>
+    <message>
         <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="103"/>
+        <source>AutoHide: On</source>
+        <translation>Desligado</translation>
+    </message>
+    <message>
+        <source>%1%2</source>
+        <translation type="obsolete">%1
+%2</translation>
+    </message>
+    <message>
+        <source>
+AutoHide: Off</source>
+        <translation type="obsolete">Ligado</translation>
+    </message>
+    <message>
+        <source>
+AutoHide: On</source>
+        <translation type="obsolete">Desligado</translation>
+    </message>
+    <message>
         <source>%1%2%3</source>
-        <translation>%1%2%3</translation>
+        <translation type="obsolete">%1%2%3</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="53"/>
         <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="103"/>
         <source>Status Bar</source>
         <translation>Status Barra</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
         <source>
 AutoHide: </source>
-        <translation> </translation>
+        <translation type="obsolete"> </translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
         <source>Off </source>
-        <translation>
+        <translation type="obsolete">
 Ligado</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
         <source>On </source>
-        <translation>
+        <translation type="obsolete">
 Desligado</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="59"/>
         <location filename="../../../display/osd/osddialog.cpp" line="60"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="118"/>
         <source>Record Status</source>
         <translation>Gravar Estado</translation>
     </message>
@@ -3394,12 +3412,12 @@ Desligado</translation>
         <translation type="obsolete">CONTEÚDO</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="97"/>
         <source>TIME</source>
         <translation>HORA</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="88"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="99"/>
         <source>SYSTEM LOG LIST</source>
         <translation>SISTEMA REGISTRO LISTA</translation>
     </message>
@@ -3620,7 +3638,7 @@ Desligado</translation>
     <message>
         <location filename="../../../../firstcheck/rtcsetdialog.ui" line="70"/>
         <source> Set &amp;&amp; Restart</source>
-        <translation>Definir&amp;&amp;Reiniciar</translation>
+        <translation>Definir &amp;&amp; Reiniciar</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/rtcsetdialog.ui" line="119"/>
@@ -3837,7 +3855,7 @@ Ligado</translation>
         <location filename="../../datetime/setdatetimedialog.cpp" line="1419"/>
         <source>GPS Synchronization
 On</source>
-        <translation>Sincronizacão GPS
+        <translation>Sincronização GPS
 Ligado</translation>
     </message>
     <message>
@@ -3845,7 +3863,7 @@ Ligado</translation>
         <location filename="../../datetime/setdatetimedialog.cpp" line="1411"/>
         <source>GPS Synchronization
 Off</source>
-        <translation>Sincronizacão GPS
+        <translation>Sincronização GPS
 Desligado</translation>
     </message>
     <message>
@@ -3896,7 +3914,7 @@ Desligado</translation>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="106"/>
         <source>TimeZone [UTC -04:00 Santiago]</source>
-        <translation>Fuso Horário [UTC -04:00 Santiago]</translation>
+        <translation>Fuso horário [UTC -04:00 Santiago]</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="107"/>
@@ -3906,7 +3924,7 @@ Desligado</translation>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="108"/>
         <source>TimeZone [UTC -03:00 Buenos Aires/Rio de Janero]</source>
-        <translation>Fuso Horário [UTC -03:00 Buenos Aires / Rio de Janeiro]</translation>
+        <translation>Fuso Horário [UTC -03:00 Buenos Aires/Rio de Janeiro]</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="109"/>
@@ -3916,7 +3934,7 @@ Desligado</translation>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="110"/>
         <source>TimeZone [UTC -01:00 Azores]</source>
-        <translation>Fuso Horário [UTC -01:00 Azores]</translation>
+        <translation>Fuso horário [UTC -01:00 Açores]</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="111"/>
@@ -3926,7 +3944,7 @@ Desligado</translation>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="112"/>
         <source>TimeZone [UTC +01:00 Berlin/Paris/Rome]</source>
-        <translation>Fuso Horário [UTC +01:00 Berlim/Paris/ Roma]</translation>
+        <translation>Fuso Horário [UTC +01:00 Berlim/Paris/Roma]</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="113"/>
@@ -4065,6 +4083,28 @@ Desligado</translation>
         <translation>Hora</translation>
     </message>
     <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="386"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="394"/>
+        <source>%1: AM %2</source>
+        <translation>%1: AM %2</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="390"/>
+        <source>%1: AM 0%2</source>
+        <translation>%1: AM 0%2</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="398"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="406"/>
+        <source>%1: PM %2</source>
+        <translation>%1: PM %2</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="402"/>
+        <source>%1: PM 0%2</source>
+        <translation>%1: PM 0%2</translation>
+    </message>
+    <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="425"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="876"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="881"/>
@@ -4129,9 +4169,7 @@ alguns dados serão apagados do armazenamento.</translation>
     <message>
         <location filename="../../../setup/setupdialog.cpp" line="67"/>
         <source>Display</source>
-        <translatorcomment>Exibição
--&gt; Exibicão</translatorcomment>
-        <translation type="unfinished">Exibicão</translation>
+        <translation>Exibição</translation>
     </message>
     <message>
         <location filename="../../../setup/setupdialog.cpp" line="68"/>
@@ -4189,6 +4227,7 @@ alguns dados serão apagados do armazenamento.</translation>
     <message>
         <location filename="../../../../main/statusbardialog.ui" line="83"/>
         <source>22/08/2016 06:14:10</source>
+        <translatorcomment>표시 안됨</translatorcomment>
         <translation>22/08/2016 06:14:10</translation>
     </message>
     <message>
@@ -4201,7 +4240,7 @@ alguns dados serão apagados do armazenamento.</translation>
     <message>
         <location filename="../../../../main/statusbardialog.cpp" line="102"/>
         <source>FULL</source>
-        <translation>CHEIO</translation>
+        <translation>FULL</translation>
     </message>
     <message>
         <location filename="../../../../main/statusbardialog.cpp" line="245"/>
@@ -4217,19 +4256,19 @@ alguns dados serão apagados do armazenamento.</translation>
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="137"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="148"/>
         <source>
 Descending</source>
         <translation>
 Descendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="328"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="341"/>
         <source>Ascending</source>
         <translation>Ascendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="332"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="345"/>
         <source>Descending</source>
         <translation>Descendente</translation>
     </message>
@@ -4249,34 +4288,40 @@ Descendente</translation>
         <translation>&gt;</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="89"/>
         <source>88888/88888</source>
-        <translation>88888/88888</translation>
+        <translation type="obsolete">88888/88888</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="105"/>
+        <location filename="../../../../search/systemlogpage.ui" line="89"/>
+        <source>99999
+88888/88888</source>
+        <translation>99999
+88888/88888</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="106"/>
         <source>Search</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="186"/>
+        <location filename="../../../../search/systemlogpage.ui" line="187"/>
         <source>Start</source>
-        <translation>Inicio</translation>
+        <translation>Início</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="202"/>
+        <location filename="../../../../search/systemlogpage.ui" line="203"/>
         <source>End</source>
         <translation>Fim</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="218"/>
+        <location filename="../../../../search/systemlogpage.ui" line="219"/>
         <source>Filter
 Sort</source>
         <translation>Filtro
 Ordenar</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="344"/>
+        <location filename="../../../../search/systemlogpage.ui" line="345"/>
         <source>:
 :</source>
         <translation>:
@@ -4294,19 +4339,13 @@ Ordenar</translation>
         <location filename="../../../setup/systempage.ui" line="46"/>
         <source>License
 Plate</source>
-        <translatorcomment>Licença
-Placa
--&gt; Licenca
-Placa</translatorcomment>
-        <translation type="unfinished">Licenca
+        <translation>Licença
 Placa</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.ui" line="77"/>
         <source>Information</source>
-        <translatorcomment>Informação
--&gt; Informacão</translatorcomment>
-        <translation type="unfinished">Informacão</translation>
+        <translation>Informação</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.ui" line="107"/>
@@ -4340,9 +4379,7 @@ Atualizar</translation>
     <message>
         <location filename="../../../setup/systempage.ui" line="271"/>
         <source>Security</source>
-        <translatorcomment>Segurança
--&gt; Seguranca</translatorcomment>
-        <translation type="unfinished">Seguranca</translation>
+        <translation>Segurança</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.ui" line="301"/>
@@ -4365,9 +4402,7 @@ If yes, system will restart.
         <translation>			ATENÇÃO
 
 Você deseja mudar o tempo?
-
-Se sim, o sistema reiniciará.
-</translation>
+Se sim, o sistema reiniciará.</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.cpp" line="200"/>
@@ -4385,7 +4420,6 @@ If yes, system will restart.
         <translation>				ATENÇÃO
 
 Deseja configurar o padrão de fábrica?
-
 Se sim, o sistema reiniciará.</translation>
     </message>
     <message>
@@ -4624,9 +4658,7 @@ Se sim, o sistema reiniciará.</translation>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="51"/>
         <source> Record Time Error</source>
-        <translatorcomment>Erro de Gravação Tempo
--&gt; Erro de Gravacão Tempo</translatorcomment>
-        <translation type="unfinished">Erro de Gravacão Tempo</translation>
+        <translation>Erro de Gravação Tempo</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="70"/>
@@ -4637,11 +4669,7 @@ Se sim, o sistema reiniciará.</translation>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="119"/>
         <source>System time is different from recording time.
 You must delete data or set time.</source>
-        <translatorcomment>O sistema tempo é diferente do gravação tempo.
-Você deve excluir dados ou definir tempo.
--&gt; O sistema tempo é diferente do gravacão tempo.
-Você deve excluir dados ou definir tempo.</translatorcomment>
-        <translation type="unfinished">O sistema tempo é diferente do gravacão tempo.
+        <translation>O sistema tempo é diferente do gravação tempo.
 Você deve excluir dados ou definir tempo.</translation>
     </message>
     <message>
@@ -4658,6 +4686,7 @@ Você deve excluir dados ou definir tempo.</translation>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="192"/>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="215"/>
         <source>2017/02/15 18:00:00</source>
+        <translatorcomment>표시 안됨</translatorcomment>
         <translation>2017/02/15 18:00:00</translation>
     </message>
     <message>
@@ -5477,6 +5506,7 @@ Você deve excluir dados ou definir tempo.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="864"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="888"/>
         <source>Split 1</source>
+        <translatorcomment>표시 안됨</translatorcomment>
         <translation>Split 1</translation>
     </message>
     <message>
@@ -5493,6 +5523,7 @@ Você deve excluir dados ou definir tempo.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="865"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="889"/>
         <source>Split 2</source>
+        <translatorcomment>표시 안됨</translatorcomment>
         <translation>Split 2</translation>
     </message>
     <message>
@@ -5509,6 +5540,7 @@ Você deve excluir dados ou definir tempo.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="866"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="890"/>
         <source>Split 3</source>
+        <translatorcomment>표시 안됨</translatorcomment>
         <translation>Split 3</translation>
     </message>
     <message>
@@ -5525,6 +5557,7 @@ Você deve excluir dados ou definir tempo.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="867"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="891"/>
         <source>Split 4</source>
+        <translatorcomment>표시 안됨</translatorcomment>
         <translation>Split 4</translation>
     </message>
     <message>
@@ -5541,6 +5574,7 @@ Você deve excluir dados ou definir tempo.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="868"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="892"/>
         <source>Split 5</source>
+        <translatorcomment>표시 안됨</translatorcomment>
         <translation>Split 5</translation>
     </message>
     <message>
@@ -5557,6 +5591,7 @@ Você deve excluir dados ou definir tempo.</translation>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="869"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="893"/>
         <source>Split 6</source>
+        <translatorcomment>표시 안됨</translatorcomment>
         <translation>Split 6</translation>
     </message>
     <message>
@@ -6428,7 +6463,7 @@ Você deve excluir dados ou definir tempo.</translation>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="546"/>
         <source>Del</source>
-        <translation>&lt;-</translation>
+        <translation>←</translation>
     </message>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="584"/>

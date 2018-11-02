@@ -11,7 +11,7 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.ui" line="41"/>
         <source>Close</source>
-        <translation>閉める</translation>
+        <translation>しめる</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.ui" line="57"/>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.ui" line="83"/>
         <source>Find</source>
-        <translation>検索</translation>
+        <translation>けんさく</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.ui" line="99"/>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.ui" line="208"/>
         <source>Progress</source>
-        <translation>進捗</translation>
+        <translation>進行状況</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="134"/>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="134"/>
         <source>System will restart.</source>
-        <translation>システムが再起動します。</translation>
+        <translation>システムが再起動されます。</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="135"/>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="135"/>
         <source>click &apos;Find&apos; button.</source>
-        <translation>[検索]ボタンをクリックします。</translation>
+        <translation>「けんさく」ボタンを押してください。</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="136"/>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="138"/>
         <source>Please select &apos;Upgrade&apos; button.</source>
-        <translation>[アップグレード]ボタンを選択してください。</translation>
+        <translation>「アップグレード」ボタンを押してください。</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="139"/>
@@ -121,12 +121,12 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="141"/>
         <source>File is invalid.</source>
-        <translation>ファイルが無効です。</translation>
+        <translation>ファイルが有効ではありません。</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="142"/>
         <source>List overflowed.</source>
-        <translation>リストがオーバーフローしました。</translation>
+        <translation>リストがちょうかしました。</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="143"/>
@@ -136,12 +136,12 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="144"/>
         <source>Please do not turn off system.</source>
-        <translation>システムをシャットダウンしないでください。</translation>
+        <translation>システムを終了しないでください。</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="144"/>
         <source>System will restart after upgrading.</source>
-        <translation>アップグレード後にシステムが再起動します。</translation>
+        <translation>アップグレード後にシステムが再起動されます。</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="145"/>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="385"/>
         <source>Please unplug USB memory.</source>
-        <translation>USBメモリーを抜いてください。</translation>
+        <translation>USBメモリーを取り外してください。</translation>
     </message>
 </context>
 <context>
@@ -195,7 +195,7 @@
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="118"/>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="228"/>
         <source>1 minute</source>
-        <translation>1分</translation>
+        <translation>1 分</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="173"/>
@@ -205,17 +205,17 @@
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="186"/>
         <source>Close</source>
-        <translation>閉める</translation>
+        <translation>しめる</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="91"/>
         <source>Insert a USB memory.</source>
-        <translation>USBメモリを挿入します。</translation>
+        <translation>USBメモリを挿入してください。</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="93"/>
         <source>Please insert a USB memory.</source>
-        <translation>USBメモリを挿入します。</translation>
+        <translation>USBメモリを挿入してください。</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="99"/>
@@ -230,47 +230,47 @@
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="119"/>
         <source>2 minutes</source>
-        <translation>2分</translation>
+        <translation>2 分</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="120"/>
         <source>3 minutes</source>
-        <translation>3分</translation>
+        <translation>3 分</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="121"/>
         <source>4 minutes</source>
-        <translation>4分</translation>
+        <translation>4 分</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="122"/>
         <source>5 minutes</source>
-        <translation>5分</translation>
+        <translation>5 分</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="123"/>
         <source>6 minutes</source>
-        <translation>6分</translation>
+        <translation>6 分</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="124"/>
         <source>7 minutes</source>
-        <translation>7分</translation>
+        <translation>7 分</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="125"/>
         <source>8 minutes</source>
-        <translation>8分</translation>
+        <translation>8 分</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="126"/>
         <source>9 minutes</source>
-        <translation>9分</translation>
+        <translation>9 分</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="127"/>
         <source>10 minutes</source>
-        <translation>10分</translation>
+        <translation>10 分</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="217"/>
@@ -306,7 +306,7 @@
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="342"/>
         <source>Preparing...</source>
-        <translation>準備...</translation>
+        <translation>じゅんび中です…</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.cpp" line="352"/>
@@ -331,7 +331,7 @@ Output: Off/On</source>
     <message>
         <location filename="../../../device/buzzer/buzzerdialog.ui" line="70"/>
         <source>Save</source>
-        <translation>ほぞん</translation>
+        <translation>セーブ</translation>
     </message>
     <message>
         <location filename="../../../device/buzzer/buzzerdialog.ui" line="83"/>
@@ -548,19 +548,19 @@ Output: On</source>
     <message>
         <location filename="../../config/configdialog.ui" line="14"/>
         <source>CONFIG PROPERTY</source>
-        <translation>不動産の設定</translation>
+        <translation>環境設定のプロパティ</translation>
     </message>
     <message>
         <location filename="../../config/configdialog.ui" line="50"/>
         <source>Load Config</source>
-        <translation>設定を
+        <translation>設定の
 インポート</translation>
     </message>
     <message>
         <location filename="../../config/configdialog.ui" line="72"/>
         <source>Save Config</source>
-        <translation>設定を
-ほぞん</translation>
+        <translation>設定の
+セーブ</translation>
     </message>
     <message>
         <location filename="../../config/configdialog.ui" line="85"/>
@@ -616,7 +616,7 @@ Output: On</source>
     <message>
         <location filename="../../config/configdialog.cpp" line="59"/>
         <source>Config Load</source>
-        <translation>設定を
+        <translation>設定の
 インポート</translation>
     </message>
     <message>
@@ -647,7 +647,7 @@ System will restart.        </source>
     <message>
         <location filename="../../config/configdialog.cpp" line="101"/>
         <source>Please unplug USB memory.</source>
-        <translation>USBメモリーを取り外します。</translation>
+        <translation>USBメモリーを取り外してください。</translation>
     </message>
 </context>
 <context>
@@ -655,7 +655,7 @@ System will restart.        </source>
     <message>
         <location filename="../../../setup/devicepage.ui" line="14"/>
         <source>Form</source>
-        <translation>形</translation>
+        <translation>書式</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="46"/>
@@ -666,7 +666,7 @@ System will restart.        </source>
         <location filename="../../../setup/devicepage.ui" line="73"/>
         <location filename="../../../setup/devicepage.cpp" line="26"/>
         <source>SSD Format</source>
-        <translation>SSDの
+        <translation>SSD
 フォーマット</translation>
     </message>
     <message>
@@ -679,7 +679,8 @@ System will restart.        </source>
         <location filename="../../../setup/devicepage.ui" line="133"/>
         <source>Impact
 Sensitivity</source>
-        <translation>影響 感度</translation>
+        <translation>しょうげき
+かんど</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="164"/>
@@ -689,19 +690,19 @@ Sensitivity</source>
     <message>
         <location filename="../../../setup/devicepage.ui" line="200"/>
         <source>Trigger Input</source>
-        <translation>Trigger
+        <translation>トリガー
 入力</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="25"/>
         <source>HDD Format</source>
-        <translation>HDDの
+        <translation>HDD
 フォーマット</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="164"/>
         <source>HDD FORMAT</source>
-        <translation>HDDの
+        <translation>HDD
 フォーマット</translation>
     </message>
     <message>
@@ -723,7 +724,7 @@ HDDをフォーマットしてもよろしいですか?
         <location filename="../../../setup/devicepage.cpp" line="165"/>
         <location filename="../../../setup/devicepage.cpp" line="186"/>
         <source>SSD FORMAT</source>
-        <translation>SSDの
+        <translation>SSD
 フォーマット</translation>
     </message>
     <message>
@@ -743,10 +744,18 @@ SSDをフォーマットしてもよろしいですか?
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="186"/>
+        <source>NOTICE
+
+SSD does not exist.</source>
+        <translation>通知
+
+SSDが存在しません。</translation>
+    </message>
+    <message>
         <source>		NOTICE
 
 SSD does not exist.</source>
-        <translation>		 通知
+        <translation type="obsolete">		 通知
 
 SSDは存在しません。</translation>
     </message>
@@ -1112,7 +1121,7 @@ SSDは存在しません。</translation>
     <message>
         <location filename="../../../setup/displaypage.ui" line="17"/>
         <source>Form</source>
-        <translation>形</translation>
+        <translation>書式</translation>
     </message>
     <message>
         <location filename="../../../setup/displaypage.ui" line="49"/>
@@ -1144,7 +1153,7 @@ SSDは存在しません。</translation>
     <message>
         <location filename="../../../setup/displaypage.cpp" line="48"/>
         <source>RESOLUTION CHANGE</source>
-        <translation>解決策の変更</translation>
+        <translation>解像度を変更</translation>
     </message>
     <message>
         <location filename="../../../setup/displaypage.cpp" line="49"/>
@@ -1156,9 +1165,10 @@ If yes, the system will restart.
 </source>
         <translation>				   警告
 
-解像度を変更してもよろしいですか?
+かいぞうどを変更しますか？
 
-はいの場合、システムが再起動します。</translation>
+はいの場合、システムが再起動します。
+</translation>
     </message>
     <message>
         <source>				WARNING
@@ -1185,7 +1195,7 @@ HDMIの解像度を変更してもよろしいですか?
         <location filename="../../../record/event/eventdialog.ui" line="35"/>
         <source>Event
 Time: 15/30sec</source>
-        <translation>イベント 時間
+        <translation>イベント じぞく
 15/30秒 </translation>
     </message>
     <message>
@@ -1197,14 +1207,14 @@ Time: 15/30sec</source>
         <location filename="../../../record/event/eventdialog.ui" line="68"/>
         <source>Trigger
 Record: Off/On</source>
-        <translation>Trigger 記録
+        <translation>トリガー ろくが
 オフ/オン</translation>
     </message>
     <message>
         <location filename="../../../record/event/eventdialog.ui" line="85"/>
         <source>G-Sensor
 Record: Off/On</source>
-        <translation>Gセンサ 記録
+        <translation>しょうげき ろくが
 オフ/オン</translation>
     </message>
     <message>
@@ -1231,7 +1241,7 @@ Record: Off/On</source>
         <location filename="../../../record/event/eventdialog.cpp" line="92"/>
         <location filename="../../../record/event/eventdialog.cpp" line="100"/>
         <source>%1%2%3</source>
-        <translation>%1 %2
+        <translation>%1%2
 %3</translation>
     </message>
     <message>
@@ -1249,7 +1259,7 @@ Record: Off/On</source>
         <location filename="../../../record/event/eventdialog.cpp" line="58"/>
         <source> Duration
 </source>
-        <translation>期間</translation>
+        <translation>じぞく</translation>
     </message>
     <message>
         <location filename="../../../record/event/eventdialog.cpp" line="29"/>
@@ -1269,7 +1279,7 @@ Record: Off/On</source>
         <location filename="../../../record/event/eventdialog.cpp" line="71"/>
         <location filename="../../../record/event/eventdialog.cpp" line="79"/>
         <source>Impact</source>
-        <translation>衝撃</translation>
+        <translation>しょうげき</translation>
     </message>
     <message>
         <location filename="../../../record/event/eventdialog.cpp" line="35"/>
@@ -1282,7 +1292,7 @@ Record: Off/On</source>
         <location filename="../../../record/event/eventdialog.cpp" line="100"/>
         <source> Record
 </source>
-        <translation>記録</translation>
+        <translation>ろくが</translation>
     </message>
     <message>
         <location filename="../../../record/event/eventdialog.cpp" line="35"/>
@@ -1306,7 +1316,7 @@ Record: Off/On</source>
         <location filename="../../../record/event/eventdialog.cpp" line="92"/>
         <location filename="../../../record/event/eventdialog.cpp" line="100"/>
         <source>Trigger</source>
-        <translation>Trigger</translation>
+        <translation>トリガー</translation>
     </message>
 </context>
 <context>
@@ -1348,7 +1358,7 @@ Record: Off/On</source>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="75"/>
         <source>Search</source>
-        <translation>サーチ</translation>
+        <translation>けんさく</translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="79"/>
@@ -1379,31 +1389,31 @@ Record: Off/On</source>
         <location filename="../../../../search/eventlogpage.cpp" line="209"/>
         <location filename="../../../../search/eventlogpage.cpp" line="288"/>
         <source>IMPACT</source>
-        <translation>衝撃</translation>
+        <translation>しょうげき</translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="210"/>
         <location filename="../../../../search/eventlogpage.cpp" line="289"/>
         <source>TRIGGER1</source>
-        <translation>TRIGGER1</translation>
+        <translation>トリガー1</translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="211"/>
         <location filename="../../../../search/eventlogpage.cpp" line="290"/>
         <source>TRIGGER2</source>
-        <translation>TRIGGER2</translation>
+        <translation>トリガー2</translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="212"/>
         <location filename="../../../../search/eventlogpage.cpp" line="291"/>
         <source>TRIGGER3</source>
-        <translation>TRIGGER3</translation>
+        <translation>トリガー3</translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="213"/>
         <location filename="../../../../search/eventlogpage.cpp" line="292"/>
         <source>TRIGGER4</source>
-        <translation>TRIGGER4</translation>
+        <translation>トリガー4</translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="214"/>
@@ -1470,7 +1480,7 @@ Record: Off/On</source>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="534"/>
         <source>Trigger</source>
-        <translation>Trigger</translation>
+        <translation>トリガー</translation>
     </message>
 </context>
 <context>
@@ -1495,8 +1505,8 @@ Record: Off/On</source>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.ui" line="54"/>
-        <location filename="../../../../search/functiondialog.cpp" line="72"/>
-        <location filename="../../../../search/functiondialog.cpp" line="76"/>
+        <location filename="../../../../search/functiondialog.cpp" line="81"/>
+        <location filename="../../../../search/functiondialog.cpp" line="85"/>
         <source>Filter</source>
         <translation>フィルタ</translation>
     </message>
@@ -1526,23 +1536,23 @@ Record: Off/On</source>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.ui" line="67"/>
-        <location filename="../../../../search/functiondialog.cpp" line="85"/>
-        <location filename="../../../../search/functiondialog.cpp" line="89"/>
+        <location filename="../../../../search/functiondialog.cpp" line="94"/>
+        <location filename="../../../../search/functiondialog.cpp" line="98"/>
         <source>Sort Order</source>
         <translation>ソート</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="85"/>
+        <location filename="../../../../search/functiondialog.cpp" line="94"/>
         <source>Ascending</source>
         <translation>しょうじゅん</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="89"/>
+        <location filename="../../../../search/functiondialog.cpp" line="98"/>
         <source>Descending</source>
         <translation>かこうせい</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="123"/>
+        <location filename="../../../../search/functiondialog.cpp" line="132"/>
         <source>WARNING
 
 Do you want to delete all system logs?</source>
@@ -1586,7 +1596,8 @@ All log was deleted.</source>
         <location filename="../../../device/gsensor/gsensordialog.ui" line="59"/>
         <source>Gsensor
 Sensitivity: LEVEL3</source>
-        <translation>影響 感度
+        <translation>しょうげき
+かんど
 3</translation>
     </message>
     <message>
@@ -1600,72 +1611,73 @@ Sensitivity: LEVEL3</source>
         <translation>しめる</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
         <source>%1%2</source>
-        <translation>%1 %2</translation>
+        <translation type="obsolete">%1 %2</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
         <source>Impact</source>
-        <translation>影響</translation>
+        <translation type="obsolete">影響</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
         <source>
 Sensitivity: 1</source>
-        <translation>感度
+        <translation type="obsolete">感度
 1</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
         <source>
 Sensitivity: 2</source>
-        <translation>感度
+        <translation type="obsolete">感度
 2</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
         <source>
 Sensitivity: 3</source>
-        <translation>感度
+        <translation type="obsolete">感度
 3</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
         <source>
 Sensitivity: 4</source>
-        <translation>感度
+        <translation type="obsolete">感度
 4</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
         <source>
 Sensitivity: 5</source>
-        <translation>感度
+        <translation type="obsolete">感度
 5</translation>
+    </message>
+    <message>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
+        <source>Impact
+Sensitivity</source>
+        <translation>しょうげき
+かんど</translation>
+    </message>
+    <message>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
+        <source>%1: %2</source>
+        <translation>%1
+%2</translation>
     </message>
 </context>
 <context>
@@ -1673,7 +1685,7 @@ Sensitivity: 5</source>
     <message>
         <location filename="../../information/informationdialog.ui" line="14"/>
         <source>INFORMATION PROPERTY</source>
-        <translation>情報プロパティ</translation>
+        <translation>機器情報のプロパティ</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.ui" line="44"/>
@@ -1734,7 +1746,7 @@ Sensitivity: 5</source>
     <message>
         <location filename="../../information/informationdialog.ui" line="217"/>
         <source>Not Connected</source>
-        <translation>接続されていません</translation>
+        <translation>せつぞくされていません</translation>
     </message>
     <message utf8="true">
         <location filename="../../information/informationdialog.ui" line="233"/>
@@ -1749,7 +1761,7 @@ Sensitivity: 5</source>
     <message>
         <location filename="../../information/informationdialog.ui" line="265"/>
         <source>Temperature</source>
-        <translation>温度</translation>
+        <translation>おんど</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.cpp" line="55"/>
@@ -1773,12 +1785,12 @@ Sensitivity: 5</source>
     <message>
         <location filename="../../information/informationdialog.cpp" line="104"/>
         <source>Connected</source>
-        <translation>接続済み</translation>
+        <translation>せつぞく済み</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.cpp" line="108"/>
         <source>Not connected</source>
-        <translation>接続されていません</translation>
+        <translation>せつぞくされていません</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.cpp" line="115"/>
@@ -1821,7 +1833,7 @@ Sensitivity: 5</source>
         <location filename="../languagedialog.ui" line="126"/>
         <location filename="../languagedialog.cpp" line="71"/>
         <location filename="../languagedialog.cpp" line="116"/>
-        <location filename="../languagedialog.cpp" line="177"/>
+        <location filename="../languagedialog.cpp" line="178"/>
         <source>English</source>
         <translation>English</translation>
     </message>
@@ -1844,53 +1856,49 @@ System will restart.</source>
     <message>
         <location filename="../languagedialog.cpp" line="76"/>
         <location filename="../languagedialog.cpp" line="117"/>
-        <location filename="../languagedialog.cpp" line="178"/>
+        <location filename="../languagedialog.cpp" line="179"/>
         <source>Korean</source>
         <translation>한국어</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="106"/>
         <location filename="../languagedialog.cpp" line="123"/>
-        <location filename="../languagedialog.cpp" line="184"/>
+        <location filename="../languagedialog.cpp" line="185"/>
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="81"/>
         <location filename="../languagedialog.cpp" line="118"/>
-        <location filename="../languagedialog.cpp" line="179"/>
+        <location filename="../languagedialog.cpp" line="180"/>
         <source>Spanish</source>
-        <translatorcomment>Español
--&gt; Espanol</translatorcomment>
-        <translation type="unfinished">Espanol</translation>
+        <translation>Español</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="86"/>
         <location filename="../languagedialog.cpp" line="119"/>
-        <location filename="../languagedialog.cpp" line="180"/>
+        <location filename="../languagedialog.cpp" line="181"/>
         <source>French</source>
-        <translatorcomment>Français
--&gt;Francais</translatorcomment>
-        <translation type="unfinished">Francais</translation>
+        <translation>Français</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="91"/>
         <location filename="../languagedialog.cpp" line="120"/>
-        <location filename="../languagedialog.cpp" line="181"/>
+        <location filename="../languagedialog.cpp" line="182"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="96"/>
         <location filename="../languagedialog.cpp" line="121"/>
-        <location filename="../languagedialog.cpp" line="182"/>
+        <location filename="../languagedialog.cpp" line="183"/>
         <source>Portuguese</source>
         <translation>Português</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="101"/>
         <location filename="../languagedialog.cpp" line="122"/>
-        <location filename="../languagedialog.cpp" line="183"/>
+        <location filename="../languagedialog.cpp" line="184"/>
         <source>Japanese</source>
         <translation>日本語</translation>
     </message>
@@ -1956,7 +1964,7 @@ System will restart.</source>
     <message>
         <location filename="../../../../login/logindialog.ui" line="41"/>
         <source>Please input a password</source>
-        <translation>パスワードを入力してください</translation>
+        <translation>パスワードを入力してください。</translation>
     </message>
     <message>
         <location filename="../../../../login/logindialog.ui" line="115"/>
@@ -2105,7 +2113,7 @@ Mute/1/2/3/4</source>
     <message>
         <location filename="../../../../main/mainMenu.ui" line="158"/>
         <source>Shutdown</source>
-        <translation>しゅうりょう</translation>
+        <translation>終了</translation>
     </message>
     <message>
         <location filename="../../../../main/mainMenu.ui" line="183"/>
@@ -2169,7 +2177,7 @@ Mute</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="477"/>
         <source>MOUNT ERROR</source>
-        <translation>接続エラー</translation>
+        <translation>せつぞくエラー</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="477"/>
@@ -2270,7 +2278,7 @@ Mute</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="767"/>
         <source>Please unplug USB memory.   </source>
-        <translation>USBメモリーを抜いてください。</translation>
+        <translation>USBメモリーを切り離してください。</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="768"/>
@@ -2306,7 +2314,7 @@ Mute</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="793"/>
         <source>Power Off</source>
-        <translation>しゅうりょう</translation>
+        <translation>電源 終了</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="793"/>
@@ -2330,7 +2338,7 @@ Mute</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="838"/>
         <source>SATA Error Count : </source>
-        <translation>エラーかず : </translation>
+        <translation>SATAエラー回数 : </translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="1203"/>
@@ -2345,7 +2353,7 @@ Mute</source>
 Current status is trigger.</source>
         <translation>通知
 
-現在のステータスはTriggerです。</translation>
+現在のステータスはトリガーです。</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="144"/>
@@ -2358,7 +2366,7 @@ Current status is trigger.</source>
         <location filename="../../../../main/maininitsys.cpp" line="292"/>
         <location filename="../../../../main/maininitsys.cpp" line="297"/>
         <source>STORAGE FORMAT</source>
-        <translation>ストレージ形式</translation>
+        <translation>ストレージ フォーマット</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="214"/>
@@ -2378,7 +2386,7 @@ Current status is trigger.</source>
         <location filename="../../../../main/maininitsys.cpp" line="221"/>
         <location filename="../../../../main/maininitsys.cpp" line="293"/>
         <source>Storage was not formatted.</source>
-        <translation>ストレージがフォーマットされていません。</translation>
+        <translation>ストレージがフォーマットされていませんでした。</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="144"/>
@@ -2404,12 +2412,12 @@ Current status is trigger.</source>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="208"/>
         <source>FORMAT or MOUNT ERROR</source>
-        <translation>フォーマットまたはマウントエラー</translation>
+        <translation>フォーマットまたはれんけつエラー</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="210"/>
         <source>If yes, system will format the storage.</source>
-        <translation>はいの場合、システムはストレージをフォーマットします。</translation>
+        <translation>「はい」の場合、ストレージをフォーマットします。</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="207"/>
@@ -2426,7 +2434,7 @@ Current status is trigger.</source>
         <location filename="../../../../main/maininitsys.cpp" line="227"/>
         <location filename="../../../../main/maininitsys.cpp" line="298"/>
         <source>Storage was not formatted.         </source>
-        <translation>ストレージがフォーマットされていません。</translation>
+        <translation>ストレージがフォーマットされていませんでした。</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="269"/>
@@ -2449,18 +2457,18 @@ Current status is trigger.</source>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="345"/>
         <source>[5070] New HDD Inserted</source>
-        <translation>[5070]新しいHDDが挿入されました</translation>
+        <translation>[5070]新しいストレージが挿入されました</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="365"/>
         <source>[5072] Slave HDD Changed</source>
-        <translation>[5072]スレーブHDDの変更</translation>
+        <translation>[5072] 補助記憶装置が変更されました</translation>
     </message>
     <message>
         <location filename="../../../../main/mainwidget.cpp" line="617"/>
         <location filename="../../../../main/mainwidget.cpp" line="887"/>
         <source>POWER OFF</source>
-        <translation>しゅうりょう</translation>
+        <translation>電源 終了</translation>
     </message>
     <message>
         <location filename="../../../../main/mainwidget.cpp" line="617"/>
@@ -2534,7 +2542,7 @@ Off/On</source>
         <location filename="../../../record/normal/normaldialog.ui" line="96"/>
         <source>Quality
 L/M/H</source>
-        <translation>ひんしつ
+        <translation>がしつ
 高/中/低</translation>
     </message>
     <message>
@@ -2839,7 +2847,7 @@ Off/On</source>
         <location filename="../../../record/normal/normaldialog.cpp" line="326"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="338"/>
         <source>Quality</source>
-        <translation>ひんしつ</translation>
+        <translation>がしつ</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="94"/>
@@ -2954,17 +2962,17 @@ Off/On</source>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="120"/>
         <source>Delete</source>
-        <translation>&lt;-</translation>
+        <translation>←</translation>
     </message>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="161"/>
         <source>All Clear</source>
-        <translation>しょきか</translation>
+        <translation>クリア</translation>
     </message>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="203"/>
         <source>Enter</source>
-        <translation>はいる</translation>
+        <translation>確認</translation>
     </message>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="244"/>
@@ -3067,8 +3075,8 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.ui" line="80"/>
         <source>Record Status
 Off/On</source>
-        <translation>記録 状態
-オン/オフ</translation>
+        <translation>きろく 状態
+かくす/ひょうじ</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.ui" line="97"/>
@@ -3085,14 +3093,18 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.cpp" line="42"/>
         <location filename="../../../display/osd/osddialog.cpp" line="47"/>
         <location filename="../../../display/osd/osddialog.cpp" line="48"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
         <location filename="../../../display/osd/osddialog.cpp" line="59"/>
         <location filename="../../../display/osd/osddialog.cpp" line="60"/>
         <location filename="../../../display/osd/osddialog.cpp" line="67"/>
         <location filename="../../../display/osd/osddialog.cpp" line="73"/>
         <location filename="../../../display/osd/osddialog.cpp" line="82"/>
         <location filename="../../../display/osd/osddialog.cpp" line="88"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="103"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="118"/>
         <source>%1
 %2</source>
         <translation>%1
@@ -3112,7 +3124,7 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.cpp" line="59"/>
         <location filename="../../../display/osd/osddialog.cpp" line="67"/>
         <location filename="../../../display/osd/osddialog.cpp" line="82"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
         <source>Off</source>
         <translation>オフ</translation>
     </message>
@@ -3122,7 +3134,7 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.cpp" line="60"/>
         <location filename="../../../display/osd/osddialog.cpp" line="73"/>
         <location filename="../../../display/osd/osddialog.cpp" line="88"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="118"/>
         <source>On</source>
         <translation>オン</translation>
     </message>
@@ -3136,49 +3148,64 @@ Off/On</source>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="53"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
+        <source>AutoHide: Off</source>
+        <translation>ひょうじ</translation>
+    </message>
+    <message>
         <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="103"/>
+        <source>AutoHide: On</source>
+        <translation>かくす</translation>
+    </message>
+    <message>
+        <source>%1%2</source>
+        <translation type="obsolete">%1
+%2</translation>
+    </message>
+    <message>
+        <source>
+AutoHide: Off</source>
+        <translation type="obsolete">オフ</translation>
+    </message>
+    <message>
+        <source>
+AutoHide: On</source>
+        <translation type="obsolete">に</translation>
+    </message>
+    <message>
         <source>%1%2%3</source>
-        <translation>%1%2
+        <translation type="obsolete">%1%2
 %3</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="53"/>
         <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="103"/>
         <source>Status Bar</source>
         <translation>ステータスバー</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
         <source>
 AutoHide: </source>
-        <translation> </translation>
+        <translation type="obsolete"> </translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
         <source>Off </source>
-        <translation>オン</translation>
+        <translation type="obsolete">オン</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
         <source>On </source>
-        <translation>オフ</translation>
+        <translation type="obsolete">オフ</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="59"/>
         <location filename="../../../display/osd/osddialog.cpp" line="60"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="118"/>
         <source>Record Status</source>
-        <translation>記録 状態</translation>
+        <translation>きろく状態</translation>
     </message>
 </context>
 <context>
@@ -3362,7 +3389,7 @@ AutoHide: </source>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="697"/>
         <source>DURATION</source>
-        <translation>きかん</translation>
+        <translation>じぞく</translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="699"/>
@@ -3374,12 +3401,12 @@ AutoHide: </source>
         <translation type="obsolete">ないよう</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="97"/>
         <source>TIME</source>
         <translation>じかん</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="88"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="99"/>
         <source>SYSTEM LOG LIST</source>
         <translation>システム ログ リスト</translation>
     </message>
@@ -3464,7 +3491,7 @@ AutoHide: </source>
     <message>
         <location filename="../../../setup/recordpage.ui" line="14"/>
         <source>Form</source>
-        <translation>形</translation>
+        <translation>書式</translation>
     </message>
     <message>
         <location filename="../../../setup/recordpage.ui" line="46"/>
@@ -3535,7 +3562,7 @@ AutoHide: </source>
         <location filename="../../../record/normal/recordstatus.ui" line="361"/>
         <location filename="../../../record/normal/recordstatus.ui" line="380"/>
         <source>Quality</source>
-        <translation>ひんしつ</translation>
+        <translation>がしつ</translation>
     </message>
     <message>
         <location filename="../../../record/normal/recordstatus.ui" line="209"/>
@@ -3588,7 +3615,7 @@ AutoHide: </source>
     <message>
         <location filename="../../../../firstcheck/rtcsetdialog.ui" line="14"/>
         <source>RTC SET PROPERTY</source>
-        <translation>RTCセットプロパティ</translation>
+        <translation>RTC 設定 プロパティ</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/rtcsetdialog.ui" line="51"/>
@@ -3598,7 +3625,7 @@ AutoHide: </source>
     <message>
         <location filename="../../../../firstcheck/rtcsetdialog.ui" line="70"/>
         <source> Set &amp;&amp; Restart</source>
-        <translation>設定&amp;&amp;再起動</translation>
+        <translation>設定 &amp;&amp; 再起動</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/rtcsetdialog.ui" line="119"/>
@@ -3647,7 +3674,7 @@ AutoHide: </source>
     <message>
         <location filename="../../security/securitydialog.ui" line="14"/>
         <source>LICENSE PLATE PROPERTY</source>
-        <translation>ライセンスプレートプロパティ</translation>
+        <translation>パスワード 属性</translation>
     </message>
     <message>
         <location filename="../../security/securitydialog.ui" line="47"/>
@@ -3719,7 +3746,7 @@ Please try again.</source>
         <location filename="../../datetime/setdatetimedialog.ui" line="20"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="14"/>
         <source>SetDateTimeDialog</source>
-        <translation>日付時刻の設定ダイアログ</translation>
+        <translation>日付と時刻の設定ダイアログボックス</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.ui" line="174"/>
@@ -3771,7 +3798,7 @@ On</source>
     <message>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="237"/>
         <source>BEGIN</source>
-        <translation>ベギン</translation>
+        <translation>開始</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="303"/>
@@ -4042,6 +4069,28 @@ Off</source>
         <translation>時</translation>
     </message>
     <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="386"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="394"/>
+        <source>%1: AM %2</source>
+        <translation>%1: AM %2</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="390"/>
+        <source>%1: AM 0%2</source>
+        <translation>%1: AM 0%2</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="398"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="406"/>
+        <source>%1: PM %2</source>
+        <translation>%1: PM %2</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="402"/>
+        <source>%1: PM 0%2</source>
+        <translation>%1: PM 0%2</translation>
+    </message>
+    <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="425"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="876"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="881"/>
@@ -4068,7 +4117,7 @@ Off</source>
 some data will be erased from storage.
 </source>
         <translation>データを記録するよりも速く時間を設定すると、
-一部のデータはストレージから消去されます。</translation>
+データの一部が消去することができます。</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="671"/>
@@ -4106,7 +4155,7 @@ some data will be erased from storage.
     <message>
         <location filename="../../../setup/setupdialog.cpp" line="67"/>
         <source>Display</source>
-        <translation>ひょうじ</translation>
+        <translation>ディスプレー</translation>
     </message>
     <message>
         <location filename="../../../setup/setupdialog.cpp" line="68"/>
@@ -4126,7 +4175,7 @@ some data will be erased from storage.
     <message>
         <location filename="../../../setup/setupdialog.cpp" line="93"/>
         <source> DISPLAY </source>
-        <translation> ひょうじ </translation>
+        <translation> ディスプレー </translation>
     </message>
     <message>
         <location filename="../../../setup/setupdialog.cpp" line="94"/>
@@ -4146,7 +4195,7 @@ some data will be erased from storage.
     <message>
         <location filename="../../../setup/setupdialog.cpp" line="100"/>
         <source>DISPLAY</source>
-        <translation>ひょうじ</translation>
+        <translation>ディスプレー</translation>
     </message>
     <message>
         <location filename="../../../setup/setupdialog.cpp" line="101"/>
@@ -4192,19 +4241,19 @@ some data will be erased from storage.
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="137"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="148"/>
         <source>
 Descending</source>
         <translation>
 かこうせい</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="328"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="341"/>
         <source>Ascending</source>
         <translation>しょうじゅん</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="332"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="345"/>
         <source>Descending</source>
         <translation>かこうせい</translation>
     </message>
@@ -4224,34 +4273,40 @@ Descending</source>
         <translation>&gt;</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="89"/>
         <source>88888/88888</source>
-        <translation>88888/88888</translation>
+        <translation type="obsolete">88888/88888</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="105"/>
+        <location filename="../../../../search/systemlogpage.ui" line="89"/>
+        <source>99999
+88888/88888</source>
+        <translation>99999
+88888/88888</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="106"/>
         <source>Search</source>
         <translation>けんさく</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="186"/>
+        <location filename="../../../../search/systemlogpage.ui" line="187"/>
         <source>Start</source>
         <translation>開始</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="202"/>
+        <location filename="../../../../search/systemlogpage.ui" line="203"/>
         <source>End</source>
         <translation>終了</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="218"/>
+        <location filename="../../../../search/systemlogpage.ui" line="219"/>
         <source>Filter
 Sort</source>
         <translation>フィルタ
 ソート</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="344"/>
+        <location filename="../../../../search/systemlogpage.ui" line="345"/>
         <source>:
 :</source>
         <translation>:
@@ -4263,7 +4318,7 @@ Sort</source>
     <message>
         <location filename="../../../setup/systempage.ui" line="14"/>
         <source>Form</source>
-        <translation>形</translation>
+        <translation>書式</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.ui" line="46"/>
@@ -4331,7 +4386,6 @@ If yes, system will restart.
         <translation>					警告
 
 時間を変更したいですか？
-
 「はい」の場合、システムは再起動します。
 </translation>
     </message>
@@ -4351,8 +4405,8 @@ If yes, system will restart.
         <translation>					警告
 
 工場初期化を設定しますか?
-
-「はい」の場合、システムは再起動します。</translation>
+「はい」の場合、システムは再起動します。
+</translation>
     </message>
     <message>
         <source>			WARNING
@@ -4585,7 +4639,7 @@ If yes, system will restart.
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="14"/>
         <source>TIME SET PROPERTY</source>
-        <translation>プロパティを設定する時刻</translation>
+        <translation>時間設定のプロパティ</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="51"/>
@@ -4595,24 +4649,24 @@ If yes, system will restart.
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="70"/>
         <source>Set Time</source>
-        <translation>時間を設定</translation>
+        <translation>時間再設定</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="119"/>
         <source>System time is different from recording time.
 You must delete data or set time.</source>
-        <translation>システム時間は記録時間とは異なります。
-データを削除するか、または時間を設定します。</translation>
+        <translation>システム時間が記録時間と異なります。
+将来のデータを削除したり,時間を再設定ください。</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="143"/>
         <source>Last Time</source>
-        <translation>最後の時間</translation>
+        <translation>最後保存時間</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="166"/>
         <source>First Time</source>
-        <translation>最初の時間</translation>
+        <translation>最初保存時間</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="192"/>
@@ -4640,7 +4694,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.cpp" line="137"/>
         <source>System is deleting data.</source>
-        <translation>システムがデータを削除しています。</translation>
+        <translation>データを削除しています。</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.cpp" line="137"/>
@@ -4660,8 +4714,8 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.cpp" line="250"/>
         <source>System Time must be later than record last time.</source>
-        <translation>システム時間は最後の時間より遅くなければ
-なりません。</translation>
+        <translation>システム時間は最後保存時間より
+遅くなればなりません。</translation>
     </message>
 </context>
 <context>
@@ -4713,27 +4767,27 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="18"/>
         <source>Trigger1</source>
-        <translation>Trigger1</translation>
+        <translation>トリガー1</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="22"/>
         <source>Trigger2</source>
-        <translation>Trigger2</translation>
+        <translation>トリガー2</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="26"/>
         <source>Trigger3</source>
-        <translation>Trigger3</translation>
+        <translation>トリガー3</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="30"/>
         <source>Trigger4</source>
-        <translation>Trigger4</translation>
+        <translation>トリガー4</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="264"/>
         <source>PRIORITY REDUNDANT</source>
-        <translation>優先順位リダンダント</translation>
+        <translation>優先順位のエラー</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="265"/>
@@ -4755,7 +4809,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="265"/>
         <source>Priority is redundant.</source>
-        <translation>優先順位は冗長です。</translation>
+        <translation>優先順位が冗長です。</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="265"/>
@@ -6383,7 +6437,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="546"/>
         <source>Del</source>
-        <translation>&lt;-</translation>
+        <translation>←</translation>
     </message>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="584"/>
@@ -6533,7 +6587,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1693"/>
         <source>Enter</source>
-        <translation>はいる</translation>
+        <translation>エンター</translation>
     </message>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1727"/>
@@ -6692,14 +6746,14 @@ You must delete data or set time.</source>
         <source>WIDTH
 672</source>
         <translation>はば
-672 </translation>
+672</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.ui" line="293"/>
         <source>HEIGHT
 456</source>
         <translation>たかさ
-456 </translation>
+456</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.ui" line="307"/>
@@ -6833,7 +6887,7 @@ You must delete data or set time.</source>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="453"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="465"/>
         <source>WIDTH</source>
-        <translation>幅</translation>
+        <translation>はば</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="85"/>
@@ -6847,7 +6901,7 @@ You must delete data or set time.</source>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="454"/>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="466"/>
         <source>HEIGHT</source>
-        <translation>高さ</translation>
+        <translation>たかさ</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="105"/>
@@ -6891,14 +6945,14 @@ Please check X or Width value!
 Total horizontal pixel should be below %1.
 </source>
         <translation>
-Xまたは幅値を確認してください！
+Xまたははば値を確認してください！
 
 総合を%1以下に設定する必要があります。</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="393"/>
         <source>INVALID Y OR HEIGHT</source>
-        <translation>無効な高さまたはたかさ</translation>
+        <translation>不適切Y値またはたかさの値です。</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="394"/>
@@ -6908,7 +6962,7 @@ Please check Y or Height value!
 Total vertical pixel should be below %1.
 </source>
         <translation>
-Yまたは高さ値を確認してください！
+Yまたはたかさ値を確認してください！
 
 総合を%1以下に設定する必要があります。</translation>
     </message>
@@ -6920,9 +6974,9 @@ Please check Width value!
 Width pixel should be over %1.
 </source>
         <translation>
-幅の値をチェックしてください！
+はば値を確認してください！
 
-幅ピクセルは%1以上にする必要があります。</translation>
+幅を％1以下に設定する必要があります。</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="414"/>
@@ -6932,9 +6986,9 @@ Please check Height value!
 Height pixel should be over %1.
 </source>
         <translation>
-高さの値をチェックしてください！
+たかさの値をチェックしてください！
 
-高さピクセルは%1以上にする必要があります。</translation>
+たかさを％1以下に設定する必要があります。</translation>
     </message>
     <message>
         <source>
@@ -6963,7 +7017,7 @@ Yまたは高さ値を確認してください！
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="403"/>
         <source>INVALID WIDTH</source>
-        <translation>無効な幅</translation>
+        <translation>不適切はばの値です。</translation>
     </message>
     <message>
         <source>
@@ -6979,7 +7033,7 @@ Width pixel should be over 300.
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="413"/>
         <source>INVALID HEIGHT</source>
-        <translation>無効な高さ</translation>
+        <translation>不適切たかさの値です。</translation>
     </message>
     <message>
         <source>
@@ -6995,7 +7049,7 @@ Height pixel should be over 200.
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="383"/>
         <source>INVALID X OR WIDTH</source>
-        <translation>無効なXまたは幅</translation>
+        <translation>不適切Xまたははばの値です。</translation>
     </message>
     <message>
         <source>

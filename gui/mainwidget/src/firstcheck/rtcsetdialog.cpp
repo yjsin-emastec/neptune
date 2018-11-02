@@ -29,7 +29,6 @@ RtcSetDialog::RtcSetDialog(QWidget *parent)
     else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
     {
         labelRtcStatus->setStyleSheet("font:48px;color:white");
-        buttonSetRestart->setGeometry(25,490,790,91);
     }
 #endif
 

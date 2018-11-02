@@ -61,8 +61,8 @@ AppUpgradeDialog::AppUpgradeDialog(QWidget *parent)
         labelProgressValue->setGeometry(329, 407, 761, 71);
         progressBar->setGeometry(334, 410, 751, 66);
 
-        buttonFind->setGeometry(287, 495, 250, 90);
-        buttonUpgrade->setGeometry(540, 495, 300, 90);
+        buttonFind->setGeometry(267, 495, 250, 90);
+        buttonUpgrade->setGeometry(520, 495, 320, 90);
         buttonUpgrade->setStyleSheet("font:42px;");
     }
     //yjsin [18/01/05] if text is long, change font size
