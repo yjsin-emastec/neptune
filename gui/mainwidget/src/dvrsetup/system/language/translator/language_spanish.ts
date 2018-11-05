@@ -605,7 +605,7 @@ Encender</translation>
     <message>
         <location filename="../../config/configdialog.cpp" line="43"/>
         <source>Config was loaded successfully.</source>
-        <translation>Config se ha cargado correctamente.</translation>
+        <translation>Config carga exitosa.</translation>
     </message>
     <message>
         <location filename="../../config/configdialog.cpp" line="43"/>
@@ -674,13 +674,8 @@ almacenamiento</translation>
     <message>
         <location filename="../../../setup/devicepage.ui" line="103"/>
         <source>Video Input</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-Entrada
-de Vídeo
--&gt; Entrada
-de Video</translatorcomment>
-        <translation type="unfinished">Entrada
-de Video</translation>
+        <translation>Entrada
+de Vídeo</translation>
     </message>
     <message>
         <location filename="../../../setup/devicepage.ui" line="133"/>
@@ -777,10 +772,18 @@ El sistema se reinicia después del formateo.
     </message>
     <message>
         <location filename="../../../setup/devicepage.cpp" line="186"/>
+        <source>NOTICE
+
+SSD does not exist.</source>
+        <translation>NOTIFICACIÓN
+
+SSD no existe.</translation>
+    </message>
+    <message>
         <source>		NOTICE
 
 SSD does not exist.</source>
-        <translation> NOTIFICACIÓN
+        <translation type="obsolete"> NOTIFICACIÓN
 
  SSD no existe.</translation>
     </message>
@@ -1187,13 +1190,8 @@ de Cámara</translation>
     <message>
         <location filename="../../../setup/displaypage.ui" line="139"/>
         <source>Video Output</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-Salida
-de Vídeo
--&gt; Salida
-de Video</translatorcomment>
-        <translation type="unfinished">Salida
-de Video</translation>
+        <translation>Salida
+de Vídeo</translation>
     </message>
     <message>
         <location filename="../../../setup/displaypage.ui" line="166"/>
@@ -1594,8 +1592,8 @@ Record: </source>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.ui" line="54"/>
-        <location filename="../../../../search/functiondialog.cpp" line="72"/>
-        <location filename="../../../../search/functiondialog.cpp" line="76"/>
+        <location filename="../../../../search/functiondialog.cpp" line="81"/>
+        <location filename="../../../../search/functiondialog.cpp" line="85"/>
         <source>Filter</source>
         <translation>Filtrar</translation>
     </message>
@@ -1625,23 +1623,23 @@ Record: </source>
     </message>
     <message>
         <location filename="../../../../search/functiondialog.ui" line="67"/>
-        <location filename="../../../../search/functiondialog.cpp" line="85"/>
-        <location filename="../../../../search/functiondialog.cpp" line="89"/>
+        <location filename="../../../../search/functiondialog.cpp" line="94"/>
+        <location filename="../../../../search/functiondialog.cpp" line="98"/>
         <source>Sort Order</source>
         <translation>Orden</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="85"/>
+        <location filename="../../../../search/functiondialog.cpp" line="94"/>
         <source>Ascending</source>
         <translation>Ascendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="89"/>
+        <location filename="../../../../search/functiondialog.cpp" line="98"/>
         <source>Descending</source>
         <translation>Descendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/functiondialog.cpp" line="123"/>
+        <location filename="../../../../search/functiondialog.cpp" line="132"/>
         <source>WARNING
 
 Do you want to delete all system logs?</source>
@@ -1699,78 +1697,79 @@ al impacto : 3</translation>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
         <source>%1%2</source>
-        <translation>%1%2</translation>
+        <translation type="obsolete">%1%2</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
         <source>Impact</source>
         <translatorcomment>단어 순서가 바뀜</translatorcomment>
-        <translation>Sensibilidad</translation>
+        <translation type="obsolete">Sensibilidad</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
         <source>
 Sensitivity: 1</source>
-        <translation>
+        <translation type="obsolete">
 al impacto
 1</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
         <source>
 Sensitivity: 2</source>
-        <translation>
+        <translation type="obsolete">
 al impacto
 2</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
         <source>
 Sensitivity: 3</source>
-        <translation>
+        <translation type="obsolete">
 al impacto
 3</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
         <source>
 Sensitivity: 4</source>
-        <translation>
+        <translation type="obsolete">
 al impacto
 4</translation>
     </message>
     <message>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
-        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
         <source>
 Sensitivity: 5</source>
-        <translation>
+        <translation type="obsolete">
 al impacto
 5</translation>
+    </message>
+    <message>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
+        <source>Impact
+Sensitivity</source>
+        <translation>Sensibilidad
+al Impacto</translation>
+    </message>
+    <message>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="26"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="27"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="28"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="29"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="30"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="38"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="46"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="54"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="62"/>
+        <location filename="../../../device/gsensor/gsensordialog.cpp" line="70"/>
+        <source>%1: %2</source>
+        <translation>%1
+%2</translation>
     </message>
 </context>
 <context>
@@ -1930,7 +1929,7 @@ al impacto
         <location filename="../languagedialog.ui" line="126"/>
         <location filename="../languagedialog.cpp" line="71"/>
         <location filename="../languagedialog.cpp" line="116"/>
-        <location filename="../languagedialog.cpp" line="177"/>
+        <location filename="../languagedialog.cpp" line="178"/>
         <source>English</source>
         <translation>English</translation>
     </message>
@@ -1953,55 +1952,49 @@ El sistema se reiniciará.</translation>
     <message>
         <location filename="../languagedialog.cpp" line="76"/>
         <location filename="../languagedialog.cpp" line="117"/>
-        <location filename="../languagedialog.cpp" line="178"/>
+        <location filename="../languagedialog.cpp" line="179"/>
         <source>Korean</source>
         <translation>한국어</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="106"/>
         <location filename="../languagedialog.cpp" line="123"/>
-        <location filename="../languagedialog.cpp" line="184"/>
+        <location filename="../languagedialog.cpp" line="185"/>
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="81"/>
         <location filename="../languagedialog.cpp" line="118"/>
-        <location filename="../languagedialog.cpp" line="179"/>
+        <location filename="../languagedialog.cpp" line="180"/>
         <source>Spanish</source>
-        <translatorcomment>ñ이 î으로 출력됨
-Español
--&gt; Espanol</translatorcomment>
-        <translation type="unfinished">Espanol</translation>
+        <translation>Español</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="86"/>
         <location filename="../languagedialog.cpp" line="119"/>
-        <location filename="../languagedialog.cpp" line="180"/>
+        <location filename="../languagedialog.cpp" line="181"/>
         <source>French</source>
-        <translatorcomment>ç 깨짐
-Français
--&gt;Francais</translatorcomment>
-        <translation type="unfinished">Francais</translation>
+        <translation>Français</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="91"/>
         <location filename="../languagedialog.cpp" line="120"/>
-        <location filename="../languagedialog.cpp" line="181"/>
+        <location filename="../languagedialog.cpp" line="182"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="96"/>
         <location filename="../languagedialog.cpp" line="121"/>
-        <location filename="../languagedialog.cpp" line="182"/>
+        <location filename="../languagedialog.cpp" line="183"/>
         <source>Portuguese</source>
         <translation>Português</translation>
     </message>
     <message>
         <location filename="../languagedialog.cpp" line="101"/>
         <location filename="../languagedialog.cpp" line="122"/>
-        <location filename="../languagedialog.cpp" line="183"/>
+        <location filename="../languagedialog.cpp" line="184"/>
         <source>Japanese</source>
         <translation>日本語</translation>
     </message>
@@ -2071,10 +2064,7 @@ Français
     <message>
         <location filename="../../../../login/logindialog.ui" line="41"/>
         <source>Please input a password</source>
-        <translatorcomment>ñ이 î으로 출력됨
-Introduzca una contraseña.
--&gt;Introduzca una contrasena.</translatorcomment>
-        <translation type="unfinished">Introduzca una contrasena.</translation>
+        <translation>Introduzca una contraseña.</translation>
     </message>
     <message>
         <location filename="../../../../login/logindialog.ui" line="115"/>
@@ -2097,19 +2087,13 @@ Introduzca una contraseña.
         <location filename="../../../../login/logindialog.cpp" line="68"/>
         <location filename="../../../../login/logindialog.cpp" line="73"/>
         <source>Please input a password.</source>
-        <translatorcomment>ñ이 î으로 출력됨
-Introduzca una contraseña.
--&gt;Introduzca una contrasena.</translatorcomment>
-        <translation type="unfinished">Introduzca una contrasena.</translation>
+        <translation>Introduzca una contraseña.</translation>
     </message>
     <message>
         <location filename="../../../../login/logindialog.cpp" line="158"/>
         <source>Incorrect Password.
 Please try again.</source>
-        <translatorcomment>ñ이 î으로 출력됨
-Contraseña incorrecta. -&gt;Contrasena incorrecta.
-Vuelve a intentarlo. -&gt; Vuelve a intentarlo.</translatorcomment>
-        <translation type="unfinished">Contrasena incorrecta.
+        <translation>Contraseña incorrecta.
 Vuelve a intentarlo.</translation>
     </message>
 </context>
@@ -2412,10 +2396,7 @@ No hay almacenamiento</translation>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="768"/>
         <source>If you click button of &apos;Ok&apos;,</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-Sí hace clic en &apos;Acuerdo&apos;,
--&gt; Si hace clic en &apos;Acuerdo&apos;,</translatorcomment>
-        <translation type="unfinished">Si hace clic en &apos;Acuerdo&apos;,</translation>
+        <translation>Sí hace clic en &apos;Acuerdo&apos;,</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="793"/>
@@ -2589,10 +2570,7 @@ El estado actual es Activado.</translation>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="345"/>
         <source>[5070] New HDD Inserted</source>
-        <translatorcomment>ñ이 î으로 출력됨
-[5070] Se añadió nuevo almacenamiento
--&gt; [5070] Se anadió nuevo almacenamiento</translatorcomment>
-        <translation type="unfinished">[5070] Se anadió nuevo almacenamiento</translation>
+        <translation>[5070] Se añadió nuevo almacenamiento</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="365"/>
@@ -3115,7 +3093,7 @@ Apagar / Encender</translation>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="120"/>
         <source>Delete</source>
-        <translation>&lt;-</translation>
+        <translation>←</translation>
     </message>
     <message>
         <location filename="../../../../ui/numkeypaddialog/numkeypaddialog.ui" line="161"/>
@@ -3207,12 +3185,7 @@ Ingrese a continuación 65535.</translation>
         <location filename="../../../display/osd/osddialog.ui" line="35"/>
         <source>No Video
 Off/On</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-No hay Vídeo
-Apagar / Encender
--&gt; No hay Vídeo
-Apagar / Encender</translatorcomment>
-        <translation type="unfinished">No hay Video
+        <translation>No hay Vídeo
 Apagar / Encender</translation>
     </message>
     <message>
@@ -3251,14 +3224,18 @@ Apagar / Encender</translation>
         <location filename="../../../display/osd/osddialog.cpp" line="42"/>
         <location filename="../../../display/osd/osddialog.cpp" line="47"/>
         <location filename="../../../display/osd/osddialog.cpp" line="48"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
         <location filename="../../../display/osd/osddialog.cpp" line="59"/>
         <location filename="../../../display/osd/osddialog.cpp" line="60"/>
         <location filename="../../../display/osd/osddialog.cpp" line="67"/>
         <location filename="../../../display/osd/osddialog.cpp" line="73"/>
         <location filename="../../../display/osd/osddialog.cpp" line="82"/>
         <location filename="../../../display/osd/osddialog.cpp" line="88"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="103"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="118"/>
         <source>%1
 %2</source>
         <translation>%1
@@ -3279,7 +3256,7 @@ la Cámara</translation>
         <location filename="../../../display/osd/osddialog.cpp" line="59"/>
         <location filename="../../../display/osd/osddialog.cpp" line="67"/>
         <location filename="../../../display/osd/osddialog.cpp" line="82"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
         <source>Off</source>
         <translation>Apagar</translation>
     </message>
@@ -3289,7 +3266,7 @@ la Cámara</translation>
         <location filename="../../../display/osd/osddialog.cpp" line="60"/>
         <location filename="../../../display/osd/osddialog.cpp" line="73"/>
         <location filename="../../../display/osd/osddialog.cpp" line="88"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="118"/>
         <source>On</source>
         <translation>Encender</translation>
     </message>
@@ -3299,55 +3276,67 @@ la Cámara</translation>
         <location filename="../../../display/osd/osddialog.cpp" line="82"/>
         <location filename="../../../display/osd/osddialog.cpp" line="88"/>
         <source>No Video</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-No hay Vídeo
--&gt; No hay Video</translatorcomment>
-        <translation type="unfinished">No hay Video</translation>
+        <translation>No hay Vídeo</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="53"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
+        <source>AutoHide: Off</source>
+        <translation>Apagar</translation>
+    </message>
+    <message>
         <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="103"/>
+        <source>AutoHide: On</source>
+        <translation>Encender</translation>
+    </message>
+    <message>
+        <source>%1%2</source>
+        <translation type="obsolete">%1
+%2</translation>
+    </message>
+    <message>
+        <source>
+AutoHide: Off</source>
+        <translation type="obsolete">Apagar</translation>
+    </message>
+    <message>
+        <source>
+AutoHide: On</source>
+        <translation type="obsolete">Encender</translation>
+    </message>
+    <message>
         <source>%1%2%3</source>
-        <translation>%1
+        <translation type="obsolete">%1
 %2
 %3</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="53"/>
         <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="103"/>
         <source>Status Bar</source>
         <translation>Barra de estado</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
         <source>
 AutoHide: </source>
-        <translation>Auto-escondite</translation>
+        <translation type="obsolete"> </translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="53"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="98"/>
         <source>Off </source>
-        <translation>Apagar</translation>
+        <translation type="obsolete">Apagar</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="54"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
         <source>On </source>
-        <translation>Encender</translation>
+        <translation type="obsolete">Encender</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="59"/>
         <location filename="../../../display/osd/osddialog.cpp" line="60"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="113"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="119"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="118"/>
         <source>Record Status</source>
         <translation>Grabar Estado</translation>
     </message>
@@ -3545,12 +3534,12 @@ AutoHide: </source>
         <translation type="obsolete">CONTENIDO</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="86"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="97"/>
         <source>TIME</source>
         <translation>HORA</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="88"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="99"/>
         <source>SYSTEM LOG LIST</source>
         <translation>SISTEMA REGISTRO LISTA</translation>
     </message>
@@ -3764,10 +3753,7 @@ AutoHide: </source>
     <message>
         <location filename="../../../../firstcheck/rtcsetdialog.ui" line="51"/>
         <source>RTC Battery Error</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-Error de batería RTC
--&gt; Error de bateria RTC</translatorcomment>
-        <translation type="unfinished">Error de bateria RTC</translation>
+        <translation>Error de batería RTC</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/rtcsetdialog.ui" line="70"/>
@@ -3777,10 +3763,7 @@ Error de batería RTC
     <message>
         <location filename="../../../../firstcheck/rtcsetdialog.ui" line="119"/>
         <source>Please replace the battery and set time.</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-Sustituya la batería y ajuste la hora.
--&gt; Sustituya la bateria y ajuste la hora.</translatorcomment>
-        <translation type="unfinished">Sustituya la bateria y ajuste la hora.</translation>
+        <translation>Sustituya la batería y ajuste la hora.</translation>
     </message>
 </context>
 <context>
@@ -3837,10 +3820,7 @@ Registro</translation>
         <location filename="../../security/securitydialog.ui" line="94"/>
         <location filename="../../security/securitydialog.cpp" line="111"/>
         <source>Please input new password.</source>
-        <translatorcomment>ñ이 î으로 출력됨
-Introduzca la nueva contraseña.
--&gt; Introduzca la nueva contrasena.</translatorcomment>
-        <translation type="unfinished">Introduzca la nueva contrasena.</translation>
+        <translation>Introduzca la nueva contraseña.</translation>
     </message>
     <message>
         <location filename="../../security/securitydialog.ui" line="107"/>
@@ -3855,18 +3835,12 @@ Introduzca la nueva contraseña.
     <message>
         <location filename="../../security/securitydialog.ui" line="186"/>
         <source>New Password</source>
-        <translatorcomment>ñ이 î으로 출력됨
-Nueva contraseña
--&gt; Nueva contrasena</translatorcomment>
-        <translation type="unfinished">Nueva contrasena</translation>
+        <translation>Nueva contraseña</translation>
     </message>
     <message>
         <location filename="../../security/securitydialog.ui" line="202"/>
         <source>Confirm Password</source>
-        <translatorcomment>ñ이 î으로 출력됨
-Confirmar contraseña
--&gt; Confirmar contrasena</translatorcomment>
-        <translation type="unfinished">Confirmar contrasena</translation>
+        <translation>Confirmar contraseña</translation>
     </message>
     <message>
         <location filename="../../security/securitydialog.ui" line="215"/>
@@ -3896,12 +3870,7 @@ Confirmar contraseña
         <location filename="../../security/securitydialog.cpp" line="169"/>
         <source>Password did not match.
 Please try again.</source>
-        <translatorcomment>ñ이 î으로 출력됨
-La contraseña no coincide.
-Vuelve a intentarlo.
--&gt; La contrasena no coincide.
-Vuelve a intentarlo.</translatorcomment>
-        <translation type="unfinished">La contrasena no coincide.
+        <translation>La contraseña no coincide.
 Vuelve a intentarlo.</translation>
     </message>
 </context>
@@ -4075,10 +4044,7 @@ Apagar</translation>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="108"/>
         <source>TimeZone [UTC -03:00 Buenos Aires/Rio de Janero]</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-Zona Horaria [UTC -03:00 Buenos Aires/Río de Janeiro]
--&gt; Zona Horaria [UTC -03:00 Buenos Aires/Rio de Janeiro]</translatorcomment>
-        <translation type="unfinished">Zona Horaria [UTC -03:00 Buenos Aires/Rio de Janeiro]</translation>
+        <translation>Zona Horaria [UTC -03:00 Buenos Aires/Río de Janeiro]</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="109"/>
@@ -4098,10 +4064,7 @@ Zona Horaria [UTC -03:00 Buenos Aires/Río de Janeiro]
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="112"/>
         <source>TimeZone [UTC +01:00 Berlin/Paris/Rome]</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-Zona Horaria [UTC + 01: 00 Berlín / París / Roma]
--&gt; Zona Horaria [UTC + 01: 00 Berlín / Paris / Roma]</translatorcomment>
-        <translation type="unfinished">Zona Horaria [UTC +01:00 Berlín/Paris/Roma]</translation>
+        <translation>Zona Horaria [UTC +01:00 Berlín/París/Roma]</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="113"/>
@@ -4198,10 +4161,7 @@ Zona Horaria [UTC + 01: 00 Berlín / París / Roma]
         <location filename="../../datetime/setdatetimedialog.cpp" line="265"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="314"/>
         <source>Year</source>
-        <translatorcomment>ñ이 î으로 출력됨
-Año
--&gt; Ano</translatorcomment>
-        <translation type="unfinished">Ano</translation>
+        <translation>Año</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="198"/>
@@ -4221,10 +4181,7 @@ Año
         <location filename="../../datetime/setdatetimedialog.cpp" line="290"/>
         <location filename="../../datetime/setdatetimedialog.cpp" line="294"/>
         <source>Day</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-Día
--&gt; Dia</translatorcomment>
-        <translation type="unfinished">Dia</translation>
+        <translation>Día</translation>
     </message>
     <message>
         <source>Year: %1</source>
@@ -4240,10 +4197,7 @@ Año: %1
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="1069"/>
         <source>Day: %1</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-Día: %1
--&gt; Dia: %1</translatorcomment>
-        <translation type="unfinished">Dia: %1</translation>
+        <translation>Día: %1</translation>
     </message>
     <message>
         <source>%1</source>
@@ -4267,6 +4221,28 @@ Día: %1
         <location filename="../../datetime/setdatetimedialog.cpp" line="418"/>
         <source>Hour</source>
         <translation>Horas</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="386"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="394"/>
+        <source>%1: AM %2</source>
+        <translation>%1: AM%2</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="390"/>
+        <source>%1: AM 0%2</source>
+        <translation>%1: AM0%2</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="398"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="406"/>
+        <source>%1: PM %2</source>
+        <translation>%1: PM%2</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="402"/>
+        <source>%1: PM 0%2</source>
+        <translation>%1: PM0%2</translation>
     </message>
     <message>
         <location filename="../../datetime/setdatetimedialog.cpp" line="434"/>
@@ -4410,7 +4386,7 @@ Algunos datos se borran del almacenamiento.</translation>
     <message>
         <location filename="../../../../main/statusbardialog.cpp" line="102"/>
         <source>FULL</source>
-        <translation>lleno</translation>
+        <translation>FULL</translation>
     </message>
     <message>
         <location filename="../../../../main/statusbardialog.cpp" line="245"/>
@@ -4426,19 +4402,19 @@ Algunos datos se borran del almacenamiento.</translation>
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="137"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="148"/>
         <source>
 Descending</source>
         <translation>
 Descendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="328"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="341"/>
         <source>Ascending</source>
         <translation>Ascendente</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="332"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="345"/>
         <source>Descending</source>
         <translation>Descendente</translation>
     </message>
@@ -4458,34 +4434,40 @@ Descendente</translation>
         <translation>&gt;</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="89"/>
         <source>88888/88888</source>
-        <translation>88888/88888</translation>
+        <translation type="obsolete">88888/88888</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="105"/>
+        <location filename="../../../../search/systemlogpage.ui" line="89"/>
+        <source>99999
+88888/88888</source>
+        <translation>99999
+88888/88888</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/systemlogpage.ui" line="106"/>
         <source>Search</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="186"/>
+        <location filename="../../../../search/systemlogpage.ui" line="187"/>
         <source>Start</source>
         <translation>Inicio</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="202"/>
+        <location filename="../../../../search/systemlogpage.ui" line="203"/>
         <source>End</source>
         <translation>Fin</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="218"/>
+        <location filename="../../../../search/systemlogpage.ui" line="219"/>
         <source>Filter
 Sort</source>
         <translation>Filtrar
 Orden</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.ui" line="344"/>
+        <location filename="../../../../search/systemlogpage.ui" line="345"/>
         <source>:
 :</source>
         <translation>:
@@ -4562,22 +4544,10 @@ Do you want to change time?
 
 If yes, system will restart.
 </source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-ADVERTENCIA
-
-¿Quiere cambiar la hora?
-
-Si es así, el sistema se reiniciará.
--&gt; ADVERTENCIA
-
-¿Quiere cambiar la hora?
-
-Si es asi, el sistema se reiniciará.</translatorcomment>
         <translation>			ADVERTENCIA
 
 ¿Quiere cambiar la hora?
-
-Si es asi, el sistema se reiniciará.</translation>
+Si es así, el sistema se reiniciará.</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.cpp" line="200"/>
@@ -4625,7 +4595,7 @@ Después de la inicialización, el sistema se reinicia.
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="30"/>
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="88"/>
         <source>Yes</source>
-        <translation>Sì</translation>
+        <translation>Sí</translation>
     </message>
     <message>
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="31"/>
@@ -6633,7 +6603,7 @@ al última hora de grabación.</translation>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="546"/>
         <source>Del</source>
-        <translation>&lt;-</translation>
+        <translation>←</translation>
     </message>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="584"/>
@@ -7152,18 +7122,11 @@ Please check X or Width value!
 
 Total horizontal pixel should be below %1.
 </source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
+        <translation>
 Por favor, ¡compruebe el valor de X o Width!
 
 El píxel horizontal total debe ser inferior a %1.
-
--&gt; Por favor, ¡compruebe el valor de X o Width!
-
-El pixel horizontal total debe ser inferior a %1.</translatorcomment>
-        <translation type="unfinished">
-Por favor, ¡compruebe el valor de X o Width!
-
-El pixel horizontal total debe ser inferior a %1.</translation>
+</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="393"/>
@@ -7177,18 +7140,11 @@ Please check Y or Height value!
 
 Total vertical pixel should be below %1.
 </source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
+        <translation>
 Por favor, ¡compruebe el valor de Y o Altura.
 
 El píxel vertical total debe ser inferior a %1.
-
--&gt; Por favor, ¡compruebe el valor de Y o Altura.
-
-El pixel vertical total debe ser inferior a %1.</translatorcomment>
-        <translation type="unfinished">
-Por favor, ¡compruebe el valor de Y o Altura.
-
-El pixel vertical total debe ser inferior a %1.</translation>
+</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="404"/>
@@ -7197,10 +7153,11 @@ Please check Width value!
 
 Width pixel should be over %1.
 </source>
-        <translation type="unfinished">
+        <translation>
 Por favor, ¡compruebe el valor de Anchura!
 
-El pixel de Anchura debe ser más de %1.</translation>
+El pixel de Anchura debe ser más de %1.
+</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="414"/>
@@ -7209,10 +7166,11 @@ Please check Height value!
 
 Height pixel should be over %1.
 </source>
-        <translation type="unfinished">
+        <translation>
 Por favor, ¡compruebe el valor de Altura!
 
-El pixel de Altura debe ser más de %1.</translation>
+El pixel de Altura debe ser más de %1.
+</translation>
     </message>
     <message>
         <source>
@@ -7322,10 +7280,7 @@ El pixel horizontal total debe ser inferior a 720.
     <message>
         <location filename="../../../../main/videopane.cpp" line="673"/>
         <source>NO VIDEO</source>
-        <translatorcomment>í(소문자)가 ê로 출력됨
-No hay Vídeo
--&gt; No hay Video</translatorcomment>
-        <translation>No hay Video</translation>
+        <translation>No hay Vídeo</translation>
     </message>
     <message>
         <location filename="../../../../main/videopane.cpp" line="725"/>

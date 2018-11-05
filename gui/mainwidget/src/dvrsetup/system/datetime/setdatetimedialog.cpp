@@ -383,27 +383,27 @@ void SetDateTimeDialog::initComboBox()
     {
         if(indexTimeFormat==1 && i==0)                  //12H, 12 AM
         {
-            str=QString("%1: AM %2").arg(tr("Hour")).arg(i+12);
+            str=tr("%1: AM %2").arg(tr("Hour")).arg(i+12);
         }
         else if(indexTimeFormat==1 && i>0 && i<10)      //12H, 1~9 AM
         {
-            str=QString("%1: AM 0%2").arg(tr("Hour")).arg(i);
+            str=tr("%1: AM 0%2").arg(tr("Hour")).arg(i);
         }
         else if(indexTimeFormat==1 && i>=10 && i<12)    //12H, 10~11 AM
         {
-            str=QString("%1: AM %2").arg(tr("Hour")).arg(i);
+            str=tr("%1: AM %2").arg(tr("Hour")).arg(i);
         }
         else if(indexTimeFormat==1 && i==12)            //12H, 12 PM
         {
-            str=QString("%1: PM %2").arg(tr("Hour")).arg(i);
+            str=tr("%1: PM %2").arg(tr("Hour")).arg(i);
         }
         else if(indexTimeFormat==1 && i>12 && i<22)     //12H, 1~9 PM
         {
-            str=QString("%1: PM 0%2").arg(tr("Hour")).arg(i-12);
+            str=tr("%1: PM 0%2").arg(tr("Hour")).arg(i-12);
         }
         else if(indexTimeFormat==1 && i>=22 && i<24)    //12H, 10~11 PM
         {
-            str=QString("%1: PM %2").arg(tr("Hour")).arg(i-12);
+            str=tr("%1: PM %2").arg(tr("Hour")).arg(i-12);
         }
         else if(indexTimeFormat==0 && i>=0 && i<10)     //24H, 0~9
         {

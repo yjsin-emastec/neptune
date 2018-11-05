@@ -183,7 +183,8 @@ void DevicePage::onDiskFormat(void)
             msgBox = NULL;
             msgBoxEsckey = 0;
             msgBoxEsckey = 1;
-            msgBox = new TextMessageDialog(tr("SSD FORMAT"), tr("\t\tNOTICE\n\n" "SSD does not exist."), 2, this);
+            msgBox = new TextMessageDialog(tr("SSD FORMAT"), tr("NOTICE\n\n" "SSD does not exist."), 2, this);
+            msgBox->setMsgAlignment(Qt::AlignCenter);
             msgBox->exec();
         }
     }

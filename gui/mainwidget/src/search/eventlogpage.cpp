@@ -44,16 +44,16 @@ EventLogPage::EventLogPage(QWidget *parent)
     if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
     {
         searchStartTime->setDisplayFormat("yyyy.MM.dd hh:mm AP");
-        searchStartTime->setStyleSheet("QDateTimeEdit {font:33px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchStartTime->setStyleSheet("QDateTimeEdit {font:32px; selection-color:white; selection-background-color:rgb(152,14,69);}");
         searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm AP");
-        searchEndTime->setStyleSheet("QDateTimeEdit {font:33px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchEndTime->setStyleSheet("QDateTimeEdit {font:32px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     }
     else                                                            //24H
     {
         searchStartTime->setDisplayFormat("yyyy.MM.dd hh:mm");
-        searchStartTime->setStyleSheet("QDateTimeEdit {font:40px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchStartTime->setStyleSheet("QDateTimeEdit {font:39px; selection-color:white; selection-background-color:rgb(152,14,69);}");
         searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm");
-        searchEndTime->setStyleSheet("QDateTimeEdit {font:40px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchEndTime->setStyleSheet("QDateTimeEdit {font:39px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     }
 
     labelFilter = new QLabel(tr("Filter:"));
@@ -634,16 +634,16 @@ void EventLogPage::resetSearch()
     if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
     {
         searchStartTime->setDisplayFormat("yyyy.MM.dd hh:mm AP");
-        searchStartTime->setStyleSheet("QDateTimeEdit {font:33px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchStartTime->setStyleSheet("QDateTimeEdit {font:32px; selection-color:white; selection-background-color:rgb(152,14,69);}");
         searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm AP");
-        searchEndTime->setStyleSheet("QDateTimeEdit {font:33px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchEndTime->setStyleSheet("QDateTimeEdit {font:32px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     }
     else                                                            //24H
     {
         searchStartTime->setDisplayFormat("yyyy.MM.dd hh:mm");
-        searchStartTime->setStyleSheet("QDateTimeEdit {font:40px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchStartTime->setStyleSheet("QDateTimeEdit {font:39px; selection-color:white; selection-background-color:rgb(152,14,69);}");
         searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm");
-        searchEndTime->setStyleSheet("QDateTimeEdit {font:40px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchEndTime->setStyleSheet("QDateTimeEdit {font:39px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     }
 
     logCount=0;
