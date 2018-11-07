@@ -32,11 +32,20 @@ RtcSetDialog::RtcSetDialog(QWidget *parent)
     }
 #endif
 
-    dateTimeRtc->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
+    if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
+    {
+        dateTimeRtc->setDisplayFormat("yyyy/MM/dd hh:mm:ss AP");
+        dateTimeRtc->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+    }
+    else
+    {
+        dateTimeRtc->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
+        dateTimeRtc->setStyleSheet("QDateTimeEdit {font:55px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+    }
+
     dateTimeRtc->setDateTime(QDateTime::currentDateTime());
     dateTimeRtc->setAlignment(Qt::AlignCenter);
     dateTimeRtc->setDateRange(QDate(ver_get_ref_year(),1,1),QDate(MAX_YEAR-1,12,31));
-    dateTimeRtc->setStyleSheet("QDateTimeEdit {font:56px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     dateTimeRtc->setWrapping(true);
     dateTimeRtc->installEventFilter(this);
     dateTimeRtc->setContextMenuPolicy(Qt::NoContextMenu);
