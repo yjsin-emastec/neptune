@@ -354,7 +354,7 @@ void MainWidget::onSaveSystemPage(int type, int val)
     {
         operationMode = OPMODE_NONE;
         SetOperationMode(operationMode);
-        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Load Config andThen Reboot");
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Load Config and Then Reboot");
         sync(); sync(); sync();
         this->Delay(3000);
         ParkingSystem();
