@@ -2017,7 +2017,7 @@ Please try again.</source>
     <message>
         <location filename="../../../../test/macdialog.ui" line="73"/>
         <source>All Clear</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">クリア</translation>
     </message>
     <message>
         <location filename="../../../../test/macdialog.ui" line="124"/>
@@ -2208,8 +2208,8 @@ Mute</source>
         <location filename="../../../../main/maineventproc.cpp" line="715"/>
         <location filename="../../../../main/maineventproc.cpp" line="716"/>
         <location filename="../../../../main/maineventproc.cpp" line="738"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
-        <location filename="../../../../main/maininitsys.cpp" line="297"/>
+        <location filename="../../../../main/maininitsys.cpp" line="229"/>
+        <location filename="../../../../main/maininitsys.cpp" line="300"/>
         <source>%1
 
 %2
@@ -2231,7 +2231,7 @@ Mute</source>
         <location filename="../../../../main/maineventproc.cpp" line="738"/>
         <location filename="../../../../main/maineventproc.cpp" line="769"/>
         <location filename="../../../../main/maininitsys.cpp" line="178"/>
-        <location filename="../../../../main/maininitsys.cpp" line="247"/>
+        <location filename="../../../../main/maininitsys.cpp" line="250"/>
         <source>System will restart.</source>
         <translation>システムが再起動します。</translation>
     </message>
@@ -2254,11 +2254,11 @@ Mute</source>
         <location filename="../../../../main/maineventproc.cpp" line="766"/>
         <location filename="../../../../main/maininitsys.cpp" line="144"/>
         <location filename="../../../../main/maininitsys.cpp" line="207"/>
-        <location filename="../../../../main/maininitsys.cpp" line="214"/>
-        <location filename="../../../../main/maininitsys.cpp" line="220"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
-        <location filename="../../../../main/maininitsys.cpp" line="292"/>
-        <location filename="../../../../main/maininitsys.cpp" line="297"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="229"/>
+        <location filename="../../../../main/maininitsys.cpp" line="295"/>
+        <location filename="../../../../main/maininitsys.cpp" line="300"/>
         <source>WARNING</source>
         <translation>警告</translation>
     </message>
@@ -2294,7 +2294,7 @@ Mute</source>
         <location filename="../../../../main/maineventproc.cpp" line="1385"/>
         <location filename="../../../../main/maineventproc.cpp" line="1425"/>
         <location filename="../../../../main/maininitsys.cpp" line="178"/>
-        <location filename="../../../../main/maininitsys.cpp" line="247"/>
+        <location filename="../../../../main/maininitsys.cpp" line="250"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
         <location filename="../../../../main/mainscreen.cpp" line="197"/>
         <source>NOTICE</source>
@@ -2359,19 +2359,19 @@ Current status is trigger.</source>
         <location filename="../../../../main/maininitsys.cpp" line="144"/>
         <location filename="../../../../main/maininitsys.cpp" line="178"/>
         <location filename="../../../../main/maininitsys.cpp" line="207"/>
-        <location filename="../../../../main/maininitsys.cpp" line="214"/>
-        <location filename="../../../../main/maininitsys.cpp" line="220"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
-        <location filename="../../../../main/maininitsys.cpp" line="247"/>
-        <location filename="../../../../main/maininitsys.cpp" line="292"/>
-        <location filename="../../../../main/maininitsys.cpp" line="297"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="229"/>
+        <location filename="../../../../main/maininitsys.cpp" line="250"/>
+        <location filename="../../../../main/maininitsys.cpp" line="295"/>
+        <location filename="../../../../main/maininitsys.cpp" line="300"/>
         <source>STORAGE FORMAT</source>
         <translation>ストレージ フォーマット</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="214"/>
-        <location filename="../../../../main/maininitsys.cpp" line="220"/>
-        <location filename="../../../../main/maininitsys.cpp" line="292"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="295"/>
         <source>%1
 
 %2 (%3)
@@ -2382,26 +2382,26 @@ Current status is trigger.</source>
 %4 (%3)</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="215"/>
-        <location filename="../../../../main/maininitsys.cpp" line="221"/>
-        <location filename="../../../../main/maininitsys.cpp" line="293"/>
+        <location filename="../../../../main/maininitsys.cpp" line="218"/>
+        <location filename="../../../../main/maininitsys.cpp" line="224"/>
+        <location filename="../../../../main/maininitsys.cpp" line="296"/>
         <source>Storage was not formatted.</source>
         <translation>ストレージがフォーマットされていませんでした。</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="144"/>
-        <location filename="../../../../main/maininitsys.cpp" line="217"/>
-        <location filename="../../../../main/maininitsys.cpp" line="223"/>
-        <location filename="../../../../main/maininitsys.cpp" line="228"/>
-        <location filename="../../../../main/maininitsys.cpp" line="295"/>
-        <location filename="../../../../main/maininitsys.cpp" line="299"/>
+        <location filename="../../../../main/maininitsys.cpp" line="220"/>
+        <location filename="../../../../main/maininitsys.cpp" line="226"/>
+        <location filename="../../../../main/maininitsys.cpp" line="231"/>
+        <location filename="../../../../main/maininitsys.cpp" line="298"/>
+        <location filename="../../../../main/maininitsys.cpp" line="302"/>
         <source>Do you want to format the storage?</source>
         <translation>ストレージをフォーマットしますか？</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="144"/>
         <location filename="../../../../main/maininitsys.cpp" line="178"/>
-        <location filename="../../../../main/maininitsys.cpp" line="247"/>
+        <location filename="../../../../main/maininitsys.cpp" line="250"/>
         <source>%1
 
 %2</source>
@@ -2431,36 +2431,36 @@ Current status is trigger.</source>
 %4</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="227"/>
-        <location filename="../../../../main/maininitsys.cpp" line="298"/>
+        <location filename="../../../../main/maininitsys.cpp" line="230"/>
+        <location filename="../../../../main/maininitsys.cpp" line="301"/>
         <source>Storage was not formatted.         </source>
         <translation>ストレージがフォーマットされていませんでした。</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="269"/>
-        <location filename="../../../../main/maininitsys.cpp" line="325"/>
-        <location filename="../../../../main/maininitsys.cpp" line="345"/>
-        <location filename="../../../../main/maininitsys.cpp" line="365"/>
+        <location filename="../../../../main/maininitsys.cpp" line="272"/>
+        <location filename="../../../../main/maininitsys.cpp" line="328"/>
+        <location filename="../../../../main/maininitsys.cpp" line="348"/>
+        <location filename="../../../../main/maininitsys.cpp" line="368"/>
         <source>STORAGE STATUS</source>
         <translation>ストレージ状態</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="269"/>
+        <location filename="../../../../main/maininitsys.cpp" line="272"/>
         <source>[5014] Broken Filesystem</source>
         <translation>[5014]壊れたファイルシステム</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="325"/>
+        <location filename="../../../../main/maininitsys.cpp" line="328"/>
         <source>[5042] Data Lost</source>
         <translation>[5042]データが失われました</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="345"/>
+        <location filename="../../../../main/maininitsys.cpp" line="348"/>
         <source>[5070] New HDD Inserted</source>
         <translation>[5070]新しいストレージが挿入されました</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="365"/>
+        <location filename="../../../../main/maininitsys.cpp" line="368"/>
         <source>[5072] Slave HDD Changed</source>
         <translation>[5072] 補助記憶装置が変更されました</translation>
     </message>
@@ -4494,7 +4494,7 @@ If yes, system will restart.
         <location filename="../../../../textmessagebox/textmessagedialog.cpp" line="219"/>
         <source> &apos;%1&apos; detached.
 </source>
-        <translation>&apos;％1&apos;は切り離されました。
+        <translation>&apos;%1&apos;は切り離されました。
 </translation>
     </message>
     <message>
@@ -4503,8 +4503,8 @@ If yes, system will restart.
         <source> &apos;%1&apos; detached.
  &apos;%2&apos; detached.
 </source>
-        <translation>&apos;％1&apos;は切り離されました。
-&apos;％2&apos;は切り離されました。
+        <translation>&apos;%1&apos;は切り離されました。
+&apos;%2&apos;は切り離されました。
 </translation>
     </message>
     <message>
@@ -4514,9 +4514,9 @@ If yes, system will restart.
  &apos;%2&apos; detached.
  &apos;%3&apos; detached.
 </source>
-        <translation>&apos;％1&apos;は切り離されました。
-&apos;％2&apos;は切り離されました。
-&apos;％3&apos;は切り離されました。
+        <translation>&apos;%1&apos;は切り離されました。
+&apos;%2&apos;は切り離されました。
+&apos;%3&apos;は切り離されました。
 </translation>
     </message>
     <message>
@@ -4527,10 +4527,10 @@ If yes, system will restart.
  &apos;%3&apos; detached.
  &apos;%4&apos; detached.
 </source>
-        <translation>&apos;％1&apos;は切り離されました。
-&apos;％2&apos;は切り離されました。
-&apos;％3&apos;は切り離されました。
-&apos;％4&apos;は切り離されました。
+        <translation>&apos;%1&apos;は切り離されました。
+&apos;%2&apos;は切り離されました。
+&apos;%3&apos;は切り離されました。
+&apos;%4&apos;は切り離されました。
 </translation>
     </message>
     <message>
@@ -4542,11 +4542,11 @@ If yes, system will restart.
  &apos;%4&apos; detached.
  &apos;%5&apos; detached.
 </source>
-        <translation>&apos;％1&apos;は切り離されました。
-&apos;％2&apos;は切り離されました。
-&apos;％3&apos;は切り離されました。
-&apos;％4&apos;は切り離されました。
-&apos;％5&apos;は切り離されました。
+        <translation>&apos;%1&apos;は切り離されました。
+&apos;%2&apos;は切り離されました。
+&apos;%3&apos;は切り離されました。
+&apos;%4&apos;は切り離されました。
+&apos;%5&apos;は切り離されました。
 </translation>
     </message>
     <message>
@@ -4559,12 +4559,12 @@ If yes, system will restart.
  &apos;%5&apos; detached.
  &apos;%6&apos; detached.
 </source>
-        <translation>&apos;％1&apos;は切り離されました。
-&apos;％2&apos;は切り離されました。
-&apos;％3&apos;は切り離されました。
-&apos;％4&apos;は切り離されました。
-&apos;％5&apos;は切り離されました。
-&apos;％6&apos;は切り離されました。
+        <translation>&apos;%1&apos;は切り離されました。
+&apos;%2&apos;は切り離されました。
+&apos;%3&apos;は切り離されました。
+&apos;%4&apos;は切り離されました。
+&apos;%5&apos;は切り離されました。
+&apos;%6&apos;は切り離されました。
 </translation>
     </message>
     <message>
@@ -4578,13 +4578,13 @@ If yes, system will restart.
  &apos;%6&apos; detached.
  &apos;%7&apos; detached.
 </source>
-        <translation>&apos;％1&apos;は切り離されました。
-&apos;％2&apos;は切り離されました。
-&apos;％3&apos;は切り離されました。
-&apos;％4&apos;は切り離されました。
-&apos;％5&apos;は切り離されました。
-&apos;％6&apos;は切り離されました。
-&apos;％7&apos;は切り離されました。
+        <translation>&apos;%1&apos;は切り離されました。
+&apos;%2&apos;は切り離されました。
+&apos;%3&apos;は切り離されました。
+&apos;%4&apos;は切り離されました。
+&apos;%5&apos;は切り離されました。
+&apos;%6&apos;は切り離されました。
+&apos;%7&apos;は切り離されました。
 </translation>
     </message>
     <message>
@@ -4599,14 +4599,14 @@ If yes, system will restart.
  &apos;%7&apos; detached.
  &apos;%8&apos; detached.
 </source>
-        <translation>&apos;％1&apos;は切り離されました。
-&apos;％2&apos;は切り離されました。
-&apos;％3&apos;は切り離されました。
-&apos;％4&apos;は切り離されました。
-&apos;％5&apos;は切り離されました。
-&apos;％6&apos;は切り離されました。
-&apos;％7&apos;は切り離されました。
-&apos;％8&apos;は切り離されました。
+        <translation>&apos;%1&apos;は切り離されました。
+&apos;%2&apos;は切り離されました。
+&apos;%3&apos;は切り離されました。
+&apos;%4&apos;は切り離されました。
+&apos;%5&apos;は切り離されました。
+&apos;%6&apos;は切り離されました。
+&apos;%7&apos;は切り離されました。
+&apos;%8&apos;は切り離されました。
 </translation>
     </message>
     <message>
@@ -4799,7 +4799,7 @@ You must delete data or set time.</source>
         <translation>				%1
 
 %2
-%3 </translation>
+%3</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="265"/>
@@ -6935,7 +6935,7 @@ You must delete data or set time.</source>
         <source>%1
  %2 </source>
         <translation>%1
- %2</translation>
+ %2 </translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="384"/>
@@ -6976,7 +6976,7 @@ Width pixel should be over %1.
         <translation>
 はば値を確認してください！
 
-幅を％1以下に設定する必要があります。</translation>
+はばを%1以上に設定する必要があります。</translation>
     </message>
     <message>
         <location filename="../../../display/videooutput/videooutputdialog.cpp" line="414"/>
@@ -6988,7 +6988,7 @@ Height pixel should be over %1.
         <translation>
 たかさの値をチェックしてください！
 
-たかさを％1以下に設定する必要があります。</translation>
+たかさを%1以上に設定する必要があります。</translation>
     </message>
     <message>
         <source>

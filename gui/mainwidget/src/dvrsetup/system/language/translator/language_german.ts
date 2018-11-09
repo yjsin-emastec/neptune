@@ -2253,8 +2253,8 @@ Stumm</translation>
         <location filename="../../../../main/maineventproc.cpp" line="715"/>
         <location filename="../../../../main/maineventproc.cpp" line="716"/>
         <location filename="../../../../main/maineventproc.cpp" line="738"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
-        <location filename="../../../../main/maininitsys.cpp" line="297"/>
+        <location filename="../../../../main/maininitsys.cpp" line="229"/>
+        <location filename="../../../../main/maininitsys.cpp" line="300"/>
         <source>%1
 
 %2
@@ -2275,7 +2275,7 @@ Stumm</translation>
         <location filename="../../../../main/maineventproc.cpp" line="738"/>
         <location filename="../../../../main/maineventproc.cpp" line="769"/>
         <location filename="../../../../main/maininitsys.cpp" line="178"/>
-        <location filename="../../../../main/maininitsys.cpp" line="247"/>
+        <location filename="../../../../main/maininitsys.cpp" line="250"/>
         <source>System will restart.</source>
         <translation>System wird neu gestartet.</translation>
     </message>
@@ -2327,11 +2327,11 @@ Stumm</translation>
         <location filename="../../../../main/maineventproc.cpp" line="766"/>
         <location filename="../../../../main/maininitsys.cpp" line="144"/>
         <location filename="../../../../main/maininitsys.cpp" line="207"/>
-        <location filename="../../../../main/maininitsys.cpp" line="214"/>
-        <location filename="../../../../main/maininitsys.cpp" line="220"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
-        <location filename="../../../../main/maininitsys.cpp" line="292"/>
-        <location filename="../../../../main/maininitsys.cpp" line="297"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="229"/>
+        <location filename="../../../../main/maininitsys.cpp" line="295"/>
+        <location filename="../../../../main/maininitsys.cpp" line="300"/>
         <source>WARNING</source>
         <translation>WARNUNG</translation>
     </message>
@@ -2367,7 +2367,7 @@ Stumm</translation>
         <location filename="../../../../main/maineventproc.cpp" line="1385"/>
         <location filename="../../../../main/maineventproc.cpp" line="1425"/>
         <location filename="../../../../main/maininitsys.cpp" line="178"/>
-        <location filename="../../../../main/maininitsys.cpp" line="247"/>
+        <location filename="../../../../main/maininitsys.cpp" line="250"/>
         <location filename="../../../../main/mainscreen.cpp" line="144"/>
         <location filename="../../../../main/mainscreen.cpp" line="197"/>
         <source>NOTICE</source>
@@ -2432,19 +2432,19 @@ Aktueller Status ist TRIGGER.</translation>
         <location filename="../../../../main/maininitsys.cpp" line="144"/>
         <location filename="../../../../main/maininitsys.cpp" line="178"/>
         <location filename="../../../../main/maininitsys.cpp" line="207"/>
-        <location filename="../../../../main/maininitsys.cpp" line="214"/>
-        <location filename="../../../../main/maininitsys.cpp" line="220"/>
-        <location filename="../../../../main/maininitsys.cpp" line="226"/>
-        <location filename="../../../../main/maininitsys.cpp" line="247"/>
-        <location filename="../../../../main/maininitsys.cpp" line="292"/>
-        <location filename="../../../../main/maininitsys.cpp" line="297"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="229"/>
+        <location filename="../../../../main/maininitsys.cpp" line="250"/>
+        <location filename="../../../../main/maininitsys.cpp" line="295"/>
+        <location filename="../../../../main/maininitsys.cpp" line="300"/>
         <source>STORAGE FORMAT</source>
         <translation>Speicher FORMAT</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="214"/>
-        <location filename="../../../../main/maininitsys.cpp" line="220"/>
-        <location filename="../../../../main/maininitsys.cpp" line="292"/>
+        <location filename="../../../../main/maininitsys.cpp" line="217"/>
+        <location filename="../../../../main/maininitsys.cpp" line="223"/>
+        <location filename="../../../../main/maininitsys.cpp" line="295"/>
         <source>%1
 
 %2 (%3)
@@ -2455,26 +2455,26 @@ Aktueller Status ist TRIGGER.</translation>
 %4</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="215"/>
-        <location filename="../../../../main/maininitsys.cpp" line="221"/>
-        <location filename="../../../../main/maininitsys.cpp" line="293"/>
+        <location filename="../../../../main/maininitsys.cpp" line="218"/>
+        <location filename="../../../../main/maininitsys.cpp" line="224"/>
+        <location filename="../../../../main/maininitsys.cpp" line="296"/>
         <source>Storage was not formatted.</source>
         <translation>Speicher wurde nicht formatiert.</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="144"/>
-        <location filename="../../../../main/maininitsys.cpp" line="217"/>
-        <location filename="../../../../main/maininitsys.cpp" line="223"/>
-        <location filename="../../../../main/maininitsys.cpp" line="228"/>
-        <location filename="../../../../main/maininitsys.cpp" line="295"/>
-        <location filename="../../../../main/maininitsys.cpp" line="299"/>
+        <location filename="../../../../main/maininitsys.cpp" line="220"/>
+        <location filename="../../../../main/maininitsys.cpp" line="226"/>
+        <location filename="../../../../main/maininitsys.cpp" line="231"/>
+        <location filename="../../../../main/maininitsys.cpp" line="298"/>
+        <location filename="../../../../main/maininitsys.cpp" line="302"/>
         <source>Do you want to format the storage?</source>
         <translation>Möchten Sie den Speicher formatieren?</translation>
     </message>
     <message>
         <location filename="../../../../main/maininitsys.cpp" line="144"/>
         <location filename="../../../../main/maininitsys.cpp" line="178"/>
-        <location filename="../../../../main/maininitsys.cpp" line="247"/>
+        <location filename="../../../../main/maininitsys.cpp" line="250"/>
         <source>%1
 
 %2</source>
@@ -2504,36 +2504,36 @@ Aktueller Status ist TRIGGER.</translation>
 %4</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="227"/>
-        <location filename="../../../../main/maininitsys.cpp" line="298"/>
+        <location filename="../../../../main/maininitsys.cpp" line="230"/>
+        <location filename="../../../../main/maininitsys.cpp" line="301"/>
         <source>Storage was not formatted.         </source>
         <translation>Speicher wurde nicht formatiert. </translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="269"/>
-        <location filename="../../../../main/maininitsys.cpp" line="325"/>
-        <location filename="../../../../main/maininitsys.cpp" line="345"/>
-        <location filename="../../../../main/maininitsys.cpp" line="365"/>
+        <location filename="../../../../main/maininitsys.cpp" line="272"/>
+        <location filename="../../../../main/maininitsys.cpp" line="328"/>
+        <location filename="../../../../main/maininitsys.cpp" line="348"/>
+        <location filename="../../../../main/maininitsys.cpp" line="368"/>
         <source>STORAGE STATUS</source>
         <translation>SPEICHER STATUS</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="269"/>
+        <location filename="../../../../main/maininitsys.cpp" line="272"/>
         <source>[5014] Broken Filesystem</source>
         <translation>[5014] Broken File System</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="325"/>
+        <location filename="../../../../main/maininitsys.cpp" line="328"/>
         <source>[5042] Data Lost</source>
         <translation>[5042] Daten Verloren</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="345"/>
+        <location filename="../../../../main/maininitsys.cpp" line="348"/>
         <source>[5070] New HDD Inserted</source>
         <translation>[5070] Neuer Speicher Eingefügt</translation>
     </message>
     <message>
-        <location filename="../../../../main/maininitsys.cpp" line="365"/>
+        <location filename="../../../../main/maininitsys.cpp" line="368"/>
         <source>[5072] Slave HDD Changed</source>
         <translation>[5072] Slave-Speicher Geändert</translation>
     </message>
