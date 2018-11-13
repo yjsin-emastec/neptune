@@ -759,11 +759,22 @@ void SystemLogPage::KeyPressEvent(int key)
         }
         case Qt::Key_PageUp:
         {
-            if( buttonPageUp->isEnabled() ) { onButtonPageUp(); } break;
+            if( buttonPageUp->isEnabled() )
+            {
+                onButtonPageUp();
+                buttonPageUp->setFocus();
+            }
+            break;
         }
         case Qt::Key_PageDown:
         {
-            if( buttonPageDn->isEnabled() ) { onButtonPageDn(); } break;
+            if( buttonPageDn->isEnabled() )
+            {
+                onButtonPageDn();
+                buttonPageDn->setFocus();
+            }
+            break;
+
         }
 
         default:
