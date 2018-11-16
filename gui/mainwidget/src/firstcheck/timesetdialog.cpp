@@ -38,7 +38,9 @@ TimeSetDialog::TimeSetDialog(QWidget *parent)
     labelSystemTime2->setStyleSheet("font:44px;color:white");
     labelSystemTime2->setAlignment(Qt::AlignCenter);
 
-    dateTimeSystem->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
+    if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)     { dateTimeSystem->setDisplayFormat("yyyy/MM/dd hh:mm:ss AP"); }    //12H
+    else                                                             { dateTimeSystem->setDisplayFormat("yyyy/MM/dd hh:mm:ss");    }    //24H
+
     dateTimeSystem->setDateTime(QDateTime::currentDateTime());
     dateTimeSystem->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
     dateTimeSystem->setDateRange(QDate(ver_get_ref_year(),1,1),QDate(MAX_YEAR-1,12,31));
@@ -105,8 +107,25 @@ void TimeSetDialog::DisplayRecordTime(void)
     memset(FirstDate, 0, 30);
     memset(LastDate, 0, 30);
 
-    sprintf(FirstDate, "%d/%02d/%02d %02d:%02d:%02d", tmFirst.tm_year+1900, tmFirst.tm_mon+1, tmFirst.tm_mday, tmFirst.tm_hour, tmFirst.tm_min, tmFirst.tm_sec);
-    sprintf(LastDate, "%d/%02d/%02d %02d:%02d:%02d", tmLast.tm_year+1900, tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
+    char *AMPM = " ";
+    int firstHour = tmFirst.tm_hour;
+    int lastHour= tmLast.tm_hour;
+
+    if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
+    {
+        if( tmFirst.tm_hour == 0 )          { firstHour=tmFirst.tm_hour+12;     AMPM=" AM"; }
+        else if( tmFirst.tm_hour == 12 )    { firstHour=tmFirst.tm_hour;        AMPM=" PM"; }
+        else if( tmFirst.tm_hour > 12 )     { firstHour=tmFirst.tm_hour-12;     AMPM=" PM"; }
+        else                                { firstHour=tmFirst.tm_hour;        AMPM=" AM"; }
+
+        if( tmLast.tm_hour == 0 )           { lastHour=tmLast.tm_hour+12;       AMPM=" AM"; }
+        else if( tmLast.tm_hour == 12 )     { lastHour=tmLast.tm_hour;          AMPM=" PM"; }
+        else if( tmLast.tm_hour > 12 )      { lastHour=tmLast.tm_hour-12;       AMPM=" PM"; }
+        else                                { lastHour=tmLast.tm_hour;          AMPM=" AM"; }
+    }
+
+    sprintf(FirstDate, "%d/%02d/%02d %02d:%02d:%02d%s", tmFirst.tm_year+1900, tmFirst.tm_mon+1, tmFirst.tm_mday, firstHour, tmFirst.tm_min, tmFirst.tm_sec, AMPM);
+    sprintf(LastDate,  "%d/%02d/%02d %02d:%02d:%02d%s", tmLast.tm_year+1900,  tmLast.tm_mon+1,  tmLast.tm_mday,  lastHour,  tmLast.tm_min,  tmLast.tm_sec,  AMPM);
 
     strFirst += QString::fromAscii(FirstDate);
     strLast  += QString::fromAscii(LastDate);
