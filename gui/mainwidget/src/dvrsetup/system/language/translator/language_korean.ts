@@ -2821,450 +2821,246 @@ No Disk
         <translation>일반 녹화 속성</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.ui" line="35"/>
         <source>Frame Rate
 5/15/20/25/30 Fps</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>프레임
+        <translation type="obsolete">프레임
 5/15/20/25/30 Fps</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.ui" line="49"/>
         <source>Channel
 1/2/3/4/</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>채널
+        <translation type="obsolete">채널
 1/2/3/4</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.ui" line="66"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="802"/>
         <source>Default</source>
         <translation>기본값</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.ui" line="82"/>
         <source>Recording
 Off/On</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>녹화
+        <translation type="obsolete">녹화
 끄기/켜기</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.ui" line="96"/>
         <source>Quality
 L/M/H</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>화질
+        <translation type="obsolete">화질
 고/중/저</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.ui" line="110"/>
         <source>Audio
 Off/On</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>오디오
+        <translation type="obsolete">오디오
 끄기/켜기</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.ui" line="127"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="54"/>
         <source>Save</source>
         <translation>저장</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.ui" line="140"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="41"/>
         <source>Cancel</source>
         <translation>취소</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="31"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="44"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="45"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="46"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="62"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="63"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="64"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="65"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="66"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="94"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="95"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="96"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="100"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="101"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="105"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="106"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="134"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="135"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="136"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="140"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="141"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="145"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="146"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="231"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="232"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="233"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="245"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="246"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="247"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="263"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="264"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="276"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="277"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="293"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="294"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="306"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="307"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="326"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="327"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="328"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="338"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="339"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="340"/>
         <source>%1
 %2</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>%1
+        <translation type="obsolete">%1
 %2</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="31"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="62"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="63"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="64"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="65"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="66"/>
         <source>Channel</source>
-        <translation>채널</translation>
+        <translation type="obsolete">채널</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="66"/>
         <source>1</source>
-        <translation>1</translation>
+        <translation type="obsolete">1</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="35"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="36"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="37"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="38"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="39"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="40"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="85"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="86"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="87"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="88"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="89"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="90"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="125"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="126"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="127"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="128"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="129"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="130"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="180"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="181"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="182"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="183"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="184"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="185"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="209"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="210"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="211"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="212"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="213"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="214"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="317"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="318"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="319"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="320"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="321"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="322"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="345"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="349"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="353"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="358"/>
         <source>%1
 %2 %3</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>%1
+        <translation type="obsolete">%1
 %2 %3</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="31"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="62"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="70"/>
         <source>All</source>
         <translation>전체</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="35"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="36"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="37"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="38"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="39"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="40"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="85"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="86"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="87"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="88"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="89"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="90"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="125"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="126"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="127"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="128"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="129"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="130"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="180"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="181"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="182"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="183"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="184"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="185"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="209"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="210"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="211"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="212"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="213"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="214"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="317"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="318"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="319"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="320"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="321"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="322"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="345"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="349"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="353"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="358"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="89"/>
+        <source>Ch.1</source>
+        <translation>채널1</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/normaldialog.ui" line="108"/>
+        <source>Ch.3</source>
+        <translation>채널3</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/normaldialog.ui" line="127"/>
+        <source>Ch.2</source>
+        <translation>채널2</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/normaldialog.ui" line="146"/>
+        <source>Ch.4</source>
+        <translation>채널4</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/normaldialog.ui" line="184"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="279"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="298"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="336"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="374"/>
         <source>Frame Rate</source>
         <translation>프레임</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="35"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="85"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="125"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="180"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="209"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="317"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="542"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="594"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="607"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="620"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="633"/>
+        <source>Frame</source>
+        <translation>프레임</translation>
+    </message>
+    <message>
+        <location filename="../../../record/normal/normaldialog.ui" line="815"/>
+        <source>Reload</source>
+        <translation>되돌리기</translation>
+    </message>
+    <message>
         <source> 5</source>
-        <translation> 5</translation>
+        <translation type="obsolete"> 5</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="35"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="36"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="37"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="38"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="39"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="40"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="85"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="86"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="87"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="88"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="89"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="90"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="125"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="126"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="127"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="128"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="129"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="130"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="180"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="181"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="182"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="183"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="184"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="185"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="209"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="210"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="211"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="212"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="213"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="214"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="317"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="318"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="319"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="320"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="321"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="322"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="345"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="349"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="353"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="358"/>
         <source>Fps</source>
-        <translation>Fps</translation>
+        <translation type="obsolete">Fps</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="36"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="86"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="126"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="181"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="210"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="318"/>
         <source>10</source>
-        <translation>10</translation>
+        <translation type="obsolete">10</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="37"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="87"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="127"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="182"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="211"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="319"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="345"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="358"/>
         <source>15</source>
-        <translation>15</translation>
+        <translation type="obsolete">15</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="38"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="88"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="128"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="183"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="212"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="320"/>
         <source>20</source>
-        <translation>20</translation>
+        <translation type="obsolete">20</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="39"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="89"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="129"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="184"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="213"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="321"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="349"/>
         <source>25</source>
-        <translation>25</translation>
+        <translation type="obsolete">25</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="40"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="90"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="130"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="185"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="214"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="322"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="353"/>
         <source>30</source>
-        <translation>30</translation>
+        <translation type="obsolete">30</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="44"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="94"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="95"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="96"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="134"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="135"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="136"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="231"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="232"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="233"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="245"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="246"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="247"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="326"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="338"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="203"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="317"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="412"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="431"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="507"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="555"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="646"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="659"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="672"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="685"/>
         <source>Quality</source>
         <translation>품질</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="94"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="134"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="231"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="245"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="135"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="425"/>
         <source>Low</source>
         <translation>낮음</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="95"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="135"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="232"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="246"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="136"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="426"/>
         <source>Middle</source>
         <translation>보통</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="44"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="96"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="136"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="233"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="247"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="326"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="338"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="137"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="138"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="427"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="428"/>
         <source>High</source>
         <translation>높음</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="45"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="100"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="101"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="140"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="141"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="263"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="264"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="276"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="277"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="327"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="339"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="222"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="241"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="260"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="393"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="526"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="568"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="698"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="711"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="724"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="737"/>
         <source>Recording</source>
         <translation>녹화</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="100"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="105"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="140"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="145"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="263"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="276"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="293"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="306"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="142"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="148"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="498"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="569"/>
         <source>Off</source>
         <translation>끄기</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="45"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="46"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="101"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="106"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="141"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="146"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="264"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="277"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="294"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="307"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="327"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="328"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="339"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="340"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="143"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="144"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="149"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="150"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="499"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="500"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="570"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="571"/>
         <source>On</source>
         <translation>켜기</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="46"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="105"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="106"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="145"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="146"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="293"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="294"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="306"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="307"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="328"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="340"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="165"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="355"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="450"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="469"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="488"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="581"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="750"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="763"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="776"/>
+        <location filename="../../../record/normal/normaldialog.ui" line="789"/>
         <source>Audio</source>
         <translation>녹음</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="63"/>
         <source>2</source>
-        <translation>2</translation>
+        <translation type="obsolete">2</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="64"/>
         <source>3</source>
-        <translation>3</translation>
+        <translation type="obsolete">3</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="65"/>
         <source>4</source>
-        <translation>4</translation>
+        <translation type="obsolete">4</translation>
     </message>
 </context>
 <context>
@@ -3876,102 +3672,68 @@ AutoHide: </source>
 <context>
     <name>RecordStatus</name>
     <message>
-        <location filename="../../../record/normal/recordstatus.ui" line="14"/>
         <source>Dialog</source>
-        <translation>대화상자</translation>
+        <translation type="obsolete">대화상자</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.ui" line="41"/>
         <source>Close</source>
-        <translation>닫기</translation>
+        <translation type="obsolete">닫기</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.ui" line="57"/>
         <source>Record Status</source>
-        <translation>녹화 상태</translation>
+        <translation type="obsolete">녹화 상태</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.ui" line="95"/>
         <source>Ch.1</source>
-        <translation>채널1</translation>
+        <translation type="obsolete">채널1</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.ui" line="114"/>
         <source>Ch.2</source>
-        <translation>채널2</translation>
+        <translation type="obsolete">채널2</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.ui" line="133"/>
         <source>Ch.3</source>
-        <translation>채널3</translation>
+        <translation type="obsolete">채널3</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.ui" line="152"/>
         <source>Ch.4</source>
-        <translation>채널4</translation>
+        <translation type="obsolete">채널4</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.ui" line="171"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="247"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="266"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="285"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="304"/>
         <source>Frame Rate</source>
-        <translation>프레임</translation>
+        <translation type="obsolete">프레임</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.ui" line="190"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="323"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="342"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="361"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="380"/>
         <source>Quality</source>
-        <translation>품질</translation>
+        <translation type="obsolete">품질</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.ui" line="209"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="399"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="418"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="437"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="456"/>
         <source>Recording</source>
-        <translation>녹화</translation>
+        <translation type="obsolete">녹화</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.ui" line="228"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="475"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="494"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="513"/>
-        <location filename="../../../record/normal/recordstatus.ui" line="532"/>
         <source>Audio</source>
-        <translation>녹음</translation>
+        <translation type="obsolete">녹음</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.cpp" line="72"/>
         <source>Low</source>
-        <translation>낮음</translation>
+        <translation type="obsolete">낮음</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.cpp" line="73"/>
         <source>Middle</source>
-        <translation>보통</translation>
+        <translation type="obsolete">보통</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.cpp" line="74"/>
         <source>High</source>
-        <translation>높음</translation>
+        <translation type="obsolete">높음</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.cpp" line="78"/>
-        <location filename="../../../record/normal/recordstatus.cpp" line="83"/>
         <source>Off</source>
-        <translation>끄기</translation>
+        <translation type="obsolete">끄기</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/recordstatus.cpp" line="79"/>
-        <location filename="../../../record/normal/recordstatus.cpp" line="84"/>
         <source>On</source>
-        <translation>켜기</translation>
+        <translation type="obsolete">켜기</translation>
     </message>
 </context>
 <context>
@@ -5117,7 +4879,7 @@ You must delete data or set time.</source>
         <translation>데이터 삭제</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="137"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="156"/>
         <source>%1
 %2</source>
         <translatorcomment>표시 안됨</translatorcomment>
@@ -5125,28 +4887,28 @@ You must delete data or set time.</source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="137"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="156"/>
         <source>System is deleting data.</source>
         <translation>데이터를 삭제하는 중입니다.</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="137"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="156"/>
         <source>Do not turn off system.</source>
         <translation>시스템을 끄지 마십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="164"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="183"/>
         <source>%1</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>%1</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="164"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="183"/>
         <source>Completion</source>
         <translation>완료</translation>
     </message>
     <message>
-        <location filename="../../../../firstcheck/timesetdialog.cpp" line="250"/>
+        <location filename="../../../../firstcheck/timesetdialog.cpp" line="269"/>
         <source>System Time must be later than record last time.</source>
         <translation>시스템 시간이 마지막 시간보다 나중이여야 합니다.</translation>
     </message>

@@ -6,7 +6,6 @@
 
 class NormalDialog;
 class EventDialog;
-class RecordStatus;
 
 class RecordPage : public QWidget, public Ui::RecordPage
 {
@@ -32,7 +31,6 @@ private slots:
 private:
 	NormalDialog *normalDialog;
 	EventDialog  *eventDialog;
-    RecordStatus *recordStatus;
 };
 
 #endif // RECORDPAGE_H
