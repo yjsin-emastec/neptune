@@ -4431,7 +4431,7 @@ Se sim, o sistema reiniciará.</translation>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="119"/>
         <source>System time is different from recording time.
 You must delete data or set time.</source>
-        <translation>O sistema tempo é diferente do gravação tempo.
+        <translation>Sistema tempo é diferente do gravação tempo.
 Você deve excluir dados ou definir tempo.</translation>
     </message>
     <message>
@@ -4491,7 +4491,8 @@ Você deve excluir dados ou definir tempo.</translation>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.cpp" line="269"/>
         <source>System Time must be later than record last time.</source>
-        <translation>Sistema tempo deve ser posterior à última hora.</translation>
+        <translation>Sistema tempo deve ser posterior
+à última hora.</translation>
     </message>
 </context>
 <context>

@@ -4849,7 +4849,7 @@ If yes, system will restart.
         <source>System time is different from recording time.
 You must delete data or set time.</source>
         <translation>시스템 시간이 녹화된 시간과 다릅니다.
-미래데이터를 삭제하거나 시간을 재설정해야합니다. </translation>
+미래데이터를 삭제하거나 시간을 재설정해야합니다.</translation>
     </message>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="143"/>
@@ -4910,7 +4910,8 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.cpp" line="269"/>
         <source>System Time must be later than record last time.</source>
-        <translation>시스템 시간이 마지막 시간보다 나중이여야 합니다.</translation>
+        <translation>시스템 시간을 마지막 저장시간 이후로
+설정해야 합니다.</translation>
     </message>
 </context>
 <context>

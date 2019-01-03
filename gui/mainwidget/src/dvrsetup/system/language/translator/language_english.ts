@@ -3890,7 +3890,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../firstcheck/timesetdialog.cpp" line="269"/>
         <source>System Time must be later than record last time.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">System Time must be later than last time.</translation>
     </message>
 </context>
 <context>

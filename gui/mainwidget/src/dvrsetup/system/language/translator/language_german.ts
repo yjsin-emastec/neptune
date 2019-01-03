@@ -4527,7 +4527,7 @@ Wenn ja, wird das System neu gestartet.</translation>
         <location filename="../../../../firstcheck/timesetdialog.ui" line="119"/>
         <source>System time is different from recording time.
 You must delete data or set time.</source>
-        <translation>Systemzeit unterscheidet sich von der Rekordzeit.
+        <translation>Systemzeit unterscheidet sich von Rekordzeit.
 Sie müssen Daten löschen oder Zeit einstellen.</translation>
     </message>
     <message>
