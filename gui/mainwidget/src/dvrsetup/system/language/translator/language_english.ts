@@ -100,7 +100,7 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="138"/>
         <source>A file was found.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">File Found.</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="138"/>
@@ -1556,7 +1556,7 @@ Sensitivity</source>
     <message>
         <location filename="../../information/informationdialog.ui" line="121"/>
         <source>License Plate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">License No.</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.ui" line="137"/>
@@ -1760,7 +1760,7 @@ System will restart.</source>
     <message>
         <location filename="../../licenseplate/licenseplatedialog.ui" line="101"/>
         <source>License Plate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">License No.</translation>
     </message>
     <message>
         <location filename="../../licenseplate/licenseplatedialog.ui" line="140"/>
@@ -3561,7 +3561,7 @@ Sort</source>
         <location filename="../../../setup/systempage.ui" line="46"/>
         <source>License
 Plate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">License No.</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.ui" line="77"/>
@@ -5608,7 +5608,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="546"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">←</translation>
     </message>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="584"/>
