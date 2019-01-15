@@ -2337,7 +2337,7 @@ Please try again.</source>
         <source>Audio
 Mute/1/2/3/4</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>오디오
+        <translation>음성출력
 음소거/1/2/3/4</translation>
     </message>
     <message>
@@ -2348,7 +2348,7 @@ Mute/1/2/3/4</source>
     <message>
         <location filename="../../../../main/mainMenu.ui" line="158"/>
         <source>Shutdown</source>
-        <translation>종료</translation>
+        <translation>녹화종료</translation>
     </message>
     <message>
         <location filename="../../../../main/mainMenu.ui" line="183"/>
@@ -2363,7 +2363,7 @@ Mute/1/2/3/4</source>
         <location filename="../../../../main/mainMenu.cpp" line="147"/>
         <source>Audio
 Mute</source>
-        <translation>오디오
+        <translation>음성출력
 음소거</translation>
     </message>
     <message>
@@ -2373,8 +2373,8 @@ Mute</source>
         <location filename="../../../../main/mainMenu.cpp" line="148"/>
         <source>Audio
 1</source>
-        <translation>오디오
-1</translation>
+        <translation>음성출력
+채널 1</translation>
     </message>
     <message>
         <location filename="../../../../main/mainMenu.cpp" line="46"/>
@@ -2383,8 +2383,8 @@ Mute</source>
         <location filename="../../../../main/mainMenu.cpp" line="149"/>
         <source>Audio
 2</source>
-        <translation>오디오
-2</translation>
+        <translation>음성출력
+채널 2</translation>
     </message>
     <message>
         <location filename="../../../../main/mainMenu.cpp" line="47"/>
@@ -2393,8 +2393,8 @@ Mute</source>
         <location filename="../../../../main/mainMenu.cpp" line="150"/>
         <source>Audio
 3</source>
-        <translation>오디오
-3</translation>
+        <translation>음성출력
+채널 3</translation>
     </message>
     <message>
         <location filename="../../../../main/mainMenu.cpp" line="48"/>
@@ -2403,8 +2403,8 @@ Mute</source>
         <location filename="../../../../main/mainMenu.cpp" line="151"/>
         <source>Audio
 4</source>
-        <translation>오디오
-4</translation>
+        <translation>음성출력
+채널 4</translation>
     </message>
 </context>
 <context>
@@ -2774,7 +2774,7 @@ Turn off the power.</source>
 Do you want to shutdown the system?</source>
         <translation>			경고
 
-시스템을 종료하시겠습니까?</translation>
+녹화를 종료하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../../../../main/mainwidget.cpp" line="1347"/>
@@ -5626,7 +5626,7 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="859"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="883"/>
         <source>CAM 1</source>
-        <translation>CAM 1</translation>
+        <translation>채널 1</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="316"/>
@@ -5643,7 +5643,7 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="860"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="884"/>
         <source>CAM 2</source>
-        <translation>CAM 2</translation>
+        <translation>채널 2</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="318"/>
@@ -5660,7 +5660,7 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="861"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="885"/>
         <source>CAM 3</source>
-        <translation>CAM 3</translation>
+        <translation>채널 3</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="320"/>
@@ -5677,7 +5677,7 @@ You must delete data or set time.</source>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="862"/>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="886"/>
         <source>CAM 4</source>
-        <translation>CAM 4</translation>
+        <translation>채널 4</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="322"/>
@@ -6867,21 +6867,22 @@ You must delete data or set time.</source>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="50"/>
         <source>Normal/Mirror</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>반전안함/좌우반전</translation>
+        <translation>좌우 반전
+설정/설정 안함</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="69"/>
         <source>Camera
 1/2/3/4/</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>카메라
-1/2/3/4</translation>
+        <translation>채널 1/2/3/4</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="89"/>
         <source>Up/Down</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>일반/상하반전</translation>
+        <translation>상하 반전
+설정/설정 안함</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="111"/>
@@ -6902,7 +6903,7 @@ You must delete data or set time.</source>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="27"/>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="53"/>
         <source>Camera1</source>
-        <translation>카메라 1</translation>
+        <translation>채널 1</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="31"/>
@@ -6912,7 +6913,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="96"/>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="116"/>
         <source>Normal</source>
-        <translation>반전 안함</translation>
+        <translation>좌우 반전
+설정 안함</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="35"/>
@@ -6922,7 +6924,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="97"/>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="132"/>
         <source>Mirror</source>
-        <translation>좌우 반전</translation>
+        <translation>좌우 반전
+설정</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="40"/>
@@ -6932,7 +6935,8 @@ You must delete data or set time.</source>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="99"/>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="158"/>
         <source>Up</source>
-        <translation>반전 안함</translation>
+        <translation>상하 반전
+설정 안함</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="44"/>
@@ -6942,22 +6946,23 @@ You must delete data or set time.</source>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="100"/>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="173"/>
         <source>Down</source>
-        <translation>상하 반전</translation>
+        <translation>상하 반전
+설정</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="54"/>
         <source>Camera2</source>
-        <translation>카메라 2</translation>
+        <translation>채널 2</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="55"/>
         <source>Camera3</source>
-        <translation>카메라 3</translation>
+        <translation>채널 3</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.cpp" line="56"/>
         <source>Camera4</source>
-        <translation>카메라 4</translation>
+        <translation>채널 4</translation>
     </message>
 </context>
 <context>
