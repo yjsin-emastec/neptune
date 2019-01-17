@@ -1556,7 +1556,7 @@ Sensitivity</source>
     <message>
         <location filename="../../information/informationdialog.ui" line="121"/>
         <source>License Plate</source>
-        <translation type="unfinished">License No.</translation>
+        <translation type="unfinished">License Plate No.</translation>
     </message>
     <message>
         <location filename="../../information/informationdialog.ui" line="137"/>
@@ -1760,7 +1760,7 @@ System will restart.</source>
     <message>
         <location filename="../../licenseplate/licenseplatedialog.ui" line="101"/>
         <source>License Plate</source>
-        <translation type="unfinished">License No.</translation>
+        <translation type="unfinished">License Plate No.</translation>
     </message>
     <message>
         <location filename="../../licenseplate/licenseplatedialog.ui" line="140"/>
@@ -3561,7 +3561,8 @@ Sort</source>
         <location filename="../../../setup/systempage.ui" line="46"/>
         <source>License
 Plate</source>
-        <translation type="unfinished">License No.</translation>
+        <translation type="unfinished">License
+Plate No.</translation>
     </message>
     <message>
         <location filename="../../../setup/systempage.ui" line="77"/>

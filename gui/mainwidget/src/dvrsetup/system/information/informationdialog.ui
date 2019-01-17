@@ -33,7 +33,7 @@
      <rect>
       <x>21</x>
       <y>112</y>
-      <width>350</width>
+      <width>390</width>
       <height>85</height>
      </rect>
     </property>
@@ -62,7 +62,7 @@
      <rect>
       <x>21</x>
       <y>196</y>
-      <width>350</width>
+      <width>390</width>
       <height>85</height>
      </rect>
     </property>
@@ -78,7 +78,7 @@
      <rect>
       <x>21</x>
       <y>280</y>
-      <width>350</width>
+      <width>390</width>
       <height>85</height>
      </rect>
     </property>
@@ -94,7 +94,7 @@
      <rect>
       <x>21</x>
       <y>448</y>
-      <width>350</width>
+      <width>390</width>
       <height>85</height>
      </rect>
     </property>
@@ -110,7 +110,7 @@
      <rect>
       <x>21</x>
       <y>28</y>
-      <width>350</width>
+      <width>390</width>
       <height>85</height>
      </rect>
     </property>
@@ -124,9 +124,9 @@
    <widget class="QLabel" name="labelLicensePlate2">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>410</x>
       <y>28</y>
-      <width>700</width>
+      <width>660</width>
       <height>85</height>
      </rect>
     </property>
@@ -136,13 +136,16 @@
     <property name="text">
      <string>EASTERN</string>
     </property>
+    <property name="margin">
+     <number>20</number>
+    </property>
    </widget>
    <widget class="QLabel" name="labelModelName2">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>410</x>
       <y>112</y>
-      <width>700</width>
+      <width>660</width>
       <height>85</height>
      </rect>
     </property>
@@ -152,13 +155,16 @@
     <property name="text">
      <string>EMS-S10</string>
     </property>
+    <property name="margin">
+     <number>20</number>
+    </property>
    </widget>
    <widget class="QLabel" name="labelVersion2">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>410</x>
       <y>196</y>
-      <width>700</width>
+      <width>660</width>
       <height>85</height>
      </rect>
     </property>
@@ -168,13 +174,16 @@
     <property name="text">
      <string>0.0.0 2016.12.30</string>
     </property>
+    <property name="margin">
+     <number>20</number>
+    </property>
    </widget>
    <widget class="QLabel" name="labelNormalSize2">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>410</x>
       <y>280</y>
-      <width>351</width>
+      <width>331</width>
       <height>85</height>
      </rect>
     </property>
@@ -184,13 +193,16 @@
     <property name="text">
      <string>888 GigaByte</string>
     </property>
+    <property name="margin">
+     <number>20</number>
+    </property>
    </widget>
    <widget class="QLabel" name="labelEventSize2">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>740</x>
       <y>280</y>
-      <width>350</width>
+      <width>330</width>
       <height>85</height>
      </rect>
     </property>
@@ -200,13 +212,16 @@
     <property name="text">
      <string>555 GigaByte</string>
     </property>
+    <property name="margin">
+     <number>20</number>
+    </property>
    </widget>
    <widget class="QLabel" name="labelGps2">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>410</x>
       <y>448</y>
-      <width>700</width>
+      <width>660</width>
       <height>85</height>
      </rect>
     </property>
@@ -216,13 +231,16 @@
     <property name="text">
      <string>Not Connected</string>
     </property>
+    <property name="margin">
+     <number>20</number>
+    </property>
    </widget>
    <widget class="QLabel" name="labelDiskTemperature">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>740</x>
       <y>364</y>
-      <width>350</width>
+      <width>330</width>
       <height>85</height>
      </rect>
     </property>
@@ -232,13 +250,16 @@
     <property name="text">
      <string>SSD : 999 ℃</string>
     </property>
+    <property name="margin">
+     <number>20</number>
+    </property>
    </widget>
    <widget class="QLabel" name="labelDVRTemperature2">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>410</x>
       <y>364</y>
-      <width>351</width>
+      <width>331</width>
       <height>85</height>
      </rect>
     </property>
@@ -248,13 +269,16 @@
     <property name="text">
      <string>DVR : 999 ℃</string>
     </property>
+    <property name="margin">
+     <number>20</number>
+    </property>
    </widget>
    <widget class="QLabel" name="labelDVRTemperature">
     <property name="geometry">
      <rect>
       <x>21</x>
       <y>364</y>
-      <width>350</width>
+      <width>390</width>
       <height>85</height>
      </rect>
     </property>

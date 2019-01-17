@@ -46,6 +46,10 @@ void InformationDialog::initInformationConfig(void)
     {
         labelLicensePlate->setStyleSheet("font:35px;color:white");
     }
+    else if(utils_cfg_cmp_item(SystemCfg.language, "ENGLISH") == 0)
+    {
+        labelLicensePlate->setStyleSheet("font:43px;color:white");
+    }
 #endif
 
     char tmp[32], *modelName = NULL;
@@ -68,7 +72,7 @@ void InformationDialog::initInformationConfig(void)
     if( nomalCapacity.compare("No Disk")==0 || nomalCapacity.compare("0 GigaByte")==0 )
     {
         labelNormalSize2->setText(tr("%1").arg(tr("No SSD")));
-        labelNormalSize2->setGeometry(370,280,700,85);
+        labelNormalSize2->resize(660,85);
     }
     else
     {
