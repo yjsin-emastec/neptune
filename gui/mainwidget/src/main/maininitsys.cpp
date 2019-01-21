@@ -423,13 +423,25 @@ void MainWidget::initializeSystem()
     }
     else if(isfactoryDefault == 1) // factory default
     {
+        char tmp[64] = {0,};
+
         operationMode = OPMODE_FIRSTRUN;
         SetOperationMode(operationMode);
 
-        utils_cfg_cpy_item(SystemCfg.language, "ENGLISH");
+        (void)aif_system_get_default_item("sys.language", tmp);
+
+        if     (utils_cfg_cmp_item(tmp,"ENGLISH"   ) == 0) {utils_cfg_cpy_item(SystemCfg.language,"ENGLISH"   ); lang = LANGUAGE_ENGLISH;   }
+        else if(utils_cfg_cmp_item(tmp,"KOREAN"    ) == 0) {utils_cfg_cpy_item(SystemCfg.language,"KOREAN"    ); lang = LANGUAGE_KOREAN;    }
+        else if(utils_cfg_cmp_item(tmp,"SPANISH"   ) == 0) {utils_cfg_cpy_item(SystemCfg.language,"SPANISH"   ); lang = LANGUAGE_SPANISH;   }
+        else if(utils_cfg_cmp_item(tmp,"FRENCH"    ) == 0) {utils_cfg_cpy_item(SystemCfg.language,"FRENCH"    ); lang = LANGUAGE_FRENCH;    }
+        else if(utils_cfg_cmp_item(tmp,"ITALIAN"   ) == 0) {utils_cfg_cpy_item(SystemCfg.language,"ITALIAN"   ); lang = LANGUAGE_ITALIAN;   }
+        else if(utils_cfg_cmp_item(tmp,"PORTUGUESE") == 0) {utils_cfg_cpy_item(SystemCfg.language,"PORTUGUESE"); lang = LANGUAGE_PORTUGUESE;}
+        else if(utils_cfg_cmp_item(tmp,"JAPANESE"  ) == 0) {utils_cfg_cpy_item(SystemCfg.language,"JAPANESE"  ); lang = LANGUAGE_JAPANESE;  }
+        else if(utils_cfg_cmp_item(tmp,"GERMAN"    ) == 0) {utils_cfg_cpy_item(SystemCfg.language,"GERMAN"    ); lang = LANGUAGE_GERMAN;    }
+        else                                               {utils_cfg_cpy_item(SystemCfg.language,"ENGLISH"   ); lang = LANGUAGE_ENGLISH;   }
+
         aif_system_set_property(&SystemCfg);
         now  = 0;
-        lang = LANGUAGE_ENGLISH;
         appmgr_firstrun_setting(now, lang);
     }
     else
