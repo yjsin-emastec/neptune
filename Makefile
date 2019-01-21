@@ -59,6 +59,8 @@ CopyUserlib2Tmp: dummy
 	@$(CPARF) gui/mainwidget/qss/*.qss                                      $(TMP)/host/rootfs/usr/lib
 	@$(CD) $(LIBDIR); $(SH) script/export2usrlib.sh         $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
 	@$(CD) $(LIBDIR); $(SH) script/export2host.sh           $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
+	@$(CD) $(LIBDIR); $(CPARF) libappmanager-$(EA_ID).so    $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib/libappmanager.so
+	@$(CD) $(LIBDIR); $(CPARF) libver-$(EA_ID).so           $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib/libver.so
 	@$(CHMOD755R) $(TMP)/host/rootfs/usr/sbin
 	@$(CHMOD755R) $(TMP)/host/rootfs/usr/drv
 	@$(CHMOD755R) $(TMP)/host/rootfs/usr/lib

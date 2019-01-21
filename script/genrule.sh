@@ -21,6 +21,8 @@ while read A1 A2 A3 A4 A5 A6 A7 A8 A9 A10
 do
     if [ ${A1} = ${PID} ]; then
         echo "YOUR SELECTION IS ${A1}-${A2}-${A3}-${A4}-${A5}-${A6}-${A7}-${A8}-${A9}-${A10}"
+        echo "EA_ID             = ${A1}" >> $RULESMK
+        echo "EA_VENDOR         = ${A2}" >> $RULESMK
         echo "EA_MODEL          = ${A3}" >> $RULESMK
         echo "EA_SUB_MODEL      = ${A4}" >> $RULESMK
         echo "EA_OEM            = ${A5}" >> $RULESMK
