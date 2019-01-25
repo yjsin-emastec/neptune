@@ -217,7 +217,7 @@
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="173"/>
         <source>Backup</source>
-        <translation>백업</translation>
+        <translation>저장</translation>
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="186"/>
@@ -6842,7 +6842,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1659"/>
         <source>All Clear</source>
-        <translation>초기화</translation>
+        <translation>Clear</translation>
     </message>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1693"/>
@@ -6852,7 +6852,7 @@ You must delete data or set time.</source>
     <message>
         <location filename="../../../../ui/keyboard/uikeyboarddialog.ui" line="1727"/>
         <source>Close</source>
-        <translation>닫기</translation>
+        <translation>Close</translation>
     </message>
 </context>
 <context>
