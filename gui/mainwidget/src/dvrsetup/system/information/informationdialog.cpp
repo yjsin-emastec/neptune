@@ -13,26 +13,26 @@ InformationDialog::InformationDialog(QWidget *parent)
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
     buttonClose->setFocus();
 
-    labelLicensePlate   ->setStyleSheet("font:48px;color:white");
+    labelLicensePlate   ->setStyleSheet("font:46px;color:white");
     labelLicensePlate   ->setAlignment(Qt::AlignCenter);
-    labelModelName      ->setStyleSheet("font:48px;color:white");
+    labelModelName      ->setStyleSheet("font:46px;color:white");
     labelModelName      ->setAlignment(Qt::AlignCenter);
-    labelVersion        ->setStyleSheet("font:48px;color:white");
+    labelVersion        ->setStyleSheet("font:46px;color:white");
     labelVersion        ->setAlignment(Qt::AlignCenter);
-    labelHddSize        ->setStyleSheet("font:48px;color:white");
+    labelHddSize        ->setStyleSheet("font:46px;color:white");
     labelHddSize        ->setAlignment(Qt::AlignCenter);
-    labelGps            ->setStyleSheet("font:48px;color:white");
+    labelGps            ->setStyleSheet("font:46px;color:white");
     labelGps            ->setAlignment(Qt::AlignCenter);
-    labelLicensePlate2  ->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
-    labelModelName2     ->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
-    labelVersion2       ->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
-    labelNormalSize2    ->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
-    labelEventSize2     ->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
-    labelGps2           ->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
-    labelDiskTemperature->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
-    labelDVRTemperature ->setStyleSheet("font:48px;color:white");
+    labelLicensePlate2  ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
+    labelModelName2     ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
+    labelVersion2       ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
+    labelNormalSize2    ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
+    labelEventSize2     ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
+    labelGps2           ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
+    labelDiskTemperature->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
+    labelDVRTemperature ->setStyleSheet("font:46px;color:white");
     labelDVRTemperature ->setAlignment(Qt::AlignCenter);
-    labelDVRTemperature2->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
+    labelDVRTemperature2->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
 
     connect(buttonClose, SIGNAL(released()), this, SLOT(onClose()));
 }
