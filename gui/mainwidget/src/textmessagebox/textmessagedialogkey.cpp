@@ -62,6 +62,7 @@ void TextMessageDialog::keyPressEvent(QKeyEvent *event)
             }
             else
             {
+                buttonReject();
                 return;  // GOTO Test Mode's ESC BLOCKING
             }
 
