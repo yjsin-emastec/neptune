@@ -141,7 +141,8 @@
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="144"/>
         <source>System will restart after upgrading.</source>
-        <translation>Le système redémarrera après la mise à niveau.</translation>
+        <translation>Le système redémarrera
+après la mise à niveau.</translation>
     </message>
     <message>
         <location filename="../../upgrade/appupgradedialog.cpp" line="145"/>
