@@ -1452,11 +1452,6 @@ void MainWidget::keypadEvent(unsigned char code)
                 break;
             }
 
-            if(searchDialog->pbType == SEARCH_MENU_EVENT)
-            {
-                break;
-            }
-
             if(splitFlag)
             {
                 break;
