@@ -197,8 +197,11 @@ void RtcSetDialog::keyPressEvent(QKeyEvent *event)
 
             return;
 
-        default:
+        case Qt::Key_PageUp:
+        case Qt::Key_PageDown:
+            return;
 
+        default:
             QDialog::accept();
 
             return;
