@@ -1126,6 +1126,11 @@ void MainWidget::runSetup()
         }
     }
 
+    if(system_state == SYSTEM_SHUTDOWN)
+    {
+        return;
+    }
+
     operationMode = OPMODE_SETUP;
     SetOperationMode(operationMode);
 
@@ -1375,6 +1380,11 @@ void MainWidget::runSearch()
             this->onShowStatusBar();
             return;
         }
+    }
+
+    if(system_state == SYSTEM_SHUTDOWN)
+    {
+        return;
     }
 
     for(int i = 0; i < devInfo.videoNum; i++)

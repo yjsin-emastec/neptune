@@ -683,6 +683,8 @@ void MainWidget::doDvrEvent(Event *e)
         {
             if(isDisk)
             {
+                system_state = SYSTEM_SHUTDOWN;
+
                 if(msgBox)
                 {
                     delete msgBox;
@@ -707,6 +709,8 @@ void MainWidget::doDvrEvent(Event *e)
         {
             if(isDisk)
             {
+                system_state = SYSTEM_SHUTDOWN;
+
                 if(msgBox)
                 {
                     delete msgBox;
@@ -730,6 +734,8 @@ void MainWidget::doDvrEvent(Event *e)
         }
         case Send_QT_EVENT_IO_ERROR:
         {
+            system_state = SYSTEM_SHUTDOWN;
+
             if(msgBox)
             {
                 delete msgBox;
@@ -783,6 +789,8 @@ void MainWidget::doDvrEvent(Event *e)
             int *pElapsedTime = (int *)e->data;
             char tmp[16] = {0,};
             sprintf(tmp, "%02d.%03d", *pElapsedTime/1000, *pElapsedTime%1000);
+
+            system_state = SYSTEM_SHUTDOWN;
 
             if(msgBox)
             {
@@ -1205,6 +1213,11 @@ void MainWidget::keypadEvent(unsigned char code)
 
         case KPD_EVENT_SETUP:
 
+            if(system_state == SYSTEM_SHUTDOWN)
+            {
+                break;
+            }
+
             if(operationMode == OPMODE_LIVE && isTrigger)
             {
                 if(msgBox)
@@ -1238,6 +1251,11 @@ void MainWidget::keypadEvent(unsigned char code)
             break;
 
         case KPD_EVENT_SEARCH:
+
+            if(system_state == SYSTEM_SHUTDOWN)
+            {
+                break;
+            }
 
             if(operationMode == OPMODE_LIVE && isTrigger)
             {
