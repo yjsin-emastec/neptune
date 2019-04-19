@@ -1338,7 +1338,7 @@ void MainWidget::keypadEvent(unsigned char code)
 
         case KPD_EVENT_FREW:
 
-            if(operationMode == OPMODE_PLAYBACK)
+            if(!EventSearchPB && operationMode == OPMODE_PLAYBACK)
             {
                 playBar->rewFrameClicked();
             }
@@ -1347,7 +1347,7 @@ void MainWidget::keypadEvent(unsigned char code)
 
         case KPD_EVENT_FADJ:
 
-            if(operationMode == OPMODE_PLAYBACK)
+            if(!EventSearchPB && operationMode == OPMODE_PLAYBACK)
             {
                 playBar->fowardFrameClicked();
             }
