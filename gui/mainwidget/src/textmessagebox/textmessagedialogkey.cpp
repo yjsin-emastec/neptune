@@ -56,6 +56,11 @@ void TextMessageDialog::keyPressEvent(QKeyEvent *event)
 
         case Qt::Key_Escape:
 
+            if(system_state == SYSTEM_SHUTDOWN)
+            {
+                return;
+            }
+
             if(msgBoxEsckey)
             {
                 break;

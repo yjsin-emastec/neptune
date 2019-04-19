@@ -165,7 +165,6 @@ private:
                                  latestSplitStartChNum,
                                  isShowOsd,
                                  audioStatus,
-                                 system_state,
                                  statusBarEnable,
                                  playBarEnable,
                                  leftstatusBarEnable,

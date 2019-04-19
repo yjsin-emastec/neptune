@@ -28,6 +28,7 @@ extern int      archiveBackupFlag;
 extern int      search_playback_start;
 extern int      pbState;
 extern int      record_icon_draw;
+extern int      system_state;
 
 extern bool     initializeSystemFlag;
 
