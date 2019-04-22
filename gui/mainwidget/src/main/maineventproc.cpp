@@ -1182,12 +1182,11 @@ void MainWidget::keypadEvent(unsigned char code)
                 QApplication::postEvent(QApplication::activeWindow() , key);
             }
 
-#if 0 // GyverJeong [19/01/22] Jump backward to 1 hour when playing frame
             if(operationMode == OPMODE_PLAYBACK)
             {
                 appmgr_search_set_jump_level(0, 60);
             }
-#endif
+
             break;
 
         case KPD_EVENT_SELECT:
@@ -1208,12 +1207,11 @@ void MainWidget::keypadEvent(unsigned char code)
                 QApplication::postEvent(QApplication::activeWindow() , key);
             }
 
-#if 0 // GyverJeong [19/01/22] Jump forward to 1 hour when playing frame
             if(operationMode == OPMODE_PLAYBACK)
             {
                 appmgr_search_set_jump_level(1, 60);
             }
-#endif
+
             break;
 
         case KPD_EVENT_DOWN:
