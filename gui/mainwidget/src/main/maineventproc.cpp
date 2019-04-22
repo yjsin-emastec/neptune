@@ -716,6 +716,11 @@ void MainWidget::doDvrEvent(Event *e)
                     delete msgBox;
                 }
 
+                for(int ii = 0; ii < devInfo.videoNum; ii++)
+                {
+                    videoPane[ii]->systemShutdownIconClean();
+                }
+
                 if(diskInfo[0].smartInfo_ata_id)    { msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("HDD was detached."), tr("System will restart.")), 3, this); }
                 else                                { msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("SSD was detached."), tr("System will restart.")), 3, this); }
                 msgBox->setMsgAlignment(Qt::AlignCenter);
@@ -739,6 +744,11 @@ void MainWidget::doDvrEvent(Event *e)
             if(msgBox)
             {
                 delete msgBox;
+            }
+
+            for(int ii = 0; ii < devInfo.videoNum; ii++)
+            {
+                videoPane[ii]->systemShutdownIconClean();
             }
 
             msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("IO Error occurred."), tr("System will restart.")), 3, this);
@@ -796,6 +806,11 @@ void MainWidget::doDvrEvent(Event *e)
             {
                 delete msgBox;
                 msgBox = NULL;
+            }
+
+            for(int ii = 0; ii < devInfo.videoNum; ii++)
+            {
+                videoPane[ii]->systemShutdownIconClean();
             }
 
             msgBox = new TextMessageDialog(tr("NOTICE"), tr("%1\n\n%2%3\n%4").arg(tr("Power Off"), tr("Elapsed Time : "), tr(tmp), tr("System will shutdown.")), 3, this);
