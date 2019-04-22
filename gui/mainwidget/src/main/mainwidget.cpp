@@ -126,6 +126,7 @@ MainWidget::MainWidget(int fbWidth, int fbHeight)
     mainPbChannel               = -1;
     backupPopupShow             = -1;
     archiveBackupFlag           = -1;
+    system_state                = -1;
 
     sensorEventPopupCh          = 0;
 
