@@ -1182,7 +1182,7 @@ void MainWidget::keypadEvent(unsigned char code)
                 QApplication::postEvent(QApplication::activeWindow() , key);
             }
 
-            if(operationMode == OPMODE_PLAYBACK)
+            if(!EventSearchPB && operationMode == OPMODE_PLAYBACK)
             {
                 appmgr_search_set_jump_level(0, 60);
             }
@@ -1207,7 +1207,7 @@ void MainWidget::keypadEvent(unsigned char code)
                 QApplication::postEvent(QApplication::activeWindow() , key);
             }
 
-            if(operationMode == OPMODE_PLAYBACK)
+            if(!EventSearchPB && operationMode == OPMODE_PLAYBACK)
             {
                 appmgr_search_set_jump_level(1, 60);
             }
