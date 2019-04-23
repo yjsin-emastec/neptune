@@ -36,6 +36,7 @@ private:
     char fileName[512];
     QTimer *upgradeTimer;
     TextMessageDialog *msgBox;
+    bool upgradeState;
 };
 
 #endif // APPUPGRADEDIALOG_H

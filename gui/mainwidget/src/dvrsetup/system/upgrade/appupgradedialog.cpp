@@ -83,6 +83,7 @@ AppUpgradeDialog::AppUpgradeDialog(QWidget *parent)
 
     upgradeTimer = NULL;
     msgBox       = NULL;
+    upgradeState = false;
 
     buttonFind->setFocus();
 
@@ -109,6 +110,7 @@ void AppUpgradeDialog::initAppUpgradeConfig(void)
     labelVersionValue->clear();
     labelFileNameValue->clear();
     progressBar->setValue(0);
+    upgradeState=false;
 
     QTimer::singleShot(2000, this, SLOT(initButton()));
 }
@@ -302,6 +304,7 @@ int AppUpgradeDialog::ButtonFind(int isUnMount)
 }
 void AppUpgradeDialog::onButtonUpgrade(void)
 {
+    upgradeState=true;
     buttonFind->setEnabled(false);
     buttonUpgrade->setEnabled(false);
     buttonClose->setEnabled(false);
@@ -322,8 +325,11 @@ void AppUpgradeDialog::onButtonUpgrade(void)
 }
 void AppUpgradeDialog::onUpgradeProgress(int percent)
 {
-    qDebug("\t===========================> Upgrading => %d%%", percent);
-    progressBar->setValue(percent);
+    if(upgradeState)
+    {
+        qDebug("\t===========================> Upgrading => %d%%", percent);
+        progressBar->setValue(percent);
+    }
 }
 void AppUpgradeDialog::StartTimer(void)
 {
