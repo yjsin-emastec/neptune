@@ -2082,6 +2082,11 @@ void MainWidget::SetOperationMode(int mode)
 }
 void MainWidget::DiskFormatProcessDlgOpen()
 {
+    for(int ii = 0; ii < devInfo.videoNum; ii++)
+    {
+        videoPane[ii]->systemShutdownIconClean();
+    }
+
     if(!diskformatprocessDialog)
     {
         diskformatprocessDialog = new DiskFormatProcessDialog(this);

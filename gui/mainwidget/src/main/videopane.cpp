@@ -1027,6 +1027,8 @@ void VideoPane::systemShutdownIconClean(void)
     {
         update(this->makeInvalidateRegion_VideoLoss(this->m_viewVideoLoss));
     }
+
+    update();
 }
 void VideoPane::labelNameEnable(int enable)
 {
