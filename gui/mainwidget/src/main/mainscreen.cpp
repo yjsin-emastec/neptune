@@ -668,6 +668,26 @@ void MainWidget::setSplitScreen(int startCh, int selectCh, int split)
 
         videoPane[vidCh]->resize(paneWidth, paneHeight);
         videoPane[vidCh]->move((ii%split) * paneWidth, (ii/split) * paneHeight);
+
+        if(ver_get_oem() == OEM_DAEJI)
+        {
+            if(split == Split_4 && ii == 2)
+            {
+                videoPane[2]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_640x360);
+            }
+            else if(split == Split_1 && ii == 2)
+            {
+                if(mainHeight == 720)
+                {
+                    videoPane[2]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_1280x720);
+                }
+                else if(mainHeight == 1080)
+                {
+                    videoPane[2]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_1920x1080);
+                }
+            }
+        }
+
         videoPane[vidCh]->show();
     }
 
