@@ -309,6 +309,19 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
 
             videoPane[ch]->resize(paneWidth, paneHeight);
             videoPane[ch]->move((0%Split_1) * paneWidth, (0/Split_1) * paneHeight);
+
+            if(ver_get_oem() == OEM_DAEJI)
+            {
+                if(ch == 2 && mainHeight == 720)
+                {
+                    videoPane[2]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_1280x720);
+                }
+                else if(ch == 2 && mainHeight == 1080)
+                {
+                    videoPane[2]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_1920x1080);
+                }
+            }
+
             videoPane[ch]->show();
         }
         else if(type == EVENT_POPUP_SENSOR_OFF)
@@ -567,6 +580,26 @@ int MainWidget::splitScreen(int split)
 
         videoPane[vidCh]->resize( paneWidth, paneHeight);
         videoPane[vidCh]->move((ii%split) * paneWidth, (ii/split) * paneHeight);
+
+        if(ver_get_oem() == OEM_DAEJI)
+        {
+            if(split == Split_4 && ii == 2)
+            {
+                videoPane[2]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_640x360);
+            }
+            else if(split == Split_1 && ii == 2)
+            {
+                if(mainHeight == 720)
+                {
+                    videoPane[2]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_1280x720);
+                }
+                else if(mainHeight == 1080)
+                {
+                    videoPane[2]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_1920x1080);
+                }
+            }
+        }
+
         videoPane[vidCh]->show();
     }
 

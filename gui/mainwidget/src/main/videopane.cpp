@@ -95,6 +95,24 @@ VideoPane::VideoPane(int chNum, const QString & text, QWidget *parent)
     labelRecord->adjustSize();
     labelRecord->hide();
 
+    if(ver_get_oem() == OEM_DAEJI)
+    {
+        labelDaejiLogo360 = new QLabel(this);
+        labelDaejiLogo360->setPixmap(QPixmap(":/images/daeji/daeji_640x360.png"));
+        labelDaejiLogo360->adjustSize();
+        labelDaejiLogo360->hide();
+
+        labelDaejiLogo720 = new QLabel(this);
+        labelDaejiLogo720->setPixmap(QPixmap(":/images/daeji/daeji_1280x720.png"));
+        labelDaejiLogo720->adjustSize();
+        labelDaejiLogo720->hide();
+
+        labelDaejiLogo1080 = new QLabel(this);
+        labelDaejiLogo1080->setPixmap(QPixmap(":/images/daeji/daeji_1920x1080.png"));
+        labelDaejiLogo1080->adjustSize();
+        labelDaejiLogo1080->hide();
+    }
+
     if((videoPaneNo == devInfo.videoNum) && (devInfo.videoNum == 8 || devInfo.videoNum == 16))
     {
         int paneWidth, paneHeight, w, h;
@@ -982,12 +1000,10 @@ void VideoPane::drawRecordIcon(void)
         return;
     }
 
-#if 1 // GyverJeong [18/01/18] Fix bug of "Not display icon of record when detecting camera"
     if((recordEnabled == true) && (novideoEnabled == true))
     {
         novideoEnabled = false;
     }
-#endif
 
     if(novideoEnabled)
     {
@@ -1248,4 +1264,42 @@ bool VideoPane::checkInvalidateRegion_Vis(QRect invalidatedRect)
 int VideoPane::isVisibleRecordIcon(void)
 {
     return labelRecord->isVisible();
+}
+void VideoPane::DisplayLogo(int oem, int resolution)
+{
+    if(ver_get_oem() != oem)
+    {
+        return;
+    }
+
+    switch(oem)
+    {
+        case OEM_DAEJI:
+        {
+            if(resolution == RESOLUTION_HD_640x360)
+            {
+                labelDaejiLogo720 ->hide();
+                labelDaejiLogo1080->hide();
+                labelDaejiLogo360 ->show();
+            }
+            else if(resolution ==  RESOLUTION_HD_1280x720)
+            {
+                labelDaejiLogo360 ->hide();
+                labelDaejiLogo1080->hide();
+                labelDaejiLogo720 ->show();
+            }
+            else if(resolution ==  RESOLUTION_HD_1920x1080)
+            {
+                labelDaejiLogo360 ->hide();
+                labelDaejiLogo720 ->hide();
+                labelDaejiLogo1080->show();
+            }
+
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
 }

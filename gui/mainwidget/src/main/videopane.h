@@ -55,6 +55,7 @@ public:
     void setGpsStatus                       (int gps);
     void setAudioOutput                     (int audio);
     int  isVisibleRecordIcon                (void);
+    void DisplayLogo                        (int oem, int resolution);
 
     bool                                    inputExistHistory,
                                             zoomAction,
@@ -115,6 +116,9 @@ private:
                                            *labelNoVideo,
                                            *labelGps,
                                            *labelAudio,
+                                           *labelDaejiLogo1080,
+                                           *labelDaejiLogo720,
+                                           *labelDaejiLogo360,
                                            *labelRecord;
 
     QString                                 strChannelName,
