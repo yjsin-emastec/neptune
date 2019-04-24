@@ -511,10 +511,6 @@ void MainWidget::initializeSystem()
     {
         splitScreen(Split_9);
     }
-    else  if(devInfo.videoNum == 10)
-    {
-        splitScreen(Split_10);
-    }
     else  if(devInfo.videoNum == 16)
     {
         splitScreen(Split_16);
