@@ -17,45 +17,25 @@ CalendarWidget::CalendarWidget(QWidget *parent)
 }
 void CalendarWidget::SetCurrentPageIndex(int idx, int dir)
 {
-    int maxDay = 0, cnt = 0;
-    time_t now = 0;
-    struct tm tmNow;
-
     if(idx < 0 || idx >= MAX_CAL_MONTH_DATA)
     {
         return;
     }
 
+    pageIndex = idx;
+    int maxDay = 0, cnt = 0;
     maxDay = appmgr_get_days_of_month(calendarData[idx].year, calendarData[idx].month);
 
-    pageIndex = idx;
-
     QDate date(calendarData[idx].year, calendarData[idx].month, 0);
-
     qDebug(" cal year %d, month %d", calendarData[idx].year, calendarData[idx].month);
 
-    if(dir)
+    for(int i=1; i<maxDay+1; i++)
     {
-        for(int i = 1; i < maxDay+1; i++)
+        if(calendarData[idx].data[i])
         {
-            if(calendarData[idx].data[i])
-            {
-                date.setDate(calendarData[idx].year, calendarData[idx].month, i);
-                qDebug("1 sel Day %d", i);
-                break;
-            }
-        }
-    }
-    else
-    {
-        for(int i = 1; i < maxDay+1; i++)
-        {
-            if(calendarData[idx].data[i])
-            {
-                date.setDate(calendarData[idx].year, calendarData[idx].month, i);
-                qDebug("2 sel Day %d", i);
-                cnt++;
-            }
+            date.setDate(calendarData[idx].year, calendarData[idx].month, i);
+            qDebug("sel Day %d", i);
+            cnt++;
         }
     }
 
@@ -65,29 +45,16 @@ void CalendarWidget::SetCurrentPageIndex(int idx, int dir)
     }
 
     m_selectedDate = date;
-
     FindData(date);
-
     qDebug("cal select day = %d", m_selectedDate.day());
     computeMonthBoundaries();
 
-    if(isRecordDate(m_selectedDate.day()))
+    if(dir == 2)
     {
-        memset(timeLog, 0, sizeof(struct _time_search_info_ext) * 25);
-
-        tmNow.tm_year = date.year()-1900;
-        tmNow.tm_mon  = date.month()-1;
-        tmNow.tm_mday = m_selectedDate.day();
-        tmNow.tm_hour = 0;
-        tmNow.tm_min  = 0;
-        tmNow.tm_sec  = 0;
-
-        now = mktime(&tmNow);
-
-        appmgr_search_get_log(SEARCH_REC_TIME, QUEUE_QT_CORE, now, DLS_OFF, 0);
+        selectedPos = (m_monthStartAt-1)+m_selectedDate.day()-1;
     }
 
-    update();
+    moveFocus(selectedPos);
 }
 bool CalendarWidget::isRecordDate(int day)
 {
@@ -95,21 +62,34 @@ bool CalendarWidget::isRecordDate(int day)
 }
 void CalendarWidget::SetSelectedDate(const QDate &date)
 {
-    if(date.isValid() && isRecordDate(date.day()))
+    if(date != m_selectedDate)
     {
-        if(date != m_selectedDate)
-        {
-            m_selectedDate = date;
-            computeMonthBoundaries();
-            update();
+        time_t now=0;
+        struct tm tmNow;
 
-            emit selectedDateChanged(date);
-        }
+        m_selectedDate = date;
+        computeMonthBoundaries();
+
+        memset(timeLog, 0, sizeof(struct _time_search_info_ext)*25);
+
+        tmNow.tm_year = date.year()-1900;
+        tmNow.tm_mon  = date.month()-1;
+        tmNow.tm_mday = date.day();
+        tmNow.tm_hour = 0;
+        tmNow.tm_min  = 0;
+        tmNow.tm_sec  = 0;
+        now = mktime(&tmNow);
+
+        appmgr_search_get_log(SEARCH_REC_TIME, QUEUE_QT_CORE, now, DLS_OFF, 0);
     }
 }
 QDate CalendarWidget::selectedDate() const
 {
     return m_selectedDate;
+}
+int CalendarWidget::getSelectedPos()
+{
+    return selectedPos;
 }
 Qt::DayOfWeek CalendarWidget::firstDayOfWeek() const
 {
@@ -154,7 +134,26 @@ void CalendarWidget::paintEvent(QPaintEvent *)
         }
     }
 
+    drawFocus(&painter);
+
     qDebug("...........cal paintevent");
+}
+void CalendarWidget::drawFocus(QPainter *painter)
+{
+    QRect border;
+    QRect rect((selectedPos%7)*m_cellWidth, m_headHeight+(selectedPos/7)*m_cellHeight, m_cellWidth, m_cellHeight);
+
+    border.setRect(rect.x(), rect.y(), rect.width(), 4);
+    painter->fillRect(border, QColor(255, 128, 64));
+
+    border.setRect(rect.x(), rect.y(), 4, rect.height());
+    painter->fillRect(border, QColor(255, 128, 64));
+
+    border.setRect(rect.x() + rect.width() - 4, rect.y(), 4, rect.height());
+    painter->fillRect(border, QColor(255, 128, 64));
+
+    border.setRect(rect.x(), rect.y() + rect.height() - 4, rect.width(), 4);
+    painter->fillRect(border, QColor(255, 128, 64));
 }
 void CalendarWidget::drawHeaderCell(QPainter *painter, const QRect &rect, int weekday)
 {
@@ -195,63 +194,30 @@ void CalendarWidget::drawEmptyCell(QPainter *painter, const QRect &rect)
 }
 void CalendarWidget::drawItemCell(QPainter *painter, const QRect &rect, int weekday, int day)
 {
-	QRect border;
     painter->save();
 
 	QFont f = painter->font();
 	f.setPointSize(48);
 	painter->setFont(f);
 
-    if(day == m_selectedDate.day())
+    if(isRecordDate(day))
     {
-        if(isRecordDate(day))
-        {
-            painter->setPen(palette().color(QPalette::Active, QPalette::Dark));
-            painter->setBrush(palette().brush(hasFocus() ? QPalette::Active : QPalette::Inactive, QPalette::Highlight));
-			painter->setBrush(QColor(71, 86, 222));
-			painter->drawRect(rect);
+        painter->setPen(palette().color(QPalette::Active, QPalette::Dark));
+        painter->setBrush(QColor(71, 86, 222));
+        painter->drawRect(rect);
 
-            painter->setPen(palette().color(hasFocus() ? QPalette::Active : QPalette::Inactive, QPalette::HighlightedText));
-            painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, QString("%1").arg(day));
-			
-			border.setRect(rect.x(), rect.y(), rect.width(), 4);
-			painter->fillRect(border, QColor(255, 128, 64));
-
-			border.setRect(rect.x(), rect.y(), 4, rect.height());
-			painter->fillRect(border, QColor(255, 128, 64));
-
-			border.setRect(rect.x() + rect.width() - 4, rect.y(), 4, rect.height());
-			painter->fillRect(border, QColor(255, 128, 64));
-
-			border.setRect(rect.x(), rect.y() + rect.height() - 4, rect.width(), 4);
-			painter->fillRect(border, QColor(255, 128, 64));
-        }
-        else
-        {
-            painter->setPen(palette().color(QPalette::Active, QPalette::Dark));
-            painter->setBrush(palette().brush(QPalette::Base));
-            painter->drawRect(rect);
-            painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, QString("%1").arg(day));
-        }
+        painter->setPen(palette().color(hasFocus() ? QPalette::Active : QPalette::Inactive, QPalette::HighlightedText));
+        painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, QString("%1").arg(day));
     }
     else
     {
-        if(isRecordDate(day))
-        {
-            painter->setPen(palette().color(QPalette::Active, QPalette::Dark));
-			painter->setBrush(QColor(71, 86, 222));
-            painter->drawRect(rect);
-            painter->setPen(palette().color(hasFocus() ? QPalette::Active : QPalette::Inactive, QPalette::HighlightedText));
-            painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, QString("%1").arg(day));
-        }
-        else
-        {
-            painter->setPen(palette().color(QPalette::Active, QPalette::Dark));
-            painter->setBrush(palette().brush(QPalette::Base));
-			painter->drawRect(rect);
-            painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, QString("%1").arg(day));
-        }
+        painter->setPen(palette().color(QPalette::Active, QPalette::Dark));
+        painter->setBrush(palette().brush(QPalette::Base));
+
+        painter->drawRect(rect);
+        painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, QString("%1").arg(day));
     }
+
     painter->restore();
 }
 void CalendarWidget::computeMonthBoundaries()
@@ -273,17 +239,9 @@ void CalendarWidget::computeMonthBoundaries()
 
     m_monthEndAt = m_monthStartAt + m_selectedDate.daysInMonth() - 1;
 }
-QDate CalendarWidget::FindDate(QPoint pos) const
+QDate CalendarWidget::FindDate(int pos) const
 {
-    if(!isDate(pos))
-    {
-        return QDate();
-    }
-
-    int columnID  = pos.x() / m_cellWidth;
-    int rowID     = (pos.y() - m_headHeight) / m_cellHeight;
-    int offset    = ((rowID * 7) + columnID) + 1;
-    int day       = offset - m_monthStartAt + 1;
+    int day = (pos+1) - (m_monthStartAt-1);
 
     return QDate(m_selectedDate.year(), m_selectedDate.month(), day);
 }
@@ -299,7 +257,6 @@ void CalendarWidget::FindData(QDate date)
 
 	memset(timeLog, 0, sizeof(struct _time_search_info_ext) * 25);
 
-	playDate = date;
 	tmNow.tm_year = date.year()-1900;
 	tmNow.tm_mon  = date.month()-1;
 	tmNow.tm_mday = date.day();
@@ -313,27 +270,37 @@ void CalendarWidget::FindData(QDate date)
 }
 void CalendarWidget::mousePressEvent(QMouseEvent *event)
 {
-	time_t now = 0;
-	struct tm tmNow;
-
     if(isDate(event->pos()))
     {
-        QDate date = FindDate(event->pos());
-        SetSelectedDate(date);
+        int clickPos = event->pos().x()/m_cellWidth + ((event->pos().y()-m_headHeight)/m_cellHeight)*7;
 
-        memset(timeLog, 0, sizeof(struct _time_search_info_ext) * 25);
-
-        tmNow.tm_year = date.year()-1900;
-        tmNow.tm_mon  = date.month()-1;
-        tmNow.tm_mday = date.day();
-        tmNow.tm_hour = 0;
-        tmNow.tm_min  = 0;
-        tmNow.tm_sec  = 0;
-
-        now = mktime(&tmNow);
-
-        appmgr_search_get_log(SEARCH_REC_TIME, QUEUE_QT_CORE, now, DLS_OFF, 0);
+        if(clickPos != selectedPos)
+        {
+            moveFocus(clickPos);
+        }
     }
+}
+void CalendarWidget::moveFocus(int pos)
+{
+    selectedPos = pos;
+    QDate date = FindDate(pos);
+
+    if( date.isValid())
+    {
+        SetSelectedDate(date);
+        emit drawTimeLine(true);
+    }
+    else
+    {
+        emit drawTimeLine(false);
+    }
+
+    update();
+}
+void CalendarWidget::initFocus()
+{
+    selectedPos = (m_monthStartAt-1) + m_selectedDate.day() - 1;
+    update();
 }
 void delay( int millisecondsToWait )
 {
@@ -350,7 +317,9 @@ void CalendarWidget::StartPlayback(void)
     struct tm tmNow;
     bool bVideoExist = false;
     time_t now = 0;
-    QDate date = playDate;
+
+    int day= (selectedPos+1) - (m_monthStartAt-1);
+    QDate date = QDate( m_selectedDate.year(), m_selectedDate.month(), day);
 
     if(isRecordDate(date.day()))
     {
@@ -410,8 +379,10 @@ void CalendarWidget::mouseDoubleClickEvent(QMouseEvent *event)
     {
         if(isDate(event->pos()))
         {
-            QDate date = FindDate(event->pos());
+            int clickPos = event->pos().x()/m_cellWidth + ((event->pos().y()-m_headHeight)/m_cellHeight)*7;
+            QDate date = FindDate(clickPos);
             //qDebug("= %s %d ==> y=%d m=%d d=%d isRecordDate=%d\n", __func__, __LINE__, date.year(), date.month(), date.day(), isRecordDate(date.day()));
+
             if(isRecordDate(date.day()))
             {
                 delay(500); // 500ms

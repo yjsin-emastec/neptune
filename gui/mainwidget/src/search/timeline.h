@@ -10,9 +10,10 @@ class TimeLine : public QWidget
 public:
     TimeLine(QWidget *parent = 0);
     ~TimeLine();
-	void updateTimeLine();
+    void updateTimeLine();
 
 public slots:
+    void onDrawTimeLine(bool state);
 
 protected:
     void paintEvent(QPaintEvent *event);
@@ -20,8 +21,10 @@ protected:
 private:
     void paintBorder(QPainter *painter);
     void updateTimeLinePixmap();
+
     QPixmap timeLinepixmap;
 	int TL_HEIGHT;
+    bool isDrawRecord;
 };
 
 #endif // TIMELINE_H

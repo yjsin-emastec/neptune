@@ -20,6 +20,7 @@ CalendarPage::CalendarPage(QWidget *parent)
     CreateCalendar();
 
     timeLine = new TimeLine(this);
+    connect(calendar, SIGNAL(drawTimeLine(bool)), timeLine, SLOT(onDrawTimeLine(bool)));
 
     buttonPrevious = new QPushButton();
     buttonPrevious->setText(tr("Previous"));
@@ -158,7 +159,8 @@ bool CalendarPage::UpdateDates(int type)
         isExistDate = false;
     }
 
-    calendar->SetCurrentPageIndex(curMonthIndex, 0);
+    calendar->SetCurrentPageIndex(curMonthIndex, 2);
+    calendar->initFocus();
 
     if(calDataCount < 2)
     {
@@ -273,187 +275,37 @@ void CalendarPage::UpdateSelectTime()
 }
 void CalendarPage::ChangeCalendarSelectDay(int dir)
 {
-    bool isFindDay = false;
-    int weekday, weekStartDay = 0, weekEndDay = 0, curSelDay;
+    calendar->setFocus();
 
     if(calDataCount == 0)
     {
         return;
     }
 
-    QDate curDate = calendar->selectedDate();
+    int pos = calendar->getSelectedPos();
 
-    if(!curDate.isValid()) // maybe not exist record date.
+    if(dir == 1)        //up
     {
-        ;
+        if(pos >= 7)    { pos = pos-7;  }
+        else            { pos = pos+35; }
+    }
+    else if(dir == 2)   //down
+    {
+        if(pos > 34)    { pos = pos-35; }
+        else            { pos = pos+7;  }
+    }
+    else if(dir == 3)   //left
+    {
+        if(pos%7 == 0)  { pos = pos+6;  }
+        else            { pos = pos-1;  }
+    }
+    else if(dir == 4 )  //right
+    {
+        if(pos%7 == 6)  { pos = pos-6;  }
+        else            { pos = pos+1;  }
     }
 
-    weekday    = curDate.dayOfWeek();
-    curSelDay  = curDate.day();
-
-    switch(weekday)
-    {
-        case Qt::Sunday:    weekStartDay = curSelDay + 0; weekEndDay = curSelDay + 6; break;
-        case Qt::Monday:    weekStartDay = curSelDay - 1; weekEndDay = curSelDay + 5; break;
-        case Qt::Tuesday:   weekStartDay = curSelDay - 2; weekEndDay = curSelDay + 4; break;
-        case Qt::Wednesday: weekStartDay = curSelDay - 3; weekEndDay = curSelDay + 3; break;
-        case Qt::Thursday:  weekStartDay = curSelDay - 4; weekEndDay = curSelDay + 2; break;
-        case Qt::Friday:    weekStartDay = curSelDay - 5; weekEndDay = curSelDay + 1; break;
-        case Qt::Saturday:  weekStartDay = curSelDay - 6; weekEndDay = curSelDay + 0; break;
-    }
-
-    if(weekStartDay < 1)
-    {
-        weekStartDay = 1;
-    }
-
-    if(weekEndDay > curDate.daysInMonth())
-    {
-        weekEndDay = curDate.daysInMonth();
-    }
-
-    //qDebug("%s(): weekStartDay[%d], weekEndDay[%d] \n", __func__, weekStartDay, weekEndDay);
-
-    if(dir == 1)
-    {
-        int wsd = weekStartDay;
-        int wed = weekEndDay;
-_UpCal:
-        wsd = (wsd-7 > 0) ? wsd-7 : 1;
-        wed = (wed-7 > 0) ? wed-7 : 1;
-
-        if(((weekEndDay-weekStartDay) < 6) && (weekEndDay == curDate.daysInMonth()))
-        {
-            wed = wsd + 6;
-        }
-
-        for(int checkDay = wsd; checkDay <= wed; checkDay++)
-        {
-            if(wsd == wed)
-            {
-                break;
-            }
-
-            if(calendarData[curMonthIndex].data[checkDay])
-            {
-                calendar->SetSelectedDate(QDate(curDate.year(), curDate.month(), checkDay));
-                calendar->FindData(QDate(curDate.year(), curDate.month(), checkDay));
-                return;
-            }
-        }
-
-        if(isFindDay == false && wsd != 1)
-        {
-            goto _UpCal;
-        }
-
-        int lastDay = appmgr_get_days_of_month(calendarData[curMonthIndex].year, calendarData[curMonthIndex].month);
-
-        for(int checkDay = lastDay; checkDay > curSelDay; checkDay--)
-        {
-            if(calendarData[curMonthIndex].data[checkDay])
-            {
-                calendar->SetSelectedDate(QDate(curDate.year(), curDate.month(), checkDay));
-                calendar->FindData(QDate(curDate.year(), curDate.month(), checkDay));
-                return;
-            }
-        }
-    }
-    else if(dir == 2)
-    {
-        int wsd      = weekStartDay;
-        int wed      = weekEndDay;
-        int lastDay  = appmgr_get_days_of_month(calendarData[curMonthIndex].year, calendarData[curMonthIndex].month);
-_DownCal:
-        wsd = (wsd+7 > lastDay) ? lastDay : wsd+7;
-        wed = (wed+7 > lastDay) ? lastDay : wed+7;
-
-        if((wed-wsd < 6) && (wed != lastDay))
-        {
-            wsd = wed - 6;
-        }
-
-        for(int checkDay = wed; checkDay >= wsd; checkDay--)
-        {
-            if(wsd == wed)
-            {
-                break;
-            }
-
-            if(calendarData[curMonthIndex].data[checkDay])
-            {
-                calendar->SetSelectedDate(QDate(curDate.year(), curDate.month(), checkDay));
-                calendar->FindData(QDate(curDate.year(), curDate.month(), checkDay));
-                return;
-            }
-        }
-
-        if(isFindDay == false && wsd != lastDay)
-        {
-            goto _DownCal;
-        }
-
-        for(int checkDay = 1; checkDay < curSelDay; checkDay++)
-        {
-            if(calendarData[curMonthIndex].data[checkDay])
-            {
-                calendar->SetSelectedDate(QDate(curDate.year(), curDate.month(), checkDay));
-                calendar->FindData(QDate(curDate.year(), curDate.month(), checkDay));
-                return;
-            }
-        }
-    }
-    else if(dir == 3)
-    {
-        for(int checkDay = curSelDay-1; checkDay >= weekStartDay; checkDay--)
-        {
-            if(calendarData[curMonthIndex].data[checkDay])
-            {
-                calendar->SetSelectedDate(QDate(curDate.year(), curDate.month(), checkDay));
-                calendar->FindData(QDate(curDate.year(), curDate.month(), checkDay));
-                return;
-            }
-
-        }
-
-        if(isFindDay == false)
-        {
-            for(int checkDay = weekEndDay; checkDay > curSelDay; checkDay--)
-            {
-                if(calendarData[curMonthIndex].data[checkDay])
-                {
-                    calendar->SetSelectedDate(QDate(curDate.year(), curDate.month(), checkDay));
-                    calendar->FindData(QDate(curDate.year(), curDate.month(), checkDay));
-                    return;
-                }
-            }
-        }
-    }
-    else if(dir == 4)
-    {
-        for(int checkDay = curSelDay+1; checkDay <= weekEndDay; checkDay++)
-        {
-            if(calendarData[curMonthIndex].data[checkDay])
-            {
-                calendar->SetSelectedDate(QDate(curDate.year(), curDate.month(), checkDay));
-                calendar->FindData(QDate(curDate.year(), curDate.month(), checkDay));
-                return;
-            }
-        }
-
-        if(isFindDay == false)
-        {
-            for(int checkDay = weekStartDay; checkDay < curSelDay; checkDay++)
-            {
-                if(calendarData[curMonthIndex].data[checkDay])
-                {
-                    calendar->SetSelectedDate(QDate(curDate.year(), curDate.month(), checkDay));
-                    calendar->FindData(QDate(curDate.year(), curDate.month(), checkDay));
-                    return;
-                }
-            }
-        }
-    }
+    calendar->moveFocus(pos);
 }
 void CalendarPage::KeyPressEvent(int key)
 {
