@@ -94,7 +94,6 @@ public slots:
 protected:
     void closeEvent(QCloseEvent *event);
     void rotateSplit();
-    void rotateChannel(int forward);
     void setSplitScreen(int startCh, int selectCh, int split);
     void rotateOneChannel(int ch);
     void startPlayback();

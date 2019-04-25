@@ -43,15 +43,15 @@ ExportRelease2Tmp: dummy
 	@$(RMDIR) $(TMP)/release_hi3521
 
 SetModelDep: dummy
-	@$(ECHO) $(MODEL_NAME)        > $(TMP)/host/MODEL
-	@$(ECHO) $(EA_MODEL)          > $(TMP)/host/rootfs/etc/MODEL_NUM
-	@$(ECHO) $(EA_SUB_MODEL)      > $(TMP)/host/rootfs/etc/SUB_MODEL
-	@$(ECHO) $(EA_OEM)            > $(TMP)/host/rootfs/etc/OEM_NUM
-	@$(ECHO) $(EA_REGION)         > $(TMP)/host/rootfs/etc/REGION
-	@$(ECHO) $(EA_SUB_OEM)        > $(TMP)/host/rootfs/etc/SUB_OEM
-	@$(ECHO) $(EA_1ST_IFNAME)     > $(TMP)/host/rootfs/etc/ifname1.conf
-	@$(ECHO) $(EA_2ND_IFNAME)     > $(TMP)/host/rootfs/etc/ifname2.conf
-	@$(CPARF) $(MODEL)/$(EA_LOGO)   $(TMP)/host/images/btlogo.img
+	@$(ECHO)  $(MODEL_NAME)        > $(TMP)/host/MODEL
+	@$(ECHO)  $(EA_MODEL)          > $(TMP)/host/rootfs/etc/MODEL_NUM
+	@$(ECHO)  $(EA_SUB_MODEL)      > $(TMP)/host/rootfs/etc/SUB_MODEL
+	@$(ECHO)  $(EA_OEM)            > $(TMP)/host/rootfs/etc/OEM_NUM
+	@$(ECHO)  $(EA_REGION)         > $(TMP)/host/rootfs/etc/REGION
+	@$(ECHO)  $(EA_SUB_OEM)        > $(TMP)/host/rootfs/etc/SUB_OEM
+	@$(ECHO)  $(EA_1ST_IFNAME)     > $(TMP)/host/rootfs/etc/ifname1.conf
+	@$(ECHO)  $(EA_2ND_IFNAME)     > $(TMP)/host/rootfs/etc/ifname2.conf
+	@$(CPARF) $(OEM)/$(EA_LOGO)      $(TMP)/host/images/btlogo.img
 
 CopyUserlib2Tmp: dummy
 	@$(ECHO) "QT BASE COPY!!!!!"

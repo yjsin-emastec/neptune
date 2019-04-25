@@ -31,8 +31,8 @@ ARFLAGS           = rcv
 RANLIB            = $(CROSS)ranlib
 STRIP             = $(CROSS)strip
 LIBDIR            = lib
-MODEL             = model
-EA_LOGO           = btlogo-$(EA_MODEL).img
+OEM               = oem
+EA_LOGO           = btlogo-$(EA_OEM).$(EA_SUB_OEM).$(EA_REGION).img
 
 CD                = cd
 MV                = mv

@@ -872,6 +872,12 @@ bool MainWidget::checkPassword(int mode, int *userId)
 }
 void MainWidget::systemShutdown()
 {
+    if(system_state == SYSTEM_SHUTDOWN)
+    {
+        qDebug("[Notice] %s : It's already system shutdown status.", __func__);
+        return;
+    }
+
     int userId = 0;
 
     if(operationMode != OPMODE_LIVE)
@@ -883,6 +889,12 @@ void MainWidget::systemShutdown()
     operationMode = OPMODE_MESSAGE;
     SetOperationMode(operationMode);
     msgBoxEsckey = 1;
+
+    if(msgBox)
+    {
+        delete msgBox;
+        msgBox = NULL;
+    }
 
     if(!msgBox)
     {
@@ -922,6 +934,12 @@ void MainWidget::systemShutdown()
         }
     }
 
+    if(system_state == SYSTEM_SHUTDOWN)
+    {
+        qDebug("[Notice] %s : It's already system shutdown status.", __func__);
+        return;
+    }
+
     time_t          gpsTime;
     struct tm       tmGps;
     struct tm      *ptmGps;
@@ -939,10 +957,8 @@ void MainWidget::systemShutdown()
         {
             if(gpsTime >= RTC_BASE_TIME && gpsTime < RTC_Y2K38_TIME)
             {
-#if 1 // GyverJeong [18/08/21]
                 QString menuGpsSync = QString("Menu GPS Sync %1").arg(QString::fromUtf8(atime(gpsTime)));
                 appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, menuGpsSync.toStdString().c_str());
-#endif
                 rtc_set_time(gpsTime);
                 fprintf(stderr, "Synchronize RTC with GPS time and then Shut down system\n");
             }
@@ -2066,6 +2082,11 @@ void MainWidget::SetOperationMode(int mode)
 }
 void MainWidget::DiskFormatProcessDlgOpen()
 {
+    for(int ii = 0; ii < devInfo.videoNum; ii++)
+    {
+        videoPane[ii]->systemShutdownIconClean();
+    }
+
     if(!diskformatprocessDialog)
     {
         diskformatprocessDialog = new DiskFormatProcessDialog(this);
