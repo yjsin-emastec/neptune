@@ -37,15 +37,14 @@ PlayTimeBar::PlayTimeBar(QWidget *parent)
     sliderPlayTime = new QSlider(Qt::Horizontal, this);
     sliderPlayTime->setFocusPolicy(Qt::NoFocus);
 
-    sliderPlayTime->setStyleSheet("QSlider { height: 50px; margin: 1px 5px}"
-            "::groove { border: 50px; height: 50px; background-color: rgb(0,0,255,127);}"
-            "::handle { image: url(:/images/slider_handle.png); width: 100px; margin: -30px -30px}");
+    sliderPlayTime->setStyleSheet("QSlider { background-color:rgb(0,0,0,0);}"
+            "::groove { margin: 0px; height: 18px; background-color: rgb(0,0,255,127);}"
+            "::handle { image: url(:/images/slider_handle.png); width: 80px; margin: -40px;}");
 
-    sliderPlayTime->move(TL_LEFT_MARGIN - 6, 25);
+    sliderPlayTime->move(TL_LEFT_MARGIN, 25);
     sliderPlayTime->setRange(0, TL_WIDTH - 1);
-    sliderPlayTime->resize(TL_WIDTH - 1 + 12, 18);
+    sliderPlayTime->resize(TL_WIDTH + 2, 18);
     sliderPlayTime->show();
-
 
     labelDate->setMinimumWidth(250);
     labelDate->move(30, 0);
@@ -70,12 +69,12 @@ void PlayTimeBar::setDlsEndDay(int endHour)
     {
         int width = TL_WIDTH + (TL_WIDTH / 24);
         sliderPlayTime->setRange(0, width - 1);
-        sliderPlayTime->resize(width - 1 + 10, 18);
+        sliderPlayTime->resize(width + 2, 18);
     }
     else
     {
-        sliderPlayTime->setRange(0, TL_WIDTH - 1);
-        sliderPlayTime->resize(TL_WIDTH + 1 + 12, 18);
+        sliderPlayTime->setRange(0, TL_WIDTH-1);
+        sliderPlayTime->resize(TL_WIDTH + 2, 18);
     }
 
     // reset label
@@ -101,7 +100,7 @@ void PlayTimeBar::paintEvent(QPaintEvent *event)
         painter.setBrush(QColor(255, 0, 0)); // video data
         QRect bar(xPos, 1, 2, 66);
         painter.drawRect(bar);
-    } 
+    }
     else
     {
         painter.setPen(QColor(255, 0, 0));
@@ -156,12 +155,12 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
 
     if(dlsEndHour >= 0)
     {
-        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), 1, TL_WIDTH+(TL_WIDTH/24),  70);
+        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), 1, TL_WIDTH+(TL_WIDTH/24)-1, 70);
         painter->drawRect(bar);
     }
     else
     {
-        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), 1, TL_WIDTH,  70);
+        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), 1, TL_WIDTH-1, 70);
         painter->drawRect(bar);
     }
 
@@ -196,9 +195,9 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
             {
                 if((audioEndPos >= 0) && (bAudioExist == false))
                 {
-                    rect.setRect(audioStartPos, 3, audioEndPos, 32);
+                    rect.setRect(audioStartPos, 1, audioEndPos, 35);
                     painter->fillRect(rect, QColor(65, 232, 23));
-                    rect.setRect(audioStartPos, 35, audioEndPos, 31);
+                    rect.setRect(audioStartPos, 35, audioEndPos, 35);
                     painter->fillRect(rect, QColor(235, 173, 71));
                     videoStartPos = audioStartPos = -1;
                     videoEndPos   = audioEndPos = -1;
@@ -219,7 +218,7 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
                         audioStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * 20 * 2) + (i * 2);
                         audioEndPos   = 0;
 
-                        rect.setRect(videoStartPos, 3, videoEndPos - 2, 63);
+                        rect.setRect(videoStartPos, 1, videoEndPos - 2, 70);
                         painter->fillRect(rect, QColor(65, 232, 23));
                         videoStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * 20 * 2) + (i * 2);
                         videoEndPos   = 2;
@@ -236,14 +235,14 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
                 {
                     if(audioStartPos >= 0)
                     {
-                        rect.setRect(audioStartPos, 3, audioEndPos, 32);
+                        rect.setRect(audioStartPos, 1, audioEndPos, 35);
                         painter->fillRect(rect, QColor(65, 232, 23));
-                        rect.setRect(audioStartPos, 35, audioEndPos, 31);
+                        rect.setRect(audioStartPos, 35, audioEndPos, 35);
                         painter->fillRect(rect, QColor(235, 173, 71));
                     }
                     else
                     {
-                        rect.setRect(videoStartPos, 3, videoEndPos, 63);
+                        rect.setRect(videoStartPos, 1, videoEndPos, 70);
                         painter->fillRect(rect, QColor(65, 232, 23));
                     }
 
@@ -258,14 +257,14 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
     {
         if(audioStartPos >= 0)
         {
-            rect.setRect(audioStartPos, 3, audioEndPos, 32);
+            rect.setRect(audioStartPos, 1, audioEndPos, 35);
             painter->fillRect(rect, QColor(65, 232, 23));
-            rect.setRect(audioStartPos, 35, audioEndPos, 31);
+            rect.setRect(audioStartPos, 35, audioEndPos, 35);
             painter->fillRect(rect, QColor(235, 173, 71));
         }
         else
         {
-            rect.setRect(videoStartPos, 3, videoEndPos, 63);
+            rect.setRect(videoStartPos, 1, videoEndPos, 70);
             painter->fillRect(rect, QColor(65, 232, 23));
         }
 
@@ -298,7 +297,15 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
 
         if((ii % 120) == 0)
         {
-            rect.setRect((ii + resizeTimeLine_LeftGap + TL_LEFT_MARGIN), 1, 2, 42);
+            if(ii == TL_WIDTH)
+            {
+                rect.setRect((ii + resizeTimeLine_LeftGap-2 + TL_LEFT_MARGIN), 1, 2, 42);
+            }
+            else
+            {
+                rect.setRect((ii + resizeTimeLine_LeftGap + TL_LEFT_MARGIN), 1, 2, 42);
+            }
+
             painter->fillRect(rect, QColor(255, 0, 0));
         }
     }
@@ -810,14 +817,10 @@ void PlayTimeBar::sliderPlayTimeChange()
 
     if(EventSearchPB)
     {
-        sliderPlayTime->setStyleSheet("QSlider { height: 12px; margin: 5px 5px}");
         sliderPlayTime->hide();
     }
     else
     {
-        sliderPlayTime->setStyleSheet("QSlider { height: 50px; margin: 1px 5px}"
-                "::groove { border: 50px; height: 50px; background-color: rgb(0,0,255,127);}"
-                "::handle { image: url(:/images/slider_handle.png); width: 100px; margin: -30px -30px}");
         sliderPlayTime->show();
     }
 }
