@@ -583,17 +583,24 @@ int MainWidget::splitScreen(int split)
 
         if(ver_get_oem() == OEM_DAEJI)
         {
-            if(split == Split_4 && ii == 2)
+            if(mainHeight == 720)
             {
-                videoPane[ii]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_640x360);
-            }
-            else if(split == Split_1 && currentChannelNum == ii && ii == 2)
-            {
-                if(mainHeight == 720)
+                if(split == Split_4 && ii == 2)
+                {
+                    videoPane[ii]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_640x360);
+                }
+                else if(split == Split_1 && currentChannelNum == ii && ii == 2)
                 {
                     videoPane[ii]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_1280x720);
                 }
-                else if(mainHeight == 1080)
+            }
+            else if(mainHeight == 1080)
+            {
+                if(split == Split_4 && ii == 2)
+                {
+                    videoPane[ii]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_960x540);
+                }
+                else if(split == Split_1 && currentChannelNum == ii && ii == 2)
                 {
                     videoPane[ii]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_1920x1080);
                 }
@@ -671,17 +678,24 @@ void MainWidget::setSplitScreen(int startCh, int selectCh, int split)
 
         if(ver_get_oem() == OEM_DAEJI)
         {
-            if(split == Split_4 && ii == 2)
+            if(mainHeight == 720)
             {
-                videoPane[ii]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_640x360);
-            }
-            else if(split == Split_1 && currentChannelNum == ii && ii == 2)
-            {
-                if(mainHeight == 720)
+                if(split == Split_4 && ii == 2)
+                {
+                    videoPane[ii]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_640x360);
+                }
+                else if(split == Split_1 && currentChannelNum == ii && ii == 2)
                 {
                     videoPane[ii]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_1280x720);
                 }
-                else if(mainHeight == 1080)
+            }
+            else if(mainHeight == 1080)
+            {
+                if(split == Split_4 && ii == 2)
+                {
+                    videoPane[ii]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_960x540);
+                }
+                else if(split == Split_1 && currentChannelNum == ii && ii == 2)
                 {
                     videoPane[ii]->DisplayLogo(OEM_DAEJI, RESOLUTION_HD_1920x1080);
                 }

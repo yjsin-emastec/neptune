@@ -26,6 +26,7 @@
         <file>images/search.png</file>
         <file>images/function.png</file>
         <file>images/daeji/daeji_640x360.png</file>
+        <file>images/daeji/daeji_960x540.png</file>
         <file>images/daeji/daeji_1280x720.png</file>
         <file>images/daeji/daeji_1920x1080.png</file>
     </qresource>

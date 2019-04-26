@@ -37,7 +37,7 @@ int MainWidget::loadData()
                 cfgSetup.rec.record_main.resolution[ch] = RESOLUTION_HD_1280x720;
             }
 
-            if(cfgSetup.rec.record_main.resolution[ch] == RESOLUTION_HD_1920x540)
+            if(cfgSetup.rec.record_main.resolution[ch] == RESOLUTION_HD_960x540)
             {
                 cfgSetup.rec.record_main.resolution[ch] = RESOLUTION_HD_640x360;
             }

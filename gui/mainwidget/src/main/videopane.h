@@ -118,6 +118,7 @@ private:
                                            *labelAudio,
                                            *labelDaejiLogo1080,
                                            *labelDaejiLogo720,
+                                           *labelDaejiLogo540,
                                            *labelDaejiLogo360,
                                            *labelRecord;
 

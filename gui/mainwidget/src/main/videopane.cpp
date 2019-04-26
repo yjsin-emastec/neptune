@@ -99,16 +99,25 @@ VideoPane::VideoPane(int chNum, const QString & text, QWidget *parent)
     {
         labelDaejiLogo360 = new QLabel(this);
         labelDaejiLogo360->setPixmap(QPixmap(":/images/daeji/daeji_640x360.png"));
+        labelDaejiLogo360->setMouseTracking(true);
         labelDaejiLogo360->adjustSize();
         labelDaejiLogo360->hide();
 
+        labelDaejiLogo540 = new QLabel(this);
+        labelDaejiLogo540->setPixmap(QPixmap(":/images/daeji/daeji_960x540.png"));
+        labelDaejiLogo540->setMouseTracking(true);
+        labelDaejiLogo540->adjustSize();
+        labelDaejiLogo540->hide();
+
         labelDaejiLogo720 = new QLabel(this);
         labelDaejiLogo720->setPixmap(QPixmap(":/images/daeji/daeji_1280x720.png"));
+        labelDaejiLogo720->setMouseTracking(true);
         labelDaejiLogo720->adjustSize();
         labelDaejiLogo720->hide();
 
         labelDaejiLogo1080 = new QLabel(this);
         labelDaejiLogo1080->setPixmap(QPixmap(":/images/daeji/daeji_1920x1080.png"));
+        labelDaejiLogo1080->setMouseTracking(true);
         labelDaejiLogo1080->adjustSize();
         labelDaejiLogo1080->hide();
     }
@@ -269,6 +278,11 @@ void VideoPane::resizeEvent(QResizeEvent *event)
 }
 void VideoPane::mousePressEvent(QMouseEvent *event)
 {
+    if(ver_get_oem() == OEM_DAEJI && videoPaneNo == 2)
+    {
+        return;
+    }
+
     if(systemLocked)
     {
         emit videoPaneMouseClicked(videoPaneNo);
@@ -1278,19 +1292,29 @@ void VideoPane::DisplayLogo(int oem, int resolution)
         {
             if(resolution == RESOLUTION_HD_640x360)
             {
+                labelDaejiLogo540 ->hide();
                 labelDaejiLogo720 ->hide();
                 labelDaejiLogo1080->hide();
                 labelDaejiLogo360 ->show();
             }
+            else if(resolution ==  RESOLUTION_HD_960x540)
+            {
+                labelDaejiLogo360 ->hide();
+                labelDaejiLogo720 ->hide();
+                labelDaejiLogo1080->hide();
+                labelDaejiLogo540 ->show();
+            }
             else if(resolution ==  RESOLUTION_HD_1280x720)
             {
                 labelDaejiLogo360 ->hide();
+                labelDaejiLogo540 ->hide();
                 labelDaejiLogo1080->hide();
                 labelDaejiLogo720 ->show();
             }
             else if(resolution ==  RESOLUTION_HD_1920x1080)
             {
                 labelDaejiLogo360 ->hide();
+                labelDaejiLogo540 ->hide();
                 labelDaejiLogo720 ->hide();
                 labelDaejiLogo1080->show();
             }
