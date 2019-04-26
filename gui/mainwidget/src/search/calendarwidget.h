@@ -17,11 +17,15 @@ public:
     void SetSelectedDate(const QDate &date);
     void FindData(QDate date);
     void StartPlayback(void);
+    void moveFocus(int pos);
+    void initFocus(void);
+    int getSelectedPos(void);
 
 signals:
     void selectedDateChanged(const QDate &newDate);
     void activated();
 	void startPlayback();
+    void drawTimeLine(bool state);
 
 public slots:
 
@@ -34,17 +38,18 @@ private:
     void drawHeaderCell(QPainter *painter, const QRect &rect, int weekday);
     void drawEmptyCell(QPainter *painter, const QRect &rect);
     void drawItemCell(QPainter *painter, const QRect &rect, int weekday, int day);
+    void drawFocus(QPainter *painter);
     void computeMonthBoundaries();
-    QDate FindDate(QPoint pos) const;
-    QDate playDate;
     bool isDate(QPoint pos) const;
     bool isRecordDate(int day);
+    QDate FindDate(int pos) const;
 
     QDate m_selectedDate;
     Qt::DayOfWeek m_firstDayOfWeek;
 
     quint8 m_monthStartAt, m_monthEndAt;
     int m_headHeight, m_cellHeight, m_cellWidth, pageIndex;
+    int selectedPos;
 };
 
 #endif // CALENDARWIDGET_H
