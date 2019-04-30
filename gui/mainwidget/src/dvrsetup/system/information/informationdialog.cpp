@@ -72,7 +72,7 @@ void InformationDialog::initInformationConfig(void)
     if( nomalCapacity.compare("No Disk")==0 || nomalCapacity.compare("0 GigaByte")==0 )
     {
         labelNormalSize2->setText(tr("%1").arg(tr("No SSD")));
-        labelNormalSize2->resize(660,85);
+        labelNormalSize2->resize(740,85);
     }
     else
     {
