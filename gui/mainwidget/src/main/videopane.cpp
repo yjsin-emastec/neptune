@@ -974,7 +974,7 @@ void VideoPane::drawGpsIcon(void)
         return;
     }
 
-    if(gpsEnabled)
+    if(gpsEnabled &&!(utils_cfg_cmp_item(DisplayCfg.osd_record, "OFF")==0 && utils_cfg_cmp_item(DisplayCfg.osd_viloss, "OFF")==0 && utils_cfg_cmp_item(DisplayCfg.osd_chname, "OFF")==0))
     {
         labelGps->setPixmap(QPixmap(":/images/gps.png"));
         labelGps->show();
