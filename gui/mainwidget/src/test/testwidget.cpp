@@ -1,4 +1,5 @@
 #include <QWidget>
+#include <QWSServer>
 #include <QTimer>
 #include <QKeyEvent>
 #include <QScreen>
@@ -24,6 +25,7 @@ TestWidget::TestWidget()
 
     setWindowFlags(Qt::WindowSystemMenuHint | Qt::FramelessWindowHint);
 
+    QWSServer::setBackground(QColor(0,0,0));
     setPalette(QPalette(QColor(20, 22, 24)));
     setAutoFillBackground(true);
 

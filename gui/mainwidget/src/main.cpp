@@ -55,12 +55,13 @@ int appl_main(int argc, char *argv[])
 
     set_font();
 
+    app.setPalette(QPalette(QColor(0,0,0)));
+
     MainWidget mainWindow(mainWidth, mainHeight);
     mainWindow.show();
 
     app.setOverrideCursor(QCursor(QPixmap(":/images/cursor.png"), 1, 1));
 
-    utils_system("load_master_estn 1");
     return app.exec();
 }
 int test_main(int argc, char *argv[])
@@ -78,12 +79,13 @@ int test_main(int argc, char *argv[])
 
     set_font();
 
+    app.setPalette(QPalette(QColor(0,0,0)));
+
     TestWidget testWindow;
     testWindow.show();
 
     app.setOverrideCursor(QCursor(QPixmap(":/images/cursor.png"), 1, 1));
 
-    utils_system("load_master_estn 1");
     return app.exec();
 }
 int main(int argc, char *argv[])

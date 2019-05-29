@@ -1,4 +1,5 @@
 #include <QtGui>
+#include <QWSServer>
 #include <QtGui/QApplication>
 #include <QPalette>
 #include <QScreen>
@@ -108,7 +109,7 @@ MainWidget::MainWidget(int fbWidth, int fbHeight)
 
     //qDebug("size %d, %d\n", mainWidth, mainHeight);
     QColor barColor(50,57,83);
-
+    QWSServer::setBackground(QColor(0,0,0));
     setPalette(QPalette(QColor(20, 22, 24)));
     setAutoFillBackground(true);
 
