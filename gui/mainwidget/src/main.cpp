@@ -1,5 +1,4 @@
 #include <QApplication>
-#include <QWSServer>
 #include <QTranslator>
 #include <QTextCodec>
 #include <glib.h>
@@ -54,8 +53,6 @@ int appl_main(int argc, char *argv[])
     qt_screencursor->hide();
 
     set_font();
-
-    app.setPalette(QPalette(QColor(0,0,0)));
 
     MainWidget mainWindow(mainWidth, mainHeight);
     mainWindow.show();
