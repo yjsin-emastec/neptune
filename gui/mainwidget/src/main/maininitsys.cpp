@@ -92,6 +92,7 @@ void MainWidget::initializeSystem()
     {
         qDebug("\n\n\t RTC Init Error !!! \n");
 
+        (void)appmgr_close_circle_image();
         operationMode = OPMODE_FIRSTRUN;
         SetOperationMode(operationMode);
 
@@ -138,6 +139,8 @@ void MainWidget::initializeSystem()
 
 #if 1 // GyverJeong [18/04/08] Format a storage over ESC key on remote controller during booting
         case DS_CODE_HDD_FORMAT_NEED:
+
+            (void)appmgr_close_circle_image();
 
             if(msgBox == NULL)
             {
@@ -196,6 +199,8 @@ void MainWidget::initializeSystem()
         case DS_CODE_DATA_OLD:
         case DS_CODE_MASTER_MOVED:
         case DS_CODE_MASTER_NOT_FOUND:
+
+            (void)appmgr_close_circle_image();
 
             if(msgBox == NULL)
             {
@@ -267,6 +272,8 @@ void MainWidget::initializeSystem()
 
         case DS_CODE_BAD_FILESYSTEM:
 
+            (void)appmgr_close_circle_image();
+
             if(msgBox == NULL)
             {
                 msgBox = new TextMessageDialog(tr("STORAGE STATUS"), tr("[5014] Broken Filesystem"), 2, this);
@@ -323,6 +330,8 @@ void MainWidget::initializeSystem()
 
         case DS_CODE_DATA_LOST:
 
+            (void)appmgr_close_circle_image();
+
             if(msgBox == NULL)
             {
                 msgBox = new TextMessageDialog(tr("STORAGE STATUS"), tr("[5042] Data Lost"), 2, this);
@@ -343,6 +352,8 @@ void MainWidget::initializeSystem()
 
         case DS_CODE_HDD_INSERTED:
 
+            (void)appmgr_close_circle_image();
+
             if(msgBox == NULL)
             {
                 msgBox = new TextMessageDialog(tr("STORAGE STATUS"), tr("[5070] New HDD Inserted"), 2, this);
@@ -362,6 +373,8 @@ void MainWidget::initializeSystem()
             break;
 
         case DS_CODE_SLAVE_CHANGED:
+
+            (void)appmgr_close_circle_image();
 
             if(msgBox == NULL)
             {
@@ -386,6 +399,8 @@ void MainWidget::initializeSystem()
 
     if(appmgr_get_boot_fs_state() == FS_TIME_MISMATCH)
     {
+        (void)appmgr_close_circle_image();
+
         if(timeSetDialog == NULL)
         {
             timeSetDialog = new TimeSetDialog();
@@ -409,6 +424,7 @@ void MainWidget::initializeSystem()
 
     if(appmgr_get_boot_fs_state() == FS_DISK_DETACH)
     {
+        (void)appmgr_close_circle_image();
         qDebug("\n\t File System Disk Detach");
         appmgr_reboot_system(0);
     }
@@ -455,6 +471,7 @@ void MainWidget::initializeSystem()
         {
             fprintf(stderr, "Replace battery");
 
+            (void)appmgr_close_circle_image();
             operationMode = OPMODE_FIRSTRUN;
             SetOperationMode(operationMode);
 
@@ -570,5 +587,6 @@ void MainWidget::initializeSystem()
     appmgr_create_rs_config();
 
     initializeSystemFlag = true;
+    (void)appmgr_close_circle_image();
     qDebug("\n\n\t initializeSystem() ----- \n");
 }

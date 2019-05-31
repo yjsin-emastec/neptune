@@ -44,6 +44,7 @@ int             testmgr_buzzer_ctrl                (int onoff);
 int             testmgr_led_ctrl                   (int sel);
 int             testmgr_set_mac                    (char *mac);
 int             testmgr_get_mac                    (char *mac);
+int             testmgr_close_circle_image         (void);
 
 #ifdef __cplusplus
 }

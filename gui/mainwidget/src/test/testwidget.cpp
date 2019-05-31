@@ -67,6 +67,7 @@ TestWidget::~TestWidget()
 }
 void TestWidget::onRunDiagnosticsMenu()
 {
+    (void)testmgr_close_circle_image();
     MainDialog->show();
     MainDialog->activateWindow();
 }

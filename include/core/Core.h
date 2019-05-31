@@ -114,6 +114,7 @@ int core_deinit(void);
 int core_jpeg_snap(int screen, int channel, int width, int height, int quality, unsigned char **data, int *size);
 int core_jpeg_sender_new(int channel);
 void core_decode_output_clear(int channel);
+int core_close_circle_image(void);
 
 int core_pip_display(int srcCh, int x, int y, int width, int height, int layer);
 int core_set_playback_pause_state(int state);
