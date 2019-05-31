@@ -76,8 +76,6 @@ int test_main(int argc, char *argv[])
 
     set_font();
 
-    app.setPalette(QPalette(QColor(0,0,0)));
-
     TestWidget testWindow;
     testWindow.show();
 
