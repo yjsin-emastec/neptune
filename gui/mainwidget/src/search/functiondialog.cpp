@@ -8,7 +8,42 @@
 FunctionDialog::FunctionDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::FunctionDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        buttonBackup = ui720.buttonBackup;
+        buttonClose = ui720.buttonClose;
+        buttonDelete = ui720.buttonDelete;
+        buttonFilter = ui720.buttonFilter;
+        buttonSort = ui720.buttonSort;
+
+        //yjsin [18/09/21] if text is long, change button size
+        if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            buttonClose->setGeometry(705,495,230,91);
+        }
+    }
+    else
+    {
+        Ui::FunctionDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonBackup = ui1080.buttonBackup;
+        buttonClose = ui1080.buttonClose;
+        buttonDelete = ui1080.buttonDelete;
+        buttonFilter = ui1080.buttonFilter;
+        buttonSort = ui1080.buttonSort;
+
+        //yjsin [19/02/21] if text is long, change button size
+        if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            buttonClose->setGeometry(910,700,350,131);
+        }
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
@@ -16,13 +51,6 @@ FunctionDialog::FunctionDialog(QWidget *parent)
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
     setAutoFillBackground(true);
 
-#if 1 //yjsin [18/09/21] if text is long, change button size
-
-    if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-    {
-        buttonClose->setGeometry(705,495,230,91);
-    }
-#endif
 
 
     connect(buttonFilter, SIGNAL(clicked()), this, SLOT(onButtonFilter()));
@@ -107,13 +135,11 @@ void FunctionDialog::onButtonSort()
 
 void FunctionDialog::onButtonBackup()
 {
-#if 1 //yjsin[18/08/30] Not implemented
-
+#if 0 //yjsin[18/08/30] Not implemented
     if(!msgBox)
     {
         msgBox = new TextMessageDialog("Log Backup", "onButtonBackup()", 2, this);
     }
-    msgBox->setMsgAlignment(Qt::AlignCenter);
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
     if(msgBox->exec())
@@ -129,9 +155,8 @@ void FunctionDialog::onButtonDelete()
     //confirm message
     if(!msgBox)
     {
-        msgBox = new TextMessageDialog("System Log Delete", tr("WARNING\n\n" "Do you want to delete all system logs?"), 0, this);
+        msgBox = new TextMessageDialog(tr("Delete Log"), tr("Do you want to delete all system logs?"), 0, this);
     }
-    msgBox->setMsgAlignment(Qt::AlignCenter);
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
     if(msgBox->exec())
@@ -151,7 +176,7 @@ void FunctionDialog::onButtonDelete()
 
 void FunctionDialog::onButtonClose()
 {
-    done(1);
+    accept();
 }
 
 

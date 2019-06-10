@@ -50,6 +50,7 @@ private:
     quint8 m_monthStartAt, m_monthEndAt;
     int m_headHeight, m_cellHeight, m_cellWidth, pageIndex;
     int selectedPos;
+    int fontSize;
 };
 
 #endif // CALENDARWIDGET_H

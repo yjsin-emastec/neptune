@@ -113,8 +113,8 @@ SOURCES      += src/main.cpp                                                    
                 src/test/macdialog.cpp                                                               \
                 src/test/testwidget.cpp                                                              \
                 src/test/testeventcontroller.cpp                                                     \
-                src/search/systemlogpage.cpp \
-    src/search/functiondialog.cpp
+                src/search/systemlogpage.cpp                                                         \
+                src/search/functiondialog.cpp
 
 HEADERS      += src/login/logindialog.h                                                              \
                 src/ui/keyboard/uikeyboarddialog.h                                                   \
@@ -163,11 +163,10 @@ HEADERS      += src/login/logindialog.h                                         
                 src/test/macdialog.h                                                                 \
                 src/test/testwidget.h                                                                \
                 src/test/testeventcontroller.h                                                       \
-                src/search/systemlogpage.h \
-    src/search/functiondialog.h
+                src/search/systemlogpage.h                                                           \
+                src/search/functiondialog.h
 
 FORMS        += src/login/logindialog.ui                                                             \
-                src/ui/keyboard/uikeyboarddialog.ui                                                  \
                 src/ui/numkeypaddialog/numkeypaddialog.ui                                            \
                 src/firstcheck/timesetdialog.ui                                                      \
                 src/firstcheck/rtcsetdialog.ui                                                       \
@@ -188,7 +187,6 @@ FORMS        += src/login/logindialog.ui                                        
                 src/dvrsetup/system/language/languagedialog.ui                                       \
                 src/dvrsetup/system/licenseplate/licenseplatedialog.ui                               \
                 src/dvrsetup/system/information/informationdialog.ui                                 \
-                src/dvrsetup/record/normal/normaldialog.ui                                           \
                 src/dvrsetup/record/event/eventdialog.ui                                             \
                 src/dvrsetup/display/cameraname/cameranamedialog.ui                                  \
                 src/dvrsetup/display/videooutput/videooutputdialog.ui                                \
@@ -203,8 +201,42 @@ FORMS        += src/login/logindialog.ui                                        
                 src/search/backupdialog/backupdialog.ui                                              \
                 src/test/diagmaindialog.ui                                                           \
                 src/test/macdialog.ui                                                                \
-                src/search/systemlogpage.ui \
-    src/search/functiondialog.ui
+                src/search/systemlogpage.ui                                                          \
+                src/search/functiondialog.ui                                                         \
+                src/main/mainMenu1080p.ui                                                            \
+                src/dvrsetup/setup/systempage1080p.ui                                                \
+                src/dvrsetup/setup/recordpage1080p.ui                                                \
+                src/dvrsetup/setup/setupdialog1080p.ui                                               \
+                src/dvrsetup/setup/displaypage1080p.ui                                               \
+                src/dvrsetup/setup/devicepage1080p.ui                                                \
+                src/dvrsetup/system/datetime/setdatetimedialog1080p.ui                               \
+                src/dvrsetup/system/security/securitydialog1080p.ui                                  \
+                src/dvrsetup/system/config/configdialog1080p.ui                                      \
+                src/dvrsetup/system/upgrade/appupgradedialog1080p.ui                                 \
+                src/dvrsetup/system/language/languagedialog1080p.ui                                  \
+                src/dvrsetup/system/licenseplate/licenseplatedialog1080p.ui                          \
+                src/dvrsetup/system/information/informationdialog1080p.ui                            \
+                src/dvrsetup/record/event/eventdialog1080p.ui                                        \
+                src/dvrsetup/display/videooutput/videooutputdialog1080p.ui                           \
+                src/dvrsetup/display/cameraname/cameranamedialog1080p.ui                             \
+                src/dvrsetup/display/osd/osddialog1080p.ui                                           \
+                src/dvrsetup/device/videoinput/videoinputdialog1080p.ui                              \
+                src/dvrsetup/device/triggerinput/triggerinputdialog1080p.ui                          \
+                src/dvrsetup/device/gsensor/gsensordialog1080p.ui                                    \
+                src/dvrsetup/device/buzzer/buzzerdialog1080p.ui                                      \
+                src/search/searchdialog1080p.ui                                                      \
+                src/search/backupdialog/backupdialog1080p.ui                                         \
+                src/search/systemlogpage1080p.ui                                                     \
+                src/search/functiondialog1080p.ui                                                    \
+                src/dvrsetup/device/diskformat/diskformatprocess1080p.ui                             \
+                src/firstcheck/timesetdialog1080p.ui                                                 \
+                src/firstcheck/rtcsetdialog1080p.ui                                                  \
+                src/login/logindialog1080p.ui                                                        \
+                src/ui/numkeypaddialog/numkeypaddialog1080p.ui                                       \
+                src/ui/keyboard/uikeyboarddialog1080p.ui                                             \
+                src/dvrsetup/record/normal/normaldialog1080p.ui                                      \
+                src/dvrsetup/record/normal/normaldialog.ui                                           \
+                src/ui/keyboard/uikeyboarddialog.ui
 
 RESOURCES    += mainwidget.qrc
 

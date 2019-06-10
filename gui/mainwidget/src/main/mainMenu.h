@@ -4,10 +4,9 @@
 #include <QtGui/QDialog>
 #include <QPushButton>
 #include "ui_mainMenu.h"
+#include "ui_mainMenu1080p.h"
 
-class QPushButton;
-
-class MainMenu : public QDialog, public Ui::MainMenu
+class MainMenu : public QDialog
 {
 	Q_OBJECT
 
@@ -18,6 +17,13 @@ public:
 
 private:
     int audioStatus;
+
+    QPushButton *buttonSetup;
+    QPushButton *buttonSearch;
+    QPushButton *buttonAudio;
+    QPushButton *buttonShutdown;
+    QPushButton *buttonClose;
+    QFrame      *frame;
 
 public slots:
 	void onButtonAudio();

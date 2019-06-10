@@ -86,6 +86,9 @@
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
     <property name="readOnly">
      <bool>false</bool>
     </property>
@@ -134,9 +137,9 @@
    <widget class="QPushButton" name="buttonOk">
     <property name="geometry">
      <rect>
-      <x>298</x>
+      <x>290</x>
       <y>340</y>
-      <width>200</width>
+      <width>201</width>
       <height>100</height>
      </rect>
     </property>
@@ -150,9 +153,9 @@
    <widget class="QPushButton" name="buttonCancel">
     <property name="geometry">
      <rect>
-      <x>503</x>
+      <x>500</x>
       <y>340</y>
-      <width>200</width>
+      <width>201</width>
       <height>100</height>
      </rect>
     </property>

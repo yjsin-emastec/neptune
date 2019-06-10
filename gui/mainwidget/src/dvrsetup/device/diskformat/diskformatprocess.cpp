@@ -6,38 +6,56 @@
 DiskFormatProcessDialog::DiskFormatProcessDialog(QWidget *parent)
     : QDialog(parent)
 {
-	setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::DiskFormatProcessDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        labelStatus=ui720.labelStatus;
+        diskformatProgressBar=ui720.diskformatProgressBar;
+
+        labelStatus->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white;padding-left:10px;");
+        diskformatProgressBar->setStyleSheet("QProgressBar {font:48px;color:white;} QProgressBar::chunk{font:48px;Background-color:rgb(152,14,69);}");
+
+        //yjsin [18/01/05] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            labelStatus->setStyleSheet("font:41px;background-color:rgb(50,57,83);color:white;padding-left:10px;");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            labelStatus->setStyleSheet("font:41px;background-color:rgb(50,57,83);color:white;padding-left:10px;");
+        }
+    }
+    else
+    {
+        Ui::DiskFormatProcessDialog1080p ui1080p;
+        ui1080p.setupUi(this);
+
+        frame = ui1080p.frame;
+        labelStatus=ui1080p.labelStatus;
+        diskformatProgressBar=ui1080p.diskformatProgressBar;
+
+        labelStatus->setStyleSheet("font:70px;background-color:rgb(50,57,83);color:white;padding-left:30px");
+        diskformatProgressBar->setStyleSheet("QProgressBar {font:70px;color:white;} QProgressBar::chunk{font:48px;Background-color:rgb(152,14,69);}");
+
+        //yjsin [19/02/21] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            labelStatus->setStyleSheet("font:62px;background-color:rgb(50,57,83);color:white;padding-left:20px;");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            labelStatus->setStyleSheet("font:62px;background-color:rgb(50,57,83);color:white;padding-left:20px;");
+        }
+    }
 
 	setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
 	setPalette(QPalette(QColor(255, 128, 64)));
 	frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
 	setAutoFillBackground(true);
-
-	labelStatus = new QLabel("");
-	labelStatus->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-	labelStatus->setMinimumWidth(840);
-	labelStatus->setMinimumHeight(200);
-	labelStatus->setFrameStyle(QFrame::Box);
-	labelStatus->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
-
-	diskformatProgressBar = new QProgressBar;
-	diskformatProgressBar->setRange(0, 100);
-	diskformatProgressBar->setValue(0);
-	diskformatProgressBar->setAlignment(Qt::AlignCenter);
-	diskformatProgressBar->setStyleSheet("QProgressBar {font:48px;color:white;} QProgressBar::chunk{font:48px;Background-color:rgb(152,14,69);}");
-	diskformatProgressBar->setMinimumWidth(840);
-	diskformatProgressBar->setMinimumHeight(100);
-    diskformatProgressBar->setTextVisible(true);
-
-	QVBoxLayout *layout = new QVBoxLayout;
-
-	layout->addWidget(labelStatus);
-	layout->addWidget(diskformatProgressBar);
-
-	setLayout(layout);
-
-	frame->setGeometry(4, 4, sizeHint().width()-8, sizeHint().height()-8);
 }
 DiskFormatProcessDialog::~DiskFormatProcessDialog()
 {
@@ -45,25 +63,12 @@ DiskFormatProcessDialog::~DiskFormatProcessDialog()
 void DiskFormatProcessDialog::DiskFormatInit()
 {
 	diskformatProgressBar->setFormat(tr("Formatting..."));
-	labelStatus->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
 	diskformatProgressBar->setValue(0);
 	labelStatus->setText(tr("%1\n%2").arg(tr("Please don't turn off system."), tr("System will restart after formatting.")));
-
-#if 1 //yjsin [18/01/05] if text is long, change font size
-    if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-    {
-        labelStatus->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-    {
-        labelStatus->setStyleSheet("font:36px;background-color:rgb(50,57,83);color:white");
-    }
-#endif
 }
 void DiskFormatProcessDialog::TestDiskFormatInit()
 {
 	diskformatProgressBar->setFormat(tr("Formatting..."));
-	labelStatus->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
 	diskformatProgressBar->setValue(0);
 	labelStatus->setText(tr("%1\n%2").arg(tr("You must not turn off system."), tr("Please wait during formatting.")));
 }
@@ -80,7 +85,7 @@ void DiskFormatProcessDialog::onDiskFormatupdateprocess(int disk, unsigned long 
 {
 	int i = 0, diskNum = 0;
 
-	qDebug("\t===========================> FORMAT => %d%%", percent);
+    qDebug("\t===========================> FORMAT => %d%%", percent);
 
 	if(total != 2)
 	{
@@ -144,7 +149,14 @@ void DiskFormatProcessDialog::onDiskFormatupdateEnd()
 	diskformatProgressBar->setValue(0);
 	diskformatProgressBar->setFormat("");
 
-	labelStatus->setStyleSheet("font:72px;background-color:rgb(152,14,69);color:white");
+    if(mainHeight == 720)
+    {
+        labelStatus->setStyleSheet("font:72px;background-color:rgb(152,14,69);color:white");
+    }
+    else
+    {
+        labelStatus->setStyleSheet("font:100px;background-color:rgb(152,14,69);color:white");
+    }
 	labelStatus->setAlignment(Qt::AlignCenter);
 	labelStatus->setText(str);
 

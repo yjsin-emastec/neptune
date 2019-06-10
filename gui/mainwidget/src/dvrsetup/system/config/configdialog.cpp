@@ -7,14 +7,37 @@
 ConfigDialog::ConfigDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::ConfigDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        labelConfig = ui720.labelConfig;
+        buttonSaveConfig = ui720.buttonSaveConfig;
+        buttonLoadConfig = ui720.buttonLoadConfig;
+        buttonClose = ui720.buttonClose;
+
+        labelConfig->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+    }
+    else
+    {
+        Ui::ConfigDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        labelConfig = ui1080.labelConfig;
+        buttonSaveConfig = ui1080.buttonSaveConfig;
+        buttonLoadConfig = ui1080.buttonLoadConfig;
+        buttonClose = ui1080.buttonClose;
+
+        labelConfig->setStyleSheet("font:70px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
-
-    labelConfig->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
 
     msgBox = NULL;
 
@@ -56,10 +79,8 @@ void ConfigDialog::onButtonLoadConfig()
 {
     if(!msgBox)
     {
-        msgBox = new TextMessageDialog(tr("Config Load"), tr("WARNING\n\n" "After loading a configuration,\n" "System will restart.        "), 1, this);
+        msgBox = new TextMessageDialog(tr("Config Load"), tr("After loading a configuration,\n" "System will restart."), 1, this);
     }
-
-    msgBox->setMsgAlignment(Qt::AlignCenter);
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
     msgBoxEsckey = 1;
 
@@ -98,10 +119,8 @@ void ConfigDialog::onButtonLoadConfig()
 
                     if(!msgBox)
                     {
-                        msgBox = new TextMessageDialog(tr("NOTICE"), tr("%1\n\n%2").arg(tr("NOTICE"),tr("Please unplug USB memory.")), 2, this);
+                        msgBox = new TextMessageDialog(tr("NOTICE"), tr("Please unplug USB memory."), 2, this);
                     }
-
-                    msgBox->setMsgAlignment(Qt::AlignCenter);
                     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
                     if(msgBox->exec())

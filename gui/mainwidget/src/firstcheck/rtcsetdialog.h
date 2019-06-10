@@ -3,10 +3,10 @@
 
 #include <QtGui/QDialog>
 #include "ui_rtcsetdialog.h"
-
+#include "ui_rtcsetdialog1080p.h"
 class RtcSetDialog;
 
-class RtcSetDialog : public QDialog, public Ui::RtcSetDialog
+class RtcSetDialog : public QDialog
 {
     Q_OBJECT
 
@@ -27,6 +27,13 @@ private:
     time_t tOld;
     QTimer *updateTimer;
     bool eventFilter(QObject *obj, QEvent *event);
+
+    QFrame *frame;
+    QLabel *label;
+    QLabel *labelRtcTitle;
+    QLabel *labelRtcStatus;
+    QDateTimeEdit *dateTimeRtc;
+    QPushButton *buttonSetRestart;
 
 private slots:
     void onUpdateStatus(void);

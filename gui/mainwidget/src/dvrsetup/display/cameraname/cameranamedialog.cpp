@@ -6,23 +6,64 @@
 CameraNameDialog::CameraNameDialog(QWidget *parent)
     : QDialog(parent)
 {
-	setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::CameraNameDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        labelCameraName1 = ui720.labelCameraName1;
+        labelCameraName2 = ui720.labelCameraName2;
+        labelCameraName3 = ui720.labelCameraName3;
+        labelCameraName4 = ui720.labelCameraName4;
+        lineEditName1 = ui720.lineEditName1;
+        lineEditName2 = ui720.lineEditName2;
+        lineEditName3 = ui720.lineEditName3;
+        lineEditName4 = ui720.lineEditName4;
+        buttonVirtualKeyboard1 = ui720.buttonVirtualKeyboard1;
+        buttonVirtualKeyboard2 = ui720.buttonVirtualKeyboard2;
+        buttonVirtualKeyboard3 = ui720.buttonVirtualKeyboard3;
+        buttonVirtualKeyboard4 = ui720.buttonVirtualKeyboard4;
+        buttonSave = ui720.buttonSave;
+        buttonClose = ui720.buttonClose;
+
+        labelCameraName1->setStyleSheet("font:48px;color:white");
+        labelCameraName2->setStyleSheet("font:48px;color:white");
+        labelCameraName3->setStyleSheet("font:48px;color:white");
+        labelCameraName4->setStyleSheet("font:48px;color:white");
+    }
+    else
+    {
+        Ui::CameraNameDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        labelCameraName1 = ui1080.labelCameraName1;
+        labelCameraName2 = ui1080.labelCameraName2;
+        labelCameraName3 = ui1080.labelCameraName3;
+        labelCameraName4 = ui1080.labelCameraName4;
+        lineEditName1 = ui1080.lineEditName1;
+        lineEditName2 = ui1080.lineEditName2;
+        lineEditName3 = ui1080.lineEditName3;
+        lineEditName4 = ui1080.lineEditName4;
+        buttonVirtualKeyboard1 = ui1080.buttonVirtualKeyboard1;
+        buttonVirtualKeyboard2 = ui1080.buttonVirtualKeyboard2;
+        buttonVirtualKeyboard3 = ui1080.buttonVirtualKeyboard3;
+        buttonVirtualKeyboard4 = ui1080.buttonVirtualKeyboard4;
+        buttonSave = ui1080.buttonSave;
+        buttonClose = ui1080.buttonClose;
+
+        labelCameraName1->setStyleSheet("font:65px;color:white");
+        labelCameraName2->setStyleSheet("font:65px;color:white");
+        labelCameraName3->setStyleSheet("font:65px;color:white");
+        labelCameraName4->setStyleSheet("font:65px;color:white");
+    }
 
 	setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
 	setPalette(QPalette(QColor(255, 128, 64)));
 	frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
 	buttonVirtualKeyboard1->setFocus();
-
-	labelCameraName1->setStyleSheet("font:48px;color:white");
-	labelCameraName2->setStyleSheet("font:48px;color:white");
-	labelCameraName3->setStyleSheet("font:48px;color:white");
-	labelCameraName4->setStyleSheet("font:48px;color:white");
-
-	lineEditName1->setAlignment(Qt::AlignCenter);
-	lineEditName2->setAlignment(Qt::AlignCenter);
-	lineEditName3->setAlignment(Qt::AlignCenter);
-	lineEditName4->setAlignment(Qt::AlignCenter);
 
 	keyboard = NULL;
 

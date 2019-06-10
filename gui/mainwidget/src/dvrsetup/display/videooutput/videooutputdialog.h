@@ -3,6 +3,7 @@
 
 #include <QtGui/QDialog>
 #include "ui_videooutputdialog.h"
+#include "ui_videooutputdialog1080p.h"
 #include "textmessagebox/textmessagedialog.h"
 #include "DVR.h"
 
@@ -10,7 +11,7 @@ class VideoOutputDialog;
 class TextMessageDialog;
 class NumKeypadDialog;
 
-class VideoOutputDialog : public QDialog, public Ui::VideoOutputDialog
+class VideoOutputDialog : public QDialog
 {
     Q_OBJECT
 
@@ -41,6 +42,22 @@ protected:
 private:
     TextMessageDialog *msgBox;
     NumKeypadDialog *numKeypad;
+
+    QFrame *frame;
+    QPushButton *buttonHdmi;
+    QPushButton *buttonCvbs;
+    QPushButton *button_cvbs_x;
+    QPushButton *button_cvbs_y;
+    QPushButton *button_cvbs_width;
+    QPushButton *button_cvbs_height;
+    QPushButton *buttonDefault;
+    QPushButton *buttonSave;
+    QPushButton *buttonClose;
+    QLabel *label2;
+    QLabel *label3;
+    QLabel *label4;
+    QLabel *label5;
+    QLabel *label6;
 };
 
 #endif // VIDEOOUTPUTDIALOG_H

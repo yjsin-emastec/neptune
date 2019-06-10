@@ -3,19 +3,25 @@
 
 #include <QtGui/QWidget>
 #include "ui_displaypage.h"
+#include "ui_displaypage1080p.h"
 
 class TextMessageDialog;
 class CameraNameDialog;
 class VideoOutputDialog;
 class OsdDialog;
 
-class DisplayPage : public QWidget, public Ui::DisplayPage
+class DisplayPage : public QWidget
 {
     Q_OBJECT
 
 public:
     DisplayPage(QWidget *parent = 0);
     ~DisplayPage();
+
+    QPushButton *buttonVideoOutput;
+    QPushButton *buttonCameraName;
+    QPushButton *buttonOsd;
+    QPushButton *buttonClose;
 
 signals:
     void saveDisplayPage(int type);

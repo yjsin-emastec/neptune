@@ -110,7 +110,10 @@ private:
                                             m_wheelY,
                                             right_offset,
                                             videoPaneNo,
-                                            videoLoss;
+                                            videoLoss,
+                                            FONT_PIXELSIZE_CHANNELNAME,
+                                            TOP_BOTTOM_OFFSET,
+                                            iconSize;
 
     QLabel                                 *labelName,
                                            *labelNoVideo,

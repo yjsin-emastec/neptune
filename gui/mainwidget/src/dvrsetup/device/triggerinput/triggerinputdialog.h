@@ -3,6 +3,7 @@
 
 #include <QtGui/QDialog>
 #include "ui_triggerinputdialog.h"
+#include "ui_triggerinputdialog1080p.h"
 #include "textmessagebox/textmessagedialog.h"
 #include "DVR.h"
 
@@ -88,6 +89,65 @@ private:
          triggerAudio4;
 
     TextMessageDialog *msgBox;
+
+    QFrame *frame;
+
+    QPushButton *buttonAudio1Down;
+    QPushButton *buttonAudio1Up;
+    QPushButton *buttonAudio2Down;
+    QPushButton *buttonAudio2Up;
+    QPushButton *buttonAudio3Down;
+    QPushButton *buttonAudio3Up;
+    QPushButton *buttonAudio4Down;
+    QPushButton *buttonAudio4Up;
+    QPushButton *buttonDelay1Down;
+    QPushButton *buttonDelay1Up;
+    QPushButton *buttonDelay2Down;
+    QPushButton *buttonDelay2Up;
+    QPushButton *buttonDelay3Down;
+    QPushButton *buttonDelay3Up;
+    QPushButton *buttonDelay4Down;
+    QPushButton *buttonDelay4Up;
+    QPushButton *buttonPriority1Down;
+    QPushButton *buttonPriority1Up;
+    QPushButton *buttonPriority2Down;
+    QPushButton *buttonPriority2Up;
+    QPushButton *buttonPriority3Down;
+    QPushButton *buttonPriority3Up;
+    QPushButton *buttonPriority4Down;
+    QPushButton *buttonPriority4Up;
+    QPushButton *buttonSource1Down;
+    QPushButton *buttonSource1Up;
+    QPushButton *buttonSource2Down;
+    QPushButton *buttonSource2Up;
+    QPushButton *buttonSource3Down;
+    QPushButton *buttonSource3Up;
+    QPushButton *buttonSource4Down;
+    QPushButton *buttonSource4Up;
+    QPushButton *buttonClose;
+    QPushButton *buttonDefault;
+    QPushButton *buttonSave;
+
+    QLabel *labelAudio1;
+    QLabel *labelAudio2;
+    QLabel *labelAudio3;
+    QLabel *labelAudio4;
+    QLabel *labelDelay1;
+    QLabel *labelDelay2;
+    QLabel *labelDelay3;
+    QLabel *labelDelay4;
+    QLabel *labelPriority1;
+    QLabel *labelPriority2;
+    QLabel *labelPriority3;
+    QLabel *labelPriority4;
+    QLabel *labelSource1;
+    QLabel *labelSource2;
+    QLabel *labelSource3;
+    QLabel *labelSource4;
+    QLabel *labelTrigger1;
+    QLabel *labelTrigger2;
+    QLabel *labelTrigger3;
+    QLabel *labelTrigger4;
 };
 
 #endif // TRIGGERINPUTDIALOG_H

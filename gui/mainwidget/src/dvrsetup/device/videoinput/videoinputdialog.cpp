@@ -5,7 +5,32 @@
 VideoInputDialog::VideoInputDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::VideoInputDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        buttonCamera = ui720.buttonCamera;
+        buttonMirror = ui720.buttonMirror;
+        buttonNotAvailable = ui720.buttonNotAvailable;
+        buttonFlip = ui720.buttonFlip;
+        buttonSave = ui720.buttonSave;
+        buttonClose = ui720.buttonClose;
+    }
+    else
+    {
+        Ui::VideoInputDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonCamera = ui1080.buttonCamera;
+        buttonMirror = ui1080.buttonMirror;
+        buttonNotAvailable = ui1080.buttonNotAvailable;
+        buttonFlip = ui1080.buttonFlip;
+        buttonSave = ui1080.buttonSave;
+        buttonClose = ui1080.buttonClose;
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 

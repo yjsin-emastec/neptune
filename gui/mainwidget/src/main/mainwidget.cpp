@@ -617,9 +617,8 @@ void MainWidget::closeEvent(QCloseEvent *event)
 
     if(!msgBox)
     {
-        msgBox = new TextMessageDialog(tr("POWER OFF"), tr("\t\t\t\tNOTICE\n\n" "System was shutdown successfully.\n" "Turn off the power."), 13, this);
+        msgBox = new TextMessageDialog(tr("POWER OFF"), tr("System was shutdown successfully.\n" "Turn off the power."), 13, this);
     }
-
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
     while(1)
@@ -642,21 +641,52 @@ void MainWidget::loadStyleSheet()
 
     file.setFileName(":/qss/darkstyle.qss");
 
-#if 1   //yjsin [17/09/14] if text is long, change button font size 48px->44px
-    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0 || utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+    if(mainHeight == 720)
     {
-        if(access("/tmp/eastern", F_OK) == 0)
+        //yjsin [19/01/17] if text is long, change button font size 48px->44px
+        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0 || utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
         {
-            file.setFileName("/tmp/eastern/usr/lib/darkstyle_button_font_small.qss");
-            qDebug("load darkstyle_button_font_small.qss from nfs");
+            if(access("/tmp/eastern", F_OK) == 0)
+            {
+                file.setFileName("/tmp/eastern/usr/lib/darkstyle_button_font_small.qss");
+                qDebug("load darkstyle_button_font_small.qss from nfs");
+            }
+            else
+            {
+                file.setFileName("/usr/lib/darkstyle_button_font_small.qss");
+                qDebug("load darkstyle_button_font_small.qss");
+            }
+        }
+    }
+    else
+    {
+        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0 || utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            if(access("/tmp/eastern", F_OK) == 0)
+            {
+                file.setFileName("/tmp/eastern/usr/lib/darkstyle_1080p_button_font_small.qss");
+                qDebug("load darkstyle_1080p_button_font_small.qss from nfs");
+            }
+            else
+            {
+                file.setFileName("/usr/lib/darkstyle_1080p_button_font_small.qss");
+                qDebug("load darkstyle_1080p_button_font_small.qss");
+            }
         }
         else
         {
-            file.setFileName("/usr/lib/darkstyle_button_font_small.qss");
-            qDebug("load darkstyle_button_font_small.qss");
+            if(access("/tmp/eastern", F_OK) == 0)
+            {
+                file.setFileName("/tmp/eastern/usr/lib/darkstyle_1080p.qss");
+                qDebug("load darkstyle_1080p.qss from nfs");
+            }
+            else
+            {
+                file.setFileName("/usr/lib/darkstyle_1080p.qss");
+                qDebug("load darkstyle_1080p.qss");
+            }
         }
     }
-#endif
 
     file.open(QFile::ReadOnly);
     QString styleSheet = QLatin1String(file.readAll());
@@ -764,7 +794,15 @@ void MainWidget::createPopupDialog()
         connect(this,        SIGNAL(configProgress(int, int)), setupDialog, SLOT(updateConfigProgress(int, int)));
         connect(this,        SIGNAL(upgradeProgress(int)),     setupDialog, SLOT(onUpgradeProgress(int)));
 
-        setupDialog->resize(1280, 720);
+
+        if(mainHeight == 720)
+        {
+            setupDialog->resize(1280, 720);
+        }
+        else
+        {
+            setupDialog->resize(1920, 1080);
+        }
         setupDialog->frame->setGeometry(4, 4, setupDialog->width()-8, setupDialog->height()-8);
 
         qDebug("setupDialog size ESTN : %d, %d", setupDialog->width(), setupDialog->height());
@@ -899,7 +937,7 @@ void MainWidget::systemShutdown()
 
     if(!msgBox)
     {
-        msgBox = new TextMessageDialog(tr("POWER OFF"), tr("\t\t\t\tWARNING\n\n" "Do you want to shutdown the system?"), 0, this);
+        msgBox = new TextMessageDialog(tr("POWER OFF"), tr("Do you want to shutdown the system?"), 0, this);
     }
 
     msgBox->buttonCancel->setFocus();
@@ -1368,12 +1406,9 @@ void MainWidget::runSearch()
 
         if(!msgBox)
         {
-            msgBox = new TextMessageDialog(tr("SEARCH"),
-                    tr("WARNING\n\n"
-                        "No SSD"),
-                    2, this);
-            msgBox->setMsgAlignment(Qt::AlignCenter);
+            msgBox = new TextMessageDialog(tr("SEARCH"), tr("No SSD"), 2, this);
         }
+        msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
         if(msgBox->exec())
         {
@@ -2097,7 +2132,7 @@ void MainWidget::DiskFormatProcessDlgOpen()
         connect(diskformatprocessDialog, SIGNAL(diskformatReboot()), this, SLOT(DiskFormatSystemReboot()));
     }
 
-    diskformatprocessDialog->move((appmgr_get_mainwidget_width()-diskformatprocessDialog->sizeHint().width())/2,(appmgr_get_mainwidget_height()-diskformatprocessDialog->sizeHint().height())/2);
+    diskformatprocessDialog->move((appmgr_get_mainwidget_width()-diskformatprocessDialog->size().width())/2,(appmgr_get_mainwidget_height()-diskformatprocessDialog->size().height())/2);
 
     diskformatprocessDialog->DiskFormatInit();
 

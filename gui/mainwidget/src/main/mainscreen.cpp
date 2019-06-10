@@ -84,8 +84,7 @@ void MainWidget::videoPaneDoubleClicked(int ch)
             delete msgBox;
         }
 
-        msgBox = new TextMessageDialog(tr("NOTICE"), tr("NOTICE\n\nCurrent status is trigger."), 2, this);
-        msgBox->setMsgAlignment(Qt::AlignCenter);
+        msgBox = new TextMessageDialog(tr("NOTICE"), tr("Current status is trigger."), 2, this);
         msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
         if(msgBox->exec())
@@ -135,8 +134,7 @@ void MainWidget::videoPaneRightClicked(int ch)
                 delete msgBox;
             }
 
-            msgBox = new TextMessageDialog(tr("NOTICE"), tr("NOTICE\n\nCurrent status is trigger."), 2, this);
-            msgBox->setMsgAlignment(Qt::AlignCenter);
+            msgBox = new TextMessageDialog(tr("NOTICE"), tr("Current status is trigger."), 2, this);
             msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
             if(msgBox->exec())

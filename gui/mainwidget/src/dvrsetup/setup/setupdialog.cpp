@@ -11,7 +11,20 @@
 SetupDialog::SetupDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::SetupDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+    }
+    else
+    {
+        Ui::SetupDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 

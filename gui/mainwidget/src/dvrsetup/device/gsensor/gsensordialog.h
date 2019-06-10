@@ -3,9 +3,10 @@
 
 #include <QtGui/QDialog>
 #include "ui_gsensordialog.h"
+#include "ui_gsensordialog1080p.h"
 #include "DVR.h"
 
-class GsensorDialog : public QDialog, public Ui::GsensorDialog
+class GsensorDialog : public QDialog
 {
     Q_OBJECT
 
@@ -24,7 +25,12 @@ protected:
 	void keyReleaseEvent(QKeyEvent *event);
 
 private:
-	int indexGsensor;    
+    int indexGsensor;
+
+    QFrame *frame;
+    QPushButton *buttonClose;
+    QPushButton *buttonGsensor;
+    QPushButton *buttonSave;
 };
 
 #endif // GSENSORDIALOG_H

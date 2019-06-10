@@ -3,17 +3,22 @@
 
 #include <QtGui/QWidget>
 #include "ui_recordpage.h"
+#include "ui_recordpage1080p.h"
 
 class NormalDialog;
 class EventDialog;
 
-class RecordPage : public QWidget, public Ui::RecordPage
+class RecordPage : public QWidget
 {
     Q_OBJECT
 
 public:
     RecordPage(QWidget *parent = 0);
     ~RecordPage();
+
+    QPushButton *buttonNormal;
+    QPushButton *buttonEvent;
+    QPushButton *buttonClose;
 
 signals:
 	void saveRecordPage(int type);

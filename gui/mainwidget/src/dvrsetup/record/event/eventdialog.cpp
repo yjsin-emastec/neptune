@@ -5,7 +5,44 @@
 EventDialog::EventDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::EventDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        buttonEventTime = ui720.buttonEventTime;
+        buttonGsensor = ui720.buttonGsensor;
+        buttonTrigger = ui720.buttonTrigger;
+        buttonSave = ui720.buttonSave;
+        buttonClose = ui720.buttonClose;
+
+        //yjsin [19/02/14] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+        {
+            buttonEventTime->setStyleSheet("font:45px;");
+            buttonGsensor->setStyleSheet("font:46px;");
+            buttonTrigger->setStyleSheet("font:46px;");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            buttonEventTime->setStyleSheet("font:45px;");
+            buttonGsensor->setStyleSheet("font:44px;");
+            buttonTrigger->setStyleSheet("font:45px;");
+        }
+    }
+    else
+    {
+        Ui::EventDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonEventTime = ui1080.buttonEventTime;
+        buttonGsensor = ui1080.buttonGsensor;
+        buttonTrigger = ui1080.buttonTrigger;
+        buttonSave = ui1080.buttonSave;
+        buttonClose = ui1080.buttonClose;
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
@@ -60,7 +97,6 @@ void EventDialog::onEventTime()
         cfgSetup.rec.post_record[ch] = 30;
         indexEventTime               = 0;
     }
-
 }
 void EventDialog::onGsensor()
 {

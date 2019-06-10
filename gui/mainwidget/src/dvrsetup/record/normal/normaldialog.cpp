@@ -6,110 +6,214 @@
 NormalDialog::NormalDialog(QWidget *parent)
     : QDialog(parent)
 {
-    Ui::NormalDialog ui720;
-    ui720.setupUi(this);
-
-    frame = ui720.frame;
-    buttonFrame[0] = ui720.buttonFrame1;
-    buttonFrame[1] = ui720.buttonFrame2;
-    buttonFrame[2] = ui720.buttonFrame3;
-    buttonFrame[3] = ui720.buttonFrame4;
-    buttonFrame[4] = ui720.buttonFrameAll;
-    buttonQuality[0] = ui720.buttonQuality1;
-    buttonQuality[1] = ui720.buttonQuality2;
-    buttonQuality[2] = ui720.buttonQuality3;
-    buttonQuality[3] = ui720.buttonQuality4;
-    buttonQuality[4] = ui720.buttonQualityAll;
-    buttonRecording[0] = ui720.buttonRecording1;
-    buttonRecording[1] = ui720.buttonRecording2;
-    buttonRecording[2] = ui720.buttonRecording3;
-    buttonRecording[3] = ui720.buttonRecording4;
-    buttonRecording[4] = ui720.buttonRecordingAll;
-    buttonAudio[0] = ui720.buttonAudio1;
-    buttonAudio[1] = ui720.buttonAudio2;
-    buttonAudio[2] = ui720.buttonAudio3;
-    buttonAudio[3] = ui720.buttonAudio4;
-    buttonAudio[4] = ui720.buttonAudioAll;
-    buttonDefault = ui720.buttonDefault;
-    buttonReload = ui720.buttonReload;
-    buttonSave = ui720.buttonSave;
-    buttonClose = ui720.buttonClose;
-
-    buttonFrame[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-    buttonQuality[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-    buttonRecording[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-    buttonAudio[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-
-    labelFrame[0] = ui720.labelFrame1;
-    labelFrame[1] = ui720.labelFrame2;
-    labelFrame[2] = ui720.labelFrame3;
-    labelFrame[3] = ui720.labelFrame4;
-    labelFrame[4] = ui720.labelFrame;
-    labelQuality[0] = ui720.labelQuality1;
-    labelQuality[1] = ui720.labelQuality2;
-    labelQuality[2] = ui720.labelQuality3;
-    labelQuality[3] = ui720.labelQuality4;
-    labelQuality[4] = ui720.labelQuality;
-    labelRecording[0] = ui720.labelRecording1;
-    labelRecording[1] = ui720.labelRecording2;
-    labelRecording[2] = ui720.labelRecording3;
-    labelRecording[3] = ui720.labelRecording4;
-    labelRecording[4] = ui720.labelRecording;
-    labelAudio[0] = ui720.labelAudio1;
-    labelAudio[1] = ui720.labelAudio2;
-    labelAudio[2] = ui720.labelAudio3;
-    labelAudio[3] = ui720.labelAudio4;
-    labelAudio[4] = ui720.labelAudio;
-    labelAll = ui720.labelAll;
-    labelCh[0] = ui720.labelCh1;
-    labelCh[1] = ui720.labelCh2;
-    labelCh[2] = ui720.labelCh3;
-    labelCh[3] = ui720.labelCh4;
-
-    for(int ch=0; ch<NUMOFCH; ch++)
+    if(mainHeight == 720)
     {
-        labelFrame[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-        labelQuality[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-        labelRecording[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-        labelAudio[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-        labelCh[ch]->setStyleSheet("font:48px");
-    }
+        Ui::NormalDialog ui720;
+        ui720.setupUi(this);
 
-    labelAll->setStyleSheet("font:45px;");
-    labelFrame[4]->setStyleSheet("background-color:rgb(50,57,83);");
-    labelQuality[4]->setStyleSheet("background-color:rgb(50,57,83);");
-    labelRecording[4]->setStyleSheet("background-color:rgb(50,57,83);");
-    labelAudio[4]->setStyleSheet("background-color:rgb(50,57,83);");
+        frame = ui720.frame;
+        buttonFrame[0] = ui720.buttonFrame1;
+        buttonFrame[1] = ui720.buttonFrame2;
+        buttonFrame[2] = ui720.buttonFrame3;
+        buttonFrame[3] = ui720.buttonFrame4;
+        buttonFrame[4] = ui720.buttonFrameAll;
+        buttonQuality[0] = ui720.buttonQuality1;
+        buttonQuality[1] = ui720.buttonQuality2;
+        buttonQuality[2] = ui720.buttonQuality3;
+        buttonQuality[3] = ui720.buttonQuality4;
+        buttonQuality[4] = ui720.buttonQualityAll;
+        buttonRecording[0] = ui720.buttonRecording1;
+        buttonRecording[1] = ui720.buttonRecording2;
+        buttonRecording[2] = ui720.buttonRecording3;
+        buttonRecording[3] = ui720.buttonRecording4;
+        buttonRecording[4] = ui720.buttonRecordingAll;
+        buttonAudio[0] = ui720.buttonAudio1;
+        buttonAudio[1] = ui720.buttonAudio2;
+        buttonAudio[2] = ui720.buttonAudio3;
+        buttonAudio[3] = ui720.buttonAudio4;
+        buttonAudio[4] = ui720.buttonAudioAll;
+        buttonDefault = ui720.buttonDefault;
+        buttonReload = ui720.buttonReload;
+        buttonSave = ui720.buttonSave;
+        buttonClose = ui720.buttonClose;
 
-#if 1 //yjsin [19/01/02] if text is long, change font size and label location and size
-    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
-    {
-        buttonDefault->resize(304, 91);
-        buttonDefault->setStyleSheet("font:38px");
-        buttonReload->setGeometry(335, 550, 231, 91);
+        buttonFrame[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonQuality[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonRecording[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonAudio[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+
+        labelFrame[0] = ui720.labelFrame1;
+        labelFrame[1] = ui720.labelFrame2;
+        labelFrame[2] = ui720.labelFrame3;
+        labelFrame[3] = ui720.labelFrame4;
+        labelFrame[4] = ui720.labelFrame;
+        labelQuality[0] = ui720.labelQuality1;
+        labelQuality[1] = ui720.labelQuality2;
+        labelQuality[2] = ui720.labelQuality3;
+        labelQuality[3] = ui720.labelQuality4;
+        labelQuality[4] = ui720.labelQuality;
+        labelRecording[0] = ui720.labelRecording1;
+        labelRecording[1] = ui720.labelRecording2;
+        labelRecording[2] = ui720.labelRecording3;
+        labelRecording[3] = ui720.labelRecording4;
+        labelRecording[4] = ui720.labelRecording;
+        labelAudio[0] = ui720.labelAudio1;
+        labelAudio[1] = ui720.labelAudio2;
+        labelAudio[2] = ui720.labelAudio3;
+        labelAudio[3] = ui720.labelAudio4;
+        labelAudio[4] = ui720.labelAudio;
+        labelAll = ui720.labelAll;
+        labelCh[0] = ui720.labelCh1;
+        labelCh[1] = ui720.labelCh2;
+        labelCh[2] = ui720.labelCh3;
+        labelCh[3] = ui720.labelCh4;
+
+        for(int ch=0; ch<NUMOFCH; ch++)
+        {
+            labelFrame[ch]->setStyleSheet("background-color:rgb(50,57,83);");
+            labelQuality[ch]->setStyleSheet("background-color:rgb(50,57,83);");
+            labelRecording[ch]->setStyleSheet("background-color:rgb(50,57,83);");
+            labelAudio[ch]->setStyleSheet("background-color:rgb(50,57,83);");
+            labelCh[ch]->setStyleSheet("font:48px");
+        }
+
+        labelAll->setStyleSheet("font:46px;background-color:rgb(50,57,83);");
+        labelFrame[4]->setStyleSheet("background-color:rgb(50,57,83);");
+        labelQuality[4]->setStyleSheet("background-color:rgb(50,57,83);");
+        labelRecording[4]->setStyleSheet("background-color:rgb(50,57,83);");
+        labelAudio[4]->setStyleSheet("background-color:rgb(50,57,83);");
+
+        //yjsin [19/01/02] if text is long, change font size and label location and size
+        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+        {
+            buttonDefault->resize(304, 91);
+            buttonDefault->setStyleSheet("font:38px");
+            buttonReload->setGeometry(335, 550, 231, 91);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        {
+            buttonDefault->resize(281, 91);
+            buttonReload->setGeometry(311, 550, 251, 91);
+            buttonFrame[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);font-size: 40px;}QPushButton:focus{background-color:rgb(152,14,69);}");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            labelAll->setStyleSheet("font:40px");
+            buttonDefault->resize(301, 91);
+            buttonReload->setGeometry(331, 550, 241, 91);
+            buttonAudio[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);font-size: 45px;}QPushButton:focus{background-color:rgb(152,14,69);}");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            buttonReload->resize(250, 91);
+        }
     }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+    else
     {
-        buttonDefault->resize(301, 91);
-        buttonReload->setGeometry(331, 550, 231, 91);
-        buttonFrame[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);font-size: 40px;}QPushButton:focus{background-color:rgb(152,14,69);}");
+        Ui::NormalDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonFrame[0] = ui1080.buttonFrame1;
+        buttonFrame[1] = ui1080.buttonFrame2;
+        buttonFrame[2] = ui1080.buttonFrame3;
+        buttonFrame[3] = ui1080.buttonFrame4;
+        buttonFrame[4] = ui1080.buttonFrameAll;
+        buttonQuality[0] = ui1080.buttonQuality1;
+        buttonQuality[1] = ui1080.buttonQuality2;
+        buttonQuality[2] = ui1080.buttonQuality3;
+        buttonQuality[3] = ui1080.buttonQuality4;
+        buttonQuality[4] = ui1080.buttonQualityAll;
+        buttonRecording[0] = ui1080.buttonRecording1;
+        buttonRecording[1] = ui1080.buttonRecording2;
+        buttonRecording[2] = ui1080.buttonRecording3;
+        buttonRecording[3] = ui1080.buttonRecording4;
+        buttonRecording[4] = ui1080.buttonRecordingAll;
+        buttonAudio[0] = ui1080.buttonAudio1;
+        buttonAudio[1] = ui1080.buttonAudio2;
+        buttonAudio[2] = ui1080.buttonAudio3;
+        buttonAudio[3] = ui1080.buttonAudio4;
+        buttonAudio[4] = ui1080.buttonAudioAll;
+        buttonDefault = ui1080.buttonDefault;
+        buttonReload = ui1080.buttonReload;
+        buttonSave = ui1080.buttonSave;
+        buttonClose = ui1080.buttonClose;
+
+        buttonFrame[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonQuality[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonRecording[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonAudio[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+
+        labelFrame[0] = ui1080.labelFrame1;
+        labelFrame[1] = ui1080.labelFrame2;
+        labelFrame[2] = ui1080.labelFrame3;
+        labelFrame[3] = ui1080.labelFrame4;
+        labelFrame[4] = ui1080.labelFrame;
+        labelQuality[0] = ui1080.labelQuality1;
+        labelQuality[1] = ui1080.labelQuality2;
+        labelQuality[2] = ui1080.labelQuality3;
+        labelQuality[3] = ui1080.labelQuality4;
+        labelQuality[4] = ui1080.labelQuality;
+        labelRecording[0] = ui1080.labelRecording1;
+        labelRecording[1] = ui1080.labelRecording2;
+        labelRecording[2] = ui1080.labelRecording3;
+        labelRecording[3] = ui1080.labelRecording4;
+        labelRecording[4] = ui1080.labelRecording;
+        labelAudio[0] = ui1080.labelAudio1;
+        labelAudio[1] = ui1080.labelAudio2;
+        labelAudio[2] = ui1080.labelAudio3;
+        labelAudio[3] = ui1080.labelAudio4;
+        labelAudio[4] = ui1080.labelAudio;
+        labelAll = ui1080.labelAll;
+        labelCh[0] = ui1080.labelCh1;
+        labelCh[1] = ui1080.labelCh2;
+        labelCh[2] = ui1080.labelCh3;
+        labelCh[3] = ui1080.labelCh4;
+
+        for(int ch=0; ch<NUMOFCH; ch++)
+        {
+            labelFrame[ch]->setStyleSheet("background-color:rgb(50,57,83);");
+            labelQuality[ch]->setStyleSheet("background-color:rgb(50,57,83);");
+            labelRecording[ch]->setStyleSheet("background-color:rgb(50,57,83);");
+            labelAudio[ch]->setStyleSheet("background-color:rgb(50,57,83);");
+            labelCh[ch]->setStyleSheet("font:65px");
+        }
+
+        labelAll->setStyleSheet("font:65px;background-color:rgb(50,57,83);");
+        labelFrame[4]->setStyleSheet("background-color:rgb(50,57,83);");
+        labelQuality[4]->setStyleSheet("background-color:rgb(50,57,83);");
+        labelRecording[4]->setStyleSheet("background-color:rgb(50,57,83);");
+        labelAudio[4]->setStyleSheet("background-color:rgb(50,57,83);");
+
+        //yjsin [19/02/21] if text is long, change label location and size
+        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+        {
+            buttonDefault->resize(500, 131);
+            buttonReload->setGeometry(560, 830, 300, 131);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        {
+            buttonDefault->resize(400, 131);
+            buttonReload->setGeometry(460, 830, 400, 131);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            labelAll->setStyleSheet("font:58px");
+            buttonDefault->resize(400, 131);
+            buttonReload->setGeometry(460, 830, 400, 131);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            buttonDefault->resize(320, 131);
+            buttonReload->setGeometry(380, 830, 370, 131);
+        }
     }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-    {
-        labelAll->setStyleSheet("font:40px");
-        buttonDefault->resize(301, 91);
-        buttonReload->setGeometry(331, 550, 231, 91);
-        buttonAudio[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);font-size: 45px;}QPushButton:focus{background-color:rgb(152,14,69);}");
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-    {
-        buttonReload->resize(240, 91);
-    }
-#endif
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
+
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
+    buttonFrame[4]->setFocus();
 
     connect(buttonFrame[0],     SIGNAL(released(void)), this, SLOT(onButtonFrame1       (void)));
     connect(buttonFrame[1],     SIGNAL(released(void)), this, SLOT(onButtonFrame2       (void)));

@@ -9,77 +9,111 @@
 AppUpgradeDialog::AppUpgradeDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::AppUpgradeDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        labelStatus = ui720.labelStatus;
+        labelModelName = ui720.labelModelName;
+        labelModelNameValue = ui720.labelModelNameValue;
+        labelVersion = ui720.labelVersion;
+        labelVersionValue = ui720.labelVersionValue;
+        labelFileName = ui720.labelFileName;
+        labelFileNameValue = ui720.labelFileNameValue;
+        labelProgress = ui720.labelProgress;
+        labelProgressValue = ui720.labelProgressValue;
+        progressBar = ui720.progressBar;
+        buttonFind = ui720.buttonFind;
+        buttonUpgrade = ui720.buttonUpgrade;
+        buttonClose = ui720.buttonClose;
+
+        labelStatus->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+        labelModelName->setStyleSheet("font:40px;color:white");
+        labelModelName->setAlignment(Qt::AlignCenter);
+        labelVersion->setStyleSheet("font:40px;color:white");
+        labelVersion->setAlignment(Qt::AlignCenter);
+        labelFileName->setStyleSheet("font:40px;color:white");
+        labelFileName->setAlignment(Qt::AlignCenter);
+        labelProgress->setStyleSheet("font:40px;color:white");
+        labelProgress->setAlignment(Qt::AlignCenter);
+        labelModelNameValue->setStyleSheet("font:40px;color:white;padding-left:5px;");
+        labelVersionValue->setStyleSheet("font:40px;color:white;padding-left:5px;");
+        labelFileNameValue->setStyleSheet("font:38px;color:white;padding-left:5px;");
+        labelProgressValue->setStyleSheet("font:40px;color:white");
+
+        //yjsin [17/09/13] if text is long, change font size and label location and size
+        if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+        {
+            buttonFind->setGeometry(345, 560, 250, 90);
+            buttonUpgrade->setGeometry(605, 560, 350, 90);
+            buttonUpgrade->setStyleSheet("font:45px");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            buttonFind->setGeometry(335, 560, 250, 90);
+            buttonUpgrade->setGeometry(595, 560, 360, 90);
+            buttonUpgrade->setStyleSheet("font:45px");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            buttonFind->setGeometry(335, 560, 250, 90);
+            buttonUpgrade->setGeometry(595, 560, 360, 90);
+        }
+    }
+    else
+    {
+        Ui::AppUpgradeDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        labelStatus = ui1080.labelStatus;
+        labelModelName = ui1080.labelModelName;
+        labelModelNameValue = ui1080.labelModelNameValue;
+        labelVersion = ui1080.labelVersion;
+        labelVersionValue = ui1080.labelVersionValue;
+        labelFileName = ui1080.labelFileName;
+        labelFileNameValue = ui1080.labelFileNameValue;
+        labelProgress = ui1080.labelProgress;
+        labelProgressValue = ui1080.labelProgressValue;
+        progressBar = ui1080.progressBar;
+        buttonFind = ui1080.buttonFind;
+        buttonUpgrade = ui1080.buttonUpgrade;
+        buttonClose = ui1080.buttonClose;
+
+        labelStatus->setStyleSheet("font:70px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+        labelModelName->setStyleSheet("font:55px;color:white");
+        labelVersion->setStyleSheet("font:55px;color:white");
+        labelFileName->setStyleSheet("font:55px;color:white");
+        labelProgress->setStyleSheet("font:55px;color:white");
+        labelModelNameValue->setStyleSheet("font:55px;color:white;padding-left:7px;");
+        labelVersionValue->setStyleSheet("font:55px;color:white;padding-left:7px;");
+        labelFileNameValue->setStyleSheet("font:53px;color:white;padding-left:7px;");
+        labelProgressValue->setStyleSheet("font:55px;color:white");
+
+        //yjsin [19/02/21] if text is long, change font size and label location and size
+        if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+        {
+            buttonFind->setGeometry(490, 860, 401, 131);
+            buttonUpgrade->setGeometry(910, 860, 501, 131);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            buttonFind->setGeometry(480, 860, 401, 131);
+            buttonUpgrade->setGeometry(900, 860, 511, 131);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            buttonFind->setGeometry(490, 860, 401, 131);
+            buttonUpgrade->setGeometry(910, 860, 501, 131);
+        }
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
-
-    labelStatus->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
-    labelModelName->setStyleSheet("font:40px;color:white");
-    labelModelName->setAlignment(Qt::AlignCenter);
-    labelVersion->setStyleSheet("font:40px;color:white");
-    labelVersion->setAlignment(Qt::AlignCenter);
-    labelFileName->setStyleSheet("font:40px;color:white");
-    labelFileName->setAlignment(Qt::AlignCenter);
-    labelProgress->setStyleSheet("font:40px;color:white");
-    labelProgress->setAlignment(Qt::AlignCenter);
-    labelModelNameValue->setStyleSheet("font:40px;color:white");
-    labelVersionValue->setStyleSheet("font:40px;color:white");
-    labelFileNameValue->setStyleSheet("font:38px;color:white");
-    labelProgressValue->setStyleSheet("font:40px;color:white");
-
-#if 1 //yjsin [17/09/13] if text is long, change font size and label location and size
-    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
-    {
-        labelModelName->setStyleSheet("font:36px;color:white");
-        labelFileName->setStyleSheet("font:36px;color:white");
-        labelFileNameValue->setStyleSheet("font:35px;color:white");
-
-        labelModelName->setGeometry(10, 197, 341, 71);
-        labelModelNameValue->setGeometry(350, 197, 741, 71);
-        labelVersion->setGeometry(10, 267, 341, 71);
-        labelVersionValue->setGeometry(350, 267, 741, 71);
-        labelFileName->setGeometry(10, 337, 341, 71);
-        labelFileNameValue->setGeometry(350, 337, 741, 71);
-        labelProgress->setGeometry(10, 407, 341, 71);
-        labelProgressValue->setGeometry(350, 407, 741, 71);
-        progressBar->setGeometry(354, 410, 731, 66);
-    }
-    //yjsin [17/10/12] if text is long, change label size
-    else if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
-    {
-        labelModelName->setGeometry(10, 197, 320, 71);
-        labelModelNameValue->setGeometry(329, 197, 761, 71);
-        labelVersion->setGeometry(10, 267, 320, 71);
-        labelVersionValue->setGeometry(329, 267, 761, 71);
-        labelFileName->setGeometry(10, 337, 320, 71);
-        labelFileNameValue->setGeometry(329, 337, 761, 71);
-        labelFileNameValue->setStyleSheet("font:36px;color:white");
-        labelProgress->setGeometry(10, 407, 320, 71);
-        labelProgressValue->setGeometry(329, 407, 761, 71);
-        progressBar->setGeometry(334, 410, 751, 66);
-
-        buttonFind->setGeometry(267, 495, 250, 90);
-        buttonUpgrade->setGeometry(520, 495, 320, 90);
-        buttonUpgrade->setStyleSheet("font:42px;");
-    }
-    //yjsin [18/01/05] if text is long, change font size
-    else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-    {
-        buttonFind->setGeometry(287, 495, 250, 90);
-        buttonUpgrade->setGeometry(540, 495, 300, 90);
-        buttonUpgrade->setStyleSheet("font:35px;");
-    }
-    //yjsin [18/01/05] if text is long, change font size
-    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-    {
-        buttonFind->setGeometry(282, 495, 252, 90);
-        buttonUpgrade->setGeometry(535, 495, 305, 90);
-        buttonUpgrade->setStyleSheet("font:39px;");
-    }
-#endif
 
     upgradeTimer = NULL;
     msgBox       = NULL;
@@ -96,8 +130,6 @@ AppUpgradeDialog::~AppUpgradeDialog()
 }
 void AppUpgradeDialog::initAppUpgradeConfig(void)
 {
-    labelStatus->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
-    labelStatus->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
     buttonFind->setFocus();
 
     buttonFind->setEnabled(false);
@@ -159,13 +191,21 @@ void AppUpgradeDialog::Delay(int millisecondsToWait)
 }
 void AppUpgradeDialog::onButtonFind(void)
 {
-    labelStatus->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
     labelFileNameValue->clear();
     buttonFind->setEnabled(false);
     buttonUpgrade->setEnabled(false);
     buttonClose->setEnabled(false);
     progressBar->setValue(0);
-    labelStatus->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white");
+
+    if(mainHeight == 720)
+    {
+        labelStatus->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+    }
+    else
+    {
+        labelStatus->setStyleSheet("font:70px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+    }
+    labelStatus->setAlignment(Qt::AlignLeft|Qt::AlignVCenter);
 
     (void)ButtonFind(1);
 }
@@ -347,9 +387,15 @@ void AppUpgradeDialog::ConfirmUpgradeResult(void)
 
     if (rv == 0)
     {
+        if(mainHeight == 720)
+        {
+            labelStatus->setStyleSheet("font:72px;background-color:rgb(152,14,69);color:white");
+        }
+        else
+        {
+            labelStatus->setStyleSheet("font:100px;background-color:rgb(152,14,69);color:white");
+        }
         labelStatus->setAlignment(Qt::AlignCenter);
-
-        labelStatus->setStyleSheet("font:72px;background-color:rgb(152,14,69);color:white");
 
         qDebug(" FW_UPGRADE_SUCCESS !! \n");
 
@@ -388,10 +434,8 @@ void AppUpgradeDialog::ConfirmUpgradeResult(void)
 
                 if(!msgBox)
                 {
-                    msgBox = new TextMessageDialog(tr("NOTICE"), tr("%1\n\n%2").arg(tr("NOTICE"),tr("Please unplug USB memory.")), 2, this);
+                    msgBox = new TextMessageDialog(tr("NOTICE"), tr("Please unplug USB memory."), 2, this);
                 }
-
-                msgBox->setMsgAlignment(Qt::AlignCenter);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
                 if(msgBox->exec())
@@ -415,9 +459,15 @@ void AppUpgradeDialog::ConfirmUpgradeResult(void)
     }
     else if (rv == -1)
     {
+        if(mainHeight == 720)
+        {
+            labelStatus->setStyleSheet("font:72px;background-color:rgb(152,14,69);color:white");
+        }
+        else
+        {
+            labelStatus->setStyleSheet("font:100px;background-color:rgb(152,14,69);color:white");
+        }
         labelStatus->setAlignment(Qt::AlignCenter);
-
-        labelStatus->setStyleSheet("font:72px;background-color:rgb(152,14,69);color:white");
 
         qDebug(" FW_UPGRADE_FAIL !! \n");
 

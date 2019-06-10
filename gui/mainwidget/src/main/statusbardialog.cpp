@@ -7,6 +7,7 @@
 #include "dev/Ver.h"
 
 #define TIME_LABEL_STYLE			"color:white;font-weight: bold;font-size:42px;"
+#define TIME_LABEL_STYLE2           "color:white;font-weight: bold;font-size:63px;"
 
 StatusBarDialog::StatusBarDialog(int timeFormat, QWidget *parent)
     : QDialog(parent)
@@ -232,11 +233,6 @@ QString StatusBarDialog::updateTime_value()
         }
 
         sTime = QString::fromAscii(szTime);
-
-        this->resize(680,80);
-        frame->resize(672,72);
-        labelNoDisk->setGeometry(485,8,180,58);
-        progressBarHdd->setGeometry(485,8,180,58);
     }
     else
     {
@@ -280,10 +276,6 @@ QString StatusBarDialog::updateTime_value()
         {
             sTime = QString::fromAscii(szTime) + " " + sAmPm;
         }
-        this->resize(755,80);
-        frame->resize(747,72);
-        labelNoDisk->setGeometry(560,8,180,58);
-        progressBarHdd->setGeometry(560,8,180,58);
     }
 
     switch (timeDisplayFormat)
@@ -311,6 +303,8 @@ QString StatusBarDialog::updateTime_value()
         str = sTime + " " + QString::fromAscii(szDate);
     }
 
+    resizeStatusBar();
+
     return str;
 }
 void StatusBarDialog::updateTime()
@@ -333,6 +327,69 @@ void StatusBarDialog::updateTime()
         if(diskInfo[0].hddCount == 0)
         {
             //qDebug("[Warning] : Not exist HDD");
+        }
+    }
+}
+void StatusBarDialog::resizeStatusBar()
+{
+    QSize statusbarSize;
+
+    if(mainHeight == 720)
+    {
+        if(is24HourMode)
+        {
+            statusbarSize.setWidth(680);
+            statusbarSize.setHeight(80);
+
+            this->resize(statusbarSize);
+            frame->resize(statusbarSize.width()-8,statusbarSize.height()-8);
+            labelNoDisk->setGeometry(485,8,180,58);
+            progressBarHdd->setGeometry(485,8,180,58);
+            this->move((mainWidth-statusbarSize.width())/2, mainHeight-statusbarSize.height());
+        }
+        else
+        {
+            statusbarSize.setWidth(755);
+            statusbarSize.setHeight(80);
+
+            this->resize(statusbarSize);
+            frame->resize(statusbarSize.width()-8,statusbarSize.height()-8);
+            labelNoDisk->setGeometry(560,8,180,58);
+            progressBarHdd->setGeometry(560,8,180,58);
+            this->move((mainWidth-statusbarSize.width())/2, mainHeight-statusbarSize.height());
+        }
+    }
+    else
+    {
+        if(is24HourMode)
+        {
+            statusbarSize.setWidth(1020);
+            statusbarSize.setHeight(120);
+
+            this->resize(statusbarSize);
+            frame->resize(statusbarSize.width()-8,statusbarSize.height()-8);
+            labelTime->setGeometry(15,12,725,87);
+            labelNoDisk->setGeometry(frame->width()-10-270,12,270,87);
+            progressBarHdd->setGeometry(frame->width()-10-270,12,270,87);
+            this->move((mainWidth-statusbarSize.width())/2, mainHeight-statusbarSize.height());
+            labelTime->setStyleSheet(QString(TIME_LABEL_STYLE2));
+            labelNoDisk->setStyleSheet(QString(TIME_LABEL_STYLE2).append("background: rgb(152, 14, 69);"));
+            progressBarHdd->setStyleSheet(QString(TIME_LABEL_STYLE2).append("background: rgb(152, 14, 69);"));
+        }
+        else
+        {
+            statusbarSize.setWidth(1130);
+            statusbarSize.setHeight(120);
+
+            this->resize(statusbarSize);
+            frame->resize(statusbarSize.width()-8,statusbarSize.height()-8);
+            labelTime->setGeometry(15,12,840,87);
+            labelNoDisk->setGeometry(frame->width()-10-270,12,270,87);
+            progressBarHdd->setGeometry(frame->width()-10-270,12,270,87);
+            this->move((mainWidth-statusbarSize.width())/2, mainHeight-statusbarSize.height());
+            labelTime->setStyleSheet(QString(TIME_LABEL_STYLE2));
+            labelNoDisk->setStyleSheet(QString(TIME_LABEL_STYLE2).append("background: rgb(152, 14, 69);"));
+            progressBarHdd->setStyleSheet(QString(TIME_LABEL_STYLE2).append("background: rgb(152, 14, 69);"));
         }
     }
 }

@@ -6,26 +6,72 @@
 SecurityDialog::SecurityDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::SecurityDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        buttonNewPassword =ui720.buttonNewPassword;
+        buttonConfirmPassword = ui720.buttonConfirmPassword;
+        buttonSystemLock = ui720.buttonSystemLock;
+        buttonSave = ui720.buttonSave;
+        buttonClose = ui720.buttonClose;
+
+        labelSecurity = ui720.labelSecurity;
+        labelNewPassword = ui720.labelNewPassword;
+        labelConfirmPassword = ui720.labelConfirmPassword;
+        labelSystemLock = ui720.labelSystemLock;
+
+        lineEditNewPassword = ui720.lineEditNewPassword;
+        lineEditConfirmPassword = ui720.lineEditConfirmPassword;
+
+        labelSecurity->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+        labelNewPassword->setStyleSheet("font:40px;color:white");
+        labelConfirmPassword->setStyleSheet("font:40px;color:white");
+        labelSystemLock->setStyleSheet("font:40px;color:white");
+
+        //yjsin [19/02/21] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        {
+            labelSecurity->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            labelSecurity->setStyleSheet("font:48px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+        }
+    }
+    else
+    {
+        Ui::SecurityDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonNewPassword =ui1080.buttonNewPassword;
+        buttonConfirmPassword = ui1080.buttonConfirmPassword;
+        buttonSystemLock = ui1080.buttonSystemLock;
+        buttonSave = ui1080.buttonSave;
+        buttonClose = ui1080.buttonClose;
+
+        labelSecurity = ui1080.labelSecurity;
+        labelNewPassword = ui1080.labelNewPassword;
+        labelConfirmPassword = ui1080.labelConfirmPassword;
+        labelSystemLock = ui1080.labelSystemLock;
+
+        lineEditNewPassword = ui1080.lineEditNewPassword;
+        lineEditConfirmPassword = ui1080.lineEditConfirmPassword;
+
+        labelSecurity->setStyleSheet("font:70px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+        labelNewPassword->setStyleSheet("font:55px;color:white");
+        labelConfirmPassword->setStyleSheet("font:55px;color:white");
+        labelSystemLock->setStyleSheet("font:55px;color:white");
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
     buttonNewPassword->setFocus();
-
-    labelSecurity->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-    labelNewPassword->setStyleSheet("font:40px;color:white");
-    labelConfirmPassword->setStyleSheet("font:40px;color:white");
-    labelSystemLock->setStyleSheet("font:40px;color:white");
-    labelNewPassword->setAlignment(Qt::AlignCenter);
-    labelConfirmPassword->setAlignment(Qt::AlignCenter);
-    labelSystemLock->setAlignment(Qt::AlignCenter);
-    lineEditNewPassword->setAlignment(Qt::AlignCenter);
-    lineEditConfirmPassword->setAlignment(Qt::AlignCenter);
-
-    lineEditNewPassword->setEchoMode(QLineEdit::Password);
-    lineEditConfirmPassword->setEchoMode(QLineEdit::Password);
 
     keyboard = NULL;
 

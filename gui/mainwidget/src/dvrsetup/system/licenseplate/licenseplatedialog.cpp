@@ -6,23 +6,52 @@
 LicensePlateDialog::LicensePlateDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::LicensePlateDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        labelLicensePlate = ui720.labelLicensePlate;
+        lineEditLicensePlate = ui720.lineEditLicensePlate;
+        buttonLicensePlate = ui720.buttonLicensePlate;
+        pushButtonSave = ui720.pushButtonSave;
+        pushButtonClose = ui720.pushButtonClose;
+
+        labelLicensePlate->setStyleSheet("font:54px;color:white");
+
+        //yjsin [17/10/12] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+        {
+            labelLicensePlate->setStyleSheet("font:43px;color:white");
+        }
+    }
+    else
+    {
+        Ui::LicensePlateDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        labelLicensePlate = ui1080.labelLicensePlate;
+        lineEditLicensePlate = ui1080.lineEditLicensePlate;
+        buttonLicensePlate = ui1080.buttonLicensePlate;
+        pushButtonSave = ui1080.pushButtonSave;
+        pushButtonClose = ui1080.pushButtonClose;
+
+        labelLicensePlate->setStyleSheet("font:80px;color:white");
+
+        //yjsin [19/02/21] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+        {
+            labelLicensePlate->setStyleSheet("font:63px;color:white");
+        }
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
     buttonLicensePlate->setFocus();
-
-    labelLicensePlate->setStyleSheet("font:54px;color:white");
-    lineEditLicensePlate->setAlignment(Qt::AlignCenter);
-
-#if 1 //yjsin [17/10/12] if text is long, change font size
-    if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
-    {
-        labelLicensePlate->setStyleSheet("font:43px;color:white");
-    }
-#endif
 
     keyboard = NULL;
 

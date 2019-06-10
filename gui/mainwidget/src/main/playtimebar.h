@@ -55,6 +55,15 @@ private:
              dlsEndHour,
              lastTickPos,
              resizeTimeLine_LeftGap;
+
+    int      TL_LEFT_MARGIN,
+             TL_WIDTH,
+             TL_HEIGHT,
+             TL_SLIDER_HEIGHT,
+             NUM_15SEC_PER_MIN,
+             NUM_MIN_PER_HOUR,
+             NUM_MINIMUM_PIXEL,
+             NUM_TICK_SIZE;
 };
 
 #endif // PLAYTIMEBAR_H

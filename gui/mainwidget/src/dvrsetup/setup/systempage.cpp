@@ -15,7 +15,60 @@
 SystemPage::SystemPage(QWidget *parent)
     : QWidget(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::SystemPage ui720;
+        ui720.setupUi(this);
+
+        buttonDateTime       = ui720.buttonDateTime;
+        buttonSecurity       = ui720.buttonSecurity;
+        buttonConfig         = ui720.buttonConfig;
+        buttonUpgrade        = ui720.buttonUpgrade;
+        buttonFactoryDefault = ui720.buttonFactoryDefault;
+        buttonLanguage       = ui720.buttonLanguage;
+        buttonLicensePlate   = ui720.buttonLicensePlate;
+        buttonInformation    = ui720.buttonInformation;
+        buttonClose          = ui720.buttonClose;
+
+        //yjsin [17/10/12] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+        {
+            buttonLicensePlate->setStyleSheet("font:43px;color:white");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            buttonUpgrade->setStyleSheet("font:40px;color:white");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            buttonFactoryDefault->setStyleSheet("font:40px;color:white");
+        }
+    }
+    else
+    {
+        Ui::SystemPage1080p ui1080;
+        ui1080.setupUi(this);
+
+        buttonDateTime       = ui1080.buttonDateTime;
+        buttonSecurity       = ui1080.buttonSecurity;
+        buttonConfig         = ui1080.buttonConfig;
+        buttonUpgrade        = ui1080.buttonUpgrade;
+        buttonFactoryDefault = ui1080.buttonFactoryDefault;
+        buttonLanguage       = ui1080.buttonLanguage;
+        buttonLicensePlate   = ui1080.buttonLicensePlate;
+        buttonInformation    = ui1080.buttonInformation;
+        buttonClose          = ui1080.buttonClose;
+
+        //yjsin [19/02/21] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            buttonUpgrade->setStyleSheet("font:63px;color:white");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            buttonFactoryDefault->setStyleSheet("font:58px;color:white");
+        }
+    }
 
     setPalette(QPalette(QColor(26, 32, 46)));
     setAutoFillBackground(true);
@@ -29,21 +82,6 @@ SystemPage::SystemPage(QWidget *parent)
     languageDialog      = NULL;
     licensePlateDialog  = NULL;
     informationDialog   = NULL;
-
-#if 1 //yjsin [17/10/12] if text is long, change font size
-    if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
-    {
-        buttonLicensePlate->setStyleSheet("font:43px;color:white");
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-    {
-        buttonUpgrade->setStyleSheet("font:40px;color:white");
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-    {
-        buttonFactoryDefault->setStyleSheet("font:40px;color:white");
-    }
-#endif
 
     connect(buttonDateTime,       SIGNAL(released()), this, SLOT(onButtonDateTime()));
     connect(buttonSecurity,       SIGNAL(released()), this, SLOT(onButtonSecurity()));
@@ -91,12 +129,9 @@ void SystemPage::onButtonDateTime(void)
     {
         if(!msgBox)
         {
-            msgBox = new TextMessageDialog(tr("SET DATE & TIME"),
-                    tr("\t\t\tWARNING\n\n"
-                        "Do you want to change time?\n\nIf yes, system will restart.\n"),
-                    0, this);
+            msgBox = new TextMessageDialog(tr("CHANGE DATE & TIME"),
+                    tr("Do you want to change time?\n" "If yes, system will restart."), 0, this);
         }
-
         msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
         msgBoxEsckey = 1;
 
@@ -197,7 +232,7 @@ void SystemPage::onButtonFactoryDefault(void)
 
     if(!msgBox)
     {
-        msgBox = new TextMessageDialog(tr("FACTORY DEFAULT"), tr("\t\t\t   WARNING\n\n" "Do you want to set factory default?\n\n" "If yes, system will restart.\n"), 0, this);
+        msgBox = new TextMessageDialog(tr("FACTORY DEFAULT"), tr("Do you want to set factory default?\n" "If yes, system will restart."), 0, this);
     }
 
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);

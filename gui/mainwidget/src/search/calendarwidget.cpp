@@ -14,6 +14,15 @@ CalendarWidget::CalendarWidget(QWidget *parent)
     m_firstDayOfWeek = Qt::Sunday;
     m_monthStartAt   = m_monthEndAt = 0;
     m_headHeight     = m_cellHeight = m_cellWidth = pageIndex = 0;
+
+    if(mainHeight == 720)
+    {
+        fontSize = 48;
+    }
+    else
+    {
+        fontSize = 60;
+    }
 }
 void CalendarWidget::SetCurrentPageIndex(int idx, int dir)
 {
@@ -100,7 +109,7 @@ void CalendarWidget::paintEvent(QPaintEvent *)
     QPainter painter(this);
     painter.setPen(palette().color(QPalette::Active, QPalette::Dark));
 
-    m_headHeight = 60;
+    m_headHeight = height()/8;
     m_cellHeight = (height() - m_headHeight) / 6;
     m_cellWidth = width() / 7;
 
@@ -163,7 +172,7 @@ void CalendarWidget::drawHeaderCell(QPainter *painter, const QRect &rect, int we
     painter->drawRect(rect);
 
 	QFont f = painter->font();
-	f.setPointSize(48);
+    f.setPointSize(fontSize);
 	painter->setFont(f);
 
     switch (weekday)
@@ -197,7 +206,7 @@ void CalendarWidget::drawItemCell(QPainter *painter, const QRect &rect, int week
     painter->save();
 
 	QFont f = painter->font();
-	f.setPointSize(48);
+    f.setPointSize(fontSize);
 	painter->setFont(f);
 
     if(isRecordDate(day))

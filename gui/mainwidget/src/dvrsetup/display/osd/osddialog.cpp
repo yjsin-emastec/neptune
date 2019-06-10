@@ -5,24 +5,48 @@
 OsdDialog::OsdDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::OsdDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        buttonCameraName = ui720.buttonCameraName;
+        buttonNoVideo = ui720.buttonNoVideo;
+        buttonStatusBar = ui720.buttonStatusBar;
+        buttonRecordStatus = ui720.buttonRecordStatus;
+        buttonSave = ui720.buttonSave;
+        buttonClose = ui720.buttonClose;
+
+        //yjsin [18/01/05] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            buttonStatusBar->setStyleSheet("font:45px;color:white");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            buttonRecordStatus->setStyleSheet("font:41px;color:white");
+        }
+    }
+    else
+    {
+        Ui::OsdDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonCameraName = ui1080.buttonCameraName;
+        buttonNoVideo = ui1080.buttonNoVideo;
+        buttonStatusBar = ui1080.buttonStatusBar;
+        buttonRecordStatus = ui1080.buttonRecordStatus;
+        buttonSave = ui1080.buttonSave;
+        buttonClose = ui1080.buttonClose;
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
     buttonCameraName->setFocus();
-
-#if 1 //yjsin [18/01/05] if text is long, change font size
-    if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-    {
-        buttonStatusBar->setStyleSheet("font:45px;color:white");
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-    {
-        buttonRecordStatus->setStyleSheet("font:41px;color:white");
-    }
-#endif
 
     connect(buttonCameraName,   SIGNAL(released()), this, SLOT(onChannelName()));
     connect(buttonNoVideo,      SIGNAL(released()), this, SLOT(onNoVideo()));

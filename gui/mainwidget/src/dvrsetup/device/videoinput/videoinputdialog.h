@@ -3,9 +3,10 @@
 
 #include <QtGui/QDialog>
 #include "ui_videoinputdialog.h"
+#include "ui_videoinputdialog1080p.h"
 #include "DVR.h"
 
-class VideoInputDialog : public QDialog, public Ui::VideoInputDialog
+class VideoInputDialog : public QDialog
 {
     Q_OBJECT
 
@@ -29,6 +30,14 @@ private:
 	int indexCamera;
 	int indexMirror;
 	int indexFlip;
+
+    QFrame *frame;
+    QPushButton *buttonCamera;
+    QPushButton *buttonMirror;
+    QPushButton *buttonNotAvailable;
+    QPushButton *buttonFlip;
+    QPushButton *buttonSave;
+    QPushButton *buttonClose;
 };
 
 #endif // VIDEOINPUTDIALOG_H

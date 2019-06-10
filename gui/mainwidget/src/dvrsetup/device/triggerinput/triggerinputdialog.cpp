@@ -5,7 +5,380 @@
 TriggerInputDialog::TriggerInputDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::TriggerInputDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+
+        buttonAudio1Down = ui720.buttonAudio1Down;
+        buttonAudio1Up = ui720.buttonAudio1Up;
+        buttonAudio2Down = ui720.buttonAudio2Down;
+        buttonAudio2Up = ui720.buttonAudio2Up;
+        buttonAudio3Down = ui720.buttonAudio3Down;
+        buttonAudio3Up = ui720.buttonAudio3Up;
+        buttonAudio4Down = ui720.buttonAudio4Down;
+        buttonAudio4Up = ui720.buttonAudio4Up;
+        buttonDelay1Down = ui720.buttonDelay1Down;
+        buttonDelay1Up = ui720.buttonDelay1Up;
+        buttonDelay2Down = ui720.buttonDelay2Down;
+        buttonDelay2Up = ui720.buttonDelay2Up;
+        buttonDelay3Down = ui720.buttonDelay3Down;
+        buttonDelay3Up = ui720.buttonDelay3Up;
+        buttonDelay4Down = ui720.buttonDelay4Down;
+        buttonDelay4Up = ui720.buttonDelay4Up;
+        buttonPriority1Down = ui720.buttonPriority1Down;
+        buttonPriority1Up = ui720.buttonPriority1Up;
+        buttonPriority2Down = ui720.buttonPriority2Down;
+        buttonPriority2Up = ui720.buttonPriority2Up;
+        buttonPriority3Down = ui720.buttonPriority3Down;
+        buttonPriority3Up = ui720.buttonPriority3Up;
+        buttonPriority4Down = ui720.buttonPriority4Down;
+        buttonPriority4Up = ui720.buttonPriority4Up;
+        buttonSource1Down = ui720.buttonSource1Down;
+        buttonSource1Up = ui720.buttonSource1Up;
+        buttonSource2Down = ui720.buttonSource2Down;
+        buttonSource2Up = ui720.buttonSource2Up;
+        buttonSource3Down = ui720.buttonSource3Down;
+        buttonSource3Up = ui720.buttonSource3Up;
+        buttonSource4Down = ui720.buttonSource4Down;
+        buttonSource4Up = ui720.buttonSource4Up;
+        buttonClose = ui720.buttonClose;
+        buttonDefault = ui720.buttonDefault;
+        buttonSave = ui720.buttonSave;
+
+        labelAudio1 = ui720.labelAudio1;
+        labelAudio2 = ui720.labelAudio2;
+        labelAudio3 = ui720.labelAudio3;
+        labelAudio4 = ui720.labelAudio4;
+        labelDelay1 = ui720.labelDelay1;
+        labelDelay2 = ui720.labelDelay2;
+        labelDelay3 = ui720.labelDelay3;
+        labelDelay4 = ui720.labelDelay4;
+        labelPriority1 = ui720.labelPriority1;
+        labelPriority2 = ui720.labelPriority2;
+        labelPriority3 = ui720.labelPriority3;
+        labelPriority4 = ui720.labelPriority4;
+        labelSource1 = ui720.labelSource1;
+        labelSource2 = ui720.labelSource2;
+        labelSource3 = ui720.labelSource3;
+        labelSource4 = ui720.labelSource4;
+        labelTrigger1 = ui720.labelTrigger1;
+        labelTrigger2 = ui720.labelTrigger2;
+        labelTrigger3 = ui720.labelTrigger3;
+        labelTrigger4 = ui720.labelTrigger4;
+
+        labelTrigger1->setStyleSheet("font:40px;color:white");
+        labelTrigger1->setText(tr("Trigger1"));
+
+        labelTrigger2->setStyleSheet("font:40px;color:white");
+        labelTrigger2->setText(tr("Trigger2"));
+
+        labelTrigger3->setStyleSheet("font:40px;color:white");
+        labelTrigger3->setText(tr("Trigger3"));
+
+        labelTrigger4->setStyleSheet("font:40px;color:white");
+        labelTrigger4->setText(tr("Trigger4"));
+
+        labelSource1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonSource1Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonSource1Up->setIconSize(QSize(70, 45));
+        buttonSource1Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonSource1Down->setIconSize(QSize(70, 45));
+
+        labelSource2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonSource2Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonSource2Up->setIconSize(QSize(70, 45));
+        buttonSource2Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonSource2Down->setIconSize(QSize(70, 45));
+
+        labelSource3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonSource3Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonSource3Up->setIconSize(QSize(70, 45));
+        buttonSource3Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonSource3Down->setIconSize(QSize(70, 45));
+
+        labelSource4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonSource4Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonSource4Up->setIconSize(QSize(70, 45));
+        buttonSource4Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonSource4Down->setIconSize(QSize(70, 45));
+
+        labelDelay1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonDelay1Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonDelay1Up->setIconSize(QSize(70, 45));
+        buttonDelay1Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonDelay1Down->setIconSize(QSize(70, 45));
+
+        labelDelay2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonDelay2Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonDelay2Up->setIconSize(QSize(70, 45));
+        buttonDelay2Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonDelay2Down->setIconSize(QSize(70, 45));
+
+        labelDelay3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonDelay3Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonDelay3Up->setIconSize(QSize(70, 45));
+        buttonDelay3Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonDelay3Down->setIconSize(QSize(70, 45));
+
+        labelDelay4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonDelay4Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonDelay4Up->setIconSize(QSize(70, 45));
+        buttonDelay4Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonDelay4Down->setIconSize(QSize(70, 45));
+
+        labelPriority1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonPriority1Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonPriority1Up->setIconSize(QSize(70, 45));
+        buttonPriority1Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonPriority1Down->setIconSize(QSize(70, 45));
+
+        labelPriority2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonPriority2Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonPriority2Up->setIconSize(QSize(70, 45));
+        buttonPriority2Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonPriority2Down->setIconSize(QSize(70, 45));
+
+        labelPriority3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonPriority3Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonPriority3Up->setIconSize(QSize(70, 45));
+        buttonPriority3Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonPriority3Down->setIconSize(QSize(70, 45));
+
+        labelPriority4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonPriority4Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonPriority4Up->setIconSize(QSize(70, 45));
+        buttonPriority4Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonPriority4Down->setIconSize(QSize(70, 45));
+
+        labelAudio1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonAudio1Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonAudio1Up->setIconSize(QSize(70, 45));
+        buttonAudio1Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonAudio1Down->setIconSize(QSize(70, 45));
+
+        labelAudio2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonAudio2Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonAudio2Up->setIconSize(QSize(70, 45));
+        buttonAudio2Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonAudio2Down->setIconSize(QSize(70, 45));
+
+        labelAudio3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonAudio3Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonAudio3Up->setIconSize(QSize(70, 45));
+        buttonAudio3Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonAudio3Down->setIconSize(QSize(70, 45));
+
+        labelAudio4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
+        buttonAudio4Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonAudio4Up->setIconSize(QSize(70, 45));
+        buttonAudio4Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonAudio4Down->setIconSize(QSize(70, 45));
+
+        //yjsin [17/09/13] if text is long, change font size and label location and size
+        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+        {
+            buttonDefault->resize(304,90);
+            buttonDefault->setStyleSheet("font:38px");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        {
+            buttonDefault->resize(304,90);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            labelAudio1->setStyleSheet("font:38px;background-color:rgb(50,57,83);color:white");
+            labelAudio2->setStyleSheet("font:38px;background-color:rgb(50,57,83);color:white");
+            labelAudio3->setStyleSheet("font:38px;background-color:rgb(50,57,83);color:white");
+            labelAudio4->setStyleSheet("font:38px;background-color:rgb(50,57,83);color:white");
+
+            buttonDefault->resize(304,90);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            buttonDefault->resize(240,90);
+        }
+    }
+    else
+    {
+        Ui::TriggerInputDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+
+        buttonAudio1Down = ui1080.buttonAudio1Down;
+        buttonAudio1Up = ui1080.buttonAudio1Up;
+        buttonAudio2Down = ui1080.buttonAudio2Down;
+        buttonAudio2Up = ui1080.buttonAudio2Up;
+        buttonAudio3Down = ui1080.buttonAudio3Down;
+        buttonAudio3Up = ui1080.buttonAudio3Up;
+        buttonAudio4Down = ui1080.buttonAudio4Down;
+        buttonAudio4Up = ui1080.buttonAudio4Up;
+        buttonDelay1Down = ui1080.buttonDelay1Down;
+        buttonDelay1Up = ui1080.buttonDelay1Up;
+        buttonDelay2Down = ui1080.buttonDelay2Down;
+        buttonDelay2Up = ui1080.buttonDelay2Up;
+        buttonDelay3Down = ui1080.buttonDelay3Down;
+        buttonDelay3Up = ui1080.buttonDelay3Up;
+        buttonDelay4Down = ui1080.buttonDelay4Down;
+        buttonDelay4Up = ui1080.buttonDelay4Up;
+        buttonPriority1Down = ui1080.buttonPriority1Down;
+        buttonPriority1Up = ui1080.buttonPriority1Up;
+        buttonPriority2Down = ui1080.buttonPriority2Down;
+        buttonPriority2Up = ui1080.buttonPriority2Up;
+        buttonPriority3Down = ui1080.buttonPriority3Down;
+        buttonPriority3Up = ui1080.buttonPriority3Up;
+        buttonPriority4Down = ui1080.buttonPriority4Down;
+        buttonPriority4Up = ui1080.buttonPriority4Up;
+        buttonSource1Down = ui1080.buttonSource1Down;
+        buttonSource1Up = ui1080.buttonSource1Up;
+        buttonSource2Down = ui1080.buttonSource2Down;
+        buttonSource2Up = ui1080.buttonSource2Up;
+        buttonSource3Down = ui1080.buttonSource3Down;
+        buttonSource3Up = ui1080.buttonSource3Up;
+        buttonSource4Down = ui1080.buttonSource4Down;
+        buttonSource4Up = ui1080.buttonSource4Up;
+        buttonClose = ui1080.buttonClose;
+        buttonDefault = ui1080.buttonDefault;
+        buttonSave = ui1080.buttonSave;
+
+        labelAudio1 = ui1080.labelAudio1;
+        labelAudio2 = ui1080.labelAudio2;
+        labelAudio3 = ui1080.labelAudio3;
+        labelAudio4 = ui1080.labelAudio4;
+        labelDelay1 = ui1080.labelDelay1;
+        labelDelay2 = ui1080.labelDelay2;
+        labelDelay3 = ui1080.labelDelay3;
+        labelDelay4 = ui1080.labelDelay4;
+        labelPriority1 = ui1080.labelPriority1;
+        labelPriority2 = ui1080.labelPriority2;
+        labelPriority3 = ui1080.labelPriority3;
+        labelPriority4 = ui1080.labelPriority4;
+        labelSource1 = ui1080.labelSource1;
+        labelSource2 = ui1080.labelSource2;
+        labelSource3 = ui1080.labelSource3;
+        labelSource4 = ui1080.labelSource4;
+        labelTrigger1 = ui1080.labelTrigger1;
+        labelTrigger2 = ui1080.labelTrigger2;
+        labelTrigger3 = ui1080.labelTrigger3;
+        labelTrigger4 = ui1080.labelTrigger4;
+
+        labelTrigger1->setStyleSheet("font:50px;color:white");
+        labelTrigger1->setText(tr("Trigger1"));
+
+        labelTrigger2->setStyleSheet("font:50px;color:white");
+        labelTrigger2->setText(tr("Trigger2"));
+
+        labelTrigger3->setStyleSheet("font:50px;color:white");
+        labelTrigger3->setText(tr("Trigger3"));
+
+        labelTrigger4->setStyleSheet("font:50px;color:white");
+        labelTrigger4->setText(tr("Trigger4"));
+
+        labelSource1->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonSource1Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonSource1Up->setIconSize(QSize(90, 60));
+        buttonSource1Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonSource1Down->setIconSize(QSize(90, 60));
+
+        labelSource2->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonSource2Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonSource2Up->setIconSize(QSize(90, 60));
+        buttonSource2Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonSource2Down->setIconSize(QSize(90, 60));
+
+        labelSource3->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonSource3Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonSource3Up->setIconSize(QSize(90, 60));
+        buttonSource3Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonSource3Down->setIconSize(QSize(90, 60));
+
+        labelSource4->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonSource4Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonSource4Up->setIconSize(QSize(90, 60));
+        buttonSource4Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonSource4Down->setIconSize(QSize(90, 60));
+
+        labelDelay1->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonDelay1Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonDelay1Up->setIconSize(QSize(90, 60));
+        buttonDelay1Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonDelay1Down->setIconSize(QSize(90, 60));
+
+        labelDelay2->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonDelay2Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonDelay2Up->setIconSize(QSize(90, 60));
+        buttonDelay2Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonDelay2Down->setIconSize(QSize(90, 60));
+
+        labelDelay3->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonDelay3Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonDelay3Up->setIconSize(QSize(90, 60));
+        buttonDelay3Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonDelay3Down->setIconSize(QSize(90, 60));
+
+        labelDelay4->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonDelay4Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonDelay4Up->setIconSize(QSize(90, 60));
+        buttonDelay4Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonDelay4Down->setIconSize(QSize(90, 60));
+
+        labelPriority1->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonPriority1Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonPriority1Up->setIconSize(QSize(90, 60));
+        buttonPriority1Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonPriority1Down->setIconSize(QSize(90, 60));
+
+        labelPriority2->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonPriority2Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonPriority2Up->setIconSize(QSize(90, 60));
+        buttonPriority2Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonPriority2Down->setIconSize(QSize(90, 60));
+
+        labelPriority3->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonPriority3Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonPriority3Up->setIconSize(QSize(90, 60));
+        buttonPriority3Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonPriority3Down->setIconSize(QSize(90, 60));
+
+        labelPriority4->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonPriority4Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonPriority4Up->setIconSize(QSize(90, 60));
+        buttonPriority4Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonPriority4Down->setIconSize(QSize(90, 60));
+
+        labelAudio1->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonAudio1Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonAudio1Up->setIconSize(QSize(90, 60));
+        buttonAudio1Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonAudio1Down->setIconSize(QSize(90, 60));
+
+        labelAudio2->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonAudio2Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonAudio2Up->setIconSize(QSize(90, 60));
+        buttonAudio2Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonAudio2Down->setIconSize(QSize(90, 60));
+
+        labelAudio3->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonAudio3Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonAudio3Up->setIconSize(QSize(90, 60));
+        buttonAudio3Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonAudio3Down->setIconSize(QSize(90, 60));
+
+        labelAudio4->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        buttonAudio4Up->setIcon(QIcon(":/images/arrow_up.png"));
+        buttonAudio4Up->setIconSize(QSize(90, 60));
+        buttonAudio4Down->setIcon(QIcon(":/images/arrow_down.png"));
+        buttonAudio4Down->setIconSize(QSize(90, 60));
+
+        //yjsin [19/02/21] if text is long, change label size
+        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+        {
+            buttonDefault->resize(480,131);
+        }
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
@@ -13,154 +386,6 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
 
     buttonSource1Up->setFocus();
-
-    labelTrigger1->setStyleSheet("font:40px;color:white");
-    labelTrigger1->setText(tr("Trigger1"));
-    labelTrigger1->setAlignment(Qt::AlignCenter);
-
-    labelTrigger2->setStyleSheet("font:40px;color:white");
-    labelTrigger2->setText(tr("Trigger2"));
-    labelTrigger2->setAlignment(Qt::AlignCenter);
-
-    labelTrigger3->setStyleSheet("font:40px;color:white");
-    labelTrigger3->setText(tr("Trigger3"));
-    labelTrigger3->setAlignment(Qt::AlignCenter);
-
-    labelTrigger4->setStyleSheet("font:40px;color:white");
-    labelTrigger4->setText(tr("Trigger4"));
-    labelTrigger4->setAlignment(Qt::AlignCenter);
-
-    labelSource1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelSource1->setAlignment(Qt::AlignCenter);
-    buttonSource1Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonSource1Up->setIconSize(QSize(70, 45));
-    buttonSource1Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonSource1Down->setIconSize(QSize(70, 45));
-
-    labelSource2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelSource2->setAlignment(Qt::AlignCenter);
-    buttonSource2Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonSource2Up->setIconSize(QSize(70, 45));
-    buttonSource2Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonSource2Down->setIconSize(QSize(70, 45));
-
-    labelSource3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelSource3->setAlignment(Qt::AlignCenter);
-    buttonSource3Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonSource3Up->setIconSize(QSize(70, 45));
-    buttonSource3Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonSource3Down->setIconSize(QSize(70, 45));
-
-    labelSource4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelSource4->setAlignment(Qt::AlignCenter);
-    buttonSource4Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonSource4Up->setIconSize(QSize(70, 45));
-    buttonSource4Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonSource4Down->setIconSize(QSize(70, 45));
-
-    labelDelay1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelDelay1->setAlignment(Qt::AlignCenter);
-    buttonDelay1Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonDelay1Up->setIconSize(QSize(70, 45));
-    buttonDelay1Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonDelay1Down->setIconSize(QSize(70, 45));
-
-    labelDelay2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelDelay2->setAlignment(Qt::AlignCenter);
-    buttonDelay2Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonDelay2Up->setIconSize(QSize(70, 45));
-    buttonDelay2Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonDelay2Down->setIconSize(QSize(70, 45));
-
-    labelDelay3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelDelay3->setAlignment(Qt::AlignCenter);
-    buttonDelay3Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonDelay3Up->setIconSize(QSize(70, 45));
-    buttonDelay3Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonDelay3Down->setIconSize(QSize(70, 45));
-
-    labelDelay4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelDelay4->setAlignment(Qt::AlignCenter);
-    buttonDelay4Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonDelay4Up->setIconSize(QSize(70, 45));
-    buttonDelay4Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonDelay4Down->setIconSize(QSize(70, 45));
-
-    labelPriority1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelPriority1->setAlignment(Qt::AlignCenter);
-    buttonPriority1Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonPriority1Up->setIconSize(QSize(70, 45));
-    buttonPriority1Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonPriority1Down->setIconSize(QSize(70, 45));
-
-    labelPriority2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelPriority2->setAlignment(Qt::AlignCenter);
-    buttonPriority2Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonPriority2Up->setIconSize(QSize(70, 45));
-    buttonPriority2Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonPriority2Down->setIconSize(QSize(70, 45));
-
-    labelPriority3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelPriority3->setAlignment(Qt::AlignCenter);
-    buttonPriority3Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonPriority3Up->setIconSize(QSize(70, 45));
-    buttonPriority3Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonPriority3Down->setIconSize(QSize(70, 45));
-
-    labelPriority4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelPriority4->setAlignment(Qt::AlignCenter);
-    buttonPriority4Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonPriority4Up->setIconSize(QSize(70, 45));
-    buttonPriority4Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonPriority4Down->setIconSize(QSize(70, 45));
-
-    labelAudio1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelAudio1->setAlignment(Qt::AlignCenter);
-    buttonAudio1Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonAudio1Up->setIconSize(QSize(70, 45));
-    buttonAudio1Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonAudio1Down->setIconSize(QSize(70, 45));
-
-    labelAudio2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelAudio2->setAlignment(Qt::AlignCenter);
-    buttonAudio2Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonAudio2Up->setIconSize(QSize(70, 45));
-    buttonAudio2Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonAudio2Down->setIconSize(QSize(70, 45));
-
-    labelAudio3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelAudio3->setAlignment(Qt::AlignCenter);
-    buttonAudio3Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonAudio3Up->setIconSize(QSize(70, 45));
-    buttonAudio3Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonAudio3Down->setIconSize(QSize(70, 45));
-
-    labelAudio4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-    labelAudio4->setAlignment(Qt::AlignCenter);
-    buttonAudio4Up->setIcon(QIcon(":/images/arrow_up.png"));
-    buttonAudio4Up->setIconSize(QSize(70, 45));
-    buttonAudio4Down->setIcon(QIcon(":/images/arrow_down.png"));
-    buttonAudio4Down->setIconSize(QSize(70, 45));
-
-#if 1 //yjsin [17/09/13] if text is long, change font size and label location and size
-    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
-    {
-        buttonDefault->resize( 304, 90);
-        buttonDefault->setStyleSheet("font:38px");
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
-    {
-        buttonDefault->resize( 304, 90);
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-    {
-        buttonDefault->resize( 304, 90);
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-    {
-        buttonDefault->resize( 304, 90);
-    }
-#endif
 
     connect(buttonSource1Up,       SIGNAL(released()), this, SLOT(onButtonSource1Up()));
     connect(buttonSource1Down,     SIGNAL(released()), this, SLOT(onButtonSource1Down()));
@@ -262,8 +487,7 @@ void TriggerInputDialog::onButtonSave(void)
         }
 
         msgBox = new TextMessageDialog(tr("PRIORITY REDUNDANT"),
-                tr("\t\t%1\n\n%2\n%3\n").arg(tr("WARNING"),tr("Priority is redundant."),tr("Please check priority.")), 2, this);
-
+                QString("%1\n%2").arg(tr("Priority is redundant."),tr("Please check priority.")), 2, this);
         msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
         if(msgBox->exec()) { ; }

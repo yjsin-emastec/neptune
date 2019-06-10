@@ -7,7 +7,56 @@
 SetDateTimeDialog::SetDateTimeDialog(QWidget *parent, int dateFormat, cfg_dls_t *cfg)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::SetDateTimeDialog ui720;
+        ui720.setupUi(this);
+
+        buttonTimeFormat = ui720.buttonTimeFormat;
+        buttonGpsSync = ui720.buttonGpsSync;
+        comboBoxTimeZone = ui720.comboBoxTimeZone;
+        comboBoxTime_1 =ui720.comboBoxTime_1;
+        comboBoxTime_2 =ui720.comboBoxTime_2;
+        comboBoxTime_3 =ui720.comboBoxTime_3;
+        comboBoxTime_4 =ui720.comboBoxTime_4;
+        comboBoxTime_5 =ui720.comboBoxTime_5;
+        comboBoxTime_6 =ui720.comboBoxTime_6;
+        layoutFrame = ui720.layoutFrame;
+        buttonBox = ui720.buttonBox;
+        labelTime_1 = ui720.labelTime_1;
+        labelTime_2 = ui720.labelTime_2;
+
+        buttonBox->button(QDialogButtonBox::Ok)->setMinimumSize(200,91);
+        buttonBox->button(QDialogButtonBox::Cancel)->setMinimumSize(200,91);
+
+        buttonTimeFormat->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonGpsSync->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
+    }
+    else
+    {
+        Ui::SetDateTimeDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        buttonTimeFormat = ui1080.buttonTimeFormat;
+        buttonGpsSync = ui1080.buttonGpsSync;
+        comboBoxTimeZone = ui1080.comboBoxTimeZone;
+        comboBoxTime_1 =ui1080.comboBoxTime_1;
+        comboBoxTime_2 =ui1080.comboBoxTime_2;
+        comboBoxTime_3 =ui1080.comboBoxTime_3;
+        comboBoxTime_4 =ui1080.comboBoxTime_4;
+        comboBoxTime_5 =ui1080.comboBoxTime_5;
+        comboBoxTime_6 =ui1080.comboBoxTime_6;
+        layoutFrame = ui1080.layoutFrame;
+        buttonBox = ui1080.buttonBox;
+        labelTime_1 = ui1080.labelTime_1;
+        labelTime_2 = ui1080.labelTime_2;
+
+        buttonBox->button(QDialogButtonBox::Ok)->setMinimumSize(300,130);
+        buttonBox->button(QDialogButtonBox::Cancel)->setMinimumSize(300,130);
+
+        buttonTimeFormat->setStyleSheet("QPushButton{font-size:65px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonGpsSync->setStyleSheet("QPushButton{font-size:65px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
@@ -38,21 +87,9 @@ SetDateTimeDialog::SetDateTimeDialog(QWidget *parent, int dateFormat, cfg_dls_t 
     connect(buttonTimeFormat, SIGNAL(released()),               this, SLOT(onButtonTimeFormat()));
     connect(buttonGpsSync,    SIGNAL(released()),               this, SLOT(onButtonGpsSync()));
 
-    buttonTimeFormat->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
-    buttonGpsSync->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
-    comboBoxTime_1->setStyleSheet("QComboBox{font:38px;background:rgb(50,57,83);color:white;}QComboBox:focus{border-color:rgb(67,74,86);background-color:rgb(152,14,69);color:white;}");
-    comboBoxTime_2->setStyleSheet("QComboBox{font:38px;background:rgb(50,57,83);color:white;}QComboBox:focus{border-color:rgb(67,74,86);background-color:rgb(152,14,69);color:white;}");
-    comboBoxTime_3->setStyleSheet("QComboBox{font:38px;background:rgb(50,57,83);color:white;}QComboBox:focus{border-color:rgb(67,74,86);background-color:rgb(152,14,69);color:white;}");
-    comboBoxTime_4->setStyleSheet("QComboBox{font:38px;background:rgb(50,57,83);color:white;}QComboBox:focus{border-color:rgb(67,74,86);background-color:rgb(152,14,69);color:white;}");
-    comboBoxTime_5->setStyleSheet("QComboBox{font:38px;background:rgb(50,57,83);color:white;}QComboBox:focus{border-color:rgb(67,74,86);background-color:rgb(152,14,69);color:white;}");
-    comboBoxTime_6->setStyleSheet("QComboBox{font:38px;background:rgb(50,57,83);color:white;}QComboBox:focus{border-color:rgb(67,74,86);background-color:rgb(152,14,69);color:white;}");
-
     buttonBox->button(QDialogButtonBox::Ok)->setText(tr("Save"));
     buttonBox->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
-    buttonBox->button(QDialogButtonBox::Ok)->setMinimumSize(200,91);
-    buttonBox->button(QDialogButtonBox::Cancel)->setMinimumSize(200,91);
 
-    comboBoxTimeZone->setStyleSheet("QComboBox{font:38px;background:rgb(50,57,83);color:white;}QComboBox:focus{border-color:rgb(67,74,86);background-color:rgb(152,14,69);color:white;}");
     comboBoxTimeZone->setView(new QListView);   //item width resize
     isKeyLock = 0;
 

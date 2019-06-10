@@ -93,7 +93,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Delete All</string>
+     <string>Delete Log</string>
     </property>
    </widget>
   </widget>

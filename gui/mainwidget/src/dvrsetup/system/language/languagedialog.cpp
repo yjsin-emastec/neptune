@@ -8,7 +8,34 @@
 LanguageDialog::LanguageDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::LanguageDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        lineEditLanguage = ui720.lineEditLanguage;
+        buttonLanguageUp = ui720.buttonLanguageUp;
+        buttonLanguageDown = ui720.buttonLanguageDown;
+        buttonSave = ui720.buttonSave;
+        buttonClose = ui720.buttonClose;
+
+        lineEditLanguage->setStyleSheet("QLineEdit{font:64px;color:white;background-color:rgb(50,57,83);border-width:1px;border-style:inset;border-color:white;}");
+    }
+    else
+    {
+        Ui::LanguageDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        lineEditLanguage = ui1080.lineEditLanguage;
+        buttonLanguageUp = ui1080.buttonLanguageUp;
+        buttonLanguageDown = ui1080.buttonLanguageDown;
+        buttonSave = ui1080.buttonSave;
+        buttonClose = ui1080.buttonClose;
+
+        lineEditLanguage->setStyleSheet("QLineEdit{font:110px;color:white;background-color:rgb(50,57,83);border-width:1px;border-style:inset;border-color:white;}");
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
@@ -17,9 +44,6 @@ LanguageDialog::LanguageDialog(QWidget *parent)
 
     msgBox = NULL;
     buttonLanguageUp->setFocus();
-
-    lineEditLanguage->setStyleSheet("QLineEdit{font:64px;color:white;background-color:rgb(50,57,83);border-width:1px;border-style:inset;border-color:white;}");
-    lineEditLanguage->setAlignment(Qt::AlignCenter);
 
     buttonLanguageUp->setIcon(QIcon(":/images/arrow_up.png"));
     buttonLanguageUp->setIconSize(QSize(90, 90));
@@ -47,9 +71,8 @@ void LanguageDialog::onButtonLanguageSave()
     {
         if(!msgBox)
         {
-            msgBox = new TextMessageDialog(tr("Language Change"), tr("WARNING\n\n" "After changing the language,\n" "System will restart."), 15, this);
+            msgBox = new TextMessageDialog(tr("Language Change"), tr("After changing the language,\n" "System will restart."), 1, this);
         }
-        msgBox->setMsgAlignment(Qt::AlignCenter);
         msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
         msgBoxEsckey = 1;
 
@@ -123,26 +146,30 @@ void LanguageDialog::onButtonLanguageUp()
         case 8: { lineEditLanguage->setText(tr("German"  ));    utils_cfg_cpy_item(SystemCfg.language, "GERMAN"    );  break; }
     }
     /*
-     * when you change the language to spanish, see below code.
-     * 1. check the dvrsetup/system/upgrade/appupgradedialog. label size was modified.
-     * 2. check the search/backupdialog. label size and button size was modified.
-     * 3. check the stylesheet and MainWidget::loadStyleSheet(). Qbutton font was modified to small.
-     * 4. check the device/triggerinputdialog. Qbutton size and font was modified.
-     * 5. check the display/videooutput/videooutputdialog. Qbutton size was modified.
-     * 6. check the search/systemlogpage. QLabel size was modified.
-     * 7. check the dvrsetup/record/normal/normaldialog. Qbutton size was modified.
+     * when you change the language to Spanish, see below code.
+     * 1. check the search/backupdialog. label size and button size was modified.
+     * 2. check the stylesheet and MainWidget::loadStyleSheet(). Qbutton font was modified to small.
+     * 3. check the device/triggerinputdialog. Qbutton size and font was modified.
+     * 4. check the display/videooutput/videooutputdialog. Qbutton size was modified.
+     * 5. check the search/systemlogpage. QLabel size was modified.
+     * 6. check the dvrsetup/record/normal/normaldialog. Qbutton size was modified.
      *
-     * when you change the language to french, see below code.
+     * when you change the language to French, see below code.
      * 1. check the dvrsetup/system/upgrade/appupgradedialog. label size was modified.
      * 2. check the dvrsetup/system/information/informationdialog. font size was modified.
      * 3. check the dvrsetup/system/licenseplate/licenseplatedialog. font size was modified.
      * 4. check the search/systemlogpage. QLabel size and font size was modified.
+     * 5. check the dvrsetup/record/event/eventdialog. font size was modified.
+     * 6. check the search/backupdialog. progressBar font size was modified.
+     * 7. check the dvrsetup/system/display/videooutputdialog. Qbutton size was modified.
+     * 8. check the dvrsetup/setup/systempage. Qbutton size was modified.
      *
      * when you change the language to Italian, see below code.
      * 1. check the device/triggerinputdialog. Qbutton size and font was modified.
      * 2. check the display/videooutput/videooutputdialog. Qbutton size was modified.
      * 3. check the search/systemlogpage. QLabel size was modified.
      * 4. check the dvrsetup/record/normal/normaldialog. Qbutton size was modified.
+     * 5. check the dvrsetup/security/securitydialog. Qlabel font size was modified.
      *
      * when you change the language to Portuguese, see below code.
      * 1. check the stylesheet and MainWidget::loadStyleSheet(). Qbutton font was modified to small.
@@ -160,6 +187,9 @@ void LanguageDialog::onButtonLanguageUp()
      * 8. check the display/videooutput/videooutputdialog. Qbutton size was modified.
      * 9. check the search/systemlogpage. QLabel size was modified.
      * 10.check the dvrsetup/record/normal/normaldialog. Qbutton size was modified.
+     * 11.check the dvrsetup/record/event/eventdialog. font size was modified.
+     * 12.check the dvrsetup/security/securitydialog. Qlabel font size was modified.
+     * 13.check the ui/keyboard/uikeyboarddialog. Qbutton font size was modified.
      *
      * when you change the language to German, see below code.
      * 1. check the dvrsetup/system/upgrade/appupgradedialog. font size was modified.
@@ -172,6 +202,8 @@ void LanguageDialog::onButtonLanguageUp()
      * 8. check the search/systemlogpage. QLabel size was modified.
      * 9. check the search/functiondialog. Qbutton size was modified.
      * 10.check the dvrsetup/record/normal/normaldialog. Qbutton size was modified.
+     * 11.check the login/logindialog. font size was modified.
+     * 12.check the dvrsetup/device/triggerinput/triggerinputdialog. Qbutton size was modified.
      */
 }
 void LanguageDialog::onButtonLanguageDown()

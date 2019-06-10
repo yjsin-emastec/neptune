@@ -104,6 +104,9 @@
     <property name="text">
      <string>TextLabel</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="label2">
     <property name="geometry">
@@ -168,6 +171,9 @@
     <property name="text">
      <string>TextLabel</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="label1_1">
     <property name="geometry">
@@ -216,6 +222,9 @@
     <property name="text">
      <string>TextLabel</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="label1_3">
     <property name="geometry">
@@ -263,6 +272,9 @@
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label1_5">
@@ -343,6 +355,9 @@
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonSource1Up">
@@ -464,6 +479,9 @@
     <property name="text">
      <string>TextLabel</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelSource2">
     <property name="geometry">
@@ -479,6 +497,9 @@
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label2_1">
@@ -528,6 +549,9 @@
     <property name="text">
      <string>TextLabel</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelPriority2">
     <property name="geometry">
@@ -543,6 +567,9 @@
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label2_3">
@@ -591,6 +618,9 @@
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label2_5">
@@ -672,6 +702,9 @@
     <property name="text">
      <string>TextLabel</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelSource3">
     <property name="geometry">
@@ -687,6 +720,9 @@
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label3_1">
@@ -736,6 +772,9 @@
     <property name="text">
      <string>TextLabel</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelPriority3">
     <property name="geometry">
@@ -752,6 +791,9 @@
     <property name="text">
      <string>TextLabel</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelAudio3">
     <property name="geometry">
@@ -767,6 +809,9 @@
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label3_3">
@@ -880,6 +925,9 @@
     <property name="text">
      <string>TextLabel</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelSource4">
     <property name="geometry">
@@ -895,6 +943,9 @@
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="labelDelay4">
@@ -912,6 +963,9 @@
     <property name="text">
      <string>TextLabel</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelPriority4">
     <property name="geometry">
@@ -928,6 +982,9 @@
     <property name="text">
      <string>TextLabel</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelAudio4">
     <property name="geometry">
@@ -943,6 +1000,9 @@
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label4_1">
@@ -1058,22 +1118,6 @@
     </property>
    </widget>
    <widget class="QLabel" name="label4_8">
-    <property name="geometry">
-     <rect>
-      <x>1134</x>
-      <y>460</y>
-      <width>75</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label4_9">
     <property name="geometry">
      <rect>
       <x>1134</x>
@@ -1468,7 +1512,6 @@
    <zorder>label4_6</zorder>
    <zorder>label4_7</zorder>
    <zorder>label4_8</zorder>
-   <zorder>label4_9</zorder>
    <zorder>buttonSource2Up</zorder>
    <zorder>buttonSource2Down</zorder>
    <zorder>buttonPriority2Up</zorder>

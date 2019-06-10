@@ -7,7 +7,54 @@
 LoginDialog::LoginDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::LoginDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        buttonCancel = ui720.buttonCancel;
+        buttonEdit = ui720.buttonEdit;
+        buttonOk = ui720.buttonOk;
+        lineEditPassword = ui720.lineEditPassword;
+        labelPassword = ui720.labelPassword;
+
+        labelPassword->setStyleSheet("font:48px;color:white;padding-left:10px;");
+
+        //yjsin [18/01/05] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            labelPassword->setStyleSheet("font:45px;color:white;padding-left:5px;");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            labelPassword->setStyleSheet("font:45px;color:white;padding-left:5px;");
+        }
+    }
+    else
+    {
+        Ui::LoginDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonCancel = ui1080.buttonCancel;
+        buttonEdit = ui1080.buttonEdit;
+        buttonOk = ui1080.buttonOk;
+        lineEditPassword = ui1080.lineEditPassword;
+        labelPassword = ui1080.labelPassword;
+
+        labelPassword->setStyleSheet("font:70px;color:white;padding-left:20px");
+
+        //yjsin [18/02/21] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            labelPassword->setStyleSheet("font:65px;color:white;padding-left:20px");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            labelPassword->setStyleSheet("font:65px;color:white;padding-left:20px");
+        }
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
@@ -17,25 +64,12 @@ LoginDialog::LoginDialog(QWidget *parent)
 
     keyboardDialog = NULL;
 
-    labelPassword->setStyleSheet("font:48px;color:white");
-    lineEditPassword->setAlignment(Qt::AlignCenter);
-
-#if 1 //yjsin [18/01/05] if text is long, change font size
-    if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-    {
-        labelPassword->setStyleSheet("font:45px;color:white");
-    }
-#endif
-
     connect(buttonEdit, SIGNAL(clicked()),  this, SLOT(showKeyboard()));
     connect(buttonOk,  SIGNAL(clicked()), this, SLOT(checkPassword()));
     connect(buttonCancel,  SIGNAL(clicked()), this, SLOT(reject()));
 
     buttonOk->setText(tr("Ok"));
     buttonCancel->setText(tr("Cancel"));
-
-    buttonOk->setMinimumSize(200,100);
-    buttonCancel->setMinimumSize(200,100);
 
     if(parent->isLeftToRight() && isRightToLeft())
     {

@@ -8,7 +8,26 @@
 DisplayPage::DisplayPage(QWidget *parent)
     : QWidget(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::DisplayPage ui720;
+        ui720.setupUi(this);
+
+        buttonVideoOutput = ui720.buttonVideoOutput;
+        buttonCameraName = ui720.buttonCameraName;
+        buttonOsd = ui720.buttonOsd;
+        buttonClose = ui720.buttonClose;
+    }
+    else
+    {
+        Ui::DisplayPage1080p ui1080;
+        ui1080.setupUi(this);
+
+        buttonVideoOutput = ui1080.buttonVideoOutput;
+        buttonCameraName = ui1080.buttonCameraName;
+        buttonOsd = ui1080.buttonOsd;
+        buttonClose = ui1080.buttonClose;
+    }
 
     setPalette(QPalette(QColor(26, 32, 46)));
     setAutoFillBackground(true);
@@ -46,7 +65,7 @@ void DisplayPage::onButtonVideoOutput(void)
             if(!msgBox)
             {
                 msgBox = new TextMessageDialog(tr("RESOLUTION CHANGE"),
-                        tr("\t\t\t\tWARNING\n\nAre you sure to change the resolution?\n\nIf yes, the system will restart.\n"), 0, this);
+                        tr("Are you sure to change the resolution?\n" "If yes, the system will restart."), 0, this);
             }
 
             msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);

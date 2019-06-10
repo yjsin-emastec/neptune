@@ -3,9 +3,10 @@
 
 #include <QtGui/QDialog>
 #include "ui_eventdialog.h"
+#include "ui_eventdialog1080p.h"
 #include "DVR.h"
 
-class EventDialog : public QDialog, public Ui::EventDialog
+class EventDialog : public QDialog
 {
     Q_OBJECT
 
@@ -29,6 +30,13 @@ private:
 	int indexEventTime;
 	int indexGsensor;
 	int indexTrigger;
+
+    QFrame *frame;
+    QPushButton *buttonEventTime;
+    QPushButton *buttonGsensor;
+    QPushButton *buttonTrigger;
+    QPushButton *buttonSave;
+    QPushButton *buttonClose;
 };
 
 #endif // EVENTDIALOG_H

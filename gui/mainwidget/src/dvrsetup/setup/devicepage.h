@@ -3,6 +3,7 @@
 
 #include <QtGui/QWidget>
 #include "ui_devicepage.h"
+#include "ui_devicepage1080p.h"
 #include "DVR.h"
 
 class TextMessageDialog;
@@ -11,13 +12,20 @@ class TriggerInputDialog;
 class GsensorDialog;
 class BuzzerDialog;
 
-class DevicePage : public QWidget, public Ui::DevicePage
+class DevicePage : public QWidget
 {
     Q_OBJECT
 
 public:
     DevicePage(QWidget *parent = 0);
     ~DevicePage();
+
+    QPushButton *buttonVideo;
+    QPushButton *buttonTrigger;
+    QPushButton *buttonGsensor;
+    QPushButton *buttonBuzzer;
+    QPushButton *buttonDiskFormat;
+    QPushButton *buttonClose;
 
 signals:
 	void saveDevicePage(int type);
@@ -40,7 +48,7 @@ private:
 	TriggerInputDialog  *triggerInputDialog;
 	GsensorDialog       *gsensorDialog;
 	BuzzerDialog        *buzzerDialog;
-	disk_used_info_t     diskInfo[MAX_HDD_COUNT];
+    disk_used_info_t     diskInfo[MAX_HDD_COUNT];
 };
 
 #endif // DEVICEPAGE_H

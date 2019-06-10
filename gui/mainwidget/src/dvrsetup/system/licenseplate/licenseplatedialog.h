@@ -3,12 +3,13 @@
 
 #include <QtGui/QDialog>
 #include "ui_licenseplatedialog.h"
+#include "ui_licenseplatedialog1080p.h"
 #include "DVR.h"
 
 class LicensePlateDialog;
 class UiKeyboardDialog;
 
-class LicensePlateDialog : public QDialog, public Ui::LicensePlateDialog
+class LicensePlateDialog : public QDialog
 {
     Q_OBJECT
 
@@ -29,6 +30,13 @@ protected:
 	
 private:
 	UiKeyboardDialog *keyboard;
+
+    QFrame *frame;
+    QLabel *labelLicensePlate;
+    QLineEdit *lineEditLicensePlate;
+    QPushButton *buttonLicensePlate;
+    QPushButton *pushButtonSave;
+    QPushButton *pushButtonClose;
 };
 
 #endif // LICENSEPLATEDIALOG_H

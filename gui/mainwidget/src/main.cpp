@@ -57,7 +57,14 @@ int appl_main(int argc, char *argv[])
     MainWidget mainWindow(mainWidth, mainHeight);
     mainWindow.show();
 
-    app.setOverrideCursor(QCursor(QPixmap(":/images/cursor.png"), 1, 1));
+    if(mainHeight == 720)
+    {
+        app.setOverrideCursor(QCursor(QPixmap(":/images/cursor.png"), 1, 1));
+    }
+    else
+    {
+        app.setOverrideCursor(QCursor(QPixmap(":/images/cursor2.png"), 1, 1));
+    }
 
     return app.exec();
 }

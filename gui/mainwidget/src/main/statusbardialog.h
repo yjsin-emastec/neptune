@@ -29,6 +29,7 @@ private:
 	int isNoDisk;
 
 	QString updateTime_value();
+    void resizeStatusBar();
 	int eventDetectStatus;
 	disk_used_info_t diskInfo[MAX_HDD_COUNT];
 

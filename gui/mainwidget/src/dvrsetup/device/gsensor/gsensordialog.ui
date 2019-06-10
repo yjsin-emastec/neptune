@@ -37,8 +37,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>16</x>
-      <y>15</y>
+      <x>20</x>
+      <y>20</y>
       <width>400</width>
       <height>300</height>
      </rect>
@@ -63,8 +63,8 @@ Sensitivity: LEVEL3</string>
    <widget class="QPushButton" name="buttonSave">
     <property name="geometry">
      <rect>
-      <x>16</x>
-      <y>325</y>
+      <x>20</x>
+      <y>330</y>
       <width>200</width>
       <height>91</height>
      </rect>
@@ -76,8 +76,8 @@ Sensitivity: LEVEL3</string>
    <widget class="QPushButton" name="buttonClose">
     <property name="geometry">
      <rect>
-      <x>216</x>
-      <y>325</y>
+      <x>220</x>
+      <y>330</y>
       <width>200</width>
       <height>91</height>
      </rect>

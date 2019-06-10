@@ -4,10 +4,11 @@
 #include <QtGui/QDialog>
 #include "DVR.h"
 #include "ui_setdatetimedialog.h"
+#include "ui_setdatetimedialog1080p.h"
 
 class TextMessageDialog;
 
-class SetDateTimeDialog : public QDialog, public Ui::SetDateTimeDialog
+class SetDateTimeDialog : public QDialog
 {
     Q_OBJECT
 
@@ -63,6 +64,20 @@ private:
     time_t oldTime;
     int isKeyLock;
     bool eventFilter(QObject *obj, QEvent *event);
+
+    QPushButton *buttonTimeFormat;
+    QPushButton *buttonGpsSync;
+    QComboBox *comboBoxTimeZone;
+    QComboBox *comboBoxTime_1;
+    QComboBox *comboBoxTime_2;
+    QComboBox *comboBoxTime_3;
+    QComboBox *comboBoxTime_4;
+    QComboBox *comboBoxTime_5;
+    QComboBox *comboBoxTime_6;
+    QFrame *layoutFrame;
+    QDialogButtonBox *buttonBox;
+    QLabel *labelTime_1;
+    QLabel *labelTime_2;
 };
 
 #endif // SETDATETIMEDIALOG_H

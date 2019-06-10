@@ -3,10 +3,11 @@
 
 #include <QtGui/QDialog>
 #include "ui_timesetdialog.h"
+#include "ui_timesetdialog1080p.h"
 
 class TimeSetDialog;
 
-class TimeSetDialog : public QDialog, public Ui::TimeSetDialog
+class TimeSetDialog : public QDialog
 {
     Q_OBJECT
 
@@ -34,6 +35,19 @@ private:
     time_t tOld;
     QTimer *updateTimer;
     bool eventFilter(QObject *obj, QEvent *event);
+
+    QFrame *frame;
+    QLabel *labelTimeTitle;
+    QLabel *labelTimeStatus;
+    QLabel *labelFirstTime1;
+    QLabel *labelFirstTime2;
+    QLabel *labelLastTime1;
+    QLabel *labelLastTime2;
+    QLabel *labelSystemTime1;
+    QLabel *labelSystemTime2;
+    QDateTimeEdit *dateTimeSystem;
+    QPushButton *buttonDeleteData;
+    QPushButton *buttonSetTime;
 };
 
 #endif // TIMESETDIALOG_H

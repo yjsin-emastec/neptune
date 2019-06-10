@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SystemLogPage1080p</class>
+ <widget class="QWidget" name="SystemLogPage1080p">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>4</y>
+     <width>1912</width>
+     <height>1072</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTreeView" name="systemLogView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1891</width>
+      <height>781</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="autoScroll">
+     <bool>false</bool>
+    </property>
+    <property name="autoScrollMargin">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPageDn">
+    <property name="geometry">
+     <rect>
+      <x>1410</x>
+      <y>930</y>
+      <width>181</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPageUp">
+    <property name="geometry">
+     <rect>
+      <x>1590</x>
+      <y>930</y>
+      <width>181</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPage">
+    <property name="geometry">
+     <rect>
+      <x>1410</x>
+      <y>800</y>
+      <width>361</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>99999
+88888/88888</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSearch">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>930</y>
+      <width>501</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPrevious">
+    <property name="geometry">
+     <rect>
+      <x>1770</x>
+      <y>800</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonClose">
+    <property name="geometry">
+     <rect>
+      <x>1770</x>
+      <y>930</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonFunction">
+    <property name="geometry">
+     <rect>
+      <x>1280</x>
+      <y>930</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QDateTimeEdit" name="searchStartTime">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>800</y>
+      <width>641</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+   </widget>
+   <widget class="QDateTimeEdit" name="searchEndTime">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>930</y>
+      <width>641</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelStart">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>800</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelEnd">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>930</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>End</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFilter1">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>800</y>
+      <width>121</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>Filter
+Sort</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPrevious">
+    <property name="geometry">
+     <rect>
+      <x>1770</x>
+      <y>800</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSerarch">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>930</y>
+      <width>501</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFunction">
+    <property name="geometry">
+     <rect>
+      <x>1280</x>
+      <y>930</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPageDn">
+    <property name="geometry">
+     <rect>
+      <x>1410</x>
+      <y>930</y>
+      <width>181</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPageUp">
+    <property name="geometry">
+     <rect>
+      <x>1590</x>
+      <y>930</y>
+      <width>181</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelClose">
+    <property name="geometry">
+     <rect>
+      <x>1770</x>
+      <y>930</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFilter4">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>800</y>
+      <width>631</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFilter3">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>800</y>
+      <width>51</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>:
+:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFilter2">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>800</y>
+      <width>451</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>searchStartTime</zorder>
+   <zorder>searchEndTime</zorder>
+   <zorder>labelClose</zorder>
+   <zorder>labelPageDn</zorder>
+   <zorder>labelPageUp</zorder>
+   <zorder>labelFunction</zorder>
+   <zorder>buttonFunction</zorder>
+   <zorder>labelSerarch</zorder>
+   <zorder>labelPrevious</zorder>
+   <zorder>systemLogView</zorder>
+   <zorder>buttonPageDn</zorder>
+   <zorder>buttonPageUp</zorder>
+   <zorder>labelPage</zorder>
+   <zorder>buttonSearch</zorder>
+   <zorder>buttonPrevious</zorder>
+   <zorder>buttonClose</zorder>
+   <zorder>labelStart</zorder>
+   <zorder>labelEnd</zorder>
+   <zorder>labelFilter1</zorder>
+   <zorder>labelFilter3</zorder>
+   <zorder>labelFilter2</zorder>
+   <zorder>labelFilter4</zorder>
+  </widget>
+  <widget class="QFrame" name="maskFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>maskFrame</zorder>
+  <zorder>frame</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

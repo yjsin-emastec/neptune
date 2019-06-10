@@ -9,13 +9,39 @@
 SearchDialog::SearchDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::SearchDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        buttonClose = ui720.buttonClose;
+        buttonEvent = ui720.buttonEvent;
+        buttonLog = ui720.buttonLog;
+        buttonNormal = ui720.buttonNormal;
+        labelSearch = ui720.labelSearch;
+
+        labelSearch->setStyleSheet("color:white; font-weight:bold; font-size:48px;");
+    }
+    else
+    {
+        Ui::SearchDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonClose = ui1080.buttonClose;
+        buttonEvent = ui1080.buttonEvent;
+        buttonLog = ui1080.buttonLog;
+        buttonNormal = ui1080.buttonNormal;
+        labelSearch = ui1080.labelSearch;
+
+        labelSearch->setStyleSheet("color:white; font-weight:bold; font-size:80px;");
+    }
 
 	setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
 	setPalette(QPalette(QColor(255, 128, 64)));
 	frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
-	labelSearch->setStyleSheet("color:white; font-weight:bold; font-size:48px;");
 
 	pbChBit = 0xf;
 	pbSplit = Split_4;

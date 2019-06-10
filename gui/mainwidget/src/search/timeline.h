@@ -24,6 +24,13 @@ private:
 
     QPixmap timeLinepixmap;
 	int TL_HEIGHT;
+    int TL_LEFT_MARGIN;
+    int TL_UP_MARGIN;
+    int TL_WIDTH;
+    int CH_WIDTH;
+    int NUM_15SEC_PER_MIN;
+    int NUM_MIN_PER_HOUR;
+    int fontSize;
     bool isDrawRecord;
 };
 

@@ -144,8 +144,7 @@ void MainWidget::initializeSystem()
 
             if(msgBox == NULL)
             {
-                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("WARNING"), tr("Do you want to format the storage?")), 0, this);
-                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"), tr("Do you want to format the storage?"), 0, this);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
             }
 
@@ -178,8 +177,7 @@ void MainWidget::initializeSystem()
                 delete msgBox;
                 msgBox = NULL;
 
-                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("NOTICE"),tr("System will restart.")), 3, this);
-                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"), tr("System will restart."), 3, this);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
                 msgBox->exec();
             }
@@ -209,7 +207,7 @@ void MainWidget::initializeSystem()
 #if 1 // GyverJeong [18/05/04]
                 if(rv == DS_CODE_FILESYSTEM_BROKEN)
                 {
-                    msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2(%3)\n%4").arg(tr("WARNING"),
+                    msgBox = new TextMessageDialog(tr("STORAGE FORMAT"), QString("%1 (%2)\n%3").arg(
                                 tr("FORMAT or MOUNT ERROR"),
                                 tr(ss.toStdString().c_str()),
                                 tr("If yes, system will format the storage.")), 0, this);
@@ -219,24 +217,22 @@ void MainWidget::initializeSystem()
                 }
                 else
                 {
-                    msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2 (%3)\n%4").arg(tr("WARNING"),
+                    msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),QString("%1 (%2)\n%3").arg(
                                 tr("Storage was not formatted."),
                                 tr(ss.toStdString().c_str()),
                                 tr("Do you want to format the storage?")), 0, this);
                 }
 #else
-                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2 (%3)\n%4").arg(tr("WARNING"),
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr(%1 (%2)\n%3").arg(
                             tr("Storage was not formatted."),
                             tr(ss.toStdString().c_str()),
                             tr("Do you want to format the storage?")), 0, this);
 #endif
 #else
-                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2\n%3").arg(tr("WARNING"),
-                            tr("Storage was not formatted.         "),
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n%2").arg(
+                            tr("Storage was not formatted."),
                             tr("Do you want to format the storage?")), 0, this);
 #endif
-
-                msgBox->setMsgAlignment(Qt::AlignCenter);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
             }
 
@@ -252,8 +248,7 @@ void MainWidget::initializeSystem()
                 delete msgBox;
                 msgBox = NULL;
 
-                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2").arg(tr("NOTICE"),tr("System will restart.")), 3, this);
-                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("System will restart."), 3, this);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
                 msgBox->exec();
             }
@@ -299,17 +294,16 @@ void MainWidget::initializeSystem()
             {
 #if 1 // jungyver [17/07/04] Display hexa code when occuring disk status temporarily
                 QString ss = QString("0x%1").arg(rv, 4, 16, QLatin1Char('0'));
-                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1\n\n%2 (%3)\n%4").arg(tr("WARNING"),
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"),tr("%1 (%2)\n%3").arg(
                             tr("Storage was not formatted."),
                             tr(ss.toStdString().c_str()),
                             tr("Do you want to format the storage?")), 0, this);
 #else
-                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"), tr("%1\n\n%2\n%3").arg(tr("WARNING"),
-                            tr("Storage was not formatted.         "),
+                msgBox = new TextMessageDialog(tr("STORAGE FORMAT"), tr("%1\n%2").arg(
+                            tr("Storage was not formatted."),
                             tr("Do you want to format the storage?")), 0, this);
 #endif
 
-                msgBox->setMsgAlignment(Qt::AlignCenter);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
             }
 

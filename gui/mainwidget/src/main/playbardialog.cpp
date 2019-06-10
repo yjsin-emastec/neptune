@@ -9,12 +9,24 @@
 #include "aifbackup2.h"
 #include "dev/Ver.h"
 
-#define PLAYBAR_BTN_SIZE 70
-
 PlayBarDialog::PlayBarDialog(QWidget *parent)
     : QDialog(parent)
 {
     setupUi(this);
+
+    if(mainHeight == 720)
+    {
+        PLAYBAR_BTN_SIZE=70;
+        labelFontSize=32;
+    }
+    else
+    {
+        this->resize(1920, 240);
+        frame->resize(1920-8, 240-8);
+
+        PLAYBAR_BTN_SIZE=100;
+        labelFontSize=50;
+    }
 
     setWindowFlags(Qt::FramelessWindowHint);
 
@@ -76,10 +88,9 @@ PlayBarDialog::~PlayBarDialog(void)
 void PlayBarDialog::createPlaySpeedControlButtons(void)
 {
     labelSpeed = new QLabel(tr("Pause"), this);
-    labelSpeed->setStyleSheet  ("font-weight:bold;font-size:32px;");
+    labelSpeed->setFont( QFont("unifont", labelFontSize, QFont::Bold) );
     labelSpeed->setSizePolicy  (QSizePolicy::Fixed, QSizePolicy::Fixed);
-    labelSpeed->setMinimumSize (QSize(250, PLAYBAR_BTN_SIZE));
-    labelSpeed->setMaximumSize (QSize(250, PLAYBAR_BTN_SIZE));
+    labelSpeed->setFixedSize   (QSize(PLAYBAR_BTN_SIZE*4.1, PLAYBAR_BTN_SIZE));
     labelSpeed->setAlignment   (Qt::AlignLeft|Qt::AlignVCenter);
 
     buttonAudio     = new QPushButton(this);  buttonAudio    ->setFocusPolicy(Qt::NoFocus);
@@ -91,61 +102,45 @@ void PlayBarDialog::createPlaySpeedControlButtons(void)
     buttonStill     = new QPushButton(this);  buttonStill    ->setFocusPolicy(Qt::NoFocus);
     buttonClose     = new QPushButton(this);  buttonClose    ->setFocusPolicy(Qt::NoFocus);
 
-    buttonAudio    ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonAudio    ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonAudio    ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonAudio    ->setSizePolicy   (QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonAudio    ->setFixedSize    (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonAudio    ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonAudio    ->setIcon         (QIcon(":/images/aomute.png"));
-    buttonAudio    ->adjustSize      ();
 
-    buttonRew      ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonRew      ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonRew      ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonRew      ->setSizePolicy   (QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonRew      ->setFixedSize    (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonRew      ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonRew      ->setIcon         (QIcon(":/images/rew.png"));
-    buttonRew      ->adjustSize      ();
 
-    buttonRewFrame ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonRewFrame ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonRewFrame ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonRewFrame ->setSizePolicy   (QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonRewFrame ->setFixedSize    (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonRewFrame ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonRewFrame ->setIcon         (QIcon(":/images/rew_frame.png"));
-    buttonRewFrame ->adjustSize      ();
 
-    buttonPlay     ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonPlay     ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonPlay     ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonPlay     ->setSizePolicy   (QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonPlay     ->setFixedSize    (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonPlay     ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonPlay     ->setIcon         (QIcon(":/images/play.png"));
-    buttonPlay     ->adjustSize      ();
 
-    buttonFfFrame  ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonFfFrame  ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonFfFrame  ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonFfFrame  ->setSizePolicy   (QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonFfFrame  ->setFixedSize    (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonFfFrame  ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonFfFrame  ->setIcon         (QIcon(":/images/ff_frame.png"));
-    buttonFfFrame  ->adjustSize      ();
 
-    buttonFf       ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonFf       ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonFf       ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonFf       ->setSizePolicy   (QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonFf       ->setFixedSize    (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonFf       ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonFf       ->setIcon         (QIcon(":/images/ff.png"));
-    buttonFf       ->adjustSize      ();
 
-    buttonStill    ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonStill    ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonStill    ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonStill    ->setSizePolicy   (QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonStill    ->setFixedSize    (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonStill    ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonStill    ->setIcon         (QIcon(":/images/still_image.png"));
-    buttonStill    ->adjustSize      ();
 
-    buttonClose    ->setSizePolicy   (QSizePolicy::Minimum, QSizePolicy::Minimum);
-    buttonClose    ->setMinimumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonClose    ->setMaximumSize  (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
+    buttonClose    ->setSizePolicy   (QSizePolicy::Fixed, QSizePolicy::Fixed);
+    buttonClose    ->setFixedSize    (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonClose    ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonClose    ->setIcon         (QIcon(":/images/close.png"));
-    buttonClose    ->adjustSize      ();
 }
 void PlayBarDialog::setTimeFormat(int timeFormat)
 {

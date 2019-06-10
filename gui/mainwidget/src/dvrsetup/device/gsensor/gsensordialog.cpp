@@ -5,7 +5,26 @@
 GsensorDialog::GsensorDialog(QWidget *parent) :
     QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::GsensorDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        buttonClose = ui720.buttonClose;
+        buttonGsensor = ui720.buttonGsensor;
+        buttonSave = ui720.buttonSave;
+    }
+    else
+    {
+        Ui::GsensorDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonClose = ui1080.buttonClose;
+        buttonGsensor = ui1080.buttonGsensor;
+        buttonSave = ui1080.buttonSave;
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 

@@ -5,34 +5,102 @@
 InformationDialog::InformationDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::InformationDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        labelLicensePlate = ui720.labelLicensePlate;
+        labelLicensePlate2 = ui720.labelLicensePlate2;
+        labelModelName = ui720.labelModelName;
+        labelModelName2 = ui720.labelModelName2;
+        labelVersion = ui720.labelVersion;
+        labelVersion2 = ui720.labelVersion2;
+        labelHddSize = ui720.labelHddSize;
+        labelNormalSize2 = ui720.labelNormalSize2;
+        labelEventSize2 = ui720.labelEventSize2;
+        labelDVRTemperature = ui720.labelDVRTemperature;
+        labelDVRTemperature2 = ui720.labelDVRTemperature2;
+        labelDiskTemperature = ui720.labelDiskTemperature;
+        labelGps = ui720.labelGps;
+        labelGps2 = ui720.labelGps2;
+        buttonClose = ui720.buttonClose;
+
+        labelLicensePlate   ->setStyleSheet("font:46px;color:white");
+        labelModelName      ->setStyleSheet("font:46px;color:white");
+        labelVersion        ->setStyleSheet("font:46px;color:white");
+        labelHddSize        ->setStyleSheet("font:46px;color:white");
+        labelGps            ->setStyleSheet("font:46px;color:white");
+        labelLicensePlate2  ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+        labelModelName2     ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+        labelVersion2       ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+        labelNormalSize2    ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+        labelEventSize2     ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+        labelGps2           ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+        labelDiskTemperature->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+        labelDVRTemperature ->setStyleSheet("font:46px;color:white");
+        labelDVRTemperature2->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white;padding-left:15px;");
+
+        //yjsin [17/10/12] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+        {
+            labelLicensePlate->setStyleSheet("font:35px;color:white");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "ENGLISH") == 0)
+        {
+            labelLicensePlate->setStyleSheet("font:43px;color:white");
+        }
+    }
+    else
+    {
+        Ui::InformationDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        labelLicensePlate = ui1080.labelLicensePlate;
+        labelLicensePlate2 = ui1080.labelLicensePlate2;
+        labelModelName = ui1080.labelModelName;
+        labelModelName2 = ui1080.labelModelName2;
+        labelVersion = ui1080.labelVersion;
+        labelVersion2 = ui1080.labelVersion2;
+        labelHddSize = ui1080.labelHddSize;
+        labelNormalSize2 = ui1080.labelNormalSize2;
+        labelEventSize2 = ui1080.labelEventSize2;
+        labelDVRTemperature = ui1080.labelDVRTemperature;
+        labelDVRTemperature2 = ui1080.labelDVRTemperature2;
+        labelDiskTemperature = ui1080.labelDiskTemperature;
+        labelGps = ui1080.labelGps;
+        labelGps2 = ui1080.labelGps2;
+        buttonClose = ui1080.buttonClose;
+
+        labelLicensePlate   ->setStyleSheet("font:65px;color:white");
+        labelModelName      ->setStyleSheet("font:65px;color:white");
+        labelVersion        ->setStyleSheet("font:65px;color:white");
+        labelHddSize        ->setStyleSheet("font:65px;color:white");
+        labelGps            ->setStyleSheet("font:65px;color:white");
+        labelLicensePlate2  ->setStyleSheet("font:65px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+        labelModelName2     ->setStyleSheet("font:65px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+        labelVersion2       ->setStyleSheet("font:65px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+        labelNormalSize2    ->setStyleSheet("font:65px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+        labelEventSize2     ->setStyleSheet("font:65px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+        labelGps2           ->setStyleSheet("font:65px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+        labelDiskTemperature->setStyleSheet("font:65px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+        labelDVRTemperature ->setStyleSheet("font:65px;color:white");
+        labelDVRTemperature2->setStyleSheet("font:65px;background-color:rgb(50,57,83);color:white;padding-left:30px;");
+
+        //yjsin [19/02/21] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+        {
+            labelLicensePlate->setStyleSheet("font:45px;color:white");
+        }
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
     buttonClose->setFocus();
-
-    labelLicensePlate   ->setStyleSheet("font:46px;color:white");
-    labelLicensePlate   ->setAlignment(Qt::AlignCenter);
-    labelModelName      ->setStyleSheet("font:46px;color:white");
-    labelModelName      ->setAlignment(Qt::AlignCenter);
-    labelVersion        ->setStyleSheet("font:46px;color:white");
-    labelVersion        ->setAlignment(Qt::AlignCenter);
-    labelHddSize        ->setStyleSheet("font:46px;color:white");
-    labelHddSize        ->setAlignment(Qt::AlignCenter);
-    labelGps            ->setStyleSheet("font:46px;color:white");
-    labelGps            ->setAlignment(Qt::AlignCenter);
-    labelLicensePlate2  ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
-    labelModelName2     ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
-    labelVersion2       ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
-    labelNormalSize2    ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
-    labelEventSize2     ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
-    labelGps2           ->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
-    labelDiskTemperature->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
-    labelDVRTemperature ->setStyleSheet("font:46px;color:white");
-    labelDVRTemperature ->setAlignment(Qt::AlignCenter);
-    labelDVRTemperature2->setStyleSheet("font:46px;background-color:rgb(50,57,83);color:white");
 
     connect(buttonClose, SIGNAL(released()), this, SLOT(onClose()));
 }
@@ -41,17 +109,6 @@ InformationDialog::~InformationDialog()
 }
 void InformationDialog::initInformationConfig(void)
 {
-#if 1 //yjsin [17/10/12] if text is long, change font size
-    if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
-    {
-        labelLicensePlate->setStyleSheet("font:35px;color:white");
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "ENGLISH") == 0)
-    {
-        labelLicensePlate->setStyleSheet("font:43px;color:white");
-    }
-#endif
-
     char tmp[32], *modelName = NULL;
 
     QByteArray text = QByteArray::fromHex(SystemCfg.license_plate);
@@ -72,7 +129,15 @@ void InformationDialog::initInformationConfig(void)
     if( nomalCapacity.compare("No Disk")==0 || nomalCapacity.compare("0 GigaByte")==0 )
     {
         labelNormalSize2->setText(tr("%1").arg(tr("No SSD")));
-        labelNormalSize2->resize(740,85);
+
+        if(mainHeight == 720)
+        {
+            labelNormalSize2->resize(740,85);
+        }
+        else
+        {
+            labelNormalSize2->resize(1061,121);
+        }
     }
     else
     {

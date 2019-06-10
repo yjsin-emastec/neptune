@@ -4,7 +4,7 @@
 #include "DVR.h"
 #include "main/mainglobal.h"
 
-TextMessageDialog::TextMessageDialog(const QString & title, const QString & text, int buttonType, QWidget *parent)
+TextMessageDialog::TextMessageDialog(const QString &title, const QString &text, int buttonType, QWidget *parent)
     : QDialog(parent)
 {
     setupUi(this);
@@ -16,10 +16,34 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
     setAutoFillBackground(true);
 
+    labelTitle = new QLabel(title);
     labelMsg = new QLabel(text);
-
     QHBoxLayout	*buttonLayout = new QHBoxLayout;
-    buttonLayout->addItem(new QSpacerItem(0, 0, QSizePolicy::Expanding, QSizePolicy::Minimum));
+    QVBoxLayout *layout = new QVBoxLayout;
+
+    int buttonWidth, buttonHeight;
+
+    if(mainHeight == 720)
+    {
+        buttonWidth = 250;
+        buttonHeight = 100;
+
+        labelTitle->setStyleSheet("font: 48px; margin: 10px;");
+        labelMsg->setStyleSheet("font: 48px; margin: 10px;");
+
+        buttonLayout->setMargin(10);
+    }
+    else
+    {
+        buttonWidth = 300;
+        buttonHeight = 130;
+
+        labelTitle->setStyleSheet("font : 70px; margin: 20px;");
+        labelMsg->setStyleSheet("font: 70px; margin: 20px;");
+
+        buttonLayout->setMargin(20);
+    }
+    labelTitle->setAlignment(Qt::AlignCenter);
 
     msgType = buttonType;
 
@@ -29,8 +53,9 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
             buttonOk = new QPushButton(tr("Yes"));
             buttonCancel = new QPushButton(tr("No"));
-            buttonOk->setMinimumSize(250,100);
-            buttonCancel->setMinimumSize(250,100);
+            buttonOk->setFixedSize(buttonWidth,buttonHeight);
+            buttonCancel->setFixedSize(buttonWidth,buttonHeight);
+            buttonLayout->addItem(new QSpacerItem(0,0, QSizePolicy::Expanding, QSizePolicy::Expanding));
             buttonLayout->addWidget(buttonOk);
             buttonLayout->addWidget(buttonCancel);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
@@ -42,8 +67,9 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
             buttonOk = new QPushButton(tr("Ok"));
             buttonCancel = new QPushButton(tr("Cancel"));
-            buttonOk->setMinimumSize(250,100);
-            buttonCancel->setMinimumSize(250,100);
+            buttonOk->setFixedSize(buttonWidth,buttonHeight);
+            buttonCancel->setFixedSize(buttonWidth,buttonHeight);
+            buttonLayout->addItem(new QSpacerItem(0,0, QSizePolicy::Expanding, QSizePolicy::Expanding));
             buttonLayout->addWidget(buttonOk);
             buttonLayout->addWidget(buttonCancel);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
@@ -54,7 +80,7 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
         case 2:
 
             buttonOk = new QPushButton(tr("Ok"));
-            buttonOk->setMinimumSize(250,100);
+            buttonOk->setFixedSize(buttonWidth,buttonHeight);
             buttonLayout->addWidget(buttonOk);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
 
@@ -70,8 +96,8 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
             buttonOk = new QPushButton(tr("Delete data"));
             buttonCancel = new QPushButton(tr("Change time"));
-            buttonOk->setMinimumSize(300,100);
-            buttonCancel->setMinimumSize(300,100);
+            buttonOk->setMinimumSize(buttonWidth,buttonHeight);
+            buttonCancel->setMinimumSize(buttonWidth,buttonHeight);
             buttonLayout->addWidget(buttonOk);
             buttonLayout->addWidget(buttonCancel);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonReject()));
@@ -86,7 +112,7 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
         case 6:
 
             buttonOk = new QPushButton(tr("Yes"));
-            buttonOk->setMinimumSize(250,100);
+            buttonOk->setMinimumSize(buttonWidth,buttonHeight);
             buttonLayout->addWidget(buttonOk);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
 
@@ -96,8 +122,8 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
             buttonOk = new QPushButton(tr("Confirm"));
             buttonCancel = new QPushButton(tr("Cancel"));
-            buttonOk->setMinimumSize(250,100);
-            buttonCancel->setMinimumSize(250,100);
+            buttonOk->setMinimumSize(buttonWidth,buttonHeight);
+            buttonCancel->setMinimumSize(buttonWidth,buttonHeight);
             buttonLayout->addWidget(buttonOk);
             buttonLayout->addWidget(buttonCancel);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
@@ -109,8 +135,8 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
             buttonOk = new QPushButton(tr("Format"));
             buttonCancel = new QPushButton(tr("System Shutdown"));
-            buttonOk->setMinimumSize(250,100);
-            buttonCancel->setMinimumSize(450,100);
+            buttonOk->setMinimumSize(buttonWidth,buttonHeight);
+            buttonCancel->setMinimumSize(buttonWidth*2,buttonHeight);
             buttonLayout->addWidget(buttonOk);
             buttonLayout->addWidget(buttonCancel);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
@@ -126,8 +152,8 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
             buttonOk = new QPushButton(tr("Confirm"));
             buttonCancel = new QPushButton(tr("System Shutdown"));
-            buttonOk->setMinimumSize(250,100);
-            buttonCancel->setMinimumSize(450,100);
+            buttonOk->setMinimumSize(buttonWidth,buttonHeight);
+            buttonCancel->setMinimumSize(buttonWidth*2,buttonHeight);
             buttonLayout->addWidget(buttonOk);
             buttonLayout->addWidget(buttonCancel);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
@@ -193,8 +219,8 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
             buttonOk = new QPushButton(tr("Close"));
             buttonCancel = new QPushButton(tr("System Shutdown"));
-            buttonOk->setMinimumSize(250,100);
-            buttonCancel->setMinimumSize(450,100);
+            buttonOk->setMinimumSize(buttonWidth,buttonHeight);
+            buttonCancel->setMinimumSize(buttonWidth*2,buttonHeight);
             buttonLayout->addWidget(buttonOk);
             buttonLayout->addWidget(buttonCancel);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
@@ -263,8 +289,8 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
             buttonOk = new QPushButton(tr("Test"));
             buttonCancel = new QPushButton(tr("Cancel"));
-            buttonOk->setMinimumSize(250,100);
-            buttonCancel->setMinimumSize(250,100);
+            buttonOk->setMinimumSize(buttonWidth,buttonHeight);
+            buttonCancel->setMinimumSize(buttonWidth,buttonHeight);
             buttonLayout->addWidget(buttonOk);
             buttonLayout->addWidget(buttonCancel);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(doTest()));
@@ -274,29 +300,14 @@ TextMessageDialog::TextMessageDialog(const QString & title, const QString & text
 
         case 13:
 
-
-
             break;
 
         case 14:
 
             buttonOk = new QPushButton(tr("Close"));
-            buttonOk->setMinimumSize(250,100);
+            buttonOk->setMinimumSize(buttonWidth,buttonHeight);
             buttonLayout->addWidget(buttonOk);
             connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
-
-            break;
-
-        case 15:    //LanguageDialog::onButtonLanguageSave
-qDebug("textmessagebox create");
-            buttonOk = new QPushButton(tr("Ok"));
-            buttonCancel = new QPushButton(tr("Cancel"));
-            buttonOk->setMinimumSize(250,100);
-            buttonCancel->setMinimumSize(250,100);
-            buttonLayout->addWidget(buttonOk);
-            buttonLayout->addWidget(buttonCancel);
-            connect(buttonOk, SIGNAL(clicked()), this, SLOT(buttonAccept()));
-            connect(buttonCancel, SIGNAL(clicked()), this, SLOT(buttonReject()));
 
             break;
 
@@ -305,11 +316,21 @@ qDebug("textmessagebox create");
             break;
     }
 
-    QVBoxLayout *layout = new QVBoxLayout;
-    labelMsg->setStyleSheet("font: 48px;");
-    layout->addWidget(labelMsg);
+    if( text.length() > 15 )
+    {
+        layout->addWidget(labelTitle);
+        layout->addSpacing(30);
+        layout->addWidget(labelMsg);
+    }
+    else
+    {
+        layout->addWidget(labelMsg);
+    }
 
-    if(buttonType == 4)
+    if(buttonType == 3)
+    {
+    }
+    else if(buttonType == 4)
     {
         layout->addSpacing(60);
     }
@@ -325,7 +346,6 @@ qDebug("textmessagebox create");
         layout->addSpacing(20);
     }
 
-    layout->addStretch();
     layout->addLayout(buttonLayout);
 
     setLayout(layout);

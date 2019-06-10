@@ -10,7 +10,30 @@
 DevicePage::DevicePage(QWidget *parent)
     : QWidget(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::DevicePage ui720;
+        ui720.setupUi(this);
+
+        buttonVideo = ui720.buttonVideo;
+        buttonTrigger = ui720.buttonTrigger;
+        buttonGsensor = ui720.buttonGsensor;
+        buttonBuzzer = ui720.buttonBuzzer;
+        buttonDiskFormat = ui720.buttonDiskFormat;
+        buttonClose = ui720.buttonClose;
+    }
+    else
+    {
+        Ui::DevicePage1080p ui1080;
+        ui1080.setupUi(this);
+
+        buttonVideo = ui1080.buttonVideo;
+        buttonTrigger = ui1080.buttonTrigger;
+        buttonGsensor = ui1080.buttonGsensor;
+        buttonBuzzer = ui1080.buttonBuzzer;
+        buttonDiskFormat = ui1080.buttonDiskFormat;
+        buttonClose = ui1080.buttonClose;
+    }
 
     setPalette(QPalette(QColor(26, 32, 46)));
     setAutoFillBackground(true);
@@ -161,8 +184,8 @@ void DevicePage::onDiskFormat(void)
 
     if(!msgBox)
     {
-        if(diskInfo[0].smartInfo_ata_id)    { msgBox = new TextMessageDialog(tr("HDD FORMAT"), tr("\t\t\tWARNING\n\n" "Are you sure to format HDD?\n\n" "System will restart after format.\n"), 0, this); }
-        else                                { msgBox = new TextMessageDialog(tr("SSD FORMAT"), tr("\t\t\tWARNING\n\n" "Are you sure to format SSD?\n\n" "System will restart after format.\n"), 0, this); }
+        if(diskInfo[0].smartInfo_ata_id)    { msgBox = new TextMessageDialog(tr("HDD FORMAT"), tr("Are you sure to format HDD?\n" "System will restart after format."), 0, this); }
+        else                                { msgBox = new TextMessageDialog(tr("SSD FORMAT"), tr("Are you sure to format SSD?\n" "System will restart after format."), 0, this); }
     }
 
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
@@ -183,8 +206,8 @@ void DevicePage::onDiskFormat(void)
             msgBox = NULL;
             msgBoxEsckey = 0;
             msgBoxEsckey = 1;
-            msgBox = new TextMessageDialog(tr("SSD FORMAT"), tr("NOTICE\n\n" "SSD does not exist."), 2, this);
-            msgBox->setMsgAlignment(Qt::AlignCenter);
+            msgBox = new TextMessageDialog(tr("SSD FORMAT"), tr("SSD does not exist."), 2, this);
+            msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
             msgBox->exec();
         }
     }

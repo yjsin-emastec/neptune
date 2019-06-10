@@ -6,51 +6,90 @@
 RtcSetDialog::RtcSetDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::RtcSetDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        label = ui720.label;
+        labelRtcTitle = ui720.labelRtcTitle;
+        labelRtcStatus = ui720.labelRtcStatus;
+        dateTimeRtc = ui720.dateTimeRtc;
+        buttonSetRestart = ui720.buttonSetRestart;
+
+        labelRtcTitle->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        labelRtcStatus->setStyleSheet("font:40px;color:white;padding-left:15px;");
+        label->setStyleSheet("font:40px;color:white");
+
+        if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
+        {
+            dateTimeRtc->setDisplayFormat("yyyy/MM/dd hh:mm:ss AP");
+            dateTimeRtc->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+        else
+        {
+            dateTimeRtc->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
+            dateTimeRtc->setStyleSheet("QDateTimeEdit {font:55px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+        buttonSetRestart->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
+
+        //yjsin [18/01/05] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            labelRtcStatus->setStyleSheet("font:35px;color:white");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            labelRtcStatus->setStyleSheet("font:48px;color:white");
+        }
+    }
+    else
+    {
+        Ui::RtcSetDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        label = ui1080.label;
+        labelRtcTitle = ui1080.labelRtcTitle;
+        labelRtcStatus = ui1080.labelRtcStatus;
+        dateTimeRtc = ui1080.dateTimeRtc;
+        buttonSetRestart = ui1080.buttonSetRestart;
+
+        labelRtcTitle->setStyleSheet("font:80px;background-color:rgb(50,57,83);color:white");
+        labelRtcStatus->setStyleSheet("font:65px;color:white;padding-left:30px;");
+        label->setStyleSheet("font:65px;color:white");
+
+        if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
+        {
+            dateTimeRtc->setDisplayFormat("yyyy/MM/dd hh:mm:ss AP");
+            dateTimeRtc->setStyleSheet("QDateTimeEdit {font:75px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+        else
+        {
+            dateTimeRtc->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
+            dateTimeRtc->setStyleSheet("QDateTimeEdit {font:80px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+
+        //yjsin [19/02/21] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            labelRtcStatus->setStyleSheet("font:57px;color:white;padding-left:30px;");
+        }
+
+        buttonSetRestart->setStyleSheet("QPushButton{font-size:70px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
 
-    labelRtcTitle->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-    labelRtcTitle->setAlignment(Qt::AlignCenter);
-
-    labelRtcStatus->setStyleSheet("font:40px;color:white");
-    labelRtcStatus->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
-
-    label->setStyleSheet("font:40px;color:white");
-
-#if 1 //yjsin [18/01/05] if text is long, change font size
-    if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-    {
-        labelRtcStatus->setStyleSheet("font:35px;color:white");
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-    {
-        labelRtcStatus->setStyleSheet("font:48px;color:white");
-    }
-#endif
-
-    if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
-    {
-        dateTimeRtc->setDisplayFormat("yyyy/MM/dd hh:mm:ss AP");
-        dateTimeRtc->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
-    }
-    else
-    {
-        dateTimeRtc->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
-        dateTimeRtc->setStyleSheet("QDateTimeEdit {font:55px; selection-color:white; selection-background-color:rgb(152,14,69);}");
-    }
-
     dateTimeRtc->setDateTime(QDateTime::currentDateTime());
-    dateTimeRtc->setAlignment(Qt::AlignCenter);
     dateTimeRtc->setDateRange(QDate(ver_get_ref_year(),1,1),QDate(MAX_YEAR-1,12,31));
     dateTimeRtc->setWrapping(true);
     dateTimeRtc->installEventFilter(this);
     dateTimeRtc->setContextMenuPolicy(Qt::NoContextMenu);
-
-    buttonSetRestart->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
 
     dateTimeRtc->setFocus();
 

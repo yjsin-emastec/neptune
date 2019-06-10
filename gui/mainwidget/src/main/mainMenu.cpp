@@ -4,7 +4,37 @@
 MainMenu::MainMenu(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::MainMenu ui720;
+        ui720.setupUi(this);
+
+        frame           = ui720.frame;
+        buttonSetup     = ui720.buttonSetup;
+        buttonSearch    = ui720.buttonSearch;
+        buttonAudio     = ui720.buttonAudio;
+        buttonShutdown  = ui720.buttonShutdown;
+        buttonClose     = ui720.buttonClose;
+
+    }
+    else
+    {
+        Ui::MainMenu1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame           = ui1080.frame;
+        buttonSetup     = ui1080.buttonSetup;
+        buttonSearch    = ui1080.buttonSearch;
+        buttonAudio     = ui1080.buttonAudio;
+        buttonShutdown  = ui1080.buttonShutdown;
+        buttonClose     = ui1080.buttonClose;
+
+        buttonSetup->setStyleSheet("font:70px;");
+        buttonSearch->setStyleSheet("font:70px;");
+        buttonAudio->setStyleSheet("font:70px;");
+        buttonShutdown->setStyleSheet("font:70px;");
+        buttonClose->setStyleSheet("font:70px;");
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 

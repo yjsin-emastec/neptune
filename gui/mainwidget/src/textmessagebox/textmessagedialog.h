@@ -18,7 +18,6 @@ public:
 	QPushButton *buttonOk, *buttonCancel;
     void setMsgAlignment(Qt::Alignment alignment);
 
-
 signals:
     void waitDlgReady();
 	void waitVideoOutput();
@@ -38,7 +37,7 @@ private slots:
 	void doTest();
 private:
 	int msgType;
-    QLabel *labelMsg, *labelMsg1, *labelMsg2;
+    QLabel *labelTitle, *labelMsg, *labelMsg1, *labelMsg2;
 };
 
 #endif // TEXTMESSAGEDIALOG_H

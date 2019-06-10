@@ -13,7 +13,133 @@ extern SYSTEM_LOG_DATA_S gSystemLog[SYSTEM_LOG_COUNT_PER_PAGE];
 SystemLogPage::SystemLogPage(QWidget *parent)
     : QWidget(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::SystemLogPage ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        maskFrame = ui720.maskFrame;
+        buttonClose = ui720.buttonClose;
+        buttonFunction = ui720.buttonFunction;
+        buttonPageDn = ui720.buttonPageDn;
+        buttonPageUp = ui720.buttonPageUp;
+        buttonPrevious = ui720.buttonPrevious;
+        buttonSearch = ui720.buttonSearch;
+        labelClose = ui720.labelClose;
+        labelFilter1 = ui720.labelFilter1;
+        labelFilter2 = ui720.labelFilter2;
+        labelFilter3 = ui720.labelFilter3;
+        labelPage = ui720.labelPage;
+        labelStart = ui720.labelStart;
+        labelEnd = ui720.labelEnd;
+        searchEndTime = ui720.searchEndTime;
+        searchStartTime = ui720.searchStartTime;
+        systemLogView = ui720.systemLogView;
+
+        iconSize = 70;
+        systemLogView->setStyleSheet("QHeaderView{font:27px;} QTreeView{font:26px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+
+        //yjsin [18/09/10] if text is long, change label size
+        if( (utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0) )
+        {
+            labelStart->setStyleSheet("font:28px;");
+            labelFilter1->setGeometry(530, 530, 91, 91);
+            labelFilter3->setGeometry(620, 530, 31, 91);
+            labelFilter2->setGeometry(650, 530, 291, 91);
+        }
+        else if( (utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0) )
+        {
+            labelFilter1->setGeometry(530, 530, 91, 91);
+            labelFilter3->setGeometry(620, 530, 31, 91);
+            labelFilter2->setGeometry(650, 530, 291, 91);
+        }
+        else if( (utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0) || (utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0) )
+        {
+            labelFilter1->setGeometry(530, 530, 101, 91);
+            labelFilter3->setGeometry(640, 530, 20, 91);
+            labelFilter2->setGeometry(660, 530, 281, 91);
+        }
+        else if( (utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0) )
+        {
+            labelStart->setStyleSheet("font:30px;");
+            labelFilter1->setGeometry(530, 530, 111, 91);
+            labelFilter3->setGeometry(650, 530, 20, 91);
+            labelFilter2->setGeometry(670, 530, 281, 91);
+        }
+        else if( (utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0) )
+        {
+            labelFilter1->setGeometry(530, 530, 126, 91);
+            labelFilter3->setGeometry(665, 530, 20, 91);
+            labelFilter2->setGeometry(685, 530, 281, 91);
+        }
+    }
+    else
+    {
+        Ui::SystemLogPage1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        maskFrame = ui1080.maskFrame;
+        buttonClose = ui1080.buttonClose;
+        buttonFunction = ui1080.buttonFunction;
+        buttonPageDn = ui1080.buttonPageDn;
+        buttonPageUp = ui1080.buttonPageUp;
+        buttonPrevious = ui1080.buttonPrevious;
+        buttonSearch = ui1080.buttonSearch;
+        labelClose = ui1080.labelClose;
+        labelFilter1 = ui1080.labelFilter1;
+        labelFilter2 = ui1080.labelFilter2;
+        labelFilter3 = ui1080.labelFilter3;
+        labelPage = ui1080.labelPage;
+        labelStart = ui1080.labelStart;
+        labelEnd = ui1080.labelEnd;
+        searchEndTime = ui1080.searchEndTime;
+        searchStartTime = ui1080.searchStartTime;
+        systemLogView = ui1080.systemLogView;
+
+        iconSize = 110;
+        systemLogView->setStyleSheet("QHeaderView{font:40px;} QTreeView{font:40px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+        labelStart->setStyleSheet("font:45px;");
+        labelEnd->setStyleSheet("font:45px;");
+        labelFilter1->setStyleSheet("font:45px;");
+        labelFilter2->setStyleSheet("font:45px;");
+        labelFilter3->setStyleSheet("font:45px;");
+        labelPage->setStyleSheet("font:45px;");
+
+        //yjsin [19/02/21] if text is long, change label size
+        if( (utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0) || (utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0) )
+        {
+            labelFilter1->setGeometry(790, 800, 131, 131);
+            labelFilter3->setGeometry(920, 800,  51, 131);
+            labelFilter2->setGeometry(970, 800, 451, 131);
+        }
+        else if( utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0 )
+        {
+            labelFilter1->setGeometry(790, 800, 141, 131);
+            labelFilter3->setGeometry(930, 800,  51, 131);
+            labelFilter2->setGeometry(980, 800, 451, 131);
+        }
+        else if( (utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0) )
+        {
+            labelFilter1->setGeometry(790, 800, 161, 131);
+            labelFilter3->setGeometry(950, 800,  51, 131);
+            labelFilter2->setGeometry(1000, 800, 451, 131);
+        }
+        else if( (utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0) )
+        {
+            labelFilter1->setGeometry(790, 800, 171, 131);
+            labelFilter3->setGeometry(960, 800,  41, 131);
+            labelFilter2->setGeometry(1000, 800, 451, 131);
+        }
+        else if( (utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0) )
+        {
+            labelFilter1->setStyleSheet("font:40px;");
+            labelFilter1->setGeometry(790, 800, 171, 131);
+            labelFilter3->setGeometry(960, 800,  41, 131);
+            labelFilter2->setGeometry(1000, 800, 451, 131);
+        }
+    }
 
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
@@ -31,15 +157,15 @@ SystemLogPage::SystemLogPage(QWidget *parent)
     searchEndTime  ->installEventFilter(this);
 
     buttonFunction ->setIcon    (QIcon(":/images/function.png"));
-    buttonFunction ->setIconSize(QSize(70,70));
+    buttonFunction ->setIconSize(QSize(iconSize,iconSize));
     buttonFunction ->adjustSize ();
 
     buttonPrevious ->setIcon    (QIcon(":/images/previous.png"));
-    buttonPrevious ->setIconSize(QSize(70,70));
+    buttonPrevious ->setIconSize(QSize(iconSize,iconSize));
     buttonPrevious ->adjustSize ();
 
     buttonClose    ->setIcon    (QIcon(":/images/close2.png"));
-    buttonClose    ->setIconSize(QSize(70,70));
+    buttonClose    ->setIconSize(QSize(iconSize,iconSize));
     buttonClose    ->adjustSize ();
 
     maskFrame->setGeometry(0,0,appmgr_get_mainwidget_width(),appmgr_get_mainwidget_height());
@@ -47,49 +173,12 @@ SystemLogPage::SystemLogPage(QWidget *parent)
     maskFrame->setAttribute(Qt::WA_TranslucentBackground, true);
     maskFrame->lower();
 
-#if 1 //yjsin [18/09/10] if text is long, change label size
-    if( (utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0) || (utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0) )
-    {
-        labelFilter1->setGeometry(530, 530, 91, 91);
-        labelFilter3->setGeometry(620, 530, 31, 91);
-        labelFilter2->setGeometry(650, 530, 291, 91);
-    }
-    else if( (utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0) || (utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0) )
-    {
-        labelFilter1->setGeometry(530, 530, 101, 91);
-        labelFilter3->setGeometry(640, 530, 20, 91);
-        labelFilter2->setGeometry(660, 530, 281, 91);
-    }
-    else if( (utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0) )
-    {
-        labelFilter1->setGeometry(530, 530, 111, 91);
-        labelFilter3->setGeometry(650, 530, 20, 91);
-        labelFilter2->setGeometry(670, 530, 281, 91);
-    }
-    else if( (utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0) )
-    {
-        labelFilter1->setGeometry(530, 530, 126, 91);
-        labelFilter3->setGeometry(665, 530, 20, 91);
-        labelFilter2->setGeometry(685, 530, 281, 91);
-    }
-
-    if( (utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0) )
-    {
-        labelStart->setStyleSheet("font:28px;");
-    }
-    else if( (utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0 ) )
-    {
-        labelStart->setStyleSheet("font:30px;");
-    }
-#endif
-
     proxyModel = new EventSortFilterProxyModel;
 
     systemLogView->setRootIsDecorated(false);
     systemLogView->setAlternatingRowColors(true);
     systemLogView->setModel(proxyModel);
     systemLogView->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    systemLogView->setStyleSheet("QHeaderView{font:27px;} QTreeView{font:26px;} QTreeView::item:selected{background:rgb(152,14,69);}");
     systemLogView->header()->setMovable(false);
     systemLogView->header()->setResizeMode(QHeaderView::Fixed);
 
@@ -100,8 +189,17 @@ SystemLogPage::SystemLogPage(QWidget *parent)
     systemLogModel->setHeaderData(1, Qt::Horizontal, Qt::AlignCenter, Qt::TextAlignmentRole);
 
     proxyModel->setSourceModel(systemLogModel);
-    systemLogView->setColumnWidth(0, 335);
-    systemLogView->setColumnWidth(1, 914);
+
+    if(mainHeight == 720)
+    {
+        systemLogView->setColumnWidth(0, 335);
+        systemLogView->setColumnWidth(1, 914);
+    }
+    else
+    {
+        systemLogView->setColumnWidth(0, 500);
+        systemLogView->setColumnWidth(1, 1300);
+    }
 
     connect(buttonPrevious, SIGNAL(released()), this, SLOT(onButtonPrevious()));
     connect(buttonClose, SIGNAL(released()), this, SLOT(onButtonClose()));
@@ -128,6 +226,12 @@ void SystemLogPage::resetLog()
         searchStartTime->setStyleSheet("QDateTimeEdit {font:32px; selection-color:white; selection-background-color:rgb(152,14,69);}");
         searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm AP");
         searchEndTime->setStyleSheet("QDateTimeEdit {font:32px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+
+        if(mainHeight == 1080)
+        {
+            searchStartTime->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+            searchEndTime->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
     }
     else                                                            //24H
     {
@@ -135,6 +239,12 @@ void SystemLogPage::resetLog()
         searchStartTime->setStyleSheet("QDateTimeEdit {font:39px; selection-color:white; selection-background-color:rgb(152,14,69);}");
         searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm");
         searchEndTime->setStyleSheet("QDateTimeEdit {font:39px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+
+        if(mainHeight == 1080)
+        {
+            searchStartTime->setStyleSheet("QDateTimeEdit {font:55px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+            searchEndTime->setStyleSheet("QDateTimeEdit {font:55px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
     }
 
     logPageNum=0, logPageNow=0;
@@ -169,7 +279,6 @@ void SystemLogPage::onQueryLogCount()
         }
     }
 
-#if 1 //yjsin[18/08/30] display list when searchbutton and filterbutton pushed
     if(isSearch)
     {
         //print log
@@ -188,22 +297,6 @@ void SystemLogPage::onQueryLogCount()
             }
         }
     }
-#else
-    //print log
-    systemLogModel->removeRows(0, systemLogModel->rowCount());
-    for(i=0;i<pageCount;i++)
-    {
-        if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)
-        {
-            QString logTime=changeTimeformat(gSystemLog[i].time);
-            addEventLog(QString("%1 %2").arg(logTime).arg(ampmStatus).toStdString().c_str(), gSystemLog[i].log);
-        }
-        else
-        {
-            addEventLog(QString(gSystemLog[i].time), QString(gSystemLog[i].log));
-        }
-    }
-#endif
 
     //Page button en/disable
     if(logPageNum>0)
@@ -252,9 +345,7 @@ void SystemLogPage::onQueryLogData()
 
 void SystemLogPage::onButtonSearch()
 {
-#if 1 //yjsin[18/08/30] display list when searchbutton and filterbutton pushed
     isSearch=true;
-#endif
 
     //init
     systemLogModel->removeRows(0, systemLogModel->rowCount());
@@ -308,31 +399,20 @@ void SystemLogPage::onButtonClose()
 
 void SystemLogPage::onButtonFunction()
 {
-#if 1 //yjsin[18/08/30] display list when searchbutton and filterbutton pushed
     isSearch=true;
-#endif
 
     maskFrame->raise();
 
-    if( functionDialog )
-    {
-        delete functionDialog;
-    }
-
-    //create new dialog
     functionDialog=new FunctionDialog();
     functionDialog->setParent(this);
     functionDialog->move((this->width()-functionDialog->size().width())/2,(this->height()-functionDialog->size().height())/2);
 
-    functionDialog->setWindowModality(Qt::WindowModal);
-    functionDialog->setModal(true);
     functionDialog->setLogFilter(logFilter);
     functionDialog->setLogSort(logSort);
     functionDialog->buttonFilter->setFocus();
 
     if(functionDialog->exec() == 1)
     {
-        //when click Close
         logFilter=functionDialog->getLogFilter();
         logSort=functionDialog->getLogSort();
 
@@ -356,9 +436,7 @@ void SystemLogPage::onButtonFunction()
 }
 void SystemLogPage::onButtonPageDn()
 {
-#if 1 //yjsin[18/08/30] display list when searchbutton and filterbutton pushed
     isSearch=false;
-#endif
 
     QString oldStartTime = QDateTime(searchStartTime->dateTime()).toString("yyyy-MM-dd hh:mm");
     QString oldEndTime   = QDateTime(searchEndTime->dateTime()).toString("yyyy-MM-dd hh:mm");
@@ -417,9 +495,7 @@ void SystemLogPage::onButtonPageDn()
 }
 void SystemLogPage::onButtonPageUp()
 {
-#if 1 //yjsin[18/08/30] display list when searchbutton and filterbutton pushed
     isSearch=false;
-#endif
 
     QString oldStartTime = QDateTime(searchStartTime->dateTime()).toString("yyyy-MM-dd hh:mm");
     QString oldEndTime   = QDateTime(searchEndTime->dateTime()).toString("yyyy-MM-dd hh:mm");

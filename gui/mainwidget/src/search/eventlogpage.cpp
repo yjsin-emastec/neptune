@@ -173,6 +173,39 @@ EventLogPage::EventLogPage(QWidget *parent)
     isKeyLock      = false;
     isSearch       = false;
     oldIndexRow    = 0;
+
+    if(mainHeight == 1080)
+    {
+        labelStartTime->setFixedSize(160,130);
+        searchStartTime->setFixedSize(QSize(640, 130));
+        labelEndTime->setFixedSize(160,130);
+        searchEndTime->setFixedSize(QSize(640,130));
+
+        searchStartTime->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        searchEndTime->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+
+        labelFilter->setFixedSize(QSize(160,130));
+        buttonFilter->setFixedSize(QSize(310,130));
+        buttonSort->setFixedSize(QSize(310,130));
+
+        labelLog->setFixedSize(QSize(390,130));
+        buttonSearch->setFixedSize(QSize(400,130));
+
+        buttonPrevLogPage->setFixedSize(QSize(190,130));
+        labelPage->setFixedSize(QSize(400,130));
+        buttonNextLogPage->setFixedSize(QSize(190,130));
+
+        buttonPlay->setFixedSize(QSize(800, 140));
+
+        buttonPrevious->setFixedSize(QSize(395,130));
+        buttonClose->setFixedSize(QSize(395,130));
+
+        eventLogView->setColumnWidth(0, 560);
+        eventLogView->setColumnWidth(1, 290);
+        eventLogView->setColumnWidth(2, 150);
+
+        eventLogView->setStyleSheet("QHeaderView{font:43px;} QTreeView{font:41px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+    }
 }
 EventLogPage::~EventLogPage()
 {
@@ -637,6 +670,13 @@ void EventLogPage::resetSearch()
         searchStartTime->setStyleSheet("QDateTimeEdit {font:32px; selection-color:white; selection-background-color:rgb(152,14,69);}");
         searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm AP");
         searchEndTime->setStyleSheet("QDateTimeEdit {font:32px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+
+
+        if(mainHeight == 1080)
+        {
+            searchStartTime->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+            searchEndTime->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
     }
     else                                                            //24H
     {
@@ -644,6 +684,12 @@ void EventLogPage::resetSearch()
         searchStartTime->setStyleSheet("QDateTimeEdit {font:39px; selection-color:white; selection-background-color:rgb(152,14,69);}");
         searchEndTime->setDisplayFormat("yyyy.MM.dd hh:mm");
         searchEndTime->setStyleSheet("QDateTimeEdit {font:39px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+
+        if(mainHeight == 1080)
+        {
+            searchStartTime->setStyleSheet("QDateTimeEdit {font:55px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+            searchEndTime->setStyleSheet("QDateTimeEdit {font:55px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
     }
 
     logCount=0;

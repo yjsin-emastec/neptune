@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1108</width>
-    <height>600</height>
+    <width>1238</width>
+    <height>678</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <rect>
      <x>4</x>
      <y>4</y>
-     <width>1100</width>
-     <height>592</height>
+     <width>1230</width>
+     <height>670</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -31,10 +31,10 @@
    <widget class="QPushButton" name="buttonClose">
     <property name="geometry">
      <rect>
-      <x>843</x>
-      <y>495</y>
-      <width>250</width>
-      <height>90</height>
+      <x>965</x>
+      <y>560</y>
+      <width>251</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="text">
@@ -44,9 +44,9 @@
    <widget class="QLabel" name="labelStatus">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>1081</width>
+      <x>20</x>
+      <y>20</y>
+      <width>1191</width>
       <height>180</height>
      </rect>
     </property>
@@ -60,10 +60,10 @@
    <widget class="QPushButton" name="buttonUpgrade">
     <property name="geometry">
      <rect>
-      <x>590</x>
-      <y>495</y>
-      <width>250</width>
-      <height>90</height>
+      <x>705</x>
+      <y>560</y>
+      <width>251</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="text">
@@ -73,10 +73,10 @@
    <widget class="QPushButton" name="buttonFind">
     <property name="geometry">
      <rect>
-      <x>337</x>
-      <y>495</y>
-      <width>250</width>
-      <height>90</height>
+      <x>445</x>
+      <y>560</y>
+      <width>251</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="text">
@@ -86,10 +86,10 @@
    <widget class="QLabel" name="labelModelName">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>197</y>
-      <width>270</width>
-      <height>71</height>
+      <x>20</x>
+      <y>220</y>
+      <width>291</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -98,14 +98,17 @@
     <property name="text">
      <string>Model Name</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelModelNameValue">
     <property name="geometry">
      <rect>
-      <x>279</x>
-      <y>197</y>
-      <width>812</width>
-      <height>71</height>
+      <x>310</x>
+      <y>220</y>
+      <width>901</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -118,10 +121,10 @@
    <widget class="QLabel" name="labelVersion">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>267</y>
-      <width>270</width>
-      <height>71</height>
+      <x>20</x>
+      <y>300</y>
+      <width>291</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -130,14 +133,17 @@
     <property name="text">
      <string>Version</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelVersionValue">
     <property name="geometry">
      <rect>
-      <x>279</x>
-      <y>267</y>
-      <width>812</width>
-      <height>71</height>
+      <x>310</x>
+      <y>300</y>
+      <width>901</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -150,10 +156,10 @@
    <widget class="QLabel" name="labelFileName">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>337</y>
-      <width>270</width>
-      <height>71</height>
+      <x>20</x>
+      <y>380</y>
+      <width>291</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -162,14 +168,17 @@
     <property name="text">
      <string>File Name</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelFileNameValue">
     <property name="geometry">
      <rect>
-      <x>279</x>
-      <y>337</y>
-      <width>812</width>
-      <height>71</height>
+      <x>310</x>
+      <y>380</y>
+      <width>901</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -182,10 +191,10 @@
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
-      <x>284</x>
-      <y>410</y>
-      <width>801</width>
-      <height>66</height>
+      <x>315</x>
+      <y>465</y>
+      <width>891</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="value">
@@ -195,10 +204,10 @@
    <widget class="QLabel" name="labelProgress">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>407</y>
-      <width>270</width>
-      <height>71</height>
+      <x>20</x>
+      <y>460</y>
+      <width>291</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -207,14 +216,17 @@
     <property name="text">
      <string>Progress</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelProgressValue">
     <property name="geometry">
      <rect>
-      <x>279</x>
-      <y>407</y>
-      <width>812</width>
-      <height>71</height>
+      <x>310</x>
+      <y>460</y>
+      <width>901</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="frameShape">

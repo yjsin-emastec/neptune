@@ -8,7 +8,24 @@
 RecordPage::RecordPage(QWidget *parent)
     : QWidget(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::RecordPage ui720;
+        ui720.setupUi(this);
+
+        buttonNormal    = ui720.buttonNormal;
+        buttonEvent     = ui720.buttonEvent;
+        buttonClose     = ui720.buttonClose;
+    }
+    else
+    {
+        Ui::RecordPage1080p ui1080;
+        ui1080.setupUi(this);
+
+        buttonNormal    = ui1080.buttonNormal;
+        buttonEvent     = ui1080.buttonEvent;
+        buttonClose     = ui1080.buttonClose;
+    }
 
     setPalette(QPalette(QColor(26, 32, 46)));
     setAutoFillBackground(true);

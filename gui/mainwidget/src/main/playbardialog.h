@@ -72,6 +72,8 @@ private:
     int             pbPreviousAudio;
     int             pbPreviousSplit;
     int             ispbMute;
+    int             PLAYBAR_BTN_SIZE;
+    int             labelFontSize;
 
     PlayTimeBar    *timeBar;
 

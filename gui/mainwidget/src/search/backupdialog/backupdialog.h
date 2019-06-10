@@ -3,9 +3,10 @@
 
 #include <QtGui/QDialog>
 #include "ui_backupdialog.h"
+#include "ui_backupdialog1080p.h"
 #include "aifbackup2.h"
 
-class BackupDialog : public QDialog, public Ui::BackupDialog
+class BackupDialog : public QDialog
 {
     Q_OBJECT
 
@@ -14,6 +15,7 @@ public:
 	~BackupDialog();
 	void setCaptureMode(int type, int ch, int split, time_t pbTime);
     void updateBackupDialog();
+
 signals:
 
 public slots:
@@ -35,6 +37,15 @@ private:
 	bool isKeyLock;
 	aif_backup_context_t *pBackupContext;
     bool eventFilter(QObject *obj, QEvent *event);
+
+    QFrame *frame;
+    QPushButton *buttonBackup;
+    QPushButton *buttonClose;
+    QPushButton *buttonEnd;
+    QDateTimeEdit *dateTimeStart;
+    QLabel *labelEnd;
+    QLabel *labelStart;
+    QProgressBar *progressBarBackup;
 };
 
 #endif // BACKUPDIALOG_H

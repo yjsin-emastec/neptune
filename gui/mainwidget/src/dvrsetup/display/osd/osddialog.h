@@ -3,9 +3,10 @@
 
 #include <QtGui/QDialog>
 #include "ui_osddialog.h"
+#include "ui_osddialog1080p.h"
 #include "DVR.h"
 
-class OsdDialog : public QDialog, public Ui::OsdDialog
+class OsdDialog : public QDialog
 {
     Q_OBJECT
 
@@ -31,6 +32,14 @@ private:
 	int indexNoVideo;
 	int indexStatusBar;
 	int indexRecordStatus;
+
+    QFrame *frame;
+    QPushButton *buttonCameraName;
+    QPushButton *buttonNoVideo;
+    QPushButton *buttonStatusBar;
+    QPushButton *buttonRecordStatus;
+    QPushButton *buttonSave;
+    QPushButton *buttonClose;
 };
 
 #endif // OSDDIALOG_H

@@ -3,6 +3,7 @@
 
 #include <QtGui/QDialog>
 #include "ui_normaldialog.h"
+#include "ui_normaldialog1080p.h"
 #include "DVR.h"
 
 #define NUMOFCH 4

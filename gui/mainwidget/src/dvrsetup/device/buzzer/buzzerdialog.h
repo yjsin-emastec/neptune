@@ -3,9 +3,10 @@
 
 #include <QtGui/QDialog>
 #include "ui_buzzerdialog.h"
+#include "ui_buzzerdialog1080p.h"
 #include "DVR.h"
 
-class BuzzerDialog : public QDialog, public Ui::BuzzerDialog
+class BuzzerDialog : public QDialog
 {
     Q_OBJECT
 
@@ -24,7 +25,12 @@ protected:
 	void keyReleaseEvent(QKeyEvent *event);
 	
 private:
-	int indexBuzzer;
+    int indexBuzzer;
+
+    QFrame *frame;
+    QPushButton *buttonBuzzer;
+    QPushButton *pushButtonClose;
+    QPushButton *pushButtonSave;
 };
 
 #endif // BUZZERDIALOG_H

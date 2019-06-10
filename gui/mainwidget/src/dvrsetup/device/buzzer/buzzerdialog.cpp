@@ -5,7 +5,26 @@
 BuzzerDialog::BuzzerDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::BuzzerDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        buttonBuzzer = ui720.buttonBuzzer;
+        pushButtonClose = ui720.pushButtonClose;
+        pushButtonSave = ui720.pushButtonSave;
+    }
+    else
+    {
+        Ui::BuzzerDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonBuzzer = ui1080.buttonBuzzer;
+        pushButtonClose = ui1080.pushButtonClose;
+        pushButtonSave = ui1080.pushButtonSave;
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 

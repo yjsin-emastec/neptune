@@ -31,9 +31,9 @@
    <widget class="QPushButton" name="buttonClose">
     <property name="geometry">
      <rect>
-      <x>598</x>
+      <x>590</x>
       <y>540</y>
-      <width>200</width>
+      <width>201</width>
       <height>91</height>
      </rect>
     </property>
@@ -44,9 +44,9 @@
    <widget class="QPushButton" name="buttonSave">
     <property name="geometry">
      <rect>
-      <x>398</x>
+      <x>380</x>
       <y>540</y>
-      <width>200</width>
+      <width>201</width>
       <height>91</height>
      </rect>
     </property>

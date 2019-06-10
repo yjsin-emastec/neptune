@@ -5,7 +5,76 @@
 BackupDialog::BackupDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::BackupDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        buttonBackup = ui720.buttonBackup;
+        buttonClose = ui720.buttonClose;
+        buttonEnd = ui720.buttonEnd;
+        dateTimeStart = ui720.dateTimeStart;
+        labelEnd = ui720.labelEnd;
+        labelStart = ui720.labelStart;
+        progressBarBackup = ui720.progressBarBackup;
+
+        progressBarBackup->setStyleSheet("QProgressBar {font:40px;color:white;}");
+        labelStart->setStyleSheet("font:40px;color:white");
+        labelEnd->setStyleSheet("font:40px;color:white");
+
+        if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
+        {
+            dateTimeStart->setStyleSheet("QDateTimeEdit {font:43px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+        else
+        {
+            dateTimeStart->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+
+        //yjsin [17/09/13] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
+        {
+            buttonBackup->setStyleSheet("font:39px");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+        {
+            progressBarBackup->setStyleSheet("font:39px;");
+        }
+    }
+    else
+    {
+        Ui::BackupDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonBackup = ui1080.buttonBackup;
+        buttonClose = ui1080.buttonClose;
+        buttonEnd = ui1080.buttonEnd;
+        dateTimeStart = ui1080.dateTimeStart;
+        labelEnd = ui1080.labelEnd;
+        labelStart = ui1080.labelStart;
+        progressBarBackup = ui1080.progressBarBackup;
+
+        progressBarBackup->setStyleSheet("QProgressBar {font:55px;color:white;}");
+        labelStart->setStyleSheet("font:55px;color:white");
+        labelEnd->setStyleSheet("font:55px;color:white");
+
+        if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
+        {
+            dateTimeStart->setStyleSheet("QDateTimeEdit {font:60px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+        else
+        {
+            dateTimeStart->setStyleSheet("QDateTimeEdit {font:65px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+
+        //yjsin [19/02/21] if text is long, change font size
+        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
+        {
+            buttonBackup->setStyleSheet("font:53px");
+        }
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
@@ -15,37 +84,18 @@ BackupDialog::BackupDialog(QWidget *parent)
 
     progressBarBackup->setValue(0);
     progressBarBackup->setFormat(tr(""));
-    progressBarBackup->setAlignment(Qt::AlignCenter);
-    progressBarBackup->setStyleSheet("QProgressBar {font:40px;color:white;}");
-
-    labelStart->setStyleSheet("font:40px;color:white");
-    labelStart->setAlignment(Qt::AlignCenter);
 
     if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
     {
         dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss AP");
-        dateTimeStart->setStyleSheet("QDateTimeEdit {font:43px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     }
     else                                                            // 24H
     {
         dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
-        dateTimeStart->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
-
     }
-    dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     dateTimeStart->setWrapping(true);
     dateTimeStart->installEventFilter(this);
     dateTimeStart->setContextMenuPolicy(Qt::NoContextMenu);
-
-#if 1 //yjsin [17/09/13] if text is long, change font size
-    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
-    {
-        buttonBackup->setStyleSheet("font:39px");
-    }
-#endif
-
-    labelEnd->setStyleSheet("font:40px;color:white");
-    labelEnd->setAlignment(Qt::AlignCenter);
 
     connect(dateTimeStart, SIGNAL(dateTimeChanged(const QDateTime &)), this, SLOT(onInitialize(const QDateTime &)));
     connect(buttonEnd,     SIGNAL(clicked()),                          this, SLOT(onButtonEnd()));
@@ -66,14 +116,10 @@ void BackupDialog::updateBackupDialog()
     if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
     {
         dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss AP");
-        dateTimeStart->setStyleSheet("QDateTimeEdit {font:43px; selection-color:white; selection-background-color:rgb(152,14,69);}");
-        dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     }
     else                                                            // 24H
     {
         dateTimeStart->setDisplayFormat("yyyy/MM/dd hh:mm:ss");
-        dateTimeStart->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
-        dateTimeStart->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     }
 }
 

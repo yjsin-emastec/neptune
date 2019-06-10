@@ -3,11 +3,12 @@
 
 #include <QtGui/QDialog>
 #include "ui_configdialog.h"
+#include "ui_configdialog1080p.h"
 #include "DVR.h"
 
 class TextMessageDialog;
 
-class ConfigDialog : public QDialog, public Ui::ConfigDialog
+class ConfigDialog : public QDialog
 {
     Q_OBJECT
 
@@ -30,6 +31,12 @@ private:
 	void UpdateLabelConfig(int type);
 	void Delay(int millisecondsToWait);
 	TextMessageDialog *msgBox;
+
+    QFrame *frame;
+    QLabel *labelConfig;
+    QPushButton *buttonSaveConfig;
+    QPushButton *buttonLoadConfig;
+    QPushButton *buttonClose;
 };
 
 #endif // CONFIGDIALOG_H

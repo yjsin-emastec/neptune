@@ -31,10 +31,10 @@
    <widget class="QLabel" name="labelModelName">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>112</y>
-      <width>390</width>
-      <height>85</height>
+      <x>20</x>
+      <y>105</y>
+      <width>391</width>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -43,11 +43,14 @@
     <property name="text">
      <string>Model Name</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QPushButton" name="buttonClose">
     <property name="geometry">
      <rect>
-      <x>954</x>
+      <x>950</x>
       <y>551</y>
       <width>200</width>
       <height>91</height>
@@ -60,10 +63,10 @@
    <widget class="QLabel" name="labelVersion">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>196</y>
-      <width>390</width>
-      <height>85</height>
+      <x>20</x>
+      <y>190</y>
+      <width>391</width>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -72,14 +75,17 @@
     <property name="text">
      <string>Version</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelHddSize">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>280</y>
-      <width>390</width>
-      <height>85</height>
+      <x>20</x>
+      <y>275</y>
+      <width>391</width>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -88,14 +94,17 @@
     <property name="text">
      <string>SSD Size</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelGps">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>448</y>
-      <width>390</width>
-      <height>85</height>
+      <x>20</x>
+      <y>445</y>
+      <width>391</width>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -104,14 +113,17 @@
     <property name="text">
      <string>GPS</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelLicensePlate">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>28</y>
-      <width>390</width>
-      <height>85</height>
+      <x>20</x>
+      <y>20</y>
+      <width>391</width>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -120,14 +132,17 @@
     <property name="text">
      <string>License Plate</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelLicensePlate2">
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>28</y>
+      <y>20</y>
       <width>740</width>
-      <height>85</height>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -136,17 +151,14 @@
     <property name="text">
      <string>EASTERN</string>
     </property>
-    <property name="margin">
-     <number>20</number>
-    </property>
    </widget>
    <widget class="QLabel" name="labelModelName2">
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>112</y>
+      <y>105</y>
       <width>740</width>
-      <height>85</height>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -155,17 +167,14 @@
     <property name="text">
      <string>EMS-S10</string>
     </property>
-    <property name="margin">
-     <number>20</number>
-    </property>
    </widget>
    <widget class="QLabel" name="labelVersion2">
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>196</y>
+      <y>190</y>
       <width>740</width>
-      <height>85</height>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -174,17 +183,14 @@
     <property name="text">
      <string>0.0.0 2016.12.30</string>
     </property>
-    <property name="margin">
-     <number>20</number>
-    </property>
    </widget>
    <widget class="QLabel" name="labelNormalSize2">
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>280</y>
+      <y>275</y>
       <width>371</width>
-      <height>85</height>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -193,17 +199,14 @@
     <property name="text">
      <string>888 GigaByte</string>
     </property>
-    <property name="margin">
-     <number>20</number>
-    </property>
    </widget>
    <widget class="QLabel" name="labelEventSize2">
     <property name="geometry">
      <rect>
       <x>780</x>
-      <y>280</y>
+      <y>275</y>
       <width>370</width>
-      <height>85</height>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -212,17 +215,14 @@
     <property name="text">
      <string>555 GigaByte</string>
     </property>
-    <property name="margin">
-     <number>20</number>
-    </property>
    </widget>
    <widget class="QLabel" name="labelGps2">
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>448</y>
+      <y>445</y>
       <width>740</width>
-      <height>85</height>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -231,17 +231,14 @@
     <property name="text">
      <string>Not Connected</string>
     </property>
-    <property name="margin">
-     <number>20</number>
-    </property>
    </widget>
    <widget class="QLabel" name="labelDiskTemperature">
     <property name="geometry">
      <rect>
       <x>780</x>
-      <y>364</y>
+      <y>360</y>
       <width>370</width>
-      <height>85</height>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -250,17 +247,14 @@
     <property name="text">
      <string>SSD : 999 ℃</string>
     </property>
-    <property name="margin">
-     <number>20</number>
-    </property>
    </widget>
    <widget class="QLabel" name="labelDVRTemperature2">
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>364</y>
+      <y>360</y>
       <width>371</width>
-      <height>85</height>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -269,17 +263,14 @@
     <property name="text">
      <string>DVR : 999 ℃</string>
     </property>
-    <property name="margin">
-     <number>20</number>
-    </property>
    </widget>
    <widget class="QLabel" name="labelDVRTemperature">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>364</y>
-      <width>390</width>
-      <height>85</height>
+      <x>20</x>
+      <y>360</y>
+      <width>391</width>
+      <height>86</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -287,6 +278,9 @@
     </property>
     <property name="text">
      <string>Temperature</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

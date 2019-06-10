@@ -474,8 +474,7 @@ void MainWidget::doDvrEvent(Event *e)
                     delete msgBoxDisk;
                 }
 
-                msgBoxDisk = new TextMessageDialog(tr("MOUNT ERROR"), tr("%1").arg(tr("Format Error")), 2, this);
-                msgBoxDisk->setMsgAlignment(Qt::AlignCenter);
+                msgBoxDisk = new TextMessageDialog(tr("MOUNT ERROR"), tr("Format Error"), 2, this);
                 msgBoxDisk->move((appmgr_get_mainwidget_width()-msgBoxDisk->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBoxDisk->sizeHint().height())/2);
                 msgBoxDisk->exec();
                 delete msgBoxDisk;
@@ -528,7 +527,6 @@ void MainWidget::doDvrEvent(Event *e)
                     appmgr_set_beep_no_disk(1);
 
                     msgBoxDisk = new TextMessageDialog(tr("ERROR"), tr("NO SSD"), 2, this);
-                    msgBoxDisk->setMsgAlignment(Qt::AlignCenter);
                     msgBoxDisk->move((appmgr_get_mainwidget_width()-msgBoxDisk->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBoxDisk->sizeHint().height())/2);
 
                     if(msgBoxDisk->exec())
@@ -690,8 +688,7 @@ void MainWidget::doDvrEvent(Event *e)
                     delete msgBox;
                 }
 
-                msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("Storage was attached."), tr("System will restart.")), 3, this);
-                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox = new TextMessageDialog(tr("ERROR"), QString("%1\n%2").arg(tr("Storage was attached."),tr("System will restart.")), 3, this);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
                 msgBox->exec();
@@ -721,9 +718,9 @@ void MainWidget::doDvrEvent(Event *e)
                     videoPane[ii]->systemShutdownIconClean();
                 }
 
-                if(diskInfo[0].smartInfo_ata_id)    { msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("HDD was detached."), tr("System will restart.")), 3, this); }
-                else                                { msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("SSD was detached."), tr("System will restart.")), 3, this); }
-                msgBox->setMsgAlignment(Qt::AlignCenter);
+                if(diskInfo[0].smartInfo_ata_id)    { msgBox = new TextMessageDialog(tr("ERROR"), QString("%1\n%2").arg(tr("HDD was detached."), tr("System will restart.")), 3, this); }
+                else                                { msgBox = new TextMessageDialog(tr("ERROR"), QString("%1\n%2").arg(tr("SSD was detached."), tr("System will restart.")), 3, this); }
+
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
                 msgBox->exec();
@@ -751,8 +748,8 @@ void MainWidget::doDvrEvent(Event *e)
                 videoPane[ii]->systemShutdownIconClean();
             }
 
-            msgBox = new TextMessageDialog(tr("ERROR"), tr("%1\n\n%2\n%3").arg(tr("ERROR"), tr("IO Error occurred."), tr("System will restart.")), 3, this);
-            msgBox->setMsgAlignment(Qt::AlignCenter);
+            msgBox = new TextMessageDialog(tr("ERROR"), QString("%1\n%2").arg(tr("IO Error occurred."), tr("System will restart.")), 3, this);
+
             msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
             msgBox->exec();
@@ -779,13 +776,11 @@ void MainWidget::doDvrEvent(Event *e)
 
             if(!msgBox)
             {
-                msgBox = new TextMessageDialog(tr("WARNING"), tr("%1\n\n%2\n%3\n%4").arg(tr("WARNING"),
+                msgBox = new TextMessageDialog(tr("WARNING"), QString("%1\n%2\n%3").arg(
                             tr("Please unplug USB memory.   "),
                             tr("If you click button of 'Ok',"),
                             tr("System will restart.")), 2, this);
             }
-
-            msgBox->setMsgAlignment(Qt::AlignCenter);
             msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
             msgBox->exec();
@@ -813,8 +808,8 @@ void MainWidget::doDvrEvent(Event *e)
                 videoPane[ii]->systemShutdownIconClean();
             }
 
-            msgBox = new TextMessageDialog(tr("NOTICE"), tr("%1\n\n%2%3\n%4").arg(tr("Power Off"), tr("Elapsed Time : "), tr(tmp), tr("System will shutdown.")), 3, this);
-            msgBox->setMsgAlignment(Qt::AlignCenter);
+            msgBox = new TextMessageDialog(tr("POWER OFF"), QString("%1: %2\n%3").arg(tr("Elapsed Time"), tr(tmp), tr("System will shutdown.")), 3, this);
+
             msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
             msgBox->exec();
@@ -858,8 +853,7 @@ void MainWidget::doDvrEvent(Event *e)
                 msgBox = NULL;
             }
 
-            msgBox = new TextMessageDialog( tr("NOTICE"), QString("%1\n\n%2%3").arg( tr("NOTICE") ).arg( tr("SATA Error Count : ") ).arg(tmp) , 3, this );
-            msgBox->setMsgAlignment(Qt::AlignCenter);
+            msgBox = new TextMessageDialog( tr("NOTICE"), QString("%1 : %2").arg(tr("SATA Error Count")).arg(tmp), 3, this );
             msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
             msgBox->exec();
@@ -1238,8 +1232,7 @@ void MainWidget::keypadEvent(unsigned char code)
                     delete msgBox;
                 }
 
-                msgBox = new TextMessageDialog(tr("NOTICE"), tr("NOTICE\n\nCurrent status is trigger."), 2, this);
-                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox = new TextMessageDialog(tr("NOTICE"), tr("Current status is trigger."), 2, this);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
                 if(msgBox->exec())
@@ -1277,8 +1270,7 @@ void MainWidget::keypadEvent(unsigned char code)
                     delete msgBox;
                 }
 
-                msgBox = new TextMessageDialog(tr("NOTICE"), tr("NOTICE\n\nCurrent status is trigger."), 2, this);
-                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox = new TextMessageDialog(tr("NOTICE"), tr("Current status is trigger."), 2, this);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
                 if(msgBox->exec())
@@ -1338,8 +1330,7 @@ void MainWidget::keypadEvent(unsigned char code)
                     delete msgBox;
                 }
 
-                msgBox = new TextMessageDialog(tr("NOTICE"), tr("NOTICE\n\nCurrent status is trigger."), 2, this);
-                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox = new TextMessageDialog(tr("NOTICE"), tr("Current status is trigger."), 2, this);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
                 if(msgBox->exec())
@@ -1425,8 +1416,7 @@ void MainWidget::keypadEvent(unsigned char code)
                     delete msgBox;
                 }
 
-                msgBox = new TextMessageDialog(tr("NOTICE"), tr("NOTICE\n\nCurrent status is trigger."), 2, this);
-                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox = new TextMessageDialog(tr("NOTICE"), tr("Current status is trigger."), 2, this);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
                 if(msgBox->exec())
@@ -1465,8 +1455,7 @@ void MainWidget::keypadEvent(unsigned char code)
                     delete msgBox;
                 }
 
-                msgBox = new TextMessageDialog(tr("NOTICE"), tr("NOTICE\n\nCurrent status is trigger."), 2, this);
-                msgBox->setMsgAlignment(Qt::AlignCenter);
+                msgBox = new TextMessageDialog(tr("NOTICE"), tr("Current status is trigger."), 2, this);
                 msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
                 if(msgBox->exec())

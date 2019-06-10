@@ -3,6 +3,7 @@
 
 #include <QtGui/QWidget>
 #include "ui_systempage.h"
+#include "ui_systempage1080p.h"
 
 class UiKeyboardDialog;
 class TextMessageDialog;
@@ -14,13 +15,23 @@ class LanguageDialog;
 class LicensePlateDialog;
 class InformationDialog;
 
-class SystemPage : public QWidget, public Ui::SystemPage
+class SystemPage : public QWidget
 {
     Q_OBJECT
 
 public:
     SystemPage(QWidget *parent = 0);
     ~SystemPage();
+
+    QPushButton          *buttonDateTime;
+    QPushButton          *buttonSecurity;
+    QPushButton          *buttonConfig;
+    QPushButton          *buttonUpgrade;
+    QPushButton          *buttonFactoryDefault;
+    QPushButton          *buttonLanguage;
+    QPushButton          *buttonLicensePlate;
+    QPushButton          *buttonInformation;
+    QPushButton          *buttonClose;
 
 signals:
     void saveSystemPage(int type, int val);

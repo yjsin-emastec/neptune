@@ -3,12 +3,13 @@
 
 #include <QtGui/QDialog>
 #include "ui_securitydialog.h"
+#include "ui_securitydialog1080p.h"
 #include "DVR.h"
 
 class SecurityDialog;
 class UiKeyboardDialog;
 
-class SecurityDialog : public QDialog, public Ui::SecurityDialog
+class SecurityDialog : public QDialog
 {
     Q_OBJECT
 
@@ -34,6 +35,21 @@ private:
 	UiKeyboardDialog *keyboard;
 	char newPassword[16], confirmPassword[16];
 	int isInputNewPassword, isInputConfirmPassword, indexSystemLock;
+
+    QFrame *frame;
+    QPushButton *buttonNewPassword;
+    QPushButton *buttonConfirmPassword;
+    QPushButton *buttonSystemLock;
+    QPushButton *buttonSave;
+    QPushButton *buttonClose;
+
+    QLabel *labelSecurity;
+    QLabel *labelNewPassword;
+    QLabel *labelConfirmPassword;
+    QLabel *labelSystemLock;
+
+    QLineEdit *lineEditNewPassword;
+    QLineEdit *lineEditConfirmPassword;
 };
 
 #endif // SECURITYDIALOG_H

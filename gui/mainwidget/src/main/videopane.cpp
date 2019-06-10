@@ -6,7 +6,6 @@
 #include "dev/Ver.h"
 #include <core/Core.h>
 
-#define TOP_BOTTOM_OFFSET                      18
 #define LEFT_RIGHT_OFFSET                      10
 #define SPLIT_LINE_WIDTH                       0
 
@@ -15,8 +14,6 @@
 
 #define VIDEOLOSS_POS_X_OFFSET                 0
 #define VIDEOLOSS_POS_Y_OFFSET                 0
-
-#define FONT_PIXELSIZE_CHANNELNAME             32
 
 #define CHANNEL_LABEL_NORMAL_STYLE             "color:white;font-weight:bold;font-size:16px;"
 #define CHANNEL_LABEL_FOCUS_STYLE              "color:rgb(255, 168, 80);font-weight:bold;font-size:16px;"
@@ -71,28 +68,38 @@ VideoPane::VideoPane(int chNum, const QString & text, QWidget *parent)
     videoLoss           = 0;
     m_doubleClicked     = false;
 
+    if(mainHeight == 720)
+    {
+        FONT_PIXELSIZE_CHANNELNAME = 32;
+        TOP_BOTTOM_OFFSET=18;
+        iconSize=25;
+    }
+    else
+    {
+        FONT_PIXELSIZE_CHANNELNAME = 50;
+        TOP_BOTTOM_OFFSET=25;
+        iconSize=35;
+    }
+
     labelName = new QLabel(text, this);
     labelName->setStyleSheet(CIFMODEL_CHANNEL_LABEL_NORMAL_STYLE);//"background:#ff00ff;");
-    labelName->setAlignment(Qt::AlignCenter);
+    labelName->setAlignment(Qt::AlignLeft);
 
     labelNoVideo = new QLabel(this);
     labelNoVideo->setStyleSheet(QString(NOVIDEO_LABEL_NORMAL_STYLE));
     labelNoVideo->hide();
     labelNoVideo->setAlignment(Qt::AlignCenter);
 
-    labelAudio = new QLabel(this);
-    labelAudio->setPixmap(QPixmap(":/images/audio.png"));
-    labelAudio->adjustSize();
+    labelAudio =new QLabel(this);
+    labelAudio->setPixmap(QPixmap(":/images/audio.png").scaled(iconSize,iconSize,Qt::KeepAspectRatio));
     labelAudio->hide();
 
     labelGps = new QLabel(this);
-    labelGps->setPixmap(QPixmap(":/images/gps.png"));
-    labelGps->adjustSize();
+    labelGps->setPixmap(QPixmap(":/images/gps.png").scaled(iconSize+5,iconSize+5,Qt::KeepAspectRatio));
     labelGps->hide();
 
     labelRecord = new QLabel(this);
-    labelRecord->setPixmap(QPixmap(":/images/record_on.png"));
-    labelRecord->adjustSize();
+    labelRecord->setPixmap(QPixmap(":/images/record_on.png").scaled(iconSize,iconSize,Qt::KeepAspectRatio));
     labelRecord->hide();
 
     if(ver_get_oem() == OEM_DAEJI)
@@ -178,7 +185,7 @@ void VideoPane::paintEvent(QPaintEvent *event)
         QFont font = painter.font();
         QPen  pen  = painter.pen();
         painter.save();
-        font.setPixelSize(32);
+        font.setPixelSize(FONT_PIXELSIZE_CHANNELNAME);
         painter.setFont(font);
         pen.setColor(QColor(39,0,79));
         painter.setPen(pen);
@@ -206,7 +213,7 @@ void VideoPane::paintEvent(QPaintEvent *event)
         QPen  pen  = painter.pen();
 
         painter.save();
-        font.setPixelSize(32);
+        font.setPixelSize(FONT_PIXELSIZE_CHANNELNAME);
         painter.setFont(font);
         pen.setColor(QColor(39,0,79));
         painter.setPen(pen);
@@ -244,9 +251,7 @@ void VideoPane::paintEvent(QPaintEvent *event)
         QPen  pen  = painter.pen();
 
         painter.save();
-
-        font.setPixelSize(32);
-
+        font.setPixelSize(FONT_PIXELSIZE_CHANNELNAME);
         painter.setFont(font);
         pen.setColor(QColor(39,0,79));
         painter.setPen(pen);
@@ -648,7 +653,7 @@ void VideoPane::alignLabels(void)
         right_offset = 40;
     }
 
-    right_offset = 18;
+    right_offset = 0;
     offset_x     = 0;
 
     if(labelRecord)
@@ -661,7 +666,7 @@ void VideoPane::alignLabels(void)
         }
         else
         {
-            offset_x = paneWidth - labelWidth - right_offset - 6;
+            offset_x = paneWidth - labelWidth - labelGps->sizeHint().width() - right_offset;
         }
 
         labelRecord->move(offset_x, TOP_BOTTOM_OFFSET);
@@ -672,15 +677,15 @@ void VideoPane::alignLabels(void)
     if(labelAudio)
     {
         labelWidth = labelAudio->sizeHint().width();
-        offset_x   = paneWidth - labelWidth - labelRecord->sizeHint().width() - right_offset-6;
+        offset_x   = paneWidth - labelWidth - labelRecord->sizeHint().width() - labelGps->sizeHint().width() - right_offset;
 
-        labelAudio->move(offset_x, TOP_BOTTOM_OFFSET-6);
+        labelAudio->move(offset_x, TOP_BOTTOM_OFFSET);
     }
 
     if(labelGps)
     {
         labelWidth = labelGps->sizeHint().width();
-        offset_x   = paneWidth - labelWidth - labelRecord->sizeHint().width() - right_offset+35;
+        offset_x = paneWidth - labelWidth - right_offset;
         labelGps->move(offset_x, TOP_BOTTOM_OFFSET);
     }
 }
@@ -976,7 +981,7 @@ void VideoPane::drawGpsIcon(void)
 
     if(gpsEnabled &&!(utils_cfg_cmp_item(DisplayCfg.osd_record, "OFF")==0 && utils_cfg_cmp_item(DisplayCfg.osd_viloss, "OFF")==0 && utils_cfg_cmp_item(DisplayCfg.osd_chname, "OFF")==0))
     {
-        labelGps->setPixmap(QPixmap(":/images/gps.png"));
+        labelGps->setPixmap(QPixmap(":/images/gps.png").scaled(iconSize+5,iconSize+5,Qt::KeepAspectRatio));
         labelGps->show();
     }
     else
@@ -993,7 +998,7 @@ void VideoPane::drawAudioIcon(void)
 
     if(audioEnabled)
     {
-        labelAudio->setPixmap(QPixmap(":/images/audio.png"));
+        labelAudio->setPixmap(QPixmap(":/images/audio.png").scaled(iconSize,iconSize,Qt::KeepAspectRatio));
         labelAudio->show();
     }
     else
@@ -1027,7 +1032,7 @@ void VideoPane::drawRecordIcon(void)
     {
         if(recordEnabled)
         {
-            labelRecord->setPixmap(QPixmap(":/images/record_on.png"));
+            labelRecord->setPixmap(QPixmap(":/images/record_on.png").scaled(iconSize,iconSize,Qt::KeepAspectRatio));
             labelRecord->show();
         }
         else

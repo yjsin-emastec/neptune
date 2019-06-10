@@ -43,6 +43,9 @@
     <property name="text">
      <string> Start</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelEnd">
     <property name="geometry">
@@ -58,6 +61,9 @@
     </property>
     <property name="text">
      <string>End</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label1">
@@ -136,6 +142,9 @@
     <property name="value">
      <number>24</number>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QDateTimeEdit" name="dateTimeStart">
     <property name="geometry">
@@ -145,6 +154,9 @@
       <width>641</width>
       <height>92</height>
      </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonEnd">

@@ -60,9 +60,9 @@
    <widget class="QPushButton" name="buttonSetTime">
     <property name="geometry">
      <rect>
-      <x>671</x>
+      <x>655</x>
       <y>550</y>
-      <width>384</width>
+      <width>400</width>
       <height>91</height>
      </rect>
     </property>
@@ -142,6 +142,9 @@ You must delete data or set time.</string>
     <property name="text">
      <string>Last Time</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="labelFirstTime1">
     <property name="geometry">
@@ -166,7 +169,7 @@ You must delete data or set time.</string>
      <string>First Time</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="labelFirstTime2">
@@ -237,13 +240,16 @@ You must delete data or set time.</string>
     <property name="text">
      <string>System Time</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QPushButton" name="buttonDeleteData">
     <property name="geometry">
      <rect>
       <x>15</x>
       <y>550</y>
-      <width>384</width>
+      <width>400</width>
       <height>91</height>
      </rect>
     </property>

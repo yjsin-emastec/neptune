@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QHBoxLayout>
 #include "ui_setupdialog.h"
+#include "ui_setupdialog1080p.h"
 
 class QTabWidget;
 class SystemPage;
@@ -13,7 +14,7 @@ class DevicePage;
 class InitProgressDialog;
 class TextMessageDialog;
 
-class SetupDialog : public QDialog, public Ui::SetupDialog
+class SetupDialog : public QDialog
 {
     Q_OBJECT
 
@@ -27,6 +28,8 @@ public:
     int  tabCurIdx;
     int  tabPreIdx;
     bool tabChangeFlag;
+
+    QFrame       *frame;
 
 signals:
     void progressEvent(int type, int progressType, int progress);

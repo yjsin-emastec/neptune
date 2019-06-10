@@ -99,14 +99,16 @@ QLineEdit:focus
 }
 QComboBox
 {
-	font: 32px;
-	background-color: rgb(232, 232, 233);
+        font:35px;
+        background:rgb(50,57,83);
+        color:white;
+        padding-left: 15px;
 }
 QComboBox:focus
 {
-	border-color: rgb(67, 74, 86);
-	background-color: rgb(152, 14, 69);
-	color: white;
+        border-color:rgb(67, 74, 86);
+        background-color:rgb(152, 14, 69);
+        color:white;
 }
 QRadioButton
 {

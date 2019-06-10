@@ -43,6 +43,7 @@ private:
     void ChangeCalendarSelectDay(int dir);
     void UpdateMonthLabel();
     int  curMonthIndex;
+
     QLabel          *lableDate;
     CalendarWidget  *calendar;
     TimeLine        *timeLine;

@@ -7,7 +7,89 @@
 VideoOutputDialog::VideoOutputDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::VideoOutputDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        buttonHdmi = ui720.buttonHdmi;
+        buttonCvbs = ui720.buttonCvbs;
+        button_cvbs_x = ui720.button_cvbs_x;
+        button_cvbs_y = ui720.button_cvbs_y;
+        button_cvbs_width = ui720.button_cvbs_width;
+        button_cvbs_height = ui720.button_cvbs_height;
+        buttonDefault = ui720.buttonDefault;
+        buttonSave = ui720.buttonSave;
+        buttonClose = ui720.buttonClose;
+        label2 = ui720.label2;
+        label3 = ui720.label3;
+        label4 = ui720.label4;
+        label5 = ui720.label5;
+        label6 = ui720.label6;
+
+        //yjsin [18/01/22] if text is long, change button size.
+        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+        {
+            buttonDefault->setGeometry(13, 540, 350, 91);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        {
+            buttonDefault->setGeometry(13, 540, 300, 91);
+            button_cvbs_width->setStyleSheet("font:45px;");
+            button_cvbs_height->setStyleSheet("font:45px;");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
+        {
+            button_cvbs_width->setStyleSheet("font:46px;");
+            button_cvbs_height->setStyleSheet("font:46px;");
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            button_cvbs_width->setStyleSheet("font:45px;");
+            button_cvbs_height->setStyleSheet("font:45px;");
+            buttonDefault->setGeometry(13, 540, 300, 91);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        {
+            buttonDefault->setGeometry(13, 540, 250, 91);
+        }
+    }
+    else
+    {
+        Ui::VideoOutputDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        buttonHdmi = ui1080.buttonHdmi;
+        buttonCvbs = ui1080.buttonCvbs;
+        button_cvbs_x = ui1080.button_cvbs_x;
+        button_cvbs_y = ui1080.button_cvbs_y;
+        button_cvbs_width = ui1080.button_cvbs_width;
+        button_cvbs_height = ui1080.button_cvbs_height;
+        buttonDefault = ui1080.buttonDefault;
+        buttonSave = ui1080.buttonSave;
+        buttonClose = ui1080.buttonClose;
+        label2 = ui1080.label2;
+        label3 = ui1080.label3;
+        label4 = ui1080.label4;
+        label5 = ui1080.label5;
+        label6 = ui1080.label6;
+
+        //yjsin [19/02/21] if text is long, change button size.
+        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+        {
+            buttonDefault->resize(480, 131);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        {
+            buttonDefault->resize(370, 131);
+        }
+        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            buttonDefault->resize(370, 131);
+        }
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
@@ -17,26 +99,6 @@ VideoOutputDialog::VideoOutputDialog(QWidget *parent)
 
     msgBox    = NULL;
     numKeypad = NULL;
-
-#if 1 //yjsin [18/01/22] if text is long, change button size.
-    if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
-    {
-        buttonDefault->setGeometry(13, 540, 340, 91);
-        //buttonDefault->setStyleSheet("font:38px");
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
-    {
-        buttonDefault->setGeometry(13, 540, 300, 91);
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-    {
-        buttonDefault->setGeometry(13, 540, 300, 91);
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-    {
-        buttonDefault->setGeometry(13, 540, 250, 91);
-    }
-#endif
 
     connect(buttonHdmi,         SIGNAL(released(void)), this, SLOT(onVideoOutputHdmi           (void)));
     connect(buttonCvbs,         SIGNAL(released(void)), this, SLOT(onVideoOutputCvbs           (void)));
@@ -53,7 +115,6 @@ VideoOutputDialog::~VideoOutputDialog()
 }
 void VideoOutputDialog::initVideoOutputConfig(void)
 {
-
     if(utils_cfg_cmp_item(DisplayCfg.video_output_hdmi, "1280 x 720") == 0)
     {
         buttonHdmi->setText(tr("%1\n%2").arg(tr("HD"), tr("720p")));
@@ -381,8 +442,8 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
             if(!msgBox)
             {
                 msgBox = new TextMessageDialog(tr("INVALID X OR WIDTH"),
-                        tr("\nPlease check X or Width value!\n"
-                            "\nTotal horizontal pixel should be below %1.\n").arg(maxValue_H),
+                        tr("Please check X or Width value!\n"
+                            "Total horizontal pixel should be below %1.").arg(maxValue_H),
                         2, this);
             }
         }
@@ -391,8 +452,8 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
             if(!msgBox)
             {
                 msgBox = new TextMessageDialog(tr("INVALID Y OR HEIGHT"),
-                        tr("\nPlease check Y or Height value!\n"
-                            "\nTotal vertical pixel should be below %1.\n").arg(maxValue_V),
+                        tr("Please check Y or Height value!\n"
+                            "Total vertical pixel should be below %1.").arg(maxValue_V),
                         2, this);
             }
         }
@@ -401,8 +462,8 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
             if(!msgBox)
             {
                 msgBox = new TextMessageDialog(tr("INVALID WIDTH"),
-                        tr("\nPlease check Width value!\n"
-                            "\nWidth pixel should be over %1.\n").arg(minValue_H),
+                        tr("Please check Width value!\n"
+                            "Width pixel should be over %1.").arg(minValue_H),
                         2, this);
             }
         }
@@ -411,8 +472,8 @@ void VideoOutputDialog::onVideoOutputSaveClicked()
             if(!msgBox)
             {
                 msgBox = new TextMessageDialog(tr("INVALID HEIGHT"),
-                        tr("\nPlease check Height value!\n"
-                            "\nHeight pixel should be over %1.\n").arg(minValue_V),
+                        tr("Please check Height value!\n"
+                            "Height pixel should be over %1.").arg(minValue_V),
                         2, this);
             }
         }

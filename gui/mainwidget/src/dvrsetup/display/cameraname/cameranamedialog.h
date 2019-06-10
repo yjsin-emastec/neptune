@@ -3,12 +3,13 @@
 
 #include <QtGui/QDialog>
 #include "ui_cameranamedialog.h"
+#include "ui_cameranamedialog1080p.h"
 #include "DVR.h"
 
 class CameraNameDialog;
 class UiKeyboardDialog;
 
-class CameraNameDialog : public QDialog, public Ui::CameraNameDialog
+class CameraNameDialog : public QDialog
 {
     Q_OBJECT
 
@@ -33,6 +34,21 @@ protected:
 private:
 	UiKeyboardDialog *keyboard;
 
+    QFrame *frame;
+    QLabel *labelCameraName1;
+    QLabel *labelCameraName2;
+    QLabel *labelCameraName3;
+    QLabel *labelCameraName4;
+    QLineEdit *lineEditName1;
+    QLineEdit *lineEditName2;
+    QLineEdit *lineEditName3;
+    QLineEdit *lineEditName4;
+    QPushButton *buttonVirtualKeyboard1;
+    QPushButton *buttonVirtualKeyboard2;
+    QPushButton *buttonVirtualKeyboard3;
+    QPushButton *buttonVirtualKeyboard4;
+    QPushButton *buttonSave;
+    QPushButton *buttonClose;
 };
 
 #endif // CAMERANAMEDIALOG_H

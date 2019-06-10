@@ -4,12 +4,13 @@
 #include <QtGui/QDialog>
 #include <DVR.h>
 #include "ui_diskformatprocess.h"
+#include "ui_diskformatprocess1080p.h"
 
 class QLabel;
 class QProgressBar;
 class QPushButton;
 
-class DiskFormatProcessDialog : public QDialog, public Ui::DiskFormatProcessDialog
+class DiskFormatProcessDialog : public QDialog
 {
     Q_OBJECT
 
@@ -38,18 +39,16 @@ private slots:
     void onSystemReboot            (void);
 
 private:
-    QPushButton       *buttonStart,
-                      *buttonCancel,
-                      *buttonSystemReboot;
-
-    QProgressBar      *diskformatProgressBar;
-
-    QLabel            *labelStatus;
-
     disk_used_info_t   diskInfo[MAX_HDD_COUNT];
 
     time_t             totalTime;
-
     unsigned int       ProgressValue;
+
+    QFrame            *frame;
+    QPushButton       *buttonStart,
+                      *buttonCancel,
+                      *buttonSystemReboot;
+    QProgressBar      *diskformatProgressBar;
+    QLabel            *labelStatus;
 };
 #endif // DISKFORMATPROCESS_H

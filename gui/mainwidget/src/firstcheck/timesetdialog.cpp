@@ -7,50 +7,82 @@
 TimeSetDialog::TimeSetDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setupUi(this);
+    if(mainHeight == 720)
+    {
+        Ui::TimeSetDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        labelTimeTitle = ui720.labelTimeTitle;
+        labelTimeStatus = ui720.labelTimeStatus;
+        labelFirstTime1 = ui720.labelFirstTime1;
+        labelFirstTime2 = ui720.labelFirstTime2;
+        labelLastTime1 = ui720.labelLastTime1;
+        labelLastTime2 = ui720.labelLastTime2;
+        labelSystemTime1 = ui720.labelSystemTime1;
+        labelSystemTime2 = ui720.labelSystemTime2;
+        dateTimeSystem = ui720.dateTimeSystem;
+        buttonDeleteData = ui720.buttonDeleteData;
+        buttonSetTime = ui720.buttonSetTime;
+
+        labelTimeTitle->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
+        labelTimeStatus->setStyleSheet("font:44px;color:white;padding-left:5px;");
+        labelFirstTime1->setStyleSheet("font:44px;background-color:rgb(50,57,83);color:white");
+        labelFirstTime2->setStyleSheet("font:44px;color:white");
+        labelLastTime1->setStyleSheet("font:44px;background-color:rgb(50,57,83);color:white");
+        labelLastTime2->setStyleSheet("font:44px;color:white");
+        labelSystemTime1->setStyleSheet("font:44px;background-color:rgb(50,57,83);color:white");
+        labelSystemTime2->setStyleSheet("font:44px;color:white");
+
+        dateTimeSystem->setStyleSheet("QDateTimeEdit {font:44px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        buttonDeleteData->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
+        buttonSetTime->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
+    }
+    else
+    {
+        Ui::TimeSetDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        labelTimeTitle = ui1080.labelTimeTitle;
+        labelTimeStatus = ui1080.labelTimeStatus;
+        labelFirstTime1 = ui1080.labelFirstTime1;
+        labelFirstTime2 = ui1080.labelFirstTime2;
+        labelLastTime1 = ui1080.labelLastTime1;
+        labelLastTime2 = ui1080.labelLastTime2;
+        labelSystemTime1 = ui1080.labelSystemTime1;
+        labelSystemTime2 = ui1080.labelSystemTime2;
+        dateTimeSystem = ui1080.dateTimeSystem;
+        buttonDeleteData = ui1080.buttonDeleteData;
+        buttonSetTime = ui1080.buttonSetTime;
+
+        labelTimeTitle->setStyleSheet("font:80px;background-color:rgb(50,57,83);color:white");
+        labelTimeStatus->setStyleSheet("font:65px;color:white;padding-left:30px;");
+        labelFirstTime1->setStyleSheet("font:65px;background-color:rgb(50,57,83);color:white");
+        labelFirstTime2->setStyleSheet("font:65px;color:white");
+        labelLastTime1->setStyleSheet("font:65px;background-color:rgb(50,57,83);color:white");
+        labelLastTime2->setStyleSheet("font:65px;color:white");
+        labelSystemTime1->setStyleSheet("font:65px;background-color:rgb(50,57,83);color:white");
+        labelSystemTime2->setStyleSheet("font:65px;color:white");
+
+        dateTimeSystem->setStyleSheet("QDateTimeEdit {font:65px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        buttonDeleteData->setStyleSheet("QPushButton{font-size:65px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
+        buttonSetTime->setStyleSheet("QPushButton{font-size:65px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
+    }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
 
-    labelTimeTitle->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-    labelTimeTitle->setAlignment(Qt::AlignCenter);
-
-    labelTimeStatus->setStyleSheet("font:44px;color:white");
-    labelTimeStatus->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
-
-    labelFirstTime1->setStyleSheet("font:44px;background-color:rgb(50,57,83);color:white");
-    labelFirstTime1->setAlignment(Qt::AlignCenter);
-
-    labelFirstTime2->setStyleSheet("font:44px;color:white");
-    labelFirstTime2->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
-
-    labelLastTime1->setStyleSheet("font:44px;background-color:rgb(50,57,83);color:white");
-    labelLastTime1->setAlignment(Qt::AlignCenter);
-
-    labelLastTime2->setStyleSheet("font:44px;color:white");
-    labelLastTime2->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
-
-    labelSystemTime1->setStyleSheet("font:44px;background-color:rgb(50,57,83);color:white");
-    labelSystemTime1->setAlignment(Qt::AlignCenter);
-
-    labelSystemTime2->setStyleSheet("font:44px;color:white");
-    labelSystemTime2->setAlignment(Qt::AlignCenter);
-
     if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)     { dateTimeSystem->setDisplayFormat("yyyy/MM/dd hh:mm:ss AP"); }    //12H
     else                                                             { dateTimeSystem->setDisplayFormat("yyyy/MM/dd hh:mm:ss");    }    //24H
 
     dateTimeSystem->setDateTime(QDateTime::currentDateTime());
-    dateTimeSystem->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
     dateTimeSystem->setDateRange(QDate(ver_get_ref_year(),1,1),QDate(MAX_YEAR-1,12,31));
-    dateTimeSystem->setStyleSheet("QDateTimeEdit {font:44px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     dateTimeSystem->setWrapping(true);
     dateTimeSystem->installEventFilter(this);
     dateTimeSystem->setContextMenuPolicy(Qt::NoContextMenu);
-
-    buttonDeleteData->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
-    buttonSetTime->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(67,74,86);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}QPushButton:disabled{color:gray;}");
 
     connect(buttonDeleteData, SIGNAL(released()), this, SLOT(onButtonDeleteData()));
     connect(buttonSetTime,    SIGNAL(released()), this, SLOT(onButtonSetTime()));

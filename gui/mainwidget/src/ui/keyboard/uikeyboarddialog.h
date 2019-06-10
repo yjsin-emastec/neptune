@@ -2,10 +2,8 @@
 #define UIKEYBOARDDIALOG_H
 
 #include <QDialog>
-
-namespace Ui {
-    class UiKeyboardDialog;
-}
+#include "ui_uikeyboarddialog.h"
+#include "ui_uikeyboarddialog1080p.h"
 
 class UiKeyboardDialog : public QDialog
 {
@@ -15,26 +13,10 @@ public:
     explicit UiKeyboardDialog(QWidget *parent = 0);
     ~UiKeyboardDialog();
     void setKeyboadProperty(QString strLabel, QString strPrev = tr(""), bool isPassword = false, int maxLen = -1);
-    void disableCapsShift();
-    void disablePunctuation();
-    void disableSpace();
-    void setNumberLowerAlphabetOnly();
-    void buttonShift(bool shift);
     QString text;
-    QString title;
-    int maxCharCount;
-    void updateKeyboard();
-    void setPasswordMode(int mode);
-    void buttonPressed(QString string);
-    bool capsStatus;
-    bool shiftStatus;
 
 signals:
     void signalResetTimer();
-
-private:
-    Ui::UiKeyboardDialog *ui;
-    void disableForbiddenChar();
 
 protected:
     void mousePressEvent(QMouseEvent *event);
@@ -53,7 +35,6 @@ private slots:
     void on_pushButton_9_clicked();
     void on_pushButton_0_clicked();
     void on_pushButton_hyphen_clicked();
-    void on_pushButton_equal_clicked();
     void on_pushButton_backspace_clicked();
 
     void on_pushButton_a_clicked();
@@ -85,13 +66,70 @@ private slots:
 
     void on_pushButton_shift_left_clicked();
     void on_pushButton_space_clicked();
-    void on_pushButton_comma_clicked();
-    void on_pushButton_period_clicked();
-    void on_pushButton_forward_slash_clicked();
-
     void on_pushButton_clear_clicked();
     void on_pushButton_enter_clicked();
     void on_pushButton_close_clicked();
+
+private:
+    void disableForbiddenChar();
+    void updateButtonShift();
+    void disableCapsShift();
+    void disableSpecialLetter();
+    void setNumberLowerAlphabetOnly();
+    void updateKeyboard();
+    void setPasswordMode(int mode);
+    void buttonPressed(QString string);
+
+    QString title;
+    int maxCharCount;
+    int shiftStatus;
+
+    QFrame *frame;
+    QPushButton *pushButton_0;
+    QPushButton *pushButton_1;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_4;
+    QPushButton *pushButton_5;
+    QPushButton *pushButton_6;
+    QPushButton *pushButton_7;
+    QPushButton *pushButton_8;
+    QPushButton *pushButton_9;
+    QPushButton *pushButton_backspace;
+    QPushButton *pushButton_hyphen;
+    QPushButton *pushButton_a;
+    QPushButton *pushButton_b;
+    QPushButton *pushButton_c;
+    QPushButton *pushButton_d;
+    QPushButton *pushButton_e;
+    QPushButton *pushButton_f;
+    QPushButton *pushButton_g;
+    QPushButton *pushButton_h;
+    QPushButton *pushButton_i;
+    QPushButton *pushButton_j;
+    QPushButton *pushButton_k;
+    QPushButton *pushButton_l;
+    QPushButton *pushButton_m;
+    QPushButton *pushButton_n;
+    QPushButton *pushButton_o;
+    QPushButton *pushButton_p;
+    QPushButton *pushButton_q;
+    QPushButton *pushButton_r;
+    QPushButton *pushButton_s;
+    QPushButton *pushButton_t;
+    QPushButton *pushButton_u;
+    QPushButton *pushButton_v;
+    QPushButton *pushButton_w;
+    QPushButton *pushButton_x;
+    QPushButton *pushButton_y;
+    QPushButton *pushButton_z;
+    QPushButton *pushButton_shift_left;
+    QPushButton *pushButton_shift_right;
+    QPushButton *pushButton_space;
+    QPushButton *pushButton_clear;
+    QPushButton *pushButton_close;
+    QPushButton *pushButton_enter;
+    QLineEdit *label_text;
 };
 
 #endif // UIKEYBOARDDIALOG_H

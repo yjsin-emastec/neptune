@@ -3,13 +3,14 @@
 
 #include <QtGui/QWidget>
 #include "ui_systemlogpage.h"
+#include "ui_systemlogpage1080p.h"
 #include "main/mainglobal.h"
 #include "main/mainwidget.h"
 
 class EventSortFilterProxyModel;
 class QTreeView;
 class FunctionDialog;
-class SystemLogPage : public QWidget, public Ui::SystemLogPage
+class SystemLogPage : public QWidget
 {
     Q_OBJECT
 
@@ -21,6 +22,8 @@ public:
     void onQueryLogCount();
     void onQueryLogData();
     void KeyPressEvent(int key);
+
+    int iconSize;
 
 signals:
     void previousSearch (int type);
@@ -50,6 +53,29 @@ private:
     void addEventLog(const QString &logDateTime, const QString &log);
     QString changeTimeformat(char event_time[20]);
     bool eventFilter(QObject *obj, QEvent *event);
+
+    QFrame *frame;
+    QFrame *maskFrame;
+
+    QPushButton *buttonClose;
+    QPushButton *buttonFunction;
+    QPushButton *buttonPageDn;
+    QPushButton *buttonPageUp;
+    QPushButton *buttonPrevious;
+    QPushButton *buttonSearch;
+
+    QLabel *labelClose;
+    QLabel *labelFilter1;
+    QLabel *labelFilter2;
+    QLabel *labelFilter3;
+    QLabel *labelPage;
+    QLabel *labelStart;
+    QLabel *labelEnd;
+
+    QDateTimeEdit *searchEndTime;
+    QDateTimeEdit *searchStartTime;
+
+    QTreeView *systemLogView;
 };
 
 

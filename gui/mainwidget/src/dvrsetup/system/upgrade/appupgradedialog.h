@@ -3,10 +3,11 @@
 
 #include <QtGui/QDialog>
 #include "ui_appupgradedialog.h"
+#include "ui_appupgradedialog1080p.h"
 
 class TextMessageDialog;
 
-class AppUpgradeDialog : public QDialog, public Ui::AppUpgradeDialog
+class AppUpgradeDialog : public QDialog
 {
     Q_OBJECT
 
@@ -37,6 +38,21 @@ private:
     QTimer *upgradeTimer;
     TextMessageDialog *msgBox;
     bool upgradeState;
+
+    QFrame *frame;
+    QLabel *labelStatus;
+    QLabel *labelModelName;
+    QLabel *labelModelNameValue;
+    QLabel *labelVersion;
+    QLabel *labelVersionValue;
+    QLabel *labelFileName;
+    QLabel *labelFileNameValue;
+    QLabel *labelProgress;
+    QLabel *labelProgressValue;
+    QProgressBar *progressBar;
+    QPushButton *buttonFind;
+    QPushButton *buttonUpgrade;
+    QPushButton *buttonClose;
 };
 
 #endif // APPUPGRADEDIALOG_H
