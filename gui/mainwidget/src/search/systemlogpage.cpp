@@ -100,6 +100,7 @@ SystemLogPage::SystemLogPage(QWidget *parent)
 
         iconSize = 110;
         systemLogView->setStyleSheet("QHeaderView{font:40px;} QTreeView{font:40px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+
         labelStart->setStyleSheet("font:45px;");
         labelEnd->setStyleSheet("font:45px;");
         labelFilter1->setStyleSheet("font:45px;");
@@ -192,13 +193,13 @@ SystemLogPage::SystemLogPage(QWidget *parent)
 
     if(mainHeight == 720)
     {
-        systemLogView->setColumnWidth(0, 335);
-        systemLogView->setColumnWidth(1, 914);
+        systemLogView->setColumnWidth(0, 365);
+        systemLogView->setColumnWidth(1, 884);
     }
     else
     {
-        systemLogView->setColumnWidth(0, 500);
-        systemLogView->setColumnWidth(1, 1300);
+        systemLogView->setColumnWidth(0, 550);
+        systemLogView->setColumnWidth(1, 1250);
     }
 
     connect(buttonPrevious, SIGNAL(released()), this, SLOT(onButtonPrevious()));
