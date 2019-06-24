@@ -6,6 +6,7 @@
 #include <Event.h>
 #include <EasternEvent.h>
 
+
 CalendarPage::CalendarPage(QWidget *parent)
     : QWidget(parent)
 {
@@ -21,14 +22,16 @@ CalendarPage::CalendarPage(QWidget *parent)
 
     timeLine = new TimeLine(this);
     connect(calendar, SIGNAL(drawTimeLine(bool)), timeLine, SLOT(onDrawTimeLine(bool)));
+    connect(timeLine, SIGNAL(changeFocus(int)), this, SLOT(onChangeFocus(int)));
+    connect(timeLine, SIGNAL(startPlayback(QTime)), calendar, SLOT(onStartPlayback(QTime)));
 
     buttonPrevious = new QPushButton();
     buttonPrevious->setText(tr("Previous"));
-    buttonPrevious->setFixedSize(200,76);
+    buttonPrevious->setFixedSize(220,76);
 
     buttonClose = new QPushButton();
     buttonClose->setText(tr("Close"));
-    buttonClose->setFixedSize(200,76);
+    buttonClose->setFixedSize(220,76);
 
     if(mainHeight == 720)
     {
@@ -42,8 +45,8 @@ CalendarPage::CalendarPage(QWidget *parent)
     {
         this->resize(1920, 1080);
         frame->resize(1920-8, 1080-8);
-        buttonPrevious->setFixedSize(300,130);
-        buttonClose->setFixedSize(300,130);
+        buttonPrevious->setFixedSize(330,130);
+        buttonClose->setFixedSize(330,130);
         buttonPrevMonth->setMinimumWidth(200);
         buttonPrevMonth->setMinimumHeight(110);
         buttonNextMonth->setMinimumWidth(200);
@@ -83,6 +86,7 @@ CalendarPage::CalendarPage(QWidget *parent)
     setLayout(mainLayout);
 
     curMonthIndex = 0;
+    focusStatus=1;
 
     UpdateDates(-1);
 
@@ -134,6 +138,7 @@ void CalendarPage::CreateCalendar()
 {
     calendar = new CalendarWidget(this);
     connect(calendar, SIGNAL(startPlayback()), this, SLOT(onStartPlayback()));
+    connect(calendar, SIGNAL(changeFocus(int)), this, SLOT(onChangeFocus(int)));
 }
 void CalendarPage::QuerySearchData(int type)
 {
@@ -290,6 +295,18 @@ void CalendarPage::UpdateSelectTime()
     qDebug(" calendar select %d-%d-%d", tmNow.tm_year+1900, tmNow.tm_mon+1, tmNow.tm_mday);
     calSelTime = mktime(&tmNow);
 }
+void CalendarPage::onChangeFocus(int status)
+{
+    /*
+        status 1: day    selection status
+        status 2: hour   selection status
+        status 3: minute selection status
+    */
+
+    focusStatus=status;
+    calendar->setFocusStatus(focusStatus);
+    timeLine->setFocusStatus(focusStatus);
+}
 void CalendarPage::ChangeCalendarSelectDay(int dir)
 {
     calendar->setFocus();
@@ -337,13 +354,10 @@ void CalendarPage::KeyPressEvent(int key)
                 buttonClose->clearFocus();
                 buttonPrevMonth->clearFocus();
                 buttonNextMonth->clearFocus();
-                calendar->setFocus();
-                ChangeCalendarSelectDay(1);
             }
-            else
-            {
-                ChangeCalendarSelectDay(1);
-            }
+
+            if( focusStatus == 1) { ChangeCalendarSelectDay(1); }
+            else                  { timeLine->KeyPressEvent(key); }
 
             break;
         }
@@ -356,13 +370,10 @@ void CalendarPage::KeyPressEvent(int key)
                 buttonClose->clearFocus();
                 buttonPrevMonth->clearFocus();
                 buttonNextMonth->clearFocus();
-                calendar->setFocus();
-                ChangeCalendarSelectDay(2);
             }
-            else
-            {
-                ChangeCalendarSelectDay(2);
-            }
+
+            if( focusStatus == 1) { ChangeCalendarSelectDay(2); }
+            else                  { timeLine->KeyPressEvent(key); }
 
             break;
         }
@@ -375,13 +386,10 @@ void CalendarPage::KeyPressEvent(int key)
                 buttonClose->clearFocus();
                 buttonPrevMonth->clearFocus();
                 buttonNextMonth->clearFocus();
-                calendar->setFocus();
-                ChangeCalendarSelectDay(3);
             }
-            else
-            {
-                ChangeCalendarSelectDay(3);
-            }
+
+            if( focusStatus == 1) { ChangeCalendarSelectDay(3); }
+            else                  { timeLine->KeyPressEvent(key); }
 
             break;
         }
@@ -394,13 +402,10 @@ void CalendarPage::KeyPressEvent(int key)
                 buttonClose->clearFocus();
                 buttonPrevMonth->clearFocus();
                 buttonNextMonth->clearFocus();
-                calendar->setFocus();
-                ChangeCalendarSelectDay(4);
             }
-            else
-            {
-                ChangeCalendarSelectDay(4);
-            }
+
+            if ( focusStatus == 1) { ChangeCalendarSelectDay(4); }
+            else                  { timeLine->KeyPressEvent(key); }
 
             break;
         }
@@ -443,14 +448,16 @@ void CalendarPage::KeyPressEvent(int key)
             else if(!buttonPrevious->hasFocus()  && !buttonClose->hasFocus() &&
                     !buttonPrevMonth->hasFocus() && !buttonNextMonth->hasFocus())
             {
-                calendar->StartPlayback();
+                if(focusStatus == 1) { calendar->StartPlayback(); }
+                else                 { timeLine->KeyPressEvent(key); }
             }
 
             break;
         }
         case Qt::Key_Escape:
         {
-            onButtonPrevious();
+            if(focusStatus == 1) { onButtonPrevious(); }
+            else                 { timeLine->KeyPressEvent(key); }
 
             break;
         }
@@ -479,6 +486,18 @@ void CalendarPage::KeyPressEvent(int key)
                 buttonNextMonth->clearFocus();
                 calendar->setFocus();
             }
+
+            break;
+        }
+        case Qt::Key_Bar:
+        {
+            timeLine->KeyPressEvent(key);
+
+            break;
+        }
+        case Qt::Key_Play:
+        {
+            timeLine->KeyPressEvent(key);
 
             break;
         }

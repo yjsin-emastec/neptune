@@ -304,6 +304,19 @@ void SearchDialog::keyPressEvent(QKeyEvent *event)
 
             return;
         }
+        case Qt::Key_Bar:
+        {
+            if( calendarPage->isVisible())              { calendarPage->KeyPressEvent(Qt::Key_Bar); }
+
+            return;
+        }
+        case Qt::Key_Play:
+        {
+            if( calendarPage->isVisible())              { calendarPage->KeyPressEvent(Qt::Key_Play); }
+
+            return;
+        }
+
         default:
         {
             return;

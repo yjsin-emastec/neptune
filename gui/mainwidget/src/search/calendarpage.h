@@ -23,6 +23,7 @@ public:
     void KeyPressEvent(int key);
 
 public slots:
+    void onChangeFocus(int status);
 
 signals:
     void previousSearch (int type);
@@ -43,6 +44,7 @@ private:
     void ChangeCalendarSelectDay(int dir);
     void UpdateMonthLabel();
     int  curMonthIndex;
+    int  focusStatus;
 
     QLabel          *lableDate;
     CalendarWidget  *calendar;

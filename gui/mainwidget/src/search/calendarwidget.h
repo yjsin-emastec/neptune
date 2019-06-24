@@ -20,14 +20,17 @@ public:
     void moveFocus(int pos);
     void initFocus(void);
     int getSelectedPos(void);
+    void setFocusStatus(int status);
 
 signals:
     void selectedDateChanged(const QDate &newDate);
     void activated();
 	void startPlayback();
     void drawTimeLine(bool state);
+    void changeFocus(int status);
 
 public slots:
+    void onStartPlayback(QTime startTime);
 
 protected:
     void paintEvent(QPaintEvent *event);
@@ -51,6 +54,8 @@ private:
     int m_headHeight, m_cellHeight, m_cellWidth, pageIndex;
     int selectedPos;
     int fontSize;
+
+    int focusStatus;
 };
 
 #endif // CALENDARWIDGET_H

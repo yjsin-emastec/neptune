@@ -286,6 +286,8 @@ void CalendarWidget::mousePressEvent(QMouseEvent *event)
         if(clickPos != selectedPos)
         {
             moveFocus(clickPos);
+            focusStatus = 1;
+            emit changeFocus(focusStatus);
         }
     }
 }
@@ -322,7 +324,11 @@ void delay( int millisecondsToWait )
 }
 void CalendarWidget::StartPlayback(void)
 {
+#if 1 //yjsin [19/06/14] 4->8ch test
     int hour, kk, sec = 0, ch = 0xf, split = Split_4;
+#else
+    int hour, kk, sec = 0, ch = 0xf, split = Split_9;
+#endif
     struct tm tmNow;
     bool bVideoExist = false;
     time_t now = 0;
@@ -377,10 +383,93 @@ void CalendarWidget::StartPlayback(void)
         }
     }
 }
+void CalendarWidget::onStartPlayback(QTime startTime)
+{
+#if 1 //yjsin [19/06/14] 4->8ch test
+    int hour, kk, sec = 0, ch = 0xf, split = Split_4;
+#else
+    int hour, kk, sec = 0, ch = 0xf, split = Split_9;
+#endif
+    struct tm tmNow;
+    bool bVideoExist = false;
+    time_t now = 0;
+
+    int day= (selectedPos+1) - (m_monthStartAt-1);
+    QDate date = QDate( m_selectedDate.year(), m_selectedDate.month(), day);
+
+    if(isRecordDate(date.day()))
+    {
+        delay(500); // 500ms
+
+        SelectPbSplit = split;
+
+        for(hour = startTime.hour(); hour < 25; hour++)
+        {
+            if( hour == startTime.hour() )
+            {
+                for( kk= startTime.minute()*4; kk <240; kk++)
+                {
+                    if( timeLog[hour].channel[kk] & (0xffff))
+                    {
+                        bVideoExist=true;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                for(kk = 0; kk < 240; kk++)
+                {
+                    if(timeLog[hour].channel[kk] & (0xffff))
+                    {
+                        bVideoExist = true;
+                        break;
+                    }
+                }
+            }
+
+            if(bVideoExist)
+            {
+                break;
+            }
+        }
+
+        if(bVideoExist)
+        {
+            tmNow.tm_year = date.year()-1900;
+            tmNow.tm_mon  = date.month()-1;
+            tmNow.tm_mday = date.day();
+            tmNow.tm_hour = hour;
+            tmNow.tm_min  = kk/4;
+            tmNow.tm_sec  = (kk%4) * 15;
+
+            now = mktime(&tmNow);
+        }
+        else
+        {
+            now = 0;
+        }
+
+        qDebug("%s: now: %s \n", __func__, atime(now));
+
+        if(now > 0)
+        {
+            EventSearchPB = 0;
+            appmgr_search_play_start(ch, split*split, now, 0);
+            emit startPlayback();
+        }
+    }
+}
+
 void CalendarWidget::mouseDoubleClickEvent(QMouseEvent *event)
 {
     int hour, kk, sec = 0;
+
+#if 1
     int ch = 0xf, split = Split_4;
+#else
+    int ch = 0xf, split = Split_9;
+#endif
     struct tm tmNow;
     bool bVideoExist = false;
     time_t now = 0;
@@ -441,4 +530,10 @@ void CalendarWidget::mouseDoubleClickEvent(QMouseEvent *event)
             }
         }
     }
+}
+
+void CalendarWidget::setFocusStatus(int status)
+{
+    focusStatus = status;
+
 }

@@ -1662,6 +1662,18 @@ void MainWidget::passKeypadEvent(unsigned char code)
 
             break;
 
+        case KPD_EVENT_STATUS:
+
+            key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Bar, Qt::NoModifier, QString(QChar(Qt::Key_Bar)));
+
+            break;
+
+        case KPD_EVENT_PLAY_PAUSE:
+
+            key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Play, Qt::NoModifier, QString(QChar(Qt::Key_Play)));
+
+            break;
+
         default:
 
             return;
