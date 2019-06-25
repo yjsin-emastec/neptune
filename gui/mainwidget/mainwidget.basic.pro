@@ -236,7 +236,8 @@ FORMS        += src/login/logindialog.ui                                        
                 src/ui/keyboard/uikeyboarddialog1080p.ui                                             \
                 src/dvrsetup/record/normal/normaldialog1080p.ui                                      \
                 src/dvrsetup/record/normal/normaldialog.ui                                           \
-                src/ui/keyboard/uikeyboarddialog.ui
+                src/ui/keyboard/uikeyboarddialog.ui                                                  \
+                src/main/playbardialog1080p.ui
 
 RESOURCES    += mainwidget.qrc
 

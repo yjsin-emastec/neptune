@@ -3,12 +3,14 @@
 
 #include <QtGui/QDialog>
 #include "ui_playbardialog.h"
+#include "ui_playbardialog1080p.h"
+#include <QHBoxLayout>
 
 class QPushButton;
 class QLabel;
 class PlayTimeBar;
 
-class PlayBarDialog : public QDialog, public Ui::PlayBarDialog
+class PlayBarDialog : public QDialog
 {
     Q_OBJECT
 
@@ -23,6 +25,7 @@ public:
     void            PausePlayChange       (int state);
     void            OutputAudio           (int ch);
     void            displaySpeed          (void);
+    void            initPlayBar           (void);
     int             GetStatePausePlay     (void);
     int             getPlaybackChannel    (void);
 
@@ -55,9 +58,12 @@ public slots:
     void            fowardFrameClicked    (void);
     void            fastClicked           (void);
     void            onButtonAudio         (void);
+    void            onButtonZoom          (void);
     void            playbackTimeUpdate    (time_t pbTime);
     void            searchDataUpdate      (int type);
     void            closeSearchBar        (void);
+    void            onUpdateTimeLabel     (QString time);
+    void            onUpdateDateLabel     (QString date);
 
 private slots:
     void            changePlaybackTime    (int pos);
@@ -66,6 +72,7 @@ private:
     void            createPlaySpeedControlButtons    (void);
     void            checkDayChanged                  (time_t pbTime, time_t prevTime, int expired);
     void            SetAudioIcon                     (int ch);
+    void            keyPressEvent                    (QKeyEvent *event);
 
     int             playbackDirection;
     int             changeDay;
@@ -74,10 +81,15 @@ private:
     int             ispbMute;
     int             PLAYBAR_BTN_SIZE;
     int             labelFontSize;
+    int             timeBarWidth;
+    int             timeBarHeightSmall;
+    int             timeBarHeightBig;
 
     PlayTimeBar    *timeBar;
 
-    QLabel         *labelSpeed;
+    QLabel         *labelDate,
+                   *labelTime,
+                   *labelSpeed;
 
     QPushButton    *buttonAudio;
     QPushButton    *buttonRew;
@@ -88,6 +100,14 @@ private:
     QPushButton    *buttonSlow;
     QPushButton    *buttonStill;
     QPushButton    *buttonClose;
+    QPushButton    *buttonZoom;
+    QPushButton    *buttonSplit;
+
+    QFrame         *frame;
+
+    void hideButton();
+    void showButton();
+
 };
 
 #endif // PLAYBARDIALOG_H

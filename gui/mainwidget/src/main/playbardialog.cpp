@@ -11,21 +11,64 @@
 
 PlayBarDialog::PlayBarDialog(QWidget *parent)
     : QDialog(parent)
-{
-    setupUi(this);
-
+{    
     if(mainHeight == 720)
     {
+        Ui::PlayBarDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+        labelDate = ui720.labelDate;
+        labelTime = ui720.labelTime;
+        labelSpeed = ui720.labelSpeed;
+
+        buttonAudio = ui720.buttonAudio;
+        buttonRewFrame = ui720.buttonRewFrame;
+        buttonRew = ui720.buttonRew;
+        buttonPlay = ui720.buttonPlay;
+        buttonFf = ui720.buttonFf;
+        buttonFfFrame = ui720.buttonFfFrame;
+        buttonStill = ui720.buttonStill;
+        buttonClose = ui720.buttonClose;
+        buttonZoom = ui720.buttonZoom;
+
         PLAYBAR_BTN_SIZE=70;
         labelFontSize=32;
+
+        timeBarWidth=1000;      // timebar TL_WIDTH + TL_LEFT_GAP + TL_SLIDER_GAP*2
+        timeBarHeightSmall=70;  // timebar TL_UP_MARGIN+TL_HEIGHT+margin(5px)
+        timeBarHeightBig=150;   // timebar TL_UP_MARGIN+TL_HEIGHT+margin(5px)
     }
     else
     {
-        this->resize(1920, 240);
-        frame->resize(1920-8, 240-8);
+        Ui::PlayBarDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+        labelDate = ui1080.labelDate;
+        labelTime = ui1080.labelTime;
+        labelSpeed = ui1080.labelSpeed;
+
+        buttonAudio = ui1080.buttonAudio;
+        buttonRewFrame = ui1080.buttonRewFrame;
+        buttonRew = ui1080.buttonRew;
+        buttonPlay = ui1080.buttonPlay;
+        buttonFf = ui1080.buttonFf;
+        buttonFfFrame = ui1080.buttonFfFrame;
+        buttonStill = ui1080.buttonStill;
+        buttonClose = ui1080.buttonClose;
+        buttonZoom = ui1080.buttonZoom;
 
         PLAYBAR_BTN_SIZE=100;
-        labelFontSize=50;
+        labelFontSize=48;
+
+        timeBarWidth=1500;
+        timeBarHeightSmall=110;
+        timeBarHeightBig=220;
+
+        labelDate->setStyleSheet("font:48px;");
+        labelTime->setStyleSheet("font:48px;");
+        labelSpeed->setStyleSheet("font:48px;");
     }
 
     setWindowFlags(Qt::FramelessWindowHint);
@@ -48,26 +91,18 @@ PlayBarDialog::PlayBarDialog(QWidget *parent)
 
     createPlaySpeedControlButtons();
 
-    QHBoxLayout  *buttonLayout = new QHBoxLayout;
-    buttonLayout ->addSpacing  (30);
-    buttonLayout ->addWidget   (labelSpeed);
-    buttonLayout ->addWidget   (buttonAudio);
-    buttonLayout ->addSpacing  (40);
-    buttonLayout ->addWidget   (buttonRewFrame);
-    buttonLayout ->addWidget   (buttonRew);
-    buttonLayout ->addWidget   (buttonPlay);
-    buttonLayout ->addWidget   (buttonFf);
-    buttonLayout ->addWidget   (buttonFfFrame);
-    buttonLayout ->addSpacing  (70);
-    buttonLayout ->addWidget   (buttonStill);
-    buttonLayout ->addWidget   (buttonClose);
-    buttonLayout ->addSpacing  (15);
-
-    QVBoxLayout *layout = new QVBoxLayout;
-    layout->addWidget (timeBar);
-    layout->addLayout (buttonLayout);
+    if(mainHeight ==720 )
+    {
+        timeBar->setGeometry(QRect(222, 6, timeBarWidth, timeBarHeightSmall));
+    }
+    else
+    {
+        timeBar->setGeometry(QRect(330, 10, timeBarWidth, timeBarHeightSmall));
+    }
+    //x=label margin(20)+label width(200)+space(2)
 
     connect(buttonAudio,    SIGNAL(clicked()),            this, SLOT(onButtonAudio      (void)));
+    connect(buttonZoom,     SIGNAL(clicked()),            this, SLOT(onButtonZoom       (void)));
     connect(buttonRew,      SIGNAL(clicked()),            this, SLOT(rewClicked         (void)));
     connect(buttonRewFrame, SIGNAL(clicked()),            this, SLOT(rewFrameClicked    (void)));
     connect(buttonPlay,     SIGNAL(clicked()),            this, SLOT(playpauseClicked   (void)));
@@ -76,8 +111,8 @@ PlayBarDialog::PlayBarDialog(QWidget *parent)
     connect(buttonStill,    SIGNAL(clicked()),            this, SLOT(clickBackup        (void)));
     connect(buttonClose,    SIGNAL(clicked()),            this, SLOT(closeSearchBar     (void)));
     connect(timeBar,        SIGNAL(playTimeChanged(int)), this, SLOT(changePlaybackTime (int )));
-
-    setLayout(layout);
+    connect(timeBar,        SIGNAL(updateDateLabel(QString)), this, SLOT(onUpdateDateLabel(QString)));
+    connect(timeBar,        SIGNAL(updateTimeLabel(QString)), this, SLOT(onUpdateTimeLabel(QString)));
 
     indexAudio = 0;
     ispbMute=0;
@@ -87,20 +122,11 @@ PlayBarDialog::~PlayBarDialog(void)
 }
 void PlayBarDialog::createPlaySpeedControlButtons(void)
 {
-    labelSpeed = new QLabel(tr("Pause"), this);
     labelSpeed->setFont( QFont("unifont", labelFontSize, QFont::Bold) );
     labelSpeed->setSizePolicy  (QSizePolicy::Fixed, QSizePolicy::Fixed);
-    labelSpeed->setFixedSize   (QSize(PLAYBAR_BTN_SIZE*4.1, PLAYBAR_BTN_SIZE));
-    labelSpeed->setAlignment   (Qt::AlignLeft|Qt::AlignVCenter);
 
-    buttonAudio     = new QPushButton(this);  buttonAudio    ->setFocusPolicy(Qt::NoFocus);
-    buttonRew       = new QPushButton(this);  buttonRew      ->setFocusPolicy(Qt::NoFocus);
-    buttonRewFrame  = new QPushButton(this);  buttonRewFrame ->setFocusPolicy(Qt::NoFocus);
-    buttonPlay      = new QPushButton(this);  buttonPlay     ->setFocusPolicy(Qt::NoFocus);
-    buttonFfFrame   = new QPushButton(this);  buttonFfFrame  ->setFocusPolicy(Qt::NoFocus);
-    buttonFf        = new QPushButton(this);  buttonFf       ->setFocusPolicy(Qt::NoFocus);
-    buttonStill     = new QPushButton(this);  buttonStill    ->setFocusPolicy(Qt::NoFocus);
-    buttonClose     = new QPushButton(this);  buttonClose    ->setFocusPolicy(Qt::NoFocus);
+    buttonZoom     ->setIconSize     (QSize(PLAYBAR_BTN_SIZE/2, PLAYBAR_BTN_SIZE/2));
+    buttonZoom     ->setIcon         (QIcon(":images/timeline_zoom_in.png"));
 
     buttonAudio    ->setSizePolicy   (QSizePolicy::Fixed, QSizePolicy::Fixed);
     buttonAudio    ->setFixedSize    (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
@@ -161,11 +187,13 @@ void PlayBarDialog::setTimeFormat(int timeFormat)
     {
         buttonRewFrame->show();
         buttonFfFrame->show();
+        buttonZoom->show();
     }
     else
     {
         buttonRewFrame->hide();
         buttonFfFrame->hide();
+        buttonZoom->hide();
     }
 
     timeBar->sliderPlayTimeChange();
@@ -340,6 +368,45 @@ void PlayBarDialog::onButtonAudio(void)
         }
     }
 }
+void PlayBarDialog::onButtonZoom(void)
+{
+    switch(timeBar->getTimeLineStatus())
+    {
+        case 1 : { hideButton(); timeBar->setTimeLineStatus(3); break; }
+        case 2 : { hideButton(); timeBar->setTimeLineStatus(4); break; }
+        case 3 : { showButton(); timeBar->setTimeLineStatus(1); break; }
+        case 4 : { showButton(); timeBar->setTimeLineStatus(2); break; }
+    }
+}
+void PlayBarDialog::hideButton(void)
+{
+    buttonAudio->hide();
+    buttonFfFrame->hide();
+    buttonFf->hide();
+    buttonPlay->hide();
+    buttonRewFrame->hide();
+    buttonRew->hide();
+    buttonStill->hide();
+    buttonClose->hide();
+    timeBar->resize(timeBarWidth, timeBarHeightBig);
+
+    buttonZoom->setIcon    (QIcon(":images/timeline_zoom_out.png"));
+}
+void PlayBarDialog::showButton(void)
+{
+    buttonAudio->show();
+    buttonFfFrame->show();
+    buttonFf->show();
+    buttonPlay->show();
+    buttonRewFrame->show();
+    buttonRew->show();
+    buttonStill->show();
+    buttonClose->show();
+    timeBar->resize(timeBarWidth, timeBarHeightSmall);
+
+    buttonZoom->setIcon    (QIcon(":images/timeline_zoom_in.png"));
+}
+
 void PlayBarDialog::clickBackup(void)
 {
     int chBit = 0;
@@ -380,16 +447,16 @@ void PlayBarDialog::displaySpeed(void)
         {
             switch(playbackSpeed)
             {
-                case PB_SPEED_1: 	str = tr("Play");  		break;
-                case PB_SPEED_2: 	str = tr("FF x2");  	break;
-                case PB_SPEED_4: 	str = tr("FF x4");  	break;
-                case PB_SPEED_8: 	str = tr("FF x8");  	break;
-                case PB_SPEED_16:	str = tr("FF x16"); 	break;
-                case PB_SPEED_32: 	str = tr("FF x32"); 	break;
-                case PB_SPEED_64: 	str = tr("FF x64"); 	break;
-                case PB_SPEED_128: 	str = tr("FF x128"); 	break;
-                case PB_SPEED_256: 	str = tr("FF x256"); 	break;
-                case PB_SPEED_1024:	str = tr("FF x1024");	break;
+                case PB_SPEED_1: 	str = tr("Play");                                           break;
+                case PB_SPEED_2: 	str = QString("%1 %2").arg(tr("FF"), QString("x2"));        break;
+                case PB_SPEED_4: 	str = QString("%1 %2").arg(tr("FF"), QString("x4"));        break;
+                case PB_SPEED_8: 	str = QString("%1 %2").arg(tr("FF"), QString("x8"));        break;
+                case PB_SPEED_16:	str = QString("%1 %2").arg(tr("FF"), QString("x16"));       break;
+                case PB_SPEED_32: 	str = QString("%1 %2").arg(tr("FF"), QString("x32"));       break;
+                case PB_SPEED_64: 	str = QString("%1 %2").arg(tr("FF"), QString("x64"));       break;
+                case PB_SPEED_128: 	str = QString("%1 %2").arg(tr("FF"), QString("x128"));      break;
+                case PB_SPEED_256: 	str = QString("%1 %2").arg(tr("FF"), QString("x256"));      break;
+                case PB_SPEED_1024:	str = QString("%1 %2").arg(tr("FF"), QString("x1024"));     break;
                 default: return;
             }
         }
@@ -397,16 +464,16 @@ void PlayBarDialog::displaySpeed(void)
         {
             switch(playbackSpeed)
             {
-                case PB_SPEED_1: 	str = tr("REW x1");		break;
-                case PB_SPEED_2: 	str = tr("REW x2"); 	break;
-                case PB_SPEED_4: 	str = tr("REW x4"); 	break;
-                case PB_SPEED_8: 	str = tr("REW x8"); 	break;
-                case PB_SPEED_16:	str = tr("REW x16");	break;
-                case PB_SPEED_32: 	str = tr("REW x32");	break;
-                case PB_SPEED_64: 	str = tr("REW x64");	break;
-                case PB_SPEED_128: 	str = tr("REW x128"); 	break;
-                case PB_SPEED_256: 	str = tr("REW x256"); 	break;
-                case PB_SPEED_1024:	str = tr("REW x1024");	break;
+                case PB_SPEED_1: 	str = QString("%1 %2").arg(tr("REW"), QString("x1"));       break;
+                case PB_SPEED_2: 	str = QString("%1 %2").arg(tr("REW"), QString("x2"));       break;
+                case PB_SPEED_4: 	str = QString("%1 %2").arg(tr("REW"), QString("x4"));       break;
+                case PB_SPEED_8: 	str = QString("%1 %2").arg(tr("REW"), QString("x8"));       break;
+                case PB_SPEED_16:	str = QString("%1 %2").arg(tr("REW"), QString("x16"));      break;
+                case PB_SPEED_32: 	str = QString("%1 %2").arg(tr("REW"), QString("x32"));      break;
+                case PB_SPEED_64: 	str = QString("%1 %2").arg(tr("REW"), QString("x64"));      break;
+                case PB_SPEED_128: 	str = QString("%1 %2").arg(tr("REW"), QString("x128")); 	break;
+                case PB_SPEED_256: 	str = QString("%1 %2").arg(tr("REW"), QString("x256")); 	break;
+                case PB_SPEED_1024:	str = QString("%1 %2").arg(tr("REW"), QString("x1024"));    break;
                 default: return;
             }
         }
@@ -726,6 +793,7 @@ void PlayBarDialog::setMaxSplit(int startCh, int split)
     playbackStartCh  = startCh;
     playbackMaxSplit = split;
 }
+#if 0 //not use dls
 void PlayBarDialog::updateTimeLine(void)
 {
     int dlsEndHour = -1;
@@ -765,6 +833,30 @@ void PlayBarDialog::updateTimeLine(void)
     timeBar->setDlsEndDay(dlsEndHour);
 
     displaySpeed();
+}
+#else
+void PlayBarDialog::updateTimeLine(void)
+{
+    if(changeDay)
+    {
+        changeDay = 0;
+        calSelTime = timeLogSelTime;
+        timeBar->updateTimeLinePixmap();
+    }
+}
+#endif
+void PlayBarDialog::initPlayBar()
+{
+    curPbTime = 0;
+    playbackSpeed_old          = playbackSpeed;
+    playbackState              = pbState = PB_PLAY;
+    playbackSpeed              = PB_SPEED_1;
+    playbackDirection          = PB_FF;
+    timeBar->playbackDirection = PB_FF;
+
+    timeBar->initPlayTimeBar();
+    displaySpeed();
+    showButton();
 }
 void PlayBarDialog::changePlaybackTime(int pos)
 {
@@ -1078,4 +1170,139 @@ int PlayBarDialog::getPlaybackChannel(void)
     qDebug("\n %s: chBit %x \n", __func__, chBit);
 
     return chBit;
+}
+void PlayBarDialog::onUpdateDateLabel     (QString date)
+{
+    labelDate->setText(date);
+}
+void PlayBarDialog::onUpdateTimeLabel     (QString time)
+{
+    labelTime->setText(time);
+}
+void PlayBarDialog::keyPressEvent(QKeyEvent *event)
+{
+    switch(event->key())
+    {
+        case Qt::Key_Up :
+        {
+            if( !EventSearchPB && (( timeBar->getTimeLineStatus() == 2 ) || ( timeBar->getTimeLineStatus() ==4 )) )
+            {
+                if( playbackSpeed == PB_SPEED_1 )
+                {
+                    appmgr_search_set_jump_level(1,1);
+                }
+                else
+                {
+                    appmgr_search_set_jump_level(1,5);
+                }
+            }
+
+            break;
+        }
+        case Qt::Key_Down :
+        {
+            if( !EventSearchPB && (( timeBar->getTimeLineStatus() == 2 ) || ( timeBar->getTimeLineStatus() ==4 )) )
+            {
+                if( playbackSpeed == PB_SPEED_1 )
+                {
+                    appmgr_search_set_jump_level(0,1);
+                }
+                else
+                {
+                    appmgr_search_set_jump_level(0,5);
+                }
+            }
+
+            break;
+        }
+        case Qt::Key_Left :
+        {
+            if( !EventSearchPB )
+            {
+                if( timeBar->getTimeLineStatus() == 1 || timeBar->getTimeLineStatus() == 3 )
+                {
+                    appmgr_search_set_jump_level(0,60);
+                }
+                else
+                {
+                    appmgr_search_set_jump_level(0,5);
+                }
+            }
+
+            break;
+        }
+        case Qt::Key_Right :
+        {
+            if( !EventSearchPB )
+            {
+                if( timeBar->getTimeLineStatus() == 1 || timeBar->getTimeLineStatus() == 3 )
+                {
+                    appmgr_search_set_jump_level(1,60);
+                }
+                else
+                {
+                    appmgr_search_set_jump_level(1,5);
+                }
+            }
+
+            break;
+        }
+        case Qt::Key_Enter:
+        {
+            if( !EventSearchPB )
+            {
+                switch(timeBar->getTimeLineStatus())
+                {
+                    case 1 : { timeBar->setTimeLineStatus(2); break; }
+                    case 2 : { timeBar->setTimeLineStatus(1); break; }
+                    case 3 : { timeBar->setTimeLineStatus(4); break; }
+                    case 4 : { timeBar->setTimeLineStatus(3); break; }
+                }
+            }
+
+            break;
+        }
+        case Qt::Key_Escape:
+        {
+            if( !EventSearchPB )
+            {
+                if( timeBar->getTimeLineStatus() == 1 || timeBar->getTimeLineStatus() == 3 )
+                {
+                    closeSearchBar();
+                }
+                else
+                {
+                    switch(timeBar->getTimeLineStatus())
+                    {
+                        case 1 : { timeBar->setTimeLineStatus(2); break; }
+                        case 2 : { timeBar->setTimeLineStatus(1); break; }
+                        case 3 : { timeBar->setTimeLineStatus(4); break; }
+                        case 4 : { timeBar->setTimeLineStatus(3); break; }
+                    }
+                }
+            }
+            else
+            {
+                closeSearchBar();
+            }
+
+            break;
+        }
+        case Qt::Key_PageUp :
+        {
+            if( !EventSearchPB )
+            {
+                onButtonZoom();
+            }
+            break;
+        }
+        case Qt::Key_PageDown :
+        {
+            if( !EventSearchPB )
+            {
+                onButtonZoom();
+            }
+            break;
+        }
+    }
 }

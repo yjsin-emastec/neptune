@@ -30,5 +30,7 @@
         <file>images/daeji/daeji_1280x720.png</file>
         <file>images/daeji/daeji_1920x1080.png</file>
         <file>images/cursor2.png</file>
+        <file>images/timeline_zoom_in.png</file>
+        <file>images/timeline_zoom_out.png</file>
     </qresource>
 </RCC>

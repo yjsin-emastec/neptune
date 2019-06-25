@@ -8,7 +8,6 @@ PlayTimeBar::PlayTimeBar(QWidget *parent)
     : QWidget(parent)
 {
     xPos                    = -1;
-    yPos                    = -1;
     isTimeBarDrag           = false;
     isPbTimeChanged         = false;
     isRepaintByTimeOver     = false;
@@ -18,71 +17,79 @@ PlayTimeBar::PlayTimeBar(QWidget *parent)
     dlsEndHour              = -1;
     lastPbTime              = 0;
     resizeTimeLine_LeftGap  = 0;
+    timeLineStatus          = 1;
+    currentPbHour           = 0;
 
     setPalette(QPalette(QColor(39, 0, 79)));
     setAutoFillBackground(true);
-
-    labelDate = new QLabel(tr(""), this);
-    labelTime = new QLabel(tr(""), this);
-
-    labelDate->setAlignment(Qt::AlignCenter);
-    labelTime->setAlignment(Qt::AlignCenter);
 
     sliderPlayTime = new QSlider(Qt::Horizontal, this);
     sliderPlayTime->setFocusPolicy(Qt::NoFocus);
 
     if(mainHeight == 720)
     {
-        TL_LEFT_MARGIN    = 250;
+        heightSmall       = 40;     //totalHeight - upMargin
+        heightBig         = 120;
+
+        TL_LEFT_MARGIN    = 20;     //leftMargin + handleGap
+        TL_UP_MARGIN      = 25;
         TL_WIDTH          = 960;
-        TL_HEIGHT         = 68;
-        TL_SLIDER_HEIGHT  = 18;
+        TL_HEIGHT         = heightSmall;
+        TL_SLIDER_HEIGHT  = 20;
+        TL_SLIDER_HANDLE_GAP = 20;
 
         NUM_15SEC_PER_MIN = 12;     // 2 pixel = 3 min ( 15sec * 12 = 3 min)
         NUM_MIN_PER_HOUR  = 20;     // 1 hour = 20 pixel
         NUM_MINIMUM_PIXEL = 2;
-        NUM_TICK_SIZE     = 2;
+        NUM_TICK_SIZE     = 4;
 
-        labelDate->setStyleSheet("font-weight:bold; font-size:32px;");
-        labelTime->setStyleSheet("font-weight:bold; font-size:32px;");
+        textWidth         = 38;
+        textHeight        = 25;
+        textFontSize      = 24;
+        lineSize          = 1;
 
+        //setting tip : TL_SLIDER_HANDLE_GAP = groove margin >= -1 x handle margin = handle width/2
         sliderPlayTime->setStyleSheet("QSlider { background-color:rgb(0,0,0,0);}"
-                "::groove { margin: 0px; height: 18px; background-color: rgb(0,0,255,127);}"
-                "::handle { image: url(:/images/slider_handle.png); width: 80px; margin: -40px;}");
+                "::groove { margin:0 20px; height: 20px; background-color: rgb(255,255,255,0);}"
+                "::handle { image: url(:/images/slider_handle.png); width: 40px;  margin: 0 -20px;}");
     }
     else
     {
-        TL_LEFT_MARGIN    = 380;
+        heightSmall       = 60;
+        heightBig         = 176;
+
+        TL_LEFT_MARGIN    = 30;
+        TL_UP_MARGIN      = 38;
         TL_WIDTH          = 1440;
-        TL_HEIGHT         = 110;
+        TL_HEIGHT         = heightSmall;
         TL_SLIDER_HEIGHT  = 30;
+        TL_SLIDER_HANDLE_GAP = 30;
 
         NUM_15SEC_PER_MIN = 4;      // 1 pixel = 1 min. ( 15sec * 4 = 1 min)
         NUM_MIN_PER_HOUR  = 60;     // 1 hour = 60 pixel
         NUM_MINIMUM_PIXEL = 1;
-        NUM_TICK_SIZE     = 3;
+        NUM_TICK_SIZE     = 6;
 
-        labelDate->setStyleSheet("font-weight:bold; font-size:50px;");
-        labelTime->setStyleSheet("font-weight:bold; font-size:50px;");
+        textWidth         = 87;
+        textHeight        = 57;
+        textFontSize      = 38;
+        lineSize          = 2;
 
         sliderPlayTime->setStyleSheet("QSlider { background-color:rgb(0,0,0,0);}"
-                "::groove { margin: 0px; height: 30px; background-color: rgb(0,0,255,127);}"
-                "::handle { image: url(:/images/slider_handle.png); width: 150px; margin: -75px}");
+                "::groove { margin: 30px; height: 30px; background-color: rgb(255,255,255,0);}"
+                "::handle { image: url(:/images/slider_handle.png); width: 60px; margin: -30px}");
     }
+#if 1   //yjsin [19/06/14] 4->8ch test
+    CH_COUNT=8;
+#else
+    CH_COUNT=devInfo.videoNum;
+#endif
 
-    sliderPlayTime->move(TL_LEFT_MARGIN , (TL_HEIGHT-TL_SLIDER_HEIGHT)/2);
-
-    sliderPlayTime->setRange(0, TL_WIDTH - 1);
-    sliderPlayTime->resize(TL_WIDTH + NUM_TICK_SIZE , TL_SLIDER_HEIGHT);
+    sliderPlayTime->move(TL_LEFT_MARGIN-TL_SLIDER_HANDLE_GAP, TL_UP_MARGIN-TL_SLIDER_HEIGHT);
+    sliderPlayTime->setRange(0, TL_WIDTH-1);
+    sliderPlayTime->resize(TL_WIDTH+TL_SLIDER_HANDLE_GAP*2 , TL_SLIDER_HEIGHT);
+    sliderPlayTime->setPageStep(0);
     sliderPlayTime->show();
-
-    labelDate->setMinimumWidth(TL_LEFT_MARGIN);
-    labelDate->move(0, 0);
-    labelTime->setMinimumWidth(TL_LEFT_MARGIN);
-    labelTime->move(0, TL_HEIGHT/2);
-
-    labelDate->show();
-    labelTime->show();
 
     connect(sliderPlayTime, SIGNAL(valueChanged(int)), this, SLOT(timeSliderChanged(int)));
     connect(sliderPlayTime, SIGNAL(sliderReleased()),  this, SLOT(timeSliderReleased()));
@@ -90,28 +97,26 @@ PlayTimeBar::PlayTimeBar(QWidget *parent)
 
     sliderPlayTime->setLayoutDirection(Qt::LeftToRight);
 }
-void PlayTimeBar::setDlsEndDay(int endHour)
+void PlayTimeBar::initPlayTimeBar()
 {
-    dlsEndHour = endHour;
+    timeLineStatus=1;
+
+    dlsEndHour = -1;
     lastPbTime = timeLogSelTime;
 
     if(dlsEndHour >= 0)
     {
-        int width = TL_WIDTH + (TL_WIDTH / 24);
-        sliderPlayTime->setRange(0, width - 1);
-        sliderPlayTime->resize(width + NUM_TICK_SIZE , TL_SLIDER_HEIGHT);
+        int width = TL_WIDTH + (TL_WIDTH/24);
+        sliderPlayTime->setRange(0, width-1);
+        sliderPlayTime->resize(width+TL_SLIDER_HANDLE_GAP*2 , TL_SLIDER_HEIGHT);
     }
     else
     {
         sliderPlayTime->setRange(0, TL_WIDTH - 1);
-        sliderPlayTime->resize(TL_WIDTH + NUM_TICK_SIZE , TL_SLIDER_HEIGHT);
+        sliderPlayTime->resize(TL_WIDTH+TL_SLIDER_HANDLE_GAP*2 , TL_SLIDER_HEIGHT);
     }
 
-    // reset label
-    labelDate->setText(tr(""));
-    labelTime->setText(tr(""));
     updateTimeLinePixmap();
-    update();
 }
 void PlayTimeBar::paintEvent(QPaintEvent *event)
 {
@@ -124,18 +129,18 @@ void PlayTimeBar::paintEvent(QPaintEvent *event)
 
     painter.drawPixmap(0, 0, timeLinepixmap);
 
-    if(xPos > 0 && yPos > 0)
+    if( xPos > 0 )
     {
         painter.setPen(QColor(255, 0, 0));
         painter.setBrush(QColor(255, 0, 0)); // video data
-        QRect bar(xPos, 1, NUM_TICK_SIZE, TL_HEIGHT);
+        QRect bar(xPos-NUM_TICK_SIZE/2, TL_UP_MARGIN, NUM_TICK_SIZE, TL_HEIGHT);
         painter.drawRect(bar);
     }
     else
     {
         painter.setPen(QColor(255, 0, 0));
         painter.setBrush(QColor(255, 0, 0)); // video data
-        QRect bar(TL_LEFT_MARGIN, 1, NUM_TICK_SIZE, TL_HEIGHT);
+        QRect bar(TL_LEFT_MARGIN, TL_UP_MARGIN, NUM_TICK_SIZE, TL_HEIGHT);
         painter.drawRect(bar);
     }
 }
@@ -150,10 +155,26 @@ void PlayTimeBar::updateTimeLinePixmap()
     timeLinepixmap.fill(this, 0, 0);
     QPainter painter(&timeLinepixmap);
     painter.initFrom(this);
-    drawTimeLine(&painter);
+
+    QFont textFont;
+    textFont.setPixelSize(textFontSize);
+    painter.setFont(textFont);
+
+    switch (timeLineStatus)
+    {
+        case 1 : { drawTimeLine1(&painter); break; }    //unified channel, hour   status
+        case 2 : { drawTimeLine2(&painter); break; }    //unified channel, minute status
+        case 3 : { drawTimeLine3(&painter); break; }    //each    channel, hour   status
+        case 4 : { drawTimeLine4(&painter); break; }    //each    channel, minute status
+    }
+
+    update();
 }
-void PlayTimeBar::drawTimeLine(QPainter *painter)
+
+void PlayTimeBar::drawTimeLine1(QPainter *painter)
 {
+    TL_HEIGHT = heightSmall;
+
     int      hourMax       = 24,
              videoStartPos = -1,
              videoEndPos   = -1,
@@ -183,12 +204,12 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
 
     if(dlsEndHour >= 0)
     {
-        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), 1, TL_WIDTH+(TL_WIDTH/24),  TL_HEIGHT);
+        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), TL_UP_MARGIN, TL_WIDTH+(TL_WIDTH/24), TL_HEIGHT);
         painter->drawRect(bar);
     }
     else
     {
-        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), 1, TL_WIDTH,  TL_HEIGHT);
+        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), TL_UP_MARGIN, TL_WIDTH, TL_HEIGHT);
         painter->drawRect(bar);
     }
 
@@ -223,11 +244,10 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
             {
                 if((audioEndPos >= 0) && (bAudioExist == false))
                 {
-                    rect.setRect(audioStartPos, 1, audioEndPos, (TL_HEIGHT/2) );
+                    rect.setRect(audioStartPos, TL_UP_MARGIN, audioEndPos, (TL_HEIGHT/2) );
                     painter->fillRect(rect, QColor(65, 232, 23));
-                    rect.setRect(audioStartPos, TL_HEIGHT/2+1, audioEndPos, (TL_HEIGHT/2)+1 );
+                    rect.setRect(audioStartPos, TL_UP_MARGIN+TL_HEIGHT/2, audioEndPos, (TL_HEIGHT/2) );
                     painter->fillRect(rect, QColor(235, 173, 71));
-
                     videoStartPos = audioStartPos = -1;
                     videoEndPos   = audioEndPos = -1;
                 }
@@ -238,8 +258,6 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
                     videoEndPos   = 0;
                 }
 
-                videoEndPos += 1;
-
                 if(bAudioExist)
                 {
                     if(audioStartPos < 0)
@@ -247,7 +265,7 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
                         audioStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + (i * NUM_MINIMUM_PIXEL);
                         audioEndPos   = 0;
 
-                        rect.setRect(videoStartPos, 1, videoEndPos , (TL_HEIGHT/2)-1 );
+                        rect.setRect(videoStartPos, TL_UP_MARGIN, videoEndPos, (TL_HEIGHT/2) );
                         painter->fillRect(rect, QColor(65, 232, 23));
                         videoStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + (i * NUM_MINIMUM_PIXEL);
                         videoEndPos   = NUM_MINIMUM_PIXEL;
@@ -255,6 +273,8 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
 
                     audioEndPos += NUM_MINIMUM_PIXEL;
                 }
+
+                videoEndPos += NUM_MINIMUM_PIXEL;
 
                 lastTickPos = (k*NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL) + (i*NUM_MINIMUM_PIXEL); // slider pos. not geometric pos.
             }
@@ -264,14 +284,14 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
                 {
                     if(audioStartPos >= 0)
                     {
-                        rect.setRect(audioStartPos, 1, audioEndPos, (TL_HEIGHT/2) );
+                        rect.setRect(audioStartPos, TL_UP_MARGIN, audioEndPos, (TL_HEIGHT/2) );
                         painter->fillRect(rect, QColor(65, 232, 23));
-                        rect.setRect(audioStartPos, TL_HEIGHT/2+1, audioEndPos, (TL_HEIGHT/2)+1 );
+                        rect.setRect(audioStartPos, TL_UP_MARGIN+TL_HEIGHT/2, audioEndPos, (TL_HEIGHT/2) );
                         painter->fillRect(rect, QColor(235, 173, 71));
                     }
                     else
                     {
-                        rect.setRect(videoStartPos, 1, videoEndPos, TL_HEIGHT-1);
+                        rect.setRect(videoStartPos, TL_UP_MARGIN, videoEndPos, TL_HEIGHT);
                         painter->fillRect(rect, QColor(65, 232, 23));
                     }
 
@@ -286,14 +306,14 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
     {
         if(audioStartPos >= 0)
         {
-            rect.setRect(audioStartPos, 1, audioEndPos, (TL_HEIGHT/2) );
+            rect.setRect(audioStartPos, TL_UP_MARGIN, audioEndPos, (TL_HEIGHT/2) );
             painter->fillRect(rect, QColor(65, 232, 23));
-            rect.setRect(audioStartPos, TL_HEIGHT/2+1 , audioEndPos, (TL_HEIGHT/2)+1 );
+            rect.setRect(audioStartPos, TL_UP_MARGIN+TL_HEIGHT/2, audioEndPos, (TL_HEIGHT/2) );
             painter->fillRect(rect, QColor(235, 173, 71));
         }
         else
         {
-            rect.setRect(videoStartPos, 1, videoEndPos, TL_HEIGHT-1 );
+            rect.setRect(videoStartPos, TL_UP_MARGIN, videoEndPos, TL_HEIGHT );
             painter->fillRect(rect, QColor(65, 232, 23));
         }
 
@@ -317,27 +337,636 @@ void PlayTimeBar::drawTimeLine(QPainter *painter)
 
     for(int ii = 0; ii <= TL_WIDTH; ii++)
     {
-        if((ii  % (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL) ) == 0)
+        if((ii % (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL) ) == 0)
         {
-            rect.setRect((ii + resizeTimeLine_LeftGap + TL_LEFT_MARGIN), 1, NUM_TICK_SIZE, TL_HEIGHT/4);
-            painter->fillRect(rect, QColor(0, 0, 0));
+            painter->setPen(QPen(QColor(39, 0, 79), lineSize, Qt::SolidLine));
+            painter->drawLine(ii+(resizeTimeLine_LeftGap+TL_LEFT_MARGIN), TL_UP_MARGIN, ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+TL_HEIGHT);
         }
 
         if((ii % (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL*3) ) == 0)
         {
-            rect.setRect((ii + resizeTimeLine_LeftGap + TL_LEFT_MARGIN), 1, NUM_TICK_SIZE, TL_HEIGHT/2);
-            painter->fillRect(rect, QColor(255, 0, 0));
+            painter->setPen(QPen(QColor(39, 0, 79), lineSize*2, Qt::SolidLine));
+            painter->drawLine(ii+(resizeTimeLine_LeftGap+TL_LEFT_MARGIN), TL_UP_MARGIN, ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+TL_HEIGHT);
+
+            int hour = ii/(NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL);
+            painter->setPen(QColor(255,255,255));
+            painter->drawText(ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN-textWidth/2, (TL_UP_MARGIN-textHeight)/2, textWidth, textHeight, Qt::AlignCenter, QString("%1").arg(hour));
         }
+    }
+
+    for(int i=0; i<1+1; i++)
+    {
+        painter->setPen(QPen(QColor(39, 0, 79), lineSize, Qt::SolidLine));
+        painter->drawLine(resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+TL_HEIGHT*i, resizeTimeLine_LeftGap+TL_LEFT_MARGIN+TL_WIDTH, TL_UP_MARGIN+TL_HEIGHT*i);
+    }
+}
+
+void PlayTimeBar::drawTimeLine3(QPainter *painter)
+{
+    TL_HEIGHT = heightBig;
+
+    int      hourMax       = 24,
+             videoStartPos = -1,
+             videoEndPos   = -1,
+             audioStartPos = -1,
+             audioEndPos   = -1,
+             tmpLast       = 0,
+             recordRectHeight = TL_HEIGHT/CH_COUNT-lineSize;
+
+    bool     bVideoExist   = false,
+             bAudioExist   = false;
+
+    QRect    rect;
+
+    if(EventSearchPB)
+    {
+        return;
+    }
+
+    if(lastTickPos && isRepaintByTimeOver)
+    {
+        tmpLast = lastTickPos + (resizeTimeLine_LeftGap + TL_LEFT_MARGIN);
+        lastTickPos = 0;
+    }
+
+    painter->setBrush(QColor(255, 255, 255));
+
+    qDebug("[CHECKPOINT] timelinepixmap draw position");
+
+    if(dlsEndHour >= 0)
+    {
+        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), TL_UP_MARGIN, TL_WIDTH+(TL_WIDTH/24),  TL_HEIGHT);
+        painter->drawRect(bar);
+    }
+    else
+    {
+        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), TL_UP_MARGIN, TL_WIDTH,  TL_HEIGHT);
+        painter->drawRect(bar);
+    }
+
+    if(dlsEndHour >= 0)
+    {
+        hourMax = 25;
+    }
+
+    for(int j=0; j<CH_COUNT; j++)
+    {
+        for(int k = 0; k < hourMax; k++)
+        {
+            //qDebug("%s() .... timeLog[%d].channel[0] = %x", __func__, k, timeLog[k].channel[0]);
+            for(int i = 0; i < NUM_MIN_PER_HOUR; i++) // 720p: 1hour = 20 pixel , 1080p: 1hour = 60 pixel
+            {
+                bVideoExist = bAudioExist = false;
+
+                for(int m = 0; m < NUM_15SEC_PER_MIN; m++) // 720p: 2 pixel = 3 min ( 15sec * 12 = 3 min), 1080p: 1px = 1 min ( 15sec * 4 = 1 min )
+                {
+                    int secPos = i * NUM_15SEC_PER_MIN + m;
+
+                    if(timeLog[k].channel[secPos] & (1<<j))
+                    {
+                        bVideoExist = true;
+                    }
+                    if(timeLog[k].channel[secPos] & (1<<(j+16)))
+                    {
+                        bAudioExist = true;
+                    }
+                }
+
+                if(bVideoExist)
+                {
+                    if((audioEndPos >= 0) && (bAudioExist == false))
+                    {
+                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                        painter->fillRect(rect, QColor(65, 232, 23));
+                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2 );
+                        painter->fillRect(rect, QColor(235, 173, 71));
+                        videoStartPos = audioStartPos = -1;
+                        videoEndPos   = audioEndPos = -1;
+                    }
+
+                    if(videoStartPos < 0)
+                    {
+                        videoStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + (i * NUM_MINIMUM_PIXEL);
+                        videoEndPos   = 0;
+                    }
+
+                    if(bAudioExist)
+                    {
+                        if(audioStartPos < 0)
+                        {
+                            audioStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + (i * NUM_MINIMUM_PIXEL);
+                            audioEndPos   = 0;
+
+                            rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight);
+                            painter->fillRect(rect, QColor(65, 232, 23));
+
+                            videoStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + (i * NUM_MINIMUM_PIXEL);
+                            videoEndPos   = NUM_MINIMUM_PIXEL;
+                        }
+
+                        audioEndPos += NUM_MINIMUM_PIXEL;
+                    }
+
+                    videoEndPos += NUM_MINIMUM_PIXEL;
+
+                    lastTickPos = (k*NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL) + (i*NUM_MINIMUM_PIXEL); // slider pos. not geometric pos.
+                }
+                else
+                {
+                    if(videoStartPos >= 0)
+                    {
+                        if(audioStartPos >= 0)
+                        {
+                            rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                            painter->fillRect(rect, QColor(65, 232, 23));
+                            rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2 );
+                            painter->fillRect(rect, QColor(235, 173, 71));
+                        }
+                        else
+                        {
+                            rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight );
+                            painter->fillRect(rect, QColor(65, 232, 23));
+                        }
+
+                        videoStartPos = audioStartPos = -1;
+                        videoEndPos   = audioEndPos   = -1;
+                    }
+                }
+            }
+        }
+
+        if(videoStartPos >= 0)
+        {
+            if(audioStartPos >= 0)
+            {
+                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                painter->fillRect(rect, QColor(65, 232, 23));
+                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2 );
+                painter->fillRect(rect, QColor(235, 173, 71));
+            }
+            else
+            {
+                rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight );
+                painter->fillRect(rect, QColor(65, 232, 23));
+            }
+
+            videoStartPos = audioStartPos = -1;
+            videoEndPos   = audioEndPos = -1;
+        }
+    }
+
+    if(isRepaintByTimeOver)
+    {
+        if((tmpLast - (resizeTimeLine_LeftGap + TL_LEFT_MARGIN)) == lastTickPos)
+        {
+            qDebug(" playback time over but index not updated..%d", lastTickPos);
+        }
+
+        isSliderChanged = true;
+        lastTickPos     = sliderPlayTime->value();
+        isSliderChanged = false;
+    }
+
+    isRepaintByTimeOver = false;
+
+    for(int ii = 0; ii <= TL_WIDTH; ii++)
+    {
+        if((ii % (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL) ) == 0)
+        {
+            painter->setPen(QPen(QColor(39, 0, 79), lineSize, Qt::SolidLine));
+            painter->drawLine(ii+(resizeTimeLine_LeftGap+TL_LEFT_MARGIN), TL_UP_MARGIN, ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+TL_HEIGHT);
+        }
+
+        if((ii % (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL*3) ) == 0)
+        {
+            painter->setPen(QPen(QColor(39, 0, 79), lineSize*2, Qt::SolidLine));
+            painter->drawLine(ii+(resizeTimeLine_LeftGap+TL_LEFT_MARGIN), TL_UP_MARGIN, ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+TL_HEIGHT);
+
+            int hour = ii/(NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL);
+            painter->setPen(QColor(255,255,255));
+            painter->drawText( ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN-textWidth/2, (TL_UP_MARGIN-textHeight)/2, textWidth, textHeight, Qt::AlignCenter, QString("%1").arg(hour));
+        }
+    }
+
+    for(int i=0; i<CH_COUNT+1; i++)
+    {
+        painter->setPen(QPen(QColor(39, 0, 79), lineSize, Qt::SolidLine));
+        painter->drawLine( resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+(recordRectHeight+lineSize)*i, resizeTimeLine_LeftGap+TL_LEFT_MARGIN+TL_WIDTH, TL_UP_MARGIN+(recordRectHeight+lineSize)*i);
+    }
+}
+
+void PlayTimeBar::drawTimeLine2(QPainter *painter)
+{
+    TL_HEIGHT=heightSmall;
+
+    int      hourMax       = 24,
+             videoStartPos = -1,
+             videoEndPos   = -1,
+             audioStartPos = -1,
+             audioEndPos   = -1,
+             tmpLast       = 0;
+
+    bool     bVideoExist   = false,
+             bAudioExist   = false;
+
+    QRect    rect;
+
+    if(EventSearchPB)
+    {
+        return;
+    }
+
+    if(lastTickPos && isRepaintByTimeOver)
+    {
+        tmpLast = lastTickPos + (resizeTimeLine_LeftGap + TL_LEFT_MARGIN);
+        lastTickPos = 0;
+    }
+
+    painter->setBrush(QColor(255, 255, 255));
+
+    qDebug("[CHECKPOINT] timelinepixmap draw position");
+
+    if(dlsEndHour >= 0)
+    {
+        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), TL_UP_MARGIN, TL_WIDTH+(TL_WIDTH/24),  TL_HEIGHT);
+        painter->drawRect(bar);
+    }
+    else
+    {
+        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), TL_UP_MARGIN, TL_WIDTH,  TL_HEIGHT);
+        painter->drawRect(bar);
+    }
+
+    if(dlsEndHour >= 0)
+    {
+        hourMax = 25;
+    }
+
+    int NUM_15SEC_PER_PIXEL = TL_WIDTH/60/4;
+    int currentTime = currentPbHour;
+
+    for(int k=0; k<60*60/15; k++)
+    {
+        bVideoExist = bAudioExist = false;
+
+        if(timeLog[currentTime].channel[k] & 0xffff)
+        {
+            bVideoExist = true;
+        }
+        if(timeLog[currentTime].channel[k] & 0xffff0000)
+        {
+            bAudioExist = true;
+        }
+
+        if( bVideoExist )
+        {
+            if( (audioEndPos >= 0) && (bAudioExist == false) )
+            {
+                rect.setRect(audioStartPos, TL_UP_MARGIN, audioEndPos, TL_HEIGHT/2 );
+                painter->fillRect(rect, QColor(65, 232, 23));
+                rect.setRect(audioStartPos, TL_UP_MARGIN+TL_HEIGHT/2, audioEndPos, TL_HEIGHT/2 );
+                painter->fillRect(rect, QColor(235, 173, 71));
+
+                videoStartPos = audioStartPos = -1;
+                videoEndPos   = audioEndPos = -1;
+            }
+
+            if(videoStartPos < 0)
+            {
+                videoStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_15SEC_PER_PIXEL);
+                videoEndPos   = 0;
+            }
+
+            if(bAudioExist)
+            {
+                if(audioStartPos < 0)
+                {
+                    audioStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_15SEC_PER_PIXEL);
+                    audioEndPos   = 0;
+
+                    rect.setRect(videoStartPos, TL_UP_MARGIN, videoEndPos , TL_HEIGHT );
+                    painter->fillRect(rect, QColor(65, 232, 23));
+
+                    videoStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_15SEC_PER_PIXEL);
+                    videoEndPos   = NUM_15SEC_PER_PIXEL;
+                }
+
+                audioEndPos += NUM_15SEC_PER_PIXEL;
+            }
+
+            videoEndPos += NUM_15SEC_PER_PIXEL;
+
+            lastTickPos = k * NUM_15SEC_PER_PIXEL; // slider pos. not geometric pos.
+        }
+        else
+        {
+            if(videoStartPos >= 0)
+            {
+                if(audioStartPos >= 0)
+                {
+                    rect.setRect(audioStartPos, TL_UP_MARGIN, audioEndPos, TL_HEIGHT/2 );
+                    painter->fillRect(rect, QColor(65, 232, 23));
+                    rect.setRect(audioStartPos, TL_UP_MARGIN+TL_HEIGHT/2, audioEndPos, TL_HEIGHT/2 );
+                    painter->fillRect(rect, QColor(235, 173, 71));
+                }
+                else
+                {
+                    rect.setRect(videoStartPos, TL_UP_MARGIN, videoEndPos, TL_HEIGHT);
+                    painter->fillRect(rect, QColor(65, 232, 23));
+                }
+
+                videoStartPos = audioStartPos = -1;
+                videoEndPos   = audioEndPos   = -1;
+            }
+        }
+    }
+
+    if(videoStartPos >= 0)
+    {
+        if(audioStartPos >= 0)
+        {
+            rect.setRect(audioStartPos, TL_UP_MARGIN, audioEndPos, TL_HEIGHT/2 );
+            painter->fillRect(rect, QColor(65, 232, 23));
+            rect.setRect(audioStartPos, TL_UP_MARGIN+TL_HEIGHT/2 , audioEndPos, TL_HEIGHT/2 );
+            painter->fillRect(rect, QColor(235, 173, 71));
+        }
+        else
+        {
+            rect.setRect(videoStartPos, TL_UP_MARGIN, videoEndPos, TL_HEIGHT );
+            painter->fillRect(rect, QColor(65, 232, 23));
+        }
+
+        videoStartPos = audioStartPos = -1;
+        videoEndPos   = audioEndPos = -1;
+    }
+
+    if(isRepaintByTimeOver)
+    {
+        if((tmpLast - (resizeTimeLine_LeftGap + TL_LEFT_MARGIN)) == lastTickPos)
+        {
+            qDebug(" playback time over but index not updated..%d", lastTickPos);
+        }
+
+        isSliderChanged = true;
+        lastTickPos     = sliderPlayTime->value();
+        isSliderChanged = false;
+    }
+
+    isRepaintByTimeOver = false;
+
+    for(int ii = 0; ii <= TL_WIDTH; ii++)
+    {
+        if((ii % (NUM_15SEC_PER_PIXEL*4) ) == 0)
+        {
+            painter->setPen(QPen(QColor(39, 0, 79), lineSize, Qt::SolidLine));
+            painter->drawLine(ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN, ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+TL_HEIGHT);
+        }
+
+        if((ii % (NUM_15SEC_PER_PIXEL*4*5) ) == 0)
+        {
+            painter->setPen(QPen(QColor(39, 0, 79), lineSize*2, Qt::SolidLine));
+            painter->drawLine(ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN, ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+TL_HEIGHT);
+
+            int min=ii/(NUM_15SEC_PER_PIXEL*4*5)*5;
+
+            painter->setPen(QColor(255,255,255));
+            painter->drawText((ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN)-textWidth/2, (TL_UP_MARGIN-textHeight)/2, textWidth, textHeight, Qt::AlignCenter, QString("%1").arg(min));
+        }
+    }
+
+    for(int i=0; i<1+1; i++)
+    {
+        painter->setPen(QPen(QColor(39, 0, 79), lineSize, Qt::SolidLine));
+        painter->drawLine( resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+TL_HEIGHT*i, resizeTimeLine_LeftGap+TL_LEFT_MARGIN+TL_WIDTH, TL_UP_MARGIN+TL_HEIGHT*i);
+    }
+}
+void PlayTimeBar::drawTimeLine4(QPainter *painter)
+{
+    TL_HEIGHT=heightBig;
+
+    int      hourMax       = 24,
+             videoStartPos = -1,
+             videoEndPos   = -1,
+             audioStartPos = -1,
+             audioEndPos   = -1,
+             tmpLast       = 0,
+             recordRectHeight = TL_HEIGHT/CH_COUNT-lineSize;
+
+    bool     bVideoExist   = false,
+             bAudioExist   = false;
+
+    QRect    rect;
+
+    if(EventSearchPB)
+    {
+        return;
+    }
+
+    if(lastTickPos && isRepaintByTimeOver)
+    {
+        tmpLast = lastTickPos + (resizeTimeLine_LeftGap + TL_LEFT_MARGIN);
+        lastTickPos = 0;
+    }
+
+    painter->setBrush(QColor(255, 255, 255));
+
+    qDebug("[CHECKPOINT] timelinepixmap draw position");
+
+    if(dlsEndHour >= 0)
+    {
+        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), TL_UP_MARGIN, TL_WIDTH+(TL_WIDTH/24), TL_HEIGHT);
+        painter->drawRect(bar);
+    }
+    else
+    {
+        QRect bar((resizeTimeLine_LeftGap + TL_LEFT_MARGIN), TL_UP_MARGIN, TL_WIDTH, TL_HEIGHT);
+        painter->drawRect(bar);
+    }
+
+    if(dlsEndHour >= 0)
+    {
+        hourMax = 25;
+    }
+
+    int NUM_15SEC_PER_PIXEL = TL_WIDTH/60/4;
+    int currentTime = currentPbHour;
+
+    for(int j=0; j<CH_COUNT; j++)
+    {
+        for(int k=0; k<60*60/15; k++)
+        {
+            bVideoExist = bAudioExist = false;
+
+            if(timeLog[currentTime].channel[k] & (1<<j))
+            {
+                bVideoExist = true;
+            }
+            if(timeLog[currentTime].channel[k] & (1<<(j+16)))
+            {
+                bAudioExist = true;
+            }
+
+            if( bVideoExist )
+            {
+                if( (audioEndPos >= 0) && (bAudioExist == false) )
+                {
+                    rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                    painter->fillRect(rect, QColor(65, 232, 23));
+                    rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2 );
+                    painter->fillRect(rect, QColor(235, 173, 71));
+
+                    videoStartPos = audioStartPos = -1;
+                    videoEndPos   = audioEndPos = -1;
+                }
+
+                if(videoStartPos < 0)
+                {
+                    videoStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_15SEC_PER_PIXEL);
+                    videoEndPos   = 0;
+                }
+
+                if(bAudioExist)
+                {
+                    if(audioStartPos < 0)
+                    {
+                        audioStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_15SEC_PER_PIXEL);
+                        audioEndPos   = 0;
+
+                        rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos , recordRectHeight );
+                        painter->fillRect(rect, QColor(65, 232, 23));
+
+                        videoStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_15SEC_PER_PIXEL);
+                        videoEndPos   = NUM_15SEC_PER_PIXEL;
+                    }
+
+                    audioEndPos += NUM_15SEC_PER_PIXEL;
+                }
+
+                videoEndPos += NUM_15SEC_PER_PIXEL;
+
+                lastTickPos = k * NUM_15SEC_PER_PIXEL; // slider pos. not geometric pos.
+            }
+            else
+            {
+                if(videoStartPos >= 0)
+                {
+                    if(audioStartPos >= 0)
+                    {
+                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                        painter->fillRect(rect, QColor(65, 232, 23));
+                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2 );
+                        painter->fillRect(rect, QColor(235, 173, 71));
+                    }
+                    else
+                    {
+                        rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight );
+                        painter->fillRect(rect, QColor(65, 232, 23));
+                    }
+
+                    videoStartPos = audioStartPos = -1;
+                    videoEndPos   = audioEndPos   = -1;
+                }
+            }
+        }
+
+        if(videoStartPos >= 0)
+        {
+            if(audioStartPos >= 0)
+            {
+                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                painter->fillRect(rect, QColor(65, 232, 23));
+                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2 , audioEndPos, recordRectHeight/2 );
+                painter->fillRect(rect, QColor(235, 173, 71));
+            }
+            else
+            {
+                rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight );
+                painter->fillRect(rect, QColor(65, 232, 23));
+            }
+
+            videoStartPos = audioStartPos = -1;
+            videoEndPos   = audioEndPos = -1;
+        }
+    }
+
+    if(isRepaintByTimeOver)
+    {
+        if((tmpLast - (resizeTimeLine_LeftGap + TL_LEFT_MARGIN)) == lastTickPos)
+        {
+            qDebug(" playback time over but index not updated..%d", lastTickPos);
+        }
+
+        isSliderChanged = true;
+        lastTickPos     = sliderPlayTime->value();
+        isSliderChanged = false;
+    }
+
+    isRepaintByTimeOver = false;
+
+    for(int ii = 0; ii <= TL_WIDTH; ii++)
+    {
+        if((ii % (NUM_15SEC_PER_PIXEL*4) ) == 0)
+        {
+            painter->setPen(QPen(QColor(39, 0, 79), lineSize, Qt::SolidLine));
+            painter->drawLine(ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN, ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+TL_HEIGHT);
+        }
+
+        if((ii % (NUM_15SEC_PER_PIXEL*4*5) ) == 0)
+        {
+            painter->setPen(QPen(QColor(39, 0, 79), lineSize*2, Qt::SolidLine));
+            painter->drawLine(ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN, ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+TL_HEIGHT);
+
+            int min=ii/(NUM_15SEC_PER_PIXEL*4*5)*5;
+
+            painter->setPen(QColor(255,255,255));
+            painter->drawText((ii+resizeTimeLine_LeftGap+TL_LEFT_MARGIN)-textWidth/2, (TL_UP_MARGIN-textHeight)/2, textWidth, textHeight, Qt::AlignCenter, QString("%1").arg(min));
+        }
+    }
+
+    for(int i=0; i<CH_COUNT+1; i++)
+    {
+        painter->setPen(QPen(QColor(39, 0, 79), lineSize, Qt::SolidLine));
+        painter->drawLine( resizeTimeLine_LeftGap+TL_LEFT_MARGIN, TL_UP_MARGIN+(recordRectHeight+lineSize)*i, resizeTimeLine_LeftGap+TL_LEFT_MARGIN+TL_WIDTH, TL_UP_MARGIN+(recordRectHeight+lineSize)*i);
     }
 }
 void PlayTimeBar::timeSliderChanged(int val)
 {
     QString strTime;
-    int Hour = (int)(val / (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL));
-    int Min  = (val - (Hour * (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL))) * (15 * NUM_15SEC_PER_MIN / 60) / NUM_MINIMUM_PIXEL;
+    QString strAmPm;
+    int Hour;
+    int Min;
+    int Sec;
 
     if(isSliderChanged == true || isTimeBarDrag == true)
     {
+        if( timeLineStatus == 1 || timeLineStatus == 3 )
+        {
+            Hour = (int)(val / (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL));
+            Min  = (val - (Hour * (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL))) * (15 * NUM_15SEC_PER_MIN / 60) / NUM_MINIMUM_PIXEL;
+            Sec  = 0;
+        }
+        else
+        {
+            int minPx=TL_WIDTH/60/4;
+            Hour = currentPbHour;
+            Min  = (int)(val/minPx/4);
+            Sec = ((val/minPx)-(Min*4)) * 15;
+        }
+
+        if( !is24HourMode && Hour>=12 )
+        {
+            Hour -=12;
+            strAmPm=tr("PM");
+        }
+        else
+        {
+            strAmPm=tr("AM");
+        }
+        if( Hour == 0 )
+        {
+            Hour +=12;
+        }
+
         if(dlsEndHour >= 0)
         {
             qDebug("%s: =========  val %d, hour %d, end %d", __func__, val, Hour, dlsEndHour);
@@ -348,11 +977,11 @@ void PlayTimeBar::timeSliderChanged(int val)
 
                 if(Hour < 10)
                 {
-                    strTime = tr("0%1:").arg(Hour);
+                    strTime = QString("0%1:").arg(Hour);
                 }
                 else
                 {
-                    strTime = tr("%1:").arg(Hour);
+                    strTime = QString("%1:").arg(Hour);
                 }
             }
             else
@@ -362,7 +991,7 @@ void PlayTimeBar::timeSliderChanged(int val)
                     if(dlsEndHour == 0)
                     {
                         Hour    = 23;
-                        strTime = tr("%1':").arg(Hour);
+                        strTime = QString("%1':").arg(Hour);
                     }
                     else
                     {
@@ -370,11 +999,11 @@ void PlayTimeBar::timeSliderChanged(int val)
 
                         if(Hour < 10)
                         {
-                            strTime = tr("0%1':").arg(Hour);
+                            strTime = QString("0%1':").arg(Hour);
                         }
                         else
                         {
-                            strTime = tr("%1':").arg(Hour);
+                            strTime = QString("%1':").arg(Hour);
                         }
                     }
                 }
@@ -382,59 +1011,85 @@ void PlayTimeBar::timeSliderChanged(int val)
                 {
                     if(Hour < 10)
                     {
-                        strTime = tr("0%1:").arg(Hour);
+                        strTime = QString("0%1:").arg(Hour);
                     }
                     else
                     {
-                        strTime = tr("%1:").arg(Hour);
+                        strTime = QString("%1:").arg(Hour);
                     }
                 }
             }
 
             if(Min < 10)
             {
-                strTime += tr("0%1:00").arg(Min);
+                strTime += QString("0%1:").arg(Min);
             }
             else
             {
-                strTime += tr("%1:00").arg(Min);
+                strTime += QString("%1:").arg(Min);
+            }
+
+            if(Sec < 10)
+            {
+                strTime += QString("0%1").arg(Sec);
+            }
+            else
+            {
+                strTime += QString("%1").arg(Sec);
+            }
+
+            if( !is24HourMode )
+            {
+                strTime += QString(" %1").arg(strAmPm);
             }
 
             if(gFlagTimeReceived == 0)
             {
-                labelTime->setText(strTime);
+                emit updateTimeLabel(strTime);
             }
 
             xPos = val + (resizeTimeLine_LeftGap + TL_LEFT_MARGIN);
-            yPos = 20;
         }
         else
         {
             if(Hour < 10)
             {
-                strTime = tr("0%1:").arg(Hour);
+                strTime = QString("0%1:").arg(Hour);
             }
             else
             {
-                strTime = tr("%1:").arg(Hour);
+                strTime = QString("%1:").arg(Hour);
             }
 
             if(Min  < 10)
             {
-                strTime += tr("0%1:00").arg(Min);
+                strTime += QString("0%1:").arg(Min);
             }
             else
             {
-                strTime += tr("%1:00").arg(Min);
+                strTime += QString("%1:").arg(Min);
+            }
+
+            if(Sec < 10)
+            {
+                strTime += QString("0%1").arg(Sec);
+            }
+            else
+            {
+                strTime += QString("%1").arg(Sec);
+            }
+
+            if( !is24HourMode )
+            {
+                strTime += QString(" %1").arg(strAmPm);
             }
 
             if(gFlagTimeReceived == 0)
             {
-                labelTime->setText(strTime);
+                emit updateTimeLabel(strTime);
             }
 
             xPos = val + (resizeTimeLine_LeftGap + TL_LEFT_MARGIN);
-            yPos = 20;
         }
 
         update();
@@ -454,7 +1109,6 @@ void PlayTimeBar::timeSliderReleased()
     pos              = sliderPlayTime->value();
     isSliderChanged  = false;
     xPos             = pos + TL_LEFT_MARGIN;
-    yPos             = 20;
 
     //qDebug("......... slider release pos = %d ", pos);
     emit playTimeChanged(pos);
@@ -474,30 +1128,40 @@ time_t PlayTimeBar::getRecordExistTime(int pos, int dir)
 
     bool       bVideoExist = false;
 
-    Hour = (int)(pos / (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL));
-    Min  = (pos - (Hour * (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL))) * (15 * NUM_15SEC_PER_MIN / 60) / NUM_MINIMUM_PIXEL;
-
     //lastPbTime
     localtime_r(&lastPbTime, &tmChange);
 
-    if(dlsEndHour >= 0)
+    if( timeLineStatus == 1 || timeLineStatus == 3 )
     {
-        hourMax = 25;
-    }
+        Hour = (int)(pos / (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL));
+        Min  = (pos - (Hour * (NUM_MIN_PER_HOUR*NUM_MINIMUM_PIXEL))) * (15 * NUM_15SEC_PER_MIN / 60) / NUM_MINIMUM_PIXEL;
+        secpos = (Min * 4);
 
-    secpos = (Min * 4);
-
-    if(!(timeLog[Hour].channel[secpos] & (0xffff)))
-    {
-        if(dir >= 0)
+        if(dlsEndHour >= 0)
         {
-            for(i = Hour; i < hourMax; i++)
+            hourMax = 25;
+        }
+
+        if(!(timeLog[Hour].channel[secpos] & (0xffff)))     // when record video not exist
+        {
+            if(dir >= 0)                                    //dir = FF
             {
-                for(j = 0; j < 240; j++)
+                for(i = Hour; i < hourMax; i++)             //check all hour
                 {
-                    if(i == Hour)
+                    for(j = 0; j < 240; j++)                //check all min
                     {
-                        if(j > secpos)
+                        if(i == Hour)                       //when same Hour, check future
+                        {
+                            if(j > secpos)
+                            {
+                                if(timeLog[i].channel[j] & (0xffff))
+                                {
+                                    bVideoExist = true;
+                                    break;
+                                }
+                            }
+                        }
+                        else
                         {
                             if(timeLog[i].channel[j] & (0xffff))
                             {
@@ -506,103 +1170,189 @@ time_t PlayTimeBar::getRecordExistTime(int pos, int dir)
                             }
                         }
                     }
-                    else
+
+                    if(bVideoExist)
                     {
-                        if(timeLog[i].channel[j] & (0xffff))
+                        break;
+                    }
+                }
+            }
+            else                                            //dir = Rewind
+            {
+                for(i = Hour; i >= 0; i--)
+                {
+                    for(j = 239; j >= 0; j--)
+                    {
+                        if(i == Hour)
                         {
-                            bVideoExist = true;
+                            if(j < secpos)
+                            {
+                                if(timeLog[i].channel[j] & (0xffff))
+                                {
+                                    bVideoExist = true;
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if(timeLog[i].channel[j] & (0xffff))
+                            {
+                                bVideoExist = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if(bVideoExist)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+        else                                               // when record video exist
+        {
+            i           = Hour;
+            j           = secpos;
+            bVideoExist = true;
+        }
+
+        if(!bVideoExist)
+        {
+            return 0;
+        }
+
+        qDebug("=========== hour %d -> %d, end %d", Hour, i, dlsEndHour);
+
+        Hour = i;
+        Min  = j / 4;
+
+        // DLS
+        if(dlsEndHour >= 0 && ((Hour >= (dlsEndHour-1)) || (Hour == dlsEndHour)))
+        {
+            tmChange.tm_hour = Hour - 1;
+            tmChange.tm_min  = Min;
+            tmChange.tm_sec  = 0;
+            now              = mktime(&tmChange);
+        }
+        else
+        {
+            tmChange.tm_hour = Hour;
+            tmChange.tm_min  = Min;
+            tmChange.tm_sec  = 0;
+            now              = mktime(&tmChange);
+
+            // dls check...
+            if(dlsPlayback.isChecked && dlsPlayback.isDlsEnabled)
+            {
+                if(dlsPlayback.tDlsEnd > dlsPlayback.tDlsBegin)
+                {
+                    if((now >= dlsPlayback.tDlsBegin) && (now < dlsPlayback.tDlsEnd))
+                    {
+                        now -= 3600;
+                    }
+                }
+                else
+                {
+                    if(!((now >= dlsPlayback.tDlsEnd) && (now < dlsPlayback.tDlsBegin)))
+                    {
+                        now -= 3600;
+                    }
+                }
+            }
+        }
+    }
+    else
+    {
+        int minPx = TL_WIDTH/60/4;
+
+        Hour    = tmChange.tm_hour;
+        Min     = (int)(pos/minPx/4);
+        int Sec = (pos/minPx)-(Min*4);
+        secpos  = pos/minPx;
+
+        if(dlsEndHour >= 0)
+        {
+            hourMax = 25;
+        }
+
+        if( !(timeLog[Hour].channel[secpos] & (0xffff)) )
+        {
+            if(dir >= 0)
+            {
+                for(i=0; i<240; i++)
+                {
+                    if(i > secpos)
+                    {
+                        if(timeLog[Hour].channel[i] & (0xffff))
+                        {
+                            bVideoExist=true;
                             break;
                         }
                     }
                 }
-
-                if(bVideoExist)
+            }
+            else
+            {
+                for(i=239; i>=0; i++)
                 {
-                    break;
+                    if( i<secpos )
+                    {
+                        if(timeLog[Hour].channel[i] & (0xffff))
+                        {
+                            bVideoExist=true;
+                            break;
+                        }
+                    }
                 }
             }
         }
         else
         {
-            for(i = Hour; i >= 0; i--)
-            {
-                for(j = 239; j >= 0; j--)
-                {
-                    if(i == Hour)
-                    {
-                        if(j < secpos)
-                        {
-                            if(timeLog[i].channel[j] & (0xffff))
-                            {
-                                bVideoExist = true;
-                                break;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if(timeLog[i].channel[j] & (0xffff))
-                        {
-                            bVideoExist = true;
-                            break;
-                        }
-                    }
-                }
-
-                if(bVideoExist)
-                {
-                    break;
-                }
-            }
+            i = secpos;
+            bVideoExist=true;
         }
-    }
-    else
-    {
-        i           = Hour;
-        j           = secpos;
-        bVideoExist = true;
-    }
 
-    if(!bVideoExist)
-    {
-        return 0;
-    }
-
-    qDebug("=========== hour %d -> %d, end %d", Hour, i, dlsEndHour);
-
-    Hour = i;
-    Min  = j / 4;
-
-    // DLS
-    if(dlsEndHour >= 0 && ((Hour >= (dlsEndHour-1)) || (Hour == dlsEndHour)))
-    {
-        tmChange.tm_hour = Hour - 1;
-        tmChange.tm_min  = Min;
-        tmChange.tm_sec  = 0;
-        now              = mktime(&tmChange);
-    }
-    else
-    {
-        tmChange.tm_hour = Hour;
-        tmChange.tm_min  = Min;
-        tmChange.tm_sec  = 0;
-        now              = mktime(&tmChange);
-
-        // dls check...
-        if(dlsPlayback.isChecked && dlsPlayback.isDlsEnabled)
+        if(!bVideoExist)
         {
-            if(dlsPlayback.tDlsEnd > dlsPlayback.tDlsBegin)
+            return 0;
+        }
+
+        Min = i/4;
+        Sec = (i-Min*4)*15;
+
+        // DLS
+        if(dlsEndHour >= 0 && ((Hour >= (dlsEndHour-1)) || (Hour == dlsEndHour)))
+        {
+            tmChange.tm_hour = Hour - 1;
+            tmChange.tm_min  = Min;
+            tmChange.tm_sec  = Sec;
+            now              = mktime(&tmChange);
+        }
+        else
+        {
+            tmChange.tm_hour = Hour;
+            tmChange.tm_min  = Min;
+            tmChange.tm_sec  = Sec;
+            now              = mktime(&tmChange);
+
+            // dls check...
+            if(dlsPlayback.isChecked && dlsPlayback.isDlsEnabled)
             {
-                if((now >= dlsPlayback.tDlsBegin) && (now < dlsPlayback.tDlsEnd))
+                if(dlsPlayback.tDlsEnd > dlsPlayback.tDlsBegin)
                 {
-                    now -= 3600;
+                    if((now >= dlsPlayback.tDlsBegin) && (now < dlsPlayback.tDlsEnd))
+                    {
+                        now -= 3600;
+                    }
                 }
-            }
-            else
-            {
-                if(!((now >= dlsPlayback.tDlsEnd) && (now < dlsPlayback.tDlsBegin)))
+                else
                 {
-                    now -= 3600;
+                    if(!((now >= dlsPlayback.tDlsEnd) && (now < dlsPlayback.tDlsBegin)))
+                    {
+                        now -= 3600;
+                    }
                 }
             }
         }
@@ -727,11 +1477,11 @@ int PlayTimeBar::updatePlaybackTime(time_t pbTime, int endOverlap)
             {
                 if(endOverlap)
                 {
-                    sprintf(szTime, "%d':%02d:%02d", tmPlay.tm_hour % 12, tmPlay.tm_min, tmPlay.tm_sec);
+                    sprintf(szTime, "%02d':%02d:%02d", tmPlay.tm_hour % 12, tmPlay.tm_min, tmPlay.tm_sec);
                 }
                 else
                 {
-                    sprintf(szTime, "%d:%02d:%02d", tmPlay.tm_hour % 12, tmPlay.tm_min, tmPlay.tm_sec);
+                    sprintf(szTime, "%02d:%02d:%02d", tmPlay.tm_hour % 12, tmPlay.tm_min, tmPlay.tm_sec);
                 }
             }
 
@@ -747,63 +1497,23 @@ int PlayTimeBar::updatePlaybackTime(time_t pbTime, int endOverlap)
     }
 
     gFlagTimeReceived = 1;
-    labelDate->setText(strDate);
-    labelTime->setText(sTime);
+    emit updateTimeLabel(sTime);
+    emit updateDateLabel(strDate);
 
-    if(dlsEndHour >= 0)
-    {
-        //qDebug("............ pbtime change hour %d, overlap %d, end %d", tmPlay.tm_hour, dlsEndHour, endOverlap);
-
-        if(tmPlay.tm_hour == dlsEndHour - 1)
-        {
-            if(endOverlap)
-            {
-                val = ((tmPlay.tm_hour + 1) * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + ( tmPlay.tm_min / (15*NUM_15SEC_PER_MIN/60) * NUM_MINIMUM_PIXEL );
-            }
-            else
-            {
-                val = (tmPlay.tm_hour * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + ( tmPlay.tm_min / (15*NUM_15SEC_PER_MIN/60) * NUM_MINIMUM_PIXEL );
-            }
-        }
-        else if(tmPlay.tm_hour == dlsEndHour)
-        {
-            if(endOverlap)
-            {
-                val = (tmPlay.tm_hour * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + ( tmPlay.tm_min / (15*NUM_15SEC_PER_MIN/60) * NUM_MINIMUM_PIXEL );
-            }
-            else
-            {
-                val = ((tmPlay.tm_hour + 1) * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + ( tmPlay.tm_min / (15*NUM_15SEC_PER_MIN/60) * NUM_MINIMUM_PIXEL );
-            }
-        }
-        else if(tmPlay.tm_hour > dlsEndHour)
-        {
-            val = ((tmPlay.tm_hour + 1) * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + ( tmPlay.tm_min / (15*NUM_15SEC_PER_MIN/60) * NUM_MINIMUM_PIXEL );
-        }
-        else
-        {
-            val = (tmPlay.tm_hour * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + ( tmPlay.tm_min / (15*NUM_15SEC_PER_MIN/60) * NUM_MINIMUM_PIXEL );
-        }
-    }
-    else
-    {
-        val = (tmPlay.tm_hour * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + ( tmPlay.tm_min / (15*NUM_15SEC_PER_MIN/60) * NUM_MINIMUM_PIXEL );
-    }
-
-    isSliderChanged = true;
-    sliderPlayTime->setValue(val);
-    isSliderChanged = false;
+    updateSlider();
+    currentPbHour=tmPlay.tm_hour;
 
     //qDebug("%s: val = %d \n", __func__, val);
     gFlagTimeReceived = 0;
 
     if(sliderPlayTime->isHidden() == 0)
     {
-        if(val > lastTickPos)
+        if(sliderPlayTime->value() != lastTickPos)
         {
             isRepaintByTimeOver = true;
-
+            lastTickPos = val;
             //qDebug("record index update ....");
+            updateTimeLinePixmap();
             return 1;
         }
     }
@@ -834,6 +1544,28 @@ void PlayTimeBar::sliderPlayTimeChange()
     if(EventSearchPB) { sliderPlayTime->hide(); }
     else              { sliderPlayTime->show(); }
 }
+void PlayTimeBar::updateSlider()
+{
+    struct tm tmLastPlay;
+    localtime_r(&lastPbTime, &tmLastPlay);
+
+    int val;
+    if( timeLineStatus == 1 || timeLineStatus == 3 )
+    {
+        val = (tmLastPlay.tm_hour * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + ( tmLastPlay.tm_min / (15*NUM_15SEC_PER_MIN/60) * NUM_MINIMUM_PIXEL );
+    }
+    else
+    {
+        int minPx=TL_WIDTH/60/4;
+        val = tmLastPlay.tm_min*minPx*4 + tmLastPlay.tm_sec/15*minPx;
+    }
+
+    isSliderChanged=false;
+    sliderPlayTime->setValue(val);
+
+    xPos=val+TL_LEFT_MARGIN;
+    update();
+}
 void PlayTimeBar::mousePressEvent(QMouseEvent *event)
 {
     time_t now      = 0;
@@ -843,7 +1575,8 @@ void PlayTimeBar::mousePressEvent(QMouseEvent *event)
     {
         return;
     }
-    else if(event->x()-TL_LEFT_MARGIN < 0 || event->x()-TL_LEFT_MARGIN > TL_WIDTH )
+    else if(event->x()-TL_LEFT_MARGIN < 0 || event->x()-TL_LEFT_MARGIN > TL_WIDTH
+            || event->y() < TL_UP_MARGIN || event->y() > TL_UP_MARGIN+TL_HEIGHT)
     {
         //When click outside of TimeLine, return event.
         return;
@@ -851,38 +1584,16 @@ void PlayTimeBar::mousePressEvent(QMouseEvent *event)
 
     if(event->button() == Qt::LeftButton)
     {
-        sliderValue = sliderPlayTime->value();
-
-        if((event->x()-TL_LEFT_MARGIN) > sliderValue)      // +15min
+        switch(timeLineStatus)
         {
-            sliderValue += 15 / (15*NUM_15SEC_PER_MIN/60) * NUM_MINIMUM_PIXEL;
-        }
-        else if((event->x()-TL_LEFT_MARGIN) < sliderValue) // -15min
-        {
-            sliderValue -= 15 / (15*NUM_15SEC_PER_MIN/60) * NUM_MINIMUM_PIXEL;
-        }
-        else
-        {
-            return;
+            case 1 : { timeLineStatus = 2; break; }
+            case 2 : { timeLineStatus = 1; break; }
+            case 3 : { timeLineStatus = 4; break; }
+            case 4 : { timeLineStatus = 3; break; }
         }
 
-        if(playbackDirection == PB_FF)
-        {
-            now = getRecordExistTime(sliderValue,  1);
-        }
-        else
-        {
-            now = getRecordExistTime(sliderValue, -1);
-        }
-
-        if(now > 0)
-        {
-            appmgr_search_set_time(now);
-            sliderPlayTime->setValue(sliderValue);
-            timeSliderReleased();
-            xPos = sliderValue + TL_LEFT_MARGIN;
-            update();
-        }
+        updateSlider();
+        updateTimeLinePixmap();
     }
     else if(event->button() == Qt::RightButton)
     {
@@ -899,13 +1610,22 @@ void PlayTimeBar::mousePressEvent(QMouseEvent *event)
 
         if(now > 0)
         {
-            sliderPlayTime->setPageStep(sliderValue);
             appmgr_search_set_time(now);
             sliderPlayTime->setValue(sliderValue);
             timeSliderReleased();
             xPos = sliderValue + TL_LEFT_MARGIN;
             update();
-            sliderPlayTime->setPageStep(10);
         }
     }
+}
+int PlayTimeBar::getTimeLineStatus()
+{
+    return timeLineStatus;
+}
+void PlayTimeBar::setTimeLineStatus(int status)
+{
+    timeLineStatus=status;
+
+    updateSlider();
+    updateTimeLinePixmap();
 }

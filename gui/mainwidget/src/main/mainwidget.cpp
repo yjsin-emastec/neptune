@@ -738,6 +738,7 @@ void MainWidget::createPlayBar()
     }
 
     playBar = new PlayBarDialog(this);
+    playBar->initPlayBar();
 
     connect(playBar, SIGNAL(exitSearchBar()),            this,    SLOT(stopPlayback()));
     connect(playBar, SIGNAL(backupClicked()),            this,    SLOT(runBackup()));
@@ -1559,11 +1560,12 @@ void MainWidget::startPlayback()
         }
     }
 
+    playBar->initPlayBar();
     playBar->setTimeFormat(DateFormat);
-    playBar->show();
     playBar->raise();
     playBar->activateWindow();
     playBar->updateTimeLine();
+    playBar->show();
 
     search_playback_start = 0;
 }

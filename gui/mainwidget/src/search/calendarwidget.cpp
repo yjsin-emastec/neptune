@@ -535,5 +535,4 @@ void CalendarWidget::mouseDoubleClickEvent(QMouseEvent *event)
 void CalendarWidget::setFocusStatus(int status)
 {
     focusStatus = status;
-
 }

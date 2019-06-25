@@ -1153,7 +1153,11 @@ void MainWidget::keypadEvent(unsigned char code)
                     break;
                 }
 
-                playBar->closeSearchBar();
+                if(playBar != NULL)
+                {
+                    QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Escape, Qt::NoModifier, QString(QChar(Qt::Key_Escape)));
+                    QApplication::postEvent(playBar, key);
+                }
             }
 
             break;
@@ -1164,6 +1168,11 @@ void MainWidget::keypadEvent(unsigned char code)
             {
                 QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Up, Qt::NoModifier, QString(QChar(Qt::Key_Up)));
                 QApplication::postEvent(QApplication::activeWindow() , key);
+            }
+            else if(operationMode == OPMODE_PLAYBACK && playBar != NULL)
+            {
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Up, Qt::NoModifier, QString(QChar(Qt::Key_Up)));
+                QApplication::postEvent(playBar, key);
             }
 
             break;
@@ -1176,9 +1185,10 @@ void MainWidget::keypadEvent(unsigned char code)
                 QApplication::postEvent(QApplication::activeWindow() , key);
             }
 
-            if(!EventSearchPB && operationMode == OPMODE_PLAYBACK)
+            else if(operationMode == OPMODE_PLAYBACK && playBar != NULL)
             {
-                appmgr_search_set_jump_level(0, 60);
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Left, Qt::NoModifier, QString(QChar(Qt::Key_Left)));
+                QApplication::postEvent(playBar, key);
             }
 
             break;
@@ -1190,6 +1200,11 @@ void MainWidget::keypadEvent(unsigned char code)
                 QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Enter, Qt::NoModifier, QString(QChar(Qt::Key_Enter)));
                 QApplication::postEvent(QApplication::activeWindow() , key);
             }
+            else if(operationMode == OPMODE_PLAYBACK && playBar != NULL)
+            {
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Enter, Qt::NoModifier, QString(QChar(Qt::Key_Enter)));
+                QApplication::postEvent(playBar , key);
+            }
 
             break;
 
@@ -1200,10 +1215,10 @@ void MainWidget::keypadEvent(unsigned char code)
                 QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Right, Qt::NoModifier, QString(QChar(Qt::Key_Right)));
                 QApplication::postEvent(QApplication::activeWindow() , key);
             }
-
-            if(!EventSearchPB && operationMode == OPMODE_PLAYBACK)
+            else if(operationMode == OPMODE_PLAYBACK && playBar != NULL)
             {
-                appmgr_search_set_jump_level(1, 60);
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Right, Qt::NoModifier, QString(QChar(Qt::Key_Right)));
+                QApplication::postEvent(playBar, key);
             }
 
             break;
@@ -1214,6 +1229,11 @@ void MainWidget::keypadEvent(unsigned char code)
             {
                 QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Down, Qt::NoModifier, QString(QChar(Qt::Key_Down)));
                 QApplication::postEvent(QApplication::activeWindow() , key);
+            }
+            else if(operationMode == OPMODE_PLAYBACK && playBar != NULL)
+            {
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Down, Qt::NoModifier, QString(QChar(Qt::Key_Down)));
+                QApplication::postEvent(playBar, key);
             }
 
             break;
@@ -1252,6 +1272,14 @@ void MainWidget::keypadEvent(unsigned char code)
             if(operationMode == OPMODE_LIVE && setupDialog != NULL && msgBoxDisk == NULL)
             {
                 runSetup();
+                break;
+            }
+
+            if(operationMode == OPMODE_PLAYBACK && !EventSearchPB)
+            {
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_PageUp, Qt::NoModifier, QString(QChar(Qt::Key_PageUp)));
+                QApplication::postEvent(playBar, key);
+                break;
             }
 
             break;
@@ -1290,6 +1318,14 @@ void MainWidget::keypadEvent(unsigned char code)
             if(operationMode == OPMODE_LIVE && searchDialog != NULL && msgBoxDisk == NULL)
             {
                 runSearch();
+                break;
+            }
+
+            if(operationMode == OPMODE_PLAYBACK && !EventSearchPB)
+            {
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_PageDown, Qt::NoModifier, QString(QChar(Qt::Key_PageDown)));
+                QApplication::postEvent(playBar, key);
+                break;
             }
 
             break;
