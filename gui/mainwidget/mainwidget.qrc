@@ -32,5 +32,20 @@
         <file>images/cursor2.png</file>
         <file>images/timeline_zoom_in.png</file>
         <file>images/timeline_zoom_out.png</file>
+        <file>images/split4.png</file>
+        <file>images/split1.png</file>
+        <file>images/split9.png</file>
+        <file>images/channel_next.png</file>
+        <file>images/channel_prev.png</file>
+        <file>images/channel_next_focus.png</file>
+        <file>images/channel_prev_focus.png</file>
+        <file>images/split1_focus.png</file>
+        <file>images/split4_focus.png</file>
+        <file>images/split9_focus.png</file>
+        <file>images/split1_pressed.png</file>
+        <file>images/split4_pressed.png</file>
+        <file>images/split9_pressed.png</file>
+        <file>images/channel_next_pressed.png</file>
+        <file>images/channel_prev_pressed.png</file>
     </qresource>
 </RCC>

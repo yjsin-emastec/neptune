@@ -693,11 +693,24 @@ void MainWidget::loadStyleSheet()
     setStyleSheet(styleSheet);
     qDebug("-------------------- Dark Style");
 }
+void MainWidget::onChangeSplit(int startCh, int selectCh, int split)
+{
+    if( startCh == splitStartChNum && split == currentSplit )
+    {
+        return;
+    }
+
+    setSplitScreen(startCh, selectCh, split);
+}
+
 void MainWidget::createStatusBar(int isReset)
 {
     qDebug("%s + \n", __func__);
 
     statusBar = new StatusBarDialog(0, this);
+    connect(statusBar, SIGNAL(changeSplit(int,int,int)), this, SLOT(onChangeSplit(int,int,int)));
+    connect(this, SIGNAL(updateSplitButton()), statusBar, SLOT(updateSplitButton()));
+    connect(this, SIGNAL(updateTriggerState(int)), statusBar, SLOT(updateTriggerState(int)));
 
     if(isReset)
     {
@@ -1101,19 +1114,28 @@ void MainWidget::controlBarChange()
         return;
     }
 
-    if(statusBar->isVisible())
+    if(statusBar->isVisible() )
     {
-        statusBar->hide();
+        if(statusBar->getSplitMode())
+        {
+            statusBar->setSplitMode(false);
+        }
+        else
+        {
+            statusBar->setSplitMode(false);
+            statusBar->hide();
+        }
     }
     else
     {
+        statusBar->setSplitMode(false);
         statusBar->show();
-    }
 
-    controlBarAutoHide = 0;
-    statusBarEnable    = 1;
-    playBarEnable      = 1;
-    (void)appmgr_set_control_bar_auto_Hide(controlBarAutoHide);
+        controlBarAutoHide = 0;
+        statusBarEnable    = 1;
+        playBarEnable      = 1;
+        (void)appmgr_set_control_bar_auto_Hide(controlBarAutoHide);
+    }
 }
 void MainWidget::playBarChange()
 {
@@ -2069,6 +2091,8 @@ int MainWidget::LanguageValueTransformation(void)
 }
 void MainWidget::statusBarState(int state)
 {
+    statusBar->setSplitMode(false);
+
     if(utils_cfg_cmp_item(DisplayCfg.osd_status, "ON") == 0)
     {
         if(state)

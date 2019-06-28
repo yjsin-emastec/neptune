@@ -52,6 +52,8 @@ signals:
     void systemLogCount     (void);
     void systemLogData      (void);
     void systemLogBackup    (void);
+    void updateSplitButton();
+    void updateTriggerState(int);
 
 public slots:
     void videoPaneClicked(int ch);
@@ -90,6 +92,7 @@ public slots:
     void onSaveDisplayPage(int type);
     void onSaveDevicePage(int type);
     int  splitScreen(int split);
+    void onChangeSplit(int startCh, int selectCh, int split);
 
 protected:
     void closeEvent(QCloseEvent *event);

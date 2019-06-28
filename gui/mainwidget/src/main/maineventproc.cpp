@@ -1140,7 +1140,12 @@ void MainWidget::keypadEvent(unsigned char code)
 
         case KPD_EVENT_ESC:
 
-            if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
+            if(operationMode == OPMODE_LIVE && statusBar->isVisible() && statusBar->getSplitMode() && !mainMenu->isVisible() )
+            {
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Escape, Qt::NoModifier, QString(QChar(Qt::Key_Escape)));
+                QApplication::postEvent(statusBar , key);
+            }
+            else if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
             {
                 QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Escape, Qt::NoModifier, QString(QChar(Qt::Key_Escape)));
                 QApplication::postEvent(QApplication::activeWindow() , key);
@@ -1164,7 +1169,12 @@ void MainWidget::keypadEvent(unsigned char code)
 
         case KPD_EVENT_UP:
 
-            if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
+            if(operationMode == OPMODE_LIVE && statusBar->isVisible() && statusBar->getSplitMode() && !mainMenu->isVisible() )
+            {
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Up, Qt::NoModifier, QString(QChar(Qt::Key_Up)));
+                QApplication::postEvent(statusBar , key);
+            }
+            else if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
             {
                 QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Up, Qt::NoModifier, QString(QChar(Qt::Key_Up)));
                 QApplication::postEvent(QApplication::activeWindow() , key);
@@ -1179,12 +1189,16 @@ void MainWidget::keypadEvent(unsigned char code)
 
         case KPD_EVENT_LEFT:
 
-            if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
+            if(operationMode == OPMODE_LIVE && statusBar->isVisible() && statusBar->getSplitMode() && !mainMenu->isVisible() )
+            {
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Left, Qt::NoModifier, QString(QChar(Qt::Key_Left)));
+                QApplication::postEvent(statusBar , key);
+            }
+            else if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
             {
                 QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Left, Qt::NoModifier, QString(QChar(Qt::Key_Left)));
                 QApplication::postEvent(QApplication::activeWindow() , key);
             }
-
             else if(operationMode == OPMODE_PLAYBACK && playBar != NULL)
             {
                 QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Left, Qt::NoModifier, QString(QChar(Qt::Key_Left)));
@@ -1195,7 +1209,12 @@ void MainWidget::keypadEvent(unsigned char code)
 
         case KPD_EVENT_SELECT:
 
-            if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
+            if(operationMode == OPMODE_LIVE && statusBar->isVisible() && statusBar->getSplitMode() && !mainMenu->isVisible() )
+            {
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Enter, Qt::NoModifier, QString(QChar(Qt::Key_Enter)));
+                QApplication::postEvent(statusBar , key);
+            }
+            else if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
             {
                 QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Enter, Qt::NoModifier, QString(QChar(Qt::Key_Enter)));
                 QApplication::postEvent(QApplication::activeWindow() , key);
@@ -1210,7 +1229,12 @@ void MainWidget::keypadEvent(unsigned char code)
 
         case KPD_EVENT_RIGHT:
 
-            if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
+            if(operationMode == OPMODE_LIVE && statusBar->isVisible() && statusBar->getSplitMode() && !mainMenu->isVisible() )
+            {
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Right, Qt::NoModifier, QString(QChar(Qt::Key_Right)));
+                QApplication::postEvent(statusBar , key);
+            }
+            else if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
             {
                 QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Right, Qt::NoModifier, QString(QChar(Qt::Key_Right)));
                 QApplication::postEvent(QApplication::activeWindow() , key);
@@ -1225,7 +1249,12 @@ void MainWidget::keypadEvent(unsigned char code)
 
         case KPD_EVENT_DOWN:
 
-            if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
+            if(operationMode == OPMODE_LIVE && statusBar->isVisible() && statusBar->getSplitMode() && !mainMenu->isVisible() )
+            {
+                QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Down, Qt::NoModifier, QString(QChar(Qt::Key_Down)));
+                QApplication::postEvent(statusBar , key);
+            }
+            else if(operationMode == OPMODE_LIVE && setupDialog  != NULL)
             {
                 QKeyEvent *key = new QKeyEvent(QEvent::KeyPress, Qt::Key_Down, Qt::NoModifier, QString(QChar(Qt::Key_Down)));
                 QApplication::postEvent(QApplication::activeWindow() , key);
@@ -1465,11 +1494,36 @@ void MainWidget::keypadEvent(unsigned char code)
                     delete msgBox;
                     msgBox = NULL;
                 }
-
-                break;
             }
+            else if(operationMode == OPMODE_LIVE)
+            {
+                if(statusBar->isVisible())
+                {
+                    if(statusBar->getSplitMode())
+                    {
+                        statusBar->setSplitMode(false);
+                        statusBar->hide();
+                    }
+                    else
+                    {
+                        statusBar->setSplitMode(true);
+                    }
+                }
+                else
+                {
+                    statusBar->setSplitMode(true);
+                    statusBar->show();
 
-            rotateSplit();
+                    controlBarAutoHide = 0;
+                    statusBarEnable    = 1;
+                    playBarEnable      = 1;
+                    (void)appmgr_set_control_bar_auto_Hide(controlBarAutoHide);
+                }
+            }
+            else if(operationMode == OPMODE_PLAYBACK)
+            {
+                //do something;
+            }
 
             break;
 

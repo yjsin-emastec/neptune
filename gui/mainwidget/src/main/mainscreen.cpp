@@ -10,6 +10,7 @@
 #include "dev/Ver.h"
 #include <core/Core.h>
 #include "textmessagebox/textmessagedialog.h"
+#include "statusbardialog.h"
 
 void MainWidget::createVideoPane(int isReset)
 {
@@ -284,6 +285,14 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
                 }
             }
 
+            if(statusBar)
+            {
+                if(statusBar->isVisible())
+                {
+                    statusBar->setSplitMode(false);
+                }
+            }
+
             isTrigger = 1;
 
             //save previousAudioCh, when trigger occurred
@@ -321,6 +330,8 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
             }
 
             videoPane[ch]->show();
+            emit updateSplitButton();
+            emit updateTriggerState(isTrigger);
         }
         else if(type == EVENT_POPUP_SENSOR_OFF)
         {
@@ -357,6 +368,8 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
 
                 splitScreen(split);
             }
+
+            emit updateTriggerState(isTrigger);
         }
     }
 }
@@ -467,6 +480,7 @@ void MainWidget::rotateOneChannel(int ch)
 
     splitFlag = 0;
 
+    emit updateSplitButton();
     qDebug("%s - \n", __func__);
 }
 int MainWidget::splitScreen(int split)
@@ -550,11 +564,15 @@ int MainWidget::splitScreen(int split)
         {
             setAudioOutCh(currentChannelNum+2);
         }
+
+        emit updateSplitButton();
     }
     else
     {
         appmgr_set_video_split(splitStartChNum, (split * split));
         setAudioOutCh(previousAudioCh);
+
+        emit updateSplitButton();
     }
 
     if(split == Split_1)
@@ -711,10 +729,12 @@ void MainWidget::setSplitScreen(int startCh, int selectCh, int split)
     if(split == Split_1)
     {
         appmgr_set_video_split(currentChannelNum, split * split);
+        emit updateSplitButton();
     }
     else
     {
         appmgr_set_video_split(splitStartChNum, split * split);
+        emit updateSplitButton();
     }
 
     splitFlag = 0;

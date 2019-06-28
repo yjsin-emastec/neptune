@@ -3150,13 +3150,13 @@ Mute/1/2/3/4</source>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="856"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1255"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1299"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1365"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1451"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1490"/>
-        <location filename="../../../../main/mainscreen.cpp" line="87"/>
-        <location filename="../../../../main/mainscreen.cpp" line="137"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1284"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1330"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1398"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1484"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1536"/>
+        <location filename="../../../../main/mainscreen.cpp" line="88"/>
+        <location filename="../../../../main/mainscreen.cpp" line="138"/>
         <source>NOTICE</source>
         <translation>알림</translation>
     </message>
@@ -3166,13 +3166,13 @@ Mute/1/2/3/4</source>
         <translation>SATA 오류 횟수</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1255"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1299"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1365"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1451"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1490"/>
-        <location filename="../../../../main/mainscreen.cpp" line="87"/>
-        <location filename="../../../../main/mainscreen.cpp" line="137"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1284"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1330"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1398"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1484"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1536"/>
+        <location filename="../../../../main/mainscreen.cpp" line="88"/>
+        <location filename="../../../../main/mainscreen.cpp" line="138"/>
         <source>Current status is trigger.</source>
         <translation>현재 트리거 상태입니다.</translation>
     </message>
@@ -3374,7 +3374,7 @@ Current status is trigger.</source>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="811"/>
         <location filename="../../../../main/mainwidget.cpp" line="620"/>
-        <location filename="../../../../main/mainwidget.cpp" line="941"/>
+        <location filename="../../../../main/mainwidget.cpp" line="954"/>
         <source>POWER OFF</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>전원 종료</translation>
@@ -3405,17 +3405,17 @@ Turn off the power.</source>
 전원을 끄십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="941"/>
+        <location filename="../../../../main/mainwidget.cpp" line="954"/>
         <source>Do you want to shutdown the system?</source>
         <translation>녹화를 종료하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1410"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1424"/>
         <source>SEARCH</source>
         <translation>검색</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1410"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1424"/>
         <source>No SSD</source>
         <translation>저장장치 없음</translation>
     </message>
@@ -4430,14 +4430,14 @@ Off/On</source>
     </message>
     <message>
         <location filename="../../../../main/playtimebar.cpp" line="959"/>
-        <location filename="../../../../main/playtimebar.cpp" line="1412"/>
-        <location filename="../../../../main/playtimebar.cpp" line="1463"/>
+        <location filename="../../../../main/playtimebar.cpp" line="1411"/>
+        <location filename="../../../../main/playtimebar.cpp" line="1462"/>
         <source>PM</source>
         <translation>PM</translation>
     </message>
     <message>
         <location filename="../../../../main/playtimebar.cpp" line="963"/>
-        <location filename="../../../../main/playtimebar.cpp" line="1459"/>
+        <location filename="../../../../main/playtimebar.cpp" line="1458"/>
         <source>AM</source>
         <translation>AM</translation>
     </message>
@@ -5466,8 +5466,8 @@ On</source>
     </message>
     <message>
         <location filename="../../../../main/statusbardialog.ui" line="110"/>
-        <location filename="../../../../main/statusbardialog.cpp" line="160"/>
-        <location filename="../../../../main/statusbardialog.cpp" line="167"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="210"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="217"/>
         <source>NO SSD</source>
         <translation>NO SSD</translation>
     </message>
@@ -5476,20 +5476,30 @@ On</source>
         <translation type="obsolete">디스크 없음</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.cpp" line="103"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="153"/>
         <source>FULL</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>FULL</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.cpp" line="241"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="291"/>
         <source>AM</source>
         <translation>AM</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.cpp" line="245"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="295"/>
         <source>PM</source>
         <translation>PM</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/statusbardialog.cpp" line="515"/>
+        <source>NOTICE</source>
+        <translation>알림</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/statusbardialog.cpp" line="515"/>
+        <source>Current status is trigger.</source>
+        <translation>현재 트리거 상태입니다.</translation>
     </message>
 </context>
 <context>
