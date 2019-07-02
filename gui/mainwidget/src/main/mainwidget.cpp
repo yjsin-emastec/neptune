@@ -394,7 +394,8 @@ void MainWidget::onSaveRecordPage(int type)
 
         if(type == 1)
         {
-            for(int ch = 0; ch < devInfo.videoNum; ch++)
+            //for(int ch = 0; ch < devInfo.videoNum; ch++)
+            for(int ch = 0; ch < 8; ch++)
             {
                 QString str = QString("Normal: ch:%1 F:%2 Q:%3 R:%4 A:%5").arg(
                         QString::number(ch+1),
@@ -486,7 +487,8 @@ void MainWidget::onSaveDevicePage(int type)
     }
     else if(type == 5) // Video Input
     {
-        for(int ii=0; ii < devInfo.videoNum; ii++)
+        //for(int ii=0; ii < devInfo.videoNum; ii++)
+        for(int ii=0; ii < 8; ii++)
         {
             QString str = QString("VI%1 M:%2 F:%3").arg(
                     QString::number(ii+1),
@@ -520,7 +522,8 @@ void MainWidget::onSaveDisplayPage(int type)
     {
         qDebug("setup.............> Channel Name change");
 
-        for(int ii = 0; ii < devInfo.videoNum; ii++)
+        //for(int ii = 0; ii < devInfo.videoNum; ii++)
+        for(int ii = 0; ii < 8; ii++)
         {
             QByteArray CamName = QByteArray::fromHex((char *)DisplayCfg.channel_name[ii]);
             QString str = QString("CAM%1 Name: %2").arg(QString::number(ii+1), QString::fromUtf8(CamName));
@@ -533,7 +536,8 @@ void MainWidget::onSaveDisplayPage(int type)
         appmgr_save_setup(0, &cfgMain);
         appmgr_cfg_sync();
 
-        for(int i = 0; i < devInfo.videoNum; i++)
+        //for(int i = 0; i < devInfo.videoNum; i++)
+        for(int i = 0; i < 8; i++)
         {
             QByteArray text = QByteArray::fromHex((char *)DisplayCfg.channel_name[i]);
             QString str = QString::fromUtf8(text.data());
@@ -1020,7 +1024,8 @@ void MainWidget::systemShutdown()
 
     statusBar->hide();
 
-    for(int i = 0; i < devInfo.videoNum; i++)
+    //for(int i = 0; i < devInfo.videoNum; i++)
+    for(int i = 0; i < 8; i++)
     {
         videoPane[i]->systemShutdownIconClean();
     }
@@ -1220,7 +1225,8 @@ void MainWidget::runSetup()
     latestSplitStartChNum  = splitStartChNum;
     getConfigString();
 
-    for(ii = 0; ii < devInfo.videoNum; ii++)
+    //for(ii = 0; ii < devInfo.videoNum; ii++)
+    for(ii = 0; ii < 8; ii++)
     {
         pre_record_mode[ii] = cfgSetup.rec.record_mode[ii];
     }
@@ -1463,7 +1469,8 @@ void MainWidget::runSearch()
         return;
     }
 
-    for(int i = 0; i < devInfo.videoNum; i++)
+    //for(int i = 0; i < devInfo.videoNum; i++)
+    for(int i = 0; i < 8; i++)
     {
         videoPane[i]->zoomAction = false;
     }
@@ -1491,7 +1498,8 @@ void MainWidget::runSearch()
     }
     else
     {
-        for(int i = 0; i < devInfo.videoNum; i++)
+        //for(int i = 0; i < devInfo.videoNum; i++)
+        for(int i = 0; i < 8; i++)
         {
             videoPane[i]->zoomAction = false;
         }
@@ -1535,7 +1543,8 @@ void MainWidget::startPlayback()
         appmgr_set_playber_bar_status(0);
     }
 #endif
-    for(i = 0; i < devInfo.videoNum; i++)
+    //for(i = 0; i < devInfo.videoNum; i++)
+    for(i = 0; i < 8; i++)
     {
         videoPane[i]->zoomAction = false;
     }
@@ -1547,7 +1556,8 @@ void MainWidget::startPlayback()
     operationMode = OPMODE_PLAYBACK;
     SetOperationMode(operationMode);
 
-    for(i = 0; i < devInfo.videoNum; i++)
+    //for(i = 0; i < devInfo.videoNum; i++)
+    for(i = 0; i < 8; i++)
     {
         videoPane[i]->setPlaybackMode(1);
     }
@@ -1562,7 +1572,8 @@ void MainWidget::startPlayback()
     {
         qDebug("\n\t START startPlayback -> setSplitScreen");
 
-        for(i = 0; i < devInfo.videoNum; i++)
+        //for(i = 0; i < devInfo.videoNum; i++)
+        for(i = 0; i < 8; i++)
         {
             if(searchDialog->pbChBit & ( 1 << i))
             {
@@ -1595,7 +1606,8 @@ void MainWidget::stopPlayback()
 {
     int i = 0;
 
-    for(i = 0; i < devInfo.videoNum; i++)
+    //for(i = 0; i < devInfo.videoNum; i++)
+    for(i = 0; i < 8; i++)
     {
         videoPane[i]->setZoomOut();
     }
@@ -1606,7 +1618,8 @@ void MainWidget::stopPlayback()
     operationMode = OPMODE_SEARCH;
     SetOperationMode(operationMode);
 
-    for(i = 0; i < devInfo.videoNum; i++)
+    //for(i = 0; i < devInfo.videoNum; i++)
+    for(i = 0; i < 8; i++)
     {
         videoPane[i]->setPlaybackMode(0);
     }
@@ -1648,12 +1661,14 @@ void MainWidget::stopPlayback()
     }
     else
     {
-        for(i = 0; i < devInfo.videoNum; i++)
+        //for(i = 0; i < devInfo.videoNum; i++)
+        for(i = 0; i < 8; i++)
         {
             videoPane[i]->labelNameEnable(1);
         }
 
-        for(i = 0; i < devInfo.videoNum; i++)
+        //for(i = 0; i < devInfo.videoNum; i++)
+        for(i = 0; i < 8; i++)
         {
             videoPane[i]->zoomAction = false;
         }
@@ -1696,7 +1711,8 @@ void MainWidget::systemReboot()
     {
         statusBar->hide();
 
-        for(int ch = 0; ch < devInfo.videoNum; ch++)
+        //for(int ch = 0; ch < devInfo.videoNum; ch++)
+        for(int ch = 0; ch < 8; ch++)
         {
             videoPane[ch]->systemShutdownIconClean();
         }
@@ -2144,7 +2160,8 @@ void MainWidget::SetOperationMode(int mode)
 }
 void MainWidget::DiskFormatProcessDlgOpen()
 {
-    for(int ii = 0; ii < devInfo.videoNum; ii++)
+    //for(int ii = 0; ii < devInfo.videoNum; ii++)
+    for(int ii = 0; ii < 8; ii++)
     {
         videoPane[ii]->systemShutdownIconClean();
     }
@@ -2236,7 +2253,8 @@ void MainWidget::noDataUpdate(int live)
     {
         mainPbChannel = - 1;
 
-        for(i = 0; i < devInfo.videoNum; i++)
+        //for(i = 0; i < devInfo.videoNum; i++)
+        for(i = 0; i < 8; i++)
         {
             videoPane[i]->setNoRecordVideoDetect(0);
             cur = (liveEvent.cameraLoss & (1<<i));
@@ -2245,7 +2263,8 @@ void MainWidget::noDataUpdate(int live)
     }
     else
     {
-        for(int i = 0; i < devInfo.videoNum; i++)
+        //for(int i = 0; i < devInfo.videoNum; i++)
+        for(int i = 0; i < 8; i++)
         {
             if(mainPbChannel & (0x01 << i))
             {
@@ -2260,7 +2279,8 @@ void MainWidget::noDataUpdate(int live)
 }
 void MainWidget::onSetAudioMute()
 {
-    for(int ch = 0; ch < devInfo.videoNum; ch++)
+    //for(int ch = 0; ch < devInfo.videoNum; ch++)
+    for(int ch = 0; ch < 8; ch++)
     {
         videoPane[ch]->setAudioOutput(0);
     }
@@ -2281,7 +2301,8 @@ void MainWidget::onSetAudioMute()
 }
 void MainWidget::onSetAudio1()
 {
-    for(int ch = 0; ch < devInfo.videoNum; ch++)
+    //for(int ch = 0; ch < devInfo.videoNum; ch++)
+    for(int ch = 0; ch < 8; ch++)
     {
         videoPane[ch]->setAudioOutput(0);
     }
@@ -2303,7 +2324,8 @@ void MainWidget::onSetAudio1()
 }
 void MainWidget::onSetAudio2()
 {
-    for(int ch = 0; ch < devInfo.videoNum; ch++)
+    //for(int ch = 0; ch < devInfo.videoNum; ch++)
+    for(int ch = 0; ch < 8; ch++)
     {
         videoPane[ch]->setAudioOutput(0);
     }
@@ -2325,7 +2347,8 @@ void MainWidget::onSetAudio2()
 }
 void MainWidget::onSetAudio3()
 {
-    for(int ch = 0; ch < devInfo.videoNum; ch++)
+    //for(int ch = 0; ch < devInfo.videoNum; ch++)
+    for(int ch = 0; ch < 8; ch++)
     {
         videoPane[ch]->setAudioOutput(0);
     }
@@ -2347,7 +2370,8 @@ void MainWidget::onSetAudio3()
 }
 void MainWidget::onSetAudio4()
 {
-    for(int ch = 0; ch < devInfo.videoNum; ch++)
+    //for(int ch = 0; ch < devInfo.videoNum; ch++)
+    for(int ch = 0; ch < 8; ch++)
     {
         videoPane[ch]->setAudioOutput(0);
     }

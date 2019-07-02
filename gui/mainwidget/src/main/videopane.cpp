@@ -129,7 +129,8 @@ VideoPane::VideoPane(int chNum, const QString & text, QWidget *parent)
         labelDaejiLogo1080->hide();
     }
 
-    if((videoPaneNo == devInfo.videoNum) && (devInfo.videoNum == 8 || devInfo.videoNum == 16))
+    //if((videoPaneNo == devInfo.videoNum) && (devInfo.videoNum == 8 || devInfo.videoNum == 16))
+    if((videoPaneNo == 8 ) || (videoPaneNo == 9) )
     {
         int paneWidth, paneHeight, w, h;
 
@@ -167,7 +168,8 @@ void VideoPane::paintEvent(QPaintEvent *event)
     int paneWidth  = size().width();
     int paneHeight = size().height();
 
-    if(devInfo.videoNum == this->videoPaneNo)
+    //if(devInfo.videoNum == this->videoPaneNo)
+    if(this->videoPaneNo == 8)
     {
         return;
     }

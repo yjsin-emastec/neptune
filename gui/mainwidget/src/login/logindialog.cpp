@@ -154,7 +154,8 @@ void LoginDialog::checkPassword()
             utils_system("fw_setenv bootmode test");
             utils_system("miscflash 1 2 0 NULL");
 
-            for(int ch = 0; ch < devInfo.videoNum; ch++)
+            //for(int ch = 0; ch < devInfo.videoNum; ch++)
+            for(int ch = 0; ch < 8; ch++)
             {
                 stop_all_record(ch);
             }

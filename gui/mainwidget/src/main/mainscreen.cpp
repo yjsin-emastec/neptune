@@ -21,7 +21,8 @@ void MainWidget::createVideoPane(int isReset)
 
     qDebug("%s + \n", __func__);
 
-    for(int ii = 0; ii < devInfo.videoNum; ii++)
+    //for(int ii = 0; ii < devInfo.videoNum; ii++)
+    for(int ii = 0; ii < 8; ii++)
     {
         QByteArray text = QByteArray::fromHex((char *)DisplayCfg.channel_name[ii]);
 
@@ -40,7 +41,8 @@ void MainWidget::createVideoPane(int isReset)
 
     str = QString::fromUtf8(text.data());
 
-    videoPane[devInfo.videoNum] = new VideoPane(devInfo.videoNum, str, this);
+    //videoPane[devInfo.videoNum] = new VideoPane(devInfo.videoNum, str, this);
+    videoPane[8] = new VideoPane(8, str, this);
 
     if(isReset)
     {
@@ -52,7 +54,8 @@ void MainWidget::createVideoPane(int isReset)
         currentChannelNum = 0;
         splitStartChNum   = 0;
 
-        for(int ii = 0; ii < devInfo.videoNum+1; ii++)
+        //for(int ii = 0; ii < devInfo.videoNum+1; ii++)
+        for(int ii = 0; ii < 8; ii++)
         {
             videoPane[ii]->hide();
         }
@@ -167,6 +170,7 @@ void MainWidget::videoPaneRightClicked(int ch)
 }
 int MainWidget::getMaxSplit()
 {
+#if 0
     if(devInfo.videoNum == 1)
     {
         return Split_1;
@@ -183,11 +187,14 @@ int MainWidget::getMaxSplit()
     {
         return Split_16;
     }
+#else
+    return Split_9;
+#endif
 }
 int MainWidget::isMaxSplit()
 {
     int isMax = 0;
-
+#if 0
     switch(currentSplit)
     {
         case Split_1:  { if(devInfo.videoNum <=  1) isMax = 1; break; }
@@ -195,12 +202,15 @@ int MainWidget::isMaxSplit()
         case Split_9:  { if(devInfo.videoNum <=  9) isMax = 1; break; }
         case Split_16: { if(devInfo.videoNum <= 16) isMax = 1; break; }
     }
-
+#else
+    if( currentSplit == 8 || currentSplit == 9 ) { isMax=1; }
+#endif
     return isMax;
 }
 void MainWidget::oneChannelSplit(int ch)
 {
-    for(int ii = 0; ii < devInfo.videoNum; ii++)
+    //for(int ii = 0; ii < devInfo.videoNum; ii++)
+    for(int ii = 0; ii < 8; ii++)
     {
         videoPane[ii]->zoomAction = false;
     }
@@ -210,7 +220,8 @@ void MainWidget::oneChannelSplit(int ch)
         return;
     }
 
-    if(devInfo.videoNum > ch)
+    //if(devInfo.videoNum > ch)
+    if(8 > ch)
     {
         if(currentChannelNum == ch && currentSplit == Split_1)
         {
@@ -246,18 +257,21 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
     int ii = 0, split = 0;
     int paneWidth, paneHeight;
 
-    for(ii = 0; ii < devInfo.videoNum; ii++)
+    //for(ii = 0; ii < devInfo.videoNum; ii++)
+    for(ii = 0; ii < 8; ii++)
     {
         videoPane[ii]->zoomAction = false;
         videoPane[ii]->setAudioOutput(0);
     }
 
-    for(ii = 0; ii < devInfo.videoNum+1; ii++)
+    //for(ii = 0; ii < devInfo.videoNum+1; ii++)
+    for(ii = 0; ii < 8; ii++)
     {
         videoPane[ii]->hide();
     }
 
-    if(devInfo.videoNum > ch)
+    //if(devInfo.videoNum > ch)
+    if(8 > ch)
     {
         if(type == EVENT_POPUP_SENSOR_ON)
         {
@@ -337,7 +351,8 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
         {
             isTrigger = 0;
 
-            for(ii = 0; ii < devInfo.videoNum; ii++)
+            //for(ii = 0; ii < devInfo.videoNum; ii++)
+            for(ii = 0; ii < 8; ii++)
             {
                 if(ii != 1)
                 {
@@ -382,7 +397,8 @@ void MainWidget::rotateSplit()
         return;
     }
 
-    for(int ii = 0; ii < devInfo.videoNum; ii++)
+    //for(int ii = 0; ii < devInfo.videoNum; ii++)
+    for(int ii = 0; ii < 8; ii++)
     {
         videoPane[ii]->zoomAction = false;
     }
@@ -447,7 +463,8 @@ void MainWidget::rotateOneChannel(int ch)
     int ii, paneWidth, paneHeight;
     int split = currentSplit;
 
-    for(ii = 0; ii < devInfo.videoNum; ii++)
+    //for(ii = 0; ii < devInfo.videoNum; ii++)
+    for(ii = 0; ii < 8; ii++)
     {
         videoPane[ii]->zoomAction = false;
     }
@@ -465,7 +482,8 @@ void MainWidget::rotateOneChannel(int ch)
     paneWidth  = (int)(mainWidth  / split);
     paneHeight = (int)(mainHeight / split);
 
-    for(ii = 0; ii < devInfo.videoNum+1; ii++)
+    //for(ii = 0; ii < devInfo.videoNum+1; ii++)
+    for(ii = 0; ii < 8; ii++)
     {
         videoPane[ii]->hide();
     }
@@ -485,7 +503,8 @@ void MainWidget::rotateOneChannel(int ch)
 }
 int MainWidget::splitScreen(int split)
 {
-    for(int ii = 0; ii < devInfo.videoNum; ii++)
+    //for(int ii = 0; ii < devInfo.videoNum; ii++)
+    for(int ii = 0; ii < 8; ii++)
     {
         videoPane[ii]->setZoomOut();
     }
@@ -532,7 +551,8 @@ int MainWidget::splitScreen(int split)
         split = getMaxSplit();
     }
 
-    for(ii = 0; ii < devInfo.videoNum+1; ii++)
+    //for(ii = 0; ii < devInfo.videoNum+1; ii++)
+    for(ii = 0; ii < 8; ii++)
     {
         videoPane[ii]->hide();
     }
@@ -580,13 +600,16 @@ int MainWidget::splitScreen(int split)
         videoPane[currentChannelNum]->setGpsStatus(appmgr_get_gps_connected());
     }
 
-    for(ii = 0; ii < devInfo.videoNum; ii++)
+    //for(ii = 0; ii < devInfo.videoNum; ii++)
+    for(ii = 0; ii < 8; ii++)
     {
         int vidCh = firstCh + ii;
 
-        if(vidCh >= devInfo.videoNum)
+        //if(vidCh >= devInfo.videoNum)
+        if(vidCh >= 8)
         {
-            vidCh -= devInfo.videoNum;
+            //vidCh -= devInfo.videoNum;
+            vidCh -= 8;
         }
 
         if(split == Split_4 && ii != 1)
@@ -665,7 +688,8 @@ void MainWidget::setSplitScreen(int startCh, int selectCh, int split)
         split = getMaxSplit();
     }
 
-    for(ii = 0; ii < devInfo.videoNum+1; ii++)
+    //for(ii = 0; ii < devInfo.videoNum+1; ii++)
+    for(ii = 0; ii < 8; ii++)
     {
         videoPane[ii]->hide();
     }
@@ -680,13 +704,16 @@ void MainWidget::setSplitScreen(int startCh, int selectCh, int split)
     splitStartChNum = firstCh;
     currentSplit    = split;
 
-    for(ii = 0; ii < devInfo.videoNum; ii++)
+    //for(ii = 0; ii < devInfo.videoNum; ii++)
+    for(ii = 0; ii < 8; ii++)
     {
         int vidCh = firstCh + ii;
 
-        if(vidCh >= devInfo.videoNum)
+        //if(vidCh >= devInfo.videoNum)
+        if(vidCh >= 8)
         {
-            vidCh -= devInfo.videoNum;
+            //vidCh -= devInfo.videoNum;
+            vidCh -= 8;
         }
 
         videoPane[vidCh]->resize(paneWidth, paneHeight);
@@ -751,7 +778,8 @@ void MainWidget::showOsd(int show)
 
     qDebug("showOsd-> %d", show);
 
-    for(int ii = 0; ii < devInfo.videoNum; ii++)
+    //for(int ii = 0; ii < devInfo.videoNum; ii++)
+    for(int ii = 0; ii < 8; ii++)
     {
         videoPane[ii]->setOsdEnable(1);
     }
@@ -773,7 +801,8 @@ void MainWidget::audioSetting(int preChannel, int curChannel)
         appmgr_save_setup(3, &cfgMain);
     }
 
-    if(curChannel >= (devInfo.videoNum - devInfo.videoIPNum))
+    //if(curChannel >= (devInfo.videoNum - devInfo.videoIPNum))
+    if(curChannel >= (8 - devInfo.videoIPNum))
     {
         appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, audioStatus-2);
     }

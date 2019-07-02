@@ -384,7 +384,8 @@ void MainWidget::doDvrEvent(Event *e)
                     qDebug("\n\n\t Send_QT_PLAYER mainPbChannel[%x], pbChannel[%x]\n", mainPbChannel, pbChannel);
                     mainPbChannel = pbChannel;
 
-                    for(int i = 0; i < devInfo.videoNum; i++)
+                    //for(int i = 0; i < devInfo.videoNum; i++)
+                    for(int i = 0; i < 8; i++)
                     {
                         if(pbChannel & (0x01 << i))
                         {
@@ -713,7 +714,8 @@ void MainWidget::doDvrEvent(Event *e)
                     delete msgBox;
                 }
 
-                for(int ii = 0; ii < devInfo.videoNum; ii++)
+                //for(int ii = 0; ii < devInfo.videoNum; ii++)
+                for(int ii = 0; ii < 8; ii++)
                 {
                     videoPane[ii]->systemShutdownIconClean();
                 }
@@ -803,7 +805,8 @@ void MainWidget::doDvrEvent(Event *e)
                 msgBox = NULL;
             }
 
-            for(int ii = 0; ii < devInfo.videoNum; ii++)
+            //for(int ii = 0; ii < devInfo.videoNum; ii++)
+            for(int ii = 0; ii < 8; ii++)
             {
                 videoPane[ii]->systemShutdownIconClean();
             }
@@ -832,7 +835,8 @@ void MainWidget::doDvrEvent(Event *e)
         }
         case Send_QT_RESET_RECORD_ICON:
         {
-            for(int ii = 0; ii < devInfo.videoNum; ii++)
+            //for(int ii = 0; ii < devInfo.videoNum; ii++)
+            for(int ii = 0; ii < 8; ii++)
             {
                 isDrawRecordIcon = 0;
                 videoPane[ii]->setRecordingDetect(0x0, 0x0, 0x0, 0x0);
@@ -896,7 +900,8 @@ void MainWidget::updateDvrEvent(live_event_t *live)
         // Camera Loss Draw
         if(live->cameraLoss != liveEvent.cameraLoss)
         {
-            for(i = 0; i < devInfo.videoNum; i++)
+            //for(i = 0; i < devInfo.videoNum; i++)
+            for(i = 0; i < 8; i++)
             {
                 prev = (liveEvent.cameraLoss & (1<<i));
                 cur = (live->cameraLoss & (1<<i));
@@ -929,7 +934,8 @@ void MainWidget::updateDvrEvent(live_event_t *live)
         liveEvent.cameraVis = live->cameraVis;
         ver_get_vis_list(checkVIS);
 
-        for(int i = 0; i < devInfo.videoNum; i++)
+        //for(int i = 0; i < devInfo.videoNum; i++)
+        for(int i = 0; i < 8; i++)
         {
             if(liveEvent.cameraVis & (0x1 << i))
             {
@@ -1008,7 +1014,8 @@ void MainWidget::updateDvrEvent(live_event_t *live)
         {
             if(live->diskFull == 1)
             {
-                for(i = 0; i < devInfo.videoNum; i++)
+                //for(i = 0; i < devInfo.videoNum; i++)
+                for(i = 0; i < 8; i++)
                 {
                     record_icon_draw = 1;
                     videoPane[i]->setRecordingDetect(0x0, 0x0, 0x0, 0x0);
@@ -1016,7 +1023,8 @@ void MainWidget::updateDvrEvent(live_event_t *live)
             }
             else
             {
-                for(i = 0; i < devInfo.videoNum; i++)
+                //for(i = 0; i < devInfo.videoNum; i++)
+                for(i = 0; i < 8; i++)
                 {
                     record    = (live->recordOn & (1<<i));
                     prerecord = (live->prerecordOn & (1<<i));
@@ -1044,7 +1052,8 @@ void MainWidget::updateDvrEvent(live_event_t *live)
 
         if((live->changeRecordType != liveEvent.changeRecordType) || (live->recordOn != liveEvent.recordOn) || (live->prerecordOn != liveEvent.prerecordOn))
         {
-            for(i = 0; i < devInfo.videoNum; i++)
+            //for(i = 0; i < devInfo.videoNum; i++)
+            for(i = 0; i < 8; i++)
             {
                 record    = (live->recordOn & (1<<i));
                 prerecord = (live->prerecordOn & (1<<i));
@@ -1095,7 +1104,8 @@ void MainWidget::updateDvrEvent(live_event_t *live)
             }
 #endif
 
-            for(i = 0; i < devInfo.videoNum; i++)
+            //for(i = 0; i < devInfo.videoNum; i++)
+            for(i = 0; i < 8; i++)
             {
                 if(videoPane[i]->isVisibleRecordIcon() != (record = ((live->recordOn&(1<<i))?1:0)))
                 {

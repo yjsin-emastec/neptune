@@ -561,7 +561,8 @@ void StatusBarDialog::onButtonPrev()
         {
             if( splitStartChNum == 0 )
             {
-                selectCh = devInfo.videoNum-1;
+                //selectCh = devInfo.videoNum-1;
+                selectCh = 8-1;
             }
             else
             {
@@ -597,7 +598,8 @@ void StatusBarDialog::onButtonNext()
     {
         case Split_1 :
         {
-            if( splitStartChNum == devInfo.videoNum-1 )
+            //if( splitStartChNum == devInfo.videoNum-1 )
+            if( splitStartChNum == 8-1 )
             {
                 selectCh = 0;
             }

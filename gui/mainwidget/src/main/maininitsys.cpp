@@ -513,7 +513,7 @@ void MainWidget::initializeSystem()
     appmgr_start_system();
 
     showOsd(cfgMain.live.osd_status);
-
+#if 0
     if(devInfo.videoNum == 4)
     {
         splitScreen(Split_4);
@@ -530,6 +530,9 @@ void MainWidget::initializeSystem()
     {
         splitScreen(Split_1);
     }
+#else
+    splitScreen(Split_9);
+#endif
 
     update();
     qDebug("show osd %d", cfgMain.live.osd_status);

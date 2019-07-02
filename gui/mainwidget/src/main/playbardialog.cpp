@@ -248,7 +248,8 @@ void PlayBarDialog::resumePlayback(int isAviBackup, int sec)
         }
         else
         {
-            for(int i = 0; i < devInfo.videoNum; i++)
+            //for(int i = 0; i < devInfo.videoNum; i++)
+            for(int i = 0; i < 8; i++)
             {
                 chMask |= (1 << i);
             }
