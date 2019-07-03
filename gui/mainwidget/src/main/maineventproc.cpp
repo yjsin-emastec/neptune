@@ -28,7 +28,7 @@ void MainWidget::doUpdateDvrTime()
         QTimer::singleShot(10, statusBar, SLOT(updateTime()));
     }
 
-    onSetGpsStatus(appmgr_get_gps_connected());
+    updateGpsStatus();
 }
 
 extern int errno;

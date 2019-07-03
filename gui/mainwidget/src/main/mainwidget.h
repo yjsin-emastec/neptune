@@ -85,7 +85,7 @@ public slots:
     void DiskFormatSystemShutdown();
     void oneChannelSplit(int ch);
     void playbackOneChannel(int ch);
-    void onSetGpsStatus(int gps);
+    void updateGpsStatus();
     void eventPopupOneChannel(int type, int ch);
     void onSaveSystemPage(int type, int val);
     void onSaveRecordPage(int type);

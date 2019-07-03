@@ -41,9 +41,6 @@ void MainWidget::createVideoPane(int isReset)
 
     str = QString::fromUtf8(text.data());
 
-    //videoPane[devInfo.videoNum] = new VideoPane(devInfo.videoNum, str, this);
-    videoPane[8] = new VideoPane(8, str, this);
-
     if(isReset)
     {
         ;
@@ -241,15 +238,30 @@ void MainWidget::oneChannelSplit(int ch)
         splitScreen(Split_1);
     }
 }
-void MainWidget::onSetGpsStatus(int gps)
+void MainWidget::updateGpsStatus()
 {
-    if(currentSplit == Split_1)
+    int currentStatus=appmgr_get_gps_connected();
+
+    //for(int i=0; i<devInfo.videoNum; i++)
+    for(int i=0; i<8; i++)
     {
-        videoPane[currentChannelNum]->setGpsStatus(gps);
+        videoPane[i]->setGpsStatus(0);
+    }
+
+    if( isTrigger )
+    {
+        videoPane[sensorEventPopupCh]->setGpsStatus(currentStatus);
     }
     else
     {
-        videoPane[1]->setGpsStatus(gps);
+        if( currentSplit == Split_1 )
+        {
+            videoPane[currentChannelNum]->setGpsStatus(currentStatus);
+        }
+        else
+        {
+            videoPane[ (currentChannelNum/(currentSplit*currentSplit))*(currentSplit*currentSplit)+(currentSplit-1) ]->setGpsStatus(currentStatus);
+        }
     }
 }
 void MainWidget::eventPopupOneChannel(int type, int ch)
@@ -351,14 +363,7 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
         {
             isTrigger = 0;
 
-            //for(ii = 0; ii < devInfo.videoNum; ii++)
-            for(ii = 0; ii < 8; ii++)
-            {
-                if(ii != 1)
-                {
-                    videoPane[ii]->setGpsStatus(0);
-                }
-            }
+            updateGpsStatus();
 
             appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, sensorEventPopupCh);
 
@@ -429,7 +434,7 @@ void MainWidget::rotateSplit()
 
                 break;
             }
-            case Split_4:
+            default:
             {
                 currentSplitOld = currentSplit;
                 ret             = splitScreen(Split_1);
@@ -443,14 +448,13 @@ void MainWidget::rotateSplit()
         {
             case Split_1:
             {
-                if(devInfo.videoNum >= 4)
-                {
-                    ret = splitScreen(Split_4);
-                }
+                if(devInfo.videoNum <= 4)       { ret = splitScreen(Split_4);  }
+                else if(devInfo.videoNum <= 9)  { ret = splitScreen(Split_9);  }
+                else if(devInfo.videoNum <= 16) { ret = splitScreen(Split_16); }
 
                 break;
             }
-            case Split_4:
+            default :
             {
                 ret = splitScreen(Split_1);
                 break;
@@ -595,11 +599,6 @@ int MainWidget::splitScreen(int split)
         emit updateSplitButton();
     }
 
-    if(split == Split_1)
-    {
-        videoPane[currentChannelNum]->setGpsStatus(appmgr_get_gps_connected());
-    }
-
     //for(ii = 0; ii < devInfo.videoNum; ii++)
     for(ii = 0; ii < 8; ii++)
     {
@@ -610,11 +609,6 @@ int MainWidget::splitScreen(int split)
         {
             //vidCh -= devInfo.videoNum;
             vidCh -= 8;
-        }
-
-        if(split == Split_4 && ii != 1)
-        {
-            videoPane[ii]->setGpsStatus(0);
         }
 
         videoPane[vidCh]->resize( paneWidth, paneHeight);
@@ -649,6 +643,8 @@ int MainWidget::splitScreen(int split)
         videoPane[vidCh]->show();
     }
 
+    updateGpsStatus();
+
     if(operationMode == OPMODE_PLAYBACK)
     {
         if(pbPreState == PB_PLAY)
@@ -671,6 +667,10 @@ int MainWidget::splitScreen(int split)
 }
 void MainWidget::setSplitScreen(int startCh, int selectCh, int split)
 {
+    currentSplitOld=currentSplit;
+    currentSplit = split;
+    currentChannelNum=selectCh;
+
     int ii = 0, paneWidth = 0, paneHeight = 0, splitPage = 0, firstCh = 0;
 
     if(splitFlag)
@@ -765,6 +765,7 @@ void MainWidget::setSplitScreen(int startCh, int selectCh, int split)
     }
 
     splitFlag = 0;
+    updateGpsStatus();
 
     qDebug("%s - \n", __func__);
 }
