@@ -2775,7 +2775,7 @@ System will restart.</source>
         <translation>비밀번호를 입력하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../login/logindialog.cpp" line="192"/>
+        <location filename="../../../../login/logindialog.cpp" line="193"/>
         <source>Incorrect Password.
 Please try again.</source>
         <translation>잘못된 비밀번호입니다.
@@ -2935,54 +2935,47 @@ Mute/1/2/3/4</source>
         <translation>닫기</translation>
     </message>
     <message>
+        <location filename="../../../../main/mainMenu.cpp" line="75"/>
+        <location filename="../../../../main/mainMenu.cpp" line="99"/>
+        <location filename="../../../../main/mainMenu.cpp" line="133"/>
+        <location filename="../../../../main/mainMenu.cpp" line="156"/>
+        <source>Audio</source>
+        <translation>음성출력</translation>
+    </message>
+    <message>
         <location filename="../../../../main/mainMenu.cpp" line="84"/>
-        <location filename="../../../../main/mainMenu.cpp" line="94"/>
-        <location filename="../../../../main/mainMenu.cpp" line="122"/>
-        <location filename="../../../../main/mainMenu.cpp" line="166"/>
-        <location filename="../../../../main/mainMenu.cpp" line="177"/>
+        <location filename="../../../../main/mainMenu.cpp" line="93"/>
+        <location filename="../../../../main/mainMenu.cpp" line="126"/>
+        <location filename="../../../../main/mainMenu.cpp" line="139"/>
+        <location filename="../../../../main/mainMenu.cpp" line="150"/>
+        <location filename="../../../../main/mainMenu.cpp" line="161"/>
         <source>Audio
 Mute</source>
         <translation>음성출력
 음소거</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="75"/>
-        <location filename="../../../../main/mainMenu.cpp" line="95"/>
-        <location filename="../../../../main/mainMenu.cpp" line="130"/>
-        <location filename="../../../../main/mainMenu.cpp" line="178"/>
         <source>Audio
 1</source>
-        <translation>음성출력
+        <translation type="obsolete">음성출력
 채널 1</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="76"/>
-        <location filename="../../../../main/mainMenu.cpp" line="96"/>
-        <location filename="../../../../main/mainMenu.cpp" line="139"/>
-        <location filename="../../../../main/mainMenu.cpp" line="179"/>
         <source>Audio
 2</source>
-        <translation>음성출력
+        <translation type="obsolete">음성출력
 채널 2</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="77"/>
-        <location filename="../../../../main/mainMenu.cpp" line="97"/>
-        <location filename="../../../../main/mainMenu.cpp" line="148"/>
-        <location filename="../../../../main/mainMenu.cpp" line="180"/>
         <source>Audio
 3</source>
-        <translation>음성출력
+        <translation type="obsolete">음성출력
 채널 3</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="78"/>
-        <location filename="../../../../main/mainMenu.cpp" line="98"/>
-        <location filename="../../../../main/mainMenu.cpp" line="157"/>
-        <location filename="../../../../main/mainMenu.cpp" line="181"/>
         <source>Audio
 4</source>
-        <translation>음성출력
+        <translation type="obsolete">음성출력
 채널 4</translation>
     </message>
 </context>
@@ -3024,11 +3017,11 @@ Mute/1/2/3/4</source>
 <context>
     <name>MainWidget</name>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="529"/>
-        <location filename="../../../../main/maineventproc.cpp" line="691"/>
-        <location filename="../../../../main/maineventproc.cpp" line="721"/>
-        <location filename="../../../../main/maineventproc.cpp" line="722"/>
-        <location filename="../../../../main/maineventproc.cpp" line="751"/>
+        <location filename="../../../../main/maineventproc.cpp" line="530"/>
+        <location filename="../../../../main/maineventproc.cpp" line="692"/>
+        <location filename="../../../../main/maineventproc.cpp" line="723"/>
+        <location filename="../../../../main/maineventproc.cpp" line="724"/>
+        <location filename="../../../../main/maineventproc.cpp" line="753"/>
         <source>ERROR</source>
         <translation>오류</translation>
     </message>
@@ -3052,11 +3045,11 @@ Mute/1/2/3/4</source>
         <translation type="obsolete">저장장치가 연결됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="691"/>
-        <location filename="../../../../main/maineventproc.cpp" line="721"/>
-        <location filename="../../../../main/maineventproc.cpp" line="722"/>
-        <location filename="../../../../main/maineventproc.cpp" line="751"/>
-        <location filename="../../../../main/maineventproc.cpp" line="782"/>
+        <location filename="../../../../main/maineventproc.cpp" line="692"/>
+        <location filename="../../../../main/maineventproc.cpp" line="723"/>
+        <location filename="../../../../main/maineventproc.cpp" line="724"/>
+        <location filename="../../../../main/maineventproc.cpp" line="753"/>
+        <location filename="../../../../main/maineventproc.cpp" line="784"/>
         <location filename="../../../../main/maininitsys.cpp" line="180"/>
         <location filename="../../../../main/maininitsys.cpp" line="251"/>
         <source>System will restart.</source>
@@ -3067,7 +3060,7 @@ Mute/1/2/3/4</source>
         <translation type="obsolete">저장장치가 분리됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="477"/>
+        <location filename="../../../../main/maineventproc.cpp" line="478"/>
         <source>MOUNT ERROR</source>
         <translatorcomment>표시 오류</translatorcomment>
         <translation>연결 오류</translation>
@@ -3078,37 +3071,37 @@ Mute/1/2/3/4</source>
         <translation type="obsolete">%1</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="477"/>
+        <location filename="../../../../main/maineventproc.cpp" line="478"/>
         <source>Format Error</source>
         <translation>포맷 오류</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="529"/>
+        <location filename="../../../../main/maineventproc.cpp" line="530"/>
         <source>NO SSD</source>
         <translation>SSD가 없습니다</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="691"/>
+        <location filename="../../../../main/maineventproc.cpp" line="692"/>
         <source>Storage was attached.</source>
         <translation>저장장치가 연결됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="721"/>
+        <location filename="../../../../main/maineventproc.cpp" line="723"/>
         <source>HDD was detached.</source>
         <translation>HDD가 분리됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="722"/>
+        <location filename="../../../../main/maineventproc.cpp" line="724"/>
         <source>SSD was detached.</source>
         <translation>SSD가 분리됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="751"/>
+        <location filename="../../../../main/maineventproc.cpp" line="753"/>
         <source>IO Error occurred.</source>
         <translation>IO 오류가 발생했습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="779"/>
+        <location filename="../../../../main/maineventproc.cpp" line="781"/>
         <source>WARNING</source>
         <translation>경고</translation>
     </message>
@@ -3134,43 +3127,43 @@ Mute/1/2/3/4</source>
 %3</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="780"/>
+        <location filename="../../../../main/maineventproc.cpp" line="782"/>
         <source>Please unplug USB memory.   </source>
         <translation>USB 메모리를 분리하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="781"/>
+        <location filename="../../../../main/maineventproc.cpp" line="783"/>
         <source>If you click button of &apos;Ok&apos;,</source>
         <translation>&apos;OK&apos; 버튼을 클릭하면,</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="811"/>
+        <location filename="../../../../main/maineventproc.cpp" line="814"/>
         <source>Elapsed Time</source>
         <translation>경과 시간</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="856"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1284"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1330"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1398"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1484"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1536"/>
+        <location filename="../../../../main/maineventproc.cpp" line="860"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1294"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1340"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1408"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1494"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1558"/>
         <location filename="../../../../main/mainscreen.cpp" line="88"/>
         <location filename="../../../../main/mainscreen.cpp" line="138"/>
         <source>NOTICE</source>
         <translation>알림</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="856"/>
+        <location filename="../../../../main/maineventproc.cpp" line="860"/>
         <source>SATA Error Count</source>
         <translation>SATA 오류 횟수</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1284"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1330"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1398"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1484"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1536"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1294"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1340"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1408"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1494"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1558"/>
         <location filename="../../../../main/mainscreen.cpp" line="88"/>
         <location filename="../../../../main/mainscreen.cpp" line="138"/>
         <source>Current status is trigger.</source>
@@ -3190,7 +3183,7 @@ Mute/1/2/3/4</source>
         <translation type="obsolete">전원 종료</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="811"/>
+        <location filename="../../../../main/maineventproc.cpp" line="814"/>
         <source>System will shutdown.</source>
         <translation>시스템이 종료됩니다.</translation>
     </message>
@@ -3372,9 +3365,9 @@ Current status is trigger.</source>
         <translation>[5072] 보조 저장장치가 변경됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="811"/>
-        <location filename="../../../../main/mainwidget.cpp" line="620"/>
-        <location filename="../../../../main/mainwidget.cpp" line="954"/>
+        <location filename="../../../../main/maineventproc.cpp" line="814"/>
+        <location filename="../../../../main/mainwidget.cpp" line="624"/>
+        <location filename="../../../../main/mainwidget.cpp" line="952"/>
         <source>POWER OFF</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>전원 종료</translation>
@@ -3398,24 +3391,24 @@ Do you want to shutdown the system?</source>
 녹화를 종료하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="620"/>
+        <location filename="../../../../main/mainwidget.cpp" line="624"/>
         <source>System was shutdown successfully.
 Turn off the power.</source>
         <translation>정상적으로 종료됐습니다.
 전원을 끄십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="954"/>
+        <location filename="../../../../main/mainwidget.cpp" line="952"/>
         <source>Do you want to shutdown the system?</source>
         <translation>녹화를 종료하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1424"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1432"/>
         <source>SEARCH</source>
         <translation>검색</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1424"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1432"/>
         <source>No SSD</source>
         <translation>저장장치 없음</translation>
     </message>
@@ -3621,21 +3614,21 @@ Off/On</source>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="265"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="555"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="556"/>
         <source>Low</source>
         <translation>낮음</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="266"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="556"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="557"/>
         <source>Middle</source>
         <translation>보통</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="267"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="268"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="557"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="558"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="559"/>
         <source>High</source>
         <translation>높음</translation>
     </message>
@@ -3656,8 +3649,8 @@ Off/On</source>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="272"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="278"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="628"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="699"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="629"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="700"/>
         <source>Off</source>
         <translation>끄기</translation>
     </message>
@@ -3666,10 +3659,10 @@ Off/On</source>
         <location filename="../../../record/normal/normaldialog.cpp" line="274"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="279"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="280"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="629"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="630"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="700"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="631"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="701"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="702"/>
         <source>On</source>
         <translation>켜기</translation>
     </message>
@@ -4264,27 +4257,12 @@ Off/On</source>
         <translation>00:00:00 AM</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="427"/>
-        <location filename="../../../../main/playbardialog.cpp" line="439"/>
+        <location filename="../../../../main/playbardialog.cpp" line="445"/>
+        <location filename="../../../../main/playbardialog.cpp" line="457"/>
         <source>Pause</source>
         <translation>정지</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="451"/>
-        <location filename="../../../../main/playbardialog.cpp" line="452"/>
-        <location filename="../../../../main/playbardialog.cpp" line="453"/>
-        <location filename="../../../../main/playbardialog.cpp" line="454"/>
-        <location filename="../../../../main/playbardialog.cpp" line="455"/>
-        <location filename="../../../../main/playbardialog.cpp" line="456"/>
-        <location filename="../../../../main/playbardialog.cpp" line="457"/>
-        <location filename="../../../../main/playbardialog.cpp" line="458"/>
-        <location filename="../../../../main/playbardialog.cpp" line="459"/>
-        <source>FF</source>
-        <translation>빨리 감기</translation>
-    </message>
-    <message>
-        <location filename="../../../../main/playbardialog.cpp" line="467"/>
-        <location filename="../../../../main/playbardialog.cpp" line="468"/>
         <location filename="../../../../main/playbardialog.cpp" line="469"/>
         <location filename="../../../../main/playbardialog.cpp" line="470"/>
         <location filename="../../../../main/playbardialog.cpp" line="471"/>
@@ -4293,12 +4271,27 @@ Off/On</source>
         <location filename="../../../../main/playbardialog.cpp" line="474"/>
         <location filename="../../../../main/playbardialog.cpp" line="475"/>
         <location filename="../../../../main/playbardialog.cpp" line="476"/>
+        <location filename="../../../../main/playbardialog.cpp" line="477"/>
+        <source>FF</source>
+        <translation>빨리 감기</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/playbardialog.cpp" line="485"/>
+        <location filename="../../../../main/playbardialog.cpp" line="486"/>
+        <location filename="../../../../main/playbardialog.cpp" line="487"/>
+        <location filename="../../../../main/playbardialog.cpp" line="488"/>
+        <location filename="../../../../main/playbardialog.cpp" line="489"/>
+        <location filename="../../../../main/playbardialog.cpp" line="490"/>
+        <location filename="../../../../main/playbardialog.cpp" line="491"/>
+        <location filename="../../../../main/playbardialog.cpp" line="492"/>
+        <location filename="../../../../main/playbardialog.cpp" line="493"/>
+        <location filename="../../../../main/playbardialog.cpp" line="494"/>
         <source>REW</source>
         <translation>되감기</translation>
     </message>
     <message>
         <location filename="../../../../main/playbardialog.ui" line="73"/>
-        <location filename="../../../../main/playbardialog.cpp" line="450"/>
+        <location filename="../../../../main/playbardialog.cpp" line="468"/>
         <source>Play</source>
         <translation>재생</translation>
     </message>
@@ -5492,12 +5485,12 @@ On</source>
         <translation>PM</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.cpp" line="515"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="514"/>
         <source>NOTICE</source>
         <translation>알림</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.cpp" line="515"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="514"/>
         <source>Current status is trigger.</source>
         <translation>현재 트리거 상태입니다.</translation>
     </message>
@@ -9040,77 +9033,77 @@ X 또는 너비값를 확인하십시오!
 <context>
     <name>VideoPane</name>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="566"/>
+        <location filename="../../../../main/videopane.cpp" line="568"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="710"/>
+        <location filename="../../../../main/videopane.cpp" line="712"/>
         <source>NO VIDEO</source>
         <translation>입력 영상 없음</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="762"/>
+        <location filename="../../../../main/videopane.cpp" line="764"/>
         <source>NO DATA</source>
         <translation>데이터 없음</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1214"/>
+        <location filename="../../../../main/videopane.cpp" line="1216"/>
         <source>PAL</source>
         <translation>PAL</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1215"/>
+        <location filename="../../../../main/videopane.cpp" line="1217"/>
         <source>NTSC</source>
         <translation>NTSC</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1216"/>
+        <location filename="../../../../main/videopane.cpp" line="1218"/>
         <source>720p25</source>
         <translation>720p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1217"/>
+        <location filename="../../../../main/videopane.cpp" line="1219"/>
         <source>720p30</source>
         <translation>720p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1218"/>
+        <location filename="../../../../main/videopane.cpp" line="1220"/>
         <source>720p50</source>
         <translation>720p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1219"/>
+        <location filename="../../../../main/videopane.cpp" line="1221"/>
         <source>720p60</source>
         <translation>720p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1220"/>
+        <location filename="../../../../main/videopane.cpp" line="1222"/>
         <source>1080p25</source>
         <translation>1080p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1221"/>
+        <location filename="../../../../main/videopane.cpp" line="1223"/>
         <source>1080p30</source>
         <translation>1080p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1222"/>
+        <location filename="../../../../main/videopane.cpp" line="1224"/>
         <source>1080p50</source>
         <translation>1080p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1223"/>
+        <location filename="../../../../main/videopane.cpp" line="1225"/>
         <source>1080p60</source>
         <translation>1080p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1224"/>
+        <location filename="../../../../main/videopane.cpp" line="1226"/>
         <source>1080i50</source>
         <translation>1080i50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1225"/>
+        <location filename="../../../../main/videopane.cpp" line="1227"/>
         <source>1080i60</source>
         <translation>1080i60</translation>
     </message>

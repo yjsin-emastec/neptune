@@ -296,10 +296,14 @@ void PlayBarDialog::SetAudioIcon(int ch)
 {
     switch(ch)
     {
-        case  0: { buttonAudio->setIcon(QIcon(":/images/audio1.png")); emit setAudio1();     break; }
-        case  1: { buttonAudio->setIcon(QIcon(":/images/audio2.png")); emit setAudio2();     break; }
-        case  2: { buttonAudio->setIcon(QIcon(":/images/audio3.png")); emit setAudio3();     break; }
-        case  3: { buttonAudio->setIcon(QIcon(":/images/audio4.png")); emit setAudio4();     break; }
+        case  0: { buttonAudio->setIcon(QIcon(":/images/audio1.png")); emit setAudio(1);     break; }
+        case  1: { buttonAudio->setIcon(QIcon(":/images/audio2.png")); emit setAudio(2);     break; }
+        case  2: { buttonAudio->setIcon(QIcon(":/images/audio3.png")); emit setAudio(3);     break; }
+        case  3: { buttonAudio->setIcon(QIcon(":/images/audio4.png")); emit setAudio(4);     break; }
+        case  4: { buttonAudio->setIcon(QIcon(":/images/audio5.png")); emit setAudio(5);     break; }
+        case  5: { buttonAudio->setIcon(QIcon(":/images/audio6.png")); emit setAudio(6);     break; }
+        case  6: { buttonAudio->setIcon(QIcon(":/images/audio7.png")); emit setAudio(7);     break; }
+        case  7: { buttonAudio->setIcon(QIcon(":/images/audio8.png")); emit setAudio(8);     break; }
         case 19: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); emit setAudioMute();  break; }
         default: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); emit setAudioMute();  break; }
     }
@@ -308,10 +312,14 @@ void PlayBarDialog::OutputAudio(int ch)
 {
     switch(ch)
     {
-        case  0: { buttonAudio->setIcon(QIcon(":/images/audio1.png")); indexAudio = 2; emit setAudio1();    break; }
-        case  1: { buttonAudio->setIcon(QIcon(":/images/audio2.png")); indexAudio = 3; emit setAudio2();    break; }
-        case  2: { buttonAudio->setIcon(QIcon(":/images/audio3.png")); indexAudio = 4; emit setAudio3();    break; }
-        case  3: { buttonAudio->setIcon(QIcon(":/images/audio4.png")); indexAudio = 5; emit setAudio4();    break; }
+        case  0: { buttonAudio->setIcon(QIcon(":/images/audio1.png")); indexAudio = 2; emit setAudio(1);    break; }
+        case  1: { buttonAudio->setIcon(QIcon(":/images/audio2.png")); indexAudio = 3; emit setAudio(2);    break; }
+        case  2: { buttonAudio->setIcon(QIcon(":/images/audio3.png")); indexAudio = 4; emit setAudio(3);    break; }
+        case  3: { buttonAudio->setIcon(QIcon(":/images/audio4.png")); indexAudio = 5; emit setAudio(4);    break; }
+        case  4: { buttonAudio->setIcon(QIcon(":/images/audio5.png")); indexAudio = 6; emit setAudio(5);    break; }
+        case  5: { buttonAudio->setIcon(QIcon(":/images/audio6.png")); indexAudio = 7; emit setAudio(6);    break; }
+        case  6: { buttonAudio->setIcon(QIcon(":/images/audio7.png")); indexAudio = 8; emit setAudio(7);    break; }
+        case  7: { buttonAudio->setIcon(QIcon(":/images/audio8.png")); indexAudio = 9; emit setAudio(8);    break; }
         case 19: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); indexAudio = 1; emit setAudioMute(); break; }
         default: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); indexAudio = 1; emit setAudioMute(); break; }
     }
@@ -341,10 +349,14 @@ void PlayBarDialog::onButtonAudio(void)
         switch(indexAudio)
         {
             case  1: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19); emit setAudioMute(); break; }
-            case  2: { buttonAudio->setIcon(QIcon(":/images/audio1.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         0); emit setAudio1();    break; }
-            case  3: { buttonAudio->setIcon(QIcon(":/images/audio2.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         1); emit setAudio2();    break; }
-            case  4: { buttonAudio->setIcon(QIcon(":/images/audio3.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         2); emit setAudio3();    break; }
-            case  5: { buttonAudio->setIcon(QIcon(":/images/audio4.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         3); emit setAudio4();    break; }
+            case  2: { buttonAudio->setIcon(QIcon(":/images/audio1.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         0); emit setAudio(1);    break; }
+            case  3: { buttonAudio->setIcon(QIcon(":/images/audio2.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         1); emit setAudio(2);    break; }
+            case  4: { buttonAudio->setIcon(QIcon(":/images/audio3.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         2); emit setAudio(3);    break; }
+            case  5: { buttonAudio->setIcon(QIcon(":/images/audio4.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         3); emit setAudio(4);    break; }
+            case  6: { buttonAudio->setIcon(QIcon(":/images/audio5.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         4); emit setAudio(5);    break; }
+            case  7: { buttonAudio->setIcon(QIcon(":/images/audio6.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         5); emit setAudio(6);    break; }
+            case  8: { buttonAudio->setIcon(QIcon(":/images/audio7.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         6); emit setAudio(7);    break; }
+            case  9: { buttonAudio->setIcon(QIcon(":/images/audio8.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         7); emit setAudio(8);    break; }
         }
 
         if(indexAudio != 1)
@@ -354,7 +366,8 @@ void PlayBarDialog::onButtonAudio(void)
     }
     else
     {
-        if(indexAudio >= 5)
+        //if( indexAudio > devInfo.videoNum)
+        if(indexAudio > 8 )
         {
             indexAudio = 0;
         }
@@ -362,10 +375,14 @@ void PlayBarDialog::onButtonAudio(void)
         switch(++indexAudio)
         {
             case  1: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19); emit setAudioMute(); break; }
-            case  2: { buttonAudio->setIcon(QIcon(":/images/audio1.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         0); emit setAudio1();    break; }
-            case  3: { buttonAudio->setIcon(QIcon(":/images/audio2.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         1); emit setAudio2();    break; }
-            case  4: { buttonAudio->setIcon(QIcon(":/images/audio3.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         2); emit setAudio3();    break; }
-            case  5: { buttonAudio->setIcon(QIcon(":/images/audio4.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         3); emit setAudio4();    break; }
+            case  2: { buttonAudio->setIcon(QIcon(":/images/audio1.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         0); emit setAudio(1);    break; }
+            case  3: { buttonAudio->setIcon(QIcon(":/images/audio2.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         1); emit setAudio(2);    break; }
+            case  4: { buttonAudio->setIcon(QIcon(":/images/audio3.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         2); emit setAudio(3);    break; }
+            case  5: { buttonAudio->setIcon(QIcon(":/images/audio4.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         3); emit setAudio(4);    break; }
+            case  6: { buttonAudio->setIcon(QIcon(":/images/audio5.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         4); emit setAudio(5);    break; }
+            case  7: { buttonAudio->setIcon(QIcon(":/images/audio6.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         5); emit setAudio(6);    break; }
+            case  8: { buttonAudio->setIcon(QIcon(":/images/audio7.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         6); emit setAudio(7);    break; }
+            case  9: { buttonAudio->setIcon(QIcon(":/images/audio8.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         7); emit setAudio(8);    break; }
         }
     }
 }

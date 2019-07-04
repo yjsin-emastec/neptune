@@ -35,10 +35,7 @@ signals:
 	void searchClicked();
 	void shutdownClicked(void);
 	void setAudioMute(void);
-	void setAudio1(void);
-	void setAudio2(void);
-	void setAudio3(void);
-	void setAudio4(void);
+    void setAudio(int);
 	void enterMainMenu(void);
 	void exitMainMenu(void);
 

@@ -64,39 +64,44 @@ void MainMenu::onButtonSearch()
 }
 void MainMenu::onButtonAudio()
 {
-    if(indexAudio >= 5) { indexAudio = 0; }
+    //if(indexAudio > devInfo.videoNum || indexAudio < 0)   { indexAudio = 0; }
+    if(indexAudio > 8 || indexAudio < 0)    { indexAudio = 0; }
 
     if(currentSplit==1)
     {
-        if(indexAudio+1==AUDIO_LIVE_MUTE)
+        if(indexAudio+1 == AUDIO_LIVE_MUTE)
         {
-            switch(currentChannelNum)
-            {
-                case 0: { buttonAudio->setText(tr("Audio\n1")); indexAudio=2; emit setAudio1(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 1"); break; }
-                case 1: { buttonAudio->setText(tr("Audio\n2")); indexAudio=3; emit setAudio2(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 2"); break; }
-                case 2: { buttonAudio->setText(tr("Audio\n3")); indexAudio=4; emit setAudio3(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 3"); break; }
-                case 3: { buttonAudio->setText(tr("Audio\n4")); indexAudio=5; emit setAudio4(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 4"); break; }
-            }
+            indexAudio=currentChannelNum+2;
+            buttonAudio->setText(QString("%1\n%2").arg(tr("Audio"), QString::number(currentChannelNum+1)));
+            QString str = QString("%1 %2").arg("Audio Output", QString::number(currentChannelNum+1));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+            emit setAudio(currentChannelNum+1);
         }
         else
         {
-            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Mute");
-            buttonAudio->setText(tr("Audio\nMute"));
             indexAudio=1;
-
+            buttonAudio->setText(tr("Audio\nMute"));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Mute");
             emit setAudioMute();
         }
     }
     else
     {
-        switch(++indexAudio)
+        if(indexAudio == 0)
         {
-            case 1: { buttonAudio->setText(tr("Audio\nMute")); emit setAudioMute(); appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Mute"    ); break; }
-            case 2: { buttonAudio->setText(tr("Audio\n1"));    emit setAudio1();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 1"); break; }
-            case 3: { buttonAudio->setText(tr("Audio\n2"));    emit setAudio2();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 2"); break; }
-            case 4: { buttonAudio->setText(tr("Audio\n3"));    emit setAudio3();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 3"); break; }
-            case 5: { buttonAudio->setText(tr("Audio\n4"));    emit setAudio4();    appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Output 4"); break; }
+            buttonAudio->setText(tr("Audio\nMute"));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "Audio Mute");
+            emit setAudioMute();
         }
+        else
+        {
+            buttonAudio->setText(QString("%1\n%2").arg(tr("Audio"), QString::number(indexAudio)));
+            QString str = QString("%1 %2").arg("Audio Output", QString::number(indexAudio));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+            emit setAudio(indexAudio);
+        }
+
+        indexAudio++;
     }
 }
 void MainMenu::onButtonShutdown()
@@ -115,70 +120,45 @@ void MainMenu::initMainMenu(void)
 
     emit enterMainMenu();
 
-    switch(audioStatus)
+    if(audioStatus == LIVE_AUDIO_MUTE)
     {
-        case LIVE_AUDIO_MUTE:
-
-            buttonAudio->setText(tr("Audio\nMute"));
-            indexAudio = 1;
-            appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, indexAudio-1);
-
-            break;
-
-        case LIVE_AUDIO_SINGLE_1:
-
-            buttonAudio->setText(tr("Audio\n1"));
-            indexAudio = 2;
-
-            appmgr_set_audio_output_mix(AUDIO_LIVE, audioStatus-2);
-
-            break;
-
-        case LIVE_AUDIO_SINGLE_2:
-
-            buttonAudio->setText(tr("Audio\n2"));
-            indexAudio = 3;
-
-            appmgr_set_audio_output_mix(AUDIO_LIVE, audioStatus-2);
-
-            break;
-
-        case LIVE_AUDIO_SINGLE_3:
-
-            buttonAudio->setText(tr("Audio\n3"));
-            indexAudio = 4;
-
-            appmgr_set_audio_output_mix(AUDIO_LIVE, audioStatus-2);
-
-            break;
-
-        case LIVE_AUDIO_SINGLE_4:
-
-            buttonAudio->setText(tr("Audio\n4"));
-            indexAudio = 5;
-
-            appmgr_set_audio_output_mix(AUDIO_LIVE, audioStatus-2);
-
-            break;
-
-        default:
-
-            buttonAudio->setText(tr("Audio\nMute"));
-            indexAudio = 1;
-            appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, indexAudio-1);
-
-            break;
+        buttonAudio->setText(tr("Audio\nMute"));
+        indexAudio = 1;
+        appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, LIVE_AUDIO_MUTE);
+    }
+    //else if (audioStatus >= LIVE_AUDIO_SINGLE_1 && audioStatus <= devInfo.videoNum+1)
+    else if(audioStatus >= LIVE_AUDIO_SINGLE_1 && audioStatus <= 8+1)
+    {
+        buttonAudio->setText(QString("%1\n%2").arg(tr("Audio"), QString::number(audioStatus-1)));
+        indexAudio = audioStatus;
+        appmgr_set_audio_output_mix(AUDIO_LIVE, audioStatus-2);
+    }
+    else
+    {
+        buttonAudio->setText(tr("Audio\nMute"));
+        indexAudio = 1;
+        appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, LIVE_AUDIO_MUTE);
     }
 }
 void MainMenu::onUpdateAudioButton()
 {
-    switch(cfgMain.gbl.audioOut)
+    int audioOutCH = cfgMain.gbl.audioOut;
+
+    if(audioOutCH == LIVE_AUDIO_MUTE)
     {
-        case 0: { buttonAudio->setText(tr("Audio\nMute"));  indexAudio=1;   break; }
-        case 2: { buttonAudio->setText(tr("Audio\n1"));     indexAudio=2;   break; }
-        case 3: { buttonAudio->setText(tr("Audio\n2"));     indexAudio=3;   break; }
-        case 4: { buttonAudio->setText(tr("Audio\n3"));     indexAudio=4;   break; }
-        case 5: { buttonAudio->setText(tr("Audio\n4"));     indexAudio=5;   break; }
+        buttonAudio->setText(tr("Audio\nMute"));
+        indexAudio=1;
+    }
+    //else if(audioCH >= LIVE_AUDIO_SINGLE_1 && audioCH <= devInfo.videoNum+1)
+    else if(audioOutCH >= LIVE_AUDIO_SINGLE_1 && audioOutCH <= 8+1)
+    {
+        buttonAudio->setText(QString("%1\n%2").arg(tr("Audio"), QString::number(audioOutCH-1)));
+        indexAudio=audioOutCH;
+    }
+    else
+    {
+        buttonAudio->setText(tr("Audio\nMute"));
+        indexAudio=1;
     }
 }
 void MainMenu::keyPressEvent(QKeyEvent *event)

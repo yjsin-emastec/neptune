@@ -42,11 +42,8 @@ public:
 signals:
     void            exitSearchBar         (void);
     void            backupClicked         (void);
-    void            setAudio1             (void);
-    void            setAudio2             (void);
-    void            setAudio3             (void);
-    void            setAudio4             (void);
     void            setAudioMute          (void);
+    void            setAudio              (int);
 
 public slots:
     void            clickBackup           (void);

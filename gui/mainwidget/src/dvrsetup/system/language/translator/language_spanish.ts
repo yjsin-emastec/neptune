@@ -2648,7 +2648,7 @@ El sistema se reiniciará.</translation>
         <translation>Introduzca una contraseña.</translation>
     </message>
     <message>
-        <location filename="../../../../login/logindialog.cpp" line="192"/>
+        <location filename="../../../../login/logindialog.cpp" line="193"/>
         <source>Incorrect Password.
 Please try again.</source>
         <translation>Contraseña incorrecta.
@@ -2807,54 +2807,47 @@ Apagar/1/2/3/4</translation>
         <translation>Cerrar</translation>
     </message>
     <message>
+        <location filename="../../../../main/mainMenu.cpp" line="75"/>
+        <location filename="../../../../main/mainMenu.cpp" line="99"/>
+        <location filename="../../../../main/mainMenu.cpp" line="133"/>
+        <location filename="../../../../main/mainMenu.cpp" line="156"/>
+        <source>Audio</source>
+        <translation>Audio</translation>
+    </message>
+    <message>
         <location filename="../../../../main/mainMenu.cpp" line="84"/>
-        <location filename="../../../../main/mainMenu.cpp" line="94"/>
-        <location filename="../../../../main/mainMenu.cpp" line="122"/>
-        <location filename="../../../../main/mainMenu.cpp" line="166"/>
-        <location filename="../../../../main/mainMenu.cpp" line="177"/>
+        <location filename="../../../../main/mainMenu.cpp" line="93"/>
+        <location filename="../../../../main/mainMenu.cpp" line="126"/>
+        <location filename="../../../../main/mainMenu.cpp" line="139"/>
+        <location filename="../../../../main/mainMenu.cpp" line="150"/>
+        <location filename="../../../../main/mainMenu.cpp" line="161"/>
         <source>Audio
 Mute</source>
         <translation>Audio
 Mudo</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="75"/>
-        <location filename="../../../../main/mainMenu.cpp" line="95"/>
-        <location filename="../../../../main/mainMenu.cpp" line="130"/>
-        <location filename="../../../../main/mainMenu.cpp" line="178"/>
         <source>Audio
 1</source>
-        <translation>Audio
+        <translation type="obsolete">Audio
 1</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="76"/>
-        <location filename="../../../../main/mainMenu.cpp" line="96"/>
-        <location filename="../../../../main/mainMenu.cpp" line="139"/>
-        <location filename="../../../../main/mainMenu.cpp" line="179"/>
         <source>Audio
 2</source>
-        <translation>Audio
+        <translation type="obsolete">Audio
 2</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="77"/>
-        <location filename="../../../../main/mainMenu.cpp" line="97"/>
-        <location filename="../../../../main/mainMenu.cpp" line="148"/>
-        <location filename="../../../../main/mainMenu.cpp" line="180"/>
         <source>Audio
 3</source>
-        <translation>Audio
+        <translation type="obsolete">Audio
 3</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="78"/>
-        <location filename="../../../../main/mainMenu.cpp" line="98"/>
-        <location filename="../../../../main/mainMenu.cpp" line="157"/>
-        <location filename="../../../../main/mainMenu.cpp" line="181"/>
         <source>Audio
 4</source>
-        <translation>Audio
+        <translation type="obsolete">Audio
 4</translation>
     </message>
 </context>
@@ -2896,11 +2889,11 @@ Apagar/1/2/3/4</translation>
 <context>
     <name>MainWidget</name>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="529"/>
-        <location filename="../../../../main/maineventproc.cpp" line="691"/>
-        <location filename="../../../../main/maineventproc.cpp" line="721"/>
-        <location filename="../../../../main/maineventproc.cpp" line="722"/>
-        <location filename="../../../../main/maineventproc.cpp" line="751"/>
+        <location filename="../../../../main/maineventproc.cpp" line="530"/>
+        <location filename="../../../../main/maineventproc.cpp" line="692"/>
+        <location filename="../../../../main/maineventproc.cpp" line="723"/>
+        <location filename="../../../../main/maineventproc.cpp" line="724"/>
+        <location filename="../../../../main/maineventproc.cpp" line="753"/>
         <source>ERROR</source>
         <translation>ERROR</translation>
     </message>
@@ -2924,11 +2917,11 @@ No hay almacenamiento</translation>
         <translation type="obsolete">El Almacenamiento se adjuntó.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="691"/>
-        <location filename="../../../../main/maineventproc.cpp" line="721"/>
-        <location filename="../../../../main/maineventproc.cpp" line="722"/>
-        <location filename="../../../../main/maineventproc.cpp" line="751"/>
-        <location filename="../../../../main/maineventproc.cpp" line="782"/>
+        <location filename="../../../../main/maineventproc.cpp" line="692"/>
+        <location filename="../../../../main/maineventproc.cpp" line="723"/>
+        <location filename="../../../../main/maineventproc.cpp" line="724"/>
+        <location filename="../../../../main/maineventproc.cpp" line="753"/>
+        <location filename="../../../../main/maineventproc.cpp" line="784"/>
         <location filename="../../../../main/maininitsys.cpp" line="180"/>
         <location filename="../../../../main/maininitsys.cpp" line="251"/>
         <source>System will restart.</source>
@@ -2939,7 +2932,7 @@ No hay almacenamiento</translation>
         <translation type="obsolete">El almacenamiento se separó.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="477"/>
+        <location filename="../../../../main/maineventproc.cpp" line="478"/>
         <source>MOUNT ERROR</source>
         <translation>Error de montaje</translation>
     </message>
@@ -2948,37 +2941,37 @@ No hay almacenamiento</translation>
         <translation type="obsolete">%1</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="477"/>
+        <location filename="../../../../main/maineventproc.cpp" line="478"/>
         <source>Format Error</source>
         <translation>Erro de formato</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="529"/>
+        <location filename="../../../../main/maineventproc.cpp" line="530"/>
         <source>NO SSD</source>
         <translation>SSD no existe.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="691"/>
+        <location filename="../../../../main/maineventproc.cpp" line="692"/>
         <source>Storage was attached.</source>
         <translation>El Almacenamiento se adjuntó.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="721"/>
+        <location filename="../../../../main/maineventproc.cpp" line="723"/>
         <source>HDD was detached.</source>
         <translation>HDD se separó.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="722"/>
+        <location filename="../../../../main/maineventproc.cpp" line="724"/>
         <source>SSD was detached.</source>
         <translation>SSD se separó.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="751"/>
+        <location filename="../../../../main/maineventproc.cpp" line="753"/>
         <source>IO Error occurred.</source>
         <translation>Se produjo un error de E/S.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="779"/>
+        <location filename="../../../../main/maineventproc.cpp" line="781"/>
         <source>WARNING</source>
         <translation>ADVERTENCIA</translation>
     </message>
@@ -3003,43 +2996,43 @@ No hay almacenamiento</translation>
 %3</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="780"/>
+        <location filename="../../../../main/maineventproc.cpp" line="782"/>
         <source>Please unplug USB memory.   </source>
         <translation>Desenchufe la memoria USB.</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="781"/>
+        <location filename="../../../../main/maineventproc.cpp" line="783"/>
         <source>If you click button of &apos;Ok&apos;,</source>
         <translation>Sí hace clic en &apos;Acuerdo&apos;,</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="811"/>
+        <location filename="../../../../main/maineventproc.cpp" line="814"/>
         <source>Elapsed Time</source>
         <translation>Tiempo transcurrido</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="856"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1284"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1330"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1398"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1484"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1536"/>
+        <location filename="../../../../main/maineventproc.cpp" line="860"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1294"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1340"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1408"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1494"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1558"/>
         <location filename="../../../../main/mainscreen.cpp" line="88"/>
         <location filename="../../../../main/mainscreen.cpp" line="138"/>
         <source>NOTICE</source>
         <translation>NOTIFICACIÓN</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="856"/>
+        <location filename="../../../../main/maineventproc.cpp" line="860"/>
         <source>SATA Error Count</source>
         <translation>Recuento de errores SATA</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1284"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1330"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1398"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1484"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1536"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1294"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1340"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1408"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1494"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1558"/>
         <location filename="../../../../main/mainscreen.cpp" line="88"/>
         <location filename="../../../../main/mainscreen.cpp" line="138"/>
         <source>Current status is trigger.</source>
@@ -3064,7 +3057,7 @@ No hay almacenamiento</translation>
         <translation type="obsolete">Tiempo transcurrido:</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="811"/>
+        <location filename="../../../../main/maineventproc.cpp" line="814"/>
         <source>System will shutdown.</source>
         <translation>El sistema se apagará.</translation>
     </message>
@@ -3207,9 +3200,9 @@ El estado actual es Activado.</translation>
         <translation>[5072] Almacenamiento de esclavos modificado</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="811"/>
-        <location filename="../../../../main/mainwidget.cpp" line="620"/>
-        <location filename="../../../../main/mainwidget.cpp" line="954"/>
+        <location filename="../../../../main/maineventproc.cpp" line="814"/>
+        <location filename="../../../../main/mainwidget.cpp" line="624"/>
+        <location filename="../../../../main/mainwidget.cpp" line="952"/>
         <source>POWER OFF</source>
         <translation>APAGAR</translation>
     </message>
@@ -3232,24 +3225,24 @@ Do you want to shutdown the system?</source>
 ¿Desea apagar el sistema?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="620"/>
+        <location filename="../../../../main/mainwidget.cpp" line="624"/>
         <source>System was shutdown successfully.
 Turn off the power.</source>
         <translation>El sistema se completó con éxito.
 Desconecte la alimentación.</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="954"/>
+        <location filename="../../../../main/mainwidget.cpp" line="952"/>
         <source>Do you want to shutdown the system?</source>
         <translation>¿Desea apagar el sistema?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1424"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1432"/>
         <source>SEARCH</source>
         <translation>BUSCAR</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1424"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1432"/>
         <source>No SSD</source>
         <translation>No hay Almacenamiento</translation>
     </message>
@@ -3443,21 +3436,21 @@ Apagar / Encender</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="265"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="555"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="556"/>
         <source>Low</source>
         <translation>Bajo</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="266"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="556"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="557"/>
         <source>Middle</source>
         <translation>Medio</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="267"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="268"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="557"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="558"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="559"/>
         <source>High</source>
         <translation>Alto</translation>
     </message>
@@ -3478,8 +3471,8 @@ Apagar / Encender</translation>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="272"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="278"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="628"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="699"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="629"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="700"/>
         <source>Off</source>
         <translation>Apagar</translation>
     </message>
@@ -3488,10 +3481,10 @@ Apagar / Encender</translation>
         <location filename="../../../record/normal/normaldialog.cpp" line="274"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="279"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="280"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="629"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="630"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="700"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="631"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="701"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="702"/>
         <source>On</source>
         <translation>Encender</translation>
     </message>
@@ -4043,28 +4036,12 @@ Apagar / Encender</translation>
         <translation>00:00:00 AM</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="427"/>
-        <location filename="../../../../main/playbardialog.cpp" line="439"/>
+        <location filename="../../../../main/playbardialog.cpp" line="445"/>
+        <location filename="../../../../main/playbardialog.cpp" line="457"/>
         <source>Pause</source>
         <translation>Pausa</translation>
     </message>
     <message>
-        <location filename="../../../../main/playbardialog.cpp" line="451"/>
-        <location filename="../../../../main/playbardialog.cpp" line="452"/>
-        <location filename="../../../../main/playbardialog.cpp" line="453"/>
-        <location filename="../../../../main/playbardialog.cpp" line="454"/>
-        <location filename="../../../../main/playbardialog.cpp" line="455"/>
-        <location filename="../../../../main/playbardialog.cpp" line="456"/>
-        <location filename="../../../../main/playbardialog.cpp" line="457"/>
-        <location filename="../../../../main/playbardialog.cpp" line="458"/>
-        <location filename="../../../../main/playbardialog.cpp" line="459"/>
-        <source>FF</source>
-        <translatorcomment>Rápido</translatorcomment>
-        <translation>FF</translation>
-    </message>
-    <message>
-        <location filename="../../../../main/playbardialog.cpp" line="467"/>
-        <location filename="../../../../main/playbardialog.cpp" line="468"/>
         <location filename="../../../../main/playbardialog.cpp" line="469"/>
         <location filename="../../../../main/playbardialog.cpp" line="470"/>
         <location filename="../../../../main/playbardialog.cpp" line="471"/>
@@ -4073,13 +4050,29 @@ Apagar / Encender</translation>
         <location filename="../../../../main/playbardialog.cpp" line="474"/>
         <location filename="../../../../main/playbardialog.cpp" line="475"/>
         <location filename="../../../../main/playbardialog.cpp" line="476"/>
+        <location filename="../../../../main/playbardialog.cpp" line="477"/>
+        <source>FF</source>
+        <translatorcomment>Rápido</translatorcomment>
+        <translation>FF</translation>
+    </message>
+    <message>
+        <location filename="../../../../main/playbardialog.cpp" line="485"/>
+        <location filename="../../../../main/playbardialog.cpp" line="486"/>
+        <location filename="../../../../main/playbardialog.cpp" line="487"/>
+        <location filename="../../../../main/playbardialog.cpp" line="488"/>
+        <location filename="../../../../main/playbardialog.cpp" line="489"/>
+        <location filename="../../../../main/playbardialog.cpp" line="490"/>
+        <location filename="../../../../main/playbardialog.cpp" line="491"/>
+        <location filename="../../../../main/playbardialog.cpp" line="492"/>
+        <location filename="../../../../main/playbardialog.cpp" line="493"/>
+        <location filename="../../../../main/playbardialog.cpp" line="494"/>
         <source>REW</source>
         <translatorcomment>Rebobinar</translatorcomment>
         <translation>REW</translation>
     </message>
     <message>
         <location filename="../../../../main/playbardialog.ui" line="73"/>
-        <location filename="../../../../main/playbardialog.cpp" line="450"/>
+        <location filename="../../../../main/playbardialog.cpp" line="468"/>
         <source>Play</source>
         <translation>Reproducir</translation>
     </message>
@@ -5247,12 +5240,12 @@ Encender</translation>
         <translation>PM</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.cpp" line="515"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="514"/>
         <source>NOTICE</source>
         <translation>NOTIFICACIÓN</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.cpp" line="515"/>
+        <location filename="../../../../main/statusbardialog.cpp" line="514"/>
         <source>Current status is trigger.</source>
         <translation>El estado actual es Activado.</translation>
     </message>
@@ -8718,77 +8711,77 @@ El pixel horizontal total debe ser inferior a 720.
 <context>
     <name>VideoPane</name>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="566"/>
+        <location filename="../../../../main/videopane.cpp" line="568"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="710"/>
+        <location filename="../../../../main/videopane.cpp" line="712"/>
         <source>NO VIDEO</source>
         <translation>No hay Vídeo</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="762"/>
+        <location filename="../../../../main/videopane.cpp" line="764"/>
         <source>NO DATA</source>
         <translation>No hay Datos</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1214"/>
+        <location filename="../../../../main/videopane.cpp" line="1216"/>
         <source>PAL</source>
         <translation>PAL</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1215"/>
+        <location filename="../../../../main/videopane.cpp" line="1217"/>
         <source>NTSC</source>
         <translation>NTSC</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1216"/>
+        <location filename="../../../../main/videopane.cpp" line="1218"/>
         <source>720p25</source>
         <translation>720p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1217"/>
+        <location filename="../../../../main/videopane.cpp" line="1219"/>
         <source>720p30</source>
         <translation>720p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1218"/>
+        <location filename="../../../../main/videopane.cpp" line="1220"/>
         <source>720p50</source>
         <translation>720p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1219"/>
+        <location filename="../../../../main/videopane.cpp" line="1221"/>
         <source>720p60</source>
         <translation>720p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1220"/>
+        <location filename="../../../../main/videopane.cpp" line="1222"/>
         <source>1080p25</source>
         <translation>1080p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1221"/>
+        <location filename="../../../../main/videopane.cpp" line="1223"/>
         <source>1080p30</source>
         <translation>1080p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1222"/>
+        <location filename="../../../../main/videopane.cpp" line="1224"/>
         <source>1080p50</source>
         <translation>1080p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1223"/>
+        <location filename="../../../../main/videopane.cpp" line="1225"/>
         <source>1080p60</source>
         <translation>1080p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1224"/>
+        <location filename="../../../../main/videopane.cpp" line="1226"/>
         <source>1080i50</source>
         <translation>1080i50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1225"/>
+        <location filename="../../../../main/videopane.cpp" line="1227"/>
         <source>1080i60</source>
         <translation>1080i60</translation>
     </message>

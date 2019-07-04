@@ -60,10 +60,7 @@ public slots:
     void videoPaneDoubleClicked(int ch);
     void videoPaneRightClicked(int ch);
     void onSetAudioMute();
-    void onSetAudio1();
-    void onSetAudio2();
-    void onSetAudio3();
-    void onSetAudio4();
+    void onSetAudio(int ch);
     void setAudioOut();
     void setAudioMode();
     void runSetup();
