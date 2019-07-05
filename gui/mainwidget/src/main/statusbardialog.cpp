@@ -536,19 +536,31 @@ void StatusBarDialog::onButtonSplit()
 void StatusBarDialog::onButtonSplit1()
 {
     setFocusSplitButton(1);
-    emit changeSplit(0, 0, Split_1);
+
+    if( currentSplit != Split_1 )
+    {
+        emit changeSplit(currentChannelNum, currentChannelNum, Split_1);
+    }
 }
 void StatusBarDialog::onButtonSplit4()
 {
     setFocusSplitButton(2);
-    emit changeSplit(0, 0, Split_4);
+
+    if( currentSplit != Split_4 )
+    {
+        if( currentChannelNum < 4)  { emit changeSplit(0, currentChannelNum, Split_4); }
+        else                        { emit changeSplit(4, currentChannelNum, Split_4); }
+    }
 }
 void StatusBarDialog::onButtonSplit9()
 {
     setFocusSplitButton(3);
-    emit changeSplit(0, 0, Split_9);
-}
 
+    if( currentSplit != Split_9 )
+    {
+        emit changeSplit(0, currentChannelNum, Split_9);
+    }
+}
 void StatusBarDialog::onButtonPrev()
 {
     setFocusSplitButton(0);

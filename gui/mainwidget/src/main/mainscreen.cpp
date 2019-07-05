@@ -377,17 +377,7 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
 
             qDebug("\n\t %s() + : ch[%d], EVENT_POPUP_SENSOR_OFF \n", __func__, ch);
 
-            if(currentSplit == Split_1)
-            {
-                splitScreen(Split_4);
-            }
-            else
-            {
-                split        = currentSplit;
-                currentSplit = Split_1;
-
-                splitScreen(split);
-            }
+            splitScreen(currentSplit);
 
             emit updateTriggerState(isTrigger);
         }
@@ -667,7 +657,7 @@ int MainWidget::splitScreen(int split)
 }
 void MainWidget::setSplitScreen(int startCh, int selectCh, int split)
 {
-    currentSplitOld=currentSplit;
+    if( currentSplit != Split_1 ) { currentSplitOld=currentSplit; }
     currentSplit = split;
     currentChannelNum=selectCh;
 
