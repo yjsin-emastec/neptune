@@ -23,7 +23,8 @@ public:
 
 signals:
 
-    void changeSplit(int startCh, int selectCh, int split);
+    void changeSplit(int split);
+    void changeChannel(int dir);
 
 public slots:
 	void updateTime();

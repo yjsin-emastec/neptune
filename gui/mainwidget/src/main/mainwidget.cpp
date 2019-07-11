@@ -697,24 +697,15 @@ void MainWidget::loadStyleSheet()
     setStyleSheet(styleSheet);
     qDebug("-------------------- Dark Style");
 }
-void MainWidget::onChangeSplit(int startCh, int selectCh, int split)
-{
-    if( startCh == splitStartChNum && split == currentSplit )
-    {
-        return;
-    }
-
-    setSplitScreen(startCh, selectCh, split);
-}
-
 void MainWidget::createStatusBar(int isReset)
 {
     qDebug("%s + \n", __func__);
 
     statusBar = new StatusBarDialog(0, this);
-    connect(statusBar, SIGNAL(changeSplit(int,int,int)), this, SLOT(onChangeSplit(int,int,int)));
-    connect(this, SIGNAL(updateSplitButton()), statusBar, SLOT(updateSplitButton()));
-    connect(this, SIGNAL(updateTriggerState(int)), statusBar, SLOT(updateTriggerState(int)));
+    connect(statusBar, SIGNAL(changeSplit(int)),        this,      SLOT(onChangeSplit(int)));
+    connect(statusBar, SIGNAL(changeChannel(int)),      this,      SLOT(onChangeChannel(int)));
+    connect(this,      SIGNAL(updateSplitButton()),     statusBar, SLOT(updateSplitButton()));
+    connect(this,      SIGNAL(updateTriggerState(int)), statusBar, SLOT(updateTriggerState(int)));
 
     if(isReset)
     {
@@ -762,10 +753,12 @@ void MainWidget::createPlayBar()
     connect(playBar, SIGNAL(channelClicked(int)),        this,    SLOT(oneChannelSplit(int)));
     connect(playBar, SIGNAL(setAudio(int)),              this,    SLOT(onSetAudio(int)));
     connect(playBar, SIGNAL(setAudioMute()),             this,    SLOT(onSetAudioMute()));
+    connect(playBar, SIGNAL(changeSplit(int)) ,          this,    SLOT(onChangeSplit(int)));
+    connect(playBar, SIGNAL(changeChannel(int)),         this,    SLOT(onChangeChannel(int)));
     connect(this,    SIGNAL(playbackTimeNotify(time_t)), playBar, SLOT(playbackTimeUpdate(time_t)));
     connect(this,    SIGNAL(searchDataReady(int)),       playBar, SLOT(searchDataUpdate(int)));
     connect(this,    SIGNAL(playbackStopNotify()),       playBar, SLOT(closeSearchBar()));
-    connect(this,    SIGNAL(splitChangeNotify(int)),     playBar, SLOT(splitChanged(int)));
+    connect(this,    SIGNAL(updateSplitButton()),        playBar, SLOT(updateSplitButton()));
 
     playBar->move((mainWidth - playBar->width())/2, mainHeight-playBar->height());
     playBar->hide();
@@ -773,6 +766,71 @@ void MainWidget::createPlayBar()
 
     qDebug("%s - \n", __func__);
 }
+void MainWidget::onChangeSplit(int split)
+{
+    if( split == currentSplit ) { return; }
+
+    splitScreen(split);
+}
+void MainWidget::onChangeChannel(int dir)
+{
+    if( operationMode == OPMODE_PLAYBACK && currentSplit == Split_1 )
+    {
+        int nextCh=currentChannelNum;
+
+        bool isRecord;
+
+        do
+        {
+            if( dir > 0 )
+            {
+                //if( nextCh >= devInfo.videoNum-1 ) { nextCh=0; }
+                if( nextCh >= 8-1 ) { nextCh = 0; }
+                else                               { nextCh++; }
+            }
+            else
+            {
+                //if( nextch <= 0 ) { nextCh = devInfo.videoNum-1; }
+                if ( nextCh <= 0 ) { nextCh = 8-1; }
+                else              { nextCh --; }
+            }
+
+            isRecord = mainPbChannel & (0x01 << nextCh);
+            if( nextCh == currentChannelNum ) { return ; }
+        }while(!isRecord);
+
+        currentChannelNum = nextCh;
+        splitScreen(currentSplit);
+    }
+    else
+    {
+        int nextCh=currentChannelNum;
+
+        if( currentSplit == Split_1 )
+        {
+            if( dir > 0 )
+            {
+                if( nextCh >= 8-1 ) { nextCh = 0; }
+                else                { nextCh++; }
+            }
+            else
+            {
+                if( nextCh <= 0 ) { nextCh = 8-1; }
+                else              { nextCh--;    }
+            }
+
+        }
+        else if( currentSplit == Split_4 )
+        {
+            if( currentChannelNum < 4 ) { nextCh = 4; }
+            else                        { nextCh = 0; }
+        }
+
+        currentChannelNum = nextCh;
+        splitScreen(currentSplit);
+    }
+}
+
 void MainWidget::createMainMenu()
 {
     qDebug("%s + \n", __func__);
@@ -2125,13 +2183,15 @@ void MainWidget::statusBarState(int state)
 }
 void MainWidget::playBarState(int state)
 {
+    playBar->setSplitMode(false);
+
     if(state)
     {
         if(playBar->isHidden() == 1)
         {
             playBarEnable = 1;
             playBar->show();
-        } 
+        }
     }
     else
     {

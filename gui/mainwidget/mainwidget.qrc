@@ -51,5 +51,11 @@
         <file>images/split9_pressed.png</file>
         <file>images/channel_next_pressed.png</file>
         <file>images/channel_prev_pressed.png</file>
+        <file>images/pb_split1.png</file>
+        <file>images/pb_split1_pressed.png</file>
+        <file>images/pb_split4.png</file>
+        <file>images/pb_split4_pressed.png</file>
+        <file>images/pb_split9.png</file>
+        <file>images/pb_split9_pressed.png</file>
     </qresource>
 </RCC>

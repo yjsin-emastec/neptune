@@ -44,7 +44,7 @@ SearchDialog::SearchDialog(QWidget *parent)
 	frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
 
 	pbChBit = 0xf;
-	pbSplit = Split_4;
+    pbSplit = Split_9;
 	SelectPbSplit = pbType = recType = 0;
 
 	connect(buttonNormal, SIGNAL(released()), this, SLOT(onNormal()));

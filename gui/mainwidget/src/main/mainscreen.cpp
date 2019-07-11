@@ -641,8 +641,6 @@ int MainWidget::splitScreen(int split)
         {
             playBar->PausePlayChange(PB_PLAY);
         }
-
-        emit splitChangeNotify(split);
     }
 
     splitFlag = 0;

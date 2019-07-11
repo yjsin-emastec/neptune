@@ -28,6 +28,8 @@ public:
     void            initPlayBar           (void);
     int             GetStatePausePlay     (void);
     int             getPlaybackChannel    (void);
+    bool            getSplitMode          (void);
+    void            setSplitMode          (bool state);
 
     time_t          curPbTime;
     time_t          backupStartTime;
@@ -44,6 +46,8 @@ signals:
     void            backupClicked         (void);
     void            setAudioMute          (void);
     void            setAudio              (int);
+    void            changeSplit           (int);
+    void            changeChannel         (int);
 
 public slots:
     void            clickBackup           (void);
@@ -54,6 +58,7 @@ public slots:
     void            playpauseClicked      (void);
     void            fowardFrameClicked    (void);
     void            fastClicked           (void);
+    void            onButtonSplit         (void);
     void            onButtonAudio         (void);
     void            onButtonZoom          (void);
     void            playbackTimeUpdate    (time_t pbTime);
@@ -61,6 +66,24 @@ public slots:
     void            closeSearchBar        (void);
     void            onUpdateTimeLabel     (QString time);
     void            onUpdateDateLabel     (QString date);
+
+    void            buttonPrevClicked     (void);
+    void            buttonSplit1Clicked   (void);
+    void            buttonSplit4Clicked   (void);
+    void            buttonSplit9Clicked   (void);
+    void            buttonNextClicked     (void);
+    void            buttonPrevPressed     (void);
+    void            buttonSplit1Pressed   (void);
+    void            buttonSplit4Pressed   (void);
+    void            buttonSplit9Pressed   (void);
+    void            buttonNextPressed     (void);
+    void            buttonPrevReleased    (void);
+    void            buttonSplit1Released  (void);
+    void            buttonSplit4Released  (void);
+    void            buttonSplit9Released  (void);
+    void            buttonNextReleased    (void);
+
+    void            updateSplitButton     (void);
 
 private slots:
     void            changePlaybackTime    (int pos);
@@ -81,6 +104,8 @@ private:
     int             timeBarWidth;
     int             timeBarHeightSmall;
     int             timeBarHeightBig;
+    bool            isSplit;
+    int             focusSplitButton;
 
     PlayTimeBar    *timeBar;
 
@@ -98,13 +123,22 @@ private:
     QPushButton    *buttonStill;
     QPushButton    *buttonClose;
     QPushButton    *buttonZoom;
+
     QPushButton    *buttonSplit;
+    QPushButton    *buttonPrev;
+    QPushButton    *buttonSplit1;
+    QPushButton    *buttonSplit4;
+    QPushButton    *buttonSplit9;
+    QPushButton    *buttonNext;
 
     QFrame         *frame;
 
-    void hideButton();
-    void showButton();
-
+    void           hideButton             ();
+    void           showButton             ();
+    void           showSplitButton        ();
+    void           hideSplitButton        ();
+    bool           eventFilter            (QObject *o, QEvent *e);
+    void           setFocusSplitButton    (int btnNum);
 };
 
 #endif // PLAYBARDIALOG_H

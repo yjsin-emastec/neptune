@@ -539,7 +539,7 @@ void StatusBarDialog::onButtonSplit1()
 
     if( currentSplit != Split_1 )
     {
-        emit changeSplit(currentChannelNum, currentChannelNum, Split_1);
+        emit changeSplit(Split_1);
     }
 }
 void StatusBarDialog::onButtonSplit4()
@@ -548,8 +548,7 @@ void StatusBarDialog::onButtonSplit4()
 
     if( currentSplit != Split_4 )
     {
-        if( currentChannelNum < 4)  { emit changeSplit(0, currentChannelNum, Split_4); }
-        else                        { emit changeSplit(4, currentChannelNum, Split_4); }
+        emit changeSplit(Split_4);
     }
 }
 void StatusBarDialog::onButtonSplit9()
@@ -558,86 +557,20 @@ void StatusBarDialog::onButtonSplit9()
 
     if( currentSplit != Split_9 )
     {
-        emit changeSplit(0, currentChannelNum, Split_9);
+        emit changeSplit(Split_9);
     }
 }
 void StatusBarDialog::onButtonPrev()
 {
     setFocusSplitButton(0);
 
-    int selectCh;
-
-    switch ( currentSplit )
-    {
-        case Split_1 :
-        {
-            if( splitStartChNum == 0 )
-            {
-                //selectCh = devInfo.videoNum-1;
-                selectCh = 8-1;
-            }
-            else
-            {
-                selectCh = splitStartChNum-1;
-            }
-
-            emit changeSplit(selectCh, selectCh, Split_1);
-            break;
-        }
-        case Split_4 :
-        {
-            if( splitStartChNum == 0 )
-            {
-                selectCh = 4;
-            }
-            else
-            {
-                selectCh = 0;
-            }
-
-            emit changeSplit(selectCh, selectCh, Split_4);
-            break;
-        }
-    }
+    emit changeChannel(0);
 }
 void StatusBarDialog::onButtonNext()
 {
     setFocusSplitButton(4);
 
-    int selectCh;
-
-    switch ( currentSplit )
-    {
-        case Split_1 :
-        {
-            //if( splitStartChNum == devInfo.videoNum-1 )
-            if( splitStartChNum == 8-1 )
-            {
-                selectCh = 0;
-            }
-            else
-            {
-                selectCh = splitStartChNum+1;
-            }
-
-            emit changeSplit(selectCh, selectCh, Split_1);
-            break;
-        }
-        case Split_4 :
-        {
-            if( splitStartChNum == 0 )
-            {
-                selectCh = 4;
-            }
-            else
-            {
-                selectCh = 0;
-            }
-
-            emit changeSplit(selectCh, selectCh, Split_4);
-            break;
-        }
-    }
+    emit changeChannel(1);
 }
 void StatusBarDialog::onButtonSplit1Pressed()
 {

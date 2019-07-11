@@ -292,6 +292,174 @@
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="buttonSplit">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>120</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPrev">
+    <property name="geometry">
+     <rect>
+      <x>735</x>
+      <y>120</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSplit1">
+    <property name="geometry">
+     <rect>
+      <x>885</x>
+      <y>120</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSplit4">
+    <property name="geometry">
+     <rect>
+      <x>1035</x>
+      <y>120</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSplit9">
+    <property name="geometry">
+     <rect>
+      <x>1185</x>
+      <y>120</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonNext">
+    <property name="geometry">
+     <rect>
+      <x>1335</x>
+      <y>120</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>buttonNext</zorder>
+   <zorder>buttonSplit9</zorder>
+   <zorder>buttonSplit4</zorder>
+   <zorder>buttonSplit1</zorder>
+   <zorder>buttonPrev</zorder>
+   <zorder>labelDate</zorder>
+   <zorder>labelTime</zorder>
+   <zorder>labelSpeed</zorder>
+   <zorder>buttonAudio</zorder>
+   <zorder>buttonRewFrame</zorder>
+   <zorder>buttonRew</zorder>
+   <zorder>buttonPlay</zorder>
+   <zorder>buttonFf</zorder>
+   <zorder>buttonFfFrame</zorder>
+   <zorder>buttonStill</zorder>
+   <zorder>buttonClose</zorder>
+   <zorder>buttonZoom</zorder>
+   <zorder>buttonSplit</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

@@ -44,7 +44,6 @@ signals:
     void timeChangeNotify();
     void archiveProgress(int msg, int progress);
     void resolutionChangeNotify(int hdmi);
-    void splitChangeNotify(int split);
     void queryLogCount();
     void queryLogData();
     void queryLogBackup();
@@ -89,7 +88,8 @@ public slots:
     void onSaveDisplayPage(int type);
     void onSaveDevicePage(int type);
     int  splitScreen(int split);
-    void onChangeSplit(int startCh, int selectCh, int split);
+    void onChangeSplit(int split);
+    void onChangeChannel(int dir);
 
 protected:
     void closeEvent(QCloseEvent *event);
