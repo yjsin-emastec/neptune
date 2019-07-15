@@ -79,7 +79,7 @@ PlayTimeBar::PlayTimeBar(QWidget *parent)
                 "::groove { margin: 30px; height: 30px; background-color: rgb(255,255,255,0);}"
                 "::handle { image: url(:/images/slider_handle.png); width: 60px; margin: -30px}");
     }
-#if 1   //yjsin [19/06/14] 4->8ch test
+#if( DEVINFO_VIDEONUM == 8 )
     CH_COUNT=8;
 #else
     CH_COUNT=devInfo.videoNum;

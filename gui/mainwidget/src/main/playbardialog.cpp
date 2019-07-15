@@ -256,8 +256,11 @@ void PlayBarDialog::resumePlayback(int isAviBackup, int sec)
         }
         else
         {
-            //for(int i = 0; i < devInfo.videoNum; i++)
+#if( DEVINFO_VIDEONUM == 8 )
             for(int i = 0; i < 8; i++)
+#else
+            for(int i = 0; i < devInfo.videoNum; i++)
+#endif
             {
                 chMask |= (1 << i);
             }
@@ -374,8 +377,11 @@ void PlayBarDialog::onButtonAudio(void)
     }
     else
     {
-        //if( indexAudio > devInfo.videoNum)
+#if( DEVINFO_VIDEONUM == 8 )
         if(indexAudio > 8 )
+#else
+        if( indexAudio > devInfo.videoNum)
+#endif
         {
             indexAudio = 0;
         }

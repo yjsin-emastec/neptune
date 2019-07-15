@@ -5,7 +5,7 @@
 TimeLine::TimeLine(QWidget *parent)
     : QWidget(parent)
 {
-#if 1   //yjsin [19/06/14] 4->8ch test
+#if( DEVINFO_VIDEONUM == 8 )
     CH_COUNT=8;
 #else
     CH_COUNT=devInfo.videoNum;
