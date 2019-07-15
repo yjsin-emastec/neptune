@@ -702,8 +702,7 @@ void MainWidget::createStatusBar(int isReset)
     qDebug("%s + \n", __func__);
 
     statusBar = new StatusBarDialog(0, this);
-    connect(statusBar, SIGNAL(changeSplit(int)),        this,      SLOT(onChangeSplit(int)));
-    connect(statusBar, SIGNAL(changeChannel(int)),      this,      SLOT(onChangeChannel(int)));
+    connect(statusBar, SIGNAL(changeSplit()),           this,      SLOT(onChangeSplit()));
     connect(this,      SIGNAL(updateSplitButton()),     statusBar, SLOT(updateSplitButton()));
     connect(this,      SIGNAL(updateTriggerState(int)), statusBar, SLOT(updateTriggerState(int)));
 
@@ -753,8 +752,7 @@ void MainWidget::createPlayBar()
     connect(playBar, SIGNAL(channelClicked(int)),        this,    SLOT(oneChannelSplit(int)));
     connect(playBar, SIGNAL(setAudio(int)),              this,    SLOT(onSetAudio(int)));
     connect(playBar, SIGNAL(setAudioMute()),             this,    SLOT(onSetAudioMute()));
-    connect(playBar, SIGNAL(changeSplit(int)) ,          this,    SLOT(onChangeSplit(int)));
-    connect(playBar, SIGNAL(changeChannel(int)),         this,    SLOT(onChangeChannel(int)));
+    connect(playBar, SIGNAL(changeSplit()) ,             this,    SLOT(onChangeSplit()));
     connect(this,    SIGNAL(playbackTimeNotify(time_t)), playBar, SLOT(playbackTimeUpdate(time_t)));
     connect(this,    SIGNAL(searchDataReady(int)),       playBar, SLOT(searchDataUpdate(int)));
     connect(this,    SIGNAL(playbackStopNotify()),       playBar, SLOT(closeSearchBar()));
@@ -766,71 +764,121 @@ void MainWidget::createPlayBar()
 
     qDebug("%s - \n", __func__);
 }
-void MainWidget::onChangeSplit(int split)
+void MainWidget::onChangeSplit()
 {
-    if( split == currentSplit ) { return; }
-
-    splitScreen(split);
-}
-void MainWidget::onChangeChannel(int dir)
-{
-    if( operationMode == OPMODE_PLAYBACK && currentSplit == Split_1 )
+    if( operationMode == OPMODE_PLAYBACK )
     {
-        int nextCh=currentChannelNum;
-
-        bool isRecord;
-
-        do
+        switch( currentSplit )
         {
-            if( dir > 0 )
+            case Split_1 :
             {
-                //if( nextCh >= devInfo.videoNum-1 ) { nextCh=0; }
-                if( nextCh >= 8-1 ) { nextCh = 0; }
-                else                               { nextCh++; }
+                int temp=currentChannelNum;
+                if( (mainPbChannel & 0x01<<0) || (mainPbChannel & 0x01<<1)
+                 || (mainPbChannel & 0x01<<2) || (mainPbChannel & 0x01<<3) )
+                {
+                    currentChannelNum=0;
+                    splitScreen(Split_4);
+                }
+                else
+                {
+                    currentChannelNum=4;
+                    splitScreen(Split_4);
+                }
+                currentChannelNum = temp;
+
+                break;
             }
-            else
+            case Split_4 :
             {
-                //if( nextch <= 0 ) { nextCh = devInfo.videoNum-1; }
-                if ( nextCh <= 0 ) { nextCh = 8-1; }
-                else              { nextCh --; }
+                if(   (splitStartChNum == 0) &&
+                    ( (mainPbChannel & 0x01<<4) || (mainPbChannel & 0x01<<5)
+                   || (mainPbChannel & 0x01<<6) || (mainPbChannel & 0x01<<7) ) )
+                {
+                    int temp=currentChannelNum;
+                    currentChannelNum = 4;
+                    splitScreen(Split_4);
+                    currentChannelNum = temp;
+                }
+                else
+                {
+                    splitScreen(Split_9);
+                }
+
+                break;
             }
+            case Split_9 :
+            {
+                if( mainPbChannel & 0x01<<currentChannelNum )
+                {
+                    splitScreen(Split_1);
+                }
+                else
+                {
+                    bool isRecord=false;
+                    int temp=currentChannelNum;
+                    while( !isRecord )
+                    {
+                        temp++;
+                        if( temp>7 ) { temp -=8; }
+                        if( (mainPbChannel & 0x01<<temp) )
+                        {
+                            isRecord=true;
+                            currentChannelNum=temp;
+                            splitScreen(Split_1);
+                        }
+                    }
+                }
 
-            isRecord = mainPbChannel & (0x01 << nextCh);
-            if( nextCh == currentChannelNum ) { return ; }
-        }while(!isRecord);
-
-        currentChannelNum = nextCh;
-        splitScreen(currentSplit);
+                break;
+            }
+            default :
+            {
+                splitScreen(Split_9);
+            }
+        }
     }
     else
     {
-        int nextCh=currentChannelNum;
-
-        if( currentSplit == Split_1 )
+        switch( currentSplit )
         {
-            if( dir > 0 )
+            case Split_1 :
             {
-                if( nextCh >= 8-1 ) { nextCh = 0; }
-                else                { nextCh++; }
+                int temp=currentChannelNum;
+                currentChannelNum = 0;
+                splitScreen(Split_4);
+                currentChannelNum = temp;
+
+                break;
             }
-            else
+            case Split_4 :
             {
-                if( nextCh <= 0 ) { nextCh = 8-1; }
-                else              { nextCh--;    }
+                if( splitStartChNum == 0)
+                {
+                    int temp=currentChannelNum;
+                    currentChannelNum = 4;
+                    splitScreen(Split_4);
+                    currentChannelNum = temp;
+                }
+                else
+                {
+                    splitScreen(Split_9);
+                }
+
+                break;
             }
+            case Split_9 :
+            {
+                splitScreen(Split_1);
 
+                break;
+            }
+            default :
+            {
+                splitScreen(Split_9);
+            }
         }
-        else if( currentSplit == Split_4 )
-        {
-            if( currentChannelNum < 4 ) { nextCh = 4; }
-            else                        { nextCh = 0; }
-        }
-
-        currentChannelNum = nextCh;
-        splitScreen(currentSplit);
     }
 }
-
 void MainWidget::createMainMenu()
 {
     qDebug("%s + \n", __func__);
@@ -1171,28 +1219,19 @@ void MainWidget::controlBarChange()
         return;
     }
 
-    if(statusBar->isVisible() )
+    if( statusBar->isVisible())
     {
-        if(statusBar->getSplitMode())
-        {
-            statusBar->setSplitMode(false);
-        }
-        else
-        {
-            statusBar->setSplitMode(false);
-            statusBar->hide();
-        }
+        statusBar->hide();
     }
     else
     {
-        statusBar->setSplitMode(false);
         statusBar->show();
-
-        controlBarAutoHide = 0;
-        statusBarEnable    = 1;
-        playBarEnable      = 1;
-        (void)appmgr_set_control_bar_auto_Hide(controlBarAutoHide);
     }
+
+    controlBarAutoHide = 0;
+    statusBarEnable    = 1;
+    playBarEnable      = 1;
+    (void)appmgr_set_control_bar_auto_Hide(controlBarAutoHide);
 }
 void MainWidget::playBarChange()
 {
@@ -2159,8 +2198,6 @@ int MainWidget::LanguageValueTransformation(void)
 }
 void MainWidget::statusBarState(int state)
 {
-    statusBar->setSplitMode(false);
-
     if(utils_cfg_cmp_item(DisplayCfg.osd_status, "ON") == 0)
     {
         if(state)
@@ -2183,8 +2220,6 @@ void MainWidget::statusBarState(int state)
 }
 void MainWidget::playBarState(int state)
 {
-    playBar->setSplitMode(false);
-
     if(state)
     {
         if(playBar->isHidden() == 1)

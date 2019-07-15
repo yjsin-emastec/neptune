@@ -18,34 +18,16 @@ public:
 	~StatusBarDialog();
 	void setTimeFormat(int timeFormat);
 	void updateDiskProgress(unsigned int diskSize, unsigned int diskFree);
-    void setSplitMode(bool state);
-    bool getSplitMode(void);
 
 signals:
 
-    void changeSplit(int split);
-    void changeChannel(int dir);
+    void changeSplit(void);
 
 public slots:
 	void updateTime();
-    void onButtonSplit();
-    void onButtonSplit1();
-    void onButtonSplit4();
-    void onButtonSplit9();
-    void onButtonPrev();
-    void onButtonNext();
-
-    void onButtonSplit1Pressed();
-    void onButtonSplit4Pressed();
-    void onButtonSplit9Pressed();
-    void onButtonPrevPressed();
-    void onButtonNextPressed();
-
-    void onButtonSplit1Released();
-    void onButtonSplit4Released();
-    void onButtonSplit9Released();
-    void onButtonPrevReleased();
-    void onButtonNextReleased();
+    void buttonSplitClicked();
+    void buttonSplitPressed();
+    void buttonSplitReleased();
 
     void updateSplitButton();
     void updateTriggerState(int state);
@@ -75,16 +57,9 @@ private:
 	QString m_viewTime;
 	QString m_viewNoDisk;
 
-    bool isSplitMode;
-    int focusSplitButton;
     int isTrigger;
     int buttonSize;
 
-    void hideTimeLabel();
-    void showTimeLabel();
-    void setFocusSplitButton(int btnNum);
-    bool eventFilter(QObject *obj, QEvent *event);
-    void keyPressEvent(QKeyEvent *event);
 
     TextMessageDialog *msgBox;
 

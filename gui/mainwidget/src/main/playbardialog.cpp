@@ -31,13 +31,7 @@ PlayBarDialog::PlayBarDialog(QWidget *parent)
         buttonStill = ui720.buttonStill;
         buttonClose = ui720.buttonClose;
         buttonZoom = ui720.buttonZoom;
-
         buttonSplit = ui720.buttonSplit;
-        buttonPrev = ui720.buttonPrev;
-        buttonSplit1 = ui720.buttonSplit1;
-        buttonSplit4 = ui720.buttonSplit4;
-        buttonSplit9 = ui720.buttonSplit9;
-        buttonNext = ui720.buttonNext;
 
         PLAYBAR_BTN_SIZE=70;
         labelFontSize=32;
@@ -65,14 +59,7 @@ PlayBarDialog::PlayBarDialog(QWidget *parent)
         buttonStill = ui1080.buttonStill;
         buttonClose = ui1080.buttonClose;
         buttonZoom = ui1080.buttonZoom;
-
         buttonSplit = ui1080.buttonSplit;
-        buttonSplit = ui1080.buttonSplit;
-        buttonPrev = ui1080.buttonPrev;
-        buttonSplit1 = ui1080.buttonSplit1;
-        buttonSplit4 = ui1080.buttonSplit4;
-        buttonSplit9 = ui1080.buttonSplit9;
-        buttonNext = ui1080.buttonNext;
 
         PLAYBAR_BTN_SIZE=100;
         labelFontSize=48;
@@ -116,7 +103,9 @@ PlayBarDialog::PlayBarDialog(QWidget *parent)
         timeBar->setGeometry(QRect(330, 10, timeBarWidth, timeBarHeightSmall));
     }
 
-    connect(buttonSplit,    SIGNAL(clicked()),                this, SLOT(onButtonSplit      (void)));
+    connect(buttonSplit,    SIGNAL(clicked()),                this, SLOT(buttonSplitClicked (void)));
+    connect(buttonSplit,    SIGNAL(pressed()),                this, SLOT(buttonSplitPressed (void)));
+    connect(buttonSplit,    SIGNAL(released()),               this, SLOT(buttonSplitReleased(void)));
     connect(buttonAudio,    SIGNAL(clicked()),                this, SLOT(onButtonAudio      (void)));
     connect(buttonZoom,     SIGNAL(clicked()),                this, SLOT(onButtonZoom       (void)));
     connect(buttonRew,      SIGNAL(clicked()),                this, SLOT(rewClicked         (void)));
@@ -130,33 +119,8 @@ PlayBarDialog::PlayBarDialog(QWidget *parent)
     connect(timeBar,        SIGNAL(updateDateLabel(QString)), this, SLOT(onUpdateDateLabel  (QString)));
     connect(timeBar,        SIGNAL(updateTimeLabel(QString)), this, SLOT(onUpdateTimeLabel  (QString)));
 
-    connect(buttonPrev,     SIGNAL(clicked()),                this, SLOT(buttonPrevClicked   (void)));
-    connect(buttonSplit1,   SIGNAL(clicked()),                this, SLOT(buttonSplit1Clicked (void)));
-    connect(buttonSplit4,   SIGNAL(clicked()),                this, SLOT(buttonSplit4Clicked (void)));
-    connect(buttonSplit9,   SIGNAL(clicked()),                this, SLOT(buttonSplit9Clicked (void)));
-    connect(buttonNext,     SIGNAL(clicked()),                this, SLOT(buttonNextClicked   (void)));
-
-    connect(buttonPrev,     SIGNAL(pressed()),                this, SLOT(buttonPrevPressed   (void)));
-    connect(buttonSplit1,   SIGNAL(pressed()),                this, SLOT(buttonSplit1Pressed (void)));
-    connect(buttonSplit4,   SIGNAL(pressed()),                this, SLOT(buttonSplit4Pressed (void)));
-    connect(buttonSplit9,   SIGNAL(pressed()),                this, SLOT(buttonSplit9Pressed (void)));
-    connect(buttonNext,     SIGNAL(pressed()),                this, SLOT(buttonNextPressed   (void)));
-
-    connect(buttonPrev,     SIGNAL(released()),               this, SLOT(buttonPrevReleased  (void)));
-    connect(buttonSplit1,   SIGNAL(released()),               this, SLOT(buttonSplit1Released(void)));
-    connect(buttonSplit4,   SIGNAL(released()),               this, SLOT(buttonSplit4Released(void)));
-    connect(buttonSplit9,   SIGNAL(released()),               this, SLOT(buttonSplit9Released(void)));
-    connect(buttonNext,     SIGNAL(released()),               this, SLOT(buttonNextReleased  (void)));
-
-    buttonPrev  ->installEventFilter(this);
-    buttonSplit1->installEventFilter(this);
-    buttonSplit4->installEventFilter(this);
-    buttonSplit9->installEventFilter(this);
-    buttonNext  ->installEventFilter(this);
-
     indexAudio = 0;
     ispbMute=0;
-    isSplit=false;
 }
 PlayBarDialog::~PlayBarDialog(void)
 {
@@ -211,26 +175,6 @@ void PlayBarDialog::createPlaySpeedControlButtons(void)
 
     buttonSplit    ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonSplit    ->setIcon         (QIcon(":/images/pb_split9.png"));
-
-    buttonPrev     ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonPrev     ->setIcon         (QIcon(":images/channel_prev.png"));
-    buttonPrev     ->hide();
-
-    buttonSplit1   ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonSplit1   ->setIcon         (QIcon(":images/split1.png"));
-    buttonSplit1   ->hide();
-
-    buttonSplit4   ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonSplit4   ->setIcon         (QIcon(":images/split4.png"));
-    buttonSplit4   ->hide();
-
-    buttonSplit9   ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonSplit9   ->setIcon         (QIcon(":images/split9.png"));
-    buttonSplit9   ->hide();
-
-    buttonNext     ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonNext     ->setIcon         (QIcon(":images/channel_next.png"));
-    buttonNext     ->hide();
 }
 void PlayBarDialog::setTimeFormat(int timeFormat)
 {
@@ -452,8 +396,6 @@ void PlayBarDialog::onButtonAudio(void)
 }
 void PlayBarDialog::onButtonZoom(void)
 {
-    if( isSplit ) { setSplitMode(false); }
-
     switch(timeBar->getTimeLineStatus())
     {
         case 1 : { hideButton(); timeBar->setTimeLineStatus(3); break; }
@@ -1263,105 +1205,34 @@ void PlayBarDialog::onUpdateTimeLabel     (QString time)
 {
     labelTime->setText(time);
 }
-void PlayBarDialog::onButtonSplit(void)
+void PlayBarDialog::buttonSplitClicked()
 {
-    isSplit = !isSplit;
-
-    if(isSplit) { showSplitButton(); }
-    else        { hideSplitButton(); }
-
+    emit changeSplit();
+}
+void PlayBarDialog::buttonSplitPressed()
+{
+    switch ( currentSplit )
+    {
+        case Split_1 :
+        {
+            buttonSplit->setIcon(QIcon(":images/pb_split1_pressed.png"));
+            break;
+        }
+        case Split_4 :
+        {
+            buttonSplit->setIcon(QIcon(":images/pb_split4_pressed.png"));
+            break;
+        }
+        case Split_9 :
+        {
+            buttonSplit->setIcon(QIcon(":images/pb_split9_pressed.png"));
+            break;
+        }
+    }
+}
+void PlayBarDialog::buttonSplitReleased()
+{
     updateSplitButton();
-}
-void PlayBarDialog::buttonSplit1Clicked()
-{    
-    setFocusSplitButton(1);
-
-    if(currentSplit != Split_1)
-    {
-        emit changeSplit( Split_1);
-    }
-}
-void PlayBarDialog::buttonSplit4Clicked()
-{
-    setFocusSplitButton(2);
-
-    if(currentSplit != Split_4)
-    {
-        emit changeSplit(Split_4);
-    }
-}
-void PlayBarDialog::buttonSplit9Clicked()
-{
-    setFocusSplitButton(3);
-
-    if (currentSplit != Split_9)
-    {
-        emit changeSplit(Split_9);
-    }
-}
-void PlayBarDialog::buttonPrevClicked()
-{
-    setFocusSplitButton(0);
-
-    emit changeChannel(0);
-}
-void PlayBarDialog::buttonNextClicked()
-{
-    setFocusSplitButton(4);
-
-    emit changeChannel(1);
-}
-void PlayBarDialog::buttonPrevPressed()
-{
-    buttonPrev->setIcon(QIcon(":/images/channel_prev_pressed.png"));
-}
-void PlayBarDialog::buttonSplit1Pressed()
-{
-    buttonSplit1->setIcon(QIcon(":/images/split1_pressed.png"));
-}
-void PlayBarDialog::buttonSplit4Pressed()
-{
-    buttonSplit4->setIcon(QIcon(":/images/split4_pressed.png"));
-}
-void PlayBarDialog::buttonSplit9Pressed()
-{
-    buttonSplit9->setIcon(QIcon(":/images/split9_pressed.png"));
-}
-void PlayBarDialog::buttonNextPressed()
-{
-    buttonNext->setIcon(QIcon(":/images/channel_next_pressed.png"));
-}
-void PlayBarDialog::buttonPrevReleased()
-{
-    buttonPrev->setIcon(QIcon(":/images/channel_prev_focus.png"));
-}
-void PlayBarDialog::buttonSplit1Released()
-{
-    buttonSplit1->setIcon(QIcon(":/images/split1_focus.png"));
-}
-void PlayBarDialog::buttonSplit4Released()
-{
-    buttonSplit4->setIcon(QIcon(":/images/split4_focus.png"));
-}
-void PlayBarDialog::buttonSplit9Released()
-{
-    buttonSplit9->setIcon(QIcon(":/images/split9_focus.png"));
-}
-void PlayBarDialog::buttonNextReleased()
-{
-    buttonNext->setIcon(QIcon(":/images/channel_next_focus.png"));
-}
-bool PlayBarDialog::eventFilter(QObject *o, QEvent *e)
-{
-    if(e->type() == Qt::RightButton)
-    {
-        if     ( o == buttonPrev   )  { setFocusSplitButton(0); }
-        else if( o == buttonSplit1 )  { setFocusSplitButton(1); }
-        else if( o == buttonSplit4 )  { setFocusSplitButton(2); }
-        else if( o == buttonSplit9 )  { setFocusSplitButton(3); }
-        else if( o == buttonNext   )  { setFocusSplitButton(4); }
-    }
-    return QWidget::eventFilter(o, e);
 }
 void PlayBarDialog::updateSplitButton()
 {
@@ -1369,152 +1240,20 @@ void PlayBarDialog::updateSplitButton()
     {
         case Split_1 :
         {
-            if( isSplit ) { buttonSplit->setIcon(QIcon(":images/pb_split1_pressed.png")); }
-            else          { buttonSplit->setIcon(QIcon(":images/pb_split1.png")); }
+            buttonSplit->setIcon(QIcon(":images/pb_split1.png"));
             break;
         }
         case Split_4 :
         {
-            if( isSplit ) { buttonSplit->setIcon(QIcon(":images/pb_split4_pressed.png")); }
-            else          { buttonSplit->setIcon(QIcon(":images/pb_split4.png")); }
+            buttonSplit->setIcon(QIcon(":images/pb_split4.png"));
             break;
         }
         case Split_9 :
         {
-            if( isSplit ) { buttonSplit->setIcon(QIcon(":images/pb_split9_pressed.png")); }
-            else          { buttonSplit->setIcon(QIcon(":images/pb_split9.png")); }
+            buttonSplit->setIcon(QIcon(":images/pb_split9.png"));
             break;
         }
     }
-}
-void PlayBarDialog::setFocusSplitButton(int btnNum)
-{
-    /*
-        case 0  : previous button
-        case 1  : split 1  button
-        case 2  : split 4  button
-        case 3  : split 9  button
-        case 4  : next     button
-    */
-
-    switch( btnNum )
-    {
-        case 0 :
-        {
-            focusSplitButton=0;
-            buttonPrev  ->setIcon(QIcon(":/images/channel_prev_focus.png"));
-            buttonSplit1->setIcon(QIcon(":/images/split1.png"));
-            buttonSplit4->setIcon(QIcon(":/images/split4.png"));
-            buttonSplit9->setIcon(QIcon(":/images/split9.png"));
-            buttonNext  ->setIcon(QIcon(":/images/channel_next.png"));
-            break;
-        }
-        case 1 :
-        {
-            focusSplitButton=1;
-            buttonPrev  ->setIcon(QIcon(":/images/channel_prev.png"));
-            buttonSplit1->setIcon(QIcon(":/images/split1_focus.png"));
-            buttonSplit4->setIcon(QIcon(":/images/split4.png"));
-            buttonSplit9->setIcon(QIcon(":/images/split9.png"));
-            buttonNext  ->setIcon(QIcon(":/images/channel_next.png"));
-            break;
-        }
-        case 2 :
-        {
-            focusSplitButton=2;
-            buttonPrev  ->setIcon(QIcon(":/images/channel_prev.png"));
-            buttonSplit1->setIcon(QIcon(":/images/split1.png"));
-            buttonSplit4->setIcon(QIcon(":/images/split4_focus.png"));
-            buttonSplit9->setIcon(QIcon(":/images/split9.png"));
-            buttonNext  ->setIcon(QIcon(":/images/channel_next.png"));
-            break;
-        }
-        case 3 :
-        {
-            focusSplitButton=3;
-            buttonPrev  ->setIcon(QIcon(":/images/channel_prev.png"));
-            buttonSplit1->setIcon(QIcon(":/images/split1.png"));
-            buttonSplit4->setIcon(QIcon(":/images/split4.png"));
-            buttonSplit9->setIcon(QIcon(":/images/split9_focus.png"));
-            buttonNext  ->setIcon(QIcon(":/images/channel_next.png"));
-            break;
-        }
-
-        default :
-        {
-            focusSplitButton=btnNum;
-            buttonPrev  ->setIcon(QIcon(":/images/channel_prev.png"));
-            buttonSplit1->setIcon(QIcon(":/images/split1.png"));
-            buttonSplit4->setIcon(QIcon(":/images/split4.png"));
-            buttonSplit9->setIcon(QIcon(":/images/split9.png"));
-            buttonNext  ->setIcon(QIcon(":/images/channel_next_focus.png"));
-            break;
-        }
-    }
-}
-bool PlayBarDialog::getSplitMode()
-{
-    return isSplit;
-}
-void PlayBarDialog::setSplitMode(bool state)
-{
-    isSplit = state;
-
-    if ( isSplit ) { showSplitButton(); }
-    else           { hideSplitButton(); }
-}
-
-void PlayBarDialog::showSplitButton()
-{
-    int timeLineState = timeBar->getTimeLineStatus();
-    if( timeLineState > 2 )
-    {
-        timeBar->setTimeLineStatus(timeLineState-2);
-        showButton();
-    }
-
-    //show split button
-    buttonRewFrame->hide();
-    buttonRew->hide();
-    buttonPlay->hide();
-    buttonFf->hide();
-    buttonFfFrame->hide();
-
-    buttonPrev->show();
-    buttonSplit1->show();
-    buttonSplit4->show();
-    buttonSplit9->show();
-    buttonNext->show();
-
-    focusSplitButton=currentSplit;
-    setFocusSplitButton(focusSplitButton);
-    updateSplitButton();
-}
-void PlayBarDialog::hideSplitButton()
-{
-    //show play button
-    buttonRew->show();
-    buttonPlay->show();
-    buttonFf->show();
-
-    buttonPrev->hide();
-    buttonSplit1->hide();
-    buttonSplit4->hide();
-    buttonSplit9->hide();
-    buttonNext->hide();
-
-    if(!EventSearchPB)
-    {
-        buttonRewFrame->show();
-        buttonFfFrame->show();
-    }
-    else
-    {
-        buttonRewFrame->hide();
-        buttonFfFrame->hide();
-    }
-
-    updateSplitButton();
 }
 void PlayBarDialog::keyPressEvent(QKeyEvent *event)
 {
@@ -1522,16 +1261,6 @@ void PlayBarDialog::keyPressEvent(QKeyEvent *event)
     {
         case Qt::Key_Up :
         {
-            if( isSplit )
-            {
-                if( focusSplitButton >= 4 ) { focusSplitButton=0; }
-                else                        { focusSplitButton++; }
-                setFocusSplitButton(focusSplitButton);
-
-                break;
-            }
-
-
             if( !EventSearchPB && (( timeBar->getTimeLineStatus() == 2 ) || ( timeBar->getTimeLineStatus() ==4 )) )
             {
                 if( playbackSpeed == PB_SPEED_1 )
@@ -1548,15 +1277,6 @@ void PlayBarDialog::keyPressEvent(QKeyEvent *event)
         }
         case Qt::Key_Down :
         {
-            if( isSplit )
-            {
-                if( focusSplitButton == 0 ) { focusSplitButton=4; }
-                else                        { focusSplitButton--; }
-                setFocusSplitButton(focusSplitButton);
-
-                break;
-            }
-
             if( !EventSearchPB && (( timeBar->getTimeLineStatus() == 2 ) || ( timeBar->getTimeLineStatus() ==4 )) )
             {
                 if( playbackSpeed == PB_SPEED_1 )
@@ -1573,15 +1293,6 @@ void PlayBarDialog::keyPressEvent(QKeyEvent *event)
         }
         case Qt::Key_Left :
         {
-            if( isSplit )
-            {
-                if( focusSplitButton == 0 ) { focusSplitButton=4; }
-                else                        { focusSplitButton--; }
-                setFocusSplitButton(focusSplitButton);
-
-                break;
-            }
-
             if( !EventSearchPB )
             {
                 if( timeBar->getTimeLineStatus() == 1 || timeBar->getTimeLineStatus() == 3 )
@@ -1598,15 +1309,6 @@ void PlayBarDialog::keyPressEvent(QKeyEvent *event)
         }
         case Qt::Key_Right :
         {
-            if( isSplit )
-            {
-                if( focusSplitButton >= 4 ) { focusSplitButton=0; }
-                else                        { focusSplitButton++; }
-                setFocusSplitButton(focusSplitButton);
-
-                break;
-            }
-
             if( !EventSearchPB )
             {
                 if( timeBar->getTimeLineStatus() == 1 || timeBar->getTimeLineStatus() == 3 )
@@ -1623,19 +1325,6 @@ void PlayBarDialog::keyPressEvent(QKeyEvent *event)
         }
         case Qt::Key_Enter:
         {
-            if( isSplit )
-            {
-                switch( focusSplitButton )
-                {
-                    case 0 : { buttonPrevClicked();   break; }
-                    case 1 : { buttonSplit1Clicked(); break; }
-                    case 2 : { buttonSplit4Clicked(); break; }
-                    case 3 : { buttonSplit9Clicked(); break; }
-                    case 4 : { buttonNextClicked();   break; }
-                }
-                break;
-            }
-
             if( !EventSearchPB )
             {
                 switch(timeBar->getTimeLineStatus())

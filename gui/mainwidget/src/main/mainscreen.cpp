@@ -311,14 +311,6 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
                 }
             }
 
-            if(statusBar)
-            {
-                if(statusBar->isVisible())
-                {
-                    statusBar->setSplitMode(false);
-                }
-            }
-
             isTrigger = 1;
 
             //save previousAudioCh, when trigger occurred

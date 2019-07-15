@@ -88,8 +88,7 @@ public slots:
     void onSaveDisplayPage(int type);
     void onSaveDevicePage(int type);
     int  splitScreen(int split);
-    void onChangeSplit(int split);
-    void onChangeChannel(int dir);
+    void onChangeSplit();
 
 protected:
     void closeEvent(QCloseEvent *event);

@@ -42,54 +42,16 @@ StatusBarDialog::StatusBarDialog(int timeFormat, QWidget *parent)
     labelNoDisk->hide();
 
     buttonSplit ->setIconSize(QSize(buttonSize,buttonSize));
-    buttonPrev  ->setIconSize(QSize(buttonSize,buttonSize));
-    buttonSplit1->setIconSize(QSize(buttonSize,buttonSize));
-    buttonSplit4->setIconSize(QSize(buttonSize,buttonSize));
-    buttonSplit9->setIconSize(QSize(buttonSize,buttonSize));
-    buttonNext  ->setIconSize(QSize(buttonSize,buttonSize));
-
     buttonSplit ->setIcon(QIcon(":/images/split4.png"));
-    buttonPrev  ->setIcon(QIcon(":/images/channel_prev.png"));
-    buttonSplit1->setIcon(QIcon(":/images/split1.png"));
-    buttonSplit4->setIcon(QIcon(":/images/split4.png"));
-    buttonSplit9->setIcon(QIcon(":/images/split9.png"));
-    buttonNext  ->setIcon(QIcon(":/images/channel_next.png"));
+    buttonSplit->setFocusPolicy(Qt::NoFocus);
 
     memset(diskInfo, 0, sizeof(disk_used_info_t) * MAX_HDD_COUNT);
     appmgr_get_disk_info(diskInfo);
 
-    connect(buttonSplit,  SIGNAL(clicked()),  this, SLOT(onButtonSplit()));
-    connect(buttonSplit1, SIGNAL(clicked()),  this, SLOT(onButtonSplit1()));
-    connect(buttonSplit4, SIGNAL(clicked()),  this, SLOT(onButtonSplit4()));
-    connect(buttonSplit9, SIGNAL(clicked()),  this, SLOT(onButtonSplit9()));
-    connect(buttonPrev  , SIGNAL(clicked()),  this, SLOT(onButtonPrev()));
-    connect(buttonNext  , SIGNAL(clicked()),  this, SLOT(onButtonNext()));
+    connect(buttonSplit,  SIGNAL(clicked()),  this, SLOT(buttonSplitClicked()));
+    connect(buttonSplit,  SIGNAL(pressed()),  this, SLOT(buttonSplitPressed()));
+    connect(buttonSplit,  SIGNAL(released()), this, SLOT(buttonSplitReleased()));
 
-    connect(buttonSplit1, SIGNAL(pressed()),  this, SLOT(onButtonSplit1Pressed()));
-    connect(buttonSplit4, SIGNAL(pressed()),  this, SLOT(onButtonSplit4Pressed()));
-    connect(buttonSplit9, SIGNAL(pressed()),  this, SLOT(onButtonSplit9Pressed()));
-    connect(buttonPrev  , SIGNAL(pressed()),  this, SLOT(onButtonPrevPressed()));
-    connect(buttonNext  , SIGNAL(pressed()),  this, SLOT(onButtonNextPressed()));
-
-    connect(buttonSplit1, SIGNAL(released()), this, SLOT(onButtonSplit1Released()));
-    connect(buttonSplit4, SIGNAL(released()), this, SLOT(onButtonSplit4Released()));
-    connect(buttonSplit9, SIGNAL(released()), this, SLOT(onButtonSplit9Released()));
-    connect(buttonPrev  , SIGNAL(released()), this, SLOT(onButtonPrevReleased()));
-    connect(buttonNext  , SIGNAL(released()), this, SLOT(onButtonNextReleased()));
-
-    buttonPrev  ->installEventFilter(this);
-    buttonSplit1->installEventFilter(this);
-    buttonSplit4->installEventFilter(this);
-    buttonSplit9->installEventFilter(this);
-    buttonNext  ->installEventFilter(this);
-
-    buttonPrev  ->hide();
-    buttonSplit1->hide();
-    buttonSplit4->hide();
-    buttonSplit9->hide();
-    buttonNext  ->hide();
-
-    isSplitMode=false;
     isTrigger=0;
     msgBox = NULL;
 }
@@ -411,12 +373,6 @@ void StatusBarDialog::resizeStatusBar()
         labelNoDisk->setGeometry(10+labelTime->width()+10+buttonSplit->width()+10, 8, 180, 58);
         progressBarHdd->setGeometry(10+labelTime->width()+10+buttonSplit->width()+10, 8, 180, 58);
         this->move((mainWidth-statusbarSize.width())/2, mainHeight-statusbarSize.height());
-
-        buttonPrev  ->move( (labelTime->width()-4*20-buttonSplit->width()*5)/2+10+(60+20)*0, 6 );
-        buttonSplit1->move( (labelTime->width()-4*20-buttonSplit->width()*5)/2+10+(60+20)*1, 6 );
-        buttonSplit4->move( (labelTime->width()-4*20-buttonSplit->width()*5)/2+10+(60+20)*2, 6 );
-        buttonSplit9->move( (labelTime->width()-4*20-buttonSplit->width()*5)/2+10+(60+20)*3, 6 );
-        buttonNext  ->move( (labelTime->width()-4*20-buttonSplit->width()*5)/2+10+(60+20)*4, 6 );
     }
     else
     {
@@ -451,59 +407,10 @@ void StatusBarDialog::resizeStatusBar()
         progressBarHdd->setGeometry(15+labelTime->width()+15+buttonSplit->width()+15, 12, 270, 86);
         progressBarHdd->setStyleSheet(QString(TIME_LABEL_STYLE2).append("background: rgb(152, 14, 69);"));
 
-        buttonPrev  ->resize(buttonSize, buttonSize);
-        buttonSplit1->resize(buttonSize, buttonSize);
-        buttonSplit4->resize(buttonSize, buttonSize);
-        buttonSplit9->resize(buttonSize, buttonSize);
-        buttonNext  ->resize(buttonSize, buttonSize);
-
-        buttonPrev  ->move( (labelTime->width()-4*30-buttonSize*5)/2+15+(90+30)*0, 11 );
-        buttonSplit1->move( (labelTime->width()-4*30-buttonSize*5)/2+15+(90+30)*1, 11 );
-        buttonSplit4->move( (labelTime->width()-4*30-buttonSize*5)/2+15+(90+30)*2, 11 );
-        buttonSplit9->move( (labelTime->width()-4*30-buttonSize*5)/2+15+(90+30)*3, 11 );
-        buttonNext  ->move( (labelTime->width()-4*30-buttonSize*5)/2+15+(90+30)*4, 11 );
-
         this->move((mainWidth-statusbarSize.width())/2, mainHeight-statusbarSize.height());
     }
 }
-void StatusBarDialog::setSplitMode(bool state)
-{
-    isSplitMode=state;
-
-    if( isSplitMode )   { hideTimeLabel(); }
-    else                { showTimeLabel(); }
-}
-bool StatusBarDialog::getSplitMode()
-{
-    return isSplitMode;
-}
-void StatusBarDialog::hideTimeLabel()
-{
-    focusSplitButton=currentSplit;
-    setFocusSplitButton(currentSplit);
-
-    labelTime   ->hide();
-    buttonPrev  ->show();
-    buttonSplit1->show();
-    buttonSplit4->show();
-    buttonSplit9->show();
-    buttonNext  ->show();
-
-    updateSplitButton();
-}
-void StatusBarDialog::showTimeLabel()
-{
-    buttonPrev  ->hide();
-    buttonSplit1->hide();
-    buttonSplit4->hide();
-    buttonSplit9->hide();
-    buttonNext  ->hide();
-    labelTime->show();
-
-    updateSplitButton();
-    updateTime();
-}
-void StatusBarDialog::onButtonSplit()
+void StatusBarDialog::buttonSplitClicked()
 {
     if( isTrigger )
     {
@@ -527,169 +434,34 @@ void StatusBarDialog::onButtonSplit()
     }
     else
     {
-        isSplitMode = !isSplitMode;
-
-        if( isSplitMode )   { hideTimeLabel(); }
-        else                { showTimeLabel(); }
+        emit changeSplit();
+        updateSplitButton();
     }
 }
-void StatusBarDialog::onButtonSplit1()
+void StatusBarDialog::buttonSplitPressed()
 {
-    setFocusSplitButton(1);
-
-    if( currentSplit != Split_1 )
+    switch ( currentSplit )
     {
-        emit changeSplit(Split_1);
-    }
-}
-void StatusBarDialog::onButtonSplit4()
-{
-    setFocusSplitButton(2);
-
-    if( currentSplit != Split_4 )
-    {
-        emit changeSplit(Split_4);
-    }
-}
-void StatusBarDialog::onButtonSplit9()
-{
-    setFocusSplitButton(3);
-
-    if( currentSplit != Split_9 )
-    {
-        emit changeSplit(Split_9);
-    }
-}
-void StatusBarDialog::onButtonPrev()
-{
-    setFocusSplitButton(0);
-
-    emit changeChannel(0);
-}
-void StatusBarDialog::onButtonNext()
-{
-    setFocusSplitButton(4);
-
-    emit changeChannel(1);
-}
-void StatusBarDialog::onButtonSplit1Pressed()
-{
-    buttonSplit1->setIcon(QIcon(":/images/split1_pressed.png"));
-}
-void StatusBarDialog::onButtonSplit4Pressed()
-{
-    buttonSplit4->setIcon(QIcon(":/images/split4_pressed.png"));
-}
-void StatusBarDialog::onButtonSplit9Pressed()
-{
-    buttonSplit9->setIcon(QIcon(":/images/split9_pressed.png"));
-}
-void StatusBarDialog::onButtonPrevPressed()
-{
-    buttonPrev->setIcon(QIcon(":/images/channel_prev_pressed.png"));
-}
-void StatusBarDialog::onButtonNextPressed()
-{
-    buttonNext->setIcon(QIcon(":/images/channel_next_pressed.png"));
-}
-
-void StatusBarDialog::onButtonSplit1Released()
-{
-    buttonSplit1->setIcon(QIcon(":/images/split1_focus.png"));
-}
-void StatusBarDialog::onButtonSplit4Released()
-{
-    buttonSplit4->setIcon(QIcon(":/images/split4_focus.png"));
-}
-void StatusBarDialog::onButtonSplit9Released()
-{
-    buttonSplit9->setIcon(QIcon(":/images/split9_focus.png"));
-}
-void StatusBarDialog::onButtonPrevReleased()
-{
-    buttonPrev->setIcon(QIcon(":/images/channel_prev_focus.png"));
-}
-void StatusBarDialog::onButtonNextReleased()
-{
-    buttonNext->setIcon(QIcon(":/images/channel_next_focus.png"));
-}
-bool StatusBarDialog::eventFilter(QObject *obj, QEvent *event)
-{
-    if(event->type() == Qt::RightButton)
-    {
-        if     ( obj == buttonPrev   )   { setFocusSplitButton(0); }
-        else if( obj == buttonSplit1 )   { setFocusSplitButton(1); }
-        else if( obj == buttonSplit4 )   { setFocusSplitButton(2); }
-        else if( obj == buttonSplit9 )   { setFocusSplitButton(3); }
-        else if( obj == buttonNext   )   { setFocusSplitButton(4); }
-    }
-
-    return QWidget::eventFilter(obj, event);
-}
-void StatusBarDialog::setFocusSplitButton(int btnNum)
-{
-    /*
-        case 0  : previous button
-        case 1  : split 1  button
-        case 2  : split 4  button
-        case 3  : split 9  button
-        case 4  : next     button
-    */
-
-    switch( btnNum )
-    {
-        case 0 :
+        case Split_1 :
         {
-            focusSplitButton=0;
-            buttonPrev  ->setIcon(QIcon(":/images/channel_prev_focus.png"));
-            buttonSplit1->setIcon(QIcon(":/images/split1.png"));
-            buttonSplit4->setIcon(QIcon(":/images/split4.png"));
-            buttonSplit9->setIcon(QIcon(":/images/split9.png"));
-            buttonNext  ->setIcon(QIcon(":/images/channel_next.png"));
+            buttonSplit->setIcon(QIcon(":images/split1_pressed.png"));
             break;
         }
-        case 1 :
+        case Split_4 :
         {
-            focusSplitButton=1;
-            buttonPrev  ->setIcon(QIcon(":/images/channel_prev.png"));
-            buttonSplit1->setIcon(QIcon(":/images/split1_focus.png"));
-            buttonSplit4->setIcon(QIcon(":/images/split4.png"));
-            buttonSplit9->setIcon(QIcon(":/images/split9.png"));
-            buttonNext  ->setIcon(QIcon(":/images/channel_next.png"));
+            buttonSplit->setIcon(QIcon(":images/split4_pressed.png"));
             break;
         }
-        case 2 :
+        case Split_9 :
         {
-            focusSplitButton=2;
-            buttonPrev  ->setIcon(QIcon(":/images/channel_prev.png"));
-            buttonSplit1->setIcon(QIcon(":/images/split1.png"));
-            buttonSplit4->setIcon(QIcon(":/images/split4_focus.png"));
-            buttonSplit9->setIcon(QIcon(":/images/split9.png"));
-            buttonNext  ->setIcon(QIcon(":/images/channel_next.png"));
-            break;
-        }
-        case 3 :
-        {
-            focusSplitButton=3;
-            buttonPrev  ->setIcon(QIcon(":/images/channel_prev.png"));
-            buttonSplit1->setIcon(QIcon(":/images/split1.png"));
-            buttonSplit4->setIcon(QIcon(":/images/split4.png"));
-            buttonSplit9->setIcon(QIcon(":/images/split9_focus.png"));
-            buttonNext  ->setIcon(QIcon(":/images/channel_next.png"));
-            break;
-        }
-
-        default :
-        {
-            focusSplitButton=btnNum;
-            buttonPrev  ->setIcon(QIcon(":/images/channel_prev.png"));
-            buttonSplit1->setIcon(QIcon(":/images/split1.png"));
-            buttonSplit4->setIcon(QIcon(":/images/split4.png"));
-            buttonSplit9->setIcon(QIcon(":/images/split9.png"));
-            buttonNext  ->setIcon(QIcon(":/images/channel_next_focus.png"));
+            buttonSplit->setIcon(QIcon(":images/split9_pressed.png"));
             break;
         }
     }
+}
+void StatusBarDialog::buttonSplitReleased()
+{
+    updateSplitButton();
 }
 void StatusBarDialog::updateSplitButton()
 {
@@ -697,20 +469,17 @@ void StatusBarDialog::updateSplitButton()
     {
         case Split_1 :
         {
-            if( isSplitMode ) { buttonSplit->setIcon(QIcon(":images/split1_pressed.png")); }
-            else              { buttonSplit->setIcon(QIcon(":images/split1.png")); }
+            buttonSplit->setIcon(QIcon(":images/split1.png"));
             break;
         }
         case Split_4 :
         {
-            if( isSplitMode ) { buttonSplit->setIcon(QIcon(":images/split4_pressed.png")); }
-            else              { buttonSplit->setIcon(QIcon(":images/split4.png")); }
+            buttonSplit->setIcon(QIcon(":images/split4.png"));
             break;
         }
         case Split_9 :
         {
-            if( isSplitMode ) { buttonSplit->setIcon(QIcon(":images/split9_pressed.png")); }
-            else              { buttonSplit->setIcon(QIcon(":images/split9.png")); }
+            buttonSplit->setIcon(QIcon(":images/split9.png"));
             break;
         }
     }
@@ -724,68 +493,5 @@ void StatusBarDialog::updateTriggerState(int state)
         msgBox->accept();
         delete msgBox;
         msgBox = NULL;
-    }
-}
-
-void StatusBarDialog::keyPressEvent(QKeyEvent *event)
-{
-    if(isSplitMode == false)
-    {
-        return;
-    }
-
-    switch(event->key())
-    {
-        case Qt::Key_Up:
-        {
-            if( focusSplitButton >= 4)  { focusSplitButton=0; }
-            else                        { focusSplitButton++; }
-            setFocusSplitButton(focusSplitButton);
-
-            break;
-        }
-        case Qt::Key_Down:
-        {
-            if( focusSplitButton == 0)  { focusSplitButton=4; }
-            else                        { focusSplitButton--; }
-            setFocusSplitButton(focusSplitButton);
-
-            break;
-        }
-        case Qt::Key_Left:
-        {
-            if( focusSplitButton == 0)  { focusSplitButton=4; }
-            else                        { focusSplitButton--; }
-            setFocusSplitButton(focusSplitButton);
-
-            break;
-        }
-        case Qt::Key_Right:
-        {
-            if( focusSplitButton >= 4)  { focusSplitButton=0; }
-            else                        { focusSplitButton++; }
-            setFocusSplitButton(focusSplitButton);
-
-            break;
-        }
-        case Qt::Key_Escape:
-        {
-
-            break;
-        }
-        case Qt::Key_Enter:
-        {
-            switch( focusSplitButton )
-            {
-                case 0 : { onButtonPrev();   break; }
-                case 1 : { onButtonSplit1(); break; }
-                case 2 : { onButtonSplit4(); break; }
-                case 3 : { onButtonSplit9(); break; }
-                case 4 : { onButtonNext();   break; }
-            }
-
-            break;
-        }
-
     }
 }
