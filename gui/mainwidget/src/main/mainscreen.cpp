@@ -606,9 +606,30 @@ int MainWidget::splitScreen(int split)
             previousAudioCh = audioStatus;
         }
 
-        if(audioStatus != 0)
+        if(audioStatus != LIVE_AUDIO_MUTE)
         {
             setAudioOutCh(currentChannelNum+2);
+        }
+
+        emit updateSplitButton();
+    }
+    else if(split == Split_4)
+    {
+        appmgr_set_video_split(splitStartChNum, (split * split));
+
+        if( (splitStartChNum == 0) && (previousAudioCh > LIVE_AUDIO_SINGLE_4) )
+        {
+            setAudioOutCh(LIVE_AUDIO_MUTE);
+            audioStatus = previousAudioCh;
+        }
+        else if( (splitStartChNum == 4) && (previousAudioCh < LIVE_AUDIO_SINGLE_5) )
+        {
+            setAudioOutCh(LIVE_AUDIO_MUTE);
+            audioStatus = previousAudioCh;
+        }
+        else
+        {
+            setAudioOutCh(previousAudioCh);
         }
 
         emit updateSplitButton();
@@ -620,6 +641,7 @@ int MainWidget::splitScreen(int split)
 
         emit updateSplitButton();
     }
+
 #if( DEVINFO_VIDEONUM == 8 )
     for(ii = 0; ii < 8; ii++)
     {

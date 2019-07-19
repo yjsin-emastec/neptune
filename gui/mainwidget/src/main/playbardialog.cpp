@@ -342,14 +342,14 @@ void PlayBarDialog::onButtonAudio(void)
         return;
     }
 
-    if(currentSplit == 1)
+    if(currentSplit == Split_1)
     {
         if(indexAudio == currentChannelNum + 2)
         {
-            indexAudio = 0;
+            indexAudio = LIVE_AUDIO_MUTE;
         }
 
-        if(indexAudio == 0)
+        if(indexAudio == LIVE_AUDIO_MUTE)
         {
             ++indexAudio;;
         }
@@ -372,7 +372,50 @@ void PlayBarDialog::onButtonAudio(void)
 
         if(indexAudio != 1)
         {
-            indexAudio = 0;
+            indexAudio = LIVE_AUDIO_MUTE;
+        }
+    }
+    else if(currentSplit == Split_4 )
+    {
+        if( splitStartChNum == 0 )                                                              //ch1234
+        {
+            if( indexAudio <= LIVE_AUDIO_SINGLE_4 )                                             //audio1234 + mute
+            {
+                if( indexAudio == LIVE_AUDIO_SINGLE_4 ) { indexAudio = LIVE_AUDIO_MUTE; }
+
+                switch(++indexAudio)
+                {
+                    case  1: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19); emit setAudioMute(); break; }
+                    case  2: { buttonAudio->setIcon(QIcon(":/images/audio1.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         0); emit setAudio(1);    break; }
+                    case  3: { buttonAudio->setIcon(QIcon(":/images/audio2.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         1); emit setAudio(2);    break; }
+                    case  4: { buttonAudio->setIcon(QIcon(":/images/audio3.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         2); emit setAudio(3);    break; }
+                    case  5: { buttonAudio->setIcon(QIcon(":/images/audio4.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         3); emit setAudio(4);    break; }
+                }
+            }
+            else                                                                                //audio5678
+            {
+                indexAudio=LIVE_AUDIO_SINGLE_1; buttonAudio->setIcon(QIcon(":/images/audio1.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB, 0); emit setAudio(1);
+            }
+        }
+        else                                                                                    //ch5678
+        {
+            if( (indexAudio >= LIVE_AUDIO_SINGLE_5) || (indexAudio == LIVE_AUDIO_MUTE+1) )      //audio5678 + mute
+            {
+                if( indexAudio >= LIVE_AUDIO_SINGLE_8 ) { indexAudio = LIVE_AUDIO_MUTE; }
+
+                switch(++indexAudio)
+                {
+                    case  1: { buttonAudio->setIcon(QIcon(":/images/aomute.png")); appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19); emit setAudioMute(); break; }
+                    case  6: { buttonAudio->setIcon(QIcon(":/images/audio5.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         4); emit setAudio(5);    break; }
+                    case  7: { buttonAudio->setIcon(QIcon(":/images/audio6.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         5); emit setAudio(6);    break; }
+                    case  8: { buttonAudio->setIcon(QIcon(":/images/audio7.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         6); emit setAudio(7);    break; }
+                    case  9: { buttonAudio->setIcon(QIcon(":/images/audio8.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB,         7); emit setAudio(8);    break; }
+                }
+            }
+            else                                                                                //audio1234
+            {
+                indexAudio=LIVE_AUDIO_SINGLE_5; buttonAudio->setIcon(QIcon(":/images/audio5.png")); appmgr_search_set_audio_mute_on_off(AUDIO_PB, 4); emit setAudio(5);
+            }
         }
     }
     else
@@ -383,7 +426,7 @@ void PlayBarDialog::onButtonAudio(void)
         if( indexAudio > devInfo.videoNum)
 #endif
         {
-            indexAudio = 0;
+            indexAudio = LIVE_AUDIO_MUTE;
         }
 
         switch(++indexAudio)
@@ -692,6 +735,24 @@ void PlayBarDialog::playpauseClicked(void)
                 appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
             }
             else if(currentSplit == Split_4)
+            {
+                if( (splitStartChNum == 0 ) && ( indexAudio > LIVE_AUDIO_SINGLE_4 ) )
+                {
+                    SetAudioIcon(19);
+                    appmgr_search_set_audio_mute_on_off(AUDIO_PB, 19);
+                }
+                else if( (splitStartChNum == 4) && ( indexAudio < LIVE_AUDIO_SINGLE_5) )
+                {
+                    SetAudioIcon(19);
+                    appmgr_search_set_audio_mute_on_off(AUDIO_PB, 19);
+                }
+                else
+                {
+                    OutputAudio(indexAudio-2);
+                    appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
+                }
+            }
+            else
             {
                 OutputAudio(indexAudio-2);
                 appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
@@ -1124,8 +1185,29 @@ void PlayBarDialog::PausePlayChange(int state)
             }
             else
             {
-                OutputAudio(pbPreviousAudio-2);
-                appmgr_search_set_audio_mute_on_off(AUDIO_PB, pbPreviousAudio-2);
+                if( currentSplit == Split_4 )
+                {
+                    if( (splitStartChNum == 0) && (pbPreviousAudio > LIVE_AUDIO_SINGLE_4) )
+                    {
+                        SetAudioIcon(19);
+                        appmgr_search_set_audio_mute_on_off(AUDIO_PB, 19);
+                    }
+                    else if( (splitStartChNum == 4) && (pbPreviousAudio < LIVE_AUDIO_SINGLE_5) )
+                    {
+                        SetAudioIcon(19);
+                        appmgr_search_set_audio_mute_on_off(AUDIO_PB, 19);
+                    }
+                    else
+                    {
+                        OutputAudio(pbPreviousAudio-2);
+                        appmgr_search_set_audio_mute_on_off(AUDIO_PB, pbPreviousAudio-2);
+                    }
+                }
+                else
+                {
+                    OutputAudio(pbPreviousAudio-2);
+                    appmgr_search_set_audio_mute_on_off(AUDIO_PB, pbPreviousAudio-2);
+                }
             }
         }
     }

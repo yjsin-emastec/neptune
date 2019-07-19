@@ -18,6 +18,8 @@ public:
 private:
     int audioStatus;
 
+    void setAudioOut(int index);
+
     QPushButton *buttonSetup;
     QPushButton *buttonSearch;
     QPushButton *buttonAudio;
@@ -38,6 +40,7 @@ signals:
     void setAudio(int);
 	void enterMainMenu(void);
 	void exitMainMenu(void);
+    void changePrevAudio(int ch);
 
 protected:
 	int indexAudio;

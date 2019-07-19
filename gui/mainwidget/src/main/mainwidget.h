@@ -89,6 +89,7 @@ public slots:
     void onSaveDevicePage(int type);
     int  splitScreen(int split);
     void onChangeSplit();
+    void onChangePrevAudio(int index);
 
 protected:
     void closeEvent(QCloseEvent *event);

@@ -897,14 +897,15 @@ void MainWidget::createMainMenu()
 
     mainMenu = new MainMenu(this);
 
-    connect(mainMenu, SIGNAL(setupClicked()),    this, SLOT(runSetup()));
-    connect(mainMenu, SIGNAL(searchClicked()),   this, SLOT(runSearch()));
-    connect(mainMenu, SIGNAL(shutdownClicked()), this, SLOT(systemShutdown()));
-    connect(mainMenu, SIGNAL(setAudioMute()),    this, SLOT(onSetAudioMute()));
-    connect(mainMenu, SIGNAL(setAudio(int)),     this, SLOT(onSetAudio(int)));
-    connect(mainMenu, SIGNAL(enterMainMenu()),   this, SLOT(onHideStatusBar()));
-    connect(mainMenu, SIGNAL(exitMainMenu()),    this, SLOT(onShowStatusBar()));
-    connect(this,     SIGNAL(updateAudioButton()), mainMenu, SLOT(onUpdateAudioButton()));
+    connect(mainMenu, SIGNAL(setupClicked()),       this,     SLOT(runSetup()));
+    connect(mainMenu, SIGNAL(searchClicked()),      this,     SLOT(runSearch()));
+    connect(mainMenu, SIGNAL(shutdownClicked()),    this,     SLOT(systemShutdown()));
+    connect(mainMenu, SIGNAL(setAudioMute()),       this,     SLOT(onSetAudioMute()));
+    connect(mainMenu, SIGNAL(setAudio(int)),        this,     SLOT(onSetAudio(int)));
+    connect(mainMenu, SIGNAL(enterMainMenu()),      this,     SLOT(onHideStatusBar()));
+    connect(mainMenu, SIGNAL(exitMainMenu()),       this,     SLOT(onShowStatusBar()));
+    connect(mainMenu, SIGNAL(changePrevAudio(int)), this,     SLOT(onChangePrevAudio(int)));
+    connect(this,     SIGNAL(updateAudioButton()),  mainMenu, SLOT(onUpdateAudioButton()));
 
     qDebug("%s - \n", __func__);
 }
@@ -1466,6 +1467,28 @@ void MainWidget::runBackup()
             appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
         }
         else if(currentSplit == Split_4)
+        {
+            if( (splitStartChNum==0) && (playBar->indexAudio>LIVE_AUDIO_SINGLE_4) )
+            {
+                int temp = playBar->indexAudio;
+                playBar->OutputAudio(19);
+                playBar->indexAudio = temp;
+                appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
+            }
+            else if( (splitStartChNum==4) && (playBar->indexAudio<LIVE_AUDIO_SINGLE_5) )
+            {
+                int temp = playBar->indexAudio;
+                playBar->OutputAudio(19);
+                playBar->indexAudio = temp;
+                appmgr_search_set_audio_mute_on_off(AUDIO_LIVE_MUTE, 19);
+            }
+            else
+            {
+                playBar->OutputAudio(playBar->indexAudio-2);
+                appmgr_search_set_audio_mute_on_off(AUDIO_PB, playBar->indexAudio-2);
+            }
+        }
+        else
         {
             playBar->OutputAudio(playBar->indexAudio-2);
             appmgr_search_set_audio_mute_on_off(AUDIO_PB, playBar->indexAudio-2);
@@ -2465,6 +2488,7 @@ void MainWidget::onSetAudio(int ch)
     (void) utils_set_audio_output(audioStatus);
 
     appmgr_set_audio_output_mix(AUDIO_LIVE, audioStatus-2);
+
 }
 void MainWidget::setAudioOut()
 {
@@ -2500,9 +2524,16 @@ void MainWidget::setAudioOutCh(int ch)
 {
     if(ch == LIVE_AUDIO_MUTE)                                   { onSetAudioMute(); }
 #if( DEVINFO_VIDEONUM == 8 )
-    else if(ch>LIVE_AUDIO_SINGLE_1 && ch<=8+1)                  { onSetAudio(ch-1); }
+    else if(ch>=LIVE_AUDIO_SINGLE_1 && ch<=LIVE_AUDIO_SINGLE_8) { onSetAudio(ch-1); }
 #else
     else if(ch>=LIVE_AUDIO_SINGLE_1 && ch<=devInfo.videoNum+1)  { onSetAudio(ch-1); }
 #endif
     else                                                        { onSetAudioMute(); }
+}
+void MainWidget::onChangePrevAudio(int index)
+{
+    if( (currentSplit == Split_4) && (previousSplit != Split_1) )
+    {
+        previousAudioCh = index;
+    }
 }
