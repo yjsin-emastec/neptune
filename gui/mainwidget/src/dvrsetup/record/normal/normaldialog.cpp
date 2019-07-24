@@ -16,92 +16,138 @@ NormalDialog::NormalDialog(QWidget *parent)
         buttonFrame[1] = ui720.buttonFrame2;
         buttonFrame[2] = ui720.buttonFrame3;
         buttonFrame[3] = ui720.buttonFrame4;
-        buttonFrame[4] = ui720.buttonFrameAll;
+        buttonFrame[4] = ui720.buttonFrame5;
+        buttonFrame[5] = ui720.buttonFrame6;
+        buttonFrame[6] = ui720.buttonFrame7;
+        buttonFrame[7] = ui720.buttonFrame8;
+        buttonFrame[8] = ui720.buttonFrameAll;
+
         buttonQuality[0] = ui720.buttonQuality1;
         buttonQuality[1] = ui720.buttonQuality2;
         buttonQuality[2] = ui720.buttonQuality3;
         buttonQuality[3] = ui720.buttonQuality4;
-        buttonQuality[4] = ui720.buttonQualityAll;
+        buttonQuality[4] = ui720.buttonQuality5;
+        buttonQuality[5] = ui720.buttonQuality6;
+        buttonQuality[6] = ui720.buttonQuality7;
+        buttonQuality[7] = ui720.buttonQuality8;
+        buttonQuality[8] = ui720.buttonQualityAll;
+
         buttonRecording[0] = ui720.buttonRecording1;
         buttonRecording[1] = ui720.buttonRecording2;
         buttonRecording[2] = ui720.buttonRecording3;
         buttonRecording[3] = ui720.buttonRecording4;
-        buttonRecording[4] = ui720.buttonRecordingAll;
+        buttonRecording[4] = ui720.buttonRecording5;
+        buttonRecording[5] = ui720.buttonRecording6;
+        buttonRecording[6] = ui720.buttonRecording7;
+        buttonRecording[7] = ui720.buttonRecording8;
+        buttonRecording[8] = ui720.buttonRecordingAll;
+
         buttonAudio[0] = ui720.buttonAudio1;
         buttonAudio[1] = ui720.buttonAudio2;
         buttonAudio[2] = ui720.buttonAudio3;
         buttonAudio[3] = ui720.buttonAudio4;
-        buttonAudio[4] = ui720.buttonAudioAll;
-        buttonDefault = ui720.buttonDefault;
-        buttonReload = ui720.buttonReload;
-        buttonSave = ui720.buttonSave;
-        buttonClose = ui720.buttonClose;
+        buttonAudio[4] = ui720.buttonAudio5;
+        buttonAudio[5] = ui720.buttonAudio6;
+        buttonAudio[6] = ui720.buttonAudio7;
+        buttonAudio[7] = ui720.buttonAudio8;
+        buttonAudio[8] = ui720.buttonAudioAll;
 
-        buttonFrame[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonQuality[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonRecording[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonAudio[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonDefault = ui720.buttonDefault;
+        buttonReload  = ui720.buttonReload;
+        buttonSave    = ui720.buttonSave;
+        buttonClose   = ui720.buttonClose;
 
         labelFrame[0] = ui720.labelFrame1;
         labelFrame[1] = ui720.labelFrame2;
         labelFrame[2] = ui720.labelFrame3;
         labelFrame[3] = ui720.labelFrame4;
-        labelFrame[4] = ui720.labelFrame;
+        labelFrame[4] = ui720.labelFrame5;
+        labelFrame[5] = ui720.labelFrame6;
+        labelFrame[6] = ui720.labelFrame7;
+        labelFrame[7] = ui720.labelFrame8;
+        labelFrame[8] = ui720.labelFrame;
+
         labelQuality[0] = ui720.labelQuality1;
         labelQuality[1] = ui720.labelQuality2;
         labelQuality[2] = ui720.labelQuality3;
         labelQuality[3] = ui720.labelQuality4;
-        labelQuality[4] = ui720.labelQuality;
+        labelQuality[4] = ui720.labelQuality5;
+        labelQuality[5] = ui720.labelQuality6;
+        labelQuality[6] = ui720.labelQuality7;
+        labelQuality[7] = ui720.labelQuality8;
+        labelQuality[8] = ui720.labelQuality;
+
         labelRecording[0] = ui720.labelRecording1;
         labelRecording[1] = ui720.labelRecording2;
         labelRecording[2] = ui720.labelRecording3;
         labelRecording[3] = ui720.labelRecording4;
-        labelRecording[4] = ui720.labelRecording;
+        labelRecording[4] = ui720.labelRecording5;
+        labelRecording[5] = ui720.labelRecording6;
+        labelRecording[6] = ui720.labelRecording7;
+        labelRecording[7] = ui720.labelRecording8;
+        labelRecording[8] = ui720.labelRecording;
+
         labelAudio[0] = ui720.labelAudio1;
         labelAudio[1] = ui720.labelAudio2;
         labelAudio[2] = ui720.labelAudio3;
         labelAudio[3] = ui720.labelAudio4;
-        labelAudio[4] = ui720.labelAudio;
-        labelAll = ui720.labelAll;
+        labelAudio[4] = ui720.labelAudio5;
+        labelAudio[5] = ui720.labelAudio6;
+        labelAudio[6] = ui720.labelAudio7;
+        labelAudio[7] = ui720.labelAudio8;
+        labelAudio[8] = ui720.labelAudio;
+
         labelCh[0] = ui720.labelCh1;
         labelCh[1] = ui720.labelCh2;
         labelCh[2] = ui720.labelCh3;
         labelCh[3] = ui720.labelCh4;
+        labelCh[4] = ui720.labelCh5;
+        labelCh[5] = ui720.labelCh6;
+        labelCh[6] = ui720.labelCh7;
+        labelCh[7] = ui720.labelCh8;
+        labelCh[8] = ui720.labelAll;
 
         for(int ch=0; ch<NUMOFCH; ch++)
         {
-            labelFrame[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-            labelQuality[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-            labelRecording[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-            labelAudio[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-            labelCh[ch]->setStyleSheet("font:48px");
+            labelFrame[ch]     ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelQuality[ch]   ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelRecording[ch] ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelAudio[ch]     ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelCh[ch]        ->setStyleSheet("font:40px");
+
+            buttonFrame[ch]    ->setStyleSheet("font:40px;");
+            buttonQuality[ch]  ->setStyleSheet("font:40px;");
+            buttonRecording[ch]->setStyleSheet("font:40px;");
+            buttonAudio[ch]    ->setStyleSheet("font:40px;");
         }
 
-        labelAll->setStyleSheet("font:46px;background-color:rgb(50,57,83);");
-        labelFrame[4]->setStyleSheet("background-color:rgb(50,57,83);");
-        labelQuality[4]->setStyleSheet("background-color:rgb(50,57,83);");
-        labelRecording[4]->setStyleSheet("background-color:rgb(50,57,83);");
-        labelAudio[4]->setStyleSheet("background-color:rgb(50,57,83);");
+        buttonFrame[8]    ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonQuality[8]  ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonRecording[8]->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonAudio[8]    ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+
+        labelCh[8]        ->setStyleSheet("font:40px; background-color:rgb(50,57,83);");
+        labelFrame[8]     ->setStyleSheet("background-color:rgb(50,57,83);");
+        labelQuality[8]   ->setStyleSheet("background-color:rgb(50,57,83);");
+        labelRecording[8] ->setStyleSheet("background-color:rgb(50,57,83);");
+        labelAudio[8]     ->setStyleSheet("background-color:rgb(50,57,83);");
 
         //yjsin [19/01/02] if text is long, change font size and label location and size
         if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
         {
-            buttonDefault->resize(304, 91);
-            buttonDefault->setStyleSheet("font:38px");
-            buttonReload->setGeometry(335, 550, 231, 91);
+            buttonDefault->resize(320, 91);
+            buttonDefault->setStyleSheet("font:40px");
+            buttonReload->move(15+320+10, 570);
         }
         else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {
-            buttonDefault->resize(281, 91);
-            buttonReload->setGeometry(311, 550, 251, 91);
-            buttonFrame[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);font-size: 40px;}QPushButton:focus{background-color:rgb(152,14,69);}");
+            buttonDefault->resize(280, 91);
+            buttonReload->setGeometry(15+280+10, 570, 251, 91);
         }
         else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
         {
-            labelAll->setStyleSheet("font:40px");
-            buttonDefault->resize(301, 91);
-            buttonReload->setGeometry(331, 550, 241, 91);
-            buttonAudio[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);font-size: 45px;}QPushButton:focus{background-color:rgb(152,14,69);}");
+            buttonDefault->resize(300, 91);
+            buttonReload->setGeometry(15+300+10, 570, 241, 91);
         }
         else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
         {
@@ -118,94 +164,142 @@ NormalDialog::NormalDialog(QWidget *parent)
         buttonFrame[1] = ui1080.buttonFrame2;
         buttonFrame[2] = ui1080.buttonFrame3;
         buttonFrame[3] = ui1080.buttonFrame4;
-        buttonFrame[4] = ui1080.buttonFrameAll;
+        buttonFrame[4] = ui1080.buttonFrame5;
+        buttonFrame[5] = ui1080.buttonFrame6;
+        buttonFrame[6] = ui1080.buttonFrame7;
+        buttonFrame[7] = ui1080.buttonFrame8;
+        buttonFrame[8] = ui1080.buttonFrameAll;
+
         buttonQuality[0] = ui1080.buttonQuality1;
         buttonQuality[1] = ui1080.buttonQuality2;
         buttonQuality[2] = ui1080.buttonQuality3;
         buttonQuality[3] = ui1080.buttonQuality4;
-        buttonQuality[4] = ui1080.buttonQualityAll;
+        buttonQuality[4] = ui1080.buttonQuality5;
+        buttonQuality[5] = ui1080.buttonQuality6;
+        buttonQuality[6] = ui1080.buttonQuality7;
+        buttonQuality[7] = ui1080.buttonQuality8;
+        buttonQuality[8] = ui1080.buttonQualityAll;
+
         buttonRecording[0] = ui1080.buttonRecording1;
         buttonRecording[1] = ui1080.buttonRecording2;
         buttonRecording[2] = ui1080.buttonRecording3;
         buttonRecording[3] = ui1080.buttonRecording4;
-        buttonRecording[4] = ui1080.buttonRecordingAll;
+        buttonRecording[4] = ui1080.buttonRecording5;
+        buttonRecording[5] = ui1080.buttonRecording6;
+        buttonRecording[6] = ui1080.buttonRecording7;
+        buttonRecording[7] = ui1080.buttonRecording8;
+        buttonRecording[8] = ui1080.buttonRecordingAll;
+
         buttonAudio[0] = ui1080.buttonAudio1;
         buttonAudio[1] = ui1080.buttonAudio2;
         buttonAudio[2] = ui1080.buttonAudio3;
         buttonAudio[3] = ui1080.buttonAudio4;
-        buttonAudio[4] = ui1080.buttonAudioAll;
-        buttonDefault = ui1080.buttonDefault;
-        buttonReload = ui1080.buttonReload;
-        buttonSave = ui1080.buttonSave;
-        buttonClose = ui1080.buttonClose;
+        buttonAudio[4] = ui1080.buttonAudio5;
+        buttonAudio[5] = ui1080.buttonAudio6;
+        buttonAudio[6] = ui1080.buttonAudio7;
+        buttonAudio[7] = ui1080.buttonAudio8;
+        buttonAudio[8] = ui1080.buttonAudioAll;
 
-        buttonFrame[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonQuality[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonRecording[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonAudio[4]->setStyleSheet("QPushButton{background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonDefault = ui1080.buttonDefault;
+        buttonReload  = ui1080.buttonReload;
+        buttonSave    = ui1080.buttonSave;
+        buttonClose   = ui1080.buttonClose;
 
         labelFrame[0] = ui1080.labelFrame1;
         labelFrame[1] = ui1080.labelFrame2;
         labelFrame[2] = ui1080.labelFrame3;
         labelFrame[3] = ui1080.labelFrame4;
-        labelFrame[4] = ui1080.labelFrame;
+        labelFrame[4] = ui1080.labelFrame5;
+        labelFrame[5] = ui1080.labelFrame6;
+        labelFrame[6] = ui1080.labelFrame7;
+        labelFrame[7] = ui1080.labelFrame8;
+        labelFrame[8] = ui1080.labelFrame;
+
         labelQuality[0] = ui1080.labelQuality1;
         labelQuality[1] = ui1080.labelQuality2;
         labelQuality[2] = ui1080.labelQuality3;
         labelQuality[3] = ui1080.labelQuality4;
-        labelQuality[4] = ui1080.labelQuality;
+        labelQuality[4] = ui1080.labelQuality5;
+        labelQuality[5] = ui1080.labelQuality6;
+        labelQuality[6] = ui1080.labelQuality7;
+        labelQuality[7] = ui1080.labelQuality8;
+        labelQuality[8] = ui1080.labelQuality;
+
         labelRecording[0] = ui1080.labelRecording1;
         labelRecording[1] = ui1080.labelRecording2;
         labelRecording[2] = ui1080.labelRecording3;
         labelRecording[3] = ui1080.labelRecording4;
-        labelRecording[4] = ui1080.labelRecording;
+        labelRecording[4] = ui1080.labelRecording5;
+        labelRecording[5] = ui1080.labelRecording6;
+        labelRecording[6] = ui1080.labelRecording7;
+        labelRecording[7] = ui1080.labelRecording8;
+        labelRecording[8] = ui1080.labelRecording;
+
         labelAudio[0] = ui1080.labelAudio1;
         labelAudio[1] = ui1080.labelAudio2;
         labelAudio[2] = ui1080.labelAudio3;
         labelAudio[3] = ui1080.labelAudio4;
-        labelAudio[4] = ui1080.labelAudio;
-        labelAll = ui1080.labelAll;
+        labelAudio[4] = ui1080.labelAudio5;
+        labelAudio[5] = ui1080.labelAudio6;
+        labelAudio[6] = ui1080.labelAudio7;
+        labelAudio[7] = ui1080.labelAudio8;
+        labelAudio[8] = ui1080.labelAudio;
+
         labelCh[0] = ui1080.labelCh1;
         labelCh[1] = ui1080.labelCh2;
         labelCh[2] = ui1080.labelCh3;
         labelCh[3] = ui1080.labelCh4;
+        labelCh[4] = ui1080.labelCh5;
+        labelCh[5] = ui1080.labelCh6;
+        labelCh[6] = ui1080.labelCh7;
+        labelCh[7] = ui1080.labelCh8;
+        labelCh[8] = ui1080.labelAll;
 
         for(int ch=0; ch<NUMOFCH; ch++)
         {
-            labelFrame[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-            labelQuality[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-            labelRecording[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-            labelAudio[ch]->setStyleSheet("background-color:rgb(50,57,83);");
-            labelCh[ch]->setStyleSheet("font:65px");
+            labelFrame[ch]     ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelQuality[ch]   ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelRecording[ch] ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelAudio[ch]     ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelCh[ch]        ->setStyleSheet("font:60px");
+
+            buttonFrame[ch]    ->setStyleSheet("font:60px;");
+            buttonQuality[ch]  ->setStyleSheet("font:60px;");
+            buttonRecording[ch]->setStyleSheet("font:60px;");
+            buttonAudio[ch]    ->setStyleSheet("font:60px;");
         }
 
-        labelAll->setStyleSheet("font:65px;background-color:rgb(50,57,83);");
-        labelFrame[4]->setStyleSheet("background-color:rgb(50,57,83);");
-        labelQuality[4]->setStyleSheet("background-color:rgb(50,57,83);");
-        labelRecording[4]->setStyleSheet("background-color:rgb(50,57,83);");
-        labelAudio[4]->setStyleSheet("background-color:rgb(50,57,83);");
+        buttonFrame[8]    ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonQuality[8]  ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonRecording[8]->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonAudio[8]    ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+
+        labelCh[8]        ->setStyleSheet("font:60px; background-color:rgb(50,57,83);");
+        labelFrame[8]     ->setStyleSheet("background-color:rgb(50,57,83);");
+        labelQuality[8]   ->setStyleSheet("background-color:rgb(50,57,83);");
+        labelRecording[8] ->setStyleSheet("background-color:rgb(50,57,83);");
+        labelAudio[8]     ->setStyleSheet("background-color:rgb(50,57,83);");
 
         //yjsin [19/02/21] if text is long, change label location and size
         if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
         {
             buttonDefault->resize(500, 131);
-            buttonReload->setGeometry(560, 830, 300, 131);
+            buttonReload->move(25+500+20, 860);
         }
         else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {
             buttonDefault->resize(400, 131);
-            buttonReload->setGeometry(460, 830, 400, 131);
+            buttonReload->setGeometry(25+400+20, 860, 400, 131);
         }
         else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
         {
-            labelAll->setStyleSheet("font:58px");
             buttonDefault->resize(400, 131);
-            buttonReload->setGeometry(460, 830, 400, 131);
+            buttonReload->setGeometry(25+400+20, 860, 400, 131);
         }
         else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
         {
             buttonDefault->resize(320, 131);
-            buttonReload->setGeometry(380, 830, 370, 131);
+            buttonReload->setGeometry(25+320+20, 860, 370, 131);
         }
     }
 
@@ -213,35 +307,55 @@ NormalDialog::NormalDialog(QWidget *parent)
 
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
-    buttonFrame[4]->setFocus();
+    buttonFrame[NUMOFCH]->setFocus();
 
     connect(buttonFrame[0],     SIGNAL(released(void)), this, SLOT(onButtonFrame1       (void)));
     connect(buttonFrame[1],     SIGNAL(released(void)), this, SLOT(onButtonFrame2       (void)));
     connect(buttonFrame[2],     SIGNAL(released(void)), this, SLOT(onButtonFrame3       (void)));
     connect(buttonFrame[3],     SIGNAL(released(void)), this, SLOT(onButtonFrame4       (void)));
-    connect(buttonFrame[4],     SIGNAL(released(void)), this, SLOT(onButtonFrameAll     (void)));
+    connect(buttonFrame[4],     SIGNAL(released(void)), this, SLOT(onButtonFrame5       (void)));
+    connect(buttonFrame[5],     SIGNAL(released(void)), this, SLOT(onButtonFrame6       (void)));
+    connect(buttonFrame[6],     SIGNAL(released(void)), this, SLOT(onButtonFrame7       (void)));
+    connect(buttonFrame[7],     SIGNAL(released(void)), this, SLOT(onButtonFrame8       (void)));
+    connect(buttonFrame[8],     SIGNAL(released(void)), this, SLOT(onButtonFrameAll     (void)));
+
     connect(buttonQuality[0],   SIGNAL(released(void)), this, SLOT(onButtonQuality1     (void)));
     connect(buttonQuality[1],   SIGNAL(released(void)), this, SLOT(onButtonQuality2     (void)));
     connect(buttonQuality[2],   SIGNAL(released(void)), this, SLOT(onButtonQuality3     (void)));
     connect(buttonQuality[3],   SIGNAL(released(void)), this, SLOT(onButtonQuality4     (void)));
-    connect(buttonQuality[4],   SIGNAL(released(void)), this, SLOT(onButtonQualityAll   (void)));
+    connect(buttonQuality[4],   SIGNAL(released(void)), this, SLOT(onButtonQuality5     (void)));
+    connect(buttonQuality[5],   SIGNAL(released(void)), this, SLOT(onButtonQuality6     (void)));
+    connect(buttonQuality[6],   SIGNAL(released(void)), this, SLOT(onButtonQuality7     (void)));
+    connect(buttonQuality[7],   SIGNAL(released(void)), this, SLOT(onButtonQuality8     (void)));
+    connect(buttonQuality[8],   SIGNAL(released(void)), this, SLOT(onButtonQualityAll   (void)));
+
     connect(buttonRecording[0], SIGNAL(released(void)), this, SLOT(onButtonRecording1   (void)));
     connect(buttonRecording[1], SIGNAL(released(void)), this, SLOT(onButtonRecording2   (void)));
     connect(buttonRecording[2], SIGNAL(released(void)), this, SLOT(onButtonRecording3   (void)));
     connect(buttonRecording[3], SIGNAL(released(void)), this, SLOT(onButtonRecording4   (void)));
-    connect(buttonRecording[4], SIGNAL(released(void)), this, SLOT(onButtonRecordingAll (void)));
+    connect(buttonRecording[4], SIGNAL(released(void)), this, SLOT(onButtonRecording5   (void)));
+    connect(buttonRecording[5], SIGNAL(released(void)), this, SLOT(onButtonRecording6   (void)));
+    connect(buttonRecording[6], SIGNAL(released(void)), this, SLOT(onButtonRecording7   (void)));
+    connect(buttonRecording[7], SIGNAL(released(void)), this, SLOT(onButtonRecording8   (void)));
+    connect(buttonRecording[8], SIGNAL(released(void)), this, SLOT(onButtonRecordingAll (void)));
+
     connect(buttonAudio[0],     SIGNAL(released(void)), this, SLOT(onButtonAudio1       (void)));
     connect(buttonAudio[1],     SIGNAL(released(void)), this, SLOT(onButtonAudio2       (void)));
     connect(buttonAudio[2],     SIGNAL(released(void)), this, SLOT(onButtonAudio3       (void)));
     connect(buttonAudio[3],     SIGNAL(released(void)), this, SLOT(onButtonAudio4       (void)));
-    connect(buttonAudio[4],     SIGNAL(released(void)), this, SLOT(onButtonAudioAll     (void)));
+    connect(buttonAudio[4],     SIGNAL(released(void)), this, SLOT(onButtonAudio5       (void)));
+    connect(buttonAudio[5],     SIGNAL(released(void)), this, SLOT(onButtonAudio6       (void)));
+    connect(buttonAudio[6],     SIGNAL(released(void)), this, SLOT(onButtonAudio7       (void)));
+    connect(buttonAudio[7],     SIGNAL(released(void)), this, SLOT(onButtonAudio8       (void)));
+    connect(buttonAudio[8],     SIGNAL(released(void)), this, SLOT(onButtonAudioAll     (void)));
+
     connect(buttonDefault,      SIGNAL(released(void)), this, SLOT(onButtonDefault      (void)));
     connect(buttonReload,       SIGNAL(released(void)), this, SLOT(onButtonReload       (void)));
     connect(buttonSave,         SIGNAL(released(void)), this, SLOT(onButtonSave         (void)));
     connect(buttonClose,        SIGNAL(released(void)), this, SLOT(reject()));
 
-    isFirstClickButtnFrame=true;
-    isFirstClickButtnQuality=true;
+    isFirstClickButtonFrame  =true;
+    isFirstClickButtonQuality=true;
 }
 NormalDialog::~NormalDialog()
 {
@@ -282,50 +396,24 @@ void NormalDialog::initNormalConfig(void)
     }
 }
 
-void NormalDialog::onButtonFrame1()
+void NormalDialog::onButtonFrame(int chNum)
 {
-    int maxFrame = getMaxFrame(0);
+    int maxFrame = getMaxFrame(chNum);
 
-    if( infoFrame[0] < maxFrame ) { infoFrame[0] = infoFrame[0]+5; }
-    else                          { infoFrame[0] = 5; }
+    if( infoFrame[chNum] < maxFrame )   { infoFrame[chNum] = infoFrame[chNum]+5; }
+    else                                { infoFrame[chNum] = 5; }
 
-    updateFrameText(0);
-    isFirstClickButtnFrame=true;
+    updateFrameText(chNum);
+    isFirstClickButtonFrame=true;
 }
-
-void NormalDialog::onButtonFrame2()
-{
-    int maxFrame = getMaxFrame(1);
-
-    if( infoFrame[1] < maxFrame ) { infoFrame[1] = infoFrame[1]+5; }
-    else                          { infoFrame[1] = 5; }
-
-    updateFrameText(1);
-    isFirstClickButtnFrame=true;
-}
-
-void NormalDialog::onButtonFrame3()
-{
-    int maxFrame = getMaxFrame(2);
-
-    if( infoFrame[2] < maxFrame ) { infoFrame[2] = infoFrame[2]+5; }
-    else                          { infoFrame[2] = 5; }
-
-    updateFrameText(2);
-    isFirstClickButtnFrame=true;
-}
-
-void NormalDialog::onButtonFrame4()
-{
-    int maxFrame = getMaxFrame(3);
-
-    if( infoFrame[3] < maxFrame ) { infoFrame[3] = infoFrame[3]+5; }
-    else                          { infoFrame[3] = 5; }
-
-    updateFrameText(3);
-    isFirstClickButtnFrame=true;
-}
-
+void NormalDialog::onButtonFrame1()     { onButtonFrame(0); }
+void NormalDialog::onButtonFrame2()     { onButtonFrame(1); }
+void NormalDialog::onButtonFrame3()     { onButtonFrame(2); }
+void NormalDialog::onButtonFrame4()     { onButtonFrame(3); }
+void NormalDialog::onButtonFrame5()     { onButtonFrame(4); }
+void NormalDialog::onButtonFrame6()     { onButtonFrame(5); }
+void NormalDialog::onButtonFrame7()     { onButtonFrame(6); }
+void NormalDialog::onButtonFrame8()     { onButtonFrame(7); }
 void NormalDialog::onButtonFrameAll()
 {
     /*
@@ -349,14 +437,14 @@ void NormalDialog::onButtonFrameAll()
         if( infoFrame[ch] == maxFrame[ch] ) { count++; }
     }
 
-    if(isFirstClickButtnFrame)
+    if(isFirstClickButtonFrame)
     {
         for(int ch=0; ch<NUMOFCH; ch++)
         {
             if( count < NUMOFCH )   { infoFrame[ch] = maxFrame[ch]; }   // if all channels are not max frame -> set max frame
             else                    { infoFrame[ch] = 5; }
         }
-        isFirstClickButtnFrame=false;
+        isFirstClickButtonFrame=false;
     }
     else
     {
@@ -397,7 +485,6 @@ void NormalDialog::onButtonFrameAll()
         updateFrameText(ch);
     }
 }
-
 int NormalDialog::getMaxFrame(int chNum)
 {
     int currentMaxFrame;
@@ -430,7 +517,6 @@ int NormalDialog::getMaxFrame(int chNum)
 
     return currentMaxFrame;
 }
-
 void NormalDialog::updateFrameText(int chNum)
 {
     switch( infoFrame[chNum] )
@@ -445,55 +531,26 @@ void NormalDialog::updateFrameText(int chNum)
     }
 }
 
-void NormalDialog::onButtonQuality1()
+void NormalDialog::onButtonQuality(int chNum)
 {
-    switch( infoQuality[0] )
+    switch( infoQuality[chNum] )
     {
-        case QUALITY_ECONOMY : { infoQuality[0] = QUALITY_HIGH;     }   break;
-        case QUALITY_HIGH    : { infoQuality[0] = QUALITY_ULTRA;    }   break;
-        case QUALITY_ULTRA   : { infoQuality[0] = QUALITY_ECONOMY;  }   break;
-        default              : { infoQuality[0] = QUALITY_ULTRA;    }   break;
+        case QUALITY_ECONOMY : { infoQuality[chNum] = QUALITY_HIGH;     }   break;
+        case QUALITY_HIGH    : { infoQuality[chNum] = QUALITY_ULTRA;    }   break;
+        case QUALITY_ULTRA   : { infoQuality[chNum] = QUALITY_ECONOMY;  }   break;
+        default              : { infoQuality[chNum] = QUALITY_ULTRA;    }   break;
     }
-    updateQualityText(0);
-    isFirstClickButtnQuality=true;
+    updateQualityText(chNum);
+    isFirstClickButtonQuality=true;
 }
-
-void NormalDialog::onButtonQuality2()
-{
-    switch( infoQuality[1] )
-    {
-        case QUALITY_ECONOMY : { infoQuality[1] = QUALITY_HIGH;     }   break;
-        case QUALITY_HIGH    : { infoQuality[1] = QUALITY_ULTRA;    }   break;
-        case QUALITY_ULTRA   : { infoQuality[1] = QUALITY_ECONOMY;  }   break;
-        default              : { infoQuality[1] = QUALITY_ULTRA;    }   break;
-    }
-    updateQualityText(1);
-    isFirstClickButtnQuality=true;
-}
-void NormalDialog::onButtonQuality3()
-{
-    switch( infoQuality[2] )
-    {
-        case QUALITY_ECONOMY : { infoQuality[2] = QUALITY_HIGH;     }   break;
-        case QUALITY_HIGH    : { infoQuality[2] = QUALITY_ULTRA;    }   break;
-        case QUALITY_ULTRA   : { infoQuality[2] = QUALITY_ECONOMY;  }   break;
-        default              : { infoQuality[2] = QUALITY_ULTRA;    }   break;
-    }
-    updateQualityText(2);
-    isFirstClickButtnQuality=true;
-}
-void NormalDialog::onButtonQuality4()
-{
-    switch( infoQuality[3] )
-    {
-        case QUALITY_ECONOMY : { infoQuality[3] = QUALITY_HIGH;     }   break;
-        case QUALITY_HIGH    : { infoQuality[3] = QUALITY_ULTRA;    }   break;
-        case QUALITY_ULTRA   : { infoQuality[3] = QUALITY_ECONOMY;  }   break;
-        default              : { infoQuality[3] = QUALITY_ULTRA;    }   break;
-    }
-    updateQualityText(3);
-    isFirstClickButtnQuality=true;
-}
+void NormalDialog::onButtonQuality1()   { onButtonQuality(0); }
+void NormalDialog::onButtonQuality2()   { onButtonQuality(1); }
+void NormalDialog::onButtonQuality3()   { onButtonQuality(2); }
+void NormalDialog::onButtonQuality4()   { onButtonQuality(3); }
+void NormalDialog::onButtonQuality5()   { onButtonQuality(4); }
+void NormalDialog::onButtonQuality6()   { onButtonQuality(5); }
+void NormalDialog::onButtonQuality7()   { onButtonQuality(6); }
+void NormalDialog::onButtonQuality8()   { onButtonQuality(7); }
 void NormalDialog::onButtonQualityAll()
 {
     int allChMaxQuality=QUALITY_ECONOMY, maxCh=0;
@@ -506,14 +563,14 @@ void NormalDialog::onButtonQualityAll()
         if( infoQuality[0] == infoQuality[ch] ) { count++; }
     }
 
-    if( isFirstClickButtnQuality )
+    if( isFirstClickButtonQuality )
     {
         for(int ch=0; ch<NUMOFCH; ch++)
         {
             if( (count >= NUMOFCH) && infoQuality[ch] == QUALITY_ULTRA) { infoQuality[ch] = QUALITY_ECONOMY;    }
             else                                                        { infoQuality[ch] = QUALITY_ULTRA;      }
         }
-        isFirstClickButtnQuality=false;
+        isFirstClickButtonQuality=false;
     }
     else
     {
@@ -552,7 +609,6 @@ void NormalDialog::onButtonQualityAll()
         updateQualityText(ch);
     }
 }
-
 void NormalDialog::updateQualityText(int chNum)
 {
     switch( infoQuality[chNum] )
@@ -564,51 +620,25 @@ void NormalDialog::updateQualityText(int chNum)
     }
 }
 
-void NormalDialog::onButtonRecording1()
+void NormalDialog::onButtonRecording(int chNum)
 {
-    switch( infoRecording[0] )
+    switch( infoRecording[chNum] )
     {
-        case true   : { infoRecording[0] = false; } break;
-        case false  : { infoRecording[0] = true;  } break;
-        default     : { infoRecording[0] = true;  } break;
+        case true   : { infoRecording[chNum] = false; } break;
+        case false  : { infoRecording[chNum] = true;  } break;
+        default     : { infoRecording[chNum] = true;  } break;
     }
 
-    updateRecordingText(0);
+    updateRecordingText(chNum);
 }
-
-void NormalDialog::onButtonRecording2()
-{
-    switch( infoRecording[1] )
-    {
-        case true   : { infoRecording[1] = false; } break;
-        case false  : { infoRecording[1] = true;  } break;
-        default     : { infoRecording[1] = true;  } break;
-    }
-
-    updateRecordingText(1);
-}
-void NormalDialog::onButtonRecording3()
-{
-    switch( infoRecording[2] )
-    {
-        case true   : { infoRecording[2] = false; } break;
-        case false  : { infoRecording[2] = true;  } break;
-        default     : { infoRecording[2] = true;  } break;
-    }
-
-    updateRecordingText(2);
-}
-void NormalDialog::onButtonRecording4()
-{
-    switch( infoRecording[3] )
-    {
-        case true   : { infoRecording[3] = false; } break;
-        case false  : { infoRecording[3] = true;  } break;
-        default     : { infoRecording[3] = true;  } break;
-    }
-
-    updateRecordingText(3);
-}
+void NormalDialog::onButtonRecording1()     { onButtonRecording(0); }
+void NormalDialog::onButtonRecording2()     { onButtonRecording(1); }
+void NormalDialog::onButtonRecording3()     { onButtonRecording(2); }
+void NormalDialog::onButtonRecording4()     { onButtonRecording(3); }
+void NormalDialog::onButtonRecording5()     { onButtonRecording(4); }
+void NormalDialog::onButtonRecording6()     { onButtonRecording(5); }
+void NormalDialog::onButtonRecording7()     { onButtonRecording(6); }
+void NormalDialog::onButtonRecording8()     { onButtonRecording(7); }
 void NormalDialog::onButtonRecordingAll()
 {
     int count = 0;
@@ -625,7 +655,6 @@ void NormalDialog::onButtonRecordingAll()
         updateRecordingText(ch);
     }
 }
-
 void NormalDialog::updateRecordingText(int chNum)
 {
     switch( infoRecording[chNum] )
@@ -636,50 +665,25 @@ void NormalDialog::updateRecordingText(int chNum)
     }
 }
 
-void NormalDialog::onButtonAudio1()
+void NormalDialog::onButtonAudio(int chNum)
 {
-    switch( infoAudio[0] )
+    switch( infoAudio[chNum] )
     {
-        case true   : { infoAudio[0] = false; } break;
-        case false  : { infoAudio[0] = true;  } break;
-        default     : { infoAudio[0] = true;  } break;
+        case true   : { infoAudio[chNum] = false; } break;
+        case false  : { infoAudio[chNum] = true;  } break;
+        default     : { infoAudio[chNum] = true;  } break;
     }
 
-    updateAudioText(0);
+    updateAudioText(chNum);
 }
-void NormalDialog::onButtonAudio2()
-{
-    switch( infoAudio[1] )
-    {
-        case true   : { infoAudio[1] = false; } break;
-        case false  : { infoAudio[1] = true;  } break;
-        default     : { infoAudio[1] = true;  } break;
-    }
-
-    updateAudioText(1);
-}
-void NormalDialog::onButtonAudio3()
-{
-    switch( infoAudio[2] )
-    {
-        case true   : { infoAudio[2] = false; } break;
-        case false  : { infoAudio[2] = true;  } break;
-        default     : { infoAudio[2] = true;  } break;
-    }
-
-    updateAudioText(2);
-}
-void NormalDialog::onButtonAudio4()
-{
-    switch( infoAudio[3] )
-    {
-        case true   : { infoAudio[3] = false; } break;
-        case false  : { infoAudio[3] = true;  } break;
-        default     : { infoAudio[3] = true;  } break;
-    }
-
-    updateAudioText(3);
-}
+void NormalDialog::onButtonAudio1()     { onButtonAudio(0); }
+void NormalDialog::onButtonAudio2()     { onButtonAudio(1); }
+void NormalDialog::onButtonAudio3()     { onButtonAudio(2); }
+void NormalDialog::onButtonAudio4()     { onButtonAudio(3); }
+void NormalDialog::onButtonAudio5()     { onButtonAudio(4); }
+void NormalDialog::onButtonAudio6()     { onButtonAudio(5); }
+void NormalDialog::onButtonAudio7()     { onButtonAudio(6); }
+void NormalDialog::onButtonAudio8()     { onButtonAudio(7); }
 void NormalDialog::onButtonAudioAll()
 {
     int count = 0;
@@ -696,7 +700,6 @@ void NormalDialog::onButtonAudioAll()
         updateAudioText(ch);
     }
 }
-
 void NormalDialog::updateAudioText(int chNum)
 {
     switch( infoAudio[chNum] )
@@ -722,12 +725,10 @@ void NormalDialog::onButtonDefault()
         updateAudioText(ch);
     }
 }
-
 void NormalDialog::onButtonReload()
 {
     initNormalConfig();
 }
-
 void NormalDialog::onButtonSave()
 {
     for(int ch=0; ch<NUMOFCH; ch++)
@@ -767,168 +768,247 @@ void NormalDialog::onButtonSave()
 
     QDialog::accept();
 }
-
 void NormalDialog::keyPressEvent(QKeyEvent *event)
 {
     switch(event->key())
     {
         case Qt::Key_Up :
         {
-            if     ( buttonFrame[4]->hasFocus() )       { buttonDefault->setFocus();  }
-            else if( buttonFrame[0]->hasFocus() )       { buttonFrame[4]->setFocus(); }
+            if     ( buttonFrame[8]->hasFocus() )       { buttonDefault->setFocus();  }
+            else if( buttonFrame[0]->hasFocus() )       { buttonFrame[8]->setFocus(); }
             else if( buttonFrame[1]->hasFocus() )       { buttonFrame[0]->setFocus(); }
             else if( buttonFrame[2]->hasFocus() )       { buttonFrame[1]->setFocus(); }
             else if( buttonFrame[3]->hasFocus() )       { buttonFrame[2]->setFocus(); }
-            else if( buttonDefault->hasFocus() )        { buttonFrame[3]->setFocus(); }
+            else if( buttonFrame[4]->hasFocus() )       { buttonFrame[3]->setFocus(); }
+            else if( buttonFrame[5]->hasFocus() )       { buttonFrame[4]->setFocus(); }
+            else if( buttonFrame[6]->hasFocus() )       { buttonFrame[5]->setFocus(); }
+            else if( buttonFrame[7]->hasFocus() )       { buttonFrame[6]->setFocus(); }
+            else if( buttonDefault ->hasFocus() )       { buttonFrame[7]->setFocus(); }
 
-            else if( buttonQuality[4]->hasFocus() )     { buttonReload->setFocus(); }
-            else if( buttonQuality[0]->hasFocus() )     { buttonQuality[4]->setFocus(); }
+            else if( buttonQuality[8]->hasFocus() )     { buttonReload    ->setFocus(); }
+            else if( buttonQuality[0]->hasFocus() )     { buttonQuality[8]->setFocus(); }
             else if( buttonQuality[1]->hasFocus() )     { buttonQuality[0]->setFocus(); }
             else if( buttonQuality[2]->hasFocus() )     { buttonQuality[1]->setFocus(); }
             else if( buttonQuality[3]->hasFocus() )     { buttonQuality[2]->setFocus(); }
-            else if( buttonReload->hasFocus() )         { buttonQuality[3]->setFocus(); }
+            else if( buttonQuality[4]->hasFocus() )     { buttonQuality[3]->setFocus(); }
+            else if( buttonQuality[5]->hasFocus() )     { buttonQuality[4]->setFocus(); }
+            else if( buttonQuality[6]->hasFocus() )     { buttonQuality[5]->setFocus(); }
+            else if( buttonQuality[7]->hasFocus() )     { buttonQuality[6]->setFocus(); }
+            else if( buttonReload    ->hasFocus() )     { buttonQuality[7]->setFocus(); }
 
-            else if( buttonRecording[4]->hasFocus() )   { buttonSave->setFocus(); }
-            else if( buttonRecording[0]->hasFocus() )   { buttonRecording[4]->setFocus(); }
+            else if( buttonRecording[8]->hasFocus() )   { buttonSave        ->setFocus(); }
+            else if( buttonRecording[0]->hasFocus() )   { buttonRecording[8]->setFocus(); }
             else if( buttonRecording[1]->hasFocus() )   { buttonRecording[0]->setFocus(); }
             else if( buttonRecording[2]->hasFocus() )   { buttonRecording[1]->setFocus(); }
             else if( buttonRecording[3]->hasFocus() )   { buttonRecording[2]->setFocus(); }
-            else if( buttonSave->hasFocus() )           { buttonRecording[3]->setFocus(); }
+            else if( buttonRecording[4]->hasFocus() )   { buttonRecording[3]->setFocus(); }
+            else if( buttonRecording[5]->hasFocus() )   { buttonRecording[4]->setFocus(); }
+            else if( buttonRecording[6]->hasFocus() )   { buttonRecording[5]->setFocus(); }
+            else if( buttonRecording[7]->hasFocus() )   { buttonRecording[6]->setFocus(); }
+            else if( buttonSave        ->hasFocus() )   { buttonRecording[7]->setFocus(); }
 
-            else if( buttonAudio[4]->hasFocus() )       { buttonClose->setFocus(); }
-            else if( buttonAudio[0]->hasFocus() )       { buttonAudio[4]->setFocus(); }
+            else if( buttonAudio[8]->hasFocus() )       { buttonClose   ->setFocus(); }
+            else if( buttonAudio[0]->hasFocus() )       { buttonAudio[8]->setFocus(); }
             else if( buttonAudio[1]->hasFocus() )       { buttonAudio[0]->setFocus(); }
             else if( buttonAudio[2]->hasFocus() )       { buttonAudio[1]->setFocus(); }
             else if( buttonAudio[3]->hasFocus() )       { buttonAudio[2]->setFocus(); }
-            else if( buttonClose->hasFocus() )          { buttonAudio[3]->setFocus(); }
+            else if( buttonAudio[4]->hasFocus() )       { buttonAudio[3]->setFocus(); }
+            else if( buttonAudio[5]->hasFocus() )       { buttonAudio[4]->setFocus(); }
+            else if( buttonAudio[6]->hasFocus() )       { buttonAudio[5]->setFocus(); }
+            else if( buttonAudio[7]->hasFocus() )       { buttonAudio[6]->setFocus(); }
+            else if( buttonClose   ->hasFocus() )       { buttonAudio[7]->setFocus(); }
 
             break;
         }
         case Qt::Key_Down :
         {
-            if     ( buttonFrame[4]->hasFocus() )       { buttonFrame[0]->setFocus(); }
+            if     ( buttonFrame[8]->hasFocus() )       { buttonFrame[0]->setFocus(); }
             else if( buttonFrame[0]->hasFocus() )       { buttonFrame[1]->setFocus(); }
             else if( buttonFrame[1]->hasFocus() )       { buttonFrame[2]->setFocus(); }
             else if( buttonFrame[2]->hasFocus() )       { buttonFrame[3]->setFocus(); }
-            else if( buttonFrame[3]->hasFocus() )       { buttonDefault->setFocus();  }
-            else if( buttonDefault->hasFocus() )        { buttonFrame[4]->setFocus(); }
+            else if( buttonFrame[3]->hasFocus() )       { buttonFrame[4]->setFocus(); }
+            else if( buttonFrame[4]->hasFocus() )       { buttonFrame[5]->setFocus(); }
+            else if( buttonFrame[5]->hasFocus() )       { buttonFrame[6]->setFocus(); }
+            else if( buttonFrame[6]->hasFocus() )       { buttonFrame[7]->setFocus(); }
+            else if( buttonFrame[7]->hasFocus() )       { buttonDefault ->setFocus(); }
+            else if( buttonDefault ->hasFocus() )       { buttonFrame[8]->setFocus(); }
 
-            else if( buttonQuality[4]->hasFocus() )     { buttonQuality[0]->setFocus(); }
+            else if( buttonQuality[8]->hasFocus() )     { buttonQuality[0]->setFocus(); }
             else if( buttonQuality[0]->hasFocus() )     { buttonQuality[1]->setFocus(); }
             else if( buttonQuality[1]->hasFocus() )     { buttonQuality[2]->setFocus(); }
             else if( buttonQuality[2]->hasFocus() )     { buttonQuality[3]->setFocus(); }
-            else if( buttonQuality[3]->hasFocus() )     { buttonReload->setFocus(); }
-            else if( buttonReload->hasFocus() )         { buttonQuality[4]->setFocus(); }
+            else if( buttonQuality[3]->hasFocus() )     { buttonQuality[4]->setFocus(); }
+            else if( buttonQuality[4]->hasFocus() )     { buttonQuality[5]->setFocus(); }
+            else if( buttonQuality[5]->hasFocus() )     { buttonQuality[6]->setFocus(); }
+            else if( buttonQuality[6]->hasFocus() )     { buttonQuality[7]->setFocus(); }
+            else if( buttonQuality[7]->hasFocus() )     { buttonReload    ->setFocus(); }
+            else if( buttonReload    ->hasFocus() )     { buttonQuality[8]->setFocus(); }
 
-            else if( buttonRecording[4]->hasFocus() )   { buttonRecording[0]->setFocus(); }
+            else if( buttonRecording[8]->hasFocus() )   { buttonRecording[0]->setFocus(); }
             else if( buttonRecording[0]->hasFocus() )   { buttonRecording[1]->setFocus(); }
             else if( buttonRecording[1]->hasFocus() )   { buttonRecording[2]->setFocus(); }
             else if( buttonRecording[2]->hasFocus() )   { buttonRecording[3]->setFocus(); }
-            else if( buttonRecording[3]->hasFocus() )   { buttonSave->setFocus(); }
-            else if( buttonSave->hasFocus() )           { buttonRecording[4]->setFocus(); }
+            else if( buttonRecording[3]->hasFocus() )   { buttonRecording[4]->setFocus(); }
+            else if( buttonRecording[4]->hasFocus() )   { buttonRecording[5]->setFocus(); }
+            else if( buttonRecording[5]->hasFocus() )   { buttonRecording[6]->setFocus(); }
+            else if( buttonRecording[6]->hasFocus() )   { buttonRecording[7]->setFocus(); }
+            else if( buttonRecording[7]->hasFocus() )   { buttonSave        ->setFocus(); }
+            else if( buttonSave        ->hasFocus() )   { buttonRecording[8]->setFocus(); }
 
-            else if( buttonAudio[4]->hasFocus() )       { buttonAudio[0]->setFocus(); }
+            else if( buttonAudio[8]->hasFocus() )       { buttonAudio[0]->setFocus(); }
             else if( buttonAudio[0]->hasFocus() )       { buttonAudio[1]->setFocus(); }
             else if( buttonAudio[1]->hasFocus() )       { buttonAudio[2]->setFocus(); }
             else if( buttonAudio[2]->hasFocus() )       { buttonAudio[3]->setFocus(); }
-            else if( buttonAudio[3]->hasFocus() )       { buttonClose->setFocus(); }
-            else if( buttonClose->hasFocus() )          { buttonAudio[4]->setFocus(); }
+            else if( buttonAudio[3]->hasFocus() )       { buttonAudio[4]->setFocus(); }
+            else if( buttonAudio[4]->hasFocus() )       { buttonAudio[5]->setFocus(); }
+            else if( buttonAudio[5]->hasFocus() )       { buttonAudio[6]->setFocus(); }
+            else if( buttonAudio[6]->hasFocus() )       { buttonAudio[7]->setFocus(); }
+            else if( buttonAudio[7]->hasFocus() )       { buttonClose   ->setFocus(); }
+            else if( buttonClose   ->hasFocus() )       { buttonAudio[8]->setFocus(); }
 
             break;
         }
         case Qt::Key_Left :
         {
-            if     ( buttonFrame[4]->hasFocus() )       { buttonAudio[4]->setFocus(); }
+            if     ( buttonFrame[8]->hasFocus() )       { buttonAudio[8]->setFocus(); }
             else if( buttonFrame[0]->hasFocus() )       { buttonAudio[0]->setFocus(); }
             else if( buttonFrame[1]->hasFocus() )       { buttonAudio[1]->setFocus(); }
             else if( buttonFrame[2]->hasFocus() )       { buttonAudio[2]->setFocus(); }
             else if( buttonFrame[3]->hasFocus() )       { buttonAudio[3]->setFocus(); }
-            else if( buttonDefault->hasFocus() )        { buttonClose->setFocus();    }
+            else if( buttonFrame[4]->hasFocus() )       { buttonAudio[4]->setFocus(); }
+            else if( buttonFrame[5]->hasFocus() )       { buttonAudio[5]->setFocus(); }
+            else if( buttonFrame[6]->hasFocus() )       { buttonAudio[6]->setFocus(); }
+            else if( buttonFrame[7]->hasFocus() )       { buttonAudio[7]->setFocus(); }
+            else if( buttonDefault ->hasFocus() )       { buttonClose   ->setFocus(); }
 
-            else if( buttonQuality[4]->hasFocus() )     { buttonFrame[4]->setFocus(); }
+            else if( buttonQuality[8]->hasFocus() )     { buttonFrame[8]->setFocus(); }
             else if( buttonQuality[0]->hasFocus() )     { buttonFrame[0]->setFocus(); }
             else if( buttonQuality[1]->hasFocus() )     { buttonFrame[1]->setFocus(); }
             else if( buttonQuality[2]->hasFocus() )     { buttonFrame[2]->setFocus(); }
             else if( buttonQuality[3]->hasFocus() )     { buttonFrame[3]->setFocus(); }
-            else if( buttonReload->hasFocus() )         { buttonDefault->setFocus(); }
+            else if( buttonQuality[4]->hasFocus() )     { buttonFrame[4]->setFocus(); }
+            else if( buttonQuality[5]->hasFocus() )     { buttonFrame[5]->setFocus(); }
+            else if( buttonQuality[6]->hasFocus() )     { buttonFrame[6]->setFocus(); }
+            else if( buttonQuality[7]->hasFocus() )     { buttonFrame[7]->setFocus(); }
+            else if( buttonReload    ->hasFocus() )     { buttonDefault ->setFocus(); }
 
-            else if( buttonRecording[4]->hasFocus() )   { buttonQuality[4]->setFocus(); }
+            else if( buttonRecording[8]->hasFocus() )   { buttonQuality[8]->setFocus(); }
             else if( buttonRecording[0]->hasFocus() )   { buttonQuality[0]->setFocus(); }
             else if( buttonRecording[1]->hasFocus() )   { buttonQuality[1]->setFocus(); }
             else if( buttonRecording[2]->hasFocus() )   { buttonQuality[2]->setFocus(); }
             else if( buttonRecording[3]->hasFocus() )   { buttonQuality[3]->setFocus(); }
-            else if( buttonSave->hasFocus() )           { buttonReload->setFocus(); }
+            else if( buttonRecording[4]->hasFocus() )   { buttonQuality[4]->setFocus(); }
+            else if( buttonRecording[5]->hasFocus() )   { buttonQuality[5]->setFocus(); }
+            else if( buttonRecording[6]->hasFocus() )   { buttonQuality[6]->setFocus(); }
+            else if( buttonRecording[7]->hasFocus() )   { buttonQuality[7]->setFocus(); }
+            else if( buttonSave        ->hasFocus() )   { buttonReload    ->setFocus(); }
 
-            else if( buttonAudio[4]->hasFocus() )       { buttonRecording[4]->setFocus(); }
+            else if( buttonAudio[8]->hasFocus() )       { buttonRecording[8]->setFocus(); }
             else if( buttonAudio[0]->hasFocus() )       { buttonRecording[0]->setFocus(); }
             else if( buttonAudio[1]->hasFocus() )       { buttonRecording[1]->setFocus(); }
             else if( buttonAudio[2]->hasFocus() )       { buttonRecording[2]->setFocus(); }
             else if( buttonAudio[3]->hasFocus() )       { buttonRecording[3]->setFocus(); }
-            else if( buttonClose->hasFocus() )          { buttonSave->setFocus(); }
+            else if( buttonAudio[4]->hasFocus() )       { buttonRecording[4]->setFocus(); }
+            else if( buttonAudio[5]->hasFocus() )       { buttonRecording[5]->setFocus(); }
+            else if( buttonAudio[6]->hasFocus() )       { buttonRecording[6]->setFocus(); }
+            else if( buttonAudio[7]->hasFocus() )       { buttonRecording[7]->setFocus(); }
+            else if( buttonClose   ->hasFocus() )       { buttonSave        ->setFocus(); }
 
             break;
         }
         case Qt::Key_Right :
         {
-            if     ( buttonFrame[4]->hasFocus() )       { buttonQuality[4]->setFocus(); }
+            if     ( buttonFrame[8]->hasFocus() )       { buttonQuality[8]->setFocus(); }
             else if( buttonFrame[0]->hasFocus() )       { buttonQuality[0]->setFocus(); }
             else if( buttonFrame[1]->hasFocus() )       { buttonQuality[1]->setFocus(); }
             else if( buttonFrame[2]->hasFocus() )       { buttonQuality[2]->setFocus(); }
             else if( buttonFrame[3]->hasFocus() )       { buttonQuality[3]->setFocus(); }
-            else if( buttonDefault->hasFocus() )        { buttonReload->setFocus();    }
+            else if( buttonFrame[4]->hasFocus() )       { buttonQuality[4]->setFocus(); }
+            else if( buttonFrame[5]->hasFocus() )       { buttonQuality[5]->setFocus(); }
+            else if( buttonFrame[6]->hasFocus() )       { buttonQuality[6]->setFocus(); }
+            else if( buttonFrame[7]->hasFocus() )       { buttonQuality[7]->setFocus(); }
+            else if( buttonDefault ->hasFocus() )       { buttonReload    ->setFocus(); }
 
-            else if( buttonQuality[4]->hasFocus() )     { buttonRecording[4]->setFocus(); }
+            else if( buttonQuality[8]->hasFocus() )     { buttonRecording[8]->setFocus(); }
             else if( buttonQuality[0]->hasFocus() )     { buttonRecording[0]->setFocus(); }
             else if( buttonQuality[1]->hasFocus() )     { buttonRecording[1]->setFocus(); }
             else if( buttonQuality[2]->hasFocus() )     { buttonRecording[2]->setFocus(); }
             else if( buttonQuality[3]->hasFocus() )     { buttonRecording[3]->setFocus(); }
-            else if( buttonReload->hasFocus() )         { buttonSave->setFocus(); }
+            else if( buttonQuality[4]->hasFocus() )     { buttonRecording[4]->setFocus(); }
+            else if( buttonQuality[5]->hasFocus() )     { buttonRecording[5]->setFocus(); }
+            else if( buttonQuality[6]->hasFocus() )     { buttonRecording[6]->setFocus(); }
+            else if( buttonQuality[7]->hasFocus() )     { buttonRecording[7]->setFocus(); }
+            else if( buttonReload    ->hasFocus() )     { buttonSave        ->setFocus(); }
 
-            else if( buttonRecording[4]->hasFocus() )   { buttonAudio[4]->setFocus(); }
+            else if( buttonRecording[8]->hasFocus() )   { buttonAudio[8]->setFocus(); }
             else if( buttonRecording[0]->hasFocus() )   { buttonAudio[0]->setFocus(); }
             else if( buttonRecording[1]->hasFocus() )   { buttonAudio[1]->setFocus(); }
             else if( buttonRecording[2]->hasFocus() )   { buttonAudio[2]->setFocus(); }
             else if( buttonRecording[3]->hasFocus() )   { buttonAudio[3]->setFocus(); }
-            else if( buttonSave->hasFocus() )           { buttonClose->setFocus(); }
+            else if( buttonRecording[4]->hasFocus() )   { buttonAudio[4]->setFocus(); }
+            else if( buttonRecording[5]->hasFocus() )   { buttonAudio[5]->setFocus(); }
+            else if( buttonRecording[6]->hasFocus() )   { buttonAudio[6]->setFocus(); }
+            else if( buttonRecording[7]->hasFocus() )   { buttonAudio[7]->setFocus(); }
+            else if( buttonSave        ->hasFocus() )   { buttonClose   ->setFocus(); }
 
-            else if( buttonAudio[4]->hasFocus() )       { buttonFrame[4]->setFocus(); }
+            else if( buttonAudio[8]->hasFocus() )       { buttonFrame[8]->setFocus(); }
             else if( buttonAudio[0]->hasFocus() )       { buttonFrame[0]->setFocus(); }
             else if( buttonAudio[1]->hasFocus() )       { buttonFrame[1]->setFocus(); }
             else if( buttonAudio[2]->hasFocus() )       { buttonFrame[2]->setFocus(); }
             else if( buttonAudio[3]->hasFocus() )       { buttonFrame[3]->setFocus(); }
-            else if( buttonClose->hasFocus() )          { buttonDefault->setFocus(); }
+            else if( buttonAudio[4]->hasFocus() )       { buttonFrame[4]->setFocus(); }
+            else if( buttonAudio[5]->hasFocus() )       { buttonFrame[5]->setFocus(); }
+            else if( buttonAudio[6]->hasFocus() )       { buttonFrame[6]->setFocus(); }
+            else if( buttonAudio[7]->hasFocus() )       { buttonFrame[7]->setFocus(); }
+            else if( buttonClose   ->hasFocus() )       { buttonDefault ->setFocus(); }
 
             break;
         }
         case Qt::Key_Enter :
         {
-            if     ( buttonFrame[4]->hasFocus() )       { onButtonFrameAll(); }
-            else if( buttonFrame[0]->hasFocus() )       { onButtonFrame1(); }
-            else if( buttonFrame[1]->hasFocus() )       { onButtonFrame2(); }
-            else if( buttonFrame[2]->hasFocus() )       { onButtonFrame3(); }
-            else if( buttonFrame[3]->hasFocus() )       { onButtonFrame4(); }
-            else if( buttonDefault->hasFocus() )        { onButtonDefault(); }
+            if     ( buttonFrame[8]->hasFocus() )       { onButtonFrameAll(); }
+            else if( buttonFrame[0]->hasFocus() )       { onButtonFrame1();   }
+            else if( buttonFrame[1]->hasFocus() )       { onButtonFrame2();   }
+            else if( buttonFrame[2]->hasFocus() )       { onButtonFrame3();   }
+            else if( buttonFrame[3]->hasFocus() )       { onButtonFrame4();   }
+            else if( buttonFrame[4]->hasFocus() )       { onButtonFrame5();   }
+            else if( buttonFrame[5]->hasFocus() )       { onButtonFrame6();   }
+            else if( buttonFrame[6]->hasFocus() )       { onButtonFrame7();   }
+            else if( buttonFrame[7]->hasFocus() )       { onButtonFrame8();   }
+            else if( buttonDefault ->hasFocus() )       { onButtonDefault();  }
 
-            else if( buttonQuality[4]->hasFocus() )     { onButtonQualityAll(); }
-            else if( buttonQuality[0]->hasFocus() )     { onButtonQuality1(); }
-            else if( buttonQuality[1]->hasFocus() )     { onButtonQuality2(); }
-            else if( buttonQuality[2]->hasFocus() )     { onButtonQuality3(); }
-            else if( buttonQuality[3]->hasFocus() )     { onButtonQuality4(); }
-            else if( buttonReload->hasFocus() )         { onButtonReload(); }
+            else if( buttonQuality[8]->hasFocus() )     { onButtonQualityAll(); }
+            else if( buttonQuality[0]->hasFocus() )     { onButtonQuality1();   }
+            else if( buttonQuality[1]->hasFocus() )     { onButtonQuality2();   }
+            else if( buttonQuality[2]->hasFocus() )     { onButtonQuality3();   }
+            else if( buttonQuality[3]->hasFocus() )     { onButtonQuality4();   }
+            else if( buttonQuality[4]->hasFocus() )     { onButtonQuality5();   }
+            else if( buttonQuality[5]->hasFocus() )     { onButtonQuality6();   }
+            else if( buttonQuality[6]->hasFocus() )     { onButtonQuality7();   }
+            else if( buttonQuality[7]->hasFocus() )     { onButtonQuality8();   }
+            else if( buttonReload    ->hasFocus() )     { onButtonReload();     }
 
-            else if( buttonRecording[4]->hasFocus() )   { onButtonRecordingAll(); }
-            else if( buttonRecording[0]->hasFocus() )   { onButtonRecording1(); }
-            else if( buttonRecording[1]->hasFocus() )   { onButtonRecording2(); }
-            else if( buttonRecording[2]->hasFocus() )   { onButtonRecording3(); }
-            else if( buttonRecording[3]->hasFocus() )   { onButtonRecording4(); }
-            else if( buttonSave->hasFocus() )           { onButtonSave(); }
+            else if( buttonRecording[8]->hasFocus() )   { onButtonRecordingAll(); }
+            else if( buttonRecording[0]->hasFocus() )   { onButtonRecording1();   }
+            else if( buttonRecording[1]->hasFocus() )   { onButtonRecording2();   }
+            else if( buttonRecording[2]->hasFocus() )   { onButtonRecording3();   }
+            else if( buttonRecording[3]->hasFocus() )   { onButtonRecording4();   }
+            else if( buttonRecording[4]->hasFocus() )   { onButtonRecording5();   }
+            else if( buttonRecording[5]->hasFocus() )   { onButtonRecording6();   }
+            else if( buttonRecording[6]->hasFocus() )   { onButtonRecording7();   }
+            else if( buttonRecording[7]->hasFocus() )   { onButtonRecording8();   }
+            else if( buttonSave        ->hasFocus() )   { onButtonSave();         }
 
-            else if( buttonAudio[4]->hasFocus() )       { onButtonAudioAll(); }
-            else if( buttonAudio[0]->hasFocus() )       { onButtonAudio1(); }
-            else if( buttonAudio[1]->hasFocus() )       { onButtonAudio2(); }
-            else if( buttonAudio[2]->hasFocus() )       { onButtonAudio3(); }
-            else if( buttonAudio[3]->hasFocus() )       { onButtonAudio4(); }
-            else if( buttonClose->hasFocus() )          { reject(); }
+            else if( buttonAudio[8]->hasFocus() )       { onButtonAudioAll(); }
+            else if( buttonAudio[0]->hasFocus() )       { onButtonAudio1();   }
+            else if( buttonAudio[1]->hasFocus() )       { onButtonAudio2();   }
+            else if( buttonAudio[2]->hasFocus() )       { onButtonAudio3();   }
+            else if( buttonAudio[3]->hasFocus() )       { onButtonAudio4();   }
+            else if( buttonAudio[4]->hasFocus() )       { onButtonAudio5();   }
+            else if( buttonAudio[5]->hasFocus() )       { onButtonAudio6();   }
+            else if( buttonAudio[6]->hasFocus() )       { onButtonAudio7();   }
+            else if( buttonAudio[7]->hasFocus() )       { onButtonAudio8();   }
+            else if( buttonClose   ->hasFocus() )       { reject();           }
 
             break;
         }
