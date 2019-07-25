@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>798</width>
-    <height>568</height>
+    <width>818</width>
+    <height>649</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <rect>
      <x>4</x>
      <y>4</y>
-     <width>790</width>
-     <height>560</height>
+     <width>810</width>
+     <height>641</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -31,17 +31,17 @@
    <widget class="QLabel" name="labelCameraName1">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
+      <x>30</x>
+      <y>30</y>
       <width>150</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Ch. 1</string>
+     <string>Ch.1</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -53,10 +53,10 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>169</x>
-      <y>20</y>
+      <x>179</x>
+      <y>30</y>
       <width>500</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -68,7 +68,7 @@
     <property name="minimumSize">
      <size>
       <width>0</width>
-      <height>100</height>
+      <height>0</height>
      </size>
     </property>
     <property name="alignment">
@@ -78,16 +78,16 @@
    <widget class="QPushButton" name="buttonVirtualKeyboard1">
     <property name="geometry">
      <rect>
-      <x>668</x>
-      <y>20</y>
+      <x>678</x>
+      <y>30</y>
       <width>100</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>100</width>
-      <height>100</height>
+      <width>0</width>
+      <height>0</height>
      </size>
     </property>
     <property name="text">
@@ -97,17 +97,17 @@
    <widget class="QLabel" name="labelCameraName2">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>119</y>
+      <x>30</x>
+      <y>90</y>
       <width>150</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Ch. 2</string>
+     <string>Ch.2</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -119,16 +119,16 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>169</x>
-      <y>119</y>
+      <x>179</x>
+      <y>90</y>
       <width>500</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
       <width>0</width>
-      <height>100</height>
+      <height>0</height>
      </size>
     </property>
     <property name="alignment">
@@ -138,17 +138,17 @@
    <widget class="QLabel" name="labelCameraName3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>218</y>
+      <x>30</x>
+      <y>150</y>
       <width>150</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Ch. 3</string>
+     <string>Ch.3</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -160,16 +160,16 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>169</x>
-      <y>218</y>
+      <x>179</x>
+      <y>150</y>
       <width>500</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
       <width>0</width>
-      <height>100</height>
+      <height>0</height>
      </size>
     </property>
     <property name="alignment">
@@ -179,17 +179,17 @@
    <widget class="QLabel" name="labelCameraName4">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>317</y>
+      <x>30</x>
+      <y>210</y>
       <width>150</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Ch. 4</string>
+     <string>Ch.4</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -201,16 +201,16 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>169</x>
-      <y>317</y>
+      <x>179</x>
+      <y>210</y>
       <width>500</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
       <width>0</width>
-      <height>100</height>
+      <height>0</height>
      </size>
     </property>
     <property name="alignment">
@@ -220,16 +220,16 @@
    <widget class="QPushButton" name="buttonVirtualKeyboard2">
     <property name="geometry">
      <rect>
-      <x>668</x>
-      <y>119</y>
+      <x>678</x>
+      <y>90</y>
       <width>100</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>100</width>
-      <height>100</height>
+      <width>0</width>
+      <height>0</height>
      </size>
     </property>
     <property name="text">
@@ -239,16 +239,16 @@
    <widget class="QPushButton" name="buttonVirtualKeyboard3">
     <property name="geometry">
      <rect>
-      <x>668</x>
-      <y>218</y>
+      <x>678</x>
+      <y>150</y>
       <width>100</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>100</width>
-      <height>100</height>
+      <width>0</width>
+      <height>0</height>
      </size>
     </property>
     <property name="text">
@@ -258,29 +258,29 @@
    <widget class="QPushButton" name="buttonVirtualKeyboard4">
     <property name="geometry">
      <rect>
-      <x>668</x>
-      <y>317</y>
+      <x>678</x>
+      <y>210</y>
       <width>100</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>100</width>
-      <height>100</height>
+      <width>0</width>
+      <height>0</height>
      </size>
     </property>
     <property name="text">
      <string>...</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="labelButtonCh4">
     <property name="geometry">
      <rect>
-      <x>668</x>
-      <y>317</y>
+      <x>678</x>
+      <y>210</y>
       <width>100</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -290,13 +290,13 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="labelButtonCh3">
     <property name="geometry">
      <rect>
-      <x>668</x>
-      <y>218</y>
+      <x>678</x>
+      <y>150</y>
       <width>100</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -306,13 +306,13 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="labelButtonCh2">
     <property name="geometry">
      <rect>
-      <x>668</x>
-      <y>119</y>
+      <x>678</x>
+      <y>90</y>
       <width>100</width>
-      <height>100</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -322,13 +322,13 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="labelButtonCh1">
     <property name="geometry">
      <rect>
-      <x>668</x>
-      <y>20</y>
-      <width>100</width>
-      <height>100</height>
+      <x>678</x>
+      <y>30</y>
+      <width>101</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -341,8 +341,8 @@
    <widget class="QPushButton" name="buttonSave">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>450</y>
+      <x>375</x>
+      <y>530</y>
       <width>201</width>
       <height>91</height>
      </rect>
@@ -354,8 +354,8 @@
    <widget class="QPushButton" name="buttonClose">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>450</y>
+      <x>585</x>
+      <y>530</y>
       <width>201</width>
       <height>91</height>
      </rect>
@@ -364,10 +364,314 @@
      <string>Cancel</string>
     </property>
    </widget>
-   <zorder>label_4</zorder>
-   <zorder>label_3</zorder>
-   <zorder>label_2</zorder>
-   <zorder>label</zorder>
+   <widget class="QLabel" name="labelCameraName5">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>270</y>
+      <width>150</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Ch.5</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelCameraName6">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>330</y>
+      <width>150</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Ch.6</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelCameraName7">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>390</y>
+      <width>150</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Ch.7</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelCameraName8">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>450</y>
+      <width>150</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Ch.8</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditName5">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>179</x>
+      <y>270</y>
+      <width>500</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditName6">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>179</x>
+      <y>330</y>
+      <width>500</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditName7">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>179</x>
+      <y>390</y>
+      <width>500</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditName8">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>179</x>
+      <y>450</y>
+      <width>500</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelButtonCh5">
+    <property name="geometry">
+     <rect>
+      <x>678</x>
+      <y>270</y>
+      <width>100</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelButtonCh6">
+    <property name="geometry">
+     <rect>
+      <x>678</x>
+      <y>330</y>
+      <width>100</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelButtonCh7">
+    <property name="geometry">
+     <rect>
+      <x>678</x>
+      <y>390</y>
+      <width>100</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelButtonCh8">
+    <property name="geometry">
+     <rect>
+      <x>678</x>
+      <y>450</y>
+      <width>100</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonVirtualKeyboard5">
+    <property name="geometry">
+     <rect>
+      <x>678</x>
+      <y>270</y>
+      <width>100</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonVirtualKeyboard6">
+    <property name="geometry">
+     <rect>
+      <x>678</x>
+      <y>330</y>
+      <width>100</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonVirtualKeyboard7">
+    <property name="geometry">
+     <rect>
+      <x>678</x>
+      <y>390</y>
+      <width>100</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonVirtualKeyboard8">
+    <property name="geometry">
+     <rect>
+      <x>678</x>
+      <y>450</y>
+      <width>100</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <zorder>labelButtonCh1</zorder>
+   <zorder>labelButtonCh2</zorder>
+   <zorder>labelButtonCh3</zorder>
+   <zorder>labelButtonCh4</zorder>
    <zorder>labelCameraName1</zorder>
    <zorder>lineEditName1</zorder>
    <zorder>buttonVirtualKeyboard1</zorder>
@@ -382,6 +686,22 @@
    <zorder>buttonVirtualKeyboard4</zorder>
    <zorder>buttonSave</zorder>
    <zorder>buttonClose</zorder>
+   <zorder>labelCameraName5</zorder>
+   <zorder>labelCameraName6</zorder>
+   <zorder>labelCameraName7</zorder>
+   <zorder>labelCameraName8</zorder>
+   <zorder>lineEditName5</zorder>
+   <zorder>lineEditName6</zorder>
+   <zorder>lineEditName7</zorder>
+   <zorder>lineEditName8</zorder>
+   <zorder>labelButtonCh5</zorder>
+   <zorder>labelButtonCh6</zorder>
+   <zorder>labelButtonCh7</zorder>
+   <zorder>labelButtonCh8</zorder>
+   <zorder>buttonVirtualKeyboard5</zorder>
+   <zorder>buttonVirtualKeyboard6</zorder>
+   <zorder>buttonVirtualKeyboard7</zorder>
+   <zorder>buttonVirtualKeyboard8</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

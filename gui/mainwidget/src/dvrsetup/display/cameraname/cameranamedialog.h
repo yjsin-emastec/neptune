@@ -19,34 +19,31 @@ public:
 	void initCameraNameConfig(void);
 
 signals:
-	;
 
 public slots:
+    void onCameraName(int ch);
 	void onCameraName1(void);
 	void onCameraName2(void);
 	void onCameraName3(void);
 	void onCameraName4(void);
+    void onCameraName5(void);
+    void onCameraName6(void);
+    void onCameraName7(void);
+    void onCameraName8(void);
 
 protected:
-	void keyPressEvent(QKeyEvent *event);
+    void keyPressEvent(QKeyEvent *event);
 	void keyReleaseEvent(QKeyEvent *event);
 	
 private:
 	UiKeyboardDialog *keyboard;
 
     QFrame *frame;
-    QLabel *labelCameraName1;
-    QLabel *labelCameraName2;
-    QLabel *labelCameraName3;
-    QLabel *labelCameraName4;
-    QLineEdit *lineEditName1;
-    QLineEdit *lineEditName2;
-    QLineEdit *lineEditName3;
-    QLineEdit *lineEditName4;
-    QPushButton *buttonVirtualKeyboard1;
-    QPushButton *buttonVirtualKeyboard2;
-    QPushButton *buttonVirtualKeyboard3;
-    QPushButton *buttonVirtualKeyboard4;
+
+    QLabel *labelCameraName[8];
+    QLineEdit *lineEditName[8];
+    QPushButton *buttonVirtualKeyboard[8];
+
     QPushButton *buttonSave;
     QPushButton *buttonClose;
 };

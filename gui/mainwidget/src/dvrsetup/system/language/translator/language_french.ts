@@ -610,6 +610,26 @@ Désactivé/Activé</translation>
         <translation>NOM DE CAMÉRA PROPRIÉTÉ</translation>
     </message>
     <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="44"/>
+        <source>Ch.1</source>
+        <translation>Ch.1</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="110"/>
+        <source>Ch.2</source>
+        <translation>Ch.2</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="151"/>
+        <source>Ch.3</source>
+        <translation>Ch.3</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="192"/>
+        <source>Ch.4</source>
+        <translation>Ch.4</translation>
+    </message>
+    <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="351"/>
         <source>Save</source>
         <translation>Stocker</translation>
@@ -620,32 +640,52 @@ Désactivé/Activé</translation>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog.ui" line="44"/>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="380"/>
+        <source>Ch.5</source>
+        <translation>Ch.5</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="399"/>
+        <source>Ch.6</source>
+        <translation>Ch.6</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="418"/>
+        <source>Ch.7</source>
+        <translation>Ch.7</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="437"/>
+        <source>Ch.8</source>
+        <translation>Ch.8</translation>
+    </message>
+    <message>
         <source>Ch. 1</source>
-        <translation>Ch.1</translation>
+        <translation type="obsolete">Ch.1</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="94"/>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="236"/>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="255"/>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="274"/>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="611"/>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="630"/>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="649"/>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="668"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog.ui" line="110"/>
         <source>Ch. 2</source>
-        <translation>Ch.2</translation>
+        <translation type="obsolete">Ch.2</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog.ui" line="151"/>
         <source>Ch. 3</source>
-        <translation>Ch.3</translation>
+        <translation type="obsolete">Ch.3</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog.ui" line="192"/>
         <source>Ch. 4</source>
-        <translation>Ch.4</translation>
+        <translation type="obsolete">Ch.4</translation>
     </message>
 </context>
 <context>
@@ -656,42 +696,82 @@ Désactivé/Activé</translation>
         <translation>NOM DE CAMÉRA PROPRIÉTÉ</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="44"/>
         <source>Ch. 1</source>
-        <translation>Ch.1</translation>
+        <translation type="obsolete">Ch.1</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="94"/>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="236"/>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="255"/>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="274"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="554"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="573"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="592"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="611"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="630"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="649"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="668"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="110"/>
         <source>Ch. 2</source>
-        <translation>Ch.2</translation>
+        <translation type="obsolete">Ch.2</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="151"/>
         <source>Ch. 3</source>
-        <translation>Ch.3</translation>
+        <translation type="obsolete">Ch.3</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="192"/>
         <source>Ch. 4</source>
-        <translation>Ch.4</translation>
+        <translation type="obsolete">Ch.4</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="351"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="44"/>
+        <source>Ch.1</source>
+        <translation>Ch.1</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="189"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="364"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="202"/>
         <source>Save</source>
         <translation>Stocker</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="218"/>
+        <source>Ch.2</source>
+        <translation>Ch.2</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="237"/>
+        <source>Ch.3</source>
+        <translation>Ch.3</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="256"/>
+        <source>Ch.4</source>
+        <translation>Ch.4</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="275"/>
+        <source>Ch.5</source>
+        <translation>Ch.5</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="294"/>
+        <source>Ch.6</source>
+        <translation>Ch.6</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="313"/>
+        <source>Ch.7</source>
+        <translation>Ch.7</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="332"/>
+        <source>Ch.8</source>
+        <translation>Ch.8</translation>
     </message>
 </context>
 <context>

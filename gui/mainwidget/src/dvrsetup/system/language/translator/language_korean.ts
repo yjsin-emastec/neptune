@@ -661,6 +661,26 @@ Output: Off/On</source>
         <translation>카메라 이름 속성</translation>
     </message>
     <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="44"/>
+        <source>Ch.1</source>
+        <translation>채널1</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="110"/>
+        <source>Ch.2</source>
+        <translation>채널2</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="151"/>
+        <source>Ch.3</source>
+        <translation>채널3</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="192"/>
+        <source>Ch.4</source>
+        <translation>채널4</translation>
+    </message>
+    <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="351"/>
         <source>Save</source>
         <translation>저장</translation>
@@ -671,32 +691,52 @@ Output: Off/On</source>
         <translation>취소</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog.ui" line="44"/>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="380"/>
+        <source>Ch.5</source>
+        <translation>채널5</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="399"/>
+        <source>Ch.6</source>
+        <translation>채널6</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="418"/>
+        <source>Ch.7</source>
+        <translation>채널7</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="437"/>
+        <source>Ch.8</source>
+        <translation>채널8</translation>
+    </message>
+    <message>
         <source>Ch. 1</source>
-        <translation>채널1</translation>
+        <translation type="obsolete">채널1</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="94"/>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="236"/>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="255"/>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="274"/>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="611"/>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="630"/>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="649"/>
+        <location filename="../../../display/cameraname/cameranamedialog.ui" line="668"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog.ui" line="110"/>
         <source>Ch. 2</source>
-        <translation>채널2</translation>
+        <translation type="obsolete">채널2</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog.ui" line="151"/>
         <source>Ch. 3</source>
-        <translation>채널3</translation>
+        <translation type="obsolete">채널3</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog.ui" line="192"/>
         <source>Ch. 4</source>
-        <translation>채널4</translation>
+        <translation type="obsolete">채널4</translation>
     </message>
 </context>
 <context>
@@ -707,42 +747,82 @@ Output: Off/On</source>
         <translation>카메라 이름 속성</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="44"/>
         <source>Ch. 1</source>
-        <translation>채널1</translation>
+        <translation type="obsolete">채널1</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="94"/>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="236"/>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="255"/>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="274"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="554"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="573"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="592"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="611"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="630"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="649"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="668"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="110"/>
         <source>Ch. 2</source>
-        <translation>채널2</translation>
+        <translation type="obsolete">채널2</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="151"/>
         <source>Ch. 3</source>
-        <translation>채널3</translation>
+        <translation type="obsolete">채널3</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="192"/>
         <source>Ch. 4</source>
-        <translation>채널4</translation>
+        <translation type="obsolete">채널4</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="351"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="44"/>
+        <source>Ch.1</source>
+        <translation>채널1</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="189"/>
         <source>Cancel</source>
         <translation>취소</translation>
     </message>
     <message>
-        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="364"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="202"/>
         <source>Save</source>
         <translation>저장</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="218"/>
+        <source>Ch.2</source>
+        <translation>채널2</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="237"/>
+        <source>Ch.3</source>
+        <translation>채널3</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="256"/>
+        <source>Ch.4</source>
+        <translation>채널4</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="275"/>
+        <source>Ch.5</source>
+        <translation>채널5</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="294"/>
+        <source>Ch.6</source>
+        <translation>채널6</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="313"/>
+        <source>Ch.7</source>
+        <translation>채널7</translation>
+    </message>
+    <message>
+        <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="332"/>
+        <source>Ch.8</source>
+        <translation>채널8</translation>
     </message>
 </context>
 <context>
