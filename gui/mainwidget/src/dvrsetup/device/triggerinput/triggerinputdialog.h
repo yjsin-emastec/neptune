@@ -7,9 +7,7 @@
 #include "textmessagebox/textmessagedialog.h"
 #include "DVR.h"
 
-#define  EASTERN_MAXIMUM_PRIORITY   8
-
-class TextMessageDialog;
+#define NUMOFCH 8
 
 class TriggerInputDialog : public QDialog, public Ui::TriggerInputDialog
 {
@@ -18,136 +16,144 @@ class TriggerInputDialog : public QDialog, public Ui::TriggerInputDialog
 public:
     TriggerInputDialog(QWidget *parent = 0);
     ~TriggerInputDialog();
-	void initTriggerInputConfig(void);
+
+    void initTriggerInputConfig(void);
 
 signals:
 
-public slots:
-	void onButtonSource1Up(void);
-	void onButtonSource1Down(void);
-	void onButtonSource2Up(void);
-	void onButtonSource2Down(void);
-	void onButtonSource3Up(void);
-	void onButtonSource3Down(void);
-	void onButtonSource4Up(void);
-	void onButtonSource4Down(void);
+private slots:
 
-	void onButtonDelay1Up(void);
-	void onButtonDelay1Down(void);
-	void onButtonDelay2Up(void);
-	void onButtonDelay2Down(void);
-	void onButtonDelay3Up(void);
-	void onButtonDelay3Down(void);
-	void onButtonDelay4Up(void);
-	void onButtonDelay4Down(void);
+    void onButtonSourceUp1();
+    void onButtonSourceUp2();
+    void onButtonSourceUp3();
+    void onButtonSourceUp4();
+    void onButtonSourceUp5();
+    void onButtonSourceUp6();
+    void onButtonSourceUp7();
+    void onButtonSourceUp8();
 
-	void onButtonPriority1Up(void);
-	void onButtonPriority1Down(void);
-	void onButtonPriority2Up(void);
-	void onButtonPriority2Down(void);
-	void onButtonPriority3Up(void);
-	void onButtonPriority3Down(void);
-	void onButtonPriority4Up(void);
-	void onButtonPriority4Down(void);
+    void onButtonSourceDn1();
+    void onButtonSourceDn2();
+    void onButtonSourceDn3();
+    void onButtonSourceDn4();
+    void onButtonSourceDn5();
+    void onButtonSourceDn6();
+    void onButtonSourceDn7();
+    void onButtonSourceDn8();
 
-    void onButtonAudio1Up(void);
-    void onButtonAudio1Down(void);
-    void onButtonAudio2Up(void);
-    void onButtonAudio2Down(void);
-    void onButtonAudio3Up(void);
-    void onButtonAudio3Down(void);
-    void onButtonAudio4Up(void);
-    void onButtonAudio4Down(void);
+    void onButtonDelayUp1();
+    void onButtonDelayUp2();
+    void onButtonDelayUp3();
+    void onButtonDelayUp4();
+    void onButtonDelayUp5();
+    void onButtonDelayUp6();
+    void onButtonDelayUp7();
+    void onButtonDelayUp8();
 
-	void onButtonDefault(void);
-	void onButtonSave(void);
+    void onButtonDelayDn1();
+    void onButtonDelayDn2();
+    void onButtonDelayDn3();
+    void onButtonDelayDn4();
+    void onButtonDelayDn5();
+    void onButtonDelayDn6();
+    void onButtonDelayDn7();
+    void onButtonDelayDn8();
+
+    void onButtonPriorityUp1();
+    void onButtonPriorityUp2();
+    void onButtonPriorityUp3();
+    void onButtonPriorityUp4();
+    void onButtonPriorityUp5();
+    void onButtonPriorityUp6();
+    void onButtonPriorityUp7();
+    void onButtonPriorityUp8();
+
+    void onButtonPriorityDn1();
+    void onButtonPriorityDn2();
+    void onButtonPriorityDn3();
+    void onButtonPriorityDn4();
+    void onButtonPriorityDn5();
+    void onButtonPriorityDn6();
+    void onButtonPriorityDn7();
+    void onButtonPriorityDn8();
+
+    void onButtonAudioUp1();
+    void onButtonAudioUp2();
+    void onButtonAudioUp3();
+    void onButtonAudioUp4();
+    void onButtonAudioUp5();
+    void onButtonAudioUp6();
+    void onButtonAudioUp7();
+    void onButtonAudioUp8();
+
+    void onButtonAudioDn1();
+    void onButtonAudioDn2();
+    void onButtonAudioDn3();
+    void onButtonAudioDn4();
+    void onButtonAudioDn5();
+    void onButtonAudioDn6();
+    void onButtonAudioDn7();
+    void onButtonAudioDn8();
+
+    void onButtonSave();
+    void onButtonDefault();
+
 
 protected:
-	void keyPressEvent(QKeyEvent *event);
-	void keyReleaseEvent(QKeyEvent *event);
-	
+    void keyPressEvent(QKeyEvent *event);
+
+
 private:
-    int isPriorityRedundant(void);
-
-    int indexSource1,
-        indexSource2,
-        indexSource3,
-        indexSource4,
-        indexDelay1,
-        indexDelay2,
-        indexDelay3,
-        indexDelay4,
-        indexPriority1,
-        indexPriority2,
-        indexPriority3,
-        indexPriority4,
-        nPriority[EASTERN_MAXIMUM_PRIORITY];
-
-    bool triggerAudio1,
-         triggerAudio2,
-         triggerAudio3,
-         triggerAudio4;
-
-    TextMessageDialog *msgBox;
 
     QFrame *frame;
 
-    QPushButton *buttonAudio1Down;
-    QPushButton *buttonAudio1Up;
-    QPushButton *buttonAudio2Down;
-    QPushButton *buttonAudio2Up;
-    QPushButton *buttonAudio3Down;
-    QPushButton *buttonAudio3Up;
-    QPushButton *buttonAudio4Down;
-    QPushButton *buttonAudio4Up;
-    QPushButton *buttonDelay1Down;
-    QPushButton *buttonDelay1Up;
-    QPushButton *buttonDelay2Down;
-    QPushButton *buttonDelay2Up;
-    QPushButton *buttonDelay3Down;
-    QPushButton *buttonDelay3Up;
-    QPushButton *buttonDelay4Down;
-    QPushButton *buttonDelay4Up;
-    QPushButton *buttonPriority1Down;
-    QPushButton *buttonPriority1Up;
-    QPushButton *buttonPriority2Down;
-    QPushButton *buttonPriority2Up;
-    QPushButton *buttonPriority3Down;
-    QPushButton *buttonPriority3Up;
-    QPushButton *buttonPriority4Down;
-    QPushButton *buttonPriority4Up;
-    QPushButton *buttonSource1Down;
-    QPushButton *buttonSource1Up;
-    QPushButton *buttonSource2Down;
-    QPushButton *buttonSource2Up;
-    QPushButton *buttonSource3Down;
-    QPushButton *buttonSource3Up;
-    QPushButton *buttonSource4Down;
-    QPushButton *buttonSource4Up;
-    QPushButton *buttonClose;
+    QPushButton *buttonSourceUp[NUMOFCH];
+    QPushButton *buttonSourceDn[NUMOFCH];
+    QPushButton *buttonDelayUp[NUMOFCH];
+    QPushButton *buttonDelayDn[NUMOFCH];
+    QPushButton *buttonPriorityUp[NUMOFCH];
+    QPushButton *buttonPriorityDn[NUMOFCH];
+    QPushButton *buttonAudioUp[NUMOFCH];
+    QPushButton *buttonAudioDn[NUMOFCH];
+
+    QLabel *labelTrigger[NUMOFCH];
+    QLabel *labelSource[NUMOFCH];
+    QLabel *labelDelay[NUMOFCH];
+    QLabel *labelPriority[NUMOFCH];
+    QLabel *labelAudio[NUMOFCH];
+
+    QLabel *labelSourceTitle;
+    QLabel *labelDelayTitle;
+    QLabel *labelPriorityTitle;
+    QLabel *labelAudioTitle;
+
     QPushButton *buttonDefault;
     QPushButton *buttonSave;
+    QPushButton *buttonClose;
 
-    QLabel *labelAudio1;
-    QLabel *labelAudio2;
-    QLabel *labelAudio3;
-    QLabel *labelAudio4;
-    QLabel *labelDelay1;
-    QLabel *labelDelay2;
-    QLabel *labelDelay3;
-    QLabel *labelDelay4;
-    QLabel *labelPriority1;
-    QLabel *labelPriority2;
-    QLabel *labelPriority3;
-    QLabel *labelPriority4;
-    QLabel *labelSource1;
-    QLabel *labelSource2;
-    QLabel *labelSource3;
-    QLabel *labelSource4;
-    QLabel *labelTrigger1;
-    QLabel *labelTrigger2;
-    QLabel *labelTrigger3;
-    QLabel *labelTrigger4;
+    int infoSource[NUMOFCH];
+    int infoDelay[NUMOFCH];
+    int infoPriority[NUMOFCH];
+    bool infoAudio[NUMOFCH];
+
+    void updateSourceLabel(int ch);
+    void updateDelayLabel(int ch);
+    void updatePriorityLabel(int ch);
+    void updateAudioLabel(int ch);
+
+    void onButtonSourceUp(int ch);
+    void onButtonSourceDn(int ch);
+    void onButtonDelayUp(int ch);
+    void onButtonDelayDn(int ch);
+    void onButtonPriorityUp(int ch);
+    void onButtonPriorityDn(int ch);
+    void onButtonAudioUp(int ch);
+    void onButtonAudioDn(int ch);
+
+    int checkPriorityRedundant();
+
+    TextMessageDialog *msgBox;
+
 };
 
 #endif // TRIGGERINPUTDIALOG_H

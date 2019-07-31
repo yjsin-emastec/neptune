@@ -12,193 +12,180 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
 
         frame = ui720.frame;
 
-        buttonAudio1Down = ui720.buttonAudio1Down;
-        buttonAudio1Up = ui720.buttonAudio1Up;
-        buttonAudio2Down = ui720.buttonAudio2Down;
-        buttonAudio2Up = ui720.buttonAudio2Up;
-        buttonAudio3Down = ui720.buttonAudio3Down;
-        buttonAudio3Up = ui720.buttonAudio3Up;
-        buttonAudio4Down = ui720.buttonAudio4Down;
-        buttonAudio4Up = ui720.buttonAudio4Up;
-        buttonDelay1Down = ui720.buttonDelay1Down;
-        buttonDelay1Up = ui720.buttonDelay1Up;
-        buttonDelay2Down = ui720.buttonDelay2Down;
-        buttonDelay2Up = ui720.buttonDelay2Up;
-        buttonDelay3Down = ui720.buttonDelay3Down;
-        buttonDelay3Up = ui720.buttonDelay3Up;
-        buttonDelay4Down = ui720.buttonDelay4Down;
-        buttonDelay4Up = ui720.buttonDelay4Up;
-        buttonPriority1Down = ui720.buttonPriority1Down;
-        buttonPriority1Up = ui720.buttonPriority1Up;
-        buttonPriority2Down = ui720.buttonPriority2Down;
-        buttonPriority2Up = ui720.buttonPriority2Up;
-        buttonPriority3Down = ui720.buttonPriority3Down;
-        buttonPriority3Up = ui720.buttonPriority3Up;
-        buttonPriority4Down = ui720.buttonPriority4Down;
-        buttonPriority4Up = ui720.buttonPriority4Up;
-        buttonSource1Down = ui720.buttonSource1Down;
-        buttonSource1Up = ui720.buttonSource1Up;
-        buttonSource2Down = ui720.buttonSource2Down;
-        buttonSource2Up = ui720.buttonSource2Up;
-        buttonSource3Down = ui720.buttonSource3Down;
-        buttonSource3Up = ui720.buttonSource3Up;
-        buttonSource4Down = ui720.buttonSource4Down;
-        buttonSource4Up = ui720.buttonSource4Up;
-        buttonClose = ui720.buttonClose;
+        labelTrigger[0] = ui720.labelTrigger1;
+        labelTrigger[1] = ui720.labelTrigger2;
+        labelTrigger[2] = ui720.labelTrigger3;
+        labelTrigger[3] = ui720.labelTrigger4;
+        labelTrigger[4] = ui720.labelTrigger5;
+        labelTrigger[5] = ui720.labelTrigger6;
+        labelTrigger[6] = ui720.labelTrigger7;
+        labelTrigger[7] = ui720.labelTrigger8;
+
+        buttonSourceUp[0] = ui720.buttonSourceUp1;
+        buttonSourceUp[1] = ui720.buttonSourceUp2;
+        buttonSourceUp[2] = ui720.buttonSourceUp3;
+        buttonSourceUp[3] = ui720.buttonSourceUp4;
+        buttonSourceUp[4] = ui720.buttonSourceUp5;
+        buttonSourceUp[5] = ui720.buttonSourceUp6;
+        buttonSourceUp[6] = ui720.buttonSourceUp7;
+        buttonSourceUp[7] = ui720.buttonSourceUp8;
+
+        buttonSourceDn[0] = ui720.buttonSourceDn1;
+        buttonSourceDn[1] = ui720.buttonSourceDn2;
+        buttonSourceDn[2] = ui720.buttonSourceDn3;
+        buttonSourceDn[3] = ui720.buttonSourceDn4;
+        buttonSourceDn[4] = ui720.buttonSourceDn5;
+        buttonSourceDn[5] = ui720.buttonSourceDn6;
+        buttonSourceDn[6] = ui720.buttonSourceDn7;
+        buttonSourceDn[7] = ui720.buttonSourceDn8;
+
+        labelSource[0] = ui720.labelSource1;
+        labelSource[1] = ui720.labelSource2;
+        labelSource[2] = ui720.labelSource3;
+        labelSource[3] = ui720.labelSource4;
+        labelSource[4] = ui720.labelSource5;
+        labelSource[5] = ui720.labelSource6;
+        labelSource[6] = ui720.labelSource7;
+        labelSource[7] = ui720.labelSource8;
+
+        buttonDelayUp[0] = ui720.buttonDelayUp1;
+        buttonDelayUp[1] = ui720.buttonDelayUp2;
+        buttonDelayUp[2] = ui720.buttonDelayUp3;
+        buttonDelayUp[3] = ui720.buttonDelayUp4;
+        buttonDelayUp[4] = ui720.buttonDelayUp5;
+        buttonDelayUp[5] = ui720.buttonDelayUp6;
+        buttonDelayUp[6] = ui720.buttonDelayUp7;
+        buttonDelayUp[7] = ui720.buttonDelayUp8;
+
+        buttonDelayDn[0] = ui720.buttonDelayDn1;
+        buttonDelayDn[1] = ui720.buttonDelayDn2;
+        buttonDelayDn[2] = ui720.buttonDelayDn3;
+        buttonDelayDn[3] = ui720.buttonDelayDn4;
+        buttonDelayDn[4] = ui720.buttonDelayDn5;
+        buttonDelayDn[5] = ui720.buttonDelayDn6;
+        buttonDelayDn[6] = ui720.buttonDelayDn7;
+        buttonDelayDn[7] = ui720.buttonDelayDn8;
+
+        labelDelay[0] = ui720.labelDelay1;
+        labelDelay[1] = ui720.labelDelay2;
+        labelDelay[2] = ui720.labelDelay3;
+        labelDelay[3] = ui720.labelDelay4;
+        labelDelay[4] = ui720.labelDelay5;
+        labelDelay[5] = ui720.labelDelay6;
+        labelDelay[6] = ui720.labelDelay7;
+        labelDelay[7] = ui720.labelDelay8;
+
+        buttonPriorityUp[0] = ui720.buttonPriorityUp1;
+        buttonPriorityUp[1] = ui720.buttonPriorityUp2;
+        buttonPriorityUp[2] = ui720.buttonPriorityUp3;
+        buttonPriorityUp[3] = ui720.buttonPriorityUp4;
+        buttonPriorityUp[4] = ui720.buttonPriorityUp5;
+        buttonPriorityUp[5] = ui720.buttonPriorityUp6;
+        buttonPriorityUp[6] = ui720.buttonPriorityUp7;
+        buttonPriorityUp[7] = ui720.buttonPriorityUp8;
+
+        buttonPriorityDn[0] = ui720.buttonPriorityDn1;
+        buttonPriorityDn[1] = ui720.buttonPriorityDn2;
+        buttonPriorityDn[2] = ui720.buttonPriorityDn3;
+        buttonPriorityDn[3] = ui720.buttonPriorityDn4;
+        buttonPriorityDn[4] = ui720.buttonPriorityDn5;
+        buttonPriorityDn[5] = ui720.buttonPriorityDn6;
+        buttonPriorityDn[6] = ui720.buttonPriorityDn7;
+        buttonPriorityDn[7] = ui720.buttonPriorityDn8;
+
+        labelPriority[0] = ui720.labelPriority1;
+        labelPriority[1] = ui720.labelPriority2;
+        labelPriority[2] = ui720.labelPriority3;
+        labelPriority[3] = ui720.labelPriority4;
+        labelPriority[4] = ui720.labelPriority5;
+        labelPriority[5] = ui720.labelPriority6;
+        labelPriority[6] = ui720.labelPriority7;
+        labelPriority[7] = ui720.labelPriority8;
+
+        buttonAudioUp[0] = ui720.buttonAudioUp1;
+        buttonAudioUp[1] = ui720.buttonAudioUp2;
+        buttonAudioUp[2] = ui720.buttonAudioUp3;
+        buttonAudioUp[3] = ui720.buttonAudioUp4;
+        buttonAudioUp[4] = ui720.buttonAudioUp5;
+        buttonAudioUp[5] = ui720.buttonAudioUp6;
+        buttonAudioUp[6] = ui720.buttonAudioUp7;
+        buttonAudioUp[7] = ui720.buttonAudioUp8;
+
+        buttonAudioDn[0] = ui720.buttonAudioDn1;
+        buttonAudioDn[1] = ui720.buttonAudioDn2;
+        buttonAudioDn[2] = ui720.buttonAudioDn3;
+        buttonAudioDn[3] = ui720.buttonAudioDn4;
+        buttonAudioDn[4] = ui720.buttonAudioDn5;
+        buttonAudioDn[5] = ui720.buttonAudioDn6;
+        buttonAudioDn[6] = ui720.buttonAudioDn7;
+        buttonAudioDn[7] = ui720.buttonAudioDn8;
+
+        labelAudio[0] = ui720.labelAudio1;
+        labelAudio[1] = ui720.labelAudio2;
+        labelAudio[2] = ui720.labelAudio3;
+        labelAudio[3] = ui720.labelAudio4;
+        labelAudio[4] = ui720.labelAudio5;
+        labelAudio[5] = ui720.labelAudio6;
+        labelAudio[6] = ui720.labelAudio7;
+        labelAudio[7] = ui720.labelAudio8;
+
+        labelSourceTitle = ui720.labelSource;
+        labelDelayTitle = ui720.labelDelay;
+        labelPriorityTitle = ui720.labelPriority;
+        labelAudioTitle = ui720.labelAudio;
+
         buttonDefault = ui720.buttonDefault;
         buttonSave = ui720.buttonSave;
+        buttonClose = ui720.buttonClose;
 
-        labelAudio1 = ui720.labelAudio1;
-        labelAudio2 = ui720.labelAudio2;
-        labelAudio3 = ui720.labelAudio3;
-        labelAudio4 = ui720.labelAudio4;
-        labelDelay1 = ui720.labelDelay1;
-        labelDelay2 = ui720.labelDelay2;
-        labelDelay3 = ui720.labelDelay3;
-        labelDelay4 = ui720.labelDelay4;
-        labelPriority1 = ui720.labelPriority1;
-        labelPriority2 = ui720.labelPriority2;
-        labelPriority3 = ui720.labelPriority3;
-        labelPriority4 = ui720.labelPriority4;
-        labelSource1 = ui720.labelSource1;
-        labelSource2 = ui720.labelSource2;
-        labelSource3 = ui720.labelSource3;
-        labelSource4 = ui720.labelSource4;
-        labelTrigger1 = ui720.labelTrigger1;
-        labelTrigger2 = ui720.labelTrigger2;
-        labelTrigger3 = ui720.labelTrigger3;
-        labelTrigger4 = ui720.labelTrigger4;
-
-        labelTrigger1->setStyleSheet("font:40px;color:white");
-        labelTrigger1->setText(tr("Trigger1"));
-
-        labelTrigger2->setStyleSheet("font:40px;color:white");
-        labelTrigger2->setText(tr("Trigger2"));
-
-        labelTrigger3->setStyleSheet("font:40px;color:white");
-        labelTrigger3->setText(tr("Trigger3"));
-
-        labelTrigger4->setStyleSheet("font:40px;color:white");
-        labelTrigger4->setText(tr("Trigger4"));
-
-        labelSource1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonSource1Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonSource1Up->setIconSize(QSize(70, 45));
-        buttonSource1Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonSource1Down->setIconSize(QSize(70, 45));
-
-        labelSource2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonSource2Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonSource2Up->setIconSize(QSize(70, 45));
-        buttonSource2Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonSource2Down->setIconSize(QSize(70, 45));
-
-        labelSource3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonSource3Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonSource3Up->setIconSize(QSize(70, 45));
-        buttonSource3Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonSource3Down->setIconSize(QSize(70, 45));
-
-        labelSource4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonSource4Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonSource4Up->setIconSize(QSize(70, 45));
-        buttonSource4Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonSource4Down->setIconSize(QSize(70, 45));
-
-        labelDelay1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonDelay1Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonDelay1Up->setIconSize(QSize(70, 45));
-        buttonDelay1Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonDelay1Down->setIconSize(QSize(70, 45));
-
-        labelDelay2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonDelay2Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonDelay2Up->setIconSize(QSize(70, 45));
-        buttonDelay2Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonDelay2Down->setIconSize(QSize(70, 45));
-
-        labelDelay3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonDelay3Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonDelay3Up->setIconSize(QSize(70, 45));
-        buttonDelay3Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonDelay3Down->setIconSize(QSize(70, 45));
-
-        labelDelay4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonDelay4Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonDelay4Up->setIconSize(QSize(70, 45));
-        buttonDelay4Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonDelay4Down->setIconSize(QSize(70, 45));
-
-        labelPriority1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonPriority1Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonPriority1Up->setIconSize(QSize(70, 45));
-        buttonPriority1Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonPriority1Down->setIconSize(QSize(70, 45));
-
-        labelPriority2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonPriority2Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonPriority2Up->setIconSize(QSize(70, 45));
-        buttonPriority2Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonPriority2Down->setIconSize(QSize(70, 45));
-
-        labelPriority3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonPriority3Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonPriority3Up->setIconSize(QSize(70, 45));
-        buttonPriority3Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonPriority3Down->setIconSize(QSize(70, 45));
-
-        labelPriority4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonPriority4Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonPriority4Up->setIconSize(QSize(70, 45));
-        buttonPriority4Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonPriority4Down->setIconSize(QSize(70, 45));
-
-        labelAudio1->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonAudio1Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonAudio1Up->setIconSize(QSize(70, 45));
-        buttonAudio1Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonAudio1Down->setIconSize(QSize(70, 45));
-
-        labelAudio2->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonAudio2Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonAudio2Up->setIconSize(QSize(70, 45));
-        buttonAudio2Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonAudio2Down->setIconSize(QSize(70, 45));
-
-        labelAudio3->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonAudio3Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonAudio3Up->setIconSize(QSize(70, 45));
-        buttonAudio3Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonAudio3Down->setIconSize(QSize(70, 45));
-
-        labelAudio4->setStyleSheet("font:40px;background-color:rgb(50,57,83);color:white");
-        buttonAudio4Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonAudio4Up->setIconSize(QSize(70, 45));
-        buttonAudio4Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonAudio4Down->setIconSize(QSize(70, 45));
-
-        //yjsin [17/09/13] if text is long, change font size and label location and size
-        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+        for( int i=0; i<NUMOFCH; i++)
         {
-            buttonDefault->resize(304,90);
-            buttonDefault->setStyleSheet("font:38px");
+            buttonSourceUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
+            buttonSourceUp[i]->setIconSize(QSize(40,40));
+            buttonSourceDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
+            buttonSourceDn[i]->setIconSize(QSize(40,40));
+
+            buttonDelayUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
+            buttonDelayUp[i]->setIconSize(QSize(40,40));
+            buttonDelayDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
+            buttonDelayDn[i]->setIconSize(QSize(40,40));
+
+            buttonPriorityUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
+            buttonPriorityUp[i]->setIconSize(QSize(40,40));
+            buttonPriorityDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
+            buttonPriorityDn[i]->setIconSize(QSize(40,40));
+
+            buttonAudioUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
+            buttonAudioUp[i]->setIconSize(QSize(40,40));
+            buttonAudioDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
+            buttonAudioDn[i]->setIconSize(QSize(40,40));
         }
-        else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
-        {
-            buttonDefault->resize(304,90);
-        }
-        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-        {
-            labelAudio1->setStyleSheet("font:38px;background-color:rgb(50,57,83);color:white");
-            labelAudio2->setStyleSheet("font:38px;background-color:rgb(50,57,83);color:white");
-            labelAudio3->setStyleSheet("font:38px;background-color:rgb(50,57,83);color:white");
-            labelAudio4->setStyleSheet("font:38px;background-color:rgb(50,57,83);color:white");
 
-            buttonDefault->resize(304,90);
-        }
-        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
+        labelSourceTitle->setStyleSheet("font:45px;");
+        labelDelayTitle->setStyleSheet("font:45px;");
+        labelPriorityTitle->setStyleSheet("font:45px;");
+        labelAudioTitle->setStyleSheet("font:45px;");
+
+        if( utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 )
         {
-            buttonDefault->resize(240,90);
+            buttonDefault->resize(361, 91);
+        }
+        else if( utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        {
+            buttonDefault->resize(281, 91);
+        }
+        else if( utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            buttonDefault->resize(281, 91);
+
+            labelSourceTitle->setStyleSheet("font:40px;");
+            labelDelayTitle->setStyleSheet("font:40px;");
+            labelPriorityTitle->setStyleSheet("font:40px;");
+            labelAudioTitle->setStyleSheet("font:40px;");
+        }
+        else if( utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0 )
+        {
+            buttonDefault->resize(241, 91);
         }
     }
     else
@@ -208,175 +195,188 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
 
         frame = ui1080.frame;
 
-        buttonAudio1Down = ui1080.buttonAudio1Down;
-        buttonAudio1Up = ui1080.buttonAudio1Up;
-        buttonAudio2Down = ui1080.buttonAudio2Down;
-        buttonAudio2Up = ui1080.buttonAudio2Up;
-        buttonAudio3Down = ui1080.buttonAudio3Down;
-        buttonAudio3Up = ui1080.buttonAudio3Up;
-        buttonAudio4Down = ui1080.buttonAudio4Down;
-        buttonAudio4Up = ui1080.buttonAudio4Up;
-        buttonDelay1Down = ui1080.buttonDelay1Down;
-        buttonDelay1Up = ui1080.buttonDelay1Up;
-        buttonDelay2Down = ui1080.buttonDelay2Down;
-        buttonDelay2Up = ui1080.buttonDelay2Up;
-        buttonDelay3Down = ui1080.buttonDelay3Down;
-        buttonDelay3Up = ui1080.buttonDelay3Up;
-        buttonDelay4Down = ui1080.buttonDelay4Down;
-        buttonDelay4Up = ui1080.buttonDelay4Up;
-        buttonPriority1Down = ui1080.buttonPriority1Down;
-        buttonPriority1Up = ui1080.buttonPriority1Up;
-        buttonPriority2Down = ui1080.buttonPriority2Down;
-        buttonPriority2Up = ui1080.buttonPriority2Up;
-        buttonPriority3Down = ui1080.buttonPriority3Down;
-        buttonPriority3Up = ui1080.buttonPriority3Up;
-        buttonPriority4Down = ui1080.buttonPriority4Down;
-        buttonPriority4Up = ui1080.buttonPriority4Up;
-        buttonSource1Down = ui1080.buttonSource1Down;
-        buttonSource1Up = ui1080.buttonSource1Up;
-        buttonSource2Down = ui1080.buttonSource2Down;
-        buttonSource2Up = ui1080.buttonSource2Up;
-        buttonSource3Down = ui1080.buttonSource3Down;
-        buttonSource3Up = ui1080.buttonSource3Up;
-        buttonSource4Down = ui1080.buttonSource4Down;
-        buttonSource4Up = ui1080.buttonSource4Up;
-        buttonClose = ui1080.buttonClose;
+        labelTrigger[0] = ui1080.labelTrigger1;
+        labelTrigger[1] = ui1080.labelTrigger2;
+        labelTrigger[2] = ui1080.labelTrigger3;
+        labelTrigger[3] = ui1080.labelTrigger4;
+        labelTrigger[4] = ui1080.labelTrigger5;
+        labelTrigger[5] = ui1080.labelTrigger6;
+        labelTrigger[6] = ui1080.labelTrigger7;
+        labelTrigger[7] = ui1080.labelTrigger8;
+
+        buttonSourceUp[0] = ui1080.buttonSourceUp1;
+        buttonSourceUp[1] = ui1080.buttonSourceUp2;
+        buttonSourceUp[2] = ui1080.buttonSourceUp3;
+        buttonSourceUp[3] = ui1080.buttonSourceUp4;
+        buttonSourceUp[4] = ui1080.buttonSourceUp5;
+        buttonSourceUp[5] = ui1080.buttonSourceUp6;
+        buttonSourceUp[6] = ui1080.buttonSourceUp7;
+        buttonSourceUp[7] = ui1080.buttonSourceUp8;
+
+        buttonSourceDn[0] = ui1080.buttonSourceDn1;
+        buttonSourceDn[1] = ui1080.buttonSourceDn2;
+        buttonSourceDn[2] = ui1080.buttonSourceDn3;
+        buttonSourceDn[3] = ui1080.buttonSourceDn4;
+        buttonSourceDn[4] = ui1080.buttonSourceDn5;
+        buttonSourceDn[5] = ui1080.buttonSourceDn6;
+        buttonSourceDn[6] = ui1080.buttonSourceDn7;
+        buttonSourceDn[7] = ui1080.buttonSourceDn8;
+
+        labelSource[0] = ui1080.labelSource1;
+        labelSource[1] = ui1080.labelSource2;
+        labelSource[2] = ui1080.labelSource3;
+        labelSource[3] = ui1080.labelSource4;
+        labelSource[4] = ui1080.labelSource5;
+        labelSource[5] = ui1080.labelSource6;
+        labelSource[6] = ui1080.labelSource7;
+        labelSource[7] = ui1080.labelSource8;
+
+        buttonDelayUp[0] = ui1080.buttonDelayUp1;
+        buttonDelayUp[1] = ui1080.buttonDelayUp2;
+        buttonDelayUp[2] = ui1080.buttonDelayUp3;
+        buttonDelayUp[3] = ui1080.buttonDelayUp4;
+        buttonDelayUp[4] = ui1080.buttonDelayUp5;
+        buttonDelayUp[5] = ui1080.buttonDelayUp6;
+        buttonDelayUp[6] = ui1080.buttonDelayUp7;
+        buttonDelayUp[7] = ui1080.buttonDelayUp8;
+
+        buttonDelayDn[0] = ui1080.buttonDelayDn1;
+        buttonDelayDn[1] = ui1080.buttonDelayDn2;
+        buttonDelayDn[2] = ui1080.buttonDelayDn3;
+        buttonDelayDn[3] = ui1080.buttonDelayDn4;
+        buttonDelayDn[4] = ui1080.buttonDelayDn5;
+        buttonDelayDn[5] = ui1080.buttonDelayDn6;
+        buttonDelayDn[6] = ui1080.buttonDelayDn7;
+        buttonDelayDn[7] = ui1080.buttonDelayDn8;
+
+        labelDelay[0] = ui1080.labelDelay1;
+        labelDelay[1] = ui1080.labelDelay2;
+        labelDelay[2] = ui1080.labelDelay3;
+        labelDelay[3] = ui1080.labelDelay4;
+        labelDelay[4] = ui1080.labelDelay5;
+        labelDelay[5] = ui1080.labelDelay6;
+        labelDelay[6] = ui1080.labelDelay7;
+        labelDelay[7] = ui1080.labelDelay8;
+
+        buttonPriorityUp[0] = ui1080.buttonPriorityUp1;
+        buttonPriorityUp[1] = ui1080.buttonPriorityUp2;
+        buttonPriorityUp[2] = ui1080.buttonPriorityUp3;
+        buttonPriorityUp[3] = ui1080.buttonPriorityUp4;
+        buttonPriorityUp[4] = ui1080.buttonPriorityUp5;
+        buttonPriorityUp[5] = ui1080.buttonPriorityUp6;
+        buttonPriorityUp[6] = ui1080.buttonPriorityUp7;
+        buttonPriorityUp[7] = ui1080.buttonPriorityUp8;
+
+        buttonPriorityDn[0] = ui1080.buttonPriorityDn1;
+        buttonPriorityDn[1] = ui1080.buttonPriorityDn2;
+        buttonPriorityDn[2] = ui1080.buttonPriorityDn3;
+        buttonPriorityDn[3] = ui1080.buttonPriorityDn4;
+        buttonPriorityDn[4] = ui1080.buttonPriorityDn5;
+        buttonPriorityDn[5] = ui1080.buttonPriorityDn6;
+        buttonPriorityDn[6] = ui1080.buttonPriorityDn7;
+        buttonPriorityDn[7] = ui1080.buttonPriorityDn8;
+
+        labelPriority[0] = ui1080.labelPriority1;
+        labelPriority[1] = ui1080.labelPriority2;
+        labelPriority[2] = ui1080.labelPriority3;
+        labelPriority[3] = ui1080.labelPriority4;
+        labelPriority[4] = ui1080.labelPriority5;
+        labelPriority[5] = ui1080.labelPriority6;
+        labelPriority[6] = ui1080.labelPriority7;
+        labelPriority[7] = ui1080.labelPriority8;
+
+        buttonAudioUp[0] = ui1080.buttonAudioUp1;
+        buttonAudioUp[1] = ui1080.buttonAudioUp2;
+        buttonAudioUp[2] = ui1080.buttonAudioUp3;
+        buttonAudioUp[3] = ui1080.buttonAudioUp4;
+        buttonAudioUp[4] = ui1080.buttonAudioUp5;
+        buttonAudioUp[5] = ui1080.buttonAudioUp6;
+        buttonAudioUp[6] = ui1080.buttonAudioUp7;
+        buttonAudioUp[7] = ui1080.buttonAudioUp8;
+
+        buttonAudioDn[0] = ui1080.buttonAudioDn1;
+        buttonAudioDn[1] = ui1080.buttonAudioDn2;
+        buttonAudioDn[2] = ui1080.buttonAudioDn3;
+        buttonAudioDn[3] = ui1080.buttonAudioDn4;
+        buttonAudioDn[4] = ui1080.buttonAudioDn5;
+        buttonAudioDn[5] = ui1080.buttonAudioDn6;
+        buttonAudioDn[6] = ui1080.buttonAudioDn7;
+        buttonAudioDn[7] = ui1080.buttonAudioDn8;
+
+        labelAudio[0] = ui1080.labelAudio1;
+        labelAudio[1] = ui1080.labelAudio2;
+        labelAudio[2] = ui1080.labelAudio3;
+        labelAudio[3] = ui1080.labelAudio4;
+        labelAudio[4] = ui1080.labelAudio5;
+        labelAudio[5] = ui1080.labelAudio6;
+        labelAudio[6] = ui1080.labelAudio7;
+        labelAudio[7] = ui1080.labelAudio8;
+
+        labelSourceTitle = ui1080.labelSource;
+        labelDelayTitle = ui1080.labelDelay;
+        labelPriorityTitle = ui1080.labelPriority;
+        labelAudioTitle = ui1080.labelAudio;
+
         buttonDefault = ui1080.buttonDefault;
         buttonSave = ui1080.buttonSave;
+        buttonClose = ui1080.buttonClose;
 
-        labelAudio1 = ui1080.labelAudio1;
-        labelAudio2 = ui1080.labelAudio2;
-        labelAudio3 = ui1080.labelAudio3;
-        labelAudio4 = ui1080.labelAudio4;
-        labelDelay1 = ui1080.labelDelay1;
-        labelDelay2 = ui1080.labelDelay2;
-        labelDelay3 = ui1080.labelDelay3;
-        labelDelay4 = ui1080.labelDelay4;
-        labelPriority1 = ui1080.labelPriority1;
-        labelPriority2 = ui1080.labelPriority2;
-        labelPriority3 = ui1080.labelPriority3;
-        labelPriority4 = ui1080.labelPriority4;
-        labelSource1 = ui1080.labelSource1;
-        labelSource2 = ui1080.labelSource2;
-        labelSource3 = ui1080.labelSource3;
-        labelSource4 = ui1080.labelSource4;
-        labelTrigger1 = ui1080.labelTrigger1;
-        labelTrigger2 = ui1080.labelTrigger2;
-        labelTrigger3 = ui1080.labelTrigger3;
-        labelTrigger4 = ui1080.labelTrigger4;
-
-        labelTrigger1->setStyleSheet("font:50px;color:white");
-        labelTrigger1->setText(tr("Trigger1"));
-
-        labelTrigger2->setStyleSheet("font:50px;color:white");
-        labelTrigger2->setText(tr("Trigger2"));
-
-        labelTrigger3->setStyleSheet("font:50px;color:white");
-        labelTrigger3->setText(tr("Trigger3"));
-
-        labelTrigger4->setStyleSheet("font:50px;color:white");
-        labelTrigger4->setText(tr("Trigger4"));
-
-        labelSource1->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonSource1Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonSource1Up->setIconSize(QSize(90, 60));
-        buttonSource1Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonSource1Down->setIconSize(QSize(90, 60));
-
-        labelSource2->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonSource2Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonSource2Up->setIconSize(QSize(90, 60));
-        buttonSource2Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonSource2Down->setIconSize(QSize(90, 60));
-
-        labelSource3->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonSource3Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonSource3Up->setIconSize(QSize(90, 60));
-        buttonSource3Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonSource3Down->setIconSize(QSize(90, 60));
-
-        labelSource4->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonSource4Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonSource4Up->setIconSize(QSize(90, 60));
-        buttonSource4Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonSource4Down->setIconSize(QSize(90, 60));
-
-        labelDelay1->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonDelay1Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonDelay1Up->setIconSize(QSize(90, 60));
-        buttonDelay1Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonDelay1Down->setIconSize(QSize(90, 60));
-
-        labelDelay2->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonDelay2Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonDelay2Up->setIconSize(QSize(90, 60));
-        buttonDelay2Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonDelay2Down->setIconSize(QSize(90, 60));
-
-        labelDelay3->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonDelay3Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonDelay3Up->setIconSize(QSize(90, 60));
-        buttonDelay3Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonDelay3Down->setIconSize(QSize(90, 60));
-
-        labelDelay4->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonDelay4Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonDelay4Up->setIconSize(QSize(90, 60));
-        buttonDelay4Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonDelay4Down->setIconSize(QSize(90, 60));
-
-        labelPriority1->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonPriority1Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonPriority1Up->setIconSize(QSize(90, 60));
-        buttonPriority1Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonPriority1Down->setIconSize(QSize(90, 60));
-
-        labelPriority2->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonPriority2Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonPriority2Up->setIconSize(QSize(90, 60));
-        buttonPriority2Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonPriority2Down->setIconSize(QSize(90, 60));
-
-        labelPriority3->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonPriority3Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonPriority3Up->setIconSize(QSize(90, 60));
-        buttonPriority3Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonPriority3Down->setIconSize(QSize(90, 60));
-
-        labelPriority4->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonPriority4Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonPriority4Up->setIconSize(QSize(90, 60));
-        buttonPriority4Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonPriority4Down->setIconSize(QSize(90, 60));
-
-        labelAudio1->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonAudio1Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonAudio1Up->setIconSize(QSize(90, 60));
-        buttonAudio1Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonAudio1Down->setIconSize(QSize(90, 60));
-
-        labelAudio2->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonAudio2Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonAudio2Up->setIconSize(QSize(90, 60));
-        buttonAudio2Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonAudio2Down->setIconSize(QSize(90, 60));
-
-        labelAudio3->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonAudio3Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonAudio3Up->setIconSize(QSize(90, 60));
-        buttonAudio3Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonAudio3Down->setIconSize(QSize(90, 60));
-
-        labelAudio4->setStyleSheet("font:50px;background-color:rgb(50,57,83);color:white");
-        buttonAudio4Up->setIcon(QIcon(":/images/arrow_up.png"));
-        buttonAudio4Up->setIconSize(QSize(90, 60));
-        buttonAudio4Down->setIcon(QIcon(":/images/arrow_down.png"));
-        buttonAudio4Down->setIconSize(QSize(90, 60));
-
-        //yjsin [19/02/21] if text is long, change label size
-        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
+        for( int i=0; i<NUMOFCH; i++)
         {
-            buttonDefault->resize(480,131);
+            buttonSourceUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
+            buttonSourceUp[i]->setIconSize(QSize(70,70));
+            buttonSourceDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
+            buttonSourceDn[i]->setIconSize(QSize(70,70));
+
+            buttonDelayUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
+            buttonDelayUp[i]->setIconSize(QSize(70,70));
+            buttonDelayDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
+            buttonDelayDn[i]->setIconSize(QSize(70,70));
+
+            buttonPriorityUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
+            buttonPriorityUp[i]->setIconSize(QSize(70,70));
+            buttonPriorityDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
+            buttonPriorityDn[i]->setIconSize(QSize(70,70));
+
+            buttonAudioUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
+            buttonAudioUp[i]->setIconSize(QSize(70,70));
+            buttonAudioDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
+            buttonAudioDn[i]->setIconSize(QSize(70,70));
+        }
+
+        labelSourceTitle->setStyleSheet("font:70px;");
+        labelDelayTitle->setStyleSheet("font:70px;");
+        labelPriorityTitle->setStyleSheet("font:70px;");
+        labelAudioTitle->setStyleSheet("font:70px;");
+
+        if( utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 )
+        {
+            for(int i=0; i<NUMOFCH; i++)
+            {
+                labelTrigger[i]->setStyleSheet("font:50px;");
+            }
+            buttonDefault->resize(481, 131);
+        }
+        else if( utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        {
+            buttonDefault->resize(401, 131);
+        }
+        else if( utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
+        {
+            for(int i=0; i<NUMOFCH; i++)
+            {
+                labelTrigger[i]->setStyleSheet("font:48px;");
+            }
+            buttonDefault->resize(401, 131);
+
+            labelSourceTitle->setStyleSheet("font:60px;");
+            labelDelayTitle->setStyleSheet("font:60px;");
+            labelPriorityTitle->setStyleSheet("font:60px;");
+            labelAudioTitle->setStyleSheet("font:60px;");
+        }
+        else if( utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0 )
+        {
+            buttonDefault->resize(350, 131);
         }
     }
 
@@ -385,101 +385,541 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
 
-    buttonSource1Up->setFocus();
+    connect(buttonSourceUp[0],   SIGNAL(clicked()), this, SLOT(onButtonSourceUp1()));
+    connect(buttonSourceUp[1],   SIGNAL(clicked()), this, SLOT(onButtonSourceUp2()));
+    connect(buttonSourceUp[2],   SIGNAL(clicked()), this, SLOT(onButtonSourceUp3()));
+    connect(buttonSourceUp[3],   SIGNAL(clicked()), this, SLOT(onButtonSourceUp4()));
+    connect(buttonSourceUp[4],   SIGNAL(clicked()), this, SLOT(onButtonSourceUp5()));
+    connect(buttonSourceUp[5],   SIGNAL(clicked()), this, SLOT(onButtonSourceUp6()));
+    connect(buttonSourceUp[6],   SIGNAL(clicked()), this, SLOT(onButtonSourceUp7()));
+    connect(buttonSourceUp[7],   SIGNAL(clicked()), this, SLOT(onButtonSourceUp8()));
 
-    connect(buttonSource1Up,       SIGNAL(released()), this, SLOT(onButtonSource1Up()));
-    connect(buttonSource1Down,     SIGNAL(released()), this, SLOT(onButtonSource1Down()));
-    connect(buttonDelay1Up,        SIGNAL(released()), this, SLOT(onButtonDelay1Up()));
-    connect(buttonDelay1Down,      SIGNAL(released()), this, SLOT(onButtonDelay1Down()));
-    connect(buttonPriority1Up,     SIGNAL(released()), this, SLOT(onButtonPriority1Up()));
-    connect(buttonPriority1Down,   SIGNAL(released()), this, SLOT(onButtonPriority1Down()));
-    connect(buttonAudio1Up,        SIGNAL(released()), this, SLOT(onButtonAudio1Up()));
-    connect(buttonAudio1Down,      SIGNAL(released()), this, SLOT(onButtonAudio1Down()));
+    connect(buttonSourceDn[0],   SIGNAL(clicked()), this, SLOT(onButtonSourceDn1()));
+    connect(buttonSourceDn[1],   SIGNAL(clicked()), this, SLOT(onButtonSourceDn2()));
+    connect(buttonSourceDn[2],   SIGNAL(clicked()), this, SLOT(onButtonSourceDn3()));
+    connect(buttonSourceDn[3],   SIGNAL(clicked()), this, SLOT(onButtonSourceDn4()));
+    connect(buttonSourceDn[4],   SIGNAL(clicked()), this, SLOT(onButtonSourceDn5()));
+    connect(buttonSourceDn[5],   SIGNAL(clicked()), this, SLOT(onButtonSourceDn6()));
+    connect(buttonSourceDn[6],   SIGNAL(clicked()), this, SLOT(onButtonSourceDn7()));
+    connect(buttonSourceDn[7],   SIGNAL(clicked()), this, SLOT(onButtonSourceDn8()));
 
-    connect(buttonSource2Up,       SIGNAL(released()), this, SLOT(onButtonSource2Up()));
-    connect(buttonSource2Down,     SIGNAL(released()), this, SLOT(onButtonSource2Down()));
-    connect(buttonDelay2Up,        SIGNAL(released()), this, SLOT(onButtonDelay2Up()));
-    connect(buttonDelay2Down,      SIGNAL(released()), this, SLOT(onButtonDelay2Down()));
-    connect(buttonPriority2Up,     SIGNAL(released()), this, SLOT(onButtonPriority2Up()));
-    connect(buttonPriority2Down,   SIGNAL(released()), this, SLOT(onButtonPriority2Down()));
-    connect(buttonAudio2Up,        SIGNAL(released()), this, SLOT(onButtonAudio2Up()));
-    connect(buttonAudio2Down,      SIGNAL(released()), this, SLOT(onButtonAudio2Down()));
+    connect(buttonDelayUp[0],    SIGNAL(clicked()), this, SLOT(onButtonDelayUp1()));
+    connect(buttonDelayUp[1],    SIGNAL(clicked()), this, SLOT(onButtonDelayUp2()));
+    connect(buttonDelayUp[2],    SIGNAL(clicked()), this, SLOT(onButtonDelayUp3()));
+    connect(buttonDelayUp[3],    SIGNAL(clicked()), this, SLOT(onButtonDelayUp4()));
+    connect(buttonDelayUp[4],    SIGNAL(clicked()), this, SLOT(onButtonDelayUp5()));
+    connect(buttonDelayUp[5],    SIGNAL(clicked()), this, SLOT(onButtonDelayUp6()));
+    connect(buttonDelayUp[6],    SIGNAL(clicked()), this, SLOT(onButtonDelayUp7()));
+    connect(buttonDelayUp[7],    SIGNAL(clicked()), this, SLOT(onButtonDelayUp8()));
 
-    connect(buttonSource3Up,       SIGNAL(released()), this, SLOT(onButtonSource3Up()));
-    connect(buttonSource3Down,     SIGNAL(released()), this, SLOT(onButtonSource3Down()));
-    connect(buttonDelay3Up,        SIGNAL(released()), this, SLOT(onButtonDelay3Up()));
-    connect(buttonDelay3Down,      SIGNAL(released()), this, SLOT(onButtonDelay3Down()));
-    connect(buttonPriority3Up,     SIGNAL(released()), this, SLOT(onButtonPriority3Up()));
-    connect(buttonPriority3Down,   SIGNAL(released()), this, SLOT(onButtonPriority3Down()));
-    connect(buttonAudio3Up,        SIGNAL(released()), this, SLOT(onButtonAudio3Up()));
-    connect(buttonAudio3Down,      SIGNAL(released()), this, SLOT(onButtonAudio3Down()));
+    connect(buttonDelayDn[0],    SIGNAL(clicked()), this, SLOT(onButtonDelayDn1()));
+    connect(buttonDelayDn[1],    SIGNAL(clicked()), this, SLOT(onButtonDelayDn2()));
+    connect(buttonDelayDn[2],    SIGNAL(clicked()), this, SLOT(onButtonDelayDn3()));
+    connect(buttonDelayDn[3],    SIGNAL(clicked()), this, SLOT(onButtonDelayDn4()));
+    connect(buttonDelayDn[4],    SIGNAL(clicked()), this, SLOT(onButtonDelayDn5()));
+    connect(buttonDelayDn[5],    SIGNAL(clicked()), this, SLOT(onButtonDelayDn6()));
+    connect(buttonDelayDn[6],    SIGNAL(clicked()), this, SLOT(onButtonDelayDn7()));
+    connect(buttonDelayDn[7],    SIGNAL(clicked()), this, SLOT(onButtonDelayDn8()));
 
-    connect(buttonSource4Up,       SIGNAL(released()), this, SLOT(onButtonSource4Up()));
-    connect(buttonSource4Down,     SIGNAL(released()), this, SLOT(onButtonSource4Down()));
-    connect(buttonDelay4Up,        SIGNAL(released()), this, SLOT(onButtonDelay4Up()));
-    connect(buttonDelay4Down,      SIGNAL(released()), this, SLOT(onButtonDelay4Down()));
-    connect(buttonPriority4Up,     SIGNAL(released()), this, SLOT(onButtonPriority4Up()));
-    connect(buttonPriority4Down,   SIGNAL(released()), this, SLOT(onButtonPriority4Down()));
-    connect(buttonAudio4Up,        SIGNAL(released()), this, SLOT(onButtonAudio4Up()));
-    connect(buttonAudio4Down,      SIGNAL(released()), this, SLOT(onButtonAudio4Down()));
+    connect(buttonPriorityUp[0], SIGNAL(clicked()), this, SLOT(onButtonPriorityUp1()));
+    connect(buttonPriorityUp[1], SIGNAL(clicked()), this, SLOT(onButtonPriorityUp2()));
+    connect(buttonPriorityUp[2], SIGNAL(clicked()), this, SLOT(onButtonPriorityUp3()));
+    connect(buttonPriorityUp[3], SIGNAL(clicked()), this, SLOT(onButtonPriorityUp4()));
+    connect(buttonPriorityUp[4], SIGNAL(clicked()), this, SLOT(onButtonPriorityUp5()));
+    connect(buttonPriorityUp[5], SIGNAL(clicked()), this, SLOT(onButtonPriorityUp6()));
+    connect(buttonPriorityUp[6], SIGNAL(clicked()), this, SLOT(onButtonPriorityUp7()));
+    connect(buttonPriorityUp[7], SIGNAL(clicked()), this, SLOT(onButtonPriorityUp8()));
 
-    connect(buttonDefault,         SIGNAL(released()), this, SLOT(onButtonDefault()));
-    connect(buttonSave,            SIGNAL(released()), this, SLOT(onButtonSave()));
-    connect(buttonClose,           SIGNAL(released()), this, SLOT(reject()));
+    connect(buttonPriorityDn[0], SIGNAL(clicked()), this, SLOT(onButtonPriorityDn1()));
+    connect(buttonPriorityDn[1], SIGNAL(clicked()), this, SLOT(onButtonPriorityDn2()));
+    connect(buttonPriorityDn[2], SIGNAL(clicked()), this, SLOT(onButtonPriorityDn3()));
+    connect(buttonPriorityDn[3], SIGNAL(clicked()), this, SLOT(onButtonPriorityDn4()));
+    connect(buttonPriorityDn[4], SIGNAL(clicked()), this, SLOT(onButtonPriorityDn5()));
+    connect(buttonPriorityDn[5], SIGNAL(clicked()), this, SLOT(onButtonPriorityDn6()));
+    connect(buttonPriorityDn[6], SIGNAL(clicked()), this, SLOT(onButtonPriorityDn7()));
+    connect(buttonPriorityDn[7], SIGNAL(clicked()), this, SLOT(onButtonPriorityDn8()));
 
-    msgBox = NULL;
+    connect(buttonAudioUp[0],    SIGNAL(clicked()), this, SLOT(onButtonAudioUp1()));
+    connect(buttonAudioUp[1],    SIGNAL(clicked()), this, SLOT(onButtonAudioUp2()));
+    connect(buttonAudioUp[2],    SIGNAL(clicked()), this, SLOT(onButtonAudioUp3()));
+    connect(buttonAudioUp[3],    SIGNAL(clicked()), this, SLOT(onButtonAudioUp4()));
+    connect(buttonAudioUp[4],    SIGNAL(clicked()), this, SLOT(onButtonAudioUp5()));
+    connect(buttonAudioUp[5],    SIGNAL(clicked()), this, SLOT(onButtonAudioUp6()));
+    connect(buttonAudioUp[6],    SIGNAL(clicked()), this, SLOT(onButtonAudioUp7()));
+    connect(buttonAudioUp[7],    SIGNAL(clicked()), this, SLOT(onButtonAudioUp8()));
+
+    connect(buttonAudioDn[0],    SIGNAL(clicked()), this, SLOT(onButtonAudioDn1()));
+    connect(buttonAudioDn[1],    SIGNAL(clicked()), this, SLOT(onButtonAudioDn2()));
+    connect(buttonAudioDn[2],    SIGNAL(clicked()), this, SLOT(onButtonAudioDn3()));
+    connect(buttonAudioDn[3],    SIGNAL(clicked()), this, SLOT(onButtonAudioDn4()));
+    connect(buttonAudioDn[4],    SIGNAL(clicked()), this, SLOT(onButtonAudioDn5()));
+    connect(buttonAudioDn[5],    SIGNAL(clicked()), this, SLOT(onButtonAudioDn6()));
+    connect(buttonAudioDn[6],    SIGNAL(clicked()), this, SLOT(onButtonAudioDn7()));
+    connect(buttonAudioDn[7],    SIGNAL(clicked()), this, SLOT(onButtonAudioDn8()));
+
+    connect(buttonSave,          SIGNAL(clicked()), this, SLOT(onButtonSave()));
+    connect(buttonClose,         SIGNAL(clicked()), this, SLOT(reject()));
+    connect(buttonDefault,       SIGNAL(clicked()), this, SLOT(onButtonDefault()));
+
+    onButtonDefault();
+    msgBox=NULL;
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        labelTrigger[i]->setText(QString("%1%2").arg(tr("Trigger"), QString::number(i+1)));
+    }
 }
 TriggerInputDialog::~TriggerInputDialog()
 {
 }
-int TriggerInputDialog::isPriorityRedundant(void)
+
+#if 1   //yjsin DeviceCfg was defined up to 4ch
+void TriggerInputDialog::initTriggerInputConfig(void)
 {
-    int ii, rv = 0;
+    buttonSourceDn[0]->setFocus();
+
+    //source init
+    QString source[NUMOFCH];
+    source[0] = QString(DeviceCfg.trigger1_source);
+    source[1] = QString(DeviceCfg.trigger2_source);
+    source[2] = QString(DeviceCfg.trigger3_source);
+    source[3] = QString(DeviceCfg.trigger4_source);
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if( source[i].split("CAM").length() == 2 )
+        {
+            QStringList strList = source[i].split("CAM");
+            infoSource[i] = strList[1].toInt();
+
+            if( (infoSource[i] <= 0) || (infoSource[i] > NUMOFCH) )
+            {
+                qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid source value";
+                infoSource[i] = i+1;
+            }
+        }
+        else
+        {
+            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid source config";
+            infoSource[i] = i+1;
+        }
+        updateSourceLabel(i);
+    }
+
+
+    //delay init
+    QString delay[NUMOFCH];
+    delay[0] = QString(DeviceCfg.trigger1_delay);
+    delay[1] = QString(DeviceCfg.trigger2_delay);
+    delay[2] = QString(DeviceCfg.trigger3_delay);
+    delay[3] = QString(DeviceCfg.trigger4_delay);
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if( delay[i].split("SEC").length() == 2 )
+        {
+            QStringList strList = delay[i].split("SEC");
+            infoDelay[i] = strList[0].toInt();
+
+            if( infoDelay[i] < 0 || infoDelay[i] > 20 )
+            {
+                qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid delay value";
+                infoDelay[i] = 2;
+            }
+        }
+        else
+        {
+            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid delay config";
+            infoDelay[i] = 2;
+        }
+        updateDelayLabel(i);
+    }
+
+
+    //priority init
+    int priority[NUMOFCH];
+    priority[0] = QString(DeviceCfg.trigger1_priority).toInt();
+    priority[1] = QString(DeviceCfg.trigger2_priority).toInt();
+    priority[2] = QString(DeviceCfg.trigger3_priority).toInt();
+    priority[3] = QString(DeviceCfg.trigger4_priority).toInt();
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if( (priority[i]>=1) && (priority[i]<=NUMOFCH))
+        {
+            infoPriority[i] = priority[i];
+        }
+        else
+        {
+            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid priority value";
+            infoPriority[i] = i+1;
+        }
+        updatePriorityLabel(i);
+    }
+
+
+    //audio init
+    QString audio[NUMOFCH];
+    audio[0] = QString(DeviceCfg.trigger1_audio);
+    audio[1] = QString(DeviceCfg.trigger2_audio);
+    audio[2] = QString(DeviceCfg.trigger3_audio);
+    audio[3] = QString(DeviceCfg.trigger4_audio);
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if( audio[i].compare("OUTPUT") == 0 )
+        {
+            infoAudio[i] = true;
+        }
+        else if( audio[i].compare("MUTE") == 2 )
+        {
+            infoAudio[i] = false;
+        }
+        else
+        {
+            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid audio config";
+            infoAudio[i] = true;
+        }
+        updateAudioLabel(i);
+    }
+}
+#else
+void TriggerInputDialog::initTriggerInputConfig(void)
+{
+    buttonSourceDn[0]->setFocus();
+
+
+    //source init
+    QString source[NUMOFCH];
+    source[0] = QString(DeviceCfg.trigger1_source);
+    source[1] = QString(DeviceCfg.trigger2_source);
+    source[2] = QString(DeviceCfg.trigger3_source);
+    source[3] = QString(DeviceCfg.trigger4_source);
+    source[4] = QString(DeviceCfg.trigger5_source);
+    source[5] = QString(DeviceCfg.trigger6_source);
+    source[6] = QString(DeviceCfg.trigger7_source);
+    source[7] = QString(DeviceCfg.trigger8_source);
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if( source[i].split("CAM").length() == 2 )
+        {
+            QStringList strList = source[i].split("CAM");
+            infoSource[i] = strList[1].toInt();
+
+            if( (infoSource[i] <= 0) || (infoSource[i] > NUMOFCH) )
+            {
+                qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid source value";
+                infoSource[i] = i+1;
+            }
+        }
+        else
+        {
+            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid source config";
+            infoSource[i] = i+1;
+        }
+        updateSourceLabel(i);
+    }
+
+
+    //delay init
+    QString delay[NUMOFCH];
+    delay[0] = QString(DeviceCfg.trigger1_delay);
+    delay[1] = QString(DeviceCfg.trigger2_delay);
+    delay[2] = QString(DeviceCfg.trigger3_delay);
+    delay[3] = QString(DeviceCfg.trigger4_delay);
+    delay[4] = QString(DeviceCfg.trigger5_delay);
+    delay[5] = QString(DeviceCfg.trigger6_delay);
+    delay[6] = QString(DeviceCfg.trigger7_delay);
+    delay[7] = QString(DeviceCfg.trigger8_delay);
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if( delay[i].split("SEC").length() == 2 )
+        {
+            QStringList strList = delay[i].split("SEC");
+            infoDelay[i] = strList[0].toInt();
+
+            if( infoDelay[i] < 0 || infoDelay[i] > 20 )
+            {
+                qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid delay value";
+                infoDelay[i] = 2;
+            }
+        }
+        else
+        {
+            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid delay config";
+            infoDelay[i] = 2;
+        }
+        updateDelayLabel(i);
+    }
+
+
+    //priority init
+    int priority[NUMOFCH];
+    priority[0] = QString(DeviceCfg.trigger1_priority).toInt();
+    priority[1] = QString(DeviceCfg.trigger2_priority).toInt();
+    priority[2] = QString(DeviceCfg.trigger3_priority).toInt();
+    priority[3] = QString(DeviceCfg.trigger4_priority).toInt();
+    priority[4] = QString(DeviceCfg.trigger5_priority).toInt();
+    priority[5] = QString(DeviceCfg.trigger6_priority).toInt();
+    priority[6] = QString(DeviceCfg.trigger7_priority).toInt();
+    priority[7] = QString(DeviceCfg.trigger8_priority).toInt();
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if( (priority[i]>=1) && (priority[i]<=NUMOFCH))
+        {
+            infoPriority[i] = priority[i];
+        }
+        else
+        {
+            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid priority value";
+            infoPriority[i] = i+1;
+        }
+        updatePriorityLabel(i);
+    }
+
+
+    //audio init
+    QString audio[NUMOFCH];
+    audio[0] = QString(DeviceCfg.trigger1_audio);
+    audio[1] = QString(DeviceCfg.trigger2_audio);
+    audio[2] = QString(DeviceCfg.trigger3_audio);
+    audio[3] = QString(DeviceCfg.trigger4_audio);
+    audio[4] = QString(DeviceCfg.trigger5_audio);
+    audio[5] = QString(DeviceCfg.trigger6_audio);
+    audio[6] = QString(DeviceCfg.trigger7_audio);
+    audio[7] = QString(DeviceCfg.trigger8_audio);
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if( audio[i].compare("OUTPUT") == 0 )
+        {
+            infoAudio[i] = true;
+        }
+        else
+        {
+            infoAudio[i] = false;
+        }
+        updateAudioLabel(i);
+    }
+}
+#endif
+
+void TriggerInputDialog::updateSourceLabel(int ch)
+{
+    labelSource[ch]->setText(QString("%1 %2").arg(tr("CAM"), QString::number(infoSource[ch])));
+}
+void TriggerInputDialog::updateDelayLabel(int ch)
+{
+    labelDelay[ch]->setText(QString("%1 %2").arg(QString::number(infoDelay[ch]), tr("Sec")));
+}
+void TriggerInputDialog::updatePriorityLabel(int ch)
+{
+    labelPriority[ch]->setText(QString::number(infoPriority[ch]));
+}
+void TriggerInputDialog::updateAudioLabel(int ch)
+{
+    if( infoAudio[ch] )
+    {
+        labelAudio[ch]->setText(tr("Output"));
+    }
+    else
+    {
+        labelAudio[ch]->setText(tr("Mute"));
+    }
+}
+
+void TriggerInputDialog::onButtonSourceUp1()    { onButtonSourceUp(0); }
+void TriggerInputDialog::onButtonSourceUp2()    { onButtonSourceUp(1); }
+void TriggerInputDialog::onButtonSourceUp3()    { onButtonSourceUp(2); }
+void TriggerInputDialog::onButtonSourceUp4()    { onButtonSourceUp(3); }
+void TriggerInputDialog::onButtonSourceUp5()    { onButtonSourceUp(4); }
+void TriggerInputDialog::onButtonSourceUp6()    { onButtonSourceUp(5); }
+void TriggerInputDialog::onButtonSourceUp7()    { onButtonSourceUp(6); }
+void TriggerInputDialog::onButtonSourceUp8()    { onButtonSourceUp(7); }
+
+void TriggerInputDialog::onButtonSourceDn1()    { onButtonSourceDn(0); }
+void TriggerInputDialog::onButtonSourceDn2()    { onButtonSourceDn(1); }
+void TriggerInputDialog::onButtonSourceDn3()    { onButtonSourceDn(2); }
+void TriggerInputDialog::onButtonSourceDn4()    { onButtonSourceDn(3); }
+void TriggerInputDialog::onButtonSourceDn5()    { onButtonSourceDn(4); }
+void TriggerInputDialog::onButtonSourceDn6()    { onButtonSourceDn(5); }
+void TriggerInputDialog::onButtonSourceDn7()    { onButtonSourceDn(6); }
+void TriggerInputDialog::onButtonSourceDn8()    { onButtonSourceDn(7); }
+
+void TriggerInputDialog::onButtonSourceUp(int ch)
+{
+    if( infoSource[ch] >= NUMOFCH ) { infoSource[ch] = 0; }
+
+    infoSource[ch]++;
+    updateSourceLabel(ch);
+}
+void TriggerInputDialog::onButtonSourceDn(int ch)
+{
+    if( infoSource[ch] <= 1 ) { infoSource[ch] = NUMOFCH+1; }
+
+    infoSource[ch]--;
+    updateSourceLabel(ch);
+}
+
+void TriggerInputDialog::onButtonDelayUp1()     { onButtonDelayUp(0); }
+void TriggerInputDialog::onButtonDelayUp2()     { onButtonDelayUp(1); }
+void TriggerInputDialog::onButtonDelayUp3()     { onButtonDelayUp(2); }
+void TriggerInputDialog::onButtonDelayUp4()     { onButtonDelayUp(3); }
+void TriggerInputDialog::onButtonDelayUp5()     { onButtonDelayUp(4); }
+void TriggerInputDialog::onButtonDelayUp6()     { onButtonDelayUp(5); }
+void TriggerInputDialog::onButtonDelayUp7()     { onButtonDelayUp(6); }
+void TriggerInputDialog::onButtonDelayUp8()     { onButtonDelayUp(7); }
+
+void TriggerInputDialog::onButtonDelayDn1()     { onButtonDelayDn(0); }
+void TriggerInputDialog::onButtonDelayDn2()     { onButtonDelayDn(1); }
+void TriggerInputDialog::onButtonDelayDn3()     { onButtonDelayDn(2); }
+void TriggerInputDialog::onButtonDelayDn4()     { onButtonDelayDn(3); }
+void TriggerInputDialog::onButtonDelayDn5()     { onButtonDelayDn(4); }
+void TriggerInputDialog::onButtonDelayDn6()     { onButtonDelayDn(5); }
+void TriggerInputDialog::onButtonDelayDn7()     { onButtonDelayDn(6); }
+void TriggerInputDialog::onButtonDelayDn8()     { onButtonDelayDn(7); }
+
+void TriggerInputDialog::onButtonDelayUp(int ch)
+{
+    if( infoDelay[ch] >= 20 ) { infoDelay[ch] = 0; }
+
+    infoDelay[ch]++;
+    updateDelayLabel(ch);
+}
+void TriggerInputDialog::onButtonDelayDn(int ch)
+{
+    if( infoDelay[ch] <= 1 ) { infoDelay[ch] = 21; }
+
+    infoDelay[ch]--;
+    updateDelayLabel(ch);
+}
+
+void TriggerInputDialog::onButtonPriorityUp1()   { onButtonPriorityUp(0); }
+void TriggerInputDialog::onButtonPriorityUp2()   { onButtonPriorityUp(1); }
+void TriggerInputDialog::onButtonPriorityUp3()   { onButtonPriorityUp(2); }
+void TriggerInputDialog::onButtonPriorityUp4()   { onButtonPriorityUp(3); }
+void TriggerInputDialog::onButtonPriorityUp5()   { onButtonPriorityUp(4); }
+void TriggerInputDialog::onButtonPriorityUp6()   { onButtonPriorityUp(5); }
+void TriggerInputDialog::onButtonPriorityUp7()   { onButtonPriorityUp(6); }
+void TriggerInputDialog::onButtonPriorityUp8()   { onButtonPriorityUp(7); }
+
+void TriggerInputDialog::onButtonPriorityDn1()   { onButtonPriorityDn(0); }
+void TriggerInputDialog::onButtonPriorityDn2()   { onButtonPriorityDn(1); }
+void TriggerInputDialog::onButtonPriorityDn3()   { onButtonPriorityDn(2); }
+void TriggerInputDialog::onButtonPriorityDn4()   { onButtonPriorityDn(3); }
+void TriggerInputDialog::onButtonPriorityDn5()   { onButtonPriorityDn(4); }
+void TriggerInputDialog::onButtonPriorityDn6()   { onButtonPriorityDn(5); }
+void TriggerInputDialog::onButtonPriorityDn7()   { onButtonPriorityDn(6); }
+void TriggerInputDialog::onButtonPriorityDn8()   { onButtonPriorityDn(7); }
+
+void TriggerInputDialog::onButtonPriorityUp(int ch)
+{
+    if( infoPriority[ch] >= NUMOFCH ) { infoPriority[ch] = 0; }
+
+    infoPriority[ch]++;
+    updatePriorityLabel(ch);
+}
+
+void TriggerInputDialog::onButtonPriorityDn(int ch)
+{
+    if( infoPriority[ch] <= 1 ) { infoPriority[ch] = NUMOFCH+1; }
+
+    infoPriority[ch]--;
+    updatePriorityLabel(ch);
+}
+
+void TriggerInputDialog::onButtonAudioUp1() { onButtonAudioUp(0); }
+void TriggerInputDialog::onButtonAudioUp2() { onButtonAudioUp(1); }
+void TriggerInputDialog::onButtonAudioUp3() { onButtonAudioUp(2); }
+void TriggerInputDialog::onButtonAudioUp4() { onButtonAudioUp(3); }
+void TriggerInputDialog::onButtonAudioUp5() { onButtonAudioUp(4); }
+void TriggerInputDialog::onButtonAudioUp6() { onButtonAudioUp(5); }
+void TriggerInputDialog::onButtonAudioUp7() { onButtonAudioUp(6); }
+void TriggerInputDialog::onButtonAudioUp8() { onButtonAudioUp(7); }
+
+void TriggerInputDialog::onButtonAudioDn1() { onButtonAudioDn(0); }
+void TriggerInputDialog::onButtonAudioDn2() { onButtonAudioDn(1); }
+void TriggerInputDialog::onButtonAudioDn3() { onButtonAudioDn(2); }
+void TriggerInputDialog::onButtonAudioDn4() { onButtonAudioDn(3); }
+void TriggerInputDialog::onButtonAudioDn5() { onButtonAudioDn(4); }
+void TriggerInputDialog::onButtonAudioDn6() { onButtonAudioDn(5); }
+void TriggerInputDialog::onButtonAudioDn7() { onButtonAudioDn(6); }
+void TriggerInputDialog::onButtonAudioDn8() { onButtonAudioDn(7); }
+
+void TriggerInputDialog::onButtonAudioUp(int ch)
+{
+    infoAudio[ch] = !infoAudio[ch];
+    updateAudioLabel(ch);
+}
+void TriggerInputDialog::onButtonAudioDn(int ch)
+{
+    infoAudio[ch] = !infoAudio[ch];
+    updateAudioLabel(ch);
+}
+
+int TriggerInputDialog::checkPriorityRedundant()
+{
+    int rv=0;
+    int nPriority[NUMOFCH];
     memset(nPriority, 0, sizeof(nPriority));
 
-         if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "01") == 0) { nPriority[0]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "02") == 0) { nPriority[1]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "03") == 0) { nPriority[2]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "04") == 0) { nPriority[3]++; }
-
-         if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "01") == 0) { nPriority[0]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "02") == 0) { nPriority[1]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "03") == 0) { nPriority[2]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "04") == 0) { nPriority[3]++; }
-
-         if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "01") == 0) { nPriority[0]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "02") == 0) { nPriority[1]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "03") == 0) { nPriority[2]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "04") == 0) { nPriority[3]++; }
-
-         if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "01") == 0) { nPriority[0]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "02") == 0) { nPriority[1]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "03") == 0) { nPriority[2]++; }
-    else if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "04") == 0) { nPriority[3]++; }
-
-    for(ii = 0; ii < EASTERN_MAXIMUM_PRIORITY; ii++)
+    for(int i=0; i<NUMOFCH; i++)
     {
-        if(nPriority[ii] >= 2)
+        nPriority[infoPriority[i]-1]++;
+    }
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if(nPriority[i] > 1)
         {
-            qDebug("Notice : %s, nPriority[%d] = %d\n", __func__, ii, nPriority[ii]);
+            qDebug("Notice : %s, nPriority[%d] = %d\n", __func__, i, nPriority[i]);
             rv++;
         }
     }
 
     return rv;
 }
-void TriggerInputDialog::onButtonSave(void)
+#if 1   //yjsin DeviceCfg was defined up to 4ch
+void TriggerInputDialog::onButtonSave()
 {
-    int ii;
-    if(isPriorityRedundant())
+    //save source
+    for(int i=0; i<devInfo.videoNum; i++)
     {
-        for(ii = 0; ii < EASTERN_MAXIMUM_PRIORITY; ii++)
+        char *dst;
+        switch(i)
         {
-            if(nPriority[ii] >= 2)
-            {
-                break;
-            }
+            case 0 : { dst = DeviceCfg.trigger1_source; break; }
+            case 1 : { dst = DeviceCfg.trigger2_source; break; }
+            case 2 : { dst = DeviceCfg.trigger3_source; break; }
+            case 3 : { dst = DeviceCfg.trigger4_source; break; }
         }
+
+        QString src = QString("%1%2").arg("CAM", QString::number(infoSource[i]));
+        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+    }
+
+    //save delay
+    for(int i=0; i<devInfo.videoNum; i++)
+    {
+        char *dst;
+        switch(i)
+        {
+            case 0 : { dst = DeviceCfg.trigger1_delay; break; }
+            case 1 : { dst = DeviceCfg.trigger2_delay; break; }
+            case 2 : { dst = DeviceCfg.trigger3_delay; break; }
+            case 3 : { dst = DeviceCfg.trigger4_delay; break; }
+        }
+
+        QString src = QString("%1%2").arg(QString::number(infoDelay[i]), "SEC");
+        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+    }
+
+    //check priority redundant
+    if( checkPriorityRedundant() )
+    {
         if(msgBox)
         {
             delete msgBox;
@@ -488,6 +928,7 @@ void TriggerInputDialog::onButtonSave(void)
 
         msgBox = new TextMessageDialog(tr("PRIORITY REDUNDANT"),
                 QString("%1\n%2").arg(tr("Priority is redundant."),tr("Please check priority.")), 2, this);
+
         msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
 
         if(msgBox->exec()) { ; }
@@ -495,1219 +936,600 @@ void TriggerInputDialog::onButtonSave(void)
         delete msgBox;
         msgBox = NULL;
 
-        switch(ii)
-        {
-            case 0:
-            {
-                     if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "01") == 0) { buttonPriority1Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "01") == 0) { buttonPriority2Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "01") == 0) { buttonPriority3Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "01") == 0) { buttonPriority4Up->setFocus(); break; }
-            }
-            case 1:
-            {
-                     if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "02") == 0) { buttonPriority1Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "02") == 0) { buttonPriority2Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "02") == 0) { buttonPriority3Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "02") == 0) { buttonPriority4Up->setFocus(); break; }
-            }
-            case 2:
-            {
-                     if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "03") == 0) { buttonPriority1Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "03") == 0) { buttonPriority2Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "03") == 0) { buttonPriority3Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "03") == 0) { buttonPriority4Up->setFocus(); break; }
-            }
-            case 3:
-            {
-                     if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "04") == 0) { buttonPriority1Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "04") == 0) { buttonPriority2Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "04") == 0) { buttonPriority3Up->setFocus(); break; }
-                else if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "04") == 0) { buttonPriority4Up->setFocus(); break; }
-            }
-        }
         return;
     }
-    QDialog::accept();
+
+    //save priority
+    for(int i=0; i<devInfo.videoNum; i++)
+    {
+        char *dst;
+        switch(i)
+        {
+            case 0 : { dst = DeviceCfg.trigger1_priority; break; }
+            case 1 : { dst = DeviceCfg.trigger2_priority; break; }
+            case 2 : { dst = DeviceCfg.trigger3_priority; break; }
+            case 3 : { dst = DeviceCfg.trigger4_priority; break; }
+        }
+
+        QString src;
+        if( infoPriority[i] < 10 )
+        {
+            src = QString("0%1").arg(QString::number(infoPriority[i]));
+        }
+        else
+        {
+            src = QString("%1").arg(QString::number(infoPriority[i]));
+        }
+
+        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+    }
+
+    //save audio
+    for(int i=0; i<devInfo.videoNum; i++)
+    {
+        char *dst;
+        switch(i)
+        {
+            case 0 : { dst = DeviceCfg.trigger1_audio; break; }
+            case 1 : { dst = DeviceCfg.trigger2_audio; break; }
+            case 2 : { dst = DeviceCfg.trigger3_audio; break; }
+            case 3 : { dst = DeviceCfg.trigger4_audio; break; }
+        }
+
+        QString src;
+        if( infoAudio[i] )  { src = "OUTPUT"; }
+        else                { src = "MUTE";   }
+
+        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+    }
+
+    accept();
 }
-void TriggerInputDialog::initTriggerInputConfig(void)
+#else
+void TriggerInputDialog::onButtonSave()
 {
-	buttonSource1Up->setFocus();
-
-	if(utils_cfg_cmp_item(DeviceCfg.trigger1_source, "CAM1") == 0) {
-		labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   indexSource1 = 1;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_source, "CAM2") == 0) {
-		labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   indexSource1 = 2;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_source, "CAM3") == 0) {
-		labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   indexSource1 = 3;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_source, "CAM4") == 0) {
-		labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   indexSource1 = 4;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_source, "SPLIT1") == 0) {
-		labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); indexSource1 = 5;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_source, "SPLIT2") == 0) {
-		labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); indexSource1 = 6;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_source, "SPLIT3") == 0) {
-		labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); indexSource1 = 7;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_source, "SPLIT4") == 0) {
-		labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); indexSource1 = 8;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_source, "SPLIT5") == 0) {
-		labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); indexSource1 = 9;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_source, "SPLIT6") == 0) {
-		labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); indexSource1 = 10;
-	}
-
-	if(utils_cfg_cmp_item(DeviceCfg.trigger2_source, "CAM1") == 0) {
-		labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   indexSource2 = 1;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_source, "CAM2") == 0) {
-		labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   indexSource2 = 2;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_source, "CAM3") == 0) {
-		labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   indexSource2 = 3;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_source, "CAM4") == 0) {
-		labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   indexSource2 = 4;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_source, "SPLIT1") == 0) {
-		labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); indexSource2 = 5;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_source, "SPLIT2") == 0) {
-		labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); indexSource2 = 6;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_source, "SPLIT3") == 0) {
-		labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); indexSource2 = 7;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_source, "SPLIT4") == 0) {
-		labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); indexSource2 = 8;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_source, "SPLIT5") == 0) {
-		labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); indexSource2 = 9;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_source, "SPLIT6") == 0) {
-		labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); indexSource2 = 10;
-	}
-
-	if(utils_cfg_cmp_item(DeviceCfg.trigger3_source, "CAM1") == 0) {
-		labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   indexSource3 = 1;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_source, "CAM2") == 0) {
-		labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   indexSource3 = 2;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_source, "CAM3") == 0) {
-		labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   indexSource3 = 3;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_source, "CAM4") == 0) {
-		labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   indexSource3 = 4;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_source, "SPLIT1") == 0) {
-		labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); indexSource3 = 5;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_source, "SPLIT2") == 0) {
-		labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); indexSource3 = 6;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_source, "SPLIT3") == 0) {
-		labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); indexSource3 = 7;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_source, "SPLIT4") == 0) {
-		labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); indexSource3 = 8;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_source, "SPLIT5") == 0) {
-		labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); indexSource3 = 9;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_source, "SPLIT6") == 0) {
-		labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); indexSource3 = 10;
-	}
-
-	if(utils_cfg_cmp_item(DeviceCfg.trigger4_source, "CAM1") == 0) {
-		labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   indexSource4 = 1;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_source, "CAM2") == 0) {
-		labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   indexSource4 = 2;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_source, "CAM3") == 0) {
-		labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   indexSource4 = 3;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_source, "CAM4") == 0) {
-		labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   indexSource4 = 4;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_source, "SPLIT1") == 0) {
-		labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); indexSource4 = 5;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_source, "SPLIT2") == 0) {
-		labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); indexSource4 = 6;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_source, "SPLIT3") == 0) {
-		labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); indexSource4 = 7;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_source, "SPLIT4") == 0) {
-		labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); indexSource4 = 8;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_source, "SPLIT5") == 0) {
-		labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); indexSource4 = 9;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_source, "SPLIT6") == 0) {
-		labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); indexSource4 = 10;
-	}
-
-	if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "0SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  indexDelay1 = 1;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "1SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  indexDelay1 = 2;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "2SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  indexDelay1 = 3;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "3SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  indexDelay1 = 4;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "4SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  indexDelay1 = 5;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "5SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  indexDelay1 = 6;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "6SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  indexDelay1 = 7;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "7SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  indexDelay1 = 8;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "8SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  indexDelay1 = 9;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "9SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  indexDelay1 = 10;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "10SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); indexDelay1 = 11;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "11SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); indexDelay1 = 12;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "12SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); indexDelay1 = 13;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "13SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); indexDelay1 = 14;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "14SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); indexDelay1 = 15;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "15SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); indexDelay1 = 16;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "16SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); indexDelay1 = 17;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "17SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); indexDelay1 = 18;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "18SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); indexDelay1 = 19;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "19SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); indexDelay1 = 20;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger1_delay, "20SEC") == 0) {
-		labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); indexDelay1 = 21;
-	}
-
-	if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "0SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  indexDelay2 = 1;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "1SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  indexDelay2 = 2;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "2SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  indexDelay2 = 3;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "3SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  indexDelay2 = 4;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "4SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  indexDelay2 = 5;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "5SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  indexDelay2 = 6;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "6SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  indexDelay2 = 7;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "7SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  indexDelay2 = 8;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "8SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  indexDelay2 = 9;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "9SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  indexDelay2 = 10;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "10SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); indexDelay2 = 11;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "11SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); indexDelay2 = 12;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "12SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); indexDelay2 = 13;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "13SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); indexDelay2 = 14;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "14SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); indexDelay2 = 15;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "15SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); indexDelay2 = 16;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "16SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); indexDelay2 = 17;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "17SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); indexDelay2 = 18;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "18SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); indexDelay2 = 19;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "19SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); indexDelay2 = 20;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger2_delay, "20SEC") == 0) {
-		labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); indexDelay2 = 21;
-	}
-
-	if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "0SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  indexDelay3 = 1;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "1SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  indexDelay3 = 2;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "2SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  indexDelay3 = 3;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "3SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  indexDelay3 = 4;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "4SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  indexDelay3 = 5;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "5SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  indexDelay3 = 6;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "6SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  indexDelay3 = 7;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "7SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  indexDelay3 = 8;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "8SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  indexDelay3 = 9;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "9SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  indexDelay3 = 10;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "10SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); indexDelay3 = 11;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "11SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); indexDelay3 = 12;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "12SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); indexDelay3 = 13;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "13SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); indexDelay3 = 14;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "14SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); indexDelay3 = 15;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "15SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); indexDelay3 = 16;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "16SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); indexDelay3 = 17;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "17SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); indexDelay3 = 18;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "18SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); indexDelay3 = 19;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "19SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); indexDelay3 = 20;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger3_delay, "20SEC") == 0) {
-		labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); indexDelay3 = 21;
-	}
-
-	if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "0SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  indexDelay4 = 1;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "1SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  indexDelay4 = 2;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "2SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  indexDelay4 = 3;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "3SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  indexDelay4 = 4;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "4SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  indexDelay4 = 5;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "5SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  indexDelay4 = 6;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "6SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  indexDelay4 = 7;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "7SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  indexDelay4 = 8;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "8SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  indexDelay4 = 9;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "9SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  indexDelay4 = 10;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "10SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); indexDelay4 = 11;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "11SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); indexDelay4 = 12;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "12SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); indexDelay4 = 13;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "13SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); indexDelay4 = 14;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "14SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); indexDelay4 = 15;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "15SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); indexDelay4 = 16;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "16SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); indexDelay4 = 17;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "17SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); indexDelay4 = 18;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "18SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); indexDelay4 = 19;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "19SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); indexDelay4 = 20;
-	} else if(utils_cfg_cmp_item(DeviceCfg.trigger4_delay, "20SEC") == 0) {
-		labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); indexDelay4 = 21;
-	}
-
-    if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "01") == 0) {
-        labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); indexPriority1 = 1;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "02") == 0) {
-        labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); indexPriority1 = 2;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "03") == 0) {
-        labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); indexPriority1 = 3;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger1_priority, "04") == 0) {
-        labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); indexPriority1 = 4;
-    }
-
-    if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "01") == 0) {
-        labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); indexPriority2 = 1;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "02") == 0) {
-        labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); indexPriority2 = 2;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "03") == 0) {
-        labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); indexPriority2 = 3;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger2_priority, "04") == 0) {
-        labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); indexPriority2 = 4;
-    }
-
-    if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "01") == 0) {
-        labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); indexPriority3 = 1;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "02") == 0) {
-        labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); indexPriority3 = 2;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "03") == 0) {
-        labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); indexPriority3 = 3;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger3_priority, "04") == 0) {
-        labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); indexPriority3 = 4;
-    }
-
-    if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "01") == 0) {
-        labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); indexPriority4 = 1;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "02") == 0) {
-        labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); indexPriority4 = 2;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "03") == 0) {
-        labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); indexPriority4 = 3;
-    } else if(utils_cfg_cmp_item(DeviceCfg.trigger4_priority, "04") == 0) {
-        labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); indexPriority4 = 4;
-    }
-
-    //audio label init
-    if(utils_cfg_cmp_item(DeviceCfg.trigger1_audio, "MUTE") == 0 )
+    //save source
+    for(int i=0; i<devInfo.videoNum; i++)
     {
-        labelAudio1->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));    triggerAudio1 = 0;
-    }
-    else
-    {
-        labelAudio1->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));  triggerAudio1 = 1;
+        char *dst;
+        switch(i)
+        {
+            case 0 : { dst = DeviceCfg.trigger1_source; break; }
+            case 1 : { dst = DeviceCfg.trigger2_source; break; }
+            case 2 : { dst = DeviceCfg.trigger3_source; break; }
+            case 3 : { dst = DeviceCfg.trigger4_source; break; }
+            case 4 : { dst = DeviceCfg.trigger5_source; break; }
+            case 5 : { dst = DeviceCfg.trigger6_source; break; }
+            case 6 : { dst = DeviceCfg.trigger7_source; break; }
+            case 7 : { dst = DeviceCfg.trigger8_source; break; }
+        }
+
+        QString src = QString("%1%2").arg("CAM", QString::number(infoSource[i]));
+        utils_cfg_cpy_item( dst, src.toStdString().c_str());
     }
 
-    if(utils_cfg_cmp_item(DeviceCfg.trigger2_audio, "MUTE") == 0 )
+    //save delay
+    for(int i=0; i<devInfo.videoNum; i++)
     {
-        labelAudio2->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));    triggerAudio2 = 0;
-    }
-    else
-    {
-        labelAudio2->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));  triggerAudio2 = 1;
+        char *dst;
+        switch(i)
+        {
+            case 0 : { dst = DeviceCfg.trigger1_delay; break; }
+            case 1 : { dst = DeviceCfg.trigger2_delay; break; }
+            case 2 : { dst = DeviceCfg.trigger3_delay; break; }
+            case 3 : { dst = DeviceCfg.trigger4_delay; break; }
+            case 0 : { dst = DeviceCfg.trigger5_delay; break; }
+            case 1 : { dst = DeviceCfg.trigger6_delay; break; }
+            case 2 : { dst = DeviceCfg.trigger7_delay; break; }
+            case 3 : { dst = DeviceCfg.trigger8_delay; break; }
+        }
+
+        QString src = QString("%1%2").arg(QString::number(infoDelay[i]), "SEC");
+        utils_cfg_cpy_item( dst, src.toStdString().c_str());
     }
 
-    if(utils_cfg_cmp_item(DeviceCfg.trigger3_audio, "MUTE") == 0 )
+    //check redundant
+    if( checkPriorityRedundant() )
     {
-        labelAudio3->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));    triggerAudio3 = 0;
-    }
-    else
-    {
-        labelAudio3->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));  triggerAudio3 = 1;
+        if(msgBox)
+        {
+            delete msgBox;
+            msgBox = NULL;
+        }
+
+        msgBox = new TextMessageDialog(tr("PRIORITY REDUNDANT"),
+                QString("%1\n%2").arg(tr("Priority is redundant."),tr("Please check priority.")), 2, this);
+
+        msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
+
+        if(msgBox->exec()) { ; }
+
+        delete msgBox;
+        msgBox = NULL;
+
+        return;
     }
 
-    if(utils_cfg_cmp_item(DeviceCfg.trigger4_audio, "MUTE") == 0 )
+    //save priority
+    for(int i=0; i<devInfo.videoNum; i++)
     {
-        labelAudio4->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));    triggerAudio4 = 0;
+        char *dst;
+        switch(i)
+        {
+            case 0 : { dst = DeviceCfg.trigger1_priority; break; }
+            case 1 : { dst = DeviceCfg.trigger2_priority; break; }
+            case 2 : { dst = DeviceCfg.trigger3_priority; break; }
+            case 3 : { dst = DeviceCfg.trigger4_priority; break; }
+            case 4 : { dst = DeviceCfg.trigger5_priority; break; }
+            case 5 : { dst = DeviceCfg.trigger6_priority; break; }
+            case 6 : { dst = DeviceCfg.trigger7_priority; break; }
+            case 7 : { dst = DeviceCfg.trigger8_priority; break; }
+        }
+
+        QString src;
+        if( infoPriority[i] < 10 )
+        {
+            src = QString("0%1").arg(QString::number(infoPriority[i]));
+        }
+        else
+        {
+            src = QString("%1").arg(QString::number(infoPriority[i]));
+        }
+
+        utils_cfg_cpy_item( dst, src.toStdString().c_str());
     }
-    else
+
+    //save audio
+    for(int i=0; i<devInfo.videoNum; i++)
     {
-        labelAudio4->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));  triggerAudio4 = 1;
+        char *dst;
+        switch(i)
+        {
+            case 0 : { dst = DeviceCfg.trigger1_audio; break; }
+            case 1 : { dst = DeviceCfg.trigger2_audio; break; }
+            case 2 : { dst = DeviceCfg.trigger3_audio; break; }
+            case 3 : { dst = DeviceCfg.trigger4_audio; break; }
+            case 4 : { dst = DeviceCfg.trigger5_audio; break; }
+            case 5 : { dst = DeviceCfg.trigger6_audio; break; }
+            case 6 : { dst = DeviceCfg.trigger7_audio; break; }
+            case 7 : { dst = DeviceCfg.trigger8_audio; break; }
+        }
+
+        QString src;
+        if( infoAudio[i] )  { src = "OUTPUT"; }
+        else                { src = "MUTE";   }
+
+        utils_cfg_cpy_item( dst, src.toStdString().c_str());
     }
+
+    accept();
 }
+#endif
 void TriggerInputDialog::onButtonDefault()
 {
-    labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));     indexSource1 = 1;
-	utils_cfg_cpy_item(DeviceCfg.trigger1_source, "CAM1");
-
-    labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));     indexSource2 = 2;
-	utils_cfg_cpy_item(DeviceCfg.trigger2_source, "CAM2");
-
-    labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));     indexSource3 = 3;
-	utils_cfg_cpy_item(DeviceCfg.trigger3_source, "CAM3");
-
-    labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));     indexSource4 = 4;
-	utils_cfg_cpy_item(DeviceCfg.trigger4_source, "CAM4");
-
-    labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));       indexDelay1 = 3;
-	utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "2SEC");
-
-    labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));       indexDelay2 = 3;
-	utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "2SEC");
-
-    labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));       indexDelay3 = 3;
-	utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "2SEC");
-
-    labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));       indexDelay4 = 3;
-	utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "2SEC");
-
-    labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("1")));     indexPriority1 = 1;
-	utils_cfg_cpy_item(DeviceCfg.trigger1_priority, "01");
-
-    labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("2")));     indexPriority2 = 2;
-	utils_cfg_cpy_item(DeviceCfg.trigger2_priority, "02");
-
-    labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("3")));     indexPriority3 = 3;
-	utils_cfg_cpy_item(DeviceCfg.trigger3_priority, "03");
-
-    labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("4")));     indexPriority4 = 4;
-	utils_cfg_cpy_item(DeviceCfg.trigger4_priority, "04");
-
-    labelAudio1->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));      triggerAudio1=1;
-    utils_cfg_cpy_item(DeviceCfg.trigger1_audio, "OUTPUT");
-
-    labelAudio2->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));      triggerAudio2=1;
-    utils_cfg_cpy_item(DeviceCfg.trigger2_audio, "OUTPUT");
-
-    labelAudio3->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));      triggerAudio3=1;
-    utils_cfg_cpy_item(DeviceCfg.trigger3_audio, "OUTPUT");
-
-    labelAudio4->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));      triggerAudio4=1;
-    utils_cfg_cpy_item(DeviceCfg.trigger4_audio, "OUTPUT");
-}
-void TriggerInputDialog::onButtonSource1Up()
-{
-	#if 1 // jungyver [16/12/19]
-	if(indexSource1 >= 4) { indexSource1 = 0; }
-	#else
-	if(indexSource1 >= 10) { indexSource1 = 0; }
-	#endif
-
-	switch(++indexSource1)
-	{
-		case  1: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   utils_cfg_cpy_item(DeviceCfg.trigger1_source, "CAM1");   break; }
-		case  2: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   utils_cfg_cpy_item(DeviceCfg.trigger1_source, "CAM2");   break; }
-		case  3: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   utils_cfg_cpy_item(DeviceCfg.trigger1_source, "CAM3");   break; }
-		case  4: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   utils_cfg_cpy_item(DeviceCfg.trigger1_source, "CAM4");   break; }
-		#if 0 // jungyver [16/12/19]
-		case  5: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT1"); break; }
-		case  6: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT2"); break; }
-		case  7: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT3"); break; }
-		case  8: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT4"); break; }
-		case  9: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT5"); break; }
-		case 10: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT6"); break; }
-		#endif
-	}
-}
-void TriggerInputDialog::onButtonSource1Down()
-{
-	#if 1 // jungyver [16/12/19]
-	if(indexSource1 <= 1) { indexSource1 = 5; }
-	#else
-	if(indexSource1 <= 1) { indexSource1 = 11; }
-	#endif
-
-	switch(--indexSource1)
-	{
-		case  1: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   utils_cfg_cpy_item(DeviceCfg.trigger1_source, "CAM1");   break; }
-		case  2: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   utils_cfg_cpy_item(DeviceCfg.trigger1_source, "CAM2");   break; }
-		case  3: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   utils_cfg_cpy_item(DeviceCfg.trigger1_source, "CAM3");   break; }
-		case  4: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   utils_cfg_cpy_item(DeviceCfg.trigger1_source, "CAM4");   break; }
-		#if 0 // jungyver [16/12/19]
-		case  5: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT1"); break; }
-		case  6: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT2"); break; }
-		case  7: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT3"); break; }
-		case  8: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT4"); break; }
-		case  9: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT5"); break; }
-		case 10: { labelSource1->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); utils_cfg_cpy_item(DeviceCfg.trigger1_source, "SPLIT6"); break; }
-		#endif
-	}
-
-}
-void TriggerInputDialog::onButtonSource2Up()
-{
-	#if 1 // jungyver [16/12/19]
-	if(indexSource2 >= 4) { indexSource2 = 0; }
-	#else
-	if(indexSource2 >= 10) { indexSource2 = 0; }
-	#endif
-
-	switch(++indexSource2)
-	{
-		case  1: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   utils_cfg_cpy_item(DeviceCfg.trigger2_source, "CAM1");   break; }
-		case  2: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   utils_cfg_cpy_item(DeviceCfg.trigger2_source, "CAM2");   break; }
-		case  3: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   utils_cfg_cpy_item(DeviceCfg.trigger2_source, "CAM3");   break; }
-		case  4: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   utils_cfg_cpy_item(DeviceCfg.trigger2_source, "CAM4");   break; }
-		#if 0 // jungyver [16/12/19]
-		case  5: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT1"); break; }
-		case  6: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT2"); break; }
-		case  7: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT3"); break; }
-		case  8: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT4"); break; }
-		case  9: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT5"); break; }
-		case 10: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT6"); break; }
-		#endif
-	}
-}
-void TriggerInputDialog::onButtonSource2Down()
-{
-	#if 1 // jungyver [16/12/19]
-	if(indexSource2 <= 1) { indexSource2 = 5; }
-	#else
-	if(indexSource2 <= 1) { indexSource2 = 11; }
-	#endif
-
-	switch(--indexSource2)
-	{
-		case  1: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   utils_cfg_cpy_item(DeviceCfg.trigger2_source, "CAM1");   break; }
-		case  2: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   utils_cfg_cpy_item(DeviceCfg.trigger2_source, "CAM2");   break; }
-		case  3: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   utils_cfg_cpy_item(DeviceCfg.trigger2_source, "CAM3");   break; }
-		case  4: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   utils_cfg_cpy_item(DeviceCfg.trigger2_source, "CAM4");   break; }
-		#if 0 // jungyver [16/12/19]
-		case  5: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT1"); break; }
-		case  6: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT2"); break; }
-		case  7: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT3"); break; }
-		case  8: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT4"); break; }
-		case  9: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT5"); break; }
-		case 10: { labelSource2->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); utils_cfg_cpy_item(DeviceCfg.trigger2_source, "SPLIT6"); break; }
-		#endif
-	}
-}
-void TriggerInputDialog::onButtonSource3Up()
-{
-	#if 1 // jungyver [16/12/19]
-	if(indexSource3 >= 4) { indexSource3 = 0; }
-	#else
-	if(indexSource3 >= 10) { indexSource3 = 0; }
-	#endif
-
-	switch(++indexSource3)
-	{
-		case  1: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   utils_cfg_cpy_item(DeviceCfg.trigger3_source, "CAM1");   break; }
-		case  2: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   utils_cfg_cpy_item(DeviceCfg.trigger3_source, "CAM2");   break; }
-		case  3: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   utils_cfg_cpy_item(DeviceCfg.trigger3_source, "CAM3");   break; }
-		case  4: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   utils_cfg_cpy_item(DeviceCfg.trigger3_source, "CAM4");   break; }
-		#if 0 // jungyver [16/12/19]
-		case  5: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT1"); break; }
-		case  6: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT2"); break; }
-		case  7: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT3"); break; }
-		case  8: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT4"); break; }
-		case  9: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT5"); break; }
-		case 10: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT6"); break; }
-		#endif
-	}
-}
-void TriggerInputDialog::onButtonSource3Down()
-{
-	#if 1 // jungyver [16/12/19]
-	if(indexSource3 <= 1) { indexSource3 = 5; }
-	#else
-	if(indexSource3 <= 1) { indexSource3 = 11; }
-	#endif
-
-	switch(--indexSource3)
-	{
-		case  1: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   utils_cfg_cpy_item(DeviceCfg.trigger3_source, "CAM1");   break; }
-		case  2: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   utils_cfg_cpy_item(DeviceCfg.trigger3_source, "CAM2");   break; }
-		case  3: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   utils_cfg_cpy_item(DeviceCfg.trigger3_source, "CAM3");   break; }
-		case  4: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   utils_cfg_cpy_item(DeviceCfg.trigger3_source, "CAM4");   break; }
-		#if 0 // jungyver [16/12/19]
-		case  5: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT1"); break; }
-		case  6: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT2"); break; }
-		case  7: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT3"); break; }
-		case  8: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT4"); break; }
-		case  9: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT5"); break; }
-		case 10: { labelSource3->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); utils_cfg_cpy_item(DeviceCfg.trigger3_source, "SPLIT6"); break; }
-		#endif
-	}
-}
-void TriggerInputDialog::onButtonSource4Up()
-{
-	#if 1 // jungyver [16/12/19]
-	if(indexSource4 >= 4) { indexSource4 = 0; }
-	#else
-	if(indexSource4 >= 10) { indexSource4 = 0; }
-	#endif
-
-	switch(++indexSource4)
-	{
-		case  1: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   utils_cfg_cpy_item(DeviceCfg.trigger4_source, "CAM1");   break; }
-		case  2: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   utils_cfg_cpy_item(DeviceCfg.trigger4_source, "CAM2");   break; }
-		case  3: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   utils_cfg_cpy_item(DeviceCfg.trigger4_source, "CAM3");   break; }
-		case  4: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   utils_cfg_cpy_item(DeviceCfg.trigger4_source, "CAM4");   break; }
-		#if 0 // jungyver [16/12/19]
-		case  5: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT1"); break; }
-		case  6: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT2"); break; }
-		case  7: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT3"); break; }
-		case  8: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT4"); break; }
-		case  9: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT5"); break; }
-		case 10: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT6"); break; }
-		#endif
-	}
-}
-void TriggerInputDialog::onButtonSource4Down()
-{
-	#if 1 // jungyver [16/12/19]
-	if(indexSource4 <= 1) { indexSource4 = 5; }
-	#else
-	if(indexSource4 <= 1) { indexSource4 = 11; }
-	#endif
-
-	switch(--indexSource4)
-	{
-		case  1: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 1")));   utils_cfg_cpy_item(DeviceCfg.trigger4_source, "CAM1");   break; }
-		case  2: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 2")));   utils_cfg_cpy_item(DeviceCfg.trigger4_source, "CAM2");   break; }
-		case  3: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 3")));   utils_cfg_cpy_item(DeviceCfg.trigger4_source, "CAM3");   break; }
-		case  4: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("CAM 4")));   utils_cfg_cpy_item(DeviceCfg.trigger4_source, "CAM4");   break; }
-		#if 0 // jungyver [16/12/19]
-		case  5: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 1"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT1"); break; }
-		case  6: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 2"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT2"); break; }
-		case  7: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 3"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT3"); break; }
-		case  8: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 4"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT4"); break; }
-		case  9: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 5"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT5"); break; }
-		case 10: { labelSource4->setText(tr("%1\n%2").arg(tr("Source"), tr("Split 6"))); utils_cfg_cpy_item(DeviceCfg.trigger4_source, "SPLIT6"); break; }
-		#endif
-	}
-}
-void TriggerInputDialog::onButtonDelay1Up()
-{
-	if(indexDelay1 >= 21) { indexDelay1 = 0; }
-
-	switch(++indexDelay1)
-	{
-		case  1: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "0SEC");  break; }
-		case  2: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "1SEC");  break; }
-		case  3: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "2SEC");  break; }
-		case  4: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "3SEC");  break; }
-		case  5: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "4SEC");  break; }
-		case  6: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "5SEC");  break; }
-		case  7: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "6SEC");  break; }
-		case  8: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "7SEC");  break; }
-		case  9: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "8SEC");  break; }
-		case 10: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "9SEC");  break; }
-		case 11: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "10SEC"); break; }
-		case 12: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "11SEC"); break; }
-		case 13: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "12SEC"); break; }
-		case 14: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "13SEC"); break; }
-		case 15: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "14SEC"); break; }
-		case 16: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "15SEC"); break; }
-		case 17: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "16SEC"); break; }
-		case 18: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "17SEC"); break; }
-		case 19: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "18SEC"); break; }
-		case 20: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "19SEC"); break; }
-		case 21: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "20SEC"); break; }
-	}
-}
-void TriggerInputDialog::onButtonDelay1Down()
-{
-	if(indexDelay1 <= 1) { indexDelay1 = 22; }
-
-	switch(--indexDelay1)
-	{
-		case  1: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "0SEC");  break; }
-		case  2: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "1SEC");  break; }
-		case  3: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "2SEC");  break; }
-		case  4: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "3SEC");  break; }
-		case  5: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "4SEC");  break; }
-		case  6: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "5SEC");  break; }
-		case  7: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "6SEC");  break; }
-		case  8: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "7SEC");  break; }
-		case  9: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "8SEC");  break; }
-		case 10: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "9SEC");  break; }
-		case 11: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "10SEC"); break; }
-		case 12: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "11SEC"); break; }
-		case 13: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "12SEC"); break; }
-		case 14: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "13SEC"); break; }
-		case 15: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "14SEC"); break; }
-		case 16: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "15SEC"); break; }
-		case 17: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "16SEC"); break; }
-		case 18: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "17SEC"); break; }
-		case 19: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "18SEC"); break; }
-		case 20: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "19SEC"); break; }
-		case 21: { labelDelay1->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger1_delay, "20SEC"); break; }
-	}
-}
-void TriggerInputDialog::onButtonDelay2Up()
-{
-	if(indexDelay2 >= 21) { indexDelay2 = 0; }
-
-	switch(++indexDelay2)
-	{
-		case  1: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "0SEC");  break; }
-		case  2: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "1SEC");  break; }
-		case  3: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "2SEC");  break; }
-		case  4: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "3SEC");  break; }
-		case  5: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "4SEC");  break; }
-		case  6: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "5SEC");  break; }
-		case  7: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "6SEC");  break; }
-		case  8: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "7SEC");  break; }
-		case  9: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "8SEC");  break; }
-		case 10: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "9SEC");  break; }
-		case 11: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "10SEC"); break; }
-		case 12: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "11SEC"); break; }
-		case 13: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "12SEC"); break; }
-		case 14: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "13SEC"); break; }
-		case 15: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "14SEC"); break; }
-		case 16: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "15SEC"); break; }
-		case 17: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "16SEC"); break; }
-		case 18: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "17SEC"); break; }
-		case 19: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "18SEC"); break; }
-		case 20: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "19SEC"); break; }
-		case 21: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "20SEC"); break; }
-	}
-}
-void TriggerInputDialog::onButtonDelay2Down()
-{
-	if(indexDelay2 <= 1) { indexDelay2 = 22; }
-
-	switch(--indexDelay2)
-	{
-		case  1: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "0SEC");  break; }
-		case  2: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "1SEC");  break; }
-		case  3: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "2SEC");  break; }
-		case  4: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "3SEC");  break; }
-		case  5: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "4SEC");  break; }
-		case  6: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "5SEC");  break; }
-		case  7: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "6SEC");  break; }
-		case  8: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "7SEC");  break; }
-		case  9: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "8SEC");  break; }
-		case 10: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "9SEC");  break; }
-		case 11: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "10SEC"); break; }
-		case 12: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "11SEC"); break; }
-		case 13: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "12SEC"); break; }
-		case 14: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "13SEC"); break; }
-		case 15: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "14SEC"); break; }
-		case 16: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "15SEC"); break; }
-		case 17: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "16SEC"); break; }
-		case 18: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "17SEC"); break; }
-		case 19: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "18SEC"); break; }
-		case 20: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "19SEC"); break; }
-		case 21: { labelDelay2->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger2_delay, "20SEC"); break; }
-	}
-}
-void TriggerInputDialog::onButtonDelay3Up()
-{
-	if(indexDelay3 >= 21) { indexDelay3 = 0; }
-
-	switch(++indexDelay3)
-	{
-		case  1: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "0SEC");  break; }
-		case  2: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "1SEC");  break; }
-		case  3: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "2SEC");  break; }
-		case  4: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "3SEC");  break; }
-		case  5: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "4SEC");  break; }
-		case  6: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "5SEC");  break; }
-		case  7: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "6SEC");  break; }
-		case  8: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "7SEC");  break; }
-		case  9: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "8SEC");  break; }
-		case 10: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "9SEC");  break; }
-		case 11: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "10SEC"); break; }
-		case 12: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "11SEC"); break; }
-		case 13: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "12SEC"); break; }
-		case 14: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "13SEC"); break; }
-		case 15: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "14SEC"); break; }
-		case 16: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "15SEC"); break; }
-		case 17: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "16SEC"); break; }
-		case 18: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "17SEC"); break; }
-		case 19: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "18SEC"); break; }
-		case 20: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "19SEC"); break; }
-		case 21: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "20SEC"); break; }
-	}
-}
-void TriggerInputDialog::onButtonDelay3Down()
-{
-	if(indexDelay3 <= 1) { indexDelay3 = 22; }
-
-	switch(--indexDelay3)
-	{
-		case  1: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "0SEC");  break; }
-		case  2: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "1SEC");  break; }
-		case  3: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "2SEC");  break; }
-		case  4: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "3SEC");  break; }
-		case  5: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "4SEC");  break; }
-		case  6: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "5SEC");  break; }
-		case  7: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "6SEC");  break; }
-		case  8: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "7SEC");  break; }
-		case  9: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "8SEC");  break; }
-		case 10: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "9SEC");  break; }
-		case 11: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "10SEC"); break; }
-		case 12: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "11SEC"); break; }
-		case 13: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "12SEC"); break; }
-		case 14: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "13SEC"); break; }
-		case 15: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "14SEC"); break; }
-		case 16: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "15SEC"); break; }
-		case 17: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "16SEC"); break; }
-		case 18: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "17SEC"); break; }
-		case 19: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "18SEC"); break; }
-		case 20: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "19SEC"); break; }
-		case 21: { labelDelay3->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger3_delay, "20SEC"); break; }
-	}
-}
-void TriggerInputDialog::onButtonDelay4Up()
-{
-	if(indexDelay4 >= 21) { indexDelay4 = 0; }
-
-	switch(++indexDelay4)
-	{
-		case  1: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "0SEC");  break; }
-		case  2: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "1SEC");  break; }
-		case  3: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "2SEC");  break; }
-		case  4: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "3SEC");  break; }
-		case  5: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "4SEC");  break; }
-		case  6: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "5SEC");  break; }
-		case  7: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "6SEC");  break; }
-		case  8: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "7SEC");  break; }
-		case  9: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "8SEC");  break; }
-		case 10: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "9SEC");  break; }
-		case 11: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "10SEC"); break; }
-		case 12: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "11SEC"); break; }
-		case 13: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "12SEC"); break; }
-		case 14: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "13SEC"); break; }
-		case 15: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "14SEC"); break; }
-		case 16: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "15SEC"); break; }
-		case 17: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "16SEC"); break; }
-		case 18: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "17SEC"); break; }
-		case 19: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "18SEC"); break; }
-		case 20: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "19SEC"); break; }
-		case 21: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "20SEC"); break; }
-	}
-}
-void TriggerInputDialog::onButtonDelay4Down()
-{
-	if(indexDelay4 <= 1) { indexDelay4 = 22; }
-
-	switch(--indexDelay4)
-	{
-		case  1: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("0 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "0SEC");  break; }
-		case  2: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("1 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "1SEC");  break; }
-		case  3: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("2 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "2SEC");  break; }
-		case  4: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("3 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "3SEC");  break; }
-		case  5: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("4 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "4SEC");  break; }
-		case  6: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("5 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "5SEC");  break; }
-		case  7: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("6 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "6SEC");  break; }
-		case  8: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("7 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "7SEC");  break; }
-		case  9: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("8 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "8SEC");  break; }
-		case 10: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("9 sec")));  utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "9SEC");  break; }
-		case 11: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("10 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "10SEC"); break; }
-		case 12: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("11 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "11SEC"); break; }
-		case 13: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("12 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "12SEC"); break; }
-		case 14: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("13 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "13SEC"); break; }
-		case 15: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("14 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "14SEC"); break; }
-		case 16: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("15 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "15SEC"); break; }
-		case 17: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("16 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "16SEC"); break; }
-		case 18: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("17 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "17SEC"); break; }
-		case 19: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("18 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "18SEC"); break; }
-		case 20: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("19 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "19SEC"); break; }
-		case 21: { labelDelay4->setText(tr("%1\n%2").arg(tr("Delay"), tr("20 sec"))); utils_cfg_cpy_item(DeviceCfg.trigger4_delay, "20SEC"); break; }
-	}
-}
-void TriggerInputDialog::onButtonPriority1Up()
-{
-	if(indexPriority1 >= 4) { indexPriority1 = 0; }
-	switch(++indexPriority1)
-	{
-		case  1: { labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); utils_cfg_cpy_item(DeviceCfg.trigger1_priority, "01");   break; }
-		case  2: { labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); utils_cfg_cpy_item(DeviceCfg.trigger1_priority, "02");   break; }
-		case  3: { labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); utils_cfg_cpy_item(DeviceCfg.trigger1_priority, "03");   break; }
-		case  4: { labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); utils_cfg_cpy_item(DeviceCfg.trigger1_priority, "04");   break; }
-    }
-}
-void TriggerInputDialog::onButtonPriority1Down()
-{
-	if(indexPriority1 <= 1) { indexPriority1 = 5; }
-	switch(--indexPriority1)
-	{
-		case  1: { labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); utils_cfg_cpy_item(DeviceCfg.trigger1_priority, "01");   break; }
-		case  2: { labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); utils_cfg_cpy_item(DeviceCfg.trigger1_priority, "02");   break; }
-		case  3: { labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); utils_cfg_cpy_item(DeviceCfg.trigger1_priority, "03");   break; }
-		case  4: { labelPriority1->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); utils_cfg_cpy_item(DeviceCfg.trigger1_priority, "04");   break; }
-    }
-}
-void TriggerInputDialog::onButtonPriority2Up()
-{
-	if(indexPriority2 >= 4) { indexPriority2 = 0; }
-	switch(++indexPriority2)
-	{
-		case  1: { labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); utils_cfg_cpy_item(DeviceCfg.trigger2_priority, "01");   break; }
-		case  2: { labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); utils_cfg_cpy_item(DeviceCfg.trigger2_priority, "02");   break; }
-		case  3: { labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); utils_cfg_cpy_item(DeviceCfg.trigger2_priority, "03");   break; }
-		case  4: { labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); utils_cfg_cpy_item(DeviceCfg.trigger2_priority, "04");   break; }
-    }
-}
-void TriggerInputDialog::onButtonPriority2Down()
-{
-	if(indexPriority2 <= 1) { indexPriority2 = 5; }
-	switch(--indexPriority2)
-	{
-		case  1: { labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); utils_cfg_cpy_item(DeviceCfg.trigger2_priority, "01");   break; }
-		case  2: { labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); utils_cfg_cpy_item(DeviceCfg.trigger2_priority, "02");   break; }
-		case  3: { labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); utils_cfg_cpy_item(DeviceCfg.trigger2_priority, "03");   break; }
-		case  4: { labelPriority2->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); utils_cfg_cpy_item(DeviceCfg.trigger2_priority, "04");   break; }
-    }
-}
-void TriggerInputDialog::onButtonPriority3Up()
-{
-	if(indexPriority3 >= 4) { indexPriority3 = 0; }
-	switch(++indexPriority3)
-	{
-		case  1: { labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); utils_cfg_cpy_item(DeviceCfg.trigger3_priority, "01");   break; }
-		case  2: { labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); utils_cfg_cpy_item(DeviceCfg.trigger3_priority, "02");   break; }
-		case  3: { labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); utils_cfg_cpy_item(DeviceCfg.trigger3_priority, "03");   break; }
-		case  4: { labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); utils_cfg_cpy_item(DeviceCfg.trigger3_priority, "04");   break; }
-    }
-}
-void TriggerInputDialog::onButtonPriority3Down()
-{
-	if(indexPriority3 <= 1) { indexPriority3 = 5; }
-	switch(--indexPriority3)
-	{
-		case  1: { labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); utils_cfg_cpy_item(DeviceCfg.trigger3_priority, "01");   break; }
-		case  2: { labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); utils_cfg_cpy_item(DeviceCfg.trigger3_priority, "02");   break; }
-		case  3: { labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); utils_cfg_cpy_item(DeviceCfg.trigger3_priority, "03");   break; }
-		case  4: { labelPriority3->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); utils_cfg_cpy_item(DeviceCfg.trigger3_priority, "04");   break; }
-    }
-}
-void TriggerInputDialog::onButtonPriority4Up()
-{
-	if(indexPriority4 >= 4) { indexPriority4 = 0; }
-	switch(++indexPriority4)
-	{
-		case  1: { labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); utils_cfg_cpy_item(DeviceCfg.trigger4_priority, "01");   break; }
-		case  2: { labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); utils_cfg_cpy_item(DeviceCfg.trigger4_priority, "02");   break; }
-		case  3: { labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); utils_cfg_cpy_item(DeviceCfg.trigger4_priority, "03");   break; }
-		case  4: { labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); utils_cfg_cpy_item(DeviceCfg.trigger4_priority, "04");   break; }
-    }
-}
-void TriggerInputDialog::onButtonPriority4Down()
-{
-	if(indexPriority4 <= 1) { indexPriority4 = 5; }
-	switch(--indexPriority4)
-	{
-		case  1: { labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("1"))); utils_cfg_cpy_item(DeviceCfg.trigger4_priority, "01");   break; }
-		case  2: { labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("2"))); utils_cfg_cpy_item(DeviceCfg.trigger4_priority, "02");   break; }
-		case  3: { labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("3"))); utils_cfg_cpy_item(DeviceCfg.trigger4_priority, "03");   break; }
-		case  4: { labelPriority4->setText(tr("%1\n%2").arg(tr("Priority"), tr("4"))); utils_cfg_cpy_item(DeviceCfg.trigger4_priority, "04");   break; }
-    }
-}
-void TriggerInputDialog::onButtonAudio1Up()
-{
-    triggerAudio1=!triggerAudio1;
-    switch(triggerAudio1)
+    for(int i=0; i<NUMOFCH; i++)
     {
-        case 0: { labelAudio1->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));      utils_cfg_cpy_item(DeviceCfg.trigger1_audio, "MUTE");   break; }
-        case 1: { labelAudio1->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));    utils_cfg_cpy_item(DeviceCfg.trigger1_audio, "OUTPUT"); break; }
+         infoSource[i]=i+1;
+         infoDelay[i]=2;
+         infoPriority[i]=i+1;
+         infoAudio[i]=true;
+
+         updateSourceLabel(i);
+         updateDelayLabel(i);
+         updatePriorityLabel(i);
+         updateAudioLabel(i);
     }
 }
-void TriggerInputDialog::onButtonAudio1Down()
-{
-    triggerAudio1=!triggerAudio1;
-    switch(triggerAudio1)
-    {
-        case 0: { labelAudio1->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));      utils_cfg_cpy_item(DeviceCfg.trigger1_audio, "MUTE");   break; }
-        case 1: { labelAudio1->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));    utils_cfg_cpy_item(DeviceCfg.trigger1_audio, "OUTPUT"); break; }
-    }
-}
-void TriggerInputDialog::onButtonAudio2Up()
-{
-    triggerAudio2=!triggerAudio2;
-    switch(triggerAudio2)
-    {
-        case 0: { labelAudio2->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));      utils_cfg_cpy_item(DeviceCfg.trigger2_audio, "MUTE");   break; }
-        case 1: { labelAudio2->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));    utils_cfg_cpy_item(DeviceCfg.trigger2_audio, "OUTPUT"); break; }
-    }
-}
-void TriggerInputDialog::onButtonAudio2Down()
-{
-    triggerAudio2=!triggerAudio2;
-    switch(triggerAudio2)
-    {
-        case 0: { labelAudio2->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));      utils_cfg_cpy_item(DeviceCfg.trigger2_audio, "MUTE");   break; }
-        case 1: { labelAudio2->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));    utils_cfg_cpy_item(DeviceCfg.trigger2_audio, "OUTPUT"); break; }
-    }
-}
-void TriggerInputDialog::onButtonAudio3Up()
-{
-    triggerAudio3=!triggerAudio3;
-    switch(triggerAudio3)
-    {
-        case 0: { labelAudio3->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));      utils_cfg_cpy_item(DeviceCfg.trigger3_audio, "MUTE");   break; }
-        case 1: { labelAudio3->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));    utils_cfg_cpy_item(DeviceCfg.trigger3_audio, "OUTPUT"); break; }
-    }
-}
-void TriggerInputDialog::onButtonAudio3Down()
-{
-    triggerAudio3=!triggerAudio3;
-    switch(triggerAudio3)
-    {
-        case 0: { labelAudio3->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));      utils_cfg_cpy_item(DeviceCfg.trigger3_audio, "MUTE");   break; }
-        case 1: { labelAudio3->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));    utils_cfg_cpy_item(DeviceCfg.trigger3_audio, "OUTPUT"); break; }
-    }
-}
-void TriggerInputDialog::onButtonAudio4Up()
-{
-    triggerAudio4=!triggerAudio4;
-    switch(triggerAudio4)
-    {
-        case 0: { labelAudio4->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));      utils_cfg_cpy_item(DeviceCfg.trigger4_audio, "MUTE");   break; }
-        case 1: { labelAudio4->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));    utils_cfg_cpy_item(DeviceCfg.trigger4_audio, "OUTPUT"); break; }
-    }
-}
-void TriggerInputDialog::onButtonAudio4Down()
-{
-    triggerAudio4=!triggerAudio4;
-    switch(triggerAudio4)
-    {
-        case 0: { labelAudio4->setText(tr("%1\n%2").arg(tr("Audio"), tr("Mute")));      utils_cfg_cpy_item(DeviceCfg.trigger4_audio, "MUTE");   break; }
-        case 1: { labelAudio4->setText(tr("%1\n%2").arg(tr("Audio"), tr("Output")));    utils_cfg_cpy_item(DeviceCfg.trigger4_audio, "OUTPUT"); break; }
-    }
-}
+
 void TriggerInputDialog::keyPressEvent(QKeyEvent *event)
 {
     switch(event->key())
     {
         case Qt::Key_Up:
         {
-                 if(buttonSource1Up->hasFocus())               { buttonDefault->setFocus();             }
-            else if(buttonSource1Down->hasFocus())             { buttonSource1Up->setFocus();           }
-            else if(buttonPriority1Up->hasFocus())             { buttonSource1Down->setFocus();         }
-            else if(buttonPriority1Down->hasFocus())           { buttonPriority1Up->setFocus();         }
-            else if(buttonDelay1Up->hasFocus())                { buttonDefault->setFocus();             }
-            else if(buttonDelay1Down->hasFocus())              { buttonDelay1Up->setFocus();            }
-            else if(buttonAudio1Up->hasFocus())                { buttonDelay1Down->setFocus();          }
-            else if(buttonAudio1Down->hasFocus())              { buttonAudio1Up->setFocus();            }
+            if     ( buttonSourceDn[0]->hasFocus()   )      { buttonDefault->setFocus();       }
+            else if( buttonSourceDn[1]->hasFocus()   )      { buttonSourceDn[0]->setFocus();   }
+            else if( buttonSourceDn[2]->hasFocus()   )      { buttonSourceDn[1]->setFocus();   }
+            else if( buttonSourceDn[3]->hasFocus()   )      { buttonSourceDn[2]->setFocus();   }
+            else if( buttonSourceDn[4]->hasFocus()   )      { buttonSourceDn[3]->setFocus();   }
+            else if( buttonSourceDn[5]->hasFocus()   )      { buttonSourceDn[4]->setFocus();   }
+            else if( buttonSourceDn[6]->hasFocus()   )      { buttonSourceDn[5]->setFocus();   }
+            else if( buttonSourceDn[7]->hasFocus()   )      { buttonSourceDn[6]->setFocus();   }
 
-            else if(buttonSource2Up->hasFocus())               { buttonSave->setFocus();                }
-            else if(buttonSource2Down->hasFocus())             { buttonSource2Up->setFocus();           }
-            else if(buttonPriority2Up->hasFocus())             { buttonSource2Down->setFocus();         }
-            else if(buttonPriority2Down->hasFocus())           { buttonPriority2Up->setFocus();         }
-            else if(buttonDelay2Up->hasFocus())                { buttonClose->setFocus();               }
-            else if(buttonDelay2Down->hasFocus())              { buttonDelay2Up->setFocus();            }
-            else if(buttonAudio2Up->hasFocus())                { buttonDelay2Down->setFocus();          }
-            else if(buttonAudio2Down->hasFocus())              { buttonAudio2Up->setFocus();            }
+            else if( buttonSourceUp[0]->hasFocus()   )      { buttonDefault->setFocus();       }
+            else if( buttonSourceUp[1]->hasFocus()   )      { buttonSourceUp[0]->setFocus();   }
+            else if( buttonSourceUp[2]->hasFocus()   )      { buttonSourceUp[1]->setFocus();   }
+            else if( buttonSourceUp[3]->hasFocus()   )      { buttonSourceUp[2]->setFocus();   }
+            else if( buttonSourceUp[4]->hasFocus()   )      { buttonSourceUp[3]->setFocus();   }
+            else if( buttonSourceUp[5]->hasFocus()   )      { buttonSourceUp[4]->setFocus();   }
+            else if( buttonSourceUp[6]->hasFocus()   )      { buttonSourceUp[5]->setFocus();   }
+            else if( buttonSourceUp[7]->hasFocus()   )      { buttonSourceUp[6]->setFocus();   }
 
-            else if(buttonSource3Up->hasFocus())               { buttonPriority1Down->setFocus();       }
-            else if(buttonSource3Down->hasFocus())             { buttonSource3Up->setFocus();           }
-            else if(buttonPriority3Up->hasFocus())             { buttonSource3Down->setFocus();         }
-            else if(buttonPriority3Down->hasFocus())           { buttonPriority3Up->setFocus();         }
-            else if(buttonDelay3Up->hasFocus())                { buttonAudio1Down->setFocus();          }
-            else if(buttonDelay3Down->hasFocus())              { buttonDelay3Up->setFocus();            }
-            else if(buttonAudio3Up->hasFocus())                { buttonDelay3Down->setFocus();          }
-            else if(buttonAudio3Down->hasFocus())              { buttonAudio3Up->setFocus();            }
+            else if( buttonDelayDn[0]->hasFocus()    )      { buttonDelayDn[7]->setFocus();    }
+            else if( buttonDelayDn[1]->hasFocus()    )      { buttonDelayDn[0]->setFocus();    }
+            else if( buttonDelayDn[2]->hasFocus()    )      { buttonDelayDn[1]->setFocus();    }
+            else if( buttonDelayDn[3]->hasFocus()    )      { buttonDelayDn[2]->setFocus();    }
+            else if( buttonDelayDn[4]->hasFocus()    )      { buttonDelayDn[3]->setFocus();    }
+            else if( buttonDelayDn[5]->hasFocus()    )      { buttonDelayDn[4]->setFocus();    }
+            else if( buttonDelayDn[6]->hasFocus()    )      { buttonDelayDn[5]->setFocus();    }
+            else if( buttonDelayDn[7]->hasFocus()    )      { buttonDelayDn[6]->setFocus();    }
 
-            else if(buttonSource4Up->hasFocus())               { buttonPriority2Down->setFocus();       }
-            else if(buttonSource4Down->hasFocus())             { buttonSource4Up->setFocus();           }
-            else if(buttonPriority4Up->hasFocus())             { buttonSource4Down->setFocus();         }
-            else if(buttonPriority4Down->hasFocus())           { buttonPriority4Up->setFocus();         }
-            else if(buttonDelay4Up->hasFocus())                { buttonAudio2Down->setFocus();          }
-            else if(buttonDelay4Down->hasFocus())              { buttonDelay4Up->setFocus();            }
-            else if(buttonAudio4Up->hasFocus())                { buttonDelay4Down->setFocus();          }
-            else if(buttonAudio4Down->hasFocus())              { buttonAudio4Up->setFocus();            }
+            else if( buttonDelayUp[0]->hasFocus()    )      { buttonDelayUp[7]->setFocus();    }
+            else if( buttonDelayUp[1]->hasFocus()    )      { buttonDelayUp[0]->setFocus();    }
+            else if( buttonDelayUp[2]->hasFocus()    )      { buttonDelayUp[1]->setFocus();    }
+            else if( buttonDelayUp[3]->hasFocus()    )      { buttonDelayUp[2]->setFocus();    }
+            else if( buttonDelayUp[4]->hasFocus()    )      { buttonDelayUp[3]->setFocus();    }
+            else if( buttonDelayUp[5]->hasFocus()    )      { buttonDelayUp[4]->setFocus();    }
+            else if( buttonDelayUp[6]->hasFocus()    )      { buttonDelayUp[5]->setFocus();    }
+            else if( buttonDelayUp[7]->hasFocus()    )      { buttonDelayUp[6]->setFocus();    }
 
-            else if(buttonDefault->hasFocus())                 { buttonPriority3Down->setFocus();       }
-            else if(buttonSave->hasFocus())                    { buttonPriority4Down->setFocus();       }
-            else if(buttonClose->hasFocus())                   { buttonAudio4Down->setFocus();          }
+            else if( buttonPriorityDn[0]->hasFocus() )      { buttonSave->setFocus();          }
+            else if( buttonPriorityDn[1]->hasFocus() )      { buttonPriorityDn[0]->setFocus(); }
+            else if( buttonPriorityDn[2]->hasFocus() )      { buttonPriorityDn[1]->setFocus(); }
+            else if( buttonPriorityDn[3]->hasFocus() )      { buttonPriorityDn[2]->setFocus(); }
+            else if( buttonPriorityDn[4]->hasFocus() )      { buttonPriorityDn[3]->setFocus(); }
+            else if( buttonPriorityDn[5]->hasFocus() )      { buttonPriorityDn[4]->setFocus(); }
+            else if( buttonPriorityDn[6]->hasFocus() )      { buttonPriorityDn[5]->setFocus(); }
+            else if( buttonPriorityDn[7]->hasFocus() )      { buttonPriorityDn[6]->setFocus(); }
 
-            return;
+            else if( buttonPriorityUp[0]->hasFocus() )      { buttonSave->setFocus();          }
+            else if( buttonPriorityUp[1]->hasFocus() )      { buttonPriorityUp[0]->setFocus(); }
+            else if( buttonPriorityUp[2]->hasFocus() )      { buttonPriorityUp[1]->setFocus(); }
+            else if( buttonPriorityUp[3]->hasFocus() )      { buttonPriorityUp[2]->setFocus(); }
+            else if( buttonPriorityUp[4]->hasFocus() )      { buttonPriorityUp[3]->setFocus(); }
+            else if( buttonPriorityUp[5]->hasFocus() )      { buttonPriorityUp[4]->setFocus(); }
+            else if( buttonPriorityUp[6]->hasFocus() )      { buttonPriorityUp[5]->setFocus(); }
+            else if( buttonPriorityUp[7]->hasFocus() )      { buttonPriorityUp[6]->setFocus(); }
+
+            else if( buttonAudioDn[0]->hasFocus()    )      { buttonClose->setFocus();         }
+            else if( buttonAudioDn[1]->hasFocus()    )      { buttonAudioDn[0]->setFocus();    }
+            else if( buttonAudioDn[2]->hasFocus()    )      { buttonAudioDn[1]->setFocus();    }
+            else if( buttonAudioDn[3]->hasFocus()    )      { buttonAudioDn[2]->setFocus();    }
+            else if( buttonAudioDn[4]->hasFocus()    )      { buttonAudioDn[3]->setFocus();    }
+            else if( buttonAudioDn[5]->hasFocus()    )      { buttonAudioDn[4]->setFocus();    }
+            else if( buttonAudioDn[6]->hasFocus()    )      { buttonAudioDn[5]->setFocus();    }
+            else if( buttonAudioDn[7]->hasFocus()    )      { buttonAudioDn[6]->setFocus();    }
+
+            else if( buttonAudioUp[0]->hasFocus()    )      { buttonClose->setFocus();         }
+            else if( buttonAudioUp[1]->hasFocus()    )      { buttonAudioUp[0]->setFocus();    }
+            else if( buttonAudioUp[2]->hasFocus()    )      { buttonAudioUp[1]->setFocus();    }
+            else if( buttonAudioUp[3]->hasFocus()    )      { buttonAudioUp[2]->setFocus();    }
+            else if( buttonAudioUp[4]->hasFocus()    )      { buttonAudioUp[3]->setFocus();    }
+            else if( buttonAudioUp[5]->hasFocus()    )      { buttonAudioUp[4]->setFocus();    }
+            else if( buttonAudioUp[6]->hasFocus()    )      { buttonAudioUp[5]->setFocus();    }
+            else if( buttonAudioUp[7]->hasFocus()    )      { buttonAudioUp[6]->setFocus();    }
+
+            else if( buttonDefault->hasFocus()       )      { buttonSourceDn[7]->setFocus();   }
+            else if( buttonSave->hasFocus()          )      { buttonPriorityDn[7]->setFocus(); }
+            else if( buttonClose->hasFocus()         )      { buttonAudioDn[7]->setFocus();    }
+
+            break;
         }
         case Qt::Key_Down:
         {
-                 if(buttonSource1Up->hasFocus())               { buttonSource1Down->setFocus();         }
-            else if(buttonSource1Down->hasFocus())             { buttonPriority1Up->setFocus();         }
-            else if(buttonPriority1Up->hasFocus())             { buttonPriority1Down->setFocus();       }
-            else if(buttonPriority1Down->hasFocus())           { buttonSource3Up->setFocus();           }
-            else if(buttonDelay1Up->hasFocus())                { buttonDelay1Down->setFocus();          }
-            else if(buttonDelay1Down->hasFocus())              { buttonAudio1Up->setFocus();            }
-            else if(buttonAudio1Up->hasFocus())                { buttonAudio1Down->setFocus();          }
-            else if(buttonAudio1Down->hasFocus())              { buttonDelay3Up->setFocus();            }
+            if     ( buttonSourceDn[0]->hasFocus()   )      { buttonSourceDn[1]->setFocus();   }
+            else if( buttonSourceDn[1]->hasFocus()   )      { buttonSourceDn[2]->setFocus();   }
+            else if( buttonSourceDn[2]->hasFocus()   )      { buttonSourceDn[3]->setFocus();   }
+            else if( buttonSourceDn[3]->hasFocus()   )      { buttonSourceDn[4]->setFocus();   }
+            else if( buttonSourceDn[4]->hasFocus()   )      { buttonSourceDn[5]->setFocus();   }
+            else if( buttonSourceDn[5]->hasFocus()   )      { buttonSourceDn[6]->setFocus();   }
+            else if( buttonSourceDn[6]->hasFocus()   )      { buttonSourceDn[7]->setFocus();   }
+            else if( buttonSourceDn[7]->hasFocus()   )      { buttonDefault->setFocus();       }
 
-            else if(buttonSource2Up->hasFocus())               { buttonSource2Down->setFocus();         }
-            else if(buttonSource2Down->hasFocus())             { buttonPriority2Up->setFocus();         }
-            else if(buttonPriority2Up->hasFocus())             { buttonPriority2Down->setFocus();       }
-            else if(buttonPriority2Down->hasFocus())           { buttonSource4Up->setFocus();           }
-            else if(buttonDelay2Up->hasFocus())                { buttonDelay2Down->setFocus();          }
-            else if(buttonDelay2Down->hasFocus())              { buttonAudio2Up->setFocus();            }
-            else if(buttonAudio2Up->hasFocus())                { buttonAudio2Down->setFocus();          }
-            else if(buttonAudio2Down->hasFocus())              { buttonDelay4Up->setFocus();            }
+            else if( buttonSourceUp[0]->hasFocus()   )      { buttonSourceUp[1]->setFocus();   }
+            else if( buttonSourceUp[1]->hasFocus()   )      { buttonSourceUp[2]->setFocus();   }
+            else if( buttonSourceUp[2]->hasFocus()   )      { buttonSourceUp[3]->setFocus();   }
+            else if( buttonSourceUp[3]->hasFocus()   )      { buttonSourceUp[4]->setFocus();   }
+            else if( buttonSourceUp[4]->hasFocus()   )      { buttonSourceUp[5]->setFocus();   }
+            else if( buttonSourceUp[5]->hasFocus()   )      { buttonSourceUp[6]->setFocus();   }
+            else if( buttonSourceUp[6]->hasFocus()   )      { buttonSourceUp[7]->setFocus();   }
+            else if( buttonSourceUp[7]->hasFocus()   )      { buttonDefault->setFocus();       }
 
-            else if(buttonSource3Up->hasFocus())               { buttonSource3Down->setFocus();         }
-            else if(buttonSource3Down->hasFocus())             { buttonPriority3Up->setFocus();         }
-            else if(buttonPriority3Up->hasFocus())             { buttonPriority3Down->setFocus();       }
-            else if(buttonPriority3Down->hasFocus())           { buttonDefault->setFocus();             }
-            else if(buttonDelay3Up->hasFocus())                { buttonDelay3Down->setFocus();          }
-            else if(buttonDelay3Down->hasFocus())              { buttonAudio3Up->setFocus();            }
-            else if(buttonAudio3Up->hasFocus())                { buttonAudio3Down->setFocus();          }
-            else if(buttonAudio3Down->hasFocus())              { buttonDefault->setFocus();             }
+            else if( buttonDelayDn[0]->hasFocus()    )      { buttonDelayDn[1]->setFocus();    }
+            else if( buttonDelayDn[1]->hasFocus()    )      { buttonDelayDn[2]->setFocus();    }
+            else if( buttonDelayDn[2]->hasFocus()    )      { buttonDelayDn[3]->setFocus();    }
+            else if( buttonDelayDn[3]->hasFocus()    )      { buttonDelayDn[4]->setFocus();    }
+            else if( buttonDelayDn[4]->hasFocus()    )      { buttonDelayDn[5]->setFocus();    }
+            else if( buttonDelayDn[5]->hasFocus()    )      { buttonDelayDn[6]->setFocus();    }
+            else if( buttonDelayDn[6]->hasFocus()    )      { buttonDelayDn[7]->setFocus();    }
+            else if( buttonDelayDn[7]->hasFocus()    )      { buttonDelayDn[0]->setFocus();    }
 
-            else if(buttonSource4Up->hasFocus())               { buttonSource4Down->setFocus();         }
-            else if(buttonSource4Down->hasFocus())             { buttonPriority4Up->setFocus();         }
-            else if(buttonPriority4Up->hasFocus())             { buttonPriority4Down->setFocus();       }
-            else if(buttonPriority4Down->hasFocus())           { buttonSave->setFocus();                }
-            else if(buttonDelay4Up->hasFocus())                { buttonDelay4Down->setFocus();          }
-            else if(buttonDelay4Down->hasFocus())              { buttonAudio4Up->setFocus();            }
-            else if(buttonAudio4Up->hasFocus())                { buttonAudio4Down->setFocus();          }
-            else if(buttonAudio4Down->hasFocus())              { buttonClose->setFocus();               }
+            else if( buttonDelayUp[0]->hasFocus()    )      { buttonDelayUp[1]->setFocus();    }
+            else if( buttonDelayUp[1]->hasFocus()    )      { buttonDelayUp[2]->setFocus();    }
+            else if( buttonDelayUp[2]->hasFocus()    )      { buttonDelayUp[3]->setFocus();    }
+            else if( buttonDelayUp[3]->hasFocus()    )      { buttonDelayUp[4]->setFocus();    }
+            else if( buttonDelayUp[4]->hasFocus()    )      { buttonDelayUp[5]->setFocus();    }
+            else if( buttonDelayUp[5]->hasFocus()    )      { buttonDelayUp[6]->setFocus();    }
+            else if( buttonDelayUp[6]->hasFocus()    )      { buttonDelayUp[7]->setFocus();    }
+            else if( buttonDelayUp[7]->hasFocus()    )      { buttonDelayUp[0]->setFocus();    }
 
-            else if(buttonDefault->hasFocus())                 { buttonSource1Up->setFocus();           }
-            else if(buttonSave->hasFocus())                    { buttonSource2Up->setFocus();           }
-            else if(buttonClose->hasFocus())                   { buttonDelay2Up->setFocus();            }
+            else if( buttonPriorityDn[0]->hasFocus() )      { buttonPriorityDn[1]->setFocus(); }
+            else if( buttonPriorityDn[1]->hasFocus() )      { buttonPriorityDn[2]->setFocus(); }
+            else if( buttonPriorityDn[2]->hasFocus() )      { buttonPriorityDn[3]->setFocus(); }
+            else if( buttonPriorityDn[3]->hasFocus() )      { buttonPriorityDn[4]->setFocus(); }
+            else if( buttonPriorityDn[4]->hasFocus() )      { buttonPriorityDn[5]->setFocus(); }
+            else if( buttonPriorityDn[5]->hasFocus() )      { buttonPriorityDn[6]->setFocus(); }
+            else if( buttonPriorityDn[6]->hasFocus() )      { buttonPriorityDn[7]->setFocus(); }
+            else if( buttonPriorityDn[7]->hasFocus() )      { buttonSave->setFocus();          }
 
-            return;
+            else if( buttonPriorityUp[0]->hasFocus() )      { buttonPriorityUp[1]->setFocus(); }
+            else if( buttonPriorityUp[1]->hasFocus() )      { buttonPriorityUp[2]->setFocus(); }
+            else if( buttonPriorityUp[2]->hasFocus() )      { buttonPriorityUp[3]->setFocus(); }
+            else if( buttonPriorityUp[3]->hasFocus() )      { buttonPriorityUp[4]->setFocus(); }
+            else if( buttonPriorityUp[4]->hasFocus() )      { buttonPriorityUp[5]->setFocus(); }
+            else if( buttonPriorityUp[5]->hasFocus() )      { buttonPriorityUp[6]->setFocus(); }
+            else if( buttonPriorityUp[6]->hasFocus() )      { buttonPriorityUp[7]->setFocus(); }
+            else if( buttonPriorityUp[7]->hasFocus() )      { buttonSave->setFocus();          }
+
+            else if( buttonAudioDn[0]->hasFocus()    )      { buttonAudioDn[1]->setFocus();    }
+            else if( buttonAudioDn[1]->hasFocus()    )      { buttonAudioDn[2]->setFocus();    }
+            else if( buttonAudioDn[2]->hasFocus()    )      { buttonAudioDn[3]->setFocus();    }
+            else if( buttonAudioDn[3]->hasFocus()    )      { buttonAudioDn[4]->setFocus();    }
+            else if( buttonAudioDn[4]->hasFocus()    )      { buttonAudioDn[5]->setFocus();    }
+            else if( buttonAudioDn[5]->hasFocus()    )      { buttonAudioDn[6]->setFocus();    }
+            else if( buttonAudioDn[6]->hasFocus()    )      { buttonAudioDn[7]->setFocus();    }
+            else if( buttonAudioDn[7]->hasFocus()    )      { buttonClose->setFocus();         }
+
+            else if( buttonAudioUp[0]->hasFocus()    )      { buttonAudioUp[1]->setFocus();    }
+            else if( buttonAudioUp[1]->hasFocus()    )      { buttonAudioUp[2]->setFocus();    }
+            else if( buttonAudioUp[2]->hasFocus()    )      { buttonAudioUp[3]->setFocus();    }
+            else if( buttonAudioUp[3]->hasFocus()    )      { buttonAudioUp[4]->setFocus();    }
+            else if( buttonAudioUp[4]->hasFocus()    )      { buttonAudioUp[5]->setFocus();    }
+            else if( buttonAudioUp[5]->hasFocus()    )      { buttonAudioUp[6]->setFocus();    }
+            else if( buttonAudioUp[6]->hasFocus()    )      { buttonAudioUp[7]->setFocus();    }
+            else if( buttonAudioUp[7]->hasFocus()    )      { buttonClose->setFocus();         }
+
+            else if( buttonDefault->hasFocus()       )      { buttonSourceDn[0]->setFocus();   }
+            else if( buttonSave->hasFocus()          )      { buttonPriorityDn[0]->setFocus(); }
+            else if( buttonClose->hasFocus()         )      { buttonAudioDn[0]->setFocus();    }
+
+            break;
         }
         case Qt::Key_Left:
         {
-                 if(buttonSource1Up->hasFocus())               { buttonDelay2Up->setFocus();            }
-            else if(buttonSource1Down->hasFocus())             { buttonDelay2Down->setFocus();          }
-            else if(buttonPriority1Up->hasFocus())             { buttonAudio2Up->setFocus();            }
-            else if(buttonPriority1Down->hasFocus())           { buttonAudio2Down->setFocus();          }
-            else if(buttonDelay1Up->hasFocus())                { buttonSource1Up->setFocus();           }
-            else if(buttonDelay1Down->hasFocus())              { buttonSource1Down->setFocus();         }
-            else if(buttonAudio1Up->hasFocus())                { buttonPriority1Up->setFocus();         }
-            else if(buttonAudio1Down->hasFocus())              { buttonPriority1Down->setFocus();       }
+            if     ( buttonSourceDn[0]->hasFocus()   )      { buttonAudioUp[0]->setFocus();    }
+            else if( buttonSourceDn[1]->hasFocus()   )      { buttonAudioUp[1]->setFocus();    }
+            else if( buttonSourceDn[2]->hasFocus()   )      { buttonAudioUp[2]->setFocus();    }
+            else if( buttonSourceDn[3]->hasFocus()   )      { buttonAudioUp[3]->setFocus();    }
+            else if( buttonSourceDn[4]->hasFocus()   )      { buttonAudioUp[4]->setFocus();    }
+            else if( buttonSourceDn[5]->hasFocus()   )      { buttonAudioUp[5]->setFocus();    }
+            else if( buttonSourceDn[6]->hasFocus()   )      { buttonAudioUp[6]->setFocus();    }
+            else if( buttonSourceDn[7]->hasFocus()   )      { buttonAudioUp[7]->setFocus();    }
 
-            else if(buttonSource2Up->hasFocus())               { buttonDelay1Up->setFocus();            }
-            else if(buttonSource2Down->hasFocus())             { buttonDelay1Down->setFocus();          }
-            else if(buttonPriority2Up->hasFocus())             { buttonAudio1Up->setFocus();            }
-            else if(buttonPriority2Down->hasFocus())           { buttonAudio1Down->setFocus();          }
-            else if(buttonDelay2Up->hasFocus())                { buttonSource2Up->setFocus();           }
-            else if(buttonDelay2Down->hasFocus())              { buttonSource2Down->setFocus();         }
-            else if(buttonAudio2Up->hasFocus())                { buttonPriority2Up->setFocus();         }
-            else if(buttonAudio2Down->hasFocus())              { buttonPriority2Down->setFocus();       }
+            else if( buttonSourceUp[0]->hasFocus()   )      { buttonSourceDn[0]->setFocus();   }
+            else if( buttonSourceUp[1]->hasFocus()   )      { buttonSourceDn[1]->setFocus();   }
+            else if( buttonSourceUp[2]->hasFocus()   )      { buttonSourceDn[2]->setFocus();   }
+            else if( buttonSourceUp[3]->hasFocus()   )      { buttonSourceDn[3]->setFocus();   }
+            else if( buttonSourceUp[4]->hasFocus()   )      { buttonSourceDn[4]->setFocus();   }
+            else if( buttonSourceUp[5]->hasFocus()   )      { buttonSourceDn[5]->setFocus();   }
+            else if( buttonSourceUp[6]->hasFocus()   )      { buttonSourceDn[6]->setFocus();   }
+            else if( buttonSourceUp[7]->hasFocus()   )      { buttonSourceDn[7]->setFocus();   }
 
-            else if(buttonSource3Up->hasFocus())               { buttonDelay4Up->setFocus();            }
-            else if(buttonSource3Down->hasFocus())             { buttonDelay4Down->setFocus();          }
-            else if(buttonPriority3Up->hasFocus())             { buttonAudio4Up->setFocus();            }
-            else if(buttonPriority3Down->hasFocus())           { buttonAudio4Down->setFocus();          }
-            else if(buttonDelay3Up->hasFocus())                { buttonSource3Up->setFocus();           }
-            else if(buttonDelay3Down->hasFocus())              { buttonSource3Down->setFocus();         }
-            else if(buttonAudio3Up->hasFocus())                { buttonPriority3Up->setFocus();         }
-            else if(buttonAudio3Down->hasFocus())              { buttonPriority3Down->setFocus();       }
+            else if( buttonDelayDn[0]->hasFocus()    )      { buttonSourceUp[0]->setFocus();   }
+            else if( buttonDelayDn[1]->hasFocus()    )      { buttonSourceUp[1]->setFocus();   }
+            else if( buttonDelayDn[2]->hasFocus()    )      { buttonSourceUp[2]->setFocus();   }
+            else if( buttonDelayDn[3]->hasFocus()    )      { buttonSourceUp[3]->setFocus();   }
+            else if( buttonDelayDn[4]->hasFocus()    )      { buttonSourceUp[4]->setFocus();   }
+            else if( buttonDelayDn[5]->hasFocus()    )      { buttonSourceUp[5]->setFocus();   }
+            else if( buttonDelayDn[6]->hasFocus()    )      { buttonSourceUp[6]->setFocus();   }
+            else if( buttonDelayDn[7]->hasFocus()    )      { buttonSourceUp[7]->setFocus();   }
 
-            else if(buttonSource4Up->hasFocus())               { buttonDelay3Up->setFocus();            }
-            else if(buttonSource4Down->hasFocus())             { buttonDelay3Down->setFocus();          }
-            else if(buttonPriority4Up->hasFocus())             { buttonAudio3Up->setFocus();            }
-            else if(buttonPriority4Down->hasFocus())           { buttonAudio3Down->setFocus();          }
-            else if(buttonDelay4Up->hasFocus())                { buttonSource4Up->setFocus();           }
-            else if(buttonDelay4Down->hasFocus())              { buttonSource4Down->setFocus();         }
-            else if(buttonAudio4Up->hasFocus())                { buttonPriority4Up->setFocus();         }
-            else if(buttonAudio4Down->hasFocus())              { buttonPriority4Down->setFocus();       }
+            else if( buttonDelayUp[0]->hasFocus()    )      { buttonDelayDn[0]->setFocus();    }
+            else if( buttonDelayUp[1]->hasFocus()    )      { buttonDelayDn[1]->setFocus();    }
+            else if( buttonDelayUp[2]->hasFocus()    )      { buttonDelayDn[2]->setFocus();    }
+            else if( buttonDelayUp[3]->hasFocus()    )      { buttonDelayDn[3]->setFocus();    }
+            else if( buttonDelayUp[4]->hasFocus()    )      { buttonDelayDn[4]->setFocus();    }
+            else if( buttonDelayUp[5]->hasFocus()    )      { buttonDelayDn[5]->setFocus();    }
+            else if( buttonDelayUp[6]->hasFocus()    )      { buttonDelayDn[6]->setFocus();    }
+            else if( buttonDelayUp[7]->hasFocus()    )      { buttonDelayDn[7]->setFocus();    }
 
-            else if(buttonDefault->hasFocus())                 { buttonClose->setFocus();               }
-            else if(buttonSave->hasFocus())                    { buttonDefault->setFocus();             }
-            else if(buttonClose->hasFocus())                   { buttonSave->setFocus();                }
+            else if( buttonPriorityDn[0]->hasFocus() )      { buttonDelayUp[0]->setFocus();    }
+            else if( buttonPriorityDn[1]->hasFocus() )      { buttonDelayUp[1]->setFocus();    }
+            else if( buttonPriorityDn[2]->hasFocus() )      { buttonDelayUp[2]->setFocus();    }
+            else if( buttonPriorityDn[3]->hasFocus() )      { buttonDelayUp[3]->setFocus();    }
+            else if( buttonPriorityDn[4]->hasFocus() )      { buttonDelayUp[4]->setFocus();    }
+            else if( buttonPriorityDn[5]->hasFocus() )      { buttonDelayUp[5]->setFocus();    }
+            else if( buttonPriorityDn[6]->hasFocus() )      { buttonDelayUp[6]->setFocus();    }
+            else if( buttonPriorityDn[7]->hasFocus() )      { buttonDelayUp[7]->setFocus();    }
 
-            return;
+            else if( buttonPriorityUp[0]->hasFocus() )      { buttonPriorityDn[0]->setFocus(); }
+            else if( buttonPriorityUp[1]->hasFocus() )      { buttonPriorityDn[1]->setFocus(); }
+            else if( buttonPriorityUp[2]->hasFocus() )      { buttonPriorityDn[2]->setFocus(); }
+            else if( buttonPriorityUp[3]->hasFocus() )      { buttonPriorityDn[3]->setFocus(); }
+            else if( buttonPriorityUp[4]->hasFocus() )      { buttonPriorityDn[4]->setFocus(); }
+            else if( buttonPriorityUp[5]->hasFocus() )      { buttonPriorityDn[5]->setFocus(); }
+            else if( buttonPriorityUp[6]->hasFocus() )      { buttonPriorityDn[6]->setFocus(); }
+            else if( buttonPriorityUp[7]->hasFocus() )      { buttonPriorityDn[7]->setFocus(); }
+
+            else if( buttonAudioDn[0]->hasFocus()    )      { buttonPriorityUp[0]->setFocus(); }
+            else if( buttonAudioDn[1]->hasFocus()    )      { buttonPriorityUp[1]->setFocus(); }
+            else if( buttonAudioDn[2]->hasFocus()    )      { buttonPriorityUp[2]->setFocus(); }
+            else if( buttonAudioDn[3]->hasFocus()    )      { buttonPriorityUp[3]->setFocus(); }
+            else if( buttonAudioDn[4]->hasFocus()    )      { buttonPriorityUp[4]->setFocus(); }
+            else if( buttonAudioDn[5]->hasFocus()    )      { buttonPriorityUp[5]->setFocus(); }
+            else if( buttonAudioDn[6]->hasFocus()    )      { buttonPriorityUp[6]->setFocus(); }
+            else if( buttonAudioDn[7]->hasFocus()    )      { buttonPriorityUp[7]->setFocus(); }
+
+            else if( buttonAudioUp[0]->hasFocus()    )      { buttonAudioDn[0]->setFocus();    }
+            else if( buttonAudioUp[1]->hasFocus()    )      { buttonAudioDn[1]->setFocus();    }
+            else if( buttonAudioUp[2]->hasFocus()    )      { buttonAudioDn[2]->setFocus();    }
+            else if( buttonAudioUp[3]->hasFocus()    )      { buttonAudioDn[3]->setFocus();    }
+            else if( buttonAudioUp[4]->hasFocus()    )      { buttonAudioDn[4]->setFocus();    }
+            else if( buttonAudioUp[5]->hasFocus()    )      { buttonAudioDn[5]->setFocus();    }
+            else if( buttonAudioUp[6]->hasFocus()    )      { buttonAudioDn[6]->setFocus();    }
+            else if( buttonAudioUp[7]->hasFocus()    )      { buttonAudioDn[7]->setFocus();    }
+
+            else if( buttonDefault->hasFocus()       )      { buttonClose->setFocus();         }
+            else if( buttonSave->hasFocus()          )      { buttonDefault->setFocus();       }
+            else if( buttonClose->hasFocus()         )      { buttonSave->setFocus();          }
+
+            break;
         }
         case Qt::Key_Right:
         {
-                 if(buttonSource1Up->hasFocus())               { buttonDelay1Up->setFocus();            }
-            else if(buttonSource1Down->hasFocus())             { buttonDelay1Down->setFocus();          }
-            else if(buttonPriority1Up->hasFocus())             { buttonAudio1Up->setFocus();            }
-            else if(buttonPriority1Down->hasFocus())           { buttonAudio1Down->setFocus();          }
-            else if(buttonDelay1Up->hasFocus())                { buttonSource2Up->setFocus();           }
-            else if(buttonDelay1Down->hasFocus())              { buttonSource2Down->setFocus();         }
-            else if(buttonAudio1Up->hasFocus())                { buttonPriority2Up->setFocus();         }
-            else if(buttonAudio1Down->hasFocus())              { buttonPriority2Down->setFocus();       }
+            if     ( buttonSourceDn[0]->hasFocus()   )      { buttonSourceUp[0]->setFocus();   }
+            else if( buttonSourceDn[1]->hasFocus()   )      { buttonSourceUp[1]->setFocus();   }
+            else if( buttonSourceDn[2]->hasFocus()   )      { buttonSourceUp[2]->setFocus();   }
+            else if( buttonSourceDn[3]->hasFocus()   )      { buttonSourceUp[3]->setFocus();   }
+            else if( buttonSourceDn[4]->hasFocus()   )      { buttonSourceUp[4]->setFocus();   }
+            else if( buttonSourceDn[5]->hasFocus()   )      { buttonSourceUp[5]->setFocus();   }
+            else if( buttonSourceDn[6]->hasFocus()   )      { buttonSourceUp[6]->setFocus();   }
+            else if( buttonSourceDn[7]->hasFocus()   )      { buttonSourceUp[7]->setFocus();   }
 
-            else if(buttonSource2Up->hasFocus())               { buttonDelay2Up->setFocus();            }
-            else if(buttonSource2Down->hasFocus())             { buttonDelay2Down->setFocus();          }
-            else if(buttonPriority2Up->hasFocus())             { buttonAudio2Up->setFocus();            }
-            else if(buttonPriority2Down->hasFocus())           { buttonAudio2Down->setFocus();          }
-            else if(buttonDelay2Up->hasFocus())                { buttonSource1Up->setFocus();           }
-            else if(buttonDelay2Down->hasFocus())              { buttonSource1Down->setFocus();         }
-            else if(buttonAudio2Up->hasFocus())                { buttonPriority1Up->setFocus();         }
-            else if(buttonAudio2Down->hasFocus())              { buttonPriority1Down->setFocus();       }
+            else if( buttonSourceUp[0]->hasFocus()   )      { buttonDelayDn[0]->setFocus();    }
+            else if( buttonSourceUp[1]->hasFocus()   )      { buttonDelayDn[1]->setFocus();    }
+            else if( buttonSourceUp[2]->hasFocus()   )      { buttonDelayDn[2]->setFocus();    }
+            else if( buttonSourceUp[3]->hasFocus()   )      { buttonDelayDn[3]->setFocus();    }
+            else if( buttonSourceUp[4]->hasFocus()   )      { buttonDelayDn[4]->setFocus();    }
+            else if( buttonSourceUp[5]->hasFocus()   )      { buttonDelayDn[5]->setFocus();    }
+            else if( buttonSourceUp[6]->hasFocus()   )      { buttonDelayDn[6]->setFocus();    }
+            else if( buttonSourceUp[7]->hasFocus()   )      { buttonDelayDn[7]->setFocus();    }
 
-            else if(buttonSource3Up->hasFocus())               { buttonDelay3Up->setFocus();            }
-            else if(buttonSource3Down->hasFocus())             { buttonDelay3Down->setFocus();          }
-            else if(buttonPriority3Up->hasFocus())             { buttonAudio3Up->setFocus();            }
-            else if(buttonPriority3Down->hasFocus())           { buttonAudio3Down->setFocus();          }
-            else if(buttonDelay3Up->hasFocus())                { buttonSource4Up->setFocus();           }
-            else if(buttonDelay3Down->hasFocus())              { buttonSource4Down->setFocus();         }
-            else if(buttonAudio3Up->hasFocus())                { buttonPriority4Up->setFocus();         }
-            else if(buttonAudio3Down->hasFocus())              { buttonPriority4Down->setFocus();       }
+            else if( buttonDelayDn[0]->hasFocus()    )      { buttonDelayUp[0]->setFocus();    }
+            else if( buttonDelayDn[1]->hasFocus()    )      { buttonDelayUp[1]->setFocus();    }
+            else if( buttonDelayDn[2]->hasFocus()    )      { buttonDelayUp[2]->setFocus();    }
+            else if( buttonDelayDn[3]->hasFocus()    )      { buttonDelayUp[3]->setFocus();    }
+            else if( buttonDelayDn[4]->hasFocus()    )      { buttonDelayUp[4]->setFocus();    }
+            else if( buttonDelayDn[5]->hasFocus()    )      { buttonDelayUp[5]->setFocus();    }
+            else if( buttonDelayDn[6]->hasFocus()    )      { buttonDelayUp[6]->setFocus();    }
+            else if( buttonDelayDn[7]->hasFocus()    )      { buttonDelayUp[7]->setFocus();    }
 
-            else if(buttonSource4Up->hasFocus())               { buttonDelay4Up->setFocus();            }
-            else if(buttonSource4Down->hasFocus())             { buttonDelay4Down->setFocus();          }
-            else if(buttonPriority4Up->hasFocus())             { buttonAudio4Up->setFocus();            }
-            else if(buttonPriority4Down->hasFocus())           { buttonAudio4Down->setFocus();          }
-            else if(buttonDelay4Up->hasFocus())                { buttonSource3Up->setFocus();           }
-            else if(buttonDelay4Down->hasFocus())              { buttonSource3Down->setFocus();         }
-            else if(buttonAudio4Up->hasFocus())                { buttonPriority3Up->setFocus();         }
-            else if(buttonAudio4Down->hasFocus())              { buttonPriority3Down->setFocus();       }
+            else if( buttonDelayUp[0]->hasFocus()    )      { buttonPriorityDn[0]->setFocus(); }
+            else if( buttonDelayUp[1]->hasFocus()    )      { buttonPriorityDn[1]->setFocus(); }
+            else if( buttonDelayUp[2]->hasFocus()    )      { buttonPriorityDn[2]->setFocus(); }
+            else if( buttonDelayUp[3]->hasFocus()    )      { buttonPriorityDn[3]->setFocus(); }
+            else if( buttonDelayUp[4]->hasFocus()    )      { buttonPriorityDn[4]->setFocus(); }
+            else if( buttonDelayUp[5]->hasFocus()    )      { buttonPriorityDn[5]->setFocus(); }
+            else if( buttonDelayUp[6]->hasFocus()    )      { buttonPriorityDn[6]->setFocus(); }
+            else if( buttonDelayUp[7]->hasFocus()    )      { buttonPriorityDn[7]->setFocus(); }
 
-            else if(buttonDefault->hasFocus())                 { buttonSave->setFocus();                }
-            else if(buttonSave->hasFocus())                    { buttonClose->setFocus();               }
-            else if(buttonClose->hasFocus())                   { buttonDefault->setFocus();             }
+            else if( buttonPriorityDn[0]->hasFocus() )      { buttonPriorityUp[0]->setFocus(); }
+            else if( buttonPriorityDn[1]->hasFocus() )      { buttonPriorityUp[1]->setFocus(); }
+            else if( buttonPriorityDn[2]->hasFocus() )      { buttonPriorityUp[2]->setFocus(); }
+            else if( buttonPriorityDn[3]->hasFocus() )      { buttonPriorityUp[3]->setFocus(); }
+            else if( buttonPriorityDn[4]->hasFocus() )      { buttonPriorityUp[4]->setFocus(); }
+            else if( buttonPriorityDn[5]->hasFocus() )      { buttonPriorityUp[5]->setFocus(); }
+            else if( buttonPriorityDn[6]->hasFocus() )      { buttonPriorityUp[6]->setFocus(); }
+            else if( buttonPriorityDn[7]->hasFocus() )      { buttonPriorityUp[7]->setFocus(); }
 
-            return;
+            else if( buttonPriorityUp[0]->hasFocus() )      { buttonAudioDn[0]->setFocus();    }
+            else if( buttonPriorityUp[1]->hasFocus() )      { buttonAudioDn[1]->setFocus();    }
+            else if( buttonPriorityUp[2]->hasFocus() )      { buttonAudioDn[2]->setFocus();    }
+            else if( buttonPriorityUp[3]->hasFocus() )      { buttonAudioDn[3]->setFocus();    }
+            else if( buttonPriorityUp[4]->hasFocus() )      { buttonAudioDn[4]->setFocus();    }
+            else if( buttonPriorityUp[5]->hasFocus() )      { buttonAudioDn[5]->setFocus();    }
+            else if( buttonPriorityUp[6]->hasFocus() )      { buttonAudioDn[6]->setFocus();    }
+            else if( buttonPriorityUp[7]->hasFocus() )      { buttonAudioDn[7]->setFocus();    }
+
+            else if( buttonAudioDn[0]->hasFocus()    )      { buttonAudioUp[0]->setFocus();    }
+            else if( buttonAudioDn[1]->hasFocus()    )      { buttonAudioUp[1]->setFocus();    }
+            else if( buttonAudioDn[2]->hasFocus()    )      { buttonAudioUp[2]->setFocus();    }
+            else if( buttonAudioDn[3]->hasFocus()    )      { buttonAudioUp[3]->setFocus();    }
+            else if( buttonAudioDn[4]->hasFocus()    )      { buttonAudioUp[4]->setFocus();    }
+            else if( buttonAudioDn[5]->hasFocus()    )      { buttonAudioUp[5]->setFocus();    }
+            else if( buttonAudioDn[6]->hasFocus()    )      { buttonAudioUp[6]->setFocus();    }
+            else if( buttonAudioDn[7]->hasFocus()    )      { buttonAudioUp[7]->setFocus();    }
+
+            else if( buttonAudioUp[0]->hasFocus()    )      { buttonSourceDn[0]->setFocus();   }
+            else if( buttonAudioUp[1]->hasFocus()    )      { buttonSourceDn[1]->setFocus();   }
+            else if( buttonAudioUp[2]->hasFocus()    )      { buttonSourceDn[2]->setFocus();   }
+            else if( buttonAudioUp[3]->hasFocus()    )      { buttonSourceDn[3]->setFocus();   }
+            else if( buttonAudioUp[4]->hasFocus()    )      { buttonSourceDn[4]->setFocus();   }
+            else if( buttonAudioUp[5]->hasFocus()    )      { buttonSourceDn[5]->setFocus();   }
+            else if( buttonAudioUp[6]->hasFocus()    )      { buttonSourceDn[6]->setFocus();   }
+            else if( buttonAudioUp[7]->hasFocus()    )      { buttonSourceDn[7]->setFocus();   }
+
+            else if( buttonDefault->hasFocus()       )      { buttonSave->setFocus();          }
+            else if( buttonSave->hasFocus()          )      { buttonClose->setFocus();         }
+            else if( buttonClose->hasFocus()         )      { buttonDefault->setFocus();       }
+
+            break;
         }
         case Qt::Key_Enter:
         {
+            if     ( buttonSourceDn[0]->hasFocus()   )      { onButtonSourceDn(0);             }
+            else if( buttonSourceDn[1]->hasFocus()   )      { onButtonSourceDn(1);             }
+            else if( buttonSourceDn[2]->hasFocus()   )      { onButtonSourceDn(2);             }
+            else if( buttonSourceDn[3]->hasFocus()   )      { onButtonSourceDn(3);             }
+            else if( buttonSourceDn[4]->hasFocus()   )      { onButtonSourceDn(4);             }
+            else if( buttonSourceDn[5]->hasFocus()   )      { onButtonSourceDn(5);             }
+            else if( buttonSourceDn[6]->hasFocus()   )      { onButtonSourceDn(6);             }
+            else if( buttonSourceDn[7]->hasFocus()   )      { onButtonSourceDn(7);             }
+
+            else if( buttonSourceUp[0]->hasFocus()   )      { onButtonSourceUp(0);             }
+            else if( buttonSourceUp[1]->hasFocus()   )      { onButtonSourceUp(1);             }
+            else if( buttonSourceUp[2]->hasFocus()   )      { onButtonSourceUp(2);             }
+            else if( buttonSourceUp[3]->hasFocus()   )      { onButtonSourceUp(3);             }
+            else if( buttonSourceUp[4]->hasFocus()   )      { onButtonSourceUp(4);             }
+            else if( buttonSourceUp[5]->hasFocus()   )      { onButtonSourceUp(5);             }
+            else if( buttonSourceUp[6]->hasFocus()   )      { onButtonSourceUp(6);             }
+            else if( buttonSourceUp[7]->hasFocus()   )      { onButtonSourceUp(7);             }
+
+            else if( buttonDelayDn[0]->hasFocus()    )      { onButtonDelayDn(0);              }
+            else if( buttonDelayDn[1]->hasFocus()    )      { onButtonDelayDn(1);              }
+            else if( buttonDelayDn[2]->hasFocus()    )      { onButtonDelayDn(2);              }
+            else if( buttonDelayDn[3]->hasFocus()    )      { onButtonDelayDn(3);              }
+            else if( buttonDelayDn[4]->hasFocus()    )      { onButtonDelayDn(4);              }
+            else if( buttonDelayDn[5]->hasFocus()    )      { onButtonDelayDn(5);              }
+            else if( buttonDelayDn[6]->hasFocus()    )      { onButtonDelayDn(6);              }
+            else if( buttonDelayDn[7]->hasFocus()    )      { onButtonDelayDn(7);              }
+
+            else if( buttonDelayUp[0]->hasFocus()    )      { onButtonDelayUp(0);              }
+            else if( buttonDelayUp[1]->hasFocus()    )      { onButtonDelayUp(1);              }
+            else if( buttonDelayUp[2]->hasFocus()    )      { onButtonDelayUp(2);              }
+            else if( buttonDelayUp[3]->hasFocus()    )      { onButtonDelayUp(3);              }
+            else if( buttonDelayUp[4]->hasFocus()    )      { onButtonDelayUp(4);              }
+            else if( buttonDelayUp[5]->hasFocus()    )      { onButtonDelayUp(5);              }
+            else if( buttonDelayUp[6]->hasFocus()    )      { onButtonDelayUp(6);              }
+            else if( buttonDelayUp[7]->hasFocus()    )      { onButtonDelayUp(7);              }
+
+            else if( buttonPriorityDn[0]->hasFocus() )      { onButtonPriorityDn(0);           }
+            else if( buttonPriorityDn[1]->hasFocus() )      { onButtonPriorityDn(0);           }
+            else if( buttonPriorityDn[2]->hasFocus() )      { onButtonPriorityDn(0);           }
+            else if( buttonPriorityDn[3]->hasFocus() )      { onButtonPriorityDn(0);           }
+            else if( buttonPriorityDn[4]->hasFocus() )      { onButtonPriorityDn(0);           }
+            else if( buttonPriorityDn[5]->hasFocus() )      { onButtonPriorityDn(0);           }
+            else if( buttonPriorityDn[6]->hasFocus() )      { onButtonPriorityDn(0);           }
+            else if( buttonPriorityDn[7]->hasFocus() )      { onButtonPriorityDn(0);           }
+
+            else if( buttonPriorityUp[0]->hasFocus() )      { onButtonPriorityUp(0);           }
+            else if( buttonPriorityUp[1]->hasFocus() )      { onButtonPriorityUp(0);           }
+            else if( buttonPriorityUp[2]->hasFocus() )      { onButtonPriorityUp(0);           }
+            else if( buttonPriorityUp[3]->hasFocus() )      { onButtonPriorityUp(0);           }
+            else if( buttonPriorityUp[4]->hasFocus() )      { onButtonPriorityUp(0);           }
+            else if( buttonPriorityUp[5]->hasFocus() )      { onButtonPriorityUp(0);           }
+            else if( buttonPriorityUp[6]->hasFocus() )      { onButtonPriorityUp(0);           }
+            else if( buttonPriorityUp[7]->hasFocus() )      { onButtonPriorityUp(0);           }
+
+            else if( buttonAudioDn[0]->hasFocus()    )      { onButtonAudioDn(0);              }
+            else if( buttonAudioDn[1]->hasFocus()    )      { onButtonAudioDn(0);              }
+            else if( buttonAudioDn[2]->hasFocus()    )      { onButtonAudioDn(0);              }
+            else if( buttonAudioDn[3]->hasFocus()    )      { onButtonAudioDn(0);              }
+            else if( buttonAudioDn[4]->hasFocus()    )      { onButtonAudioDn(0);              }
+            else if( buttonAudioDn[5]->hasFocus()    )      { onButtonAudioDn(0);              }
+            else if( buttonAudioDn[6]->hasFocus()    )      { onButtonAudioDn(0);              }
+            else if( buttonAudioDn[7]->hasFocus()    )      { onButtonAudioDn(0);              }
+
+            else if( buttonAudioUp[0]->hasFocus()    )      { onButtonAudioUp(0);              }
+            else if( buttonAudioUp[1]->hasFocus()    )      { onButtonAudioUp(0);              }
+            else if( buttonAudioUp[2]->hasFocus()    )      { onButtonAudioUp(0);              }
+            else if( buttonAudioUp[3]->hasFocus()    )      { onButtonAudioUp(0);              }
+            else if( buttonAudioUp[4]->hasFocus()    )      { onButtonAudioUp(0);              }
+            else if( buttonAudioUp[5]->hasFocus()    )      { onButtonAudioUp(0);              }
+            else if( buttonAudioUp[6]->hasFocus()    )      { onButtonAudioUp(0);              }
+            else if( buttonAudioUp[7]->hasFocus()    )      { onButtonAudioUp(0);              }
+
+            else if( buttonDefault->hasFocus()       )      { onButtonDefault();               }
+            else if( buttonSave->hasFocus()          )      { onButtonSave();                  }
+            else if( buttonClose->hasFocus()         )      { reject();                        }
+
             break;
         }
         case Qt::Key_Escape:
         {
             reject();
-            return;
-        }
-        default:
-        {
-            return;
+            break;
         }
     }
+}
 
-    QDialog::keyPressEvent(event);
-}
-void TriggerInputDialog::keyReleaseEvent(QKeyEvent *event)
-{
-    return;
-}

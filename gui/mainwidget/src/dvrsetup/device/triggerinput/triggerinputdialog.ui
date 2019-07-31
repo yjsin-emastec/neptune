@@ -37,8 +37,8 @@
    <widget class="QPushButton" name="buttonSave">
     <property name="geometry">
      <rect>
-      <x>822</x>
-      <y>582</y>
+      <x>805</x>
+      <y>575</y>
       <width>200</width>
       <height>90</height>
      </rect>
@@ -50,8 +50,8 @@
    <widget class="QPushButton" name="buttonClose">
     <property name="geometry">
      <rect>
-      <x>1027</x>
-      <y>582</y>
+      <x>1015</x>
+      <y>575</y>
       <width>200</width>
       <height>90</height>
      </rect>
@@ -63,8 +63,8 @@
    <widget class="QPushButton" name="buttonDefault">
     <property name="geometry">
      <rect>
-      <x>5</x>
-      <y>582</y>
+      <x>15</x>
+      <y>575</y>
       <width>200</width>
       <height>90</height>
      </rect>
@@ -73,13 +73,13 @@
      <string>Default</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label1">
+   <widget class="QLabel" name="labelTrigger">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>606</width>
-      <height>282</height>
+      <x>20</x>
+      <y>20</y>
+      <width>171</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -87,397 +87,253 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="labelTrigger1">
     <property name="geometry">
      <rect>
-      <x>23</x>
-      <y>23</y>
-      <width>581</width>
-      <height>58</height>
+      <x>20</x>
+      <y>80</y>
+      <width>171</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label2">
-    <property name="geometry">
-     <rect>
-      <x>615</x>
-      <y>10</y>
-      <width>606</width>
-      <height>282</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label3">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>291</y>
-      <width>606</width>
-      <height>282</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label4">
-    <property name="geometry">
-     <rect>
-      <x>615</x>
-      <y>291</y>
-      <width>606</width>
-      <height>282</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelSource1">
-    <property name="geometry">
-     <rect>
-      <x>23</x>
-      <y>80</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label1_1">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>80</y>
-      <width>75</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label1_2">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>130</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelPriority1">
-    <property name="geometry">
-     <rect>
-      <x>23</x>
-      <y>179</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label1_3">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>179</y>
-      <width>75</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label1_4">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>229</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelDelay1">
-    <property name="geometry">
-     <rect>
-      <x>313</x>
-      <y>80</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label1_5">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>80</y>
-      <width>75</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label1_6">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>130</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label1_7">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>179</y>
-      <width>75</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label1_8">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>229</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelAudio1">
-    <property name="geometry">
-     <rect>
-      <x>313</x>
-      <y>179</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonSource1Up">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>80</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonSource1Down">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>130</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonPriority1Up">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>179</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonPriority1Down">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>229</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonDelay1Up">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>80</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonDelay1Down">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>130</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonAudio1Up">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>179</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonAudio1Down">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>229</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="labelTrigger2">
     <property name="geometry">
      <rect>
-      <x>628</x>
-      <y>23</y>
-      <width>581</width>
-      <height>58</height>
+      <x>20</x>
+      <y>140</y>
+      <width>171</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrigger3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrigger4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrigger5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>320</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrigger6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>380</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrigger7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>440</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrigger8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>500</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSource">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>20</y>
+      <width>261</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Source</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriority">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>20</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Priority</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelay">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>20</y>
+      <width>261</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Delay</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudio">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>20</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Audio</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSource1">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>80</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -486,29 +342,10 @@
    <widget class="QLabel" name="labelSource2">
     <property name="geometry">
      <rect>
-      <x>628</x>
-      <y>80</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label2_1">
-    <property name="geometry">
-     <rect>
-      <x>844</x>
-      <y>80</y>
-      <width>75</width>
-      <height>51</height>
+      <x>190</x>
+      <y>140</y>
+      <width>141</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -516,191 +353,6 @@
     </property>
     <property name="text">
      <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label2_2">
-    <property name="geometry">
-     <rect>
-      <x>844</x>
-      <y>130</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelDelay2">
-    <property name="geometry">
-     <rect>
-      <x>918</x>
-      <y>80</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelPriority2">
-    <property name="geometry">
-     <rect>
-      <x>628</x>
-      <y>179</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label2_3">
-    <property name="geometry">
-     <rect>
-      <x>844</x>
-      <y>179</y>
-      <width>75</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label2_4">
-    <property name="geometry">
-     <rect>
-      <x>844</x>
-      <y>229</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelAudio2">
-    <property name="geometry">
-     <rect>
-      <x>918</x>
-      <y>179</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label2_5">
-    <property name="geometry">
-     <rect>
-      <x>1134</x>
-      <y>80</y>
-      <width>75</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label2_6">
-    <property name="geometry">
-     <rect>
-      <x>1134</x>
-      <y>130</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label2_7">
-    <property name="geometry">
-     <rect>
-      <x>1134</x>
-      <y>179</y>
-      <width>75</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label2_8">
-    <property name="geometry">
-     <rect>
-      <x>1134</x>
-      <y>229</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelTrigger3">
-    <property name="geometry">
-     <rect>
-      <x>23</x>
-      <y>304</y>
-      <width>581</width>
-      <height>58</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -709,29 +361,10 @@
    <widget class="QLabel" name="labelSource3">
     <property name="geometry">
      <rect>
-      <x>23</x>
-      <y>361</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label3_1">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>361</y>
-      <width>75</width>
-      <height>51</height>
+      <x>190</x>
+      <y>200</y>
+      <width>141</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -739,191 +372,6 @@
     </property>
     <property name="text">
      <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label3_2">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>411</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelDelay3">
-    <property name="geometry">
-     <rect>
-      <x>313</x>
-      <y>361</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelPriority3">
-    <property name="geometry">
-     <rect>
-      <x>23</x>
-      <y>460</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelAudio3">
-    <property name="geometry">
-     <rect>
-      <x>313</x>
-      <y>460</y>
-      <width>217</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label3_3">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>460</y>
-      <width>75</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label3_4">
-    <property name="geometry">
-     <rect>
-      <x>239</x>
-      <y>510</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label3_5">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>361</y>
-      <width>75</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label3_6">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>411</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label3_7">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>460</y>
-      <width>75</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label3_8">
-    <property name="geometry">
-     <rect>
-      <x>529</x>
-      <y>510</y>
-      <width>75</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelTrigger4">
-    <property name="geometry">
-     <rect>
-      <x>628</x>
-      <y>304</y>
-      <width>581</width>
-      <height>58</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -932,36 +380,358 @@
    <widget class="QLabel" name="labelSource4">
     <property name="geometry">
      <rect>
-      <x>628</x>
-      <y>361</y>
-      <width>217</width>
-      <height>100</height>
+      <x>190</x>
+      <y>260</y>
+      <width>141</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="labelDelay4">
+   <widget class="QLabel" name="labelSource5">
     <property name="geometry">
      <rect>
-      <x>918</x>
-      <y>361</y>
-      <width>217</width>
-      <height>100</height>
+      <x>190</x>
+      <y>320</y>
+      <width>141</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSource6">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>380</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSource7">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>440</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSource8">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>500</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceUp1">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceDn1">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceUp2">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceUp3">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceUp4">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceUp5">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceUp6">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceUp7">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceUp8">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceDn2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceDn3">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceDn4">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceDn5">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceDn6">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceDn7">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceDn8">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriority1">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>80</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriority2">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>140</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriority3">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>200</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -970,17 +740,731 @@
    <widget class="QLabel" name="labelPriority4">
     <property name="geometry">
      <rect>
-      <x>628</x>
-      <y>460</y>
-      <width>217</width>
-      <height>100</height>
+      <x>710</x>
+      <y>260</y>
+      <width>131</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriority5">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>320</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriority6">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>380</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriority7">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>440</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriority8">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>500</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityUp1">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityUp2">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityUp3">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityUp4">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityUp5">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityUp6">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityUp7">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityUp8">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityDn1">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityDn2">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityDn3">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityDn4">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityDn5">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityDn6">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityDn7">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityDn8">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelay1">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>80</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayUp1">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayDn1">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelay2">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>140</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelay3">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>200</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelay4">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>260</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelay5">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>320</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelay6">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>380</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelay7">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>440</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelay8">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>500</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayUp2">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayUp3">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayUp4">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayUp5">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayUp6">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayUp7">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayUp8">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayDn2">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayDn3">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayDn4">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayDn5">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayDn6">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayDn7">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayDn8">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudio1">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>80</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonAudioUp1">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudio2">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>140</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudio3">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>200</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -989,29 +1473,29 @@
    <widget class="QLabel" name="labelAudio4">
     <property name="geometry">
      <rect>
-      <x>918</x>
-      <y>460</y>
-      <width>217</width>
-      <height>100</height>
+      <x>960</x>
+      <y>260</y>
+      <width>131</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label4_1">
+   <widget class="QLabel" name="labelAudio5">
     <property name="geometry">
      <rect>
-      <x>844</x>
-      <y>361</y>
-      <width>75</width>
-      <height>51</height>
+      <x>960</x>
+      <y>320</y>
+      <width>131</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -1020,14 +1504,17 @@
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QLabel" name="label4_2">
+   <widget class="QLabel" name="labelAudio6">
     <property name="geometry">
      <rect>
-      <x>844</x>
-      <y>411</y>
-      <width>75</width>
-      <height>50</height>
+      <x>960</x>
+      <y>380</y>
+      <width>131</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -1036,14 +1523,17 @@
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QLabel" name="label4_3">
+   <widget class="QLabel" name="labelAudio7">
     <property name="geometry">
      <rect>
-      <x>844</x>
-      <y>460</y>
-      <width>75</width>
-      <height>51</height>
+      <x>960</x>
+      <y>440</y>
+      <width>131</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -1052,14 +1542,17 @@
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QLabel" name="label4_4">
+   <widget class="QLabel" name="labelAudio8">
     <property name="geometry">
      <rect>
-      <x>844</x>
-      <y>510</y>
-      <width>75</width>
-      <height>50</height>
+      <x>960</x>
+      <y>500</y>
+      <width>131</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -1068,474 +1561,1597 @@
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QLabel" name="label4_5">
+   <widget class="QPushButton" name="buttonAudioUp2">
     <property name="geometry">
      <rect>
-      <x>1134</x>
-      <y>361</y>
-      <width>75</width>
-      <height>51</height>
+      <x>1150</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label4_6">
+   <widget class="QPushButton" name="buttonAudioUp3">
     <property name="geometry">
      <rect>
-      <x>1134</x>
-      <y>411</y>
-      <width>75</width>
-      <height>50</height>
+      <x>1150</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label4_7">
+   <widget class="QPushButton" name="buttonAudioUp4">
     <property name="geometry">
      <rect>
-      <x>1134</x>
-      <y>460</y>
-      <width>75</width>
-      <height>51</height>
+      <x>1150</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label4_8">
+   <widget class="QPushButton" name="buttonAudioUp5">
     <property name="geometry">
      <rect>
-      <x>1134</x>
-      <y>510</y>
-      <width>75</width>
-      <height>50</height>
+      <x>1150</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="buttonSource2Up">
+   <widget class="QPushButton" name="buttonAudioUp6">
     <property name="geometry">
      <rect>
-      <x>844</x>
+      <x>1150</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonAudioUp7">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonAudioUp8">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonAudioDn1">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
       <y>80</y>
-      <width>75</width>
-      <height>50</height>
+      <width>61</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="buttonSource2Down">
+   <widget class="QPushButton" name="buttonAudioDn2">
     <property name="geometry">
      <rect>
-      <x>844</x>
-      <y>130</y>
-      <width>75</width>
-      <height>50</height>
+      <x>1090</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="buttonPriority2Up">
+   <widget class="QPushButton" name="buttonAudioDn3">
     <property name="geometry">
      <rect>
-      <x>844</x>
-      <y>179</y>
-      <width>75</width>
-      <height>50</height>
+      <x>1090</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="buttonPriority2Down">
+   <widget class="QPushButton" name="buttonAudioDn4">
     <property name="geometry">
      <rect>
-      <x>844</x>
-      <y>229</y>
-      <width>75</width>
-      <height>50</height>
+      <x>1090</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="buttonDelay2Up">
+   <widget class="QPushButton" name="buttonAudioDn5">
     <property name="geometry">
      <rect>
-      <x>1134</x>
+      <x>1090</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonAudioDn6">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonAudioDn7">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonAudioDn8">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSourceUp1">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
       <y>80</y>
-      <width>75</width>
-      <height>50</height>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonDelay2Down">
+   <widget class="QLabel" name="labelSourceUp2">
     <property name="geometry">
      <rect>
-      <x>1134</x>
-      <y>130</y>
-      <width>75</width>
-      <height>50</height>
+      <x>390</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonAudio2Up">
+   <widget class="QLabel" name="labelSourceUp3">
     <property name="geometry">
      <rect>
-      <x>1134</x>
-      <y>179</y>
-      <width>75</width>
-      <height>50</height>
+      <x>390</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonAudio2Down">
+   <widget class="QLabel" name="labelSourceUp4">
     <property name="geometry">
      <rect>
-      <x>1134</x>
-      <y>229</y>
-      <width>75</width>
-      <height>50</height>
+      <x>390</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonSource3Up">
+   <widget class="QLabel" name="labelSourceUp5">
     <property name="geometry">
      <rect>
-      <x>239</x>
-      <y>361</y>
-      <width>75</width>
-      <height>50</height>
+      <x>390</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonSource3Down">
+   <widget class="QLabel" name="labelSourceUp6">
     <property name="geometry">
      <rect>
-      <x>239</x>
-      <y>411</y>
-      <width>75</width>
-      <height>50</height>
+      <x>390</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonPriority3Up">
+   <widget class="QLabel" name="labelSourceUp7">
     <property name="geometry">
      <rect>
-      <x>239</x>
-      <y>460</y>
-      <width>75</width>
-      <height>50</height>
+      <x>390</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonPriority3Down">
+   <widget class="QLabel" name="labelSourceUp8">
     <property name="geometry">
      <rect>
-      <x>239</x>
-      <y>510</y>
-      <width>75</width>
-      <height>50</height>
+      <x>390</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonDelay3Up">
+   <widget class="QLabel" name="labelSourceDn1">
     <property name="geometry">
      <rect>
-      <x>529</x>
-      <y>361</y>
-      <width>75</width>
-      <height>50</height>
+      <x>330</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonDelay3Down">
+   <widget class="QLabel" name="labelSourceDn2">
     <property name="geometry">
      <rect>
-      <x>529</x>
-      <y>411</y>
-      <width>75</width>
-      <height>50</height>
+      <x>330</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonAudio3Up">
+   <widget class="QLabel" name="labelSourceDn3">
     <property name="geometry">
      <rect>
-      <x>529</x>
-      <y>460</y>
-      <width>75</width>
-      <height>50</height>
+      <x>330</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonAudio3Down">
+   <widget class="QLabel" name="labelSourceDn4">
     <property name="geometry">
      <rect>
-      <x>529</x>
-      <y>510</y>
-      <width>75</width>
-      <height>50</height>
+      <x>330</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonSource4Up">
+   <widget class="QLabel" name="labelSourceDn5">
     <property name="geometry">
      <rect>
-      <x>844</x>
-      <y>361</y>
-      <width>75</width>
-      <height>50</height>
+      <x>330</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonSource4Down">
+   <widget class="QLabel" name="labelSourceDn6">
     <property name="geometry">
      <rect>
-      <x>844</x>
-      <y>411</y>
-      <width>75</width>
-      <height>50</height>
+      <x>330</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonPriority4Up">
+   <widget class="QLabel" name="labelSourceDn7">
     <property name="geometry">
      <rect>
-      <x>844</x>
-      <y>460</y>
-      <width>75</width>
-      <height>50</height>
+      <x>330</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonPriority4Down">
+   <widget class="QLabel" name="labelSourceDn8">
     <property name="geometry">
      <rect>
-      <x>844</x>
-      <y>510</y>
-      <width>75</width>
-      <height>50</height>
+      <x>330</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonDelay4Up">
+   <widget class="QLabel" name="labelDelayUp1">
     <property name="geometry">
      <rect>
-      <x>1134</x>
-      <y>361</y>
-      <width>75</width>
-      <height>50</height>
+      <x>650</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonDelay4Down">
+   <widget class="QLabel" name="labelDelayUp2">
     <property name="geometry">
      <rect>
-      <x>1134</x>
-      <y>411</y>
-      <width>75</width>
-      <height>50</height>
+      <x>650</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonAudio4Up">
+   <widget class="QLabel" name="labelDelayUp3">
     <property name="geometry">
      <rect>
-      <x>1134</x>
-      <y>460</y>
-      <width>75</width>
-      <height>50</height>
+      <x>650</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonAudio4Down">
+   <widget class="QLabel" name="labelDelayUp4">
     <property name="geometry">
      <rect>
-      <x>1134</x>
-      <y>510</y>
-      <width>75</width>
-      <height>50</height>
+      <x>650</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <zorder>label1</zorder>
+   <widget class="QLabel" name="labelDelayUp5">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelayUp6">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelayUp7">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelayUp8">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelayDn1">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelayDn2">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelayDn3">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelayDn4">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelayDn5">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelayDn6">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelayDn7">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDelayDn8">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityUp1">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityUp2">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityUp3">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityUp4">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityUp5">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityUp6">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityUp7">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityUp8">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityDn1">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityDn2">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityDn3">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityDn4">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityDn5">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityDn6">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityDn7">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPriorityDn8">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioUp1">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioUp2">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioUp3">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioUp4">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioUp5">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioUp6">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioUp7">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioUp8">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioDn1">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>80</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioDn2">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>140</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioDn3">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>200</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioDn4">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioDn5">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>320</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioDn6">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>380</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioDn7">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioDn8">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>500</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>labelAudioDn8</zorder>
+   <zorder>labelAudioDn7</zorder>
+   <zorder>labelAudioDn6</zorder>
+   <zorder>labelAudioDn5</zorder>
+   <zorder>labelAudioDn4</zorder>
+   <zorder>labelAudioDn3</zorder>
+   <zorder>labelAudioDn2</zorder>
+   <zorder>labelAudioDn1</zorder>
+   <zorder>labelAudioUp8</zorder>
+   <zorder>labelAudioUp7</zorder>
+   <zorder>labelAudioUp6</zorder>
+   <zorder>labelAudioUp5</zorder>
+   <zorder>labelAudioUp4</zorder>
+   <zorder>labelAudioUp3</zorder>
+   <zorder>labelAudioUp2</zorder>
+   <zorder>labelAudioUp1</zorder>
+   <zorder>labelAudio8</zorder>
+   <zorder>labelAudio7</zorder>
+   <zorder>labelAudio6</zorder>
+   <zorder>labelAudio5</zorder>
+   <zorder>labelAudio4</zorder>
+   <zorder>labelAudio3</zorder>
+   <zorder>labelAudio2</zorder>
+   <zorder>labelAudio1</zorder>
+   <zorder>labelPriorityDn8</zorder>
+   <zorder>labelPriorityDn7</zorder>
+   <zorder>labelPriorityDn6</zorder>
+   <zorder>labelPriorityDn5</zorder>
+   <zorder>labelPriorityDn4</zorder>
+   <zorder>labelPriorityDn3</zorder>
+   <zorder>labelPriorityDn2</zorder>
+   <zorder>labelPriorityDn1</zorder>
+   <zorder>labelPriorityUp8</zorder>
+   <zorder>labelPriorityUp7</zorder>
+   <zorder>labelPriorityUp6</zorder>
+   <zorder>labelPriorityUp5</zorder>
+   <zorder>labelPriorityUp4</zorder>
+   <zorder>labelPriorityUp3</zorder>
+   <zorder>labelPriorityUp2</zorder>
+   <zorder>labelPriorityUp1</zorder>
+   <zorder>labelDelayDn8</zorder>
+   <zorder>labelDelayDn7</zorder>
+   <zorder>labelDelayDn6</zorder>
+   <zorder>labelDelayDn5</zorder>
+   <zorder>labelDelayDn4</zorder>
+   <zorder>labelDelayDn3</zorder>
+   <zorder>labelDelayDn2</zorder>
+   <zorder>labelDelayDn1</zorder>
+   <zorder>labelDelayUp8</zorder>
+   <zorder>labelDelayUp7</zorder>
+   <zorder>labelDelayUp6</zorder>
+   <zorder>labelDelayUp5</zorder>
+   <zorder>labelDelayUp4</zorder>
+   <zorder>labelDelayUp3</zorder>
+   <zorder>labelDelayUp2</zorder>
+   <zorder>labelDelayUp1</zorder>
+   <zorder>labelSourceDn8</zorder>
+   <zorder>labelSourceDn7</zorder>
+   <zorder>labelSourceDn6</zorder>
+   <zorder>labelSourceDn5</zorder>
+   <zorder>labelSourceDn4</zorder>
+   <zorder>labelSourceDn3</zorder>
+   <zorder>labelDelay8</zorder>
+   <zorder>labelDelay7</zorder>
+   <zorder>labelDelay6</zorder>
+   <zorder>labelDelay5</zorder>
+   <zorder>labelDelay4</zorder>
+   <zorder>labelDelay3</zorder>
+   <zorder>labelDelay2</zorder>
+   <zorder>labelDelay1</zorder>
+   <zorder>labelSourceDn2</zorder>
+   <zorder>labelSourceUp8</zorder>
+   <zorder>labelSourceUp7</zorder>
+   <zorder>labelSourceUp6</zorder>
+   <zorder>labelSourceUp5</zorder>
+   <zorder>labelSourceUp4</zorder>
+   <zorder>labelSourceUp3</zorder>
+   <zorder>labelSourceUp2</zorder>
+   <zorder>labelSourceUp1</zorder>
+   <zorder>labelSourceDn1</zorder>
    <zorder>buttonSave</zorder>
    <zorder>buttonClose</zorder>
    <zorder>buttonDefault</zorder>
+   <zorder>labelTrigger</zorder>
    <zorder>labelTrigger1</zorder>
-   <zorder>label2</zorder>
-   <zorder>label3</zorder>
-   <zorder>label4</zorder>
-   <zorder>labelSource1</zorder>
-   <zorder>label1_1</zorder>
-   <zorder>label1_2</zorder>
-   <zorder>labelPriority1</zorder>
-   <zorder>label1_3</zorder>
-   <zorder>label1_4</zorder>
-   <zorder>labelDelay1</zorder>
-   <zorder>label1_5</zorder>
-   <zorder>label1_6</zorder>
-   <zorder>label1_7</zorder>
-   <zorder>label1_8</zorder>
-   <zorder>labelAudio1</zorder>
-   <zorder>buttonSource1Up</zorder>
-   <zorder>buttonSource1Down</zorder>
-   <zorder>buttonPriority1Up</zorder>
-   <zorder>buttonPriority1Down</zorder>
-   <zorder>buttonDelay1Up</zorder>
-   <zorder>buttonDelay1Down</zorder>
-   <zorder>buttonAudio1Up</zorder>
-   <zorder>buttonAudio1Down</zorder>
    <zorder>labelTrigger2</zorder>
-   <zorder>labelSource2</zorder>
-   <zorder>label2_1</zorder>
-   <zorder>label2_2</zorder>
-   <zorder>labelDelay2</zorder>
-   <zorder>labelPriority2</zorder>
-   <zorder>label2_3</zorder>
-   <zorder>label2_4</zorder>
-   <zorder>labelAudio2</zorder>
-   <zorder>label2_5</zorder>
-   <zorder>label2_6</zorder>
-   <zorder>label2_7</zorder>
-   <zorder>label2_8</zorder>
    <zorder>labelTrigger3</zorder>
-   <zorder>labelSource3</zorder>
-   <zorder>label3_1</zorder>
-   <zorder>label3_2</zorder>
-   <zorder>labelDelay3</zorder>
-   <zorder>labelPriority3</zorder>
-   <zorder>labelAudio3</zorder>
-   <zorder>label3_3</zorder>
-   <zorder>label3_4</zorder>
-   <zorder>label3_5</zorder>
-   <zorder>label3_6</zorder>
-   <zorder>label3_7</zorder>
-   <zorder>label3_8</zorder>
    <zorder>labelTrigger4</zorder>
+   <zorder>labelTrigger5</zorder>
+   <zorder>labelTrigger6</zorder>
+   <zorder>labelTrigger7</zorder>
+   <zorder>labelTrigger8</zorder>
+   <zorder>labelSource</zorder>
+   <zorder>labelPriority</zorder>
+   <zorder>labelDelay</zorder>
+   <zorder>labelAudio</zorder>
+   <zorder>labelSource1</zorder>
+   <zorder>labelSource2</zorder>
+   <zorder>labelSource3</zorder>
    <zorder>labelSource4</zorder>
-   <zorder>labelDelay4</zorder>
+   <zorder>labelSource5</zorder>
+   <zorder>labelSource6</zorder>
+   <zorder>labelSource7</zorder>
+   <zorder>labelSource8</zorder>
+   <zorder>buttonSourceUp1</zorder>
+   <zorder>buttonSourceDn1</zorder>
+   <zorder>buttonSourceUp2</zorder>
+   <zorder>buttonSourceUp3</zorder>
+   <zorder>buttonSourceUp4</zorder>
+   <zorder>buttonSourceUp5</zorder>
+   <zorder>buttonSourceUp6</zorder>
+   <zorder>buttonSourceUp7</zorder>
+   <zorder>buttonSourceUp8</zorder>
+   <zorder>buttonSourceDn2</zorder>
+   <zorder>buttonSourceDn3</zorder>
+   <zorder>buttonSourceDn4</zorder>
+   <zorder>buttonSourceDn5</zorder>
+   <zorder>buttonSourceDn6</zorder>
+   <zorder>buttonSourceDn7</zorder>
+   <zorder>buttonSourceDn8</zorder>
+   <zorder>labelPriority1</zorder>
+   <zorder>labelPriority2</zorder>
+   <zorder>labelPriority3</zorder>
    <zorder>labelPriority4</zorder>
-   <zorder>labelAudio4</zorder>
-   <zorder>label4_1</zorder>
-   <zorder>label4_2</zorder>
-   <zorder>label4_3</zorder>
-   <zorder>label4_4</zorder>
-   <zorder>label4_5</zorder>
-   <zorder>label4_6</zorder>
-   <zorder>label4_7</zorder>
-   <zorder>label4_8</zorder>
-   <zorder>buttonSource2Up</zorder>
-   <zorder>buttonSource2Down</zorder>
-   <zorder>buttonPriority2Up</zorder>
-   <zorder>buttonPriority2Down</zorder>
-   <zorder>buttonDelay2Up</zorder>
-   <zorder>buttonDelay2Down</zorder>
-   <zorder>buttonAudio2Up</zorder>
-   <zorder>buttonAudio2Down</zorder>
-   <zorder>buttonSource3Up</zorder>
-   <zorder>buttonSource3Down</zorder>
-   <zorder>buttonPriority3Up</zorder>
-   <zorder>buttonPriority3Down</zorder>
-   <zorder>buttonDelay3Up</zorder>
-   <zorder>buttonDelay3Down</zorder>
-   <zorder>buttonAudio3Up</zorder>
-   <zorder>buttonAudio3Down</zorder>
-   <zorder>buttonSource4Up</zorder>
-   <zorder>buttonSource4Down</zorder>
-   <zorder>buttonPriority4Up</zorder>
-   <zorder>buttonPriority4Down</zorder>
-   <zorder>buttonDelay4Up</zorder>
-   <zorder>buttonDelay4Down</zorder>
-   <zorder>buttonAudio4Up</zorder>
-   <zorder>buttonAudio4Down</zorder>
+   <zorder>labelPriority5</zorder>
+   <zorder>labelPriority6</zorder>
+   <zorder>labelPriority7</zorder>
+   <zorder>labelPriority8</zorder>
+   <zorder>buttonPriorityUp1</zorder>
+   <zorder>buttonPriorityUp2</zorder>
+   <zorder>buttonPriorityUp3</zorder>
+   <zorder>buttonPriorityUp4</zorder>
+   <zorder>buttonPriorityUp5</zorder>
+   <zorder>buttonPriorityUp6</zorder>
+   <zorder>buttonPriorityUp7</zorder>
+   <zorder>buttonPriorityUp8</zorder>
+   <zorder>buttonPriorityDn1</zorder>
+   <zorder>buttonPriorityDn2</zorder>
+   <zorder>buttonPriorityDn3</zorder>
+   <zorder>buttonPriorityDn4</zorder>
+   <zorder>buttonPriorityDn5</zorder>
+   <zorder>buttonPriorityDn6</zorder>
+   <zorder>buttonPriorityDn7</zorder>
+   <zorder>buttonPriorityDn8</zorder>
+   <zorder>buttonDelayUp1</zorder>
+   <zorder>buttonDelayDn1</zorder>
+   <zorder>buttonDelayUp2</zorder>
+   <zorder>buttonDelayUp3</zorder>
+   <zorder>buttonDelayUp4</zorder>
+   <zorder>buttonDelayUp5</zorder>
+   <zorder>buttonDelayUp6</zorder>
+   <zorder>buttonDelayUp7</zorder>
+   <zorder>buttonDelayUp8</zorder>
+   <zorder>buttonDelayDn2</zorder>
+   <zorder>buttonDelayDn3</zorder>
+   <zorder>buttonDelayDn4</zorder>
+   <zorder>buttonDelayDn5</zorder>
+   <zorder>buttonDelayDn6</zorder>
+   <zorder>buttonDelayDn7</zorder>
+   <zorder>buttonDelayDn8</zorder>
+   <zorder>buttonAudioUp1</zorder>
+   <zorder>buttonAudioUp2</zorder>
+   <zorder>buttonAudioUp3</zorder>
+   <zorder>buttonAudioUp4</zorder>
+   <zorder>buttonAudioUp5</zorder>
+   <zorder>buttonAudioUp6</zorder>
+   <zorder>buttonAudioUp7</zorder>
+   <zorder>buttonAudioUp8</zorder>
+   <zorder>buttonAudioDn1</zorder>
+   <zorder>buttonAudioDn2</zorder>
+   <zorder>buttonAudioDn3</zorder>
+   <zorder>buttonAudioDn4</zorder>
+   <zorder>buttonAudioDn5</zorder>
+   <zorder>buttonAudioDn6</zorder>
+   <zorder>buttonAudioDn7</zorder>
+   <zorder>buttonAudioDn8</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
