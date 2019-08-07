@@ -987,7 +987,11 @@ void VideoPane::drawGpsIcon(void)
         return;
     }
 
+#if 1 //yjsin gps is not defined in DisplayCfg
     if(gpsEnabled &&!(utils_cfg_cmp_item(DisplayCfg.osd_record, "OFF")==0 && utils_cfg_cmp_item(DisplayCfg.osd_viloss, "OFF")==0 && utils_cfg_cmp_item(DisplayCfg.osd_chname, "OFF")==0))
+#else
+    if(gpsEnabled && (utils_cfg_cmp_item(DisplayCfg.osd_gps, "On") == 0) )
+#endif
     {
         labelGps->setPixmap(QPixmap(":/images/gps.png").scaled(iconSize+5,iconSize+5,Qt::KeepAspectRatio));
         labelGps->show();

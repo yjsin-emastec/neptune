@@ -3931,6 +3931,20 @@ Off/On</source>
 Spento/Accéso</translation>
     </message>
     <message>
+        <location filename="../../../display/osd/osddialog.ui" line="156"/>
+        <source>GPS Status
+Off/On</source>
+        <translation>GPS Stato
+Spento/Accéso</translation>
+    </message>
+    <message>
+        <location filename="../../../display/osd/osddialog.ui" line="179"/>
+        <source>Camera Info
+Off/On</source>
+        <translation>Telecàmera Info
+Spento/Accéso</translation>
+    </message>
+    <message>
         <location filename="../../../display/osd/osddialog.ui" line="41"/>
         <source>Save</source>
         <translation>Salvare</translation>
@@ -3941,75 +3955,98 @@ Spento/Accéso</translation>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="65"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="66"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="71"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="72"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="77"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="78"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="83"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="84"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="91"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="106"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="121"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="127"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="136"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="142"/>
         <source>%1
 %2</source>
-        <translation>%1
+        <translation type="obsolete">%1
 %2</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="65"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="66"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="91"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="61"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="62"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="120"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="126"/>
         <source>Camera Name</source>
-        <translation>Nome del
-Telecàmera</translation>
+        <translation>Telecàmera Nome</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="65"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="71"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="83"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="91"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="106"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="136"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="61"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="67"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="79"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="86"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="95"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="110"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="120"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="135"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="165"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="181"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="194"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="208"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="223"/>
         <source>Off</source>
         <translation>Spento</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="66"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="72"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="84"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="142"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="62"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="68"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="80"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="90"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="99"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="105"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="111"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="126"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="141"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="171"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="186"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="199"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="214"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="229"/>
         <source>On</source>
         <translation>Accéso</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="71"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="72"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="106"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="67"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="68"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="135"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="141"/>
         <source>No Video</source>
         <translation>Nessun Video</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="77"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="121"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="73"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="150"/>
         <source>AutoHide: Off</source>
         <translation>Accéso</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="78"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="127"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="74"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="156"/>
         <source>AutoHide: On</source>
         <translation>Spento</translation>
+    </message>
+    <message>
+        <location filename="../../../display/osd/osddialog.cpp" line="86"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="90"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="105"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="181"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="186"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="208"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="214"/>
+        <source>Gps Status</source>
+        <translation>GPS Stato</translation>
+    </message>
+    <message>
+        <location filename="../../../display/osd/osddialog.cpp" line="95"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="99"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="110"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="111"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="194"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="199"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="223"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="229"/>
+        <source>Camera Info</source>
+        <translation>Telecàmera Info</translation>
     </message>
     <message>
         <source>%1%2</source>
@@ -4032,12 +4069,12 @@ AutoHide: On</source>
 %3</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="77"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="78"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="121"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="127"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="73"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="74"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="150"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="156"/>
         <source>Status Bar</source>
-        <translation>Barra Stato</translation>
+        <translation>Stato Barra</translation>
     </message>
     <message>
         <source>
@@ -4053,12 +4090,12 @@ AutoHide: </source>
         <translation type="obsolete">Spento</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="83"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="84"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="136"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="142"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="79"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="80"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="165"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="171"/>
         <source>Record Status</source>
-        <translation>Stato Record</translation>
+        <translation>Record Stato</translation>
     </message>
 </context>
 <context>
@@ -4105,6 +4142,20 @@ Spento/Accéso</translation>
 Off/On</source>
         <translation>Nome della
 Telecamera
+Spento/Accéso</translation>
+    </message>
+    <message>
+        <location filename="../../../display/osd/osddialog1080p.ui" line="156"/>
+        <source>GPS Status
+Off/On</source>
+        <translation>GPS Stato
+Spento/Accéso</translation>
+    </message>
+    <message>
+        <location filename="../../../display/osd/osddialog1080p.ui" line="176"/>
+        <source>Camera Info
+Off/On</source>
+        <translation>Telecàmera Info
 Spento/Accéso</translation>
     </message>
 </context>
@@ -6032,8 +6083,8 @@ Eliminare i dati o impostare l&apos;tèmpo.</translation>
         <translation type="obsolete">Trigger4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="919"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1030"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="929"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1040"/>
         <source>PRIORITY REDUNDANT</source>
         <translation>PRIORITÀ REDUNDANT</translation>
     </message>
@@ -6053,29 +6104,29 @@ Eliminare i dati o impostare l&apos;tèmpo.</translation>
         <translation type="obsolete">AVVERTIMENTO</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="459"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="469"/>
         <source>Trigger</source>
         <translation>Trigger</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="702"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="712"/>
         <source>CAM</source>
         <translation>CÀM</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="706"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="716"/>
         <source>Sec</source>
         <translation>Sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="920"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1031"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
         <source>Priority is redundant.</source>
         <translation>La priorità è ridondante.</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="920"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1031"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
         <source>Please check priority.</source>
         <translation>Si prega di controllare la priorità.</translation>
     </message>
@@ -6246,12 +6297,12 @@ Eliminare i dati o impostare l&apos;tèmpo.</translation>
         <translation>Audio</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="720"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="730"/>
         <source>Mute</source>
         <translation>Mute</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="716"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="726"/>
         <source>Output</source>
         <translation>Uscita</translation>
     </message>
@@ -7440,62 +7491,62 @@ Devi impostare il totale a 720 o meno.</translation>
         <translation>NESSUN DATO</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1222"/>
+        <location filename="../../../../main/videopane.cpp" line="1223"/>
         <source>PAL</source>
         <translation>PAL</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1223"/>
+        <location filename="../../../../main/videopane.cpp" line="1224"/>
         <source>NTSC</source>
         <translation>NTSC</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1224"/>
+        <location filename="../../../../main/videopane.cpp" line="1225"/>
         <source>720p25</source>
         <translation>720p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1225"/>
+        <location filename="../../../../main/videopane.cpp" line="1226"/>
         <source>720p30</source>
         <translation>720p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1226"/>
+        <location filename="../../../../main/videopane.cpp" line="1227"/>
         <source>720p50</source>
         <translation>720p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1227"/>
+        <location filename="../../../../main/videopane.cpp" line="1228"/>
         <source>720p60</source>
         <translation>720p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1228"/>
+        <location filename="../../../../main/videopane.cpp" line="1229"/>
         <source>1080p25</source>
         <translation>1080p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1229"/>
+        <location filename="../../../../main/videopane.cpp" line="1230"/>
         <source>1080p30</source>
         <translation>1080p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1230"/>
+        <location filename="../../../../main/videopane.cpp" line="1231"/>
         <source>1080p50</source>
         <translation>1080p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1231"/>
+        <location filename="../../../../main/videopane.cpp" line="1232"/>
         <source>1080p60</source>
         <translation>1080p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1232"/>
+        <location filename="../../../../main/videopane.cpp" line="1233"/>
         <source>1080i50</source>
         <translation>1080i50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1233"/>
+        <location filename="../../../../main/videopane.cpp" line="1234"/>
         <source>1080i60</source>
         <translation>1080i60</translation>
     </message>

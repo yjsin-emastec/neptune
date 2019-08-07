@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>858</width>
-    <height>598</height>
+    <width>959</width>
+    <height>659</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <rect>
      <x>4</x>
      <y>4</y>
-     <width>850</width>
-     <height>590</height>
+     <width>951</width>
+     <height>651</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -31,8 +31,8 @@
    <widget class="QPushButton" name="buttonSave">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>480</y>
+      <x>520</x>
+      <y>540</y>
       <width>201</width>
       <height>91</height>
      </rect>
@@ -44,8 +44,8 @@
    <widget class="QPushButton" name="buttonClose">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>480</y>
+      <x>730</x>
+      <y>540</y>
       <width>201</width>
       <height>91</height>
      </rect>
@@ -59,14 +59,14 @@
      <rect>
       <x>20</x>
       <y>20</y>
-      <width>401</width>
-      <height>211</height>
+      <width>451</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
       <width>0</width>
-      <height>200</height>
+      <height>0</height>
      </size>
     </property>
     <property name="text">
@@ -77,16 +77,16 @@ Off/On</string>
    <widget class="QPushButton" name="buttonNoVideo">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>480</x>
       <y>20</y>
-      <width>401</width>
-      <height>211</height>
+      <width>451</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
       <width>0</width>
-      <height>200</height>
+      <height>0</height>
      </size>
     </property>
     <property name="text">
@@ -98,15 +98,15 @@ Off/On</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>240</y>
-      <width>401</width>
-      <height>211</height>
+      <y>190</y>
+      <width>451</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
       <width>0</width>
-      <height>200</height>
+      <height>0</height>
      </size>
     </property>
     <property name="text">
@@ -120,20 +120,63 @@ Off/On</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>240</y>
-      <width>401</width>
-      <height>211</height>
+      <x>480</x>
+      <y>190</y>
+      <width>451</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
       <width>0</width>
-      <height>200</height>
+      <height>0</height>
      </size>
     </property>
     <property name="text">
      <string>Record Status
+Off/On</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonGpsStatus">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>360</y>
+      <width>451</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>GPS Status
+Off/On</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonCameraInfo">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>360</y>
+      <width>451</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Camera Info
 Off/On</string>
     </property>
    </widget>

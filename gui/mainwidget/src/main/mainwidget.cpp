@@ -601,13 +601,24 @@ void MainWidget::onSaveDisplayPage(int type)
     }
     else if(type == 4) // OSD
     {
-        QString str = QString("OSD CAM:%1 NoV:%2 Bar:%3 Rec:%4").arg(
+#if 1 //yjsin DisplayCfg.osd_gps is not defined
+        QString str = QString("OSD CAM:%1 NoV:%2 Bar:%3 Rec:%4 CIn:%5").arg(
                 QString::fromUtf8(DisplayCfg.osd_chname),
                 QString::fromUtf8(DisplayCfg.osd_viloss),
                 QString::fromUtf8(DisplayCfg.osd_status),
-                QString::fromUtf8(DisplayCfg.osd_record));
+                QString::fromUtf8(DisplayCfg.osd_record),
+                QString::fromUtf8(DisplayCfg.osd_camera));
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
-
+#else
+        QString str = QString("OSD CAM:%1 NoV:%2 Bar:%3 Rec:%4 Gps:%5 CIn:%6").arg(
+                QString::fromUtf8(DisplayCfg.osd_chname),
+                QString::fromUtf8(DisplayCfg.osd_viloss),
+                QString::fromUtf8(DisplayCfg.osd_status),
+                QString::fromUtf8(DisplayCfg.osd_record),
+                QString::fromUtf8(DisplayCfg.osd_gps),
+                QString::formUtf8(DisplayCfg.osd_camera));
+        appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+#endif
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));

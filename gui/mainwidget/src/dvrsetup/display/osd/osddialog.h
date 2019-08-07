@@ -22,6 +22,8 @@ public slots:
 	void onNoVideo(void);
 	void onStatusBar(void);
 	void onRecordStatus(void);
+    void onGpsStatus(void);
+    void onCameraInfo(void);
 
 protected:
 	void keyPressEvent(QKeyEvent *event);
@@ -32,12 +34,16 @@ private:
 	int indexNoVideo;
 	int indexStatusBar;
 	int indexRecordStatus;
+    int indexGpsStatus;
+    int indexCameraInfo;
 
     QFrame *frame;
     QPushButton *buttonCameraName;
     QPushButton *buttonNoVideo;
     QPushButton *buttonStatusBar;
     QPushButton *buttonRecordStatus;
+    QPushButton *buttonGpsStatus;
+    QPushButton *buttonCameraInfo;
     QPushButton *buttonSave;
     QPushButton *buttonClose;
 };

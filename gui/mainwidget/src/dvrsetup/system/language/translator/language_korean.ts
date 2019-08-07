@@ -4137,6 +4137,20 @@ Off/On</source>
 끄기/켜기</translation>
     </message>
     <message>
+        <location filename="../../../display/osd/osddialog.ui" line="156"/>
+        <source>GPS Status
+Off/On</source>
+        <translation>GPS 상태표시
+끄기/켜기</translation>
+    </message>
+    <message>
+        <location filename="../../../display/osd/osddialog.ui" line="179"/>
+        <source>Camera Info
+Off/On</source>
+        <translation>카메라 정보 표시
+끄기/켜기</translation>
+    </message>
+    <message>
         <location filename="../../../display/osd/osddialog.ui" line="41"/>
         <source>Save</source>
         <translation>저장</translation>
@@ -4147,75 +4161,99 @@ Off/On</source>
         <translation>취소</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="65"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="66"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="71"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="72"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="77"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="78"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="83"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="84"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="91"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="106"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="121"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="127"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="136"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="142"/>
         <source>%1
 %2</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>%1
+        <translation type="obsolete">%1
 %2</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="65"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="66"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="91"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="61"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="62"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="120"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="126"/>
         <source>Camera Name</source>
         <translation>카메라 이름</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="65"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="71"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="83"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="91"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="106"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="136"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="61"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="67"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="79"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="86"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="95"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="110"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="120"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="135"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="165"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="181"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="194"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="208"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="223"/>
         <source>Off</source>
         <translation>숨김</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="66"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="72"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="84"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="97"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="142"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="62"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="68"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="80"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="90"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="99"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="105"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="111"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="126"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="141"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="171"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="186"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="199"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="214"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="229"/>
         <source>On</source>
         <translation>표시</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="71"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="72"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="106"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="112"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="67"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="68"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="135"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="141"/>
         <source>No Video</source>
-        <translation>영상 없음</translation>
+        <translation>카메라 연결여부</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="77"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="121"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="73"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="150"/>
         <source>AutoHide: Off</source>
         <translation>표시</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="78"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="127"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="74"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="156"/>
         <source>AutoHide: On</source>
         <translation>숨김</translation>
+    </message>
+    <message>
+        <location filename="../../../display/osd/osddialog.cpp" line="86"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="90"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="105"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="181"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="186"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="208"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="214"/>
+        <source>Gps Status</source>
+        <translation>GPS 상태</translation>
+    </message>
+    <message>
+        <location filename="../../../display/osd/osddialog.cpp" line="95"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="99"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="110"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="111"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="194"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="199"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="223"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="229"/>
+        <source>Camera Info</source>
+        <translation>카메라 정보</translation>
     </message>
     <message>
         <source>%1%2</source>
@@ -4283,10 +4321,10 @@ AutoHide: </source>
 %2 :%3</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="77"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="78"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="121"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="127"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="73"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="74"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="150"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="156"/>
         <source>Status Bar</source>
         <translation>상태표시줄</translation>
     </message>
@@ -4295,12 +4333,12 @@ AutoHide: </source>
         <translation type="obsolete"> </translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="83"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="84"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="136"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="142"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="79"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="80"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="165"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="171"/>
         <source>Record Status</source>
-        <translation>녹화 아이콘</translation>
+        <translation>녹화 상태</translation>
     </message>
 </context>
 <context>
@@ -4346,6 +4384,20 @@ Off/On</source>
         <source>Camera Name
 Off/On</source>
         <translation>카메라명
+끄기/켜기</translation>
+    </message>
+    <message>
+        <location filename="../../../display/osd/osddialog1080p.ui" line="156"/>
+        <source>GPS Status
+Off/On</source>
+        <translation>GPS 상태표시
+끄기/켜기</translation>
+    </message>
+    <message>
+        <location filename="../../../display/osd/osddialog1080p.ui" line="176"/>
+        <source>Camera Info
+Off/On</source>
+        <translation>카메라 정보 표시
 끄기/켜기</translation>
     </message>
 </context>
@@ -6343,8 +6395,8 @@ You must delete data or set time.</source>
         <translation type="obsolete">트리거 4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="919"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1030"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="929"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1040"/>
         <source>PRIORITY REDUNDANT</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>우선순위 오류</translation>
@@ -6366,29 +6418,29 @@ You must delete data or set time.</source>
         <translation type="obsolete">  경고</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="459"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="469"/>
         <source>Trigger</source>
         <translation>트리거</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="702"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="712"/>
         <source>CAM</source>
         <translation>채널</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="706"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="716"/>
         <source>Sec</source>
         <translation>초</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="920"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1031"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
         <source>Priority is redundant.</source>
         <translation>우선순위가 중복됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="920"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1031"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
         <source>Please check priority.</source>
         <translation>우선순위를 확인하십시오.</translation>
     </message>
@@ -6560,12 +6612,12 @@ You must delete data or set time.</source>
         <translation>오디오</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="720"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="730"/>
         <source>Mute</source>
         <translation>끄기</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="716"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="726"/>
         <source>Output</source>
         <translation>켜기</translation>
     </message>
@@ -7835,62 +7887,62 @@ X 또는 너비값를 확인하십시오!
         <translation>데이터 없음</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1222"/>
+        <location filename="../../../../main/videopane.cpp" line="1223"/>
         <source>PAL</source>
         <translation>PAL</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1223"/>
+        <location filename="../../../../main/videopane.cpp" line="1224"/>
         <source>NTSC</source>
         <translation>NTSC</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1224"/>
+        <location filename="../../../../main/videopane.cpp" line="1225"/>
         <source>720p25</source>
         <translation>720p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1225"/>
+        <location filename="../../../../main/videopane.cpp" line="1226"/>
         <source>720p30</source>
         <translation>720p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1226"/>
+        <location filename="../../../../main/videopane.cpp" line="1227"/>
         <source>720p50</source>
         <translation>720p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1227"/>
+        <location filename="../../../../main/videopane.cpp" line="1228"/>
         <source>720p60</source>
         <translation>720p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1228"/>
+        <location filename="../../../../main/videopane.cpp" line="1229"/>
         <source>1080p25</source>
         <translation>1080p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1229"/>
+        <location filename="../../../../main/videopane.cpp" line="1230"/>
         <source>1080p30</source>
         <translation>1080p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1230"/>
+        <location filename="../../../../main/videopane.cpp" line="1231"/>
         <source>1080p50</source>
         <translation>1080p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1231"/>
+        <location filename="../../../../main/videopane.cpp" line="1232"/>
         <source>1080p60</source>
         <translation>1080p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1232"/>
+        <location filename="../../../../main/videopane.cpp" line="1233"/>
         <source>1080i50</source>
         <translation>1080i50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1233"/>
+        <location filename="../../../../main/videopane.cpp" line="1234"/>
         <source>1080i60</source>
         <translation>1080i60</translation>
     </message>
