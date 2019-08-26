@@ -294,6 +294,10 @@ void CalendarPage::UpdateSelectTime()
 
     qDebug(" calendar select %d-%d-%d", tmNow.tm_year+1900, tmNow.tm_mon+1, tmNow.tm_mday);
     calSelTime = mktime(&tmNow);
+
+    focusStatus=1;
+    calendar->setFocusStatus(focusStatus);
+    timeLine->setFocusStatus(focusStatus);
 }
 void CalendarPage::onChangeFocus(int status)
 {

@@ -351,100 +351,104 @@ void TimeLine::paintMinuteBorder(QPainter *painter)
         painter->drawText(TL_LEFT_MARGIN+((TL_WIDTH/60)*i)-textWidth/2, (TL_UP_MARGIN-textHeight)-(TL_UP_MARGIN-textHeight)/2 , textWidth, textHeight, textFlag, str);
     }
 
-    for(int i=0; i<CH_COUNT; i++)
+    if(isDrawRecord)
     {
-        for(int j=0; j<60*60/15; j++)
+        for(int i=0; i<CH_COUNT; i++)
         {
-            bVideoExist = bAudioExist =false;
+            for(int j=0; j<60*60/15; j++)
+            {
+                bVideoExist = bAudioExist =false;
 
-            if(timeLog[selectHour].channel[j] & (1<<i))
-            {
-                bVideoExist=true;
-            }
-            if(timeLog[selectHour].channel[j] & (1<<(i+16)))
-            {
-                bAudioExist=true;
-            }
-
-            if(bVideoExist)
-            {
-                if(( audioEndPos>=0) && (bAudioExist==false))
+                if(timeLog[selectHour].channel[j] & (1<<i))
                 {
-                    rect.setRect(audioStartPos, TL_UP_MARGIN+(i*TL_HEIGHT), audioEndPos, TL_HEIGHT);
-                    painter->fillRect(rect, QColor(65, 232, 23));
-                    rect.setRect(audioStartPos, TL_UP_MARGIN+(i*TL_HEIGHT)+TL_HEIGHT/2, audioEndPos, TL_HEIGHT/2);
-                    painter->fillRect(rect, QColor(235, 173, 71));
-
-                    videoStartPos = audioStartPos = -1;
-                    videoEndPos   = audioEndPos   = -1;
+                    bVideoExist=true;
+                }
+                if(timeLog[selectHour].channel[j] & (1<<(i+16)))
+                {
+                    bAudioExist=true;
                 }
 
-                if( videoStartPos < 0)
+                if(bVideoExist)
                 {
-                    videoStartPos = TL_LEFT_MARGIN + j*NUM_PIXEL_PER_MIN;
-                    videoEndPos = 0;
-                }
-
-                videoEndPos += NUM_PIXEL_PER_MIN;
-
-                if( bAudioExist)
-                {
-                    if( audioStartPos < 0 )
-                    {
-                        audioStartPos = TL_LEFT_MARGIN + j*NUM_PIXEL_PER_MIN;
-                        audioEndPos =0;
-
-                        rect.setRect(videoStartPos, TL_UP_MARGIN+(i*TL_HEIGHT), videoEndPos, TL_HEIGHT);
-                        painter->fillRect(rect, QColor(65, 232, 23));
-
-                        videoStartPos = TL_LEFT_MARGIN + j*NUM_PIXEL_PER_MIN;
-                        videoEndPos = NUM_PIXEL_PER_MIN;
-                    }
-
-                    audioEndPos += NUM_PIXEL_PER_MIN;
-                }
-            }
-            else
-            {
-                if( videoStartPos>=0 )
-                {
-                    if(audioStartPos >= 0)
+                    if(( audioEndPos>=0) && (bAudioExist==false))
                     {
                         rect.setRect(audioStartPos, TL_UP_MARGIN+(i*TL_HEIGHT), audioEndPos, TL_HEIGHT);
                         painter->fillRect(rect, QColor(65, 232, 23));
                         rect.setRect(audioStartPos, TL_UP_MARGIN+(i*TL_HEIGHT)+TL_HEIGHT/2, audioEndPos, TL_HEIGHT/2);
                         painter->fillRect(rect, QColor(235, 173, 71));
+
+                        videoStartPos = audioStartPos = -1;
+                        videoEndPos   = audioEndPos   = -1;
                     }
-                    else
+
+                    if( videoStartPos < 0)
                     {
-                        rect.setRect(videoStartPos, TL_UP_MARGIN+(i*TL_HEIGHT), videoEndPos, TL_HEIGHT);
-                        painter->fillRect(rect, QColor(65, 232, 23));
+                        videoStartPos = TL_LEFT_MARGIN + j*NUM_PIXEL_PER_MIN;
+                        videoEndPos = 0;
+                    }
+
+                    videoEndPos += NUM_PIXEL_PER_MIN;
+
+                    if( bAudioExist)
+                    {
+                        if( audioStartPos < 0 )
+                        {
+                            audioStartPos = TL_LEFT_MARGIN + j*NUM_PIXEL_PER_MIN;
+                            audioEndPos =0;
+
+                            rect.setRect(videoStartPos, TL_UP_MARGIN+(i*TL_HEIGHT), videoEndPos, TL_HEIGHT);
+                            painter->fillRect(rect, QColor(65, 232, 23));
+
+                            videoStartPos = TL_LEFT_MARGIN + j*NUM_PIXEL_PER_MIN;
+                            videoEndPos = NUM_PIXEL_PER_MIN;
+                        }
+
+                        audioEndPos += NUM_PIXEL_PER_MIN;
                     }
                 }
+                else
+                {
+                    if( videoStartPos>=0 )
+                    {
+                        if(audioStartPos >= 0)
+                        {
+                            rect.setRect(audioStartPos, TL_UP_MARGIN+(i*TL_HEIGHT), audioEndPos, TL_HEIGHT);
+                            painter->fillRect(rect, QColor(65, 232, 23));
+                            rect.setRect(audioStartPos, TL_UP_MARGIN+(i*TL_HEIGHT)+TL_HEIGHT/2, audioEndPos, TL_HEIGHT/2);
+                            painter->fillRect(rect, QColor(235, 173, 71));
+                        }
+                        else
+                        {
+                            rect.setRect(videoStartPos, TL_UP_MARGIN+(i*TL_HEIGHT), videoEndPos, TL_HEIGHT);
+                            painter->fillRect(rect, QColor(65, 232, 23));
+                        }
+                    }
 
-                videoStartPos = audioStartPos = -1;
-                videoEndPos   = audioEndPos   = -1;
+                    videoStartPos = audioStartPos = -1;
+                    videoEndPos   = audioEndPos   = -1;
+                }
             }
-        }
 
-        if(videoStartPos>=0)
-        {
-            if(audioStartPos >= 0)
+            if(videoStartPos>=0)
             {
-                rect.setRect(audioStartPos, TL_UP_MARGIN+(i*TL_HEIGHT), audioEndPos, TL_HEIGHT);
-                painter->fillRect(rect, QColor(65, 232, 23));
-                rect.setRect(audioStartPos, TL_UP_MARGIN+(i*TL_HEIGHT)+TL_HEIGHT/2, audioEndPos, TL_HEIGHT/2);
-                painter->fillRect(rect, QColor(235, 173, 71));
+                if(audioStartPos >= 0)
+                {
+                    rect.setRect(audioStartPos, TL_UP_MARGIN+(i*TL_HEIGHT), audioEndPos, TL_HEIGHT);
+                    painter->fillRect(rect, QColor(65, 232, 23));
+                    rect.setRect(audioStartPos, TL_UP_MARGIN+(i*TL_HEIGHT)+TL_HEIGHT/2, audioEndPos, TL_HEIGHT/2);
+                    painter->fillRect(rect, QColor(235, 173, 71));
+                }
+                else
+                {
+                    rect.setRect(videoStartPos, TL_UP_MARGIN+(i*TL_HEIGHT), videoEndPos, TL_HEIGHT);
+                    painter->fillRect(rect, QColor(65, 232, 23));
+                }
             }
-            else
-            {
-                rect.setRect(videoStartPos, TL_UP_MARGIN+(i*TL_HEIGHT), videoEndPos, TL_HEIGHT);
-                painter->fillRect(rect, QColor(65, 232, 23));
-            }
+            videoStartPos = audioStartPos = -1;
+            videoEndPos   = audioEndPos   = -1;
         }
-        videoStartPos = audioStartPos = -1;
-        videoEndPos   = audioEndPos   = -1;
     }
+
 
     //draw horizontal line
     painter->setPen(QPen(QColor(39,0,79), 2, Qt::SolidLine));
