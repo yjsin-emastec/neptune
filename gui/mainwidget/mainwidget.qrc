@@ -48,5 +48,7 @@
         <file>images/pb_split4_pressed.png</file>
         <file>images/pb_split9.png</file>
         <file>images/pb_split9_pressed.png</file>
+        <file>images/flip.png</file>
+        <file>images/mirror.png</file>
     </qresource>
 </RCC>

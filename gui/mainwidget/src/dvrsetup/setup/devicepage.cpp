@@ -65,6 +65,8 @@ void DevicePage::onButtonVideo(void)
     if(!videoInputDialog)
     {
         videoInputDialog = new VideoInputDialog(this);
+        connect(videoInputDialog, SIGNAL(makeTransparent(int)), this, SLOT(onMakeTransparent(int)));
+        connect(videoInputDialog, SIGNAL(videoInputPreview()),  this, SLOT(onVideoInputPreview()));
 
         if(!videoInputDialog)
         {
@@ -82,11 +84,19 @@ void DevicePage::onButtonVideo(void)
     }
     else
     {
-        emit saveDevicePage(0);
+        emit saveDevicePage(6);
     }
 
     delete videoInputDialog;
     videoInputDialog = NULL;
+}
+void DevicePage::onMakeTransparent(int n)
+{
+    emit makeTransparent(n);
+}
+void DevicePage::onVideoInputPreview()
+{
+    emit videoInputPreview();
 }
 void DevicePage::onButtonTrigger(void)
 {

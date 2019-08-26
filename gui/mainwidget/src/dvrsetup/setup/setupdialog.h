@@ -38,6 +38,7 @@ signals:
     void saveDisplayPage(int type);
     void saveDevicePage(int type);
     void upgradeProgress(int percent);
+    void videoInputPreview();
 
 protected:
     void keyPressEvent(QKeyEvent *event);
@@ -55,6 +56,8 @@ private slots:
     void onSaveDisplayPage(int type);
     void onSaveDevicePage(int type);
     void onEscapeTabFocus(void);
+    void onMakeTransparent(int n);
+    void onVideoInputPreview();
 
 private:
     void createTabLayout();

@@ -65,6 +65,8 @@ SetupDialog::SetupDialog(QWidget *parent)
     connect(devicePage,     SIGNAL(saveDevicePage(int)),       this,        SLOT(onSaveDevicePage(int)));
     connect(devicePage,     SIGNAL(escapeTabFocus(void)),      this,        SLOT(onEscapeTabFocus(void)));
     connect(devicePage,     SIGNAL(closeSetupMenu(void)),      this,        SLOT(reject()));
+    connect(devicePage,     SIGNAL(makeTransparent(int)),      this,        SLOT(onMakeTransparent(int)));
+    connect(devicePage,     SIGNAL(videoInputPreview()),       this,        SLOT(onVideoInputPreview()));
     connect(this,           SIGNAL(upgradeProgress(int)),      systemPage,  SLOT(onUpgradeProgress(int)));
     connect(tabLayout,      SIGNAL(currentChanged(int)),       this,        SLOT(setupPageChanged(int)));
     connect(button_Cancel,  SIGNAL(released()),                this,        SLOT(reject()));
@@ -233,6 +235,16 @@ void SetupDialog::onEscapeTabFocus(void)
 {
     tabLayout->clearFocus();
     tabLayout->setStyleSheet("QTabBar::tab:selected{background:rgb(06,86,159)}");
+}
+void SetupDialog::onMakeTransparent(int n)
+{
+    //if( n == 1 )    { this->setWindowOpacity(0.5); }
+    if( n == 1 )    { this->setWindowOpacity(0); }
+    else            { this->setWindowOpacity(1); }
+}
+void SetupDialog::onVideoInputPreview()
+{
+    emit videoInputPreview();
 }
 void SetupDialog::mousePressEvent(QMouseEvent *event)
 {

@@ -90,6 +90,7 @@ public slots:
     int  splitScreen(int split);
     void onChangeSplit();
     void onChangePrevAudio(int index);
+    void onVideoInputPreview();
 
 protected:
     void closeEvent(QCloseEvent *event);

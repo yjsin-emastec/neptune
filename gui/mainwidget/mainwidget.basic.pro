@@ -114,7 +114,8 @@ SOURCES      += src/main.cpp                                                    
                 src/test/testwidget.cpp                                                              \
                 src/test/testeventcontroller.cpp                                                     \
                 src/search/systemlogpage.cpp                                                         \
-                src/search/functiondialog.cpp
+                src/search/functiondialog.cpp                                                        \
+                src/dvrsetup/device/videoinput/videoinputbar.cpp
 
 HEADERS      += src/login/logindialog.h                                                              \
                 src/ui/keyboard/uikeyboarddialog.h                                                   \
@@ -164,7 +165,8 @@ HEADERS      += src/login/logindialog.h                                         
                 src/test/testwidget.h                                                                \
                 src/test/testeventcontroller.h                                                       \
                 src/search/systemlogpage.h                                                           \
-                src/search/functiondialog.h
+                src/search/functiondialog.h                                                          \
+                src/dvrsetup/device/videoinput/videoinputbar.h
 
 FORMS        += src/login/logindialog.ui                                                             \
                 src/ui/numkeypaddialog/numkeypaddialog.ui                                            \
@@ -237,7 +239,9 @@ FORMS        += src/login/logindialog.ui                                        
                 src/dvrsetup/record/normal/normaldialog1080p.ui                                      \
                 src/dvrsetup/record/normal/normaldialog.ui                                           \
                 src/ui/keyboard/uikeyboarddialog.ui                                                  \
-                src/main/playbardialog1080p.ui
+                src/main/playbardialog1080p.ui                                                       \
+                src/dvrsetup/device/videoinput/videoinputbar.ui                                      \
+                src/dvrsetup/device/videoinput/videoinputbar1080p.ui
 
 RESOURCES    += mainwidget.qrc
 

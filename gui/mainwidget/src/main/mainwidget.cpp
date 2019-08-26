@@ -490,11 +490,7 @@ void MainWidget::onSaveDevicePage(int type)
     }
     else if(type == 5) // Video Input
     {
-#if( DEVINFO_VIDEONUM == 8 )
-        for(int ii=0; ii < 8; ii++)
-#else
-        for(int ii=0; ii < devInfo.videoNum; ii++)
-#endif
+        for(int ii=0; ii<devInfo.videoNum; ii++)
         {
             QString str = QString("VI%1 M:%2 F:%3").arg(
                     QString::number(ii+1),
@@ -503,6 +499,15 @@ void MainWidget::onSaveDevicePage(int type)
             appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
         }
 
+        setConfigString();
+        appmgr_cfg_change();
+        memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
+        appmgr_save_setup(0, &cfgMain);
+        appmgr_cfg_sync();
+        appmgr_config_videoIn();
+    }
+    else if(type == 6) //Video Input Cancel
+    {
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -933,6 +938,7 @@ void MainWidget::createPopupDialog()
         connect(setupDialog, SIGNAL(saveRecordPage(int)),      this,        SLOT(onSaveRecordPage(int)));
         connect(setupDialog, SIGNAL(saveDisplayPage(int)),     this,        SLOT(onSaveDisplayPage(int)));
         connect(setupDialog, SIGNAL(saveDevicePage(int)),      this,        SLOT(onSaveDevicePage(int)));
+        connect(setupDialog, SIGNAL(videoInputPreview()),      this,        SLOT(onVideoInputPreview()));
         connect(this,        SIGNAL(configProgress(int, int)), setupDialog, SLOT(updateConfigProgress(int, int)));
         connect(this,        SIGNAL(upgradeProgress(int)),     setupDialog, SLOT(onUpgradeProgress(int)));
 
@@ -2547,4 +2553,13 @@ void MainWidget::onChangePrevAudio(int index)
     {
         previousAudioCh = index;
     }
+}
+void MainWidget::onVideoInputPreview()
+{
+    setConfigString();
+    appmgr_cfg_change();
+    memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
+    appmgr_save_setup(0, &cfgMain);
+    appmgr_cfg_sync();
+    appmgr_config_videoIn();
 }

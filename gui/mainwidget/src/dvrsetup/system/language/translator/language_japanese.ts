@@ -965,27 +965,27 @@ Sensitivity</source>
 フォーマット</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="187"/>
+        <location filename="../../../setup/devicepage.cpp" line="197"/>
         <source>HDD FORMAT</source>
         <translation>HDD
 フォーマット</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="187"/>
+        <location filename="../../../setup/devicepage.cpp" line="197"/>
         <source>Are you sure to format HDD?
 System will restart after format.</source>
         <translation>HDDをフォーマットしてもよろしいですか?
 フォーマット後にシステムが再起動します。</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="188"/>
+        <location filename="../../../setup/devicepage.cpp" line="198"/>
         <source>Are you sure to format SSD?
 System will restart after format.</source>
         <translation>SSDをフォーマットしてもよろしいですか?
 フォーマット後にシステムが再起動します。</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="209"/>
+        <location filename="../../../setup/devicepage.cpp" line="219"/>
         <source>SSD does not exist.</source>
         <translation>SSDが存在しません。</translation>
     </message>
@@ -1004,8 +1004,8 @@ HDDをフォーマットしてもよろしいですか?
 </translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="188"/>
-        <location filename="../../../setup/devicepage.cpp" line="209"/>
+        <location filename="../../../setup/devicepage.cpp" line="198"/>
+        <location filename="../../../setup/devicepage.cpp" line="219"/>
         <source>SSD FORMAT</source>
         <translation>SSD フォーマット</translation>
     </message>
@@ -3165,8 +3165,8 @@ Current status is trigger.</source>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="823"/>
-        <location filename="../../../../main/mainwidget.cpp" line="636"/>
-        <location filename="../../../../main/mainwidget.cpp" line="1071"/>
+        <location filename="../../../../main/mainwidget.cpp" line="656"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1092"/>
         <source>POWER OFF</source>
         <translation>電源 終了</translation>
     </message>
@@ -3189,24 +3189,24 @@ Do you want to shutdown the system?</source>
 システムをシャットダウンしますか？ </translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="636"/>
+        <location filename="../../../../main/mainwidget.cpp" line="656"/>
         <source>System was shutdown successfully.
 Turn off the power.</source>
         <translation>システムは正常に終了しました。
 電源を切ってください。</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1071"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1092"/>
         <source>Do you want to shutdown the system?</source>
         <translation>システムをシャットダウンしますか？</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1570"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1591"/>
         <source>SEARCH</source>
         <translation>けんさく</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1570"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1591"/>
         <source>No SSD</source>
         <translation>SSDなし</translation>
     </message>
@@ -3852,8 +3852,8 @@ Off/On</source>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="61"/>
         <location filename="../../../display/osd/osddialog.cpp" line="62"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="120"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="126"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="110"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="116"/>
         <source>Camera Name</source>
         <translation>カメラ名</translation>
     </message>
@@ -3863,15 +3863,13 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.cpp" line="79"/>
         <location filename="../../../display/osd/osddialog.cpp" line="86"/>
         <location filename="../../../display/osd/osddialog.cpp" line="95"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="101"/>
         <location filename="../../../display/osd/osddialog.cpp" line="110"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="120"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="135"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="165"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="181"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="194"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="208"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="223"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="125"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="155"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="171"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="185"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="201"/>
         <source>Off</source>
         <translation>オフ</translation>
     </message>
@@ -3880,60 +3878,54 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.cpp" line="68"/>
         <location filename="../../../display/osd/osddialog.cpp" line="80"/>
         <location filename="../../../display/osd/osddialog.cpp" line="90"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="99"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="105"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="111"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="126"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="141"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="171"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="186"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="199"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="214"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="229"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="96"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="102"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="116"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="131"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="161"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="176"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="191"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="207"/>
         <source>On</source>
         <translation>オン</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="67"/>
         <location filename="../../../display/osd/osddialog.cpp" line="68"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="135"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="141"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="125"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="131"/>
         <source>No Video</source>
         <translation>ビデオなし</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="73"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="150"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="140"/>
         <source>AutoHide: Off</source>
         <translation>ひょうじ</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="74"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="156"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="146"/>
         <source>AutoHide: On</source>
         <translation>かくす</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="86"/>
         <location filename="../../../display/osd/osddialog.cpp" line="90"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="104"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="105"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="181"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="186"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="208"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="214"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="95"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="96"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="171"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="176"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="185"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="191"/>
         <source>Gps Status</source>
         <translation>GPS 状態</translation>
     </message>
     <message>
-        <location filename="../../../display/osd/osddialog.cpp" line="95"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="99"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="110"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="111"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="194"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="199"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="223"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="229"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="101"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="102"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="201"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="207"/>
         <source>Camera Info</source>
         <translation>カメラ情報</translation>
     </message>
@@ -3960,8 +3952,8 @@ AutoHide: On</source>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="73"/>
         <location filename="../../../display/osd/osddialog.cpp" line="74"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="150"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="156"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="140"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="146"/>
         <source>Status Bar</source>
         <translation>ステータスバー</translation>
     </message>
@@ -3981,8 +3973,8 @@ AutoHide: </source>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="79"/>
         <location filename="../../../display/osd/osddialog.cpp" line="80"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="165"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="171"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="155"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="161"/>
         <source>Record Status</source>
         <translation>きろく状態</translation>
     </message>
@@ -5137,62 +5129,62 @@ On</source>
         <translation>しめる</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="78"/>
+        <location filename="../../../setup/setupdialog.cpp" line="80"/>
         <source>System</source>
         <translation>システム</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="79"/>
+        <location filename="../../../setup/setupdialog.cpp" line="81"/>
         <source>Record</source>
         <translation>ろくが</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="80"/>
+        <location filename="../../../setup/setupdialog.cpp" line="82"/>
         <source>Display</source>
         <translation>ディスプレー</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="81"/>
+        <location filename="../../../setup/setupdialog.cpp" line="83"/>
         <source>Device</source>
         <translation>デバイス</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="104"/>
+        <location filename="../../../setup/setupdialog.cpp" line="106"/>
         <source> SYSTEM </source>
         <translation> システム </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="105"/>
+        <location filename="../../../setup/setupdialog.cpp" line="107"/>
         <source> RECORD </source>
         <translation> ろくが </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="106"/>
+        <location filename="../../../setup/setupdialog.cpp" line="108"/>
         <source> DISPLAY </source>
         <translation> ディスプレー </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="107"/>
+        <location filename="../../../setup/setupdialog.cpp" line="109"/>
         <source> DEVICE </source>
         <translation> デバイス </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="111"/>
+        <location filename="../../../setup/setupdialog.cpp" line="113"/>
         <source>SYSTEM</source>
         <translation>システム</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="112"/>
+        <location filename="../../../setup/setupdialog.cpp" line="114"/>
         <source>RECORD</source>
         <translation>ろくが</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="113"/>
+        <location filename="../../../setup/setupdialog.cpp" line="115"/>
         <source>DISPLAY</source>
         <translation>ディスプレー</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="114"/>
+        <location filename="../../../setup/setupdialog.cpp" line="116"/>
         <source>DEVICE</source>
         <translation>デバイス</translation>
     </message>
@@ -6740,6 +6732,112 @@ You must delete data or set time.</source>
     </message>
 </context>
 <context>
+    <name>VideoInputBar</name>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>ダイアログ</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar.ui" line="54"/>
+        <source>A</source>
+        <translation>A</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar.ui" line="67"/>
+        <source>1</source>
+        <translation>1</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar.ui" line="83"/>
+        <source>2</source>
+        <translation>2</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar.ui" line="96"/>
+        <source>3</source>
+        <translation>3</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar.ui" line="109"/>
+        <source>4</source>
+        <translation>4</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar.ui" line="122"/>
+        <source>5</source>
+        <translation>5</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar.ui" line="135"/>
+        <source>6</source>
+        <translation>6</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar.ui" line="148"/>
+        <source>7</source>
+        <translation>7</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar.ui" line="161"/>
+        <source>8</source>
+        <translation>8</translation>
+    </message>
+</context>
+<context>
+    <name>VideoInputBar1080p</name>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>ダイアログ</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="41"/>
+        <source>A</source>
+        <translation>A</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="54"/>
+        <source>1</source>
+        <translation>1</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="67"/>
+        <source>2</source>
+        <translation>2</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="80"/>
+        <source>3</source>
+        <translation>3</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="93"/>
+        <source>4</source>
+        <translation>4</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="106"/>
+        <source>5</source>
+        <translation>5</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="119"/>
+        <source>6</source>
+        <translation>6</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="132"/>
+        <source>7</source>
+        <translation>7</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="145"/>
+        <source>8</source>
+        <translation>8</translation>
+    </message>
+</context>
+<context>
     <name>VideoInputDialog</name>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="14"/>
@@ -6747,97 +6845,136 @@ You must delete data or set time.</source>
         <translation>ビデオ入力プロパティ</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.ui" line="50"/>
         <source>Normal/Mirror</source>
-        <translation>ノーマル/ミラー</translation>
+        <translation type="obsolete">ノーマル/ミラー</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.ui" line="69"/>
         <source>Camera
 1/2/3/4/</source>
-        <translation>カメラ
+        <translation type="obsolete">カメラ
 1/2/3/4/</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.ui" line="89"/>
         <source>Up/Down</source>
-        <translation>上下</translation>
+        <translation type="obsolete">上下</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.ui" line="111"/>
         <source>N/A</source>
-        <translation>N/A</translation>
+        <translation type="obsolete">N/A</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.ui" line="124"/>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="41"/>
         <source>Save</source>
         <translation>セーブ</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.ui" line="137"/>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="54"/>
         <source>Cancel</source>
         <translation>しめる</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="52"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="78"/>
-        <source>Camera1</source>
-        <translation>カメラ1</translation>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="70"/>
+        <source>All</source>
+        <translation>すべて</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="56"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="91"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="101"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="111"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="121"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="141"/>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="127"/>
+        <source>Ch.1</source>
+        <translation>Ch.1</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="146"/>
+        <source>Ch.2</source>
+        <translation>Ch.2</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="165"/>
+        <source>Ch.3</source>
+        <translation>Ch.3</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="184"/>
+        <source>Ch.4</source>
+        <translation>Ch.4</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="203"/>
+        <source>Ch.5</source>
+        <translation>Ch.5</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="222"/>
+        <source>Ch.6</source>
+        <translation>Ch.6</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="241"/>
+        <source>Ch.7</source>
+        <translation>Ch.7</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="260"/>
+        <source>Ch.8</source>
+        <translation>Ch.8</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="580"/>
+        <source>Mirror Mode</source>
+        <translation>ミラー モード</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="593"/>
+        <source>Flip Mode</source>
+        <translation>フリップ モード</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="814"/>
+        <source>Preview</source>
+        <translation>プレビュー</translation>
+    </message>
+    <message>
+        <source>Camera1</source>
+        <translation type="obsolete">カメラ1</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="214"/>
         <source>Normal</source>
         <translation>ノーマル</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="60"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="92"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="102"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="112"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="122"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="157"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="213"/>
         <source>Mirror</source>
-        <translation>水平反転</translation>
+        <translation>ミラー</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="65"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="94"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="104"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="114"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="124"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="183"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="217"/>
         <source>Up</source>
         <translation>アップ</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="69"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="95"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="105"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="115"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="125"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="198"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="216"/>
         <source>Down</source>
-        <translation>上下反転</translation>
+        <translation>ダウン</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="79"/>
         <source>Camera2</source>
-        <translation>カメラ2</translation>
+        <translation type="obsolete">カメラ2</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="80"/>
         <source>Camera3</source>
-        <translation>カメラ3</translation>
+        <translation type="obsolete">カメラ3</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="81"/>
         <source>Camera4</source>
-        <translation>カメラ4</translation>
+        <translation type="obsolete">カメラ4</translation>
+    </message>
+    <message>
+        <source>Off</source>
+        <translation type="obsolete">オフ</translation>
+    </message>
+    <message>
+        <source>On</source>
+        <translation type="obsolete">オン</translation>
     </message>
 </context>
 <context>
@@ -6848,36 +6985,92 @@ You must delete data or set time.</source>
         <translation>ビデオ入力プロパティ</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="50"/>
         <source>Normal/Mirror</source>
-        <translation>ノーマル/ミラー</translation>
+        <translation type="obsolete">ノーマル/ミラー</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="69"/>
         <source>Camera
 1/2/3/4/</source>
-        <translation>カメラ
+        <translation type="obsolete">カメラ
 1/2/3/4/</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="89"/>
         <source>Up/Down</source>
-        <translation>上下</translation>
+        <translation type="obsolete">上下</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="111"/>
         <source>N/A</source>
-        <translation>N/A</translation>
+        <translation type="obsolete">N/A</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="124"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="41"/>
         <source>Save</source>
         <translation>セーブ</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="137"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="54"/>
         <source>Cancel</source>
         <translation>しめる</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="70"/>
+        <source>All</source>
+        <translation>すべて</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="127"/>
+        <source>Ch.1</source>
+        <translation>Ch.1</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="146"/>
+        <source>Ch.2</source>
+        <translation>Ch.2</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="165"/>
+        <source>Ch.3</source>
+        <translation>Ch.3</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="184"/>
+        <source>Ch.4</source>
+        <translation>Ch.4</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="203"/>
+        <source>Ch.5</source>
+        <translation>Ch.5</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="222"/>
+        <source>Ch.6</source>
+        <translation>Ch.6</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="241"/>
+        <source>Ch.7</source>
+        <translation>Ch.7</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="260"/>
+        <source>Ch.8</source>
+        <translation>Ch.8</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="276"/>
+        <source>Preview</source>
+        <translation>プレビュー</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="593"/>
+        <source>Mirror Mode</source>
+        <translation>ミラー モード</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="710"/>
+        <source>Flip Mode</source>
+        <translation>フリップ モード</translation>
     </message>
 </context>
 <context>
@@ -7355,62 +7548,62 @@ Xまたは幅値を確認してください！
         <translation>データなし</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1223"/>
+        <location filename="../../../../main/videopane.cpp" line="1226"/>
         <source>PAL</source>
         <translation>PAL</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1224"/>
+        <location filename="../../../../main/videopane.cpp" line="1227"/>
         <source>NTSC</source>
         <translation>NTSC</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1225"/>
+        <location filename="../../../../main/videopane.cpp" line="1228"/>
         <source>720p25</source>
         <translation>720p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1226"/>
+        <location filename="../../../../main/videopane.cpp" line="1229"/>
         <source>720p30</source>
         <translation>720p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1227"/>
+        <location filename="../../../../main/videopane.cpp" line="1230"/>
         <source>720p50</source>
         <translation>720p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1228"/>
+        <location filename="../../../../main/videopane.cpp" line="1231"/>
         <source>720p60</source>
         <translation>720p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1229"/>
+        <location filename="../../../../main/videopane.cpp" line="1232"/>
         <source>1080p25</source>
         <translation>1080p25</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1230"/>
+        <location filename="../../../../main/videopane.cpp" line="1233"/>
         <source>1080p30</source>
         <translation>1080p30</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1231"/>
+        <location filename="../../../../main/videopane.cpp" line="1234"/>
         <source>1080p50</source>
         <translation>1080p50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1232"/>
+        <location filename="../../../../main/videopane.cpp" line="1235"/>
         <source>1080p60</source>
         <translation>1080p60</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1233"/>
+        <location filename="../../../../main/videopane.cpp" line="1236"/>
         <source>1080i50</source>
         <translation>1080i50</translation>
     </message>
     <message>
-        <location filename="../../../../main/videopane.cpp" line="1234"/>
+        <location filename="../../../../main/videopane.cpp" line="1237"/>
         <source>1080i60</source>
         <translation>1080i60</translation>
     </message>

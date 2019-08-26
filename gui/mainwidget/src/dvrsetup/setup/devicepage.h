@@ -31,6 +31,8 @@ signals:
 	void saveDevicePage(int type);
 	void escapeTabFocus(void);
 	void closeSetupMenu(void);
+    void makeTransparent(int n);
+    void videoInputPreview();
 
 public slots:
 
@@ -41,6 +43,8 @@ private slots:
 	void onButtonBuzzer(void);
 	void onDiskFormat(void);
 	void onButtonClose(void);
+    void onMakeTransparent(int n);
+    void onVideoInputPreview();
 
 private:
 	TextMessageDialog   *msgBox;
