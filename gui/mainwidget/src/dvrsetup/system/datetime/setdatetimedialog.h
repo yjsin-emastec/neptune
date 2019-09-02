@@ -18,66 +18,42 @@ public:
     void getChangedConfig(time_t *newTime, cfg_dls_t *cfg);
 
 signals:
-    void signalResetTimer();
 
 protected:
-    void mousePressEvent(QMouseEvent *event);
     void keyPressEvent(QKeyEvent *event);
+    void changeComboBoxValue(int n);
+    void changeDateTimeEditFocus(int n);
 
 private slots:
-    void on_buttonBox_rejected();
-    void on_buttonBox_accepted();
-    void on_comboBoxTime_6_currentIndexChanged(int index);
-    void on_comboBoxTime_5_currentIndexChanged(int index);
-    void on_comboBoxTime_4_currentIndexChanged(int index);
-    void on_comboBoxEndHour_currentIndexChanged(int index);
-    void on_comboBoxEndDay_currentIndexChanged(int index);
-    void on_comboBoxEndWeek_currentIndexChanged(int index);
-    void on_comboBoxEndMonth_currentIndexChanged(int index);
-    void on_comboBoxBeginHour_currentIndexChanged(int index);
-    void on_comboBoxBeginDay_currentIndexChanged(int index);
-    void on_comboBoxBeginWeek_currentIndexChanged(int index);
-    void on_comboBoxBeginMonth_currentIndexChanged(int index);
-    void changeDlsType(int dls);
-    void enableSetTime();
-    void checkChangeTime();
-    void time1Changed(int val);
-    void time2Changed(int val);
-    void time3Changed(int val);
-    void onButtonTimeFormat(void);
-    void onButtonGpsSync(void);
+    void onButtonTimeFormat();
+    void onButtonGpsSync();
+    void onButtonSave();
+    void onButtonClose();
 
 private:
-    void initComboBox();
-    void getChangedTime(time_t *newTime);
-    void changeFocusedItemValue(int isPlus);
-    void monthDayCheck(int type);
-    void resetHour();
-    void checkTimezone();
-    void setTimezone();
-    void setTimeFormat();
-    cfg_dls_t cfgDls;
-    int timeFormat, dlsZone;
-    bool bOnce;
     TextMessageDialog *msgBox;
-    int indexTimeFormat, indexGpsSync;
-    time_t oldTime;
-    int isKeyLock;
+
+    time_t beforeChageTime;
+
+    int timeFormat;
+    int infoTimeFormat, infoGpsSync;
+    bool isKeyLock;
+
+    void initComboBox();
+    void enableSetTime();
+    void checkTimeZone();
+    void saveTimeZone();
+    void saveDateTime();
+    void getChangedTime(time_t *newTime);
     bool eventFilter(QObject *obj, QEvent *event);
 
+    QFrame *layoutFrame;
     QPushButton *buttonTimeFormat;
     QPushButton *buttonGpsSync;
+    QPushButton *buttonClose;
+    QPushButton *buttonSave;
     QComboBox *comboBoxTimeZone;
-    QComboBox *comboBoxTime_1;
-    QComboBox *comboBoxTime_2;
-    QComboBox *comboBoxTime_3;
-    QComboBox *comboBoxTime_4;
-    QComboBox *comboBoxTime_5;
-    QComboBox *comboBoxTime_6;
-    QFrame *layoutFrame;
-    QDialogButtonBox *buttonBox;
-    QLabel *labelTime_1;
-    QLabel *labelTime_2;
+    QDateTimeEdit *dateTimeEdit;
 };
 
 #endif // SETDATETIMEDIALOG_H

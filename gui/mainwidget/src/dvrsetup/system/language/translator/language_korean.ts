@@ -3445,8 +3445,8 @@ Current status is trigger.</source>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="823"/>
-        <location filename="../../../../main/mainwidget.cpp" line="656"/>
-        <location filename="../../../../main/mainwidget.cpp" line="1092"/>
+        <location filename="../../../../main/mainwidget.cpp" line="652"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1088"/>
         <source>POWER OFF</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>전원 종료</translation>
@@ -3470,24 +3470,24 @@ Do you want to shutdown the system?</source>
 녹화를 종료하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="656"/>
+        <location filename="../../../../main/mainwidget.cpp" line="652"/>
         <source>System was shutdown successfully.
 Turn off the power.</source>
         <translation>정상적으로 종료됐습니다.
 전원을 끄십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1092"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1088"/>
         <source>Do you want to shutdown the system?</source>
         <translation>녹화를 종료하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1591"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1587"/>
         <source>SEARCH</source>
         <translation>검색</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1591"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1587"/>
         <source>No SSD</source>
         <translation>저장장치 없음</translation>
     </message>
@@ -5062,37 +5062,29 @@ Please try again.</source>
         <translation>날짜 및 시간설정 대화상자</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="174"/>
-        <location filename="../../datetime/setdatetimedialog.ui" line="364"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="112"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="152"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="402"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="403"/>
         <source>/</source>
         <translation>/</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="296"/>
-        <location filename="../../datetime/setdatetimedialog.ui" line="330"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="129"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="290"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="412"/>
         <source>Time Format
 24-Hour</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>시간 형식
+        <translation type="obsolete">시간 형식
 24 시간</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="426"/>
         <source> GPS Synchronization
 On</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation> GPS 동기화
+        <translation type="obsolete"> GPS 동기화
 켜기</translation>
     </message>
     <message>
@@ -5132,243 +5124,228 @@ On</source>
         <translation>시간 표시 형식</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="90"/>
+        <location filename="../../datetime/setdatetimedialog.ui" line="169"/>
         <source>Save</source>
         <translation>저장</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="91"/>
+        <location filename="../../datetime/setdatetimedialog.ui" line="182"/>
         <source>Cancel</source>
         <translation>취소</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="119"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1426"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="84"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="457"/>
         <source>Time Format
 12 Hour</source>
         <translation>시간 형식
 12 시간</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="120"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1434"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="85"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="484"/>
         <source>Time Format
 24 Hour</source>
         <translation>시간 형식
 24 시간</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="125"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1456"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="95"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="492"/>
         <source>GPS Synchronization
 On</source>
         <translation>GPS 동기화
 켜기</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="130"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1448"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="90"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="497"/>
         <source>GPS Synchronization
 Off</source>
         <translation>GPS 동기화
 끄기</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="134"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="99"/>
         <source>TimeZone [UTC -12:00 Eniwetok/Kwajalein]</source>
         <translation>표준 시간대 [UTC -12:00 에니웨톡/콰잘레인]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="135"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="100"/>
         <source>TimeZone [UTC -11:00 Niue]</source>
         <translation>표준 시간대 [UTC -11:00 니우에]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="136"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="101"/>
         <source>TimeZone [UTC -10:00 Hawaii]</source>
         <translation>표준 시간대 [UTC -10:00 하와이]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="137"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="102"/>
         <source>TimeZone [UTC -09:00 Alaska]</source>
         <translation>표준 시간대 [UTC -09:00 알래스카]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="138"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="103"/>
         <source>TimeZone [UTC -08:00 Los Angeles/Vancouver]</source>
         <translation>표준 시간대 [UTC -08:00 로스 앤젤레스/밴쿠버]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="139"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="104"/>
         <source>TimeZone [UTC -07:00 Arizona]</source>
         <translation>표준 시간대 [UTC -07:00 애리조나]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="140"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="105"/>
         <source>TimeZone [UTC -06:00 Chicago/Houston/Mexico City]</source>
         <translation>표준 시간대 [UTC -06:00 시카고/휴스턴/멕시코 시티]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="141"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="106"/>
         <source>TimeZone [UTC -05:00 Boston/Montreal/New York]</source>
         <translation>표준 시간대 [UTC -05:00 보스턴/몬트리올/뉴욕]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="142"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="107"/>
         <source>TimeZone [UTC -04:30 Caracas]</source>
         <translation>표준 시간대 [UTC -04:30 카라카스]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="143"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="108"/>
         <source>TimeZone [UTC -04:00 Santiago]</source>
         <translation>표준 시간대 [UTC -04:00 산티아고]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="144"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="109"/>
         <source>TimeZone [UTC -03:30 Newfoundland]</source>
         <translation>표준 시간대 [UTC -03:30 뉴 펀들랜드]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="145"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="110"/>
         <source>TimeZone [UTC -03:00 Buenos Aires/Rio de Janero]</source>
         <translation>표준 시간대 [UTC -03:00 리우 데 자네이루]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="146"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="111"/>
         <source>TimeZone [UTC -02:00 Fernando de Noronha]</source>
         <translation>표준 시간대 [UTC -02:00 페르난도 데 노로냐]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="147"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="112"/>
         <source>TimeZone [UTC -01:00 Azores]</source>
         <translation>표준 시간대 [UTC -01:00 아조레스]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="148"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="113"/>
         <source>TimeZone [UTC +00:00 Lisbon/London/Monaco]</source>
         <translation>표준 시간대 [UTC +00:00 리스본/런던/모나코]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="149"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="114"/>
         <source>TimeZone [UTC +01:00 Berlin/Paris/Rome]</source>
         <translation>표준 시간대 [UTC +01:00 베를린/파리/로마]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="150"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="115"/>
         <source>TimeZone [UTC +02:00 Athens/Cape Town/Istanbul]</source>
         <translation>표준 시간대 [UTC +02:00 아테네/케이프 타운/이스탄불]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="151"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="116"/>
         <source>TimeZone [UTC +03:00 Moscow/Baghdad/Kuwait]</source>
         <translation>표준 시간대 [UTC +03:00 모스크바/바그다드/쿠웨이트]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="152"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="117"/>
         <source>TimeZone [UTC +03:30 Teheran]</source>
         <translation>표준 시간대 [UTC +03:30 테헤란]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="153"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="118"/>
         <source>TimeZone [UTC +04:00 Abu Dhabi/Muscat]</source>
         <translation>표준 시간대 [UTC +04:00 아부다비/무스카트]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="154"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="119"/>
         <source>TimeZone [UTC +04:30 Kabul]</source>
         <translation>표준 시간대 [UTC +04:30 카불]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="155"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="120"/>
         <source>TimeZone [UTC +05:00 Islamabad/Karachi]</source>
         <translation>표준 시간대 [UTC +05:00 이슬라마바드/카라치]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="156"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="121"/>
         <source>TimeZone [UTC +05:30 Chennai]</source>
         <translation>표준 시간대 [UTC +05:30 첸나이]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="157"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="122"/>
         <source>TimeZone [UTC +05:45 Kathmandu]</source>
         <translation>표준 시간대 [UTC +05:45 카트만두]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="158"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="123"/>
         <source>TimeZone [UTC +06:00 Astana/Dhaka/Almaty]</source>
         <translation>표준 시간대 [UTC +06:00 아스타나/다카/알마티]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="159"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="124"/>
         <source>TimeZone [UTC +06:30 Rangoon]</source>
         <translation>표준 시간대 [UTC +06:30 랑군]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="160"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="125"/>
         <source>TimeZone [UTC +07:00 Bangkok/Hanoi/Jakarta]</source>
         <translation>표준 시간대 [UTC +07:00 방콕/하노이/자카르타]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="161"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="126"/>
         <source>TimeZone [UTC +08:00 Beijing/Singapore/Taipei]</source>
         <translation>표준 시간대 [UTC +08:00 베이징/싱가포르/타이페이]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="162"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="127"/>
         <source>TimeZone [UTC +09:00 Seoul/Tokyo]</source>
         <translation>표준 시간대 [UTC +09:00 서울/도쿄]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="163"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="128"/>
         <source>TimeZone [UTC +09:30 Darwin]</source>
         <translation>표준 시간대 [UTC +09:30 다윈]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="164"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="129"/>
         <source>TimeZone [UTC +10:00 Guam/Canberra/Sydney]</source>
         <translation>표준 시간대 [UTC +10:00 괌/캔버라/시드니]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="165"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="130"/>
         <source>TimeZone [UTC +11:00 Magadan/Solomon]</source>
         <translation>표준 시간대 [UTC +11:00 마가단/솔로몬]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="166"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="131"/>
         <source>TimeZone [UTC +12:00 Fiji/Marshall]</source>
         <translation>표준 시간대 [UTC +12:00 피지/마샬]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="167"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="132"/>
         <source>TimeZone [UTC +13:00 Nuku&apos;alofa]</source>
         <translation>표준 시간대 [UTC +13:00 누쿠 알로파]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="227"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="302"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="351"/>
         <source>Year</source>
-        <translation>년</translation>
+        <translation type="obsolete">년</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="235"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="239"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="278"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="282"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="340"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="344"/>
         <source>Month</source>
-        <translation>월</translation>
+        <translation type="obsolete">월</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="248"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="252"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="291"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="295"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="327"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="331"/>
         <source>Day</source>
-        <translation>일</translation>
+        <translation type="obsolete">일</translation>
     </message>
     <message>
         <source>Year: %1</source>
@@ -5379,9 +5356,8 @@ Off</source>
         <translation type="obsolete"> %1 월</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1106"/>
         <source>Day: %1</source>
-        <translation>일: %1</translation>
+        <translation type="obsolete">일: %1</translation>
     </message>
     <message>
         <source>%1</source>
@@ -5389,66 +5365,40 @@ Off</source>
         <translation type="obsolete">%1</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="411"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="412"/>
         <source>-</source>
-        <translation>-</translation>
+        <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="423"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="427"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="431"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="435"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="439"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="443"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="447"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="451"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="455"/>
         <source>Hour</source>
-        <translation>시</translation>
+        <translation type="obsolete">시</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="423"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="431"/>
         <source>%1: AM %2</source>
-        <translation>%1: AM %2</translation>
+        <translation type="obsolete">%1: AM %2</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="427"/>
         <source>%1: AM 0%2</source>
-        <translation>%1: AM 0%2</translation>
+        <translation type="obsolete">%1: AM 0%2</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="435"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="443"/>
         <source>%1: PM %2</source>
-        <translation>%1: PM %2</translation>
+        <translation type="obsolete">%1: PM %2</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="439"/>
         <source>%1: PM 0%2</source>
-        <translation>%1: PM 0%2</translation>
+        <translation type="obsolete">%1: PM 0%2</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="471"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="475"/>
         <source>Minute</source>
-        <translation>분</translation>
+        <translation type="obsolete">분</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="481"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="485"/>
         <source>Second</source>
-        <translation>초</translation>
+        <translation type="obsolete">초</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="462"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="913"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="918"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="931"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="945"/>
         <source>Hour: %1</source>
-        <translation>시: %1</translation>
+        <translation type="obsolete">시: %1</translation>
     </message>
     <message>
         <source>Minute: %1</source>
@@ -5459,7 +5409,6 @@ Off</source>
         <translation type="obsolete"> %1 초</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="620"/>
         <source>If you set the time faster than recording data,
 some data will be erased from storage.
 </source>
@@ -5467,12 +5416,12 @@ some data will be erased from storage.
 some data will be erased from stprage.
 </oldsource>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>저장장치보다 시간을 빠르게 설정하면,
+        <translation type="obsolete">저장장치보다 시간을 빠르게 설정하면,
 데이터 일부가 지워질 수 있습니다.
 </translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="708"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="423"/>
         <source>SET DATE &amp; TIME</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>날짜 &amp; 시간 설정</translation>
@@ -5490,30 +5439,36 @@ some data will be erased from stprage.
         <translation>날짜 및 시간설정 대화상자</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="174"/>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="364"/>
         <source>/</source>
-        <translation>/</translation>
+        <translation type="obsolete">/</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="296"/>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="330"/>
         <source>:</source>
-        <translation>:</translation>
+        <translation type="obsolete">:</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="412"/>
+        <location filename="../../datetime/setdatetimedialog1080p.ui" line="119"/>
         <source>Time Format
 24-Hour</source>
         <translation>시간 형식
 24 시간</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="426"/>
+        <location filename="../../datetime/setdatetimedialog1080p.ui" line="133"/>
         <source> GPS Synchronization
 On</source>
         <translation> GPS 동기화
 켜기</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog1080p.ui" line="206"/>
+        <source>Save</source>
+        <translation>저장</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog1080p.ui" line="219"/>
+        <source>Cancel</source>
+        <translation>취소</translation>
     </message>
 </context>
 <context>

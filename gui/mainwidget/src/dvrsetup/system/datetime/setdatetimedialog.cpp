@@ -12,50 +12,38 @@ SetDateTimeDialog::SetDateTimeDialog(QWidget *parent, int dateFormat, cfg_dls_t 
         Ui::SetDateTimeDialog ui720;
         ui720.setupUi(this);
 
+        layoutFrame = ui720.layoutFrame;
+
         buttonTimeFormat = ui720.buttonTimeFormat;
         buttonGpsSync = ui720.buttonGpsSync;
+        buttonClose = ui720.buttonClose;
+        buttonSave = ui720.buttonSave;
+
         comboBoxTimeZone = ui720.comboBoxTimeZone;
-        comboBoxTime_1 =ui720.comboBoxTime_1;
-        comboBoxTime_2 =ui720.comboBoxTime_2;
-        comboBoxTime_3 =ui720.comboBoxTime_3;
-        comboBoxTime_4 =ui720.comboBoxTime_4;
-        comboBoxTime_5 =ui720.comboBoxTime_5;
-        comboBoxTime_6 =ui720.comboBoxTime_6;
-        layoutFrame = ui720.layoutFrame;
-        buttonBox = ui720.buttonBox;
-        labelTime_1 = ui720.labelTime_1;
-        labelTime_2 = ui720.labelTime_2;
+        dateTimeEdit = ui720.dateTimeEdit;
 
-        buttonBox->button(QDialogButtonBox::Ok)->setMinimumSize(200,91);
-        buttonBox->button(QDialogButtonBox::Cancel)->setMinimumSize(200,91);
-
-        buttonTimeFormat->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonGpsSync->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonTimeFormat->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(50,57,83);color:white;} QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonGpsSync->setStyleSheet("QPushButton{font-size:48px;background-color:rgb(50,57,83);color:white;} QPushButton:focus{background-color:rgb(152,14,69);}");
+        dateTimeEdit->setStyleSheet("QDateTimeEdit{font:50px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     }
     else
     {
         Ui::SetDateTimeDialog1080p ui1080;
         ui1080.setupUi(this);
 
+        layoutFrame = ui1080.layoutFrame;
+
         buttonTimeFormat = ui1080.buttonTimeFormat;
         buttonGpsSync = ui1080.buttonGpsSync;
+        buttonClose = ui1080.buttonClose;
+        buttonSave = ui1080.buttonSave;
+
         comboBoxTimeZone = ui1080.comboBoxTimeZone;
-        comboBoxTime_1 =ui1080.comboBoxTime_1;
-        comboBoxTime_2 =ui1080.comboBoxTime_2;
-        comboBoxTime_3 =ui1080.comboBoxTime_3;
-        comboBoxTime_4 =ui1080.comboBoxTime_4;
-        comboBoxTime_5 =ui1080.comboBoxTime_5;
-        comboBoxTime_6 =ui1080.comboBoxTime_6;
-        layoutFrame = ui1080.layoutFrame;
-        buttonBox = ui1080.buttonBox;
-        labelTime_1 = ui1080.labelTime_1;
-        labelTime_2 = ui1080.labelTime_2;
+        dateTimeEdit = ui1080.dateTimeEdit;
 
-        buttonBox->button(QDialogButtonBox::Ok)->setMinimumSize(300,130);
-        buttonBox->button(QDialogButtonBox::Cancel)->setMinimumSize(300,130);
-
-        buttonTimeFormat->setStyleSheet("QPushButton{font-size:65px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonGpsSync->setStyleSheet("QPushButton{font-size:65px;background-color:rgb(50,57,83);color:white;}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonTimeFormat->setStyleSheet("QPushButton{font-size:70px;background-color:rgb(50,57,83);color:white;} QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonGpsSync->setStyleSheet("QPushButton{font-size:70px;background-color:rgb(50,57,83);color:white;} QPushButton:focus{background-color:rgb(152,14,69);}");
+        dateTimeEdit->setStyleSheet("QDateTimeEdit{font:70px; selection-color:white; selection-background-color:rgb(152,14,69);}");
     }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
@@ -65,70 +53,47 @@ SetDateTimeDialog::SetDateTimeDialog(QWidget *parent, int dateFormat, cfg_dls_t 
     setAutoFillBackground(true);
 
     msgBox = NULL;
-    bOnce = true;
     timeFormat = dateFormat;
-    dlsZone = DLS_OFF;
-
-    memset(&cfgDls, 0, sizeof(cfg_dls_t));
-
-    if(cfg)
-    {
-        memcpy(&cfgDls, cfg, sizeof(cfg_dls_t));
-    }
 
     initComboBox();
-
     enableSetTime();
-    changeDlsType(cfgDls.dls_flag);
 
-    connect(comboBoxTime_1,   SIGNAL(currentIndexChanged(int)), this, SLOT(time1Changed(int)));
-    connect(comboBoxTime_2,   SIGNAL(currentIndexChanged(int)), this, SLOT(time2Changed(int)));
-    connect(comboBoxTime_3,   SIGNAL(currentIndexChanged(int)), this, SLOT(time3Changed(int)));
-    connect(buttonTimeFormat, SIGNAL(released()),               this, SLOT(onButtonTimeFormat()));
-    connect(buttonGpsSync,    SIGNAL(released()),               this, SLOT(onButtonGpsSync()));
+    connect(buttonTimeFormat, SIGNAL(clicked()), this, SLOT(onButtonTimeFormat()));
+    connect(buttonGpsSync,    SIGNAL(clicked()), this, SLOT(onButtonGpsSync()));
+    connect(buttonSave,       SIGNAL(clicked()), this, SLOT(onButtonSave()));
+    connect(buttonClose,      SIGNAL(clicked()), this, SLOT(onButtonClose()));
 
-    buttonBox->button(QDialogButtonBox::Ok)->setText(tr("Save"));
-    buttonBox->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
+    dateTimeEdit->setWrapping(true);
+    dateTimeEdit->setContextMenuPolicy(Qt::NoContextMenu);
+    dateTimeEdit->setDisplayFormat("yyyy.MM.dd. hh:mm:ss");
 
-    comboBoxTimeZone->setView(new QListView);   //item width resize
-    isKeyLock = 0;
-
+    dateTimeEdit->installEventFilter(this);
     comboBoxTimeZone->installEventFilter(this);
-    comboBoxTime_1->installEventFilter(this);
-    comboBoxTime_2->installEventFilter(this);
-    comboBoxTime_3->installEventFilter(this);
-    comboBoxTime_4->installEventFilter(this);
-    comboBoxTime_5->installEventFilter(this);
-    comboBoxTime_6->installEventFilter(this);
-}
-void SetDateTimeDialog::initComboBox()
-{
-    QString str;
-    time_t now;
-    struct tm tmNow;
-    int dlsType = DLS_OFF, isEndOverlap = 0;
-    dls_convert_info_t dlsSetDate;
-
-    time(&now);
-    localtime_r(&now, &tmNow);
 
     buttonTimeFormat->setFocus();
+    isKeyLock = false;
+}
+SetDateTimeDialog::~SetDateTimeDialog()
+{
+}
 
+void SetDateTimeDialog::initComboBox()
+{
     switch(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR"))
     {
-        case 0:  { buttonTimeFormat->setText(tr("Time Format\n12 Hour")); indexTimeFormat = 1; break; }
-        default: { buttonTimeFormat->setText(tr("Time Format\n24 Hour")); indexTimeFormat = 0; break; }
+        case 0:  { buttonTimeFormat->setText(tr("Time Format\n12 Hour")); infoTimeFormat = 1; break; }
+        default: { buttonTimeFormat->setText(tr("Time Format\n24 Hour")); infoTimeFormat = 0; break; }
     }
 
-    if(utils_cfg_cmp_item(SystemCfg.gps_sync, "ON") == 0)
-    {
-        buttonGpsSync->setText(tr("GPS Synchronization\nOn"));
-        indexGpsSync = 0;
-    }
-    else if(utils_cfg_cmp_item(SystemCfg.gps_sync, "OFF") == 0)
+    if(utils_cfg_cmp_item(SystemCfg.gps_sync, "OFF") == 0)
     {
         buttonGpsSync->setText(tr("GPS Synchronization\nOff"));
-        indexGpsSync = 1;
+        infoGpsSync = 0;
+    }
+    else
+    {
+        buttonGpsSync->setText(tr("GPS Synchronization\nOn"));
+        infoGpsSync = 1;
     }
 
     comboBoxTimeZone->addItem(tr("TimeZone [UTC -12:00 Eniwetok/Kwajalein]"));
@@ -166,1070 +131,59 @@ void SetDateTimeDialog::initComboBox()
     comboBoxTimeZone->addItem(tr("TimeZone [UTC +12:00 Fiji/Marshall]"));
     comboBoxTimeZone->addItem(tr("TimeZone [UTC +13:00 Nuku'alofa]"));
 
-    checkTimezone();
+    checkTimeZone();
 
-    dlsZone = DLS_OFF;
-    appmgr_make_dls_time_info(tmNow.tm_year, 0, &dlsSetDate);
+    dateTimeEdit->setDateTime(QDateTime::currentDateTime());
 
-    if(dlsSetDate.isChecked && dlsSetDate.isDlsEnabled)
+    if( infoTimeFormat == 1 )
     {
-        if(dlsSetDate.tDlsEnd > dlsSetDate.tDlsBegin)
+        switch( timeFormat )
         {
-            if((now >= dlsSetDate.tDlsBegin) && (now < dlsSetDate.tDlsEnd))
-            {
-                dlsType = DLS_DAY;
-            }
-        }
-        else
-        {
-            if(!((now >= dlsSetDate.tDlsEnd) && (now < dlsSetDate.tDlsBegin)))
-            {
-                dlsType = DLS_DAY;
-            }
-        }
-
-        qDebug("Set Date : DLS End Month %d, Day %d, Hour %d", dlsSetDate.dlsEndMonth, dlsSetDate.dlsEndDay, dlsSetDate.dlsEndHour);
-
-        if(tmNow.tm_mon == dlsSetDate.dlsEndMonth && tmNow.tm_mday == dlsSetDate.dlsEndDay)
-        {
-            dlsZone = DLS_END_DAY;
-        }
-        else if(tmNow.tm_mon == dlsSetDate.dlsBeginMonth && tmNow.tm_mday == dlsSetDate.dlsBeginDay)
-        {
-            dlsZone = DLS_START_DAY;
-        }
-        else
-        {
-            dlsZone = DLS_DAY;
-        }
-
-        if(dlsType)
-        {
-            if(tmNow.tm_mon == dlsSetDate.dlsEndMonth && tmNow.tm_mday == dlsSetDate.dlsEndDay && (tmNow.tm_hour == dlsSetDate.dlsEndHour-1))
-            {
-                isEndOverlap = 1;
-            }
-            else
-            {
-                now += 3600;
-                localtime_r(&now, &tmNow);
-            }
-        }
-    }
-
-    switch (timeFormat)
-    {
-        case DF_A_YYYY_MM_DD:
-        case DF_B_YYYY_MM_DD:
-
-            for(int i = ver_get_ref_year(); i < MAX_YEAR; i++)
-            {
-                str= QString("%1: %2").arg(tr("Year")).arg(i);
-                comboBoxTime_1->addItem(str);
-            }
-
-            for(int i = 0; i < 12; i++)
-            {
-                if(i<9)
-                {
-                    str=QString("%1: 0%2").arg(tr("Month")).arg(i+1);
-                }
-                else
-                {
-                    str=QString("%1: %2").arg(tr("Month")).arg(i+1);
-                }
-                comboBoxTime_2->addItem(str);
-            }
-
-            for(int i = 0; i < 31; i++)
-            {
-                if(i<9)
-                {
-                    str=QString("%1: 0%2").arg(tr("Day")).arg(i+1);
-                }
-                else
-                {
-                    str=QString("%1: %2").arg(tr("Day")).arg(i+1);
-                }
-                comboBoxTime_3->addItem(str);
-            }
-
-            if(tmNow.tm_year < (ver_get_ref_year()-1900))
-            {
-                comboBoxTime_1->setCurrentIndex(0);
-            }
-            else
-            {
-                comboBoxTime_1->setCurrentIndex((tmNow.tm_year+1900)-ver_get_ref_year());
-            }
-
-            comboBoxTime_2->setCurrentIndex(tmNow.tm_mon);
-            comboBoxTime_3->setCurrentIndex(tmNow.tm_mday-1);
-
-            break;
-
-        case DF_A_MM_DD_YYYY:
-        case DF_B_MM_DD_YYYY:
-
-            for(int i = 0; i < 12; i++)
-            {
-                if(i<9)
-                {
-                    str=QString("%1: 0%2").arg(tr("Month")).arg(i+1);
-                }
-                else
-                {
-                    str=QString("%1: %2").arg(tr("Month")).arg(i+1);
-                }
-                comboBoxTime_1->addItem(str);
-            }
-
-            for(int i = 0; i < 31; i++)
-            {
-                if(i<9)
-                {
-                    str=QString("%1: 0%2").arg(tr("Day")).arg(i+1);
-                }
-                else
-                {
-                    str=QString("%1: %2").arg(tr("Day")).arg(i+1);
-                }
-                comboBoxTime_2->addItem(str);
-            }
-
-            for(int i = ver_get_ref_year(); i < MAX_YEAR; i++)
-            {
-                str= QString("%1: %2").arg(tr("Year")).arg(i);
-                comboBoxTime_3->addItem(str);
-            }
-
-            if(tmNow.tm_year < (ver_get_ref_year()-1900))
-            {
-                comboBoxTime_3->setCurrentIndex(0);
-            }
-            else
-            {
-                comboBoxTime_3->setCurrentIndex((tmNow.tm_year+1900)-ver_get_ref_year());
-            }
-
-            comboBoxTime_1->setCurrentIndex(tmNow.tm_mon);
-            comboBoxTime_2->setCurrentIndex(tmNow.tm_mday-1);
-
-            break;
-
-        case DF_A_DD_MM_YYYY:
-        case DF_B_DD_MM_YYYY:
-
-            for(int i = 0; i < 31; i++)
-            {
-                if(i<9)
-                {
-                    str=QString("%1: 0%2").arg(tr("Day")).arg(i+1);
-                }
-                else
-                {
-                    str=QString("%1: %2").arg(tr("Day")).arg(i+1);
-                }
-                comboBoxTime_1->addItem(str);
-            }
-
-            for(int i = 0; i < 12; i++)
-            {
-                if(i<9)
-                {
-                    str=QString("%1: 0%2").arg(tr("Month")).arg(i+1);
-                }
-                else
-                {
-                    str=QString("%1: %2").arg(tr("Month")).arg(i+1);
-                }
-                comboBoxTime_2->addItem(str);
-            }
-
-            for(int i = ver_get_ref_year(); i < MAX_YEAR; i++)
-            {
-                str=QString("%1: %2").arg(tr("Year")).arg(i);
-                comboBoxTime_3->addItem(str);
-            }
-
-            if(tmNow.tm_year < (ver_get_ref_year()-1900) ) // Rtc base 2000/1/1
-            {
-                comboBoxTime_3->setCurrentIndex(0);
-            }
-            else
-            {
-                comboBoxTime_3->setCurrentIndex((tmNow.tm_year+1900)-ver_get_ref_year());
-            }
-
-            comboBoxTime_2->setCurrentIndex(tmNow.tm_mon);
-            comboBoxTime_1->setCurrentIndex(tmNow.tm_mday-1);
-
-            break;
-    }
-
-    monthDayCheck(4);
-
-    switch (timeFormat)
-    {
-        case DF_A_YYYY_MM_DD:
-        case DF_B_YYYY_MM_DD:
-
-            comboBoxTime_3->setCurrentIndex(tmNow.tm_mday-1);
-
-            break;
-
-        case DF_A_MM_DD_YYYY:
-        case DF_B_MM_DD_YYYY:
-
-            comboBoxTime_2->setCurrentIndex(tmNow.tm_mday-1);
-
-            break;
-
-        case DF_A_DD_MM_YYYY:
-        case DF_B_DD_MM_YYYY:
-
-            comboBoxTime_1->setCurrentIndex(tmNow.tm_mday-1);
-
-            break;
-    }
-
-    switch (timeFormat)
-    {
-        case DF_A_YYYY_MM_DD:
-        case DF_A_MM_DD_YYYY:
-        case DF_A_DD_MM_YYYY:
-
-            labelTime_1->setText(tr("/"));
-            labelTime_2->setText(tr("/"));
-
-            break;
-
-        case DF_B_DD_MM_YYYY:
-        case DF_B_MM_DD_YYYY:
-        case DF_B_YYYY_MM_DD:
-
-            labelTime_1->setText(tr("-"));
-            labelTime_2->setText(tr("-"));
-
-            break;
-    }
-
-    // yjsin [17/10/24] Change ComboBox text when time format changed.
-    // but DayightSavingTime(DTS) part are not changeed.
-    for(int i = 0; i < 24; i++)
-    {
-        if(indexTimeFormat==1 && i==0)                  //12H, 12 AM
-        {
-            str=tr("%1: AM %2").arg(tr("Hour")).arg(i+12);
-        }
-        else if(indexTimeFormat==1 && i>0 && i<10)      //12H, 1~9 AM
-        {
-            str=tr("%1: AM 0%2").arg(tr("Hour")).arg(i);
-        }
-        else if(indexTimeFormat==1 && i>=10 && i<12)    //12H, 10~11 AM
-        {
-            str=tr("%1: AM %2").arg(tr("Hour")).arg(i);
-        }
-        else if(indexTimeFormat==1 && i==12)            //12H, 12 PM
-        {
-            str=tr("%1: PM %2").arg(tr("Hour")).arg(i);
-        }
-        else if(indexTimeFormat==1 && i>12 && i<22)     //12H, 1~9 PM
-        {
-            str=tr("%1: PM 0%2").arg(tr("Hour")).arg(i-12);
-        }
-        else if(indexTimeFormat==1 && i>=22 && i<24)    //12H, 10~11 PM
-        {
-            str=tr("%1: PM %2").arg(tr("Hour")).arg(i-12);
-        }
-        else if(indexTimeFormat==0 && i>=0 && i<10)     //24H, 0~9
-        {
-            str=QString("%1: 0%2").arg(tr("Hour")).arg(i);
-        }
-        else if(indexTimeFormat==0 && i>=10 && i<24)    //24H, 10~23
-        {
-            str=QString("%1: %2").arg(tr("Hour")).arg(i);
-        }
-        else                                            //Error
-        {
-            str=QString("%1: %2").arg(tr("Hour")).arg(i);
-            qDebug("[ERROR]SetDateTimeDialog::initComboBox()");
-        }
-        comboBoxTime_4->addItem(str);
-
-        if(dlsZone == DLS_END_DAY && (i == (dlsSetDate.dlsEndHour - 1)))
-        {
-            str = tr("Hour: %1").arg(i);
-            comboBoxTime_4->addItem(str);
-        }
-    }
-
-    for(int i = 0; i < 60; i++)
-    {
-        if(i<10)
-        {
-            str=QString("%1: 0%2").arg(tr("Minute")).arg(i);
-        }
-        else
-        {
-            str=QString("%1: %2").arg(tr("Minute")).arg(i);
-        }
-        comboBoxTime_5->addItem(str);
-
-        if(i<10)
-        {
-            str=QString("%1: 0%2").arg(tr("Second")).arg(i);
-        }
-        else
-        {
-            str=QString("%1: %2").arg(tr("Second")).arg(i);
-        }
-        comboBoxTime_6->addItem(str);
-    }
-
-    if(dlsZone == DLS_END_DAY)
-    {
-        if(tmNow.tm_hour == (dlsSetDate.dlsEndHour-1))
-        {
-            if(isEndOverlap)
-            {
-                comboBoxTime_4->setCurrentIndex(tmNow.tm_hour+1);
-            }
-            else
-            {
-                comboBoxTime_4->setCurrentIndex(tmNow.tm_hour);
-            }
-        }
-        else if(tmNow.tm_hour >= (dlsSetDate.dlsEndHour))
-        {
-            comboBoxTime_4->setCurrentIndex(tmNow.tm_hour+1);
-        }
-        else
-        {
-            comboBoxTime_4->setCurrentIndex(tmNow.tm_hour);
+            case DF_A_YYYY_MM_DD:
+            case DF_B_YYYY_MM_DD:
+                dateTimeEdit->setDisplayFormat("yyyy.MM.dd. hh:mm:ss AP");
+                break;
+            case DF_A_MM_DD_YYYY:
+            case DF_B_MM_DD_YYYY:
+                dateTimeEdit->setDisplayFormat("MM.dd.yyyy. hh:mm:ss AP");
+                break;
+            case DF_A_DD_MM_YYYY:
+            case DF_B_DD_MM_YYYY:
+                dateTimeEdit->setDisplayFormat("dd.MM.yyyy. hh:mm:ss AP");
+                break;
+            default:
+                dateTimeEdit->setDisplayFormat("yyyy.MM.dd. hh:mm:ss AP");
+                break;
         }
     }
     else
     {
-        comboBoxTime_4->setCurrentIndex(tmNow.tm_hour);
-    }
-
-    comboBoxTime_5->setCurrentIndex(tmNow.tm_min);
-    comboBoxTime_6->setCurrentIndex(tmNow.tm_sec);
-
-    getChangedTime(&oldTime);
-}//
-SetDateTimeDialog::~SetDateTimeDialog()
-{
-}
-void SetDateTimeDialog::changeDlsType(int dls)
-{
-}
-void SetDateTimeDialog::enableSetTime()
-{
-    emit signalResetTimer();
-    QString str;
-    time_t tFirstRec = 0, tLastRect= 0;
-    struct tm tmLast;
-    int diskNum = 0;
-    int dlsType = DLS_OFF, isEndOverlap = 0;
-    dls_convert_info_t dlsSetDate;
-    char szDate[30];
-    bool bSet = 1;
-
-    comboBoxTime_1->setEnabled(bSet);
-    comboBoxTime_2->setEnabled(bSet);
-    comboBoxTime_3->setEnabled(bSet);
-    comboBoxTime_4->setEnabled(bSet);
-    comboBoxTime_5->setEnabled(bSet);
-    comboBoxTime_6->setEnabled(bSet);
-
-    if(bSet)
-    {
-        disk_used_info_t diskInfo[MAX_HDD_COUNT];
-        memset(diskInfo, 0, sizeof(disk_used_info_t) * MAX_HDD_COUNT);
-        diskNum = appmgr_get_disk_info(diskInfo);
-
-        if(diskNum <= 0)
+        switch( timeFormat )
         {
-            return;
-        }
-
-        for(int i = 0; i < MAX_HDD_COUNT; i++)
-        {
-            if(tFirstRec == 0)
-            {
-                tFirstRec = diskInfo[i].startTime;
-            }
-            else
-            {
-                if((tFirstRec > diskInfo[i].startTime) && (diskInfo[i].startTime > 0))
-                {
-                    tFirstRec = diskInfo[i].startTime;
-                }
-            }
-
-            if(tLastRect == 0)
-            {
-                tLastRect = diskInfo[i].lastTime;
-            }
-            else
-            {
-                if(diskInfo[i].lastTime > tLastRect)
-                {
-                    tLastRect = diskInfo[i].lastTime;
-                }
-            }
-        }
-
-        localtime_r(&tLastRect, &tmLast);
-
-        appmgr_make_dls_time_info(tmLast.tm_year, 0, &dlsSetDate);
-
-        if(dlsSetDate.isChecked && dlsSetDate.isDlsEnabled)
-        {
-            if(dlsSetDate.tDlsEnd > dlsSetDate.tDlsBegin)
-            {
-                if((tLastRect >= dlsSetDate.tDlsBegin) && (tLastRect < dlsSetDate.tDlsEnd))
-                {
-                    dlsType = DLS_DAY;
-                }
-            }
-            else
-            {
-                if(!((tLastRect >= dlsSetDate.tDlsEnd) && (tLastRect < dlsSetDate.tDlsBegin)))
-                {
-                    dlsType = DLS_DAY;
-                }
-            }
-
-            if(dlsType)
-            {
-                if(tmLast.tm_mon == dlsSetDate.dlsEndMonth && tmLast.tm_mday == dlsSetDate.dlsEndDay && (tmLast.tm_hour == dlsSetDate.dlsEndHour-1))
-                {
-                    isEndOverlap = 1;
-                }
-                else
-                {
-                    tLastRect += 3600;
-                    localtime_r(&tLastRect, &tmLast);
-                }
-            }
-        }
-
-        str = tr("If you set the time faster than recording data,\n"
-                "some data will be erased from storage.\n");
-
-        memset(szDate, 0, 30);
-
-        switch (DateFormat)
-        {
-            case 0:
-            default : 	//YYYY/MM/DD
-
-                if(isEndOverlap)
-                {
-                    sprintf(szDate, "%d/%02d/%02d %02d':%02d:%02d", tmLast.tm_year+1900, tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_hour-1, tmLast.tm_min, tmLast.tm_sec);
-                }
-                else
-                {
-                    sprintf(szDate, "%d/%02d/%02d %02d:%02d:%02d", tmLast.tm_year+1900, tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
-                }
-
+            case DF_A_YYYY_MM_DD:
+            case DF_B_YYYY_MM_DD:
+                dateTimeEdit->setDisplayFormat("yyyy.MM.dd. hh:mm:ss");
                 break;
-
-            case 1:		//MM/DD/YYYY
-
-                if(isEndOverlap)
-                {
-                    sprintf(szDate, "%02d/%02d/%d %02d':%02d:%02d", tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_year+1900, tmLast.tm_hour-1, tmLast.tm_min, tmLast.tm_sec);
-                }
-                else
-                {
-                    sprintf(szDate, "%02d/%02d/%d %02d:%02d:%02d", tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_year+1900, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
-                }
-
+            case DF_A_MM_DD_YYYY:
+            case DF_B_MM_DD_YYYY:
+                dateTimeEdit->setDisplayFormat("MM.dd.yyyy. hh:mm:ss");
                 break;
-
-            case 2:		//DD/MM/YYYY
-
-                if(isEndOverlap)
-                {
-                    sprintf(szDate, "%02d/%02d/%d %02d':%02d:%02d", tmLast.tm_mday, tmLast.tm_mon+1, tmLast.tm_year+1900, tmLast.tm_hour-1, tmLast.tm_min, tmLast.tm_sec);
-                }
-                else
-                {
-                    sprintf(szDate, "%02d/%02d/%d %02d:%02d:%02d", tmLast.tm_mday, tmLast.tm_mon+1, tmLast.tm_year+1900, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
-                }
-
+            case DF_A_DD_MM_YYYY:
+            case DF_B_DD_MM_YYYY:
+                dateTimeEdit->setDisplayFormat("dd.MM.yyyy. hh:mm:ss");
                 break;
-            case 3:		//YYYY-MM-DD
-
-                if(isEndOverlap)
-                {
-                    sprintf(szDate, "%d-%02d-%02d %02d':%02d:%02d", tmLast.tm_year+1900, tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_hour-1, tmLast.tm_min, tmLast.tm_sec);
-                }
-                else
-                {
-                    sprintf(szDate, "%d-%02d-%02d %02d:%02d:%02d", tmLast.tm_year+1900, tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
-                }
-
-                break;
-            case 4:		//MM-DD-YYYY
-
-                if(isEndOverlap)
-                {
-                    sprintf(szDate, "%02d-%02d-%d %02d':%02d:%02d", tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_year+1900, tmLast.tm_hour-1, tmLast.tm_min, tmLast.tm_sec);
-                }
-                else
-                {
-                    sprintf(szDate, "%02d-%02d-%d %02d:%02d:%02d", tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_year+1900, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
-                }
-
-                break;
-            case 5:		//DD-MM-YYYY
-
-                if(isEndOverlap)
-                {
-                    sprintf(szDate, "%02d-%02d-%d %02d':%02d:%02d", tmLast.tm_mday, tmLast.tm_mon+1, tmLast.tm_year+1900, tmLast.tm_hour-1, tmLast.tm_min, tmLast.tm_sec);
-                }
-                else
-                {
-                    sprintf(szDate, "%02d-%02d-%d %02d:%02d:%02d", tmLast.tm_mday, tmLast.tm_mon+1, tmLast.tm_year+1900, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
-                }
-
+            default:
+                dateTimeEdit->setDisplayFormat("yyyy.MM.dd. hh:mm:ss");
                 break;
         }
-
-        str += QString::fromAscii(szDate);
-
-        if(!msgBox)
-        {
-            msgBox = new TextMessageDialog(tr("SET DATE & TIME"), str, 2, this);
-        }
-
-        msgBox->exec();
-
-        delete msgBox;
-        msgBox = NULL;
-
-        bOnce = false;
     }
+
+    comboBoxTimeZone->setEnabled(infoGpsSync);
+    dateTimeEdit->setDisabled(infoGpsSync);
+
+    getChangedTime(&beforeChageTime);
 }
-void SetDateTimeDialog::checkChangeTime()
-{
-}
-void SetDateTimeDialog::getChangedTime(time_t *newTime)
-{
-    struct tm when;
-    dls_convert_info_t dlsSetDate;
-
-    switch (timeFormat)
-    {
-        case DF_A_YYYY_MM_DD:
-        case DF_B_YYYY_MM_DD:
-
-            when.tm_year = comboBoxTime_1->currentIndex() + ver_get_ref_year() - 1900;
-            when.tm_mon = comboBoxTime_2->currentIndex();
-            when.tm_mday = comboBoxTime_3->currentIndex() + 1;
-
-            break;
-
-        case DF_A_MM_DD_YYYY:
-        case DF_B_MM_DD_YYYY:
-
-            when.tm_year = comboBoxTime_3->currentIndex() + ver_get_ref_year() - 1900;
-            when.tm_mon = comboBoxTime_1->currentIndex();
-            when.tm_mday = comboBoxTime_2->currentIndex() + 1;
-
-            break;
-
-        case DF_A_DD_MM_YYYY:
-        case DF_B_DD_MM_YYYY:
-
-            when.tm_year = comboBoxTime_3->currentIndex() + ver_get_ref_year() - 1900;
-            when.tm_mon = comboBoxTime_2->currentIndex();
-            when.tm_mday = comboBoxTime_1->currentIndex() + 1;
-
-            break;
-    }
-
-    appmgr_make_dls_time_info(when.tm_year, 0, &dlsSetDate);
-
-    if(dlsSetDate.isChecked && dlsSetDate.isDlsEnabled)
-    {
-        if(when.tm_mon == dlsSetDate.dlsEndMonth && when.tm_mday == dlsSetDate.dlsEndDay)
-        {
-            if(when.tm_hour < dlsSetDate.dlsEndHour)
-            {
-                when.tm_hour = comboBoxTime_4->currentIndex();
-                when.tm_min  = comboBoxTime_5->currentIndex();
-                when.tm_sec  = comboBoxTime_6->currentIndex();
-
-                *newTime     = mktime(&when);
-
-                // dls zone
-                *newTime -= 3600;
-            }
-            else
-            {
-                // no dls zone
-                when.tm_hour = comboBoxTime_4->currentIndex() - 1;
-                when.tm_min  = comboBoxTime_5->currentIndex();
-                when.tm_sec  = comboBoxTime_6->currentIndex();
-
-                *newTime     = mktime(&when);
-            }
-        }
-        else if(when.tm_mon == dlsSetDate.dlsBeginMonth && when.tm_mday == dlsSetDate.dlsBeginDay)
-        {
-            when.tm_hour = comboBoxTime_4->currentIndex();
-            when.tm_min  = comboBoxTime_5->currentIndex();
-            when.tm_sec  = comboBoxTime_6->currentIndex();
-
-            *newTime     = mktime(&when);
-
-            if(when.tm_hour > dlsSetDate.dlsBeginHour)
-            {
-                *newTime -= 3600;
-            }
-        }
-        else
-        {
-            when.tm_hour = comboBoxTime_4->currentIndex();
-            when.tm_min  = comboBoxTime_5->currentIndex();
-            when.tm_sec  = comboBoxTime_6->currentIndex();
-            *newTime     = mktime(&when);
-
-            if(dlsSetDate.tDlsEnd > dlsSetDate.tDlsBegin)
-            {
-                if((*newTime >= dlsSetDate.tDlsBegin) && (*newTime < dlsSetDate.tDlsEnd))
-                {
-                    *newTime -= 3600;
-                }
-            }
-            else
-            {
-                if(!((*newTime >= dlsSetDate.tDlsEnd) && (*newTime < dlsSetDate.tDlsBegin)))
-                {
-                    *newTime -= 3600;
-                }
-            }
-        }
-    }
-    else
-    {
-        when.tm_hour = comboBoxTime_4->currentIndex();
-        when.tm_min  = comboBoxTime_5->currentIndex();
-        when.tm_sec  = comboBoxTime_6->currentIndex();
-
-        *newTime     = mktime(&when);
-    }
-}
-void SetDateTimeDialog::getChangedConfig(time_t *newTime, cfg_dls_t *cfg)
-{
-    if(!cfg)
-    {
-        return;
-    }
-
-    setTimezone();
-
-    time_t tmpTime;
-    getChangedTime(&tmpTime);
-
-    if(tmpTime == oldTime)
-    {
-        *newTime = 0;
-    }
-    else
-    {
-        *newTime = tmpTime;
-    }
-
-    cfg->dls_flag = cfgDls.dls_flag;
-
-    if(cfgDls.dls_flag == 2)
-    {
-        ;
-    }
-    else if(cfgDls.dls_flag == 3)
-    {
-        ;
-    }
-}
-void SetDateTimeDialog::resetHour()
-{
-    QString str;
-    struct tm when;
-    dls_convert_info_t dlsSetDate;
-    int prevHourLen = 0, prevHour = 0;
-
-    when.tm_year = when.tm_mon = when.tm_mday = 0;
-
-    prevHourLen = comboBoxTime_4->count();
-    prevHour    = comboBoxTime_4->currentIndex();
-
-    switch (timeFormat)
-    {
-        case DF_A_YYYY_MM_DD:
-        case DF_B_YYYY_MM_DD:
-
-            when.tm_year = comboBoxTime_1->currentIndex() + ver_get_ref_year() - 1900;
-            when.tm_mon = comboBoxTime_2->currentIndex();
-            when.tm_mday = comboBoxTime_3->currentIndex() + 1;
-
-            break;
-
-        case DF_A_MM_DD_YYYY:
-        case DF_B_MM_DD_YYYY:
-
-            when.tm_year = comboBoxTime_3->currentIndex() + ver_get_ref_year() - 1900;
-            when.tm_mon = comboBoxTime_1->currentIndex();
-            when.tm_mday = comboBoxTime_2->currentIndex() + 1;
-
-            break;
-
-        case DF_A_DD_MM_YYYY:
-        case DF_B_DD_MM_YYYY:
-
-            when.tm_year = comboBoxTime_3->currentIndex() + ver_get_ref_year() - 1900;
-            when.tm_mon = comboBoxTime_2->currentIndex();
-            when.tm_mday = comboBoxTime_1->currentIndex() + 1;
-
-            break;
-    }
-
-    appmgr_make_dls_time_info(when.tm_year, 0, &dlsSetDate);
-
-    if(dlsSetDate.isChecked && dlsSetDate.isDlsEnabled)
-    {
-        if(when.tm_mon == dlsSetDate.dlsEndMonth && when.tm_mday == dlsSetDate.dlsEndDay)
-        {
-            comboBoxTime_4->clear();
-
-            for(int i = 0; i < 24; i++)
-            {
-                str = tr("Hour: %1").arg(i);
-                comboBoxTime_4->addItem(str);
-
-                if(i == (dlsSetDate.dlsEndHour - 1))
-                {
-                    str = tr("Hour: %1").arg(i);
-                    comboBoxTime_4->addItem(str);
-                }
-            }
-        }
-        else
-        {
-            if(prevHourLen != 24)
-            {
-                comboBoxTime_4->clear();
-
-                for(int i = 0; i < 24; i++)
-                {
-                    str = tr("Hour: %1").arg(i);
-                    comboBoxTime_4->addItem(str);
-                }
-            }
-        }
-    }
-    else
-    {
-        if(prevHourLen != 24)
-        {
-            comboBoxTime_4->clear();
-
-            for(int i = 0; i < 24; i++)
-            {
-                str = tr("Hour: %1").arg(i);
-                comboBoxTime_4->addItem(str);
-            }
-        }
-    }
-
-    if(prevHour >= comboBoxTime_4->count())
-    {
-        comboBoxTime_4->setCurrentIndex(comboBoxTime_4->count() - 1);
-    }
-    else
-    {
-        comboBoxTime_4->setCurrentIndex(prevHour);
-    }
-}
-void SetDateTimeDialog::time1Changed(int val)
-{
-    emit signalResetTimer();
-
-    monthDayCheck(1);
-
-    resetHour();
-}
-void SetDateTimeDialog::time2Changed(int val)
-{
-    emit signalResetTimer();
-
-    monthDayCheck(2);
-
-    resetHour();
-}
-void SetDateTimeDialog::time3Changed(int val)
-{
-    emit signalResetTimer();
-
-    monthDayCheck(3);
-
-    resetHour();
-}
-void SetDateTimeDialog::monthDayCheck(int type)
-{
-    int year = 0, month = 0, day = 0, maxDay = 0;
-    int yearChanged = 0, monthChange = 0;
-    QString str;
-    QComboBox *comboDay = NULL;
-
-    switch (timeFormat)
-    {
-        case DF_A_YYYY_MM_DD:
-        case DF_B_YYYY_MM_DD:
-
-            if(type == 3)
-            {
-                return;
-            }
-
-            year     = comboBoxTime_1->currentIndex() + ver_get_ref_year();
-            month    = comboBoxTime_2->currentIndex();
-            day      = comboBoxTime_3->currentIndex();
-            comboDay = comboBoxTime_3;
-
-            if(type == 1)
-            {
-                yearChanged = 1;
-            }
-            else
-            {
-                monthChange = 1;
-            }
-
-            break;
-
-        case DF_A_MM_DD_YYYY:
-        case DF_B_MM_DD_YYYY:
-
-            if(type == 2)
-            {
-                return;
-            }
-
-            year     = comboBoxTime_3->currentIndex() + ver_get_ref_year();
-            month    = comboBoxTime_1->currentIndex();
-            day      = comboBoxTime_2->currentIndex();
-            comboDay = comboBoxTime_2;
-
-            if(type == 3)
-            {
-                yearChanged = 1;
-            }
-            else
-            {
-                monthChange = 1;
-            }
-
-            break;
-
-        case DF_A_DD_MM_YYYY:
-        case DF_B_DD_MM_YYYY:
-
-            if(type == 1)
-            {
-                return;
-            }
-
-            year     = comboBoxTime_3->currentIndex() + ver_get_ref_year();
-            month    = comboBoxTime_2->currentIndex();
-            day      = comboBoxTime_1->currentIndex();
-            comboDay = comboBoxTime_1;
-
-            if(type == 3)
-            {
-                yearChanged = 1;
-            }
-            else
-            {
-                monthChange = 1;
-            }
-
-            break;
-    }
-
-    if(month == 1)
-    {
-        if((year %4) == 0)
-        {
-            if((year % 100) == 0)
-            {
-                if((year % 400) == 0)
-                {
-                    maxDay = 29;
-                }
-                else
-                {
-                    maxDay = 28;
-                }
-            }
-            else
-            {
-                maxDay = 29;
-            }
-        }
-        else
-        {
-            maxDay = 28;
-        }
-    }
-    else if(month == 3 || month == 5 || month == 8 || month == 10) // 0 base 4, 6, 9, 11
-    {
-        maxDay = 30;
-    }
-    else
-    {
-        maxDay = 31;
-    }
-
-    if(comboDay->count() < maxDay)
-    {
-        int lastDay = comboDay->count();
-
-        for(int i = lastDay; i < maxDay; i++)
-        {
-            str = tr("Day: %1").arg(i+1);
-            comboDay->addItem(str);
-        }
-
-    }
-    else if(comboDay->count() > maxDay)
-    {
-        int lastDay = comboDay->count();
-
-        for(int i = maxDay; i < lastDay; i++)
-        {
-            //str = tr("%1").arg(i);
-            comboDay->removeItem(maxDay);
-        }
-    }
-}
-void SetDateTimeDialog::changeFocusedItemValue(int isPlus)
-{
-    int curVal = 0;
-    QComboBox *combo = NULL;
-
-    if(comboBoxTimeZone->hasFocus())
-    {
-        combo = comboBoxTimeZone;
-    }
-    else if(comboBoxTime_1->hasFocus())
-    {
-        combo = comboBoxTime_1;
-    }
-    else if(comboBoxTime_2->hasFocus())
-    {
-        combo = comboBoxTime_2;
-    }
-    else if(comboBoxTime_3->hasFocus())
-    {
-        combo = comboBoxTime_3;
-    }
-    else if(comboBoxTime_4->hasFocus())
-    {
-        combo = comboBoxTime_4;
-    }
-    else if(comboBoxTime_5->hasFocus())
-    {
-        combo = comboBoxTime_5;
-    }
-    else if(comboBoxTime_6->hasFocus())
-    {
-        combo = comboBoxTime_6;
-    }
-
-    if(combo)
-    {
-        curVal = combo->currentIndex();
-
-        if(isPlus)
-        {
-            if(++curVal >= combo->count())
-            {
-                curVal = 0;
-            }
-        }
-        else
-        {
-            if(--curVal < 0)
-            {
-                curVal = combo->count() - 1;
-            }
-        }
-
-        combo->setCurrentIndex(curVal);
-    }
-}
-void SetDateTimeDialog::on_comboBoxBeginMonth_currentIndexChanged(int index)
-{
-    emit signalResetTimer();
-}
-void SetDateTimeDialog::on_comboBoxBeginWeek_currentIndexChanged(int index)
-{
-    emit signalResetTimer();
-}
-void SetDateTimeDialog::on_comboBoxBeginDay_currentIndexChanged(int index)
-{
-    emit signalResetTimer();
-}
-void SetDateTimeDialog::on_comboBoxBeginHour_currentIndexChanged(int index)
-{
-    emit signalResetTimer();
-}
-void SetDateTimeDialog::on_comboBoxEndMonth_currentIndexChanged(int index)
-{
-    emit signalResetTimer();
-}
-void SetDateTimeDialog::on_comboBoxEndWeek_currentIndexChanged(int index)
-{
-    emit signalResetTimer();
-}
-void SetDateTimeDialog::on_comboBoxEndDay_currentIndexChanged(int index)
-{
-    emit signalResetTimer();
-}
-void SetDateTimeDialog::on_comboBoxEndHour_currentIndexChanged(int index)
-{
-    emit signalResetTimer();
-}
-void SetDateTimeDialog::on_comboBoxTime_4_currentIndexChanged(int index)
-{
-    emit signalResetTimer();
-}
-void SetDateTimeDialog::on_comboBoxTime_5_currentIndexChanged(int index)
-{
-    emit signalResetTimer();
-}
-void SetDateTimeDialog::on_comboBoxTime_6_currentIndexChanged(int index)
-{
-    emit signalResetTimer();
-}
-void SetDateTimeDialog::on_buttonBox_accepted()
-{
-    emit signalResetTimer();
-    this->accept();
-}
-void SetDateTimeDialog::on_buttonBox_rejected()
-{
-    emit signalResetTimer();
-    this->reject();
-}
-void SetDateTimeDialog::checkTimezone()
+void SetDateTimeDialog::checkTimeZone()
 {
     int timezone = 0;
 
@@ -1372,11 +326,214 @@ void SetDateTimeDialog::checkTimezone()
 
     comboBoxTimeZone->setCurrentIndex(timezone);
 }
-void SetDateTimeDialog::setTimezone()
+void SetDateTimeDialog::getChangedTime(time_t *newTime)
 {
-    int val;
+    struct tm when;
 
-    val = comboBoxTimeZone->currentIndex();
+    when.tm_year = dateTimeEdit->dateTime().toString("yyyy").toInt() - 1900;
+    when.tm_mon  = dateTimeEdit->dateTime().toString("MM").toInt() - 1;
+    when.tm_mday = dateTimeEdit->dateTime().toString("dd").toInt();
+    when.tm_hour = dateTimeEdit->dateTime().toString("hh").toInt();
+    when.tm_min  = dateTimeEdit->dateTime().toString("mm").toInt();
+    when.tm_sec  = dateTimeEdit->dateTime().toString("ss").toInt();
+
+    *newTime = mktime(&when);
+}
+void SetDateTimeDialog::enableSetTime()
+{
+    QString str;
+    time_t tFirstRec = 0, tLastRect = 0;
+    struct tm tmLast;
+    int diskNum = 0;
+    char szDate[30];
+
+    localtime_r(&tLastRect, &tmLast);
+    memset(szDate, 0, 30);
+
+    disk_used_info_t diskInfo[MAX_HDD_COUNT];
+    memset(diskInfo, 0, sizeof(disk_used_info_t) * MAX_HDD_COUNT);
+    diskNum = appmgr_get_disk_info(diskInfo);
+
+    if(diskNum <= 0)
+    {
+        return;
+    }
+
+    qDebug() <<"\n\n\n\t hi";
+    for(int i = 0; i < MAX_HDD_COUNT; i++)
+    {
+        if(tFirstRec == 0)
+        {
+            tFirstRec = diskInfo[i].startTime;
+        }
+        else
+        {
+            if((tFirstRec > diskInfo[i].startTime) && (diskInfo[i].startTime > 0))
+            {
+                tFirstRec = diskInfo[i].startTime;
+            }
+        }
+
+        if(tLastRect == 0)
+        {
+            tLastRect = diskInfo[i].lastTime;
+        }
+        else
+        {
+            if(diskInfo[i].lastTime > tLastRect)
+            {
+                tLastRect = diskInfo[i].lastTime;
+            }
+        }
+    }
+    localtime_r(&tLastRect, &tmLast);
+
+    switch (DateFormat)
+    {
+        case 0:
+        default : 	//YYYY/MM/DD
+            sprintf(szDate, "%d/%02d/%02d %02d:%02d:%02d", tmLast.tm_year+1900, tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
+            break;
+
+        case 1:		//MM/DD/YYYY
+            sprintf(szDate, "%02d/%02d/%d %02d:%02d:%02d", tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_year+1900, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
+            break;
+
+        case 2:		//DD/MM/YYYY
+            sprintf(szDate, "%02d/%02d/%d %02d:%02d:%02d", tmLast.tm_mday, tmLast.tm_mon+1, tmLast.tm_year+1900, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
+            break;
+
+        case 3:		//YYYY-MM-DD
+            sprintf(szDate, "%d-%02d-%02d %02d:%02d:%02d", tmLast.tm_year+1900, tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
+            break;
+
+        case 4:		//MM-DD-YYYY
+            sprintf(szDate, "%02d-%02d-%d %02d:%02d:%02d", tmLast.tm_mon+1, tmLast.tm_mday, tmLast.tm_year+1900, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
+            break;
+
+        case 5:		//DD-MM-YYYY
+            sprintf(szDate, "%02d-%02d-%d %02d:%02d:%02d", tmLast.tm_mday, tmLast.tm_mon+1, tmLast.tm_year+1900, tmLast.tm_hour, tmLast.tm_min, tmLast.tm_sec);
+            break;
+    }
+
+    str += QString::fromAscii(szDate);
+
+    if(!msgBox)
+    {
+        msgBox = new TextMessageDialog(tr("SET DATE & TIME"), str, 2, this);
+    }
+
+    msgBox->exec();
+
+    delete msgBox;
+    msgBox = NULL;
+}
+void SetDateTimeDialog::onButtonTimeFormat()
+{
+    if( infoTimeFormat == 0 )
+    {
+        switch( timeFormat )
+        {
+            case DF_A_YYYY_MM_DD:
+            case DF_B_YYYY_MM_DD:
+                dateTimeEdit->setDisplayFormat("yyyy.MM.dd. hh:mm:ss AP");
+                break;
+
+            case DF_A_MM_DD_YYYY:
+            case DF_B_MM_DD_YYYY:
+                dateTimeEdit->setDisplayFormat("MM.dd.yyyy. hh:mm:ss AP");
+                break;
+
+            case DF_A_DD_MM_YYYY:
+            case DF_B_DD_MM_YYYY:
+                dateTimeEdit->setDisplayFormat("dd.MM.yyyy. hh:mm:ss AP");
+                break;
+
+            default:
+                dateTimeEdit->setDisplayFormat("yyyy.MM.dd. hh:mm:ss AP");
+                break;
+        }
+
+        buttonTimeFormat->setText(tr("Time Format\n12 Hour"));
+        infoTimeFormat = 1;
+    }
+    else
+    {
+        switch( timeFormat )
+        {
+            case DF_A_YYYY_MM_DD:
+            case DF_B_YYYY_MM_DD:
+                dateTimeEdit->setDisplayFormat("yyyy.MM.dd. hh:mm:ss");
+                break;
+
+            case DF_A_MM_DD_YYYY:
+            case DF_B_MM_DD_YYYY:
+                dateTimeEdit->setDisplayFormat("MM.dd.yyyy. hh:mm:ss");
+                break;
+
+            case DF_A_DD_MM_YYYY:
+            case DF_B_DD_MM_YYYY:
+                dateTimeEdit->setDisplayFormat("dd.MM.yyyy. hh:mm:ss");
+                break;
+
+            default:
+                dateTimeEdit->setDisplayFormat("yyyy.MM.dd. hh:mm:ss");
+                break;
+        }
+
+        buttonTimeFormat->setText(tr("Time Format\n24 Hour"));
+        infoTimeFormat = 0;
+    }
+}
+void SetDateTimeDialog::onButtonGpsSync()
+{
+    if( infoGpsSync == 0 )
+    {
+        buttonGpsSync->setText(tr("GPS Synchronization\nOn"));
+        infoGpsSync = 1;
+    }
+    else
+    {
+        buttonGpsSync->setText(tr("GPS Synchronization\nOff"));
+        infoGpsSync = 0;
+    }
+
+    comboBoxTimeZone->setEnabled(infoGpsSync);
+    dateTimeEdit->setDisabled(infoGpsSync);
+
+}
+
+void SetDateTimeDialog::onButtonSave()
+{
+    if(infoTimeFormat == 1)
+    {
+        utils_cfg_cpy_item(SystemCfg.time_format, "12HOUR");
+    }
+    else
+    {
+        utils_cfg_cpy_item(SystemCfg.time_format, "24HOUR");
+    }
+
+    if(infoGpsSync == 0)
+    {
+        utils_cfg_cpy_item(SystemCfg.gps_sync, "OFF");
+    }
+    else
+    {
+        utils_cfg_cpy_item(SystemCfg.gps_sync, "ON");
+    }
+
+    saveTimeZone();
+
+    accept();
+}
+void SetDateTimeDialog::onButtonClose()
+{
+    reject();
+}
+void SetDateTimeDialog::saveTimeZone()
+{
+    int val = comboBoxTimeZone->currentIndex();
 
     switch (val)
     {
@@ -1417,55 +574,31 @@ void SetDateTimeDialog::setTimezone()
         default:                                                        break;
     }
 }
-void SetDateTimeDialog::onButtonTimeFormat()
+void SetDateTimeDialog::getChangedConfig(time_t *newTime, cfg_dls_t *cfg)
 {
-    switch(indexTimeFormat)
+    if( !cfg )
     {
-        case 0:
-
-            buttonTimeFormat->setText(tr("Time Format\n12 Hour"));
-            utils_cfg_cpy_item(SystemCfg.time_format, "12HOUR");
-            indexTimeFormat = 1;
-
-            break;
-
-        case 1:
-
-            buttonTimeFormat->setText(tr("Time Format\n24 Hour"));
-            utils_cfg_cpy_item(SystemCfg.time_format, "24HOUR");
-            indexTimeFormat = 0;
-
-            break;
+        return;
     }
 
-}
-void SetDateTimeDialog::onButtonGpsSync()
-{
-    switch(indexGpsSync)
+    time_t tmpTime;
+    getChangedTime(&tmpTime);
+
+    if( tmpTime == beforeChageTime)
     {
-        case 0:
-
-            buttonGpsSync->setText(tr("GPS Synchronization\nOff"));
-            utils_cfg_cpy_item(SystemCfg.gps_sync, "OFF");
-            indexGpsSync = 1;
-
-            break;
-
-        case 1:
-
-            buttonGpsSync->setText(tr("GPS Synchronization\nOn"));
-            utils_cfg_cpy_item(SystemCfg.gps_sync, "ON");
-            indexGpsSync = 0;
-
-            break;
+        *newTime = 0;
+    }
+    else
+    {
+        *newTime = tmpTime;
     }
 }
 bool SetDateTimeDialog::eventFilter(QObject *obj, QEvent *event)
 {
-    if((obj==comboBoxTimeZone || obj==comboBoxTime_1 || obj==comboBoxTime_2 || obj==comboBoxTime_3 ||
-        obj==comboBoxTime_4   || obj==comboBoxTime_5 || obj==comboBoxTime_6) && (event->type()==QEvent::FocusOut))
+    if( ((obj==dateTimeEdit) || (obj==comboBoxTimeZone)) && (event->type()==QEvent::FocusOut) )
     {
         isKeyLock=false;
     }
+
     return QWidget::eventFilter(obj, event);
 }

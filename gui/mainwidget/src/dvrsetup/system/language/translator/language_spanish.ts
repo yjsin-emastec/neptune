@@ -3280,8 +3280,8 @@ El estado actual es Activado.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="823"/>
-        <location filename="../../../../main/mainwidget.cpp" line="656"/>
-        <location filename="../../../../main/mainwidget.cpp" line="1092"/>
+        <location filename="../../../../main/mainwidget.cpp" line="652"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1088"/>
         <source>POWER OFF</source>
         <translation>APAGAR</translation>
     </message>
@@ -3304,24 +3304,24 @@ Do you want to shutdown the system?</source>
 ¿Desea apagar el sistema?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="656"/>
+        <location filename="../../../../main/mainwidget.cpp" line="652"/>
         <source>System was shutdown successfully.
 Turn off the power.</source>
         <translation>El sistema se completó con éxito.
 Desconecte la alimentación.</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1092"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1088"/>
         <source>Do you want to shutdown the system?</source>
         <translation>¿Desea apagar el sistema?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1591"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1587"/>
         <source>SEARCH</source>
         <translation>BUSCAR</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1591"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1587"/>
         <source>No SSD</source>
         <translation>No hay Almacenamiento</translation>
     </message>
@@ -4836,35 +4836,27 @@ Vuelve a intentarlo.</translation>
         <translation>El cuadro de diálogo Establecer fecha</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="174"/>
-        <location filename="../../datetime/setdatetimedialog.ui" line="364"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="112"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="152"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="402"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="403"/>
         <source>/</source>
         <translation>/</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="296"/>
-        <location filename="../../datetime/setdatetimedialog.ui" line="330"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="129"/>
         <location filename="../../datetime/setdatetimedialog_line.ui" line="290"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="412"/>
         <source>Time Format
 24-Hour</source>
-        <translation>Formato de hora
+        <translation type="obsolete">Formato de hora
 24 horas</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.ui" line="426"/>
         <source> GPS Synchronization
 On</source>
-        <translation>Sincronización GPS
+        <translation type="obsolete">Sincronización GPS
 Encender</translation>
     </message>
     <message>
@@ -4898,243 +4890,228 @@ Encender</translation>
         <translation>FORMATO DE VISUALIZACIÓN DE TIEMPO</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="90"/>
+        <location filename="../../datetime/setdatetimedialog.ui" line="169"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="91"/>
+        <location filename="../../datetime/setdatetimedialog.ui" line="182"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="119"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1426"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="84"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="457"/>
         <source>Time Format
 12 Hour</source>
         <translation>Formato de hora
 12 horas</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="120"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1434"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="85"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="484"/>
         <source>Time Format
 24 Hour</source>
         <translation>Formato de hora
 24 horas</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="125"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1456"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="95"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="492"/>
         <source>GPS Synchronization
 On</source>
         <translation>Sincronización GPS
 Encender</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="130"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1448"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="90"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="497"/>
         <source>GPS Synchronization
 Off</source>
         <translation>Sincronización GPS
 Apagar</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="134"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="99"/>
         <source>TimeZone [UTC -12:00 Eniwetok/Kwajalein]</source>
         <translation>Zona Horaria [UTC -12:00 Eniwetok/Kwajalein]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="135"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="100"/>
         <source>TimeZone [UTC -11:00 Niue]</source>
         <translation>Zona Horaria [UTC -11:00 Niue]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="136"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="101"/>
         <source>TimeZone [UTC -10:00 Hawaii]</source>
         <translation>Zona Horaria [UTC -10:00 Hawaii]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="137"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="102"/>
         <source>TimeZone [UTC -09:00 Alaska]</source>
         <translation>Zona Horaria [UTC -09:00 Alaska]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="138"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="103"/>
         <source>TimeZone [UTC -08:00 Los Angeles/Vancouver]</source>
         <translation>Zona Horaria [UTC -08:00 Los Angeles/Vancouver]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="139"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="104"/>
         <source>TimeZone [UTC -07:00 Arizona]</source>
         <translation>Zona Horaria [UTC -07:00 Arizona]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="140"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="105"/>
         <source>TimeZone [UTC -06:00 Chicago/Houston/Mexico City]</source>
         <translation>Zona Horaria [UTC -06:00 Chicago/Houston]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="141"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="106"/>
         <source>TimeZone [UTC -05:00 Boston/Montreal/New York]</source>
         <translation>Zona Horaria [UTC -05:00 Boston/Montreal/Nueva York]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="142"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="107"/>
         <source>TimeZone [UTC -04:30 Caracas]</source>
         <translation>Zona Horaria [UTC -04:30 Caracas]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="143"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="108"/>
         <source>TimeZone [UTC -04:00 Santiago]</source>
         <translation>Zona Horaria [UTC -04:00 Santiago]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="144"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="109"/>
         <source>TimeZone [UTC -03:30 Newfoundland]</source>
         <translation>Zona Horaria [UTC -03:30 Newfoundland]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="145"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="110"/>
         <source>TimeZone [UTC -03:00 Buenos Aires/Rio de Janero]</source>
         <translation>Zona Horaria [UTC -03:00 Buenos Aires/Río de Janeiro]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="146"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="111"/>
         <source>TimeZone [UTC -02:00 Fernando de Noronha]</source>
         <translation>Zona Horaria [UTC -02:00 Fernando de Noronha]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="147"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="112"/>
         <source>TimeZone [UTC -01:00 Azores]</source>
         <translation>Zona Horaria [UTC -01:00 Azores]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="148"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="113"/>
         <source>TimeZone [UTC +00:00 Lisbon/London/Monaco]</source>
         <translation>Zona Horaria [UTC +00:00 Lisboa/Londres/Mónaco]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="149"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="114"/>
         <source>TimeZone [UTC +01:00 Berlin/Paris/Rome]</source>
         <translation>Zona Horaria [UTC +01:00 Berlín/París/Roma]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="150"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="115"/>
         <source>TimeZone [UTC +02:00 Athens/Cape Town/Istanbul]</source>
         <translation>Zona Horaria [UTC +02:00 Atenas/Estambul]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="151"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="116"/>
         <source>TimeZone [UTC +03:00 Moscow/Baghdad/Kuwait]</source>
         <translation>Zona Horaria [UTC +03:00 Moscú/Bagdad/Kuwait]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="152"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="117"/>
         <source>TimeZone [UTC +03:30 Teheran]</source>
         <translation>Zona Horaria [UTC +03:30 Teherán]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="153"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="118"/>
         <source>TimeZone [UTC +04:00 Abu Dhabi/Muscat]</source>
         <translation>Zona Horaria [UTC +04:00 Abu Dhabi/Muscat]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="154"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="119"/>
         <source>TimeZone [UTC +04:30 Kabul]</source>
         <translation>Zona Horaria [UTC +04:30 Kabul]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="155"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="120"/>
         <source>TimeZone [UTC +05:00 Islamabad/Karachi]</source>
         <translation>Zona Horaria [UTC +05:00 Islamabad/Karachi]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="156"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="121"/>
         <source>TimeZone [UTC +05:30 Chennai]</source>
         <translation>Zona Horaria [UTC +05:30 Chennai]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="157"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="122"/>
         <source>TimeZone [UTC +05:45 Kathmandu]</source>
         <translation>Zona Horaria [UTC +05:45 Katmandú]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="158"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="123"/>
         <source>TimeZone [UTC +06:00 Astana/Dhaka/Almaty]</source>
         <translation>Zona Horaria [UTC +06:00 Astana/Dhaka/Almaty]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="159"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="124"/>
         <source>TimeZone [UTC +06:30 Rangoon]</source>
         <translation>Zona Horaria [UTC +06:30 Rangoon]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="160"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="125"/>
         <source>TimeZone [UTC +07:00 Bangkok/Hanoi/Jakarta]</source>
         <translation>Zona Horaria [UTC +07:00 Bangkok/Hanoi/Yakarta]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="161"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="126"/>
         <source>TimeZone [UTC +08:00 Beijing/Singapore/Taipei]</source>
         <translation>Zona Horaria [UTC +08:00 Beijing/Singapur/Taipei]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="162"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="127"/>
         <source>TimeZone [UTC +09:00 Seoul/Tokyo]</source>
         <translation>Zona Horaria [UTC +09:00 Seúl/Tokio]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="163"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="128"/>
         <source>TimeZone [UTC +09:30 Darwin]</source>
         <translation>Zona Horaria [UTC +09:30 Darwin]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="164"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="129"/>
         <source>TimeZone [UTC +10:00 Guam/Canberra/Sydney]</source>
         <translation>Zona Horaria [UTC +10:00 Guam/Canberra/Sydney]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="165"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="130"/>
         <source>TimeZone [UTC +11:00 Magadan/Solomon]</source>
         <translation>Zona Horaria [UTC +11:00 Magadan/Solomon]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="166"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="131"/>
         <source>TimeZone [UTC +12:00 Fiji/Marshall]</source>
         <translation>Zona Horaria [UTC +12:00 Fiji/Marshall]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="167"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="132"/>
         <source>TimeZone [UTC +13:00 Nuku&apos;alofa]</source>
         <translation>Zona Horaria [UTC +13:00 Nuku&apos;alofa]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="227"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="302"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="351"/>
         <source>Year</source>
-        <translation>Año</translation>
+        <translation type="obsolete">Año</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="235"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="239"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="278"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="282"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="340"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="344"/>
         <source>Month</source>
-        <translation>Mes</translation>
+        <translation type="obsolete">Mes</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="248"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="252"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="291"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="295"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="327"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="331"/>
         <source>Day</source>
-        <translation>Día</translation>
+        <translation type="obsolete">Día</translation>
     </message>
     <message>
         <source>Year: %1</source>
@@ -5148,75 +5125,48 @@ Año: %1
         <translation type="obsolete">Mes: %1</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="1106"/>
         <source>Day: %1</source>
-        <translation>Día: %1</translation>
+        <translation type="obsolete">Día: %1</translation>
     </message>
     <message>
         <source>%1</source>
         <translation type="obsolete">%1</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="411"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="412"/>
         <source>-</source>
-        <translation>-</translation>
+        <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="423"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="427"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="431"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="435"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="439"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="443"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="447"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="451"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="455"/>
         <source>Hour</source>
-        <translation>Horas</translation>
+        <translation type="obsolete">Horas</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="423"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="431"/>
         <source>%1: AM %2</source>
-        <translation>%1: AM%2</translation>
+        <translation type="obsolete">%1: AM%2</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="427"/>
         <source>%1: AM 0%2</source>
-        <translation>%1: AM0%2</translation>
+        <translation type="obsolete">%1: AM0%2</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="435"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="443"/>
         <source>%1: PM %2</source>
-        <translation>%1: PM%2</translation>
+        <translation type="obsolete">%1: PM%2</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="439"/>
         <source>%1: PM 0%2</source>
-        <translation>%1: PM0%2</translation>
+        <translation type="obsolete">%1: PM0%2</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="471"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="475"/>
         <source>Minute</source>
-        <translation>Minuto</translation>
+        <translation type="obsolete">Minuto</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="481"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="485"/>
         <source>Second</source>
-        <translation>Segundo</translation>
+        <translation type="obsolete">Segundo</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="462"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="913"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="918"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="931"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="945"/>
         <source>Hour: %1</source>
-        <translation>Horas: %1</translation>
+        <translation type="obsolete">Horas: %1</translation>
     </message>
     <message>
         <source>Minute: %1</source>
@@ -5227,15 +5177,14 @@ Año: %1
         <translation type="obsolete">Segundo: %1</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="620"/>
         <source>If you set the time faster than recording data,
 some data will be erased from storage.
 </source>
-        <translation>Ajuste del tiempo más rápido que la grabación de datos,
+        <translation type="obsolete">Ajuste del tiempo más rápido que la grabación de datos,
 Algunos datos se borran del almacenamiento.</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="708"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="423"/>
         <source>SET DATE &amp; TIME</source>
         <translation>El establecer Fecha y Hora</translation>
     </message>
@@ -5248,30 +5197,36 @@ Algunos datos se borran del almacenamiento.</translation>
         <translation>El cuadro de diálogo Establecer fecha</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="174"/>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="364"/>
         <source>/</source>
-        <translation>/</translation>
+        <translation type="obsolete">/</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="296"/>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="330"/>
         <source>:</source>
-        <translation>:</translation>
+        <translation type="obsolete">:</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="412"/>
+        <location filename="../../datetime/setdatetimedialog1080p.ui" line="119"/>
         <source>Time Format
 24-Hour</source>
         <translation>Formato de hora
 24 horas</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog1080p.ui" line="426"/>
+        <location filename="../../datetime/setdatetimedialog1080p.ui" line="133"/>
         <source> GPS Synchronization
 On</source>
         <translation>Sincronización GPS
 Encender</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog1080p.ui" line="206"/>
+        <source>Save</source>
+        <translation>Guardar</translation>
+    </message>
+    <message>
+        <location filename="../../datetime/setdatetimedialog1080p.ui" line="219"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
     </message>
 </context>
 <context>
