@@ -177,7 +177,7 @@ MainWidget::MainWidget(int fbWidth, int fbHeight)
 
     connect(this, SIGNAL(resolutionChangeNotify(int)), this, SLOT(ResolutionChange(int)));
 
-    currentSplit = -1;
+    currentSplit = getMaxSplit();
     currentSplitOld = getMaxSplit();
 
     loadStyleSheet();
