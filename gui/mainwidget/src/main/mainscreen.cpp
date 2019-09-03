@@ -276,7 +276,7 @@ void MainWidget::updateGpsStatus()
         }
         else
         {
-            videoPane[ (currentChannelNum/(currentSplit*currentSplit))*(currentSplit*currentSplit)+(currentSplit-1) ]->setGpsStatus(currentStatus);
+            videoPane[ splitStartChNum+(currentSplit-1) ]->setGpsStatus(currentStatus);
         }
     }
 }
