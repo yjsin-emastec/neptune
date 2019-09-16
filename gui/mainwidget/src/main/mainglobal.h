@@ -1,6 +1,7 @@
 #ifndef MAINGLOBAL_H
 #define MAINGLOBAL_H
 
+#include <unistd.h>
 #include "DVR.h"
 #include "appmgr.h"
 

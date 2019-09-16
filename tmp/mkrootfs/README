@@ -1,0 +1,55 @@
+/*------------------------------------------------------------------------------*/
+/* EMD-S20's Images - NAND Flash 256MB                                          */
+/*------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------*/
+/* U-Boot Environments                                                          */
+/*------------------------------------------------------------------------------*/
+bootcmd  'nand read 0x82000000 0x500000 0x400000; bootm 0x82000000'
+bootargs 'mem=512M ubi.mtd=5 root=ubi0:rootfs rootfstype=ubifs rootflags=sync mtdparts=hinand:512K(boot),512K(env),4M(cfg),4M(kernel),2M(logo),120M(bank0),120M(bank1),1M(misc1),4M(misc2)'
+bootargs 'mem=512M ubi.mtd=6 root=ubi0:rootfs rootfstype=ubifs rootflags=sync mtdparts=hinand:512K(boot),512K(env),4M(cfg),4M(kernel),2M(logo),120M(bank0),120M(bank1),1M(misc1),4M(misc2)'
+
+/*------------------------------------------------------------------------------*/
+/* NAND Flash Map                                                               */
+/*------------------------------------------------------------------------------*/
+/*   Start   End           Size   Name         Description                      */
+
+0x00000000 - 0x0007FFFF    512K   bootld.img   Bootloader
+0x00080000 - 0x000FFFFF    512K   env_values   Environment Variables
+0x00100000 - 0x004FFFFF   4096K   config.img   configuration (YAFFS2)
+0x00500000 - 0x008FFFFF   4096K   kernel.img   Kernel
+0x00900000 - 0x00AFFFFF   2048K   btlogo.img   Booting Logo (JPEG)
+0x00B00000 - 0x082FFFFF 122880K   rootfs.img   Root File System bank0 (UBIFS)
+0x08300000 - 0x0FAFFFFF 122880K   rootfs.img   Root File System bank1 (UBIFS)
+0x0FB00000 - 0x0FBFFFFF   1024K   miscfs.img   Miscellaneous1
+0x0FC00000 - 0x0FFFFFFF   4096K   miscfs.img   Miscellaneous2 (YAFFS2)
+
+/*------------------------------------------------------------------------------*/
+/* Write Image                                                                  */
+/*------------------------------------------------------------------------------*/
+mw.b 0x82000000 0xff 0x0080000; tftp 0x82000000 bootld.img; nand erase 0x0000000 0x0080000; nand write 0x82000000 0x0000000 0x0080000
+mw.b 0x82000000 0xff 0x0400000; tftp 0x82000000 kernel.img; nand erase 0x0500000 0x0400000; nand write 0x82000000 0x0500000 0x0400000
+mw.b 0x82000000 0xff 0x0200000; tftp 0x82000000 btlogo.img; nand erase 0x0900000 0x0200000; nand write 0x82000000 0x0900000 0x0200000
+mw.b 0x82000000 0xff 0x7800000; tftp 0x82000000 rootfs.img; nand erase 0x0B00000 0x7800000; nand write 0x82000000 0x0B00000 0x7800000
+mw.b 0x82000000 0xff 0x7800000; tftp 0x82000000 rootfs.img; nand erase 0x8300000 0x7800000; nand write 0x82000000 0x8300000 0x7800000
+
+/*------------------------------------------------------------------------------*/
+/* Clear Environment Variables                                                  */
+/*------------------------------------------------------------------------------*/
+nand erase 0x0080000 0x0080000
+
+/*------------------------------------------------------------------------------*/
+/* Clear Configuration                                                          */
+/*------------------------------------------------------------------------------*/
+nand erase 0x0100000 0x0400000
+
+/*------------------------------------------------------------------------------*/
+/* Clear Miscellaneous1                                                         */
+/*------------------------------------------------------------------------------*/
+nand erase 0xFB00000 0x0100000
+
+/*------------------------------------------------------------------------------*/
+/* Clear Miscellaneous2                                                         */
+/*------------------------------------------------------------------------------*/
+nand erase 0xFC00000 0x0400000
+

@@ -27,6 +27,5 @@ cp libmediabackup.so   $1 &&
 cp libipc.so           $1 &&
 cp libosal.so          $1 &&
 cp cmdServer           $1 &&
-cp libhimem.so         $1 &&
 
 echo "Copy done."
