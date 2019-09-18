@@ -38,7 +38,11 @@ SystemLogPage::SystemLogPage(QWidget *parent)
         systemLogView = ui720.systemLogView;
 
         iconSize = 70;
+#if 0   //yjsin resize font size for emd-s10
         systemLogView->setStyleSheet("QHeaderView{font:27px;} QTreeView{font:26px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+#else   //yjsin resize font size for emd-s20
+        systemLogView->setStyleSheet("QHeaderView{font:29px;} QTreeView{font:27px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+#endif
 
         //yjsin [18/09/10] if text is long, change label size
         if( (utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0) )
@@ -99,7 +103,11 @@ SystemLogPage::SystemLogPage(QWidget *parent)
         systemLogView = ui1080.systemLogView;
 
         iconSize = 110;
+#if 0   //yjsin resize font size for emd-s10
         systemLogView->setStyleSheet("QHeaderView{font:40px;} QTreeView{font:40px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+#else   //yjsin resize font size for emd-s20
+        systemLogView->setStyleSheet("QHeaderView{font:36px;} QTreeView{font:41px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+#endif
 
         labelStart->setStyleSheet("font:45px;");
         labelEnd->setStyleSheet("font:45px;");
@@ -182,6 +190,7 @@ SystemLogPage::SystemLogPage(QWidget *parent)
     systemLogView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     systemLogView->header()->setMovable(false);
     systemLogView->header()->setResizeMode(QHeaderView::Fixed);
+    systemLogView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     systemLogModel = new QStandardItemModel(0, 2, this);
     systemLogModel->setHeaderData(0, Qt::Horizontal, QObject::tr("TIME"));

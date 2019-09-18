@@ -204,7 +204,11 @@ EventLogPage::EventLogPage(QWidget *parent)
         eventLogView->setColumnWidth(1, 290);
         eventLogView->setColumnWidth(2, 150);
 
+#if 0   //yjsin resize font size for emd-s10
         eventLogView->setStyleSheet("QHeaderView{font:43px;} QTreeView{font:41px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+#else   //yjsin resize font size for emd-s20
+        eventLogView->setStyleSheet("QHeaderView{font:43px;} QTreeView{font:43px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+#endif
     }
 }
 EventLogPage::~EventLogPage()
@@ -729,9 +733,15 @@ void EventLogPage::createEventLogView()
     eventLogView->setAlternatingRowColors(true);
     eventLogView->setModel(proxyModel);
     eventLogView->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    eventLogView->setStyleSheet("QHeaderView{font:27px;} QTreeView{font:27px;} QTreeView::item:selected{background:rgb(152,14,69);}");
     eventLogView->header()->setMovable(false);
     eventLogView->header()->setResizeMode(QHeaderView::Fixed);
+    eventLogView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+#if 0   //yjsin resize font size for emd-s10
+    eventLogView->setStyleSheet("QHeaderView{font:27px;} QTreeView{font:27px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+#else   //yjsin resize font size for emd-s20
+    eventLogView->setStyleSheet("QHeaderView{font:28px;} QTreeView{font:28px;} QTreeView::item:selected{background:rgb(152,14,69);}");
+#endif
+
 }
 void EventLogPage::createEventLogModel()
 {
