@@ -7,8 +7,8 @@
 #include "dev/Ver.h"
 #include "textmessagebox/textmessagedialog.h"
 
-#define TIME_LABEL_STYLE			"color:white;font-weight: bold;font-size:42px;"
-#define TIME_LABEL_STYLE2           "color:white;font-weight: bold;font-size:63px;"
+#define TIME_LABEL_STYLE			"color:white; font-size:42px;"
+#define TIME_LABEL_STYLE2           "color:white; font-size:63px;"
 
 StatusBarDialog::StatusBarDialog(int timeFormat, QWidget *parent)
     : QDialog(parent)

@@ -49,19 +49,17 @@
       <height>300</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="minimumSize">
      <size>
       <width>300</width>
       <height>300</height>
      </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
     </property>
     <property name="text">
      <string>Event</string>
@@ -79,6 +77,12 @@
       <height>300</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="minimumSize">
      <size>
       <width>300</width>
@@ -87,8 +91,7 @@
     </property>
     <property name="font">
      <font>
-      <weight>75</weight>
-      <bold>true</bold>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -107,19 +110,17 @@
       <height>300</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="minimumSize">
      <size>
       <width>300</width>
       <height>300</height>
      </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
     </property>
     <property name="text">
      <string>Close</string>
@@ -137,9 +138,6 @@
     <property name="font">
      <font>
       <pointsize>48</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -161,19 +159,17 @@
       <height>300</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="minimumSize">
      <size>
       <width>300</width>
       <height>300</height>
      </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
     </property>
     <property name="text">
      <string>System Log</string>

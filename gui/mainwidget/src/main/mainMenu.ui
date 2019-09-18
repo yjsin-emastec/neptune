@@ -31,13 +31,11 @@
      <height>250</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="toolTip">
     <string/>
@@ -47,9 +45,6 @@
    </property>
   </widget>
   <widget class="QPushButton" name="buttonSearch">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
    <property name="geometry">
     <rect>
      <x>373</x>
@@ -58,13 +53,11 @@
      <height>250</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="text">
     <string>Search</string>
@@ -86,9 +79,6 @@
     <enum>QFrame::Raised</enum>
    </property>
    <widget class="QPushButton" name="buttonAudio">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>9</x>
@@ -97,13 +87,11 @@
       <height>250</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="text">
      <string>Audio
@@ -122,22 +110,17 @@ Mute/1/2/3/4</string>
       <height>250</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="text">
      <string>N/A</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonShutdown">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>369</x>
@@ -146,13 +129,11 @@ Mute/1/2/3/4</string>
       <height>250</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="text">
      <string>Shutdown</string>
@@ -160,9 +141,6 @@ Mute/1/2/3/4</string>
    </widget>
   </widget>
   <widget class="QPushButton" name="buttonClose">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
    <property name="geometry">
     <rect>
      <x>734</x>
@@ -171,13 +149,11 @@ Mute/1/2/3/4</string>
      <height>250</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="text">
     <string>Close</string>

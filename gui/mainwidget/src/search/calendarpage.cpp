@@ -51,7 +51,7 @@ CalendarPage::CalendarPage(QWidget *parent)
         buttonPrevMonth->setMinimumHeight(110);
         buttonNextMonth->setMinimumWidth(200);
         buttonNextMonth->setMinimumHeight(110);
-        lableDate->setStyleSheet("color:white; font-weight:bold; font-size:70px;");
+        lableDate->setStyleSheet("color:white; font-size:70px;");
 
         if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
         {
@@ -129,7 +129,7 @@ void CalendarPage::CreateNavigationWidget()
     buttonNextMonth->setMinimumHeight(60);
 
     lableDate = new QLabel(tr("Aug, 2016"));
-    lableDate->setStyleSheet("color:white; font-weight:bold; font-size:48px;");
+    lableDate->setStyleSheet("color:white; font-size:48px;");
 
     connect(buttonPrevMonth, SIGNAL(clicked()), this, SLOT(onButtonPrevMonth()));
     connect(buttonNextMonth, SIGNAL(clicked()), this, SLOT(onButtonNextMonth()));

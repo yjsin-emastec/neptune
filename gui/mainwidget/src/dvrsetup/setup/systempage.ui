@@ -28,19 +28,17 @@
      <height>200</height>
     </rect>
    </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <property name="minimumSize">
     <size>
      <width>0</width>
      <height>200</height>
     </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
     <string>License
@@ -59,19 +57,17 @@ Plate</string>
      <height>200</height>
     </rect>
    </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <property name="minimumSize">
     <size>
      <width>0</width>
      <height>200</height>
     </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
     <string>Information</string>
@@ -89,19 +85,17 @@ Plate</string>
      <height>200</height>
     </rect>
    </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <property name="minimumSize">
     <size>
      <width>0</width>
      <height>200</height>
     </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
     <string>Close</string>
@@ -125,19 +119,17 @@ Plate</string>
      <height>200</height>
     </rect>
    </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <property name="minimumSize">
     <size>
      <width>0</width>
      <height>200</height>
     </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
     <string>Language</string>
@@ -155,19 +147,17 @@ Plate</string>
      <height>200</height>
     </rect>
    </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <property name="minimumSize">
     <size>
      <width>0</width>
      <height>200</height>
     </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
     <string>Factory
@@ -186,19 +176,17 @@ Default</string>
      <height>200</height>
     </rect>
    </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <property name="minimumSize">
     <size>
      <width>0</width>
      <height>200</height>
     </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
     <string>Firmware
@@ -217,19 +205,17 @@ Upgrade</string>
      <height>200</height>
     </rect>
    </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <property name="minimumSize">
     <size>
      <width>0</width>
      <height>200</height>
     </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
     <string>Config</string>
@@ -248,7 +234,7 @@ Upgrade</string>
     </rect>
    </property>
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
@@ -258,14 +244,6 @@ Upgrade</string>
      <width>0</width>
      <height>200</height>
     </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
     <string>Security</string>
@@ -280,19 +258,17 @@ Upgrade</string>
      <height>200</height>
     </rect>
    </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <property name="minimumSize">
     <size>
      <width>0</width>
      <height>200</height>
     </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="focusPolicy">
     <enum>Qt::StrongFocus</enum>

@@ -38,9 +38,6 @@
     <enum>QFrame::Raised</enum>
    </property>
    <widget class="QPushButton" name="buttonAudio">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -54,14 +51,6 @@
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
     </property>
     <property name="text">
      <string>Audio
@@ -86,22 +75,11 @@ Mute/1/2/3/4</string>
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
     <property name="text">
      <string>N/A</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonShutdown">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -116,22 +94,11 @@ Mute/1/2/3/4</string>
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
     <property name="text">
      <string>Shutdown</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonClose">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>1100</x>
@@ -146,22 +113,11 @@ Mute/1/2/3/4</string>
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
     <property name="text">
      <string>Close</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonSearch">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -176,22 +132,11 @@ Mute/1/2/3/4</string>
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
     <property name="text">
      <string>Search</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonSetup">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -205,14 +150,6 @@ Mute/1/2/3/4</string>
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
     </property>
     <property name="text">
      <string>Setup</string>
