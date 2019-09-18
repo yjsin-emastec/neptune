@@ -313,6 +313,7 @@ void VideoInputDialog::onVideoInputPreview()
 {
     emit videoInputPreview();
 }
+#if 0   //yjsin save DeviceCfg for emd-s10
 void VideoInputDialog::onButtonSave()
 {
     if( videoInputBar )
@@ -327,37 +328,41 @@ void VideoInputDialog::onButtonSave()
 
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.camera_mirror00; break; }
-            case 1 : { dst = DeviceCfg.camera_mirror01; break; }
-            case 2 : { dst = DeviceCfg.camera_mirror02; break; }
-            case 3 : { dst = DeviceCfg.camera_mirror03; break; }
-#if 0 // yjsin DeviceCfg was defined up to 4ch
-            case 4 : { dst = DeviceCfg.camera_mirror04; break; }
-            case 5 : { dst = DeviceCfg.camera_mirror05; break; }
-            case 6 : { dst = DeviceCfg.camera_mirror06; break; }
-            case 7 : { dst = DeviceCfg.camera_mirror07; break; }
-#endif
+            case 0 :    { dst = DeviceCfg.camera_mirror00; break; }
+            case 1 :    { dst = DeviceCfg.camera_mirror01; break; }
+            case 2 :    { dst = DeviceCfg.camera_mirror02; break; }
+            case 3 :    { dst = DeviceCfg.camera_mirror03; break; }
+            default :   { dst = NULL; }
         }
 
-        if( infoMirror[i] == 1 )            { utils_cfg_cpy_item(dst, "MIRROR"); }
-        else                                { utils_cfg_cpy_item(dst, "NORMAL"); }
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            if( infoMirror[i] == 1 )    { utils_cfg_cpy_item(dst, "MIRROR"); }
+            else                        { utils_cfg_cpy_item(dst, "NORMAL"); }
+        }
 
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.camera_flip00; break; }
-            case 1 : { dst = DeviceCfg.camera_flip01; break; }
-            case 2 : { dst = DeviceCfg.camera_flip02; break; }
-            case 3 : { dst = DeviceCfg.camera_flip03; break; }
-#if 0 // yjsin DeviceCfg was defined up to 4ch
-            case 4 : { dst = DeviceCfg.camera_flip04; break; }
-            case 5 : { dst = DeviceCfg.camera_flip05; break; }
-            case 6 : { dst = DeviceCfg.camera_flip06; break; }
-            case 7 : { dst = DeviceCfg.camera_flip07; break; }
-#endif
+            case 0 :    { dst = DeviceCfg.camera_flip00; break; }
+            case 1 :    { dst = DeviceCfg.camera_flip01; break; }
+            case 2 :    { dst = DeviceCfg.camera_flip02; break; }
+            case 3 :    { dst = DeviceCfg.camera_flip03; break; }
+            default :   { dst = NULL; }
         }
 
-        if( infoFlip[i] == 1 )              { utils_cfg_cpy_item(dst, "DOWN"); }
-        else                                { utils_cfg_cpy_item(dst, "UP");   }
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            if( infoFlip[i] == 1 )      { utils_cfg_cpy_item(dst, "DOWN"); }
+            else                        { utils_cfg_cpy_item(dst, "UP");   }
+        }
     }
 
     emit makeTransparent(0);
@@ -377,43 +382,184 @@ void VideoInputDialog::onButtonClose()
         char *dst = NULL;
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.camera_mirror00; break; }
-            case 1 : { dst = DeviceCfg.camera_mirror01; break; }
-            case 2 : { dst = DeviceCfg.camera_mirror02; break; }
-            case 3 : { dst = DeviceCfg.camera_mirror03; break; }
-#if 0 // yjsin DeviceCfg was defined up to 4ch
-            case 4 : { dst = DeviceCfg.camera_mirror04; break; }
-            case 5 : { dst = DeviceCfg.camera_mirror05; break; }
-            case 6 : { dst = DeviceCfg.camera_mirror06; break; }
-            case 7 : { dst = DeviceCfg.camera_mirror07; break; }
-#endif
+            case 0 :    { dst = DeviceCfg.camera_mirror00; break; }
+            case 1 :    { dst = DeviceCfg.camera_mirror01; break; }
+            case 2 :    { dst = DeviceCfg.camera_mirror02; break; }
+            case 3 :    { dst = DeviceCfg.camera_mirror03; break; }
+            default :   { dst = NULL; }
         }
 
-        if( backupMirror[i] == 1 )          { utils_cfg_cpy_item(dst, "MIRROR"); }
-        else                                { utils_cfg_cpy_item(dst, "NORMAL"); }
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            if( backupMirror[i] == 1 )  { utils_cfg_cpy_item(dst, "MIRROR"); }
+            else                        { utils_cfg_cpy_item(dst, "NORMAL"); }
+        }
 
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.camera_flip00; break; }
-            case 1 : { dst = DeviceCfg.camera_flip01; break; }
-            case 2 : { dst = DeviceCfg.camera_flip02; break; }
-            case 3 : { dst = DeviceCfg.camera_flip03; break; }
-#if 0 // yjsin DeviceCfg was defined up to 4ch
-            case 4 : { dst = DeviceCfg.camera_flip04; break; }
-            case 5 : { dst = DeviceCfg.camera_flip05; break; }
-            case 6 : { dst = DeviceCfg.camera_flip06; break; }
-            case 7 : { dst = DeviceCfg.camera_flip07; break; }
-#endif
+            case 0 :    { dst = DeviceCfg.camera_flip00; break; }
+            case 1 :    { dst = DeviceCfg.camera_flip01; break; }
+            case 2 :    { dst = DeviceCfg.camera_flip02; break; }
+            case 3 :    { dst = DeviceCfg.camera_flip03; break; }
+            default :   { dst = NULL; }
         }
 
-        if( backupFlip[i] == 1 )            { utils_cfg_cpy_item(dst, "DOWN"); }
-        else                                { utils_cfg_cpy_item(dst, "UP");   }
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            if( backupFlip[i] == 1 )    { utils_cfg_cpy_item(dst, "DOWN"); }
+            else                        { utils_cfg_cpy_item(dst, "UP");   }
+        }
     }
 
     emit makeTransparent(0);
     emit reject();
 }
+#else   //yjsin save DeviceCfg for emd-s20
+void VideoInputDialog::onButtonSave()
+{
+    if( videoInputBar )
+    {
+        delete videoInputBar;
+        videoInputBar=NULL;
+    }
 
+    for(int i=0; i<devInfo.videoNum; i++)
+    {
+        char *dst = NULL;
+
+        switch(i)
+        {
+            case 0 :    { dst = DeviceCfg.camera_mirror00; break; }
+            case 1 :    { dst = DeviceCfg.camera_mirror01; break; }
+            case 2 :    { dst = DeviceCfg.camera_mirror02; break; }
+            case 3 :    { dst = DeviceCfg.camera_mirror03; break; }
+/*
+            // yjsin DeviceCfg was defined up to 4ch
+            case 4 :    { dst = DeviceCfg.camera_mirror04; break; }
+            case 5 :    { dst = DeviceCfg.camera_mirror05; break; }
+            case 6 :    { dst = DeviceCfg.camera_mirror06; break; }
+            case 7 :    { dst = DeviceCfg.camera_mirror07; break; }
+*/
+            default :   { dst = NULL; }
+        }
+
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            if( infoMirror[i] == 1 )    { utils_cfg_cpy_item(dst, "MIRROR"); }
+            else                        { utils_cfg_cpy_item(dst, "NORMAL"); }
+        }
+
+        switch(i)
+        {
+            case 0 :    { dst = DeviceCfg.camera_flip00; break; }
+            case 1 :    { dst = DeviceCfg.camera_flip01; break; }
+            case 2 :    { dst = DeviceCfg.camera_flip02; break; }
+            case 3 :    { dst = DeviceCfg.camera_flip03; break; }
+/*
+            // yjsin DeviceCfg was defined up to 4ch
+            case 4 :    { dst = DeviceCfg.camera_flip04; break; }
+            case 5 :    { dst = DeviceCfg.camera_flip05; break; }
+            case 6 :    { dst = DeviceCfg.camera_flip06; break; }
+            case 7 :    { dst = DeviceCfg.camera_flip07; break; }
+*/
+            default :   { dst = NULL; }
+        }
+
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            if( infoFlip[i] == 1 )      { utils_cfg_cpy_item(dst, "DOWN"); }
+            else                        { utils_cfg_cpy_item(dst, "UP");   }
+        }
+    }
+
+    emit makeTransparent(0);
+    emit accept();
+}
+void VideoInputDialog::onButtonClose()
+{
+    if( videoInputBar )
+    {
+        delete videoInputBar;
+        videoInputBar = NULL;
+    }
+
+    //save backup Config
+    for(int i=0; i<devInfo.videoNum; i++)
+    {
+        char *dst = NULL;
+        switch(i)
+        {
+            case 0 :    { dst = DeviceCfg.camera_mirror00; break; }
+            case 1 :    { dst = DeviceCfg.camera_mirror01; break; }
+            case 2 :    { dst = DeviceCfg.camera_mirror02; break; }
+            case 3 :    { dst = DeviceCfg.camera_mirror03; break; }
+/*
+            // yjsin DeviceCfg was defined up to 4ch
+            case 4 :    { dst = DeviceCfg.camera_mirror04; break; }
+            case 5 :    { dst = DeviceCfg.camera_mirror05; break; }
+            case 6 :    { dst = DeviceCfg.camera_mirror06; break; }
+            case 7 :    { dst = DeviceCfg.camera_mirror07; break; }
+*/
+            default :   { dst = NULL; }
+        }
+
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            if( backupMirror[i] == 1 )  { utils_cfg_cpy_item(dst, "MIRROR"); }
+            else                        { utils_cfg_cpy_item(dst, "NORMAL"); }
+        }
+
+        switch(i)
+        {
+            case 0 :    { dst = DeviceCfg.camera_flip00; break; }
+            case 1 :    { dst = DeviceCfg.camera_flip01; break; }
+            case 2 :    { dst = DeviceCfg.camera_flip02; break; }
+            case 3 :    { dst = DeviceCfg.camera_flip03; break; }
+/*
+            // yjsin DeviceCfg was defined up to 4ch
+            case 4 :    { dst = DeviceCfg.camera_flip04; break; }
+            case 5 :    { dst = DeviceCfg.camera_flip05; break; }
+            case 6 :    { dst = DeviceCfg.camera_flip06; break; }
+            case 7 :    { dst = DeviceCfg.camera_flip07; break; }
+*/
+            default :   { dst = NULL; }
+        }
+
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            if( backupFlip[i] == 1 )    { utils_cfg_cpy_item(dst, "DOWN"); }
+            else                        { utils_cfg_cpy_item(dst, "UP");   }
+        }
+    }
+
+    emit makeTransparent(0);
+    emit reject();
+}
+#endif
 void VideoInputDialog::keyPressEvent(QKeyEvent *event)
 {
     switch(event->key())

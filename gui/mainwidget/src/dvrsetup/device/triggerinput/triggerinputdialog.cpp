@@ -882,7 +882,7 @@ int TriggerInputDialog::checkPriorityRedundant()
 
     return rv;
 }
-#if 1   //yjsin DeviceCfg was defined up to 4ch
+#if 0   //yjsin save DeviceCfg for emd-s10
 void TriggerInputDialog::onButtonSave()
 {
     //save source
@@ -891,14 +891,22 @@ void TriggerInputDialog::onButtonSave()
         char *dst;
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.trigger1_source; break; }
-            case 1 : { dst = DeviceCfg.trigger2_source; break; }
-            case 2 : { dst = DeviceCfg.trigger3_source; break; }
-            case 3 : { dst = DeviceCfg.trigger4_source; break; }
+            case 0 :    { dst = DeviceCfg.trigger1_source; break; }
+            case 1 :    { dst = DeviceCfg.trigger2_source; break; }
+            case 2 :    { dst = DeviceCfg.trigger3_source; break; }
+            case 3 :    { dst = DeviceCfg.trigger4_source; break; }
+            default :   { dst = NULL; }
         }
 
-        QString src = QString("%1%2").arg("CAM", QString::number(infoSource[i]));
-        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            QString src = QString("%1%2").arg("CAM", QString::number(infoSource[i]));
+            utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        }
     }
 
     //save delay
@@ -907,14 +915,22 @@ void TriggerInputDialog::onButtonSave()
         char *dst;
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.trigger1_delay; break; }
-            case 1 : { dst = DeviceCfg.trigger2_delay; break; }
-            case 2 : { dst = DeviceCfg.trigger3_delay; break; }
-            case 3 : { dst = DeviceCfg.trigger4_delay; break; }
+            case 0 :    { dst = DeviceCfg.trigger1_delay; break; }
+            case 1 :    { dst = DeviceCfg.trigger2_delay; break; }
+            case 2 :    { dst = DeviceCfg.trigger3_delay; break; }
+            case 3 :    { dst = DeviceCfg.trigger4_delay; break; }
+            default :   { dst = NULL; }
         }
 
-        QString src = QString("%1%2").arg(QString::number(infoDelay[i]), "SEC");
-        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            QString src = QString("%1%2").arg(QString::number(infoDelay[i]), "SEC");
+            utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        }
     }
 
     //check priority redundant
@@ -945,23 +961,31 @@ void TriggerInputDialog::onButtonSave()
         char *dst;
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.trigger1_priority; break; }
-            case 1 : { dst = DeviceCfg.trigger2_priority; break; }
-            case 2 : { dst = DeviceCfg.trigger3_priority; break; }
-            case 3 : { dst = DeviceCfg.trigger4_priority; break; }
+            case 0 :    { dst = DeviceCfg.trigger1_priority; break; }
+            case 1 :    { dst = DeviceCfg.trigger2_priority; break; }
+            case 2 :    { dst = DeviceCfg.trigger3_priority; break; }
+            case 3 :    { dst = DeviceCfg.trigger4_priority; break; }
+            default :   { dst = NULL; }
         }
 
-        QString src;
-        if( infoPriority[i] < 10 )
+        if( dst == NULL )
         {
-            src = QString("0%1").arg(QString::number(infoPriority[i]));
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
         }
         else
         {
-            src = QString("%1").arg(QString::number(infoPriority[i]));
-        }
+            QString src;
+            if( infoPriority[i] < 10 )
+            {
+                src = QString("0%1").arg(QString::number(infoPriority[i]));
+            }
+            else
+            {
+                src = QString("%1").arg(QString::number(infoPriority[i]));
+            }
 
-        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+            utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        }
     }
 
     //save audio
@@ -970,22 +994,31 @@ void TriggerInputDialog::onButtonSave()
         char *dst;
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.trigger1_audio; break; }
-            case 1 : { dst = DeviceCfg.trigger2_audio; break; }
-            case 2 : { dst = DeviceCfg.trigger3_audio; break; }
-            case 3 : { dst = DeviceCfg.trigger4_audio; break; }
+            case 0 :    { dst = DeviceCfg.trigger1_audio; break; }
+            case 1 :    { dst = DeviceCfg.trigger2_audio; break; }
+            case 2 :    { dst = DeviceCfg.trigger3_audio; break; }
+            case 3 :    { dst = DeviceCfg.trigger4_audio; break; }
+            default :   { dst = NULL; }
         }
 
-        QString src;
-        if( infoAudio[i] )  { src = "OUTPUT"; }
-        else                { src = "MUTE";   }
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
 
-        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+            QString src;
+            if( infoAudio[i] )  { src = "OUTPUT"; }
+            else                { src = "MUTE";   }
+
+            utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        }
     }
 
     accept();
 }
-#else
+#else   //yjsin save DeviceCfg for emd-s20
 void TriggerInputDialog::onButtonSave()
 {
     //save source
@@ -994,18 +1027,29 @@ void TriggerInputDialog::onButtonSave()
         char *dst;
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.trigger1_source; break; }
-            case 1 : { dst = DeviceCfg.trigger2_source; break; }
-            case 2 : { dst = DeviceCfg.trigger3_source; break; }
-            case 3 : { dst = DeviceCfg.trigger4_source; break; }
-            case 4 : { dst = DeviceCfg.trigger5_source; break; }
-            case 5 : { dst = DeviceCfg.trigger6_source; break; }
-            case 6 : { dst = DeviceCfg.trigger7_source; break; }
-            case 7 : { dst = DeviceCfg.trigger8_source; break; }
+            case 0 :    { dst = DeviceCfg.trigger1_source; break; }
+            case 1 :    { dst = DeviceCfg.trigger2_source; break; }
+            case 2 :    { dst = DeviceCfg.trigger3_source; break; }
+            case 3 :    { dst = DeviceCfg.trigger4_source; break; }
+/*
+            // yjsin DeviceCfg was defined up to 4ch
+            case 4 :    { dst = DeviceCfg.trigger5_source; break; }
+            case 5 :    { dst = DeviceCfg.trigger6_source; break; }
+            case 6 :    { dst = DeviceCfg.trigger7_source; break; }
+            case 7 :    { dst = DeviceCfg.trigger8_source; break; }
+*/
+            default :   { dst = NULL; }
         }
 
-        QString src = QString("%1%2").arg("CAM", QString::number(infoSource[i]));
-        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            QString src = QString("%1%2").arg("CAM", QString::number(infoSource[i]));
+            utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        }
     }
 
     //save delay
@@ -1014,21 +1058,32 @@ void TriggerInputDialog::onButtonSave()
         char *dst;
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.trigger1_delay; break; }
-            case 1 : { dst = DeviceCfg.trigger2_delay; break; }
-            case 2 : { dst = DeviceCfg.trigger3_delay; break; }
-            case 3 : { dst = DeviceCfg.trigger4_delay; break; }
-            case 0 : { dst = DeviceCfg.trigger5_delay; break; }
-            case 1 : { dst = DeviceCfg.trigger6_delay; break; }
-            case 2 : { dst = DeviceCfg.trigger7_delay; break; }
-            case 3 : { dst = DeviceCfg.trigger8_delay; break; }
+            case 0 :    { dst = DeviceCfg.trigger1_delay; break; }
+            case 1 :    { dst = DeviceCfg.trigger2_delay; break; }
+            case 2 :    { dst = DeviceCfg.trigger3_delay; break; }
+            case 3 :    { dst = DeviceCfg.trigger4_delay; break; }
+/*
+            // yjsin DeviceCfg was defined up to 4ch
+            case 0 :    { dst = DeviceCfg.trigger5_delay; break; }
+            case 1 :    { dst = DeviceCfg.trigger6_delay; break; }
+            case 2 :    { dst = DeviceCfg.trigger7_delay; break; }
+            case 3 :    { dst = DeviceCfg.trigger8_delay; break; }
+*/
+            default :   { dst = NULL; }
         }
 
-        QString src = QString("%1%2").arg(QString::number(infoDelay[i]), "SEC");
-        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            QString src = QString("%1%2").arg(QString::number(infoDelay[i]), "SEC");
+            utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        }
     }
 
-    //check redundant
+    //check priority redundant
     if( checkPriorityRedundant() )
     {
         if(msgBox)
@@ -1056,27 +1111,38 @@ void TriggerInputDialog::onButtonSave()
         char *dst;
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.trigger1_priority; break; }
-            case 1 : { dst = DeviceCfg.trigger2_priority; break; }
-            case 2 : { dst = DeviceCfg.trigger3_priority; break; }
-            case 3 : { dst = DeviceCfg.trigger4_priority; break; }
-            case 4 : { dst = DeviceCfg.trigger5_priority; break; }
-            case 5 : { dst = DeviceCfg.trigger6_priority; break; }
-            case 6 : { dst = DeviceCfg.trigger7_priority; break; }
-            case 7 : { dst = DeviceCfg.trigger8_priority; break; }
+            case 0 :    { dst = DeviceCfg.trigger1_priority; break; }
+            case 1 :    { dst = DeviceCfg.trigger2_priority; break; }
+            case 2 :    { dst = DeviceCfg.trigger3_priority; break; }
+            case 3 :    { dst = DeviceCfg.trigger4_priority; break; }
+/*
+            // yjsin DeviceCfg was defined up to 4ch
+            case 4 :    { dst = DeviceCfg.trigger5_priority; break; }
+            case 5 :    { dst = DeviceCfg.trigger6_priority; break; }
+            case 6 :    { dst = DeviceCfg.trigger7_priority; break; }
+            case 7 :    { dst = DeviceCfg.trigger8_priority; break; }
+*/
+            default :   { dst = NULL; }
         }
 
-        QString src;
-        if( infoPriority[i] < 10 )
+        if( dst == NULL )
         {
-            src = QString("0%1").arg(QString::number(infoPriority[i]));
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
         }
         else
         {
-            src = QString("%1").arg(QString::number(infoPriority[i]));
-        }
+            QString src;
+            if( infoPriority[i] < 10 )
+            {
+                src = QString("0%1").arg(QString::number(infoPriority[i]));
+            }
+            else
+            {
+                src = QString("%1").arg(QString::number(infoPriority[i]));
+            }
 
-        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+            utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        }
     }
 
     //save audio
@@ -1085,21 +1151,33 @@ void TriggerInputDialog::onButtonSave()
         char *dst;
         switch(i)
         {
-            case 0 : { dst = DeviceCfg.trigger1_audio; break; }
-            case 1 : { dst = DeviceCfg.trigger2_audio; break; }
-            case 2 : { dst = DeviceCfg.trigger3_audio; break; }
-            case 3 : { dst = DeviceCfg.trigger4_audio; break; }
-            case 4 : { dst = DeviceCfg.trigger5_audio; break; }
-            case 5 : { dst = DeviceCfg.trigger6_audio; break; }
-            case 6 : { dst = DeviceCfg.trigger7_audio; break; }
-            case 7 : { dst = DeviceCfg.trigger8_audio; break; }
+            case 0 :    { dst = DeviceCfg.trigger1_audio; break; }
+            case 1 :    { dst = DeviceCfg.trigger2_audio; break; }
+            case 2 :    { dst = DeviceCfg.trigger3_audio; break; }
+            case 3 :    { dst = DeviceCfg.trigger4_audio; break; }
+/*
+            // yjsin DeviceCfg was defined up to 4ch
+            case 4 :    { dst = DeviceCfg.trigger5_audio; break; }
+            case 5 :    { dst = DeviceCfg.trigger6_audio; break; }
+            case 6 :    { dst = DeviceCfg.trigger7_audio; break; }
+            case 7 :    { dst = DeviceCfg.trigger8_audio; break; }
+*/
+            default :   { dst = NULL; }
         }
 
-        QString src;
-        if( infoAudio[i] )  { src = "OUTPUT"; }
-        else                { src = "MUTE";   }
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
 
-        utils_cfg_cpy_item( dst, src.toStdString().c_str());
+            QString src;
+            if( infoAudio[i] )  { src = "OUTPUT"; }
+            else                { src = "MUTE";   }
+
+            utils_cfg_cpy_item( dst, src.toStdString().c_str());
+        }
     }
 
     accept();

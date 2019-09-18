@@ -358,7 +358,6 @@ void SetDateTimeDialog::enableSetTime()
         return;
     }
 
-    qDebug() <<"\n\n\n\t hi";
     for(int i = 0; i < MAX_HDD_COUNT; i++)
     {
         if(tFirstRec == 0)
