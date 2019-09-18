@@ -65,7 +65,6 @@ SetDateTimeDialog::SetDateTimeDialog(QWidget *parent, int dateFormat, cfg_dls_t 
 
     dateTimeEdit->setWrapping(true);
     dateTimeEdit->setContextMenuPolicy(Qt::NoContextMenu);
-    dateTimeEdit->setDisplayFormat("yyyy.MM.dd. hh:mm:ss");
 
     dateTimeEdit->installEventFilter(this);
     comboBoxTimeZone->installEventFilter(this);
