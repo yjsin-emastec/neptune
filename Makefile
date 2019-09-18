@@ -18,8 +18,10 @@ Gui: dummy
 	@$(CD)    gui/mainwidget; $(SH) build.sh
 	@$(CPARF) gui/mainwidget/mainwidget $(LIBDIR)
 	@$(CPARF) gui/mainwidget/mainwidget /nfs/usr_hi3531d/usr/lib
-	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/*.qm /nfs/usr_hi3531d/usr/lib
+	@$(CPARF) gui/mainwidget/qss/*.qss                                    $(NFS)/usr_hi3531d/usr/lib
+	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/*.qm $(NFS)/usr_hi3531d/usr/lib/translator
 ifeq (exist,$(shell [ -e $(TMP) ] && echo exist))
+	@$(CPARF) gui/mainwidget/qss/*.qss                                    $(TMP)/mkrootfs/rootfs/usr/lib
 	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/*.qm $(TMP)/mkrootfs/rootfs/usr/lib/translator
 endif
 
@@ -48,12 +50,13 @@ SetModelDep: dummy
 
 CopyUserlib2Tmp: dummy
 	@$(ECHO) "QT BASE COPY!!!!!"
-	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/*.qm   $(TMP)/host/rootfs/usr/lib/translator
-	@$(CD) $(LIBDIR); $(SH) script/export2usrlib.sh         $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
-	@$(CD) $(LIBDIR); $(SH) script/export2host.sh           $(PROJECT_ROOT)/$(TMP)/host/rootfs/usr/lib
-	@$(CHMOD755R) $(TMP)/host/rootfs/usr/sbin
-	@$(CHMOD755R) $(TMP)/host/rootfs/usr/drv
-	@$(CHMOD755R) $(TMP)/host/rootfs/usr/lib
+	@$(CPARF) gui/mainwidget/src/dvrsetup/system/language/translator/*.qm   $(TMP)/mkrootfs/rootfs/usr/lib/translator
+	@$(CPARF) gui/mainwidget/qss/*.qss                                      $(TMP)/mkrootfs/rootfs/usr/lib
+	@$(CD) $(LIBDIR); $(SH) script/export2usrlib.sh         $(PROJECT_ROOT)/$(TMP)/mkrootfs/rootfs/usr/lib
+	@$(CD) $(LIBDIR); $(SH) script/export2host.sh           $(PROJECT_ROOT)/$(TMP)/mkrootfs/rootfs/usr/lib
+	@$(CHMOD755R) $(TMP)/mkrootfs/rootfs/usr/sbin
+	@$(CHMOD755R) $(TMP)/mkrootfs/rootfs/usr/drv
+	@$(CHMOD755R) $(TMP)/mkrootfs/rootfs/usr/lib
 
 Mkimg: dummy
 	@$(CD) $(TMP); $(MAKE)
@@ -64,6 +67,9 @@ clean:
 	@$(RMF)  gui/mainwidget/Makefile gui/mainwidget/mainwidget gui/mainwidget/mainwidget.pro;
 	@$(RMF)  *.txt
 	@$(RMF)  *.bin
+############################## delete temp file for commit ##############################
 	@$(RMF)  lib/mainwidget
+	@$(RMF)  tmp/mkrootfs/rootfs/usr/lib/*.qss
+	@$(RMF)  tmp/mkrootfs/rootfs/usr/lib/translator/*.qm
 
 dummy:

@@ -2109,7 +2109,7 @@ void MainWidget::translatorChange(int lang)
     myfont.setPointSize(fontsize);
     qDebug(" ================== UniFont ============== ");
     QApplication::setFont(myfont);
-
+#if 0   //yjsin load ts file for emd-s10
     if(lang == LANGUAGE_ENGLISH)
     {
         if(access("/tmp/eastern", F_OK) == 0)
@@ -2230,10 +2230,130 @@ void MainWidget::translatorChange(int lang)
         qDebug("unknown language(%d)selected....load english", lang);
         lang = 0;
     }
+#else   //yjsin load ts file for emd-s20
+    if(lang == LANGUAGE_ENGLISH)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr_hi3531d/usr/lib/translator/language_english");
+            qDebug("load English from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_english");
+            qDebug("load English");
+        }
+    }
+    else if(lang == LANGUAGE_KOREAN)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr_hi3531d/usr/lib/translator/language_korean");
+            qDebug("load Korean from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_korean");
+            qDebug("load Korean");
+        }
+    }
+    else if(lang == LANGUAGE_SPANISH)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr_hi3531d/usr/lib/translator/language_spanish");
+            qDebug("load Spanish from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_spanish");
+            qDebug("load Spanish");
+        }
+    }
+    else if(lang == LANGUAGE_FRENCH)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr_hi3531d/usr/lib/translator/language_french");
+            qDebug("load French from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_french");
+            qDebug("load French");
+        }
+    }
+    else if(lang == LANGUAGE_ITALIAN)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr_hi3531d/usr/lib/translator/language_italian");
+            qDebug("load Italian from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_italian");
+            qDebug("load Italian");
+        }
+    }
+    else if(lang == LANGUAGE_PORTUGUESE)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr_hi3531d/usr/lib/translator/language_portuguese");
+            qDebug("load Portuguese from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_portuguese");
+            qDebug("load Portuguese");
+        }
+    }
+    else if(lang == LANGUAGE_JAPANESE)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr_hi3531d/usr/lib/translator/language_japanese");
+            qDebug("load Japanese from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_japanese");
+            qDebug("load Japanese");
+        }
+    }
+    else if(lang == LANGUAGE_GERMAN)
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr_hi3531d/usr/lib/translator/language_german");
+            qDebug("load German from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_german");
+            qDebug("load German");
+        }
+    }
+    else
+    {
+        if(access("/tmp/eastern", F_OK) == 0)
+        {
+            selTranslator->load("/tmp/eastern/usr_hi3531d/usr/lib/translator/language_english");
+            qDebug("load English from nfs");
+        }
+        else
+        {
+            selTranslator->load("./translator/language_english");
+            qDebug("load English");
+        }
+
+        lang = 0;
+    }
+#endif
 
     QCoreApplication::installTranslator(selTranslator);
     loadedLanguage = lang;
-
 }
 int MainWidget::LanguageValueTransformation(void)
 {
