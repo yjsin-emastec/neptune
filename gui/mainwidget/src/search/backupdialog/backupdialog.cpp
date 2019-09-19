@@ -22,7 +22,7 @@ BackupDialog::BackupDialog(QWidget *parent)
         progressBarBackup->setStyleSheet("QProgressBar {font:40px;color:white;}");
         labelStart->setStyleSheet("font:40px;color:white");
         labelEnd->setStyleSheet("font:40px;color:white");
-
+#if 0   //yjsin resize font size for emd-s10
         if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
         {
             dateTimeStart->setStyleSheet("QDateTimeEdit {font:43px; selection-color:white; selection-background-color:rgb(152,14,69);}");
@@ -31,6 +31,16 @@ BackupDialog::BackupDialog(QWidget *parent)
         {
             dateTimeStart->setStyleSheet("QDateTimeEdit {font:48px; selection-color:white; selection-background-color:rgb(152,14,69);}");
         }
+#else   //yjsin resize font size for emd-s20
+        if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
+        {
+            dateTimeStart->setStyleSheet("QDateTimeEdit {font:41px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+        else
+        {
+            dateTimeStart->setStyleSheet("QDateTimeEdit {font:46px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+#endif
 
         //yjsin [17/09/13] if text is long, change font size
         if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
@@ -59,7 +69,7 @@ BackupDialog::BackupDialog(QWidget *parent)
         progressBarBackup->setStyleSheet("QProgressBar {font:55px;color:white;}");
         labelStart->setStyleSheet("font:55px;color:white");
         labelEnd->setStyleSheet("font:55px;color:white");
-
+#if 0   //yjsin resize font size for emd-s10
         if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
         {
             dateTimeStart->setStyleSheet("QDateTimeEdit {font:60px; selection-color:white; selection-background-color:rgb(152,14,69);}");
@@ -68,7 +78,16 @@ BackupDialog::BackupDialog(QWidget *parent)
         {
             dateTimeStart->setStyleSheet("QDateTimeEdit {font:65px; selection-color:white; selection-background-color:rgb(152,14,69);}");
         }
-
+#else   //yjsin resize font size for emd-s20
+        if(utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0)    //12H
+        {
+            dateTimeStart->setStyleSheet("QDateTimeEdit {font:58px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+        else
+        {
+            dateTimeStart->setStyleSheet("QDateTimeEdit {font:63px; selection-color:white; selection-background-color:rgb(152,14,69);}");
+        }
+#endif
         //yjsin [19/02/21] if text is long, change font size
         if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 || utils_cfg_cmp_item(SystemCfg.language, "PORTUGUESE") == 0)
         {
