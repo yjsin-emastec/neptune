@@ -190,8 +190,7 @@ void InformationDialog::onUpdateStatus(void)
         labelDiskTemperature->setText(tr("%1%2%3").arg("SSD: ").arg(diskInfo.smartInfo_temperature).arg(tr(" ℃")));
     }
 
-    //yjsin temporary removed because of freezing problem
-    //labelDVRTemperature2->setText(tr("%1%2%3").arg("DVR: ").arg(appmgr_get_board_temperature()).arg(tr(" ℃")));
+    labelDVRTemperature2->setText(tr("%1%2%3").arg("DVR: ").arg(appmgr_get_board_temperature()).arg(tr(" ℃")));
 }
 void InformationDialog::onClose(void)
 {

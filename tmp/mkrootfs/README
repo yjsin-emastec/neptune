@@ -5,7 +5,7 @@
 /*------------------------------------------------------------------------------*/
 /* U-Boot Environments                                                          */
 /*------------------------------------------------------------------------------*/
-bootcmd  'nand read 0x82000000 0x500000 0x400000; bootm 0x82000000'
+bootcmd  'nand read 0x41000000 0x500000 0x400000; bootm 0x41000000'
 bootargs 'mem=512M ubi.mtd=5 root=ubi0:rootfs rootfstype=ubifs rootflags=sync mtdparts=hinand:512K(boot),512K(env),4M(cfg),4M(kernel),2M(logo),120M(bank0),120M(bank1),1M(misc1),4M(misc2)'
 bootargs 'mem=512M ubi.mtd=6 root=ubi0:rootfs rootfstype=ubifs rootflags=sync mtdparts=hinand:512K(boot),512K(env),4M(cfg),4M(kernel),2M(logo),120M(bank0),120M(bank1),1M(misc1),4M(misc2)'
 
@@ -27,11 +27,11 @@ bootargs 'mem=512M ubi.mtd=6 root=ubi0:rootfs rootfstype=ubifs rootflags=sync mt
 /*------------------------------------------------------------------------------*/
 /* Write Image                                                                  */
 /*------------------------------------------------------------------------------*/
-mw.b 0x82000000 0xff 0x0080000; tftp 0x82000000 bootld.img; nand erase 0x0000000 0x0080000; nand write 0x82000000 0x0000000 0x0080000
-mw.b 0x82000000 0xff 0x0400000; tftp 0x82000000 kernel.img; nand erase 0x0500000 0x0400000; nand write 0x82000000 0x0500000 0x0400000
-mw.b 0x82000000 0xff 0x0200000; tftp 0x82000000 btlogo.img; nand erase 0x0900000 0x0200000; nand write 0x82000000 0x0900000 0x0200000
-mw.b 0x82000000 0xff 0x7800000; tftp 0x82000000 rootfs.img; nand erase 0x0B00000 0x7800000; nand write 0x82000000 0x0B00000 0x7800000
-mw.b 0x82000000 0xff 0x7800000; tftp 0x82000000 rootfs.img; nand erase 0x8300000 0x7800000; nand write 0x82000000 0x8300000 0x7800000
+mw.b 0x42000000 0xff 0x0080000; tftp 0x42000000 bootld.img; nand erase 0x0000000 0x0080000; nand write 0x42000000 0x0000000 0x0080000
+mw.b 0x42000000 0xff 0x0400000; tftp 0x42000000 kernel.img; nand erase 0x0500000 0x0400000; nand write 0x42000000 0x0500000 0x0400000
+mw.b 0x42000000 0xff 0x0200000; tftp 0x42000000 btlogo.img; nand erase 0x0900000 0x0200000; nand write 0x42000000 0x0900000 0x0200000
+mw.b 0x42000000 0xff 0x7800000; tftp 0x42000000 rootfs.img; nand erase 0x0B00000 0x7800000; nand write 0x42000000 0x0B00000 0x7800000
+mw.b 0x42000000 0xff 0x7800000; tftp 0x42000000 rootfs.img; nand erase 0x8300000 0x7800000; nand write 0x42000000 0x8300000 0x7800000
 
 /*------------------------------------------------------------------------------*/
 /* Clear Environment Variables                                                  */

@@ -132,7 +132,7 @@ insert_ko()
     insmod extdrv/hi_ir.ko
     insmod extdrv/lis331dlh.ko
     insmod extdrv/tp2827.ko
-#    insmod extdrv/wdt.ko nodeamon=1
+    insmod extdrv/wdt.ko nodeamon=1
 
 #	echo "==== Your input AD type is $AD_TYPE ===="
 #	insert_ad
@@ -182,7 +182,7 @@ remove_ko()
     rmmod hi_ir
     rmmod lis331dlh
     rmmod tp2802
-#    rmmod wdt
+    rmmod wdt
 }
 
 load_usage()

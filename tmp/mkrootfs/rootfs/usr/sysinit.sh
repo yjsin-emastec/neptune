@@ -71,3 +71,4 @@ echo "application start..."
 BOOTMODE=`cat /tmp/bootmode.txt | sed 's/bootmode=//g'`
 
 cd /tmp/eastern/usr_hi3531d/usr/lib; ./mainwidget -qws -display :/dev/fb0 -style CDE &
+
