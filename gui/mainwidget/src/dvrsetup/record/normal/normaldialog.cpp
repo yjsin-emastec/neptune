@@ -485,6 +485,7 @@ void NormalDialog::onButtonFrameAll()
         updateFrameText(ch);
     }
 }
+#if 0   //yjsin getMaxFrame for emd-s10
 int NormalDialog::getMaxFrame(int chNum)
 {
     int currentMaxFrame;
@@ -517,6 +518,39 @@ int NormalDialog::getMaxFrame(int chNum)
 
     return currentMaxFrame;
 }
+#else   //yjsin getMaxFrame for emd-s20
+int NormalDialog::getMaxFrame(int chNum)
+{
+    int currentMaxFrame;
+#if( DEVINFO_VIDEONUM == 8 )
+    int arVIS[8];
+#else
+    int arVIS[devInfo.videoNum];
+#endif
+
+    ver_get_vis_list(arVIS);
+
+    if     ((arVIS[chNum] == ver_vis_hd_720_30p)    || (arVIS[chNum] == ver_vis_hd_720_60p)     ||
+            (arVIS[chNum] == ver_vis_hd_1080_30p)   || (arVIS[chNum] == ver_vis_hd_1080_60p)    ||
+            (arVIS[chNum] == ver_vis_ntsc)          || (arVIS[chNum] == ver_vis_hd_1080_i60)    )   //NTSC
+    {
+        currentMaxFrame = 30;
+    }
+    else if((arVIS[chNum] == ver_vis_hd_720_25p)    || (arVIS[chNum] == ver_vis_hd_720_50p)     ||
+            (arVIS[chNum] == ver_vis_hd_1080_25p)   || (arVIS[chNum] == ver_vis_hd_1080_50p)    ||
+            (arVIS[chNum] == ver_vis_pal)           || (arVIS[chNum] == ver_vis_hd_1080_i50)    )   //PAL
+    {
+        currentMaxFrame = 25;
+    }
+    else
+    {
+        qDebug("[ERROR]NormalDialog::getMaxFrame error");
+        currentMaxFrame = 30;
+    }
+
+    return currentMaxFrame;
+}
+#endif
 void NormalDialog::updateFrameText(int chNum)
 {
     switch( infoFrame[chNum] )
