@@ -1641,7 +1641,7 @@ void MainWidget::runSearch()
 
     appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, audioStatus-2);
 
-    searchDialog->buttonNormal->setFocus();
+    searchDialog->setFocusNormal();
     searchDialog->move((appmgr_get_mainwidget_width() - searchDialog->size().width())/2, (appmgr_get_mainwidget_height() - searchDialog->size().height()) / 2);
 
     if(searchDialog->exec())
@@ -1661,7 +1661,7 @@ void MainWidget::runSearch()
 
         appmgr_set_zoom(0, 0, 0, 0);
 
-        searchDialog->buttonNormal->setFocus();
+        searchDialog->setFocusNormal();
 
         operationMode = OPMODE_LIVE;
         SetOperationMode(operationMode);

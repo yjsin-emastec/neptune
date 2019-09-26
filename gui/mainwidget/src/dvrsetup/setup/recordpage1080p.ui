@@ -16,97 +16,101 @@
   <property name="autoFillBackground">
    <bool>true</bool>
   </property>
-  <widget class="QPushButton" name="buttonClose">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="CustomImageLabel" name="buttonNormal">
    <property name="geometry">
     <rect>
-     <x>1220</x>
-     <y>215</y>
-     <width>500</width>
-     <height>500</height>
+     <x>270</x>
+     <y>340</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
-    <string>Close</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonEvent">
+  <widget class="CustomImageLabel" name="buttonEvent">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>215</y>
-     <width>500</width>
-     <height>500</height>
+     <x>870</x>
+     <y>340</y>
+     <width>180</width>
+     <height>180</height>
     </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
-    <string>Event</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonNormal">
+  <widget class="CustomImageLabel" name="buttonClose">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>215</y>
-     <width>500</width>
-     <height>500</height>
+     <x>1470</x>
+     <y>340</y>
+     <width>180</width>
+     <height>180</height>
     </rect>
    </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
+   <property name="text">
+    <string/>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
+  </widget>
+  <widget class="QLabel" name="labelNormalText">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>540</y>
+     <width>541</width>
+     <height>161</height>
+    </rect>
    </property>
    <property name="text">
     <string>Normal</string>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelEventText">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>540</y>
+     <width>541</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Event</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelCloseText">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>540</y>
+     <width>541</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomImageLabel</class>
+   <extends>QLabel</extends>
+   <header>ui/customwidget/customimagelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -240,8 +240,8 @@
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="172"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="164"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="274"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="183"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="293"/>
         <source>1 minute</source>
         <translation>1 Minute</translation>
     </message>
@@ -256,108 +256,108 @@
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="137"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="156"/>
         <source>Insert a USB memory.</source>
         <translation>Setzen Sie einen USB-Speicher ein.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="139"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="158"/>
         <source>Please insert a USB memory.</source>
         <translation>Setzen Sie einen USB-Speicher ein.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="145"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="164"/>
         <source>Insert a USB memory and Select time.</source>
         <translation>Legen Sie USB und wählen Sie Zeit.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="147"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="166"/>
         <source>Please insert a USB memory and Select time.</source>
         <translation>Legen Sie USB und wählen Sie Zeit.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="165"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="184"/>
         <source>2 minutes</source>
         <translation>2 Minuten</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="166"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="185"/>
         <source>3 minutes</source>
         <translation>3 Minuten</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="167"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="186"/>
         <source>4 minutes</source>
         <translation>4 Minuten</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="168"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="187"/>
         <source>5 minutes</source>
         <translation>5 Minuten</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="169"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="188"/>
         <source>6 minutes</source>
         <translation>6 Minuten</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="170"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="189"/>
         <source>7 minutes</source>
         <translation>7 Minuten</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="171"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="190"/>
         <source>8 minutes</source>
         <translation>8 Minuten</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="172"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="191"/>
         <source>9 minutes</source>
         <translation>9 Minuten</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="173"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="192"/>
         <source>10 minutes</source>
         <translation>10 Minuten</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="263"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="282"/>
         <source>seconds</source>
         <translation>Sekunden</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="312"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="359"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="331"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="378"/>
         <source>CAM</source>
         <translation>KAM</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="330"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="349"/>
         <source>Not found USB memory.</source>
         <translation>Nicht gefundener USB-Speicher.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="359"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="378"/>
         <source>No Data</source>
         <translation>Keine Daten</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="367"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="386"/>
         <source>Lack of USB Capacity</source>
         <translation>Mangel an USB-Kapazität</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="382"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="401"/>
         <source>Don&apos;t remove USB memory.</source>
         <translation>USB-Speicher nicht entfernen.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="388"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="407"/>
         <source>Preparing...</source>
         <translation>Vorbereitung...</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="398"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="417"/>
         <source>Completion</source>
         <translation>Fertigstellung</translation>
     </message>
@@ -926,7 +926,7 @@ Sparen</translation>
         <translation>Formular</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="46"/>
+        <location filename="../../../setup/devicepage.ui" line="175"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
@@ -935,30 +935,30 @@ Sparen</translation>
         <translation type="obsolete">Speicher Format</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="73"/>
-        <location filename="../../../setup/devicepage.cpp" line="49"/>
+        <location filename="../../../setup/devicepage.ui" line="159"/>
+        <location filename="../../../setup/devicepage.cpp" line="77"/>
         <source>SSD Format</source>
         <translation>SSD Format</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="103"/>
+        <location filename="../../../setup/devicepage.ui" line="94"/>
         <source>Video Input</source>
         <translation>Video-Eingang</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="133"/>
+        <location filename="../../../setup/devicepage.ui" line="126"/>
         <source>Impact
 Sensitivity</source>
         <translation>Stoß
 Empfindlichkeit</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="164"/>
+        <location filename="../../../setup/devicepage.ui" line="143"/>
         <source>Buzzer Output</source>
         <translation>Summer</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="200"/>
+        <location filename="../../../setup/devicepage.ui" line="110"/>
         <source>Trigger Input</source>
         <translation>Trigger-Eingang</translation>
     </message>
@@ -989,31 +989,31 @@ DISK is not existed.
 Speicher  ist nicht vorhanden.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="48"/>
+        <location filename="../../../setup/devicepage.cpp" line="76"/>
         <source>HDD Format</source>
         <translation>HDD Format</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="197"/>
+        <location filename="../../../setup/devicepage.cpp" line="259"/>
         <source>HDD FORMAT</source>
         <translation>HDD Format</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="197"/>
+        <location filename="../../../setup/devicepage.cpp" line="259"/>
         <source>Are you sure to format HDD?
 System will restart after format.</source>
         <translation>Sind Sie sicher, HDD zu formatieren?
 Das System startet nach dem Formatieren neu.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="198"/>
+        <location filename="../../../setup/devicepage.cpp" line="260"/>
         <source>Are you sure to format SSD?
 System will restart after format.</source>
         <translation>Sind Sie sicher, SSD zu formatieren?
 Das System startet nach dem Formatieren neu.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="219"/>
+        <location filename="../../../setup/devicepage.cpp" line="281"/>
         <source>SSD does not exist.</source>
         <translation>Speicher  ist nicht vorhanden.</translation>
     </message>
@@ -1032,8 +1032,8 @@ Das System startet nach dem Formatieren neu.
 </translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="198"/>
-        <location filename="../../../setup/devicepage.cpp" line="219"/>
+        <location filename="../../../setup/devicepage.cpp" line="260"/>
+        <location filename="../../../setup/devicepage.cpp" line="281"/>
         <source>SSD FORMAT</source>
         <translation>SSD Format</translation>
     </message>
@@ -1076,34 +1076,34 @@ Speicher  ist nicht vorhanden.</translation>
         <translation>Formular</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="46"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="188"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="73"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="172"/>
         <source>SSD Format</source>
         <translation>SSD Format</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="103"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="107"/>
         <source>Video Input</source>
         <translation>Video-Eingang</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="133"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="139"/>
         <source>Impact
 Sensitivity</source>
         <translation>Stoß
 Empfindlichkeit</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="164"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="156"/>
         <source>Buzzer Output</source>
         <translation>Summer</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="200"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="123"/>
         <source>Trigger Input</source>
         <translation>Trigger-Eingang</translation>
     </message>
@@ -1488,38 +1488,38 @@ Empfindlichkeit</translation>
         <translation>Bilden</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.ui" line="49"/>
+        <location filename="../../../setup/displaypage.ui" line="190"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.ui" line="76"/>
+        <location filename="../../../setup/displaypage.ui" line="126"/>
         <source>Camera Name</source>
         <translation>Kamera Name</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.ui" line="112"/>
-        <location filename="../../../setup/displaypage.ui" line="196"/>
+        <location filename="../../../setup/displaypage.ui" line="142"/>
+        <location filename="../../../setup/displaypage.ui" line="174"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.ui" line="139"/>
+        <location filename="../../../setup/displaypage.ui" line="45"/>
         <source>Video Output</source>
         <translation>Video Ausgang</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.ui" line="166"/>
+        <location filename="../../../setup/displaypage.ui" line="158"/>
         <source>OSD</source>
         <translation>OSD</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.cpp" line="67"/>
+        <location filename="../../../setup/displaypage.cpp" line="131"/>
         <source>RESOLUTION CHANGE</source>
         <translation>AUFLÖSUNG ÄNDERUNG</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.cpp" line="68"/>
+        <location filename="../../../setup/displaypage.cpp" line="132"/>
         <source>Are you sure to change the resolution?
 If yes, the system will restart.</source>
         <translation>Möchten Sie die Auflösung ändern?
@@ -1559,28 +1559,28 @@ Wenn ja, startet das System neu.</translation>
         <translation>Bilden</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage1080p.ui" line="49"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="190"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage1080p.ui" line="76"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="126"/>
         <source>Camera Name</source>
         <translation>Kamera Name</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage1080p.ui" line="112"/>
-        <location filename="../../../setup/displaypage1080p.ui" line="196"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="142"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="174"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage1080p.ui" line="139"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="110"/>
         <source>Video Output</source>
         <translation>Video Ausgang</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage1080p.ui" line="166"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="158"/>
         <source>OSD</source>
         <translation>OSD</translation>
     </message>
@@ -1801,15 +1801,15 @@ Time: 15/30sec</source>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="63"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="565"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="703"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="569"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="707"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="67"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="521"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="704"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="525"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="708"/>
         <source>Desc</source>
         <translation>Aufstei</translation>
     </message>
@@ -1857,99 +1857,99 @@ Time: 15/30sec</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="242"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="321"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="246"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="325"/>
         <source>IMPACT</source>
         <translation>STOß</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="243"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="322"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="247"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="326"/>
         <source>TRIGGER1</source>
         <translation>TRIGGER1</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="244"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="323"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="248"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="327"/>
         <source>TRIGGER2</source>
         <translation>TRIGGER2</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="245"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="324"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="249"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="328"/>
         <source>TRIGGER3</source>
         <translation>TRIGGER3</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="246"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="325"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="250"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="329"/>
         <source>TRIGGER4</source>
         <translation>TRIGGER4</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="247"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="326"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="251"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="330"/>
         <source>PARKING</source>
         <translation>PARKEN</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="248"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="327"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="252"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="331"/>
         <source>MOTION</source>
         <translation>BEWEGUNG</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="254"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="333"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="258"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="337"/>
         <source>30 %1</source>
         <translation>30 %1</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="254"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="255"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="333"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="334"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="258"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="259"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="337"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="338"/>
         <source>SEC</source>
         <translation>SEK</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="255"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="334"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="259"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="338"/>
         <source>60 %1</source>
         <translation>60 %1</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="295"/>
         <location filename="../../../../search/eventlogpage.cpp" line="299"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="350"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="699"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="303"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="354"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="703"/>
         <source>(%1/%2)</source>
         <translation>(%1/%2)</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="303"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="696"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="307"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="700"/>
         <source>%1%2</source>
         <translation>%1%2</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="303"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="696"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="307"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="700"/>
         <source>Log:   </source>
         <translation>Log:   </translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="522"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="526"/>
         <source>Asce</source>
         <translation>Abstei</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="566"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="570"/>
         <source>Impact</source>
         <translation>Stoß</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="567"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="571"/>
         <source>Trigger</source>
         <translation>Trigger</translation>
     </message>
@@ -2812,54 +2812,58 @@ Bitte versuche es erneut.</translation>
 <context>
     <name>MainMenu</name>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="46"/>
+        <location filename="../../../../main/mainMenu.ui" line="69"/>
         <source>Setup</source>
         <translation>Setup</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="70"/>
+        <location filename="../../../../main/mainMenu.ui" line="245"/>
         <source>Search</source>
         <translation>Suche</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="109"/>
+        <location filename="../../../../main/mainMenu.ui" line="155"/>
         <source>Audio
 Mute/1/2/3/4</source>
         <translation>Audio
 Stumm/1/2/3/4</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="134"/>
+        <location filename="../../../../main/mainMenu.ui" line="136"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="158"/>
+        <location filename="../../../../main/mainMenu.ui" line="191"/>
         <source>Shutdown</source>
         <translation>Beendigung</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="183"/>
+        <location filename="../../../../main/mainMenu.ui" line="210"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="143"/>
-        <location filename="../../../../main/mainMenu.cpp" line="183"/>
-        <location filename="../../../../main/mainMenu.cpp" line="209"/>
+        <location filename="../../../../main/mainMenu.cpp" line="204"/>
+        <location filename="../../../../main/mainMenu.cpp" line="250"/>
+        <location filename="../../../../main/mainMenu.cpp" line="284"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="137"/>
-        <location filename="../../../../main/mainMenu.cpp" line="150"/>
-        <location filename="../../../../main/mainMenu.cpp" line="173"/>
-        <location filename="../../../../main/mainMenu.cpp" line="189"/>
-        <location filename="../../../../main/mainMenu.cpp" line="200"/>
-        <location filename="../../../../main/mainMenu.cpp" line="214"/>
+        <location filename="../../../../main/mainMenu.cpp" line="196"/>
+        <location filename="../../../../main/mainMenu.cpp" line="213"/>
+        <location filename="../../../../main/mainMenu.cpp" line="238"/>
+        <location filename="../../../../main/mainMenu.cpp" line="258"/>
+        <location filename="../../../../main/mainMenu.cpp" line="273"/>
+        <location filename="../../../../main/mainMenu.cpp" line="291"/>
+        <source>Mute</source>
+        <translation>Stumm</translation>
+    </message>
+    <message>
         <source>Audio
 Mute</source>
-        <translation>Audio
+        <translation type="obsolete">Audio
 Stumm</translation>
     </message>
     <message>
@@ -2890,34 +2894,34 @@ Stumm</translation>
 <context>
     <name>MainMenu1080p</name>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="67"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="176"/>
         <source>Audio
 Mute/1/2/3/4</source>
         <translation>Audio
 Stumm/1/2/3/4</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="98"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="160"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="128"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="193"/>
         <source>Shutdown</source>
         <translation>Beendigung</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="158"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="209"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="188"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="144"/>
         <source>Search</source>
         <translation>Suche</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="218"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="128"/>
         <source>Setup</source>
         <translation>Setup</translation>
     </message>
@@ -3481,21 +3485,21 @@ An/Aus</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="379"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="616"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="650"/>
         <source>Low</source>
         <translation>Niedrig</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="380"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="617"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="651"/>
         <source>Middle</source>
         <translation>Mitte</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="381"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="382"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="618"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="619"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="652"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="653"/>
         <source>High</source>
         <translation>Hoch</translation>
     </message>
@@ -3515,8 +3519,8 @@ An/Aus</translation>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="386"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="392"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="662"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="707"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="696"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="741"/>
         <source>Off</source>
         <translation>Aus</translation>
     </message>
@@ -3525,10 +3529,10 @@ An/Aus</translation>
         <location filename="../../../record/normal/normaldialog.cpp" line="388"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="393"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="394"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="663"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="664"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="708"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="709"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="697"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="698"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="742"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="743"/>
         <source>On</source>
         <translation>An</translation>
     </message>
@@ -4322,22 +4326,22 @@ An/Aus</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="739"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="749"/>
         <source>EVENT TIME</source>
         <translation>EVENT ZEIT</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="741"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="751"/>
         <source>LOG TYPE</source>
         <translation>LOG TYP</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="743"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="753"/>
         <source>DURATION</source>
         <translation>DAUER</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="745"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="755"/>
         <source>NUM</source>
         <translation>NUM</translation>
     </message>
@@ -4346,12 +4350,12 @@ An/Aus</translation>
         <translation type="obsolete">INHALT</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="187"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="196"/>
         <source>TIME</source>
         <translation>ZEIT</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="189"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="198"/>
         <source>SYSTEM LOG LIST</source>
         <translation>SYSTEM LOG LISTE</translation>
     </message>
@@ -4439,17 +4443,17 @@ An/Aus</translation>
         <translation>Bilden</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage.ui" line="46"/>
+        <location filename="../../../setup/recordpage.ui" line="100"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage.ui" line="79"/>
+        <location filename="../../../setup/recordpage.ui" line="84"/>
         <source>Event</source>
         <translation>Event</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage.ui" line="106"/>
+        <location filename="../../../setup/recordpage.ui" line="42"/>
         <source>Normal</source>
         <translation>Normal</translation>
     </message>
@@ -4462,17 +4466,17 @@ An/Aus</translation>
         <translation>Bilden</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage1080p.ui" line="46"/>
+        <location filename="../../../setup/recordpage1080p.ui" line="100"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage1080p.ui" line="79"/>
+        <location filename="../../../setup/recordpage1080p.ui" line="84"/>
         <source>Event</source>
         <translation>Event</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage1080p.ui" line="106"/>
+        <location filename="../../../setup/recordpage1080p.ui" line="68"/>
         <source>Normal</source>
         <translation>Normal</translation>
     </message>
@@ -4595,27 +4599,27 @@ und stellen Sie die Zeit ein.</translation>
 <context>
     <name>SearchDialog</name>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="67"/>
+        <location filename="../../../../search/searchdialog.ui" line="65"/>
         <source>Event</source>
         <translation>Event</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="95"/>
+        <location filename="../../../../search/searchdialog.ui" line="98"/>
         <source>Normal</source>
         <translation>Normal</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="125"/>
+        <location filename="../../../../search/searchdialog.ui" line="126"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="146"/>
+        <location filename="../../../../search/searchdialog.ui" line="144"/>
         <source>Search</source>
         <translation>Suche</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="179"/>
+        <location filename="../../../../search/searchdialog.ui" line="175"/>
         <source>System Log</source>
         <translation>System Log</translation>
     </message>
@@ -4631,27 +4635,27 @@ und stellen Sie die Zeit ein.</translation>
 <context>
     <name>SearchDialog1080p</name>
     <message>
-        <location filename="../../../../search/searchdialog1080p.ui" line="67"/>
+        <location filename="../../../../search/searchdialog1080p.ui" line="65"/>
         <source>Event</source>
         <translation>Event</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog1080p.ui" line="95"/>
+        <location filename="../../../../search/searchdialog1080p.ui" line="93"/>
         <source>Normal</source>
         <translation>Normal</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog1080p.ui" line="125"/>
+        <location filename="../../../../search/searchdialog1080p.ui" line="121"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog1080p.ui" line="146"/>
+        <location filename="../../../../search/searchdialog1080p.ui" line="139"/>
         <source>Search</source>
         <translation>Suche</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog1080p.ui" line="179"/>
+        <location filename="../../../../search/searchdialog1080p.ui" line="170"/>
         <source>System Log</source>
         <translation>System Log</translation>
     </message>
@@ -4849,204 +4853,204 @@ An</translation>
         <translation>Widerruf</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="84"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="457"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="83"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="455"/>
         <source>Time Format
 12 Hour</source>
         <translation>Zeit Format
 12 Stunden</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="85"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="484"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="84"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="482"/>
         <source>Time Format
 24 Hour</source>
         <translation>Zeit Format
 24 Stunden</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="95"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="492"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="94"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="490"/>
         <source>GPS Synchronization
 On</source>
         <translation>GPS-Synchronisation
 An</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="90"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="497"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="89"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="495"/>
         <source>GPS Synchronization
 Off</source>
         <translation>GPS-Synchronisation
 Aus</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="99"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="98"/>
         <source>TimeZone [UTC -12:00 Eniwetok/Kwajalein]</source>
         <translation>ZeitZone [UTC -12:00 Eniwetok/Kwajalein]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="100"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="99"/>
         <source>TimeZone [UTC -11:00 Niue]</source>
         <translation>ZeitZone [UTC -11:00 Niue]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="101"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="100"/>
         <source>TimeZone [UTC -10:00 Hawaii]</source>
         <translation>ZeitZone [UTC -10:00 Hawaii]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="102"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="101"/>
         <source>TimeZone [UTC -09:00 Alaska]</source>
         <translation>ZeitZone [UTC -09:00 Alaska]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="103"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="102"/>
         <source>TimeZone [UTC -08:00 Los Angeles/Vancouver]</source>
         <translation>ZeitZone [UTC -08:00 Los Angeles/Vancouver]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="104"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="103"/>
         <source>TimeZone [UTC -07:00 Arizona]</source>
         <translation>ZeitZone [UTC -07:00 Arizona]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="105"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="104"/>
         <source>TimeZone [UTC -06:00 Chicago/Houston/Mexico City]</source>
         <translation>ZeitZone [UTC -06:00 Chicago/Houston/Mexiko-Stadt]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="106"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="105"/>
         <source>TimeZone [UTC -05:00 Boston/Montreal/New York]</source>
         <translation>ZeitZone [UTC -05:00 Boston/Montreal/New York]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="107"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="106"/>
         <source>TimeZone [UTC -04:30 Caracas]</source>
         <translation>ZeitZone [UTC -04:30 Caracas]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="108"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="107"/>
         <source>TimeZone [UTC -04:00 Santiago]</source>
         <translation>ZeitZone [UTC -04:00 Santiago]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="109"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="108"/>
         <source>TimeZone [UTC -03:30 Newfoundland]</source>
         <translation>ZeitZone [UTC -03:30 Neufundland]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="110"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="109"/>
         <source>TimeZone [UTC -03:00 Buenos Aires/Rio de Janero]</source>
         <translation>ZeitZone [UTC -03:00 Buenos Aires/Rio de Janeiro]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="111"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="110"/>
         <source>TimeZone [UTC -02:00 Fernando de Noronha]</source>
         <translation>ZeitZone [UTC -02:00 Fernando de Noronha]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="112"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="111"/>
         <source>TimeZone [UTC -01:00 Azores]</source>
         <translation>ZeitZone [UTC -01:00 Azoren]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="113"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="112"/>
         <source>TimeZone [UTC +00:00 Lisbon/London/Monaco]</source>
         <translation>ZeitZone [UTC +00:00 Lissabon/London/Monaco]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="114"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="113"/>
         <source>TimeZone [UTC +01:00 Berlin/Paris/Rome]</source>
         <translation>ZeitZone [UTC +01:00 Berlin/Paris/Rom]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="115"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="114"/>
         <source>TimeZone [UTC +02:00 Athens/Cape Town/Istanbul]</source>
         <translation>ZeitZone [UTC +02:00 Athen/Kapstadt/Istanbul]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="116"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="115"/>
         <source>TimeZone [UTC +03:00 Moscow/Baghdad/Kuwait]</source>
         <translation>ZeitZone [UTC +03:00 Moskau/Bagdad/Kuwait]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="117"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="116"/>
         <source>TimeZone [UTC +03:30 Teheran]</source>
         <translation>ZeitZone [UTC +03:30 Teheran]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="118"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="117"/>
         <source>TimeZone [UTC +04:00 Abu Dhabi/Muscat]</source>
         <translation>ZeitZone [UTC +04:00 Abu Dhabi/Muscat]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="119"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="118"/>
         <source>TimeZone [UTC +04:30 Kabul]</source>
         <translation>ZeitZone [UTC +04:30 Kabul]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="120"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="119"/>
         <source>TimeZone [UTC +05:00 Islamabad/Karachi]</source>
         <translation>ZeitZone [UTC +05:00 Islamabad/Karatschi]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="121"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="120"/>
         <source>TimeZone [UTC +05:30 Chennai]</source>
         <translation>ZeitZone [UTC +05:30 Chennai]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="122"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="121"/>
         <source>TimeZone [UTC +05:45 Kathmandu]</source>
         <translation>ZeitZone [UTC +05:45 Kathmandu]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="123"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="122"/>
         <source>TimeZone [UTC +06:00 Astana/Dhaka/Almaty]</source>
         <translation>ZeitZone [UTC +06:00 Astana/Dhaka/Almaty]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="124"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="123"/>
         <source>TimeZone [UTC +06:30 Rangoon]</source>
         <translation>ZeitZone [UTC +06:30 Rangoon]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="125"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="124"/>
         <source>TimeZone [UTC +07:00 Bangkok/Hanoi/Jakarta]</source>
         <translation>ZeitZone [UTC +07:00 Bangkok/Hanoi/Jakarta]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="126"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="125"/>
         <source>TimeZone [UTC +08:00 Beijing/Singapore/Taipei]</source>
         <translation>ZeitZone [UTC +08:00 Peking/Singapur/Taipei]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="127"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="126"/>
         <source>TimeZone [UTC +09:00 Seoul/Tokyo]</source>
         <translation>ZeitZone [UTC +09:00 Seoul/Tokio]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="128"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="127"/>
         <source>TimeZone [UTC +09:30 Darwin]</source>
         <translation>ZeitZone [UTC +09:30 Darwin]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="129"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="128"/>
         <source>TimeZone [UTC +10:00 Guam/Canberra/Sydney]</source>
         <translation>ZeitZone [UTC +10:00 Guam/Canberra/Sydney]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="130"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="129"/>
         <source>TimeZone [UTC +11:00 Magadan/Solomon]</source>
         <translation>ZeitZone [UTC +11:00 Magadan/Solomon]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="131"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="130"/>
         <source>TimeZone [UTC +12:00 Fiji/Marshall]</source>
         <translation>ZeitZone [UTC +12:00 Fidschi/Marshall]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="132"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="131"/>
         <source>TimeZone [UTC +13:00 Nuku&apos;alofa]</source>
         <translation>ZeitZone [UTC +13:00 Nuku&apos;alofa]</translation>
     </message>
@@ -5130,7 +5134,7 @@ some data will be erased from storage.
 Einige Daten werden aus dem Speicher gelöscht.</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="423"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="421"/>
         <source>SET DATE &amp; TIME</source>
         <translation>EINSTELLUNG DATUM &amp; ZEIT</translation>
     </message>
@@ -5264,12 +5268,12 @@ An</translation>
         <translation>Statusleiste Dialog</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.ui" line="83"/>
+        <location filename="../../../../main/statusbardialog.ui" line="80"/>
         <source>22/08/2016 06:14:10</source>
         <translation>22/08/2016 06:14:10</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.ui" line="110"/>
+        <location filename="../../../../main/statusbardialog.ui" line="107"/>
         <location filename="../../../../main/statusbardialog.cpp" line="172"/>
         <location filename="../../../../main/statusbardialog.cpp" line="179"/>
         <source>NO SSD</source>
@@ -5308,19 +5312,19 @@ An</translation>
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="259"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="268"/>
         <source>
 Descending</source>
         <translation>
 Absteigend</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="422"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="431"/>
         <source>Ascending</source>
         <translation>Aufsteigend</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="426"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="435"/>
         <source>Descending</source>
         <translation>Absteigend</translation>
     </message>
@@ -5442,53 +5446,52 @@ Ordnen</translation>
         <translation>Formular</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="46"/>
+        <location filename="../../../setup/systempage.ui" line="128"/>
         <source>License
 Plate</source>
         <translation>Nummernschild</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="77"/>
+        <location filename="../../../setup/systempage.ui" line="244"/>
         <source>Information</source>
         <translation>Information</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="107"/>
+        <location filename="../../../setup/systempage.ui" line="358"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="143"/>
+        <location filename="../../../setup/systempage.ui" line="320"/>
         <source>Language</source>
         <translation>Sprache</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="173"/>
+        <location filename="../../../setup/systempage.ui" line="205"/>
         <source>Factory
 Default</source>
         <translation>Werkseinstellung</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="204"/>
+        <location filename="../../../setup/systempage.ui" line="89"/>
         <source>Firmware
 Upgrade</source>
-        <translation>Firmware
-Aktualisierung</translation>
+        <translation>Aktualisierung</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="235"/>
+        <location filename="../../../setup/systempage.ui" line="282"/>
         <source>Config</source>
         <translation>Konfig</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="271"/>
+        <location filename="../../../setup/systempage.ui" line="167"/>
         <source>Security</source>
         <translation>Sicherheit</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="301"/>
+        <location filename="../../../setup/systempage.ui" line="51"/>
         <source>Date &amp;&amp; Time</source>
-        <translation>Datum &amp;&amp; Zeit</translation>
+        <translation>Datum &amp; Zeit</translation>
     </message>
     <message>
         <source>SET DATE &amp; TIME</source>
@@ -5507,24 +5510,24 @@ Willst Sie die Zeit ändern?
 Wenn ja, wird das System neu gestartet.</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="132"/>
+        <location filename="../../../setup/systempage.cpp" line="199"/>
         <source>CHANGE DATE &amp; TIME</source>
         <translation>Ändern Datum und Zeit</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="133"/>
+        <location filename="../../../setup/systempage.cpp" line="200"/>
         <source>Do you want to change time?
 If yes, system will restart.</source>
         <translation>Willst Sie die Zeit ändern?
 Wenn ja, wird das System neu gestartet.</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="235"/>
+        <location filename="../../../setup/systempage.cpp" line="302"/>
         <source>FACTORY DEFAULT</source>
         <translation>Werkseinstellung</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="235"/>
+        <location filename="../../../setup/systempage.cpp" line="302"/>
         <source>Do you want to set factory default?
 If yes, system will restart.</source>
         <translation>Willst Sie die Werkseinstellung festlegen?
@@ -5566,53 +5569,52 @@ Wenn ja, wird das System neu gestartet.</translation>
         <translation>Formular</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="46"/>
+        <location filename="../../../setup/systempage1080p.ui" line="215"/>
         <source>License
 Plate</source>
         <translation>Nummernschild</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="77"/>
+        <location filename="../../../setup/systempage1080p.ui" line="274"/>
         <source>Information</source>
         <translation>Information</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="107"/>
+        <location filename="../../../setup/systempage1080p.ui" line="331"/>
         <source>Close</source>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="143"/>
+        <location filename="../../../setup/systempage1080p.ui" line="312"/>
         <source>Language</source>
         <translation>Sprache</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="173"/>
+        <location filename="../../../setup/systempage1080p.ui" line="254"/>
         <source>Factory
 Default</source>
         <translation>Werkseinstellung</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="204"/>
+        <location filename="../../../setup/systempage1080p.ui" line="195"/>
         <source>Firmware
 Upgrade</source>
-        <translation>Firmware
-Aktualisierung</translation>
+        <translation>Aktualisierung</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="235"/>
+        <location filename="../../../setup/systempage1080p.ui" line="293"/>
         <source>Config</source>
         <translation>Konfig</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="271"/>
+        <location filename="../../../setup/systempage1080p.ui" line="235"/>
         <source>Security</source>
         <translation>Sicherheit</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="301"/>
+        <location filename="../../../setup/systempage1080p.ui" line="32"/>
         <source>Date &amp;&amp; Time</source>
-        <translation>Datum &amp;&amp; Zeit</translation>
+        <translation>Datum &amp; Zeit</translation>
     </message>
 </context>
 <context>
@@ -6018,8 +6020,8 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
         <translation type="obsolete">Trigger4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="929"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1040"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="945"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1095"/>
         <source>PRIORITY REDUNDANT</source>
         <translation>PRIORITÄT FEHLER</translation>
     </message>
@@ -6054,14 +6056,14 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
         <translation>Sek</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="946"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1096"/>
         <source>Priority is redundant.</source>
         <translation>Die Prioritäten wurden dupliziert.</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="946"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1096"/>
         <source>Please check priority.</source>
         <translation>Bitte überprüfen Sie die Priorität.</translation>
     </message>

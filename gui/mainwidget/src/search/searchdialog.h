@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "ui_searchdialog.h"
 #include "ui_searchdialog1080p.h"
+#include "ui/customwidget/customimagelabel.h"
 
 class QStackedLayout;
 class CalendarPage;
@@ -20,11 +21,20 @@ public:
     int pbChBit, pbSplit, pbType, recType;
 
     QFrame *frame;
-    QPushButton *buttonClose;
-    QPushButton *buttonEvent;
-    QPushButton *buttonLog;
-    QPushButton *buttonNormal;
-    QLabel *labelSearch;
+    QFrame *frameTitle;
+    QFrame *frameContents;
+
+    CustomImageLabel *buttonTitle;
+    CustomImageLabel *buttonNormal;
+    CustomImageLabel *buttonEvent;
+    CustomImageLabel *buttonLog;
+    CustomImageLabel *buttonClose;
+
+    QLabel *labelTitleText;
+    QLabel *labelNormalText;
+    QLabel *labelEventText;
+    QLabel *labelLogText;
+    QLabel *labelCloseText;
 
 signals:
 	void searchDataRead();
@@ -41,6 +51,11 @@ public slots:
 	void onSystemLogData   (void);
 	void onSystemLogBackup (void);
 
+    void setFocusNormal(void);
+    void setFocusEvent(void);
+    void setFocusLog(void);
+    void setFocusClose(void);
+
 protected:
     void keyPressEvent(QKeyEvent *event);
 
@@ -55,6 +70,11 @@ private:
     CalendarPage    *calendarPage;
     EventLogPage    *eventPage;
     SystemLogPage   *systemLogPage;
+
+    QPixmap iconImageNormal[5];
+    QPixmap iconImageFocus[5];
+
+    void changeFocus(int n);
 };
 
 #endif // SEARCHDIALOG_H

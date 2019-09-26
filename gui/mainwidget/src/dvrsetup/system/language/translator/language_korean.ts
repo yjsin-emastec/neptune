@@ -256,8 +256,8 @@
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="172"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="164"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="274"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="183"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="293"/>
         <source>1 minute</source>
         <translation>1 분</translation>
     </message>
@@ -280,88 +280,88 @@
         <translation type="obsolete">USB메모리를 삽입하고 시간을 선택하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="137"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="156"/>
         <source>Insert a USB memory.</source>
         <translation>USB 메모리를 삽입하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="139"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="158"/>
         <source>Please insert a USB memory.</source>
         <translation>USB 메모리를 삽입하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="145"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="164"/>
         <source>Insert a USB memory and Select time.</source>
         <translation>USB 삽입 후 시간을 선택하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="147"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="166"/>
         <source>Please insert a USB memory and Select time.</source>
         <translation>USB 삽입 후 시간을 선택하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="165"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="184"/>
         <source>2 minutes</source>
         <translation>2 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="166"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="185"/>
         <source>3 minutes</source>
         <translation>3 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="167"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="186"/>
         <source>4 minutes</source>
         <translation>4 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="168"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="187"/>
         <source>5 minutes</source>
         <translation>5 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="169"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="188"/>
         <source>6 minutes</source>
         <translation>6 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="170"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="189"/>
         <source>7 minutes</source>
         <translation>7 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="171"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="190"/>
         <source>8 minutes</source>
         <translation>8 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="172"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="191"/>
         <source>9 minutes</source>
         <translation>9 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="173"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="192"/>
         <source>10 minutes</source>
         <translation>10 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="263"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="282"/>
         <source>seconds</source>
         <translation>초</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="312"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="359"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="331"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="378"/>
         <source>CAM</source>
         <translation>채널</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="330"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="349"/>
         <source>Not found USB memory.</source>
         <translation>USB 메모리를 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="382"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="401"/>
         <source>Don&apos;t remove USB memory.</source>
         <translation>USB 메모리를 제거하지 마십시오.</translation>
     </message>
@@ -370,12 +370,12 @@
         <translation type="obsolete">USB 메모리를 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="359"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="378"/>
         <source>No Data</source>
         <translation>데이터 없음</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="367"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="386"/>
         <source>Lack of USB Capacity</source>
         <translation>USB 용량 부족</translation>
     </message>
@@ -384,12 +384,12 @@
         <translation type="obsolete">USB메모리를 제거하지 마십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="388"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="407"/>
         <source>Preparing...</source>
         <translation>준비 중입니다...</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="398"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="417"/>
         <source>Completion</source>
         <translation>완료</translation>
     </message>
@@ -990,7 +990,7 @@ System will restart.        </source>
         <translation>서식</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="46"/>
+        <location filename="../../../setup/devicepage.ui" line="175"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
@@ -999,29 +999,29 @@ System will restart.        </source>
         <translation type="obsolete">저장장치 포맷</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="73"/>
-        <location filename="../../../setup/devicepage.cpp" line="49"/>
+        <location filename="../../../setup/devicepage.ui" line="159"/>
+        <location filename="../../../setup/devicepage.cpp" line="77"/>
         <source>SSD Format</source>
         <translation>SSD 포맷</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="103"/>
+        <location filename="../../../setup/devicepage.ui" line="94"/>
         <source>Video Input</source>
         <translation>영상 입력</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="133"/>
+        <location filename="../../../setup/devicepage.ui" line="126"/>
         <source>Impact
 Sensitivity</source>
         <translation>충격 감도</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="164"/>
+        <location filename="../../../setup/devicepage.ui" line="143"/>
         <source>Buzzer Output</source>
         <translation>버저 알림</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.ui" line="200"/>
+        <location filename="../../../setup/devicepage.ui" line="110"/>
         <source>Trigger Input</source>
         <translation>트리거 입력</translation>
     </message>
@@ -1066,31 +1066,31 @@ DISK is not existed.
 저장장치가 없습니다.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="48"/>
+        <location filename="../../../setup/devicepage.cpp" line="76"/>
         <source>HDD Format</source>
         <translation>HDD 포맷</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="197"/>
+        <location filename="../../../setup/devicepage.cpp" line="259"/>
         <source>HDD FORMAT</source>
         <translation>HDD 포맷</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="197"/>
+        <location filename="../../../setup/devicepage.cpp" line="259"/>
         <source>Are you sure to format HDD?
 System will restart after format.</source>
         <translation>HDD를 포맷 하시겠습니까?
 포맷 후 시스템을 재시작합니다.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="198"/>
+        <location filename="../../../setup/devicepage.cpp" line="260"/>
         <source>Are you sure to format SSD?
 System will restart after format.</source>
         <translation>SSD를 포맷 하시겠습니까?
 포맷 후 시스템을 재시작합니다.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="219"/>
+        <location filename="../../../setup/devicepage.cpp" line="281"/>
         <source>SSD does not exist.</source>
         <translation>SSD가 없습니다.</translation>
     </message>
@@ -1108,8 +1108,8 @@ HDD를 포맷 하시겠습니까?
 포맷 후 시스템을 재시작합니다.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="198"/>
-        <location filename="../../../setup/devicepage.cpp" line="219"/>
+        <location filename="../../../setup/devicepage.cpp" line="260"/>
+        <location filename="../../../setup/devicepage.cpp" line="281"/>
         <source>SSD FORMAT</source>
         <translation>SSD 포맷</translation>
     </message>
@@ -1169,33 +1169,33 @@ SSD is not existed.
         <translation>서식</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="46"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="188"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="73"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="172"/>
         <source>SSD Format</source>
         <translation>SSD 포맷</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="103"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="107"/>
         <source>Video Input</source>
         <translation>영상 입력</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="133"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="139"/>
         <source>Impact
 Sensitivity</source>
         <translation>충격 감도</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="164"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="156"/>
         <source>Buzzer Output</source>
         <translation>버저 알림</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage1080p.ui" line="200"/>
+        <location filename="../../../setup/devicepage1080p.ui" line="123"/>
         <source>Trigger Input</source>
         <translation>트리거 입력</translation>
     </message>
@@ -1585,39 +1585,39 @@ Sensitivity</source>
         <translation>서식</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.ui" line="49"/>
+        <location filename="../../../setup/displaypage.ui" line="190"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.ui" line="76"/>
+        <location filename="../../../setup/displaypage.ui" line="126"/>
         <source>Camera Name</source>
         <translation>카메라 이름</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.ui" line="112"/>
-        <location filename="../../../setup/displaypage.ui" line="196"/>
+        <location filename="../../../setup/displaypage.ui" line="142"/>
+        <location filename="../../../setup/displaypage.ui" line="174"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.ui" line="139"/>
+        <location filename="../../../setup/displaypage.ui" line="45"/>
         <source>Video Output</source>
         <translation>영상 출력</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.ui" line="166"/>
+        <location filename="../../../setup/displaypage.ui" line="158"/>
         <source>OSD</source>
         <translation>OSD</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.cpp" line="67"/>
+        <location filename="../../../setup/displaypage.cpp" line="131"/>
         <source>RESOLUTION CHANGE</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>해상도 변경</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage.cpp" line="68"/>
+        <location filename="../../../setup/displaypage.cpp" line="132"/>
         <source>Are you sure to change the resolution?
 If yes, the system will restart.</source>
         <translation>해상도를 변경하시겠습니까?
@@ -1658,28 +1658,28 @@ HDMI 해상도를 변경하시겠습니까?
         <translation>서식</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage1080p.ui" line="49"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="190"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage1080p.ui" line="76"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="126"/>
         <source>Camera Name</source>
         <translation>카메라 이름</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage1080p.ui" line="112"/>
-        <location filename="../../../setup/displaypage1080p.ui" line="196"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="142"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="174"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage1080p.ui" line="139"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="110"/>
         <source>Video Output</source>
         <translation>영상 출력</translation>
     </message>
     <message>
-        <location filename="../../../setup/displaypage1080p.ui" line="166"/>
+        <location filename="../../../setup/displaypage1080p.ui" line="158"/>
         <source>OSD</source>
         <translation>OSD</translation>
     </message>
@@ -1919,15 +1919,15 @@ Time: 15/30sec</source>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="63"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="565"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="703"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="569"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="707"/>
         <source>All</source>
         <translation>모두</translation>
     </message>
     <message>
         <location filename="../../../../search/eventlogpage.cpp" line="67"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="521"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="704"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="525"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="708"/>
         <source>Desc</source>
         <translation>내림차순</translation>
     </message>
@@ -1975,93 +1975,93 @@ Time: 15/30sec</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="242"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="321"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="246"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="325"/>
         <source>IMPACT</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>충격</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="243"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="322"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="247"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="326"/>
         <source>TRIGGER1</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>트리거1</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="244"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="323"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="248"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="327"/>
         <source>TRIGGER2</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>트리거2</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="245"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="324"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="249"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="328"/>
         <source>TRIGGER3</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>트리거3</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="246"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="325"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="250"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="329"/>
         <source>TRIGGER4</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>트리거4</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="247"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="326"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="251"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="330"/>
         <source>PARKING</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>주차</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="248"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="327"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="252"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="331"/>
         <source>MOTION</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>움직임</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="254"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="333"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="258"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="337"/>
         <source>30 %1</source>
         <translation>30 %1</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="254"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="255"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="333"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="334"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="258"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="259"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="337"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="338"/>
         <source>SEC</source>
         <translation>초</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="255"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="334"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="259"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="338"/>
         <source>60 %1</source>
         <translation>60 %1</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="295"/>
         <location filename="../../../../search/eventlogpage.cpp" line="299"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="350"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="699"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="303"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="354"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="703"/>
         <source>(%1/%2)</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>(%1/%2)</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="303"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="696"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="307"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="700"/>
         <source>%1%2</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>%1%2</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="303"/>
-        <location filename="../../../../search/eventlogpage.cpp" line="696"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="307"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="700"/>
         <source>Log:   </source>
         <translation>로그:  </translation>
     </message>
@@ -2074,17 +2074,17 @@ Time: 15/30sec</source>
         <translation type="obsolete">로그: </translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="522"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="526"/>
         <source>Asce</source>
         <translation>오름차순</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="566"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="570"/>
         <source>Impact</source>
         <translation>충격</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="567"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="571"/>
         <source>Trigger</source>
         <translation>트리거</translation>
     </message>
@@ -2982,55 +2982,59 @@ Please try again.</source>
 <context>
     <name>MainMenu</name>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="46"/>
+        <location filename="../../../../main/mainMenu.ui" line="69"/>
         <source>Setup</source>
         <translation>설정</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="70"/>
+        <location filename="../../../../main/mainMenu.ui" line="245"/>
         <source>Search</source>
         <translation>검색</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="109"/>
+        <location filename="../../../../main/mainMenu.ui" line="155"/>
         <source>Audio
 Mute/1/2/3/4</source>
         <translatorcomment>표시 안됨</translatorcomment>
-        <translation>음성출력
+        <translation>오디오
 음소거/1/2/3/4</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="134"/>
+        <location filename="../../../../main/mainMenu.ui" line="136"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="158"/>
+        <location filename="../../../../main/mainMenu.ui" line="191"/>
         <source>Shutdown</source>
         <translation>녹화종료</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.ui" line="183"/>
+        <location filename="../../../../main/mainMenu.ui" line="210"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="143"/>
-        <location filename="../../../../main/mainMenu.cpp" line="183"/>
-        <location filename="../../../../main/mainMenu.cpp" line="209"/>
+        <location filename="../../../../main/mainMenu.cpp" line="204"/>
+        <location filename="../../../../main/mainMenu.cpp" line="250"/>
+        <location filename="../../../../main/mainMenu.cpp" line="284"/>
         <source>Audio</source>
-        <translation>음성출력</translation>
+        <translation>오디오</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu.cpp" line="137"/>
-        <location filename="../../../../main/mainMenu.cpp" line="150"/>
-        <location filename="../../../../main/mainMenu.cpp" line="173"/>
-        <location filename="../../../../main/mainMenu.cpp" line="189"/>
-        <location filename="../../../../main/mainMenu.cpp" line="200"/>
-        <location filename="../../../../main/mainMenu.cpp" line="214"/>
+        <location filename="../../../../main/mainMenu.cpp" line="196"/>
+        <location filename="../../../../main/mainMenu.cpp" line="213"/>
+        <location filename="../../../../main/mainMenu.cpp" line="238"/>
+        <location filename="../../../../main/mainMenu.cpp" line="258"/>
+        <location filename="../../../../main/mainMenu.cpp" line="273"/>
+        <location filename="../../../../main/mainMenu.cpp" line="291"/>
+        <source>Mute</source>
+        <translation>음소거</translation>
+    </message>
+    <message>
         <source>Audio
 Mute</source>
-        <translation>음성출력
+        <translation type="obsolete">음성출력
 음소거</translation>
     </message>
     <message>
@@ -3061,34 +3065,34 @@ Mute</source>
 <context>
     <name>MainMenu1080p</name>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="67"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="176"/>
         <source>Audio
 Mute/1/2/3/4</source>
-        <translation>음성출력
+        <translation>오디오
 음소거/1/2/3/4</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="98"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="160"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="128"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="193"/>
         <source>Shutdown</source>
         <translation>녹화종료</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="158"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="209"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="188"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="144"/>
         <source>Search</source>
         <translation>검색</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainMenu1080p.ui" line="218"/>
+        <location filename="../../../../main/mainMenu1080p.ui" line="128"/>
         <source>Setup</source>
         <translation>설정</translation>
     </message>
@@ -3711,21 +3715,21 @@ Off/On</source>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="379"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="616"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="650"/>
         <source>Low</source>
         <translation>낮음</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="380"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="617"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="651"/>
         <source>Middle</source>
         <translation>보통</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="381"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="382"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="618"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="619"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="652"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="653"/>
         <source>High</source>
         <translation>높음</translation>
     </message>
@@ -3745,8 +3749,8 @@ Off/On</source>
     <message>
         <location filename="../../../record/normal/normaldialog.cpp" line="386"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="392"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="662"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="707"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="696"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="741"/>
         <source>Off</source>
         <translation>끄기</translation>
     </message>
@@ -3755,10 +3759,10 @@ Off/On</source>
         <location filename="../../../record/normal/normaldialog.cpp" line="388"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="393"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="394"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="663"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="664"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="708"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="709"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="697"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="698"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="742"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="743"/>
         <source>On</source>
         <translation>켜기</translation>
     </message>
@@ -4593,22 +4597,22 @@ Off/On</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="739"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="749"/>
         <source>EVENT TIME</source>
         <translation>이벤트 발생시간</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="741"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="751"/>
         <source>LOG TYPE</source>
         <translation>로그 종류</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="743"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="753"/>
         <source>DURATION</source>
         <translation>지속시간</translation>
     </message>
     <message>
-        <location filename="../../../../search/eventlogpage.cpp" line="745"/>
+        <location filename="../../../../search/eventlogpage.cpp" line="755"/>
         <source>NUM</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>번호</translation>
@@ -4618,13 +4622,13 @@ Off/On</source>
         <translation type="obsolete">내용</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="187"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="196"/>
         <source>TIME</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>시간</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="189"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="198"/>
         <source>SYSTEM LOG LIST</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>시스템 로그 항목</translation>
@@ -4714,17 +4718,17 @@ Off/On</source>
         <translation>서식</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage.ui" line="46"/>
+        <location filename="../../../setup/recordpage.ui" line="100"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage.ui" line="79"/>
+        <location filename="../../../setup/recordpage.ui" line="84"/>
         <source>Event</source>
         <translation>이벤트 녹화</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage.ui" line="106"/>
+        <location filename="../../../setup/recordpage.ui" line="42"/>
         <source>Normal</source>
         <translation>일반 녹화</translation>
     </message>
@@ -4737,17 +4741,17 @@ Off/On</source>
         <translation>서식</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage1080p.ui" line="46"/>
+        <location filename="../../../setup/recordpage1080p.ui" line="100"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage1080p.ui" line="79"/>
+        <location filename="../../../setup/recordpage1080p.ui" line="84"/>
         <source>Event</source>
         <translation>이벤트 녹화</translation>
     </message>
     <message>
-        <location filename="../../../setup/recordpage1080p.ui" line="106"/>
+        <location filename="../../../setup/recordpage1080p.ui" line="68"/>
         <source>Normal</source>
         <translation>일반 녹화</translation>
     </message>
@@ -4869,27 +4873,27 @@ Off/On</source>
 <context>
     <name>SearchDialog</name>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="67"/>
+        <location filename="../../../../search/searchdialog.ui" line="65"/>
         <source>Event</source>
         <translation>이벤트</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="95"/>
+        <location filename="../../../../search/searchdialog.ui" line="98"/>
         <source>Normal</source>
         <translation>일반</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="125"/>
+        <location filename="../../../../search/searchdialog.ui" line="126"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="146"/>
+        <location filename="../../../../search/searchdialog.ui" line="144"/>
         <source>Search</source>
         <translation>검색</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog.ui" line="179"/>
+        <location filename="../../../../search/searchdialog.ui" line="175"/>
         <source>System Log</source>
         <translation>시스템 로그</translation>
     </message>
@@ -4905,27 +4909,27 @@ Off/On</source>
 <context>
     <name>SearchDialog1080p</name>
     <message>
-        <location filename="../../../../search/searchdialog1080p.ui" line="67"/>
+        <location filename="../../../../search/searchdialog1080p.ui" line="65"/>
         <source>Event</source>
         <translation>이벤트</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog1080p.ui" line="95"/>
+        <location filename="../../../../search/searchdialog1080p.ui" line="93"/>
         <source>Normal</source>
         <translation>일반</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog1080p.ui" line="125"/>
+        <location filename="../../../../search/searchdialog1080p.ui" line="121"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog1080p.ui" line="146"/>
+        <location filename="../../../../search/searchdialog1080p.ui" line="139"/>
         <source>Search</source>
         <translation>검색</translation>
     </message>
     <message>
-        <location filename="../../../../search/searchdialog1080p.ui" line="179"/>
+        <location filename="../../../../search/searchdialog1080p.ui" line="170"/>
         <source>System Log</source>
         <translation>시스템 로그</translation>
     </message>
@@ -5134,204 +5138,204 @@ On</source>
         <translation>취소</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="84"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="457"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="83"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="455"/>
         <source>Time Format
 12 Hour</source>
         <translation>시간 형식
 12 시간</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="85"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="484"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="84"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="482"/>
         <source>Time Format
 24 Hour</source>
         <translation>시간 형식
 24 시간</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="95"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="492"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="94"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="490"/>
         <source>GPS Synchronization
 On</source>
         <translation>GPS 동기화
 켜기</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="90"/>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="497"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="89"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="495"/>
         <source>GPS Synchronization
 Off</source>
         <translation>GPS 동기화
 끄기</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="99"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="98"/>
         <source>TimeZone [UTC -12:00 Eniwetok/Kwajalein]</source>
         <translation>표준 시간대 [UTC -12:00 에니웨톡/콰잘레인]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="100"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="99"/>
         <source>TimeZone [UTC -11:00 Niue]</source>
         <translation>표준 시간대 [UTC -11:00 니우에]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="101"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="100"/>
         <source>TimeZone [UTC -10:00 Hawaii]</source>
         <translation>표준 시간대 [UTC -10:00 하와이]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="102"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="101"/>
         <source>TimeZone [UTC -09:00 Alaska]</source>
         <translation>표준 시간대 [UTC -09:00 알래스카]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="103"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="102"/>
         <source>TimeZone [UTC -08:00 Los Angeles/Vancouver]</source>
         <translation>표준 시간대 [UTC -08:00 로스 앤젤레스/밴쿠버]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="104"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="103"/>
         <source>TimeZone [UTC -07:00 Arizona]</source>
         <translation>표준 시간대 [UTC -07:00 애리조나]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="105"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="104"/>
         <source>TimeZone [UTC -06:00 Chicago/Houston/Mexico City]</source>
         <translation>표준 시간대 [UTC -06:00 시카고/휴스턴/멕시코 시티]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="106"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="105"/>
         <source>TimeZone [UTC -05:00 Boston/Montreal/New York]</source>
         <translation>표준 시간대 [UTC -05:00 보스턴/몬트리올/뉴욕]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="107"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="106"/>
         <source>TimeZone [UTC -04:30 Caracas]</source>
         <translation>표준 시간대 [UTC -04:30 카라카스]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="108"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="107"/>
         <source>TimeZone [UTC -04:00 Santiago]</source>
         <translation>표준 시간대 [UTC -04:00 산티아고]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="109"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="108"/>
         <source>TimeZone [UTC -03:30 Newfoundland]</source>
         <translation>표준 시간대 [UTC -03:30 뉴 펀들랜드]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="110"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="109"/>
         <source>TimeZone [UTC -03:00 Buenos Aires/Rio de Janero]</source>
         <translation>표준 시간대 [UTC -03:00 리우 데 자네이루]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="111"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="110"/>
         <source>TimeZone [UTC -02:00 Fernando de Noronha]</source>
         <translation>표준 시간대 [UTC -02:00 페르난도 데 노로냐]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="112"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="111"/>
         <source>TimeZone [UTC -01:00 Azores]</source>
         <translation>표준 시간대 [UTC -01:00 아조레스]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="113"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="112"/>
         <source>TimeZone [UTC +00:00 Lisbon/London/Monaco]</source>
         <translation>표준 시간대 [UTC +00:00 리스본/런던/모나코]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="114"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="113"/>
         <source>TimeZone [UTC +01:00 Berlin/Paris/Rome]</source>
         <translation>표준 시간대 [UTC +01:00 베를린/파리/로마]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="115"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="114"/>
         <source>TimeZone [UTC +02:00 Athens/Cape Town/Istanbul]</source>
         <translation>표준 시간대 [UTC +02:00 아테네/케이프 타운/이스탄불]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="116"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="115"/>
         <source>TimeZone [UTC +03:00 Moscow/Baghdad/Kuwait]</source>
         <translation>표준 시간대 [UTC +03:00 모스크바/바그다드/쿠웨이트]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="117"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="116"/>
         <source>TimeZone [UTC +03:30 Teheran]</source>
         <translation>표준 시간대 [UTC +03:30 테헤란]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="118"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="117"/>
         <source>TimeZone [UTC +04:00 Abu Dhabi/Muscat]</source>
         <translation>표준 시간대 [UTC +04:00 아부다비/무스카트]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="119"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="118"/>
         <source>TimeZone [UTC +04:30 Kabul]</source>
         <translation>표준 시간대 [UTC +04:30 카불]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="120"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="119"/>
         <source>TimeZone [UTC +05:00 Islamabad/Karachi]</source>
         <translation>표준 시간대 [UTC +05:00 이슬라마바드/카라치]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="121"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="120"/>
         <source>TimeZone [UTC +05:30 Chennai]</source>
         <translation>표준 시간대 [UTC +05:30 첸나이]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="122"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="121"/>
         <source>TimeZone [UTC +05:45 Kathmandu]</source>
         <translation>표준 시간대 [UTC +05:45 카트만두]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="123"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="122"/>
         <source>TimeZone [UTC +06:00 Astana/Dhaka/Almaty]</source>
         <translation>표준 시간대 [UTC +06:00 아스타나/다카/알마티]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="124"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="123"/>
         <source>TimeZone [UTC +06:30 Rangoon]</source>
         <translation>표준 시간대 [UTC +06:30 랑군]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="125"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="124"/>
         <source>TimeZone [UTC +07:00 Bangkok/Hanoi/Jakarta]</source>
         <translation>표준 시간대 [UTC +07:00 방콕/하노이/자카르타]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="126"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="125"/>
         <source>TimeZone [UTC +08:00 Beijing/Singapore/Taipei]</source>
         <translation>표준 시간대 [UTC +08:00 베이징/싱가포르/타이페이]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="127"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="126"/>
         <source>TimeZone [UTC +09:00 Seoul/Tokyo]</source>
         <translation>표준 시간대 [UTC +09:00 서울/도쿄]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="128"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="127"/>
         <source>TimeZone [UTC +09:30 Darwin]</source>
         <translation>표준 시간대 [UTC +09:30 다윈]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="129"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="128"/>
         <source>TimeZone [UTC +10:00 Guam/Canberra/Sydney]</source>
         <translation>표준 시간대 [UTC +10:00 괌/캔버라/시드니]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="130"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="129"/>
         <source>TimeZone [UTC +11:00 Magadan/Solomon]</source>
         <translation>표준 시간대 [UTC +11:00 마가단/솔로몬]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="131"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="130"/>
         <source>TimeZone [UTC +12:00 Fiji/Marshall]</source>
         <translation>표준 시간대 [UTC +12:00 피지/마샬]</translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="132"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="131"/>
         <source>TimeZone [UTC +13:00 Nuku&apos;alofa]</source>
         <translation>표준 시간대 [UTC +13:00 누쿠 알로파]</translation>
     </message>
@@ -5421,7 +5425,7 @@ some data will be erased from stprage.
 </translation>
     </message>
     <message>
-        <location filename="../../datetime/setdatetimedialog.cpp" line="423"/>
+        <location filename="../../datetime/setdatetimedialog.cpp" line="421"/>
         <source>SET DATE &amp; TIME</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>날짜 &amp; 시간 설정</translation>
@@ -5562,13 +5566,13 @@ On</source>
         <translation>상태표시줄 대화상자</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.ui" line="83"/>
+        <location filename="../../../../main/statusbardialog.ui" line="80"/>
         <source>22/08/2016 06:14:10</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>22/08/2016 06:14:10</translation>
     </message>
     <message>
-        <location filename="../../../../main/statusbardialog.ui" line="110"/>
+        <location filename="../../../../main/statusbardialog.ui" line="107"/>
         <location filename="../../../../main/statusbardialog.cpp" line="172"/>
         <location filename="../../../../main/statusbardialog.cpp" line="179"/>
         <source>NO SSD</source>
@@ -5608,19 +5612,19 @@ On</source>
 <context>
     <name>SystemLogPage</name>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="259"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="268"/>
         <source>
 Descending</source>
         <translation>
 내림차순</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="422"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="431"/>
         <source>Ascending</source>
         <translation>오름차순</translation>
     </message>
     <message>
-        <location filename="../../../../search/systemlogpage.cpp" line="426"/>
+        <location filename="../../../../search/systemlogpage.cpp" line="435"/>
         <source>Descending</source>
         <translation>내림차순</translation>
     </message>
@@ -5745,54 +5749,52 @@ Sort</source>
         <translation>서식</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="46"/>
+        <location filename="../../../setup/systempage.ui" line="128"/>
         <source>License
 Plate</source>
         <translation>차량번호</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="77"/>
+        <location filename="../../../setup/systempage.ui" line="244"/>
         <source>Information</source>
         <translation>기기 정보</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="107"/>
+        <location filename="../../../setup/systempage.ui" line="358"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="143"/>
+        <location filename="../../../setup/systempage.ui" line="320"/>
         <source>Language</source>
         <translation>언어</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="173"/>
+        <location filename="../../../setup/systempage.ui" line="205"/>
         <source>Factory
 Default</source>
-        <translation>공장
-초기화</translation>
+        <translation>공장 초기화</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="204"/>
+        <location filename="../../../setup/systempage.ui" line="89"/>
         <source>Firmware
 Upgrade</source>
-        <translation>펌웨어
-업그레이드</translation>
+        <translation>업그레이드</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="235"/>
+        <location filename="../../../setup/systempage.ui" line="282"/>
         <source>Config</source>
         <translation>설정 백업</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="271"/>
+        <location filename="../../../setup/systempage.ui" line="167"/>
         <source>Security</source>
         <translation>보안</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.ui" line="301"/>
+        <location filename="../../../setup/systempage.ui" line="51"/>
         <source>Date &amp;&amp; Time</source>
-        <translation>날짜 &amp;&amp; 시간</translation>
+        <translation>날짜 &amp; 시간</translation>
     </message>
     <message>
         <source>SET DATE &amp; TIME</source>
@@ -5813,24 +5815,24 @@ If yes, system will restart.
 시간 변경 후 시스템을 재부팅합니다.</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="132"/>
+        <location filename="../../../setup/systempage.cpp" line="199"/>
         <source>CHANGE DATE &amp; TIME</source>
         <translation>날짜 &amp; 시간 변경</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="133"/>
+        <location filename="../../../setup/systempage.cpp" line="200"/>
         <source>Do you want to change time?
 If yes, system will restart.</source>
         <translation>시간을 변경하시겠습니까?
 시간 변경 후 시스템을 재부팅합니다.</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="235"/>
+        <location filename="../../../setup/systempage.cpp" line="302"/>
         <source>FACTORY DEFAULT</source>
         <translation>공장 초기화</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage.cpp" line="235"/>
+        <location filename="../../../setup/systempage.cpp" line="302"/>
         <source>Do you want to set factory default?
 If yes, system will restart.</source>
         <translation>공장 초기화를 하시겠습니까?
@@ -5871,54 +5873,52 @@ If yes, system will restart.
         <translation>서식</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="46"/>
+        <location filename="../../../setup/systempage1080p.ui" line="215"/>
         <source>License
 Plate</source>
         <translation>차량번호</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="77"/>
+        <location filename="../../../setup/systempage1080p.ui" line="274"/>
         <source>Information</source>
         <translation>기기 정보</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="107"/>
+        <location filename="../../../setup/systempage1080p.ui" line="331"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="143"/>
+        <location filename="../../../setup/systempage1080p.ui" line="312"/>
         <source>Language</source>
         <translation>언어</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="173"/>
+        <location filename="../../../setup/systempage1080p.ui" line="254"/>
         <source>Factory
 Default</source>
-        <translation>공장
-초기화</translation>
+        <translation>공장 초기화</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="204"/>
+        <location filename="../../../setup/systempage1080p.ui" line="195"/>
         <source>Firmware
 Upgrade</source>
-        <translation>펌웨어
-업그레이드</translation>
+        <translation>업그레이드</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="235"/>
+        <location filename="../../../setup/systempage1080p.ui" line="293"/>
         <source>Config</source>
         <translation>설정 백업</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="271"/>
+        <location filename="../../../setup/systempage1080p.ui" line="235"/>
         <source>Security</source>
         <translation>보안</translation>
     </message>
     <message>
-        <location filename="../../../setup/systempage1080p.ui" line="301"/>
+        <location filename="../../../setup/systempage1080p.ui" line="32"/>
         <source>Date &amp;&amp; Time</source>
-        <translation>날짜 &amp;&amp; 시간</translation>
+        <translation>날짜 &amp; 시간</translation>
     </message>
 </context>
 <context>
@@ -6342,8 +6342,8 @@ You must delete data or set time.</source>
         <translation type="obsolete">트리거 4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="929"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1040"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="945"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1095"/>
         <source>PRIORITY REDUNDANT</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>우선순위 오류</translation>
@@ -6380,14 +6380,14 @@ You must delete data or set time.</source>
         <translation>초</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="946"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1096"/>
         <source>Priority is redundant.</source>
         <translation>우선순위가 중복됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1041"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="946"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1096"/>
         <source>Please check priority.</source>
         <translation>우선순위를 확인하십시오.</translation>
     </message>

@@ -143,10 +143,7 @@ void SetupDialog::updateConfig(int userId)
     tabLayout->setCurrentIndex(tabCurIdx);
     printf("\t%s --> %d\n",__func__,__LINE__);
 
-    tabLayout->setFocus();
-    printf("\t%s --> %d\n",__func__,__LINE__);
-
-    systemPage->buttonDateTime->setFocus();
+    systemPage->setFocusDateTime();
 }
 void SetupDialog::onSaveSystemPage(int type, int val)
 {
@@ -197,6 +194,11 @@ void SetupDialog::onSaveDevicePage(int type)
 }
 void SetupDialog::setupPageChanged(int pageNum)
 {
+    systemPage->setFocusTabLayout();
+    recordPage->setFocusTabLayout();
+    displayPage->setFocusTabLayout();
+    devicePage->setFocusTabLayout();
+
     if(tabChangeFlag == true)
     {
         return;
@@ -206,14 +208,6 @@ void SetupDialog::setupPageChanged(int pageNum)
 
     indexSystem = indexRecord = indexDisplay = indexDevice = 0;
     tabLayout->setStyleSheet("QTabBar::tab:selected{background:rgb(06,86,159)}");
-
-    switch(pageNum)
-    {
-        case 0: systemPage->buttonDateTime->setFocus();      break;
-        case 1: recordPage->buttonNormal->setFocus();        break;
-        case 2: displayPage->buttonVideoOutput->setFocus();  break;
-        case 3: devicePage->buttonVideo->setFocus();         break;
-    }
 }
 void SetupDialog::onUpgradeProgress(int percent)
 {
@@ -238,7 +232,6 @@ void SetupDialog::onEscapeTabFocus(void)
 }
 void SetupDialog::onMakeTransparent(int n)
 {
-    //if( n == 1 )    { this->setWindowOpacity(0.5); }
     if( n == 1 )    { this->setWindowOpacity(0); }
     else            { this->setWindowOpacity(1); }
 }

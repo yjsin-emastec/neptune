@@ -4,6 +4,7 @@
 #include <QtGui/QWidget>
 #include "ui_systempage.h"
 #include "ui_systempage1080p.h"
+#include "ui/customwidget/customimagelabel.h"
 
 class UiKeyboardDialog;
 class TextMessageDialog;
@@ -23,15 +24,25 @@ public:
     SystemPage(QWidget *parent = 0);
     ~SystemPage();
 
-    QPushButton          *buttonDateTime;
-    QPushButton          *buttonSecurity;
-    QPushButton          *buttonConfig;
-    QPushButton          *buttonUpgrade;
-    QPushButton          *buttonFactoryDefault;
-    QPushButton          *buttonLanguage;
-    QPushButton          *buttonLicensePlate;
-    QPushButton          *buttonInformation;
-    QPushButton          *buttonClose;
+    CustomImageLabel    *buttonDateTime;
+    CustomImageLabel    *buttonSecurity;
+    CustomImageLabel    *buttonConfig;
+    CustomImageLabel    *buttonUpgrade;
+    CustomImageLabel    *buttonFactoryDefault;
+    CustomImageLabel    *buttonLanguage;
+    CustomImageLabel    *buttonLicensePlate;
+    CustomImageLabel    *buttonInformation;
+    CustomImageLabel    *buttonClose;
+
+    QLabel              *labelDateTimeText;
+    QLabel              *labelSecurityText;
+    QLabel              *labelConfigText;
+    QLabel              *labelUpgradeText;
+    QLabel              *labelFactoryDefaultText;
+    QLabel              *labelLanguageText;
+    QLabel              *labelLicensePalteText;
+    QLabel              *labelInformationText;
+    QLabel              *labelCloseText;
 
 signals:
     void saveSystemPage(int type, int val);
@@ -48,11 +59,20 @@ public slots:
     void onButtonLanguage(void);
     void onButtonLicensePlate(void);
     void onButtonInformation(void);
+    void onButtonClose(void);
     void onUpgradeProgress(int percent);
     void dateFormatChanged(int val);
 
-private slots:
-	void onButtonClose(void);
+    void setFocusDateTime(void);
+    void setFocusSecurity(void);
+    void setFocusConfig(void);
+    void setFocusUpgrade(void);
+    void setFocusFactoryDefault(void);
+    void setFocusLanguage(void);
+    void setFocusLicensePlate(void);
+    void setFocusInformation(void);
+    void setFocusClose(void);
+    void setFocusTabLayout(void);
 
 private:
     TextMessageDialog    *msgBox;
@@ -64,6 +84,11 @@ private:
     LanguageDialog       *languageDialog;
     LicensePlateDialog   *licensePlateDialog;
     InformationDialog    *informationDialog;
+
+    QPixmap iconImageNormal[9];
+    QPixmap iconImageFocus[9];
+
+    void changeFocus(int n);
 };
 
 #endif // SYSTEMPAGE_H

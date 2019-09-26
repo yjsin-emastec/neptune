@@ -37,149 +37,192 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPushButton" name="buttonEvent">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>770</x>
-      <y>30</y>
-      <width>400</width>
-      <height>300</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>300</width>
-      <height>300</height>
-     </size>
-    </property>
-    <property name="text">
-     <string>Event</string>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonNormal">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>30</y>
-      <width>400</width>
-      <height>300</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>300</width>
-      <height>300</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Normal</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonClose">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>770</x>
-      <y>380</y>
-      <width>400</width>
-      <height>300</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>300</width>
-      <height>300</height>
-     </size>
-    </property>
-    <property name="text">
-     <string>Close</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelSearch">
+   <widget class="QFrame" name="frameTitle">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>323</y>
-      <width>1272</width>
-      <height>61</height>
+      <y>0</y>
+      <width>373</width>
+      <height>713</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>48</pointsize>
-     </font>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="text">
-     <string>Search</string>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
+    <widget class="CustomImageLabel" name="buttonTitle">
+     <property name="geometry">
+      <rect>
+       <x>96</x>
+       <y>236</y>
+       <width>181</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelTitleText">
+     <property name="geometry">
+      <rect>
+       <x>36</x>
+       <y>426</y>
+       <width>300</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="buttonLog">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
+   <widget class="QFrame" name="frameContents">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>380</y>
-      <width>400</width>
-      <height>300</height>
+      <x>372</x>
+      <y>0</y>
+      <width>900</width>
+      <height>713</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="minimumSize">
-     <size>
-      <width>300</width>
-      <height>300</height>
-     </size>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
-    <property name="text">
-     <string>System Log</string>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
+    <widget class="CustomImageLabel" name="buttonNormal">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>88</y>
+       <width>121</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="CustomImageLabel" name="buttonEvent">
+     <property name="geometry">
+      <rect>
+       <x>615</x>
+       <y>88</y>
+       <width>121</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="CustomImageLabel" name="buttonLog">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>444</y>
+       <width>121</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="CustomImageLabel" name="buttonClose">
+     <property name="geometry">
+      <rect>
+       <x>615</x>
+       <y>444</y>
+       <width>121</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelNormalText">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>218</y>
+       <width>301</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Normal</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelEventText">
+     <property name="geometry">
+      <rect>
+       <x>525</x>
+       <y>218</y>
+       <width>301</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Event</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelLogText">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>574</y>
+       <width>301</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>System Log</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelCloseText">
+     <property name="geometry">
+      <rect>
+       <x>525</x>
+       <y>574</y>
+       <width>301</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Close</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomImageLabel</class>
+   <extends>QLabel</extends>
+   <header>ui/customwidget/customimagelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

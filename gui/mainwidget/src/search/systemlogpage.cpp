@@ -263,6 +263,7 @@ void SystemLogPage::resetLog()
     ampmStatus="";
     isSearch=true;
     isKeyLock=false;
+    functionDialog=NULL;
 
     labelPage->setText("0\n(0/0)");
     labelFilter2->setText(tr("\nDescending"));

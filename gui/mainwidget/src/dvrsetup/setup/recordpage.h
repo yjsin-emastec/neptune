@@ -4,6 +4,7 @@
 #include <QtGui/QWidget>
 #include "ui_recordpage.h"
 #include "ui_recordpage1080p.h"
+#include "ui/customwidget/customimagelabel.h"
 
 class NormalDialog;
 class EventDialog;
@@ -16,9 +17,13 @@ public:
     RecordPage(QWidget *parent = 0);
     ~RecordPage();
 
-    QPushButton *buttonNormal;
-    QPushButton *buttonEvent;
-    QPushButton *buttonClose;
+    CustomImageLabel *buttonNormal;
+    CustomImageLabel *buttonEvent;
+    CustomImageLabel *buttonClose;
+
+    QLabel           *labelNormalText;
+    QLabel           *labelEventText;
+    QLabel           *labelCloseText;
 
 signals:
 	void saveRecordPage(int type);
@@ -26,16 +31,24 @@ signals:
 	void closeSetupMenu(void);
 
 public slots:
-
-private slots:
     void onButtonNormal(void);
     void onButtonEvent(void);
 	void onButtonClose(void);
+    void setFocusNormal(void);
+    void setFocusEvent(void);
+    void setFocusClose(void);
+    void setFocusTabLayout(void);
+
     void onRecordSave(void);
 	
 private:
 	NormalDialog *normalDialog;
 	EventDialog  *eventDialog;
+
+    QPixmap iconImageNormal[3];
+    QPixmap iconImageFocus[3];
+
+    void changeFocus(int n);
 };
 
 #endif // RECORDPAGE_H

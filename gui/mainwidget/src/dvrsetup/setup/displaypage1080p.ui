@@ -19,190 +19,188 @@
   <property name="autoFillBackground">
    <bool>true</bool>
   </property>
-  <widget class="QPushButton" name="buttonClose">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="CustomImageLabel" name="buttonVideoOutput">
    <property name="geometry">
     <rect>
-     <x>1220</x>
-     <y>470</y>
-     <width>500</width>
-     <height>400</height>
+     <x>270</x>
+     <y>140</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
-    <string>Close</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonCameraName">
+  <widget class="CustomImageLabel" name="buttonCameraName">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>60</y>
-     <width>500</width>
-     <height>400</height>
+     <x>870</x>
+     <y>140</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
-    <string>Camera Name</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonSplitScreen">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
+  <widget class="CustomImageLabel" name="buttonNotAvailable">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>470</y>
-     <width>500</width>
-     <height>400</height>
+     <x>1470</x>
+     <y>140</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
-    <string>N/A</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonVideoOutput">
+  <widget class="CustomImageLabel" name="buttonOsd">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>60</y>
-     <width>500</width>
-     <height>400</height>
+     <x>270</x>
+     <y>550</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
    </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
+   <property name="text">
+    <string/>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
+  </widget>
+  <widget class="CustomImageLabel" name="buttonNotAvailable2">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>550</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="CustomImageLabel" name="buttonClose">
+   <property name="geometry">
+    <rect>
+     <x>1470</x>
+     <y>550</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelVideoOutputText">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>340</y>
+     <width>541</width>
+     <height>161</height>
+    </rect>
    </property>
    <property name="text">
     <string>Video Output</string>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
   </widget>
-  <widget class="QPushButton" name="buttonOsd">
+  <widget class="QLabel" name="labelCameraNameText">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>470</y>
-     <width>500</width>
-     <height>400</height>
+     <x>690</x>
+     <y>340</y>
+     <width>541</width>
+     <height>161</height>
     </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
-    <string>OSD</string>
+    <string>Camera Name</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonEtc">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
+  <widget class="QLabel" name="labelNotAvailableText">
    <property name="geometry">
     <rect>
-     <x>1220</x>
-     <y>60</y>
-     <width>500</width>
-     <height>400</height>
+     <x>1290</x>
+     <y>340</y>
+     <width>541</width>
+     <height>161</height>
     </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
     <string>N/A</string>
    </property>
-   <property name="default">
-    <bool>false</bool>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
-   <property name="flat">
-    <bool>false</bool>
+  </widget>
+  <widget class="QLabel" name="labelOsdText">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>750</y>
+     <width>541</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OSD</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelNotAvailableText2">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>750</y>
+     <width>541</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>N/A</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelCloseText">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>750</y>
+     <width>541</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomImageLabel</class>
+   <extends>QLabel</extends>
+   <header>ui/customwidget/customimagelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

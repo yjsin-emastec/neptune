@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include "ui_mainMenu.h"
 #include "ui_mainMenu1080p.h"
+#include "ui/customwidget/customimagelabel.h"
 
 class MainMenu : public QDialog
 {
@@ -20,12 +21,20 @@ private:
 
     void setAudioOut(int index);
 
-    QPushButton *buttonSetup;
-    QPushButton *buttonSearch;
-    QPushButton *buttonAudio;
-    QPushButton *buttonShutdown;
-    QPushButton *buttonClose;
-    QFrame      *frame;
+    QFrame              *frame;
+    CustomImageLabel    *buttonSetup;
+    CustomImageLabel    *buttonSearch;
+    CustomImageLabel    *buttonNotAvailable;
+    CustomImageLabel    *buttonAudio;
+    CustomImageLabel    *buttonShutdown;
+    CustomImageLabel    *buttonClose;
+
+    QLabel              *labelSetupText;
+    QLabel              *labelSearchText;
+    QLabel              *labelNotAvailableText;
+    QLabel              *labelAudioText;
+    QLabel              *labelShutdownText;
+    QLabel              *labelCloseText;
 
 public slots:
 	void onButtonAudio();
@@ -50,6 +59,19 @@ private slots:
 	void onButtonSetup();
 	void onButtonSearch();
 	void onButtonShutdown();
+
+    void setFocusSetup();
+    void setFocusSearch();
+    void setFocusAudio();
+    void setFocusShutdown();
+    void setFocusClose();
+
+private:
+    QPixmap iconImageNormal[6];
+    QPixmap iconImageFocus[6];
+
+    void changeFocus(int n);
+    void updateAudioIcon(int audioNum);
 };
 
 #endif // MAINMENU_H

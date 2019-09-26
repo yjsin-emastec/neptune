@@ -16,268 +16,332 @@
   <property name="autoFillBackground">
    <bool>true</bool>
   </property>
-  <widget class="QPushButton" name="buttonLicensePlate">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="QLabel" name="labelDateTimeText">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>620</y>
-     <width>500</width>
-     <height>300</height>
+     <x>90</x>
+     <y>220</y>
+     <width>540</width>
+     <height>110</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
-    <string>License
-Plate</string>
+    <string>Date &amp;&amp; Time</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonInformation">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="CustomImageLabel" name="buttonDateTime">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>620</y>
-     <width>500</width>
-     <height>300</height>
+     <x>270</x>
+     <y>40</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
-    <string>Information</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonClose">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="CustomImageLabel" name="buttonUpgrade">
    <property name="geometry">
     <rect>
-     <x>1220</x>
-     <y>620</y>
-     <width>500</width>
-     <height>300</height>
+     <x>270</x>
+     <y>340</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
-    <string>Close</string>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>16</width>
-     <height>16</height>
-    </size>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonLanguage">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="CustomImageLabel" name="buttonLicensePlate">
    <property name="geometry">
     <rect>
-     <x>1220</x>
-     <y>315</y>
-     <width>500</width>
-     <height>300</height>
+     <x>270</x>
+     <y>640</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
-    <string>Language</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonFactoryDefault">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="CustomImageLabel" name="buttonSecurity">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>315</y>
-     <width>500</width>
-     <height>300</height>
+     <x>870</x>
+     <y>40</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
-    <string>Factory
-Default</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonUpgrade">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="CustomImageLabel" name="buttonFactoryDefault">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>315</y>
-     <width>500</width>
-     <height>300</height>
+     <x>870</x>
+     <y>340</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="CustomImageLabel" name="buttonInformation">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>640</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="CustomImageLabel" name="buttonConfig">
+   <property name="geometry">
+    <rect>
+     <x>1470</x>
+     <y>40</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="CustomImageLabel" name="buttonLanguage">
+   <property name="geometry">
+    <rect>
+     <x>1470</x>
+     <y>340</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="CustomImageLabel" name="buttonClose">
+   <property name="geometry">
+    <rect>
+     <x>1470</x>
+     <y>640</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelUpgradeText">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>520</y>
+     <width>540</width>
+     <height>110</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Firmware
 Upgrade</string>
    </property>
-  </widget>
-  <widget class="QPushButton" name="buttonConfig">
-   <property name="enabled">
-    <bool>true</bool>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
+  </widget>
+  <widget class="QLabel" name="labelLicensePlateText">
    <property name="geometry">
     <rect>
-     <x>1220</x>
-     <y>5</y>
-     <width>500</width>
-     <height>300</height>
+     <x>90</x>
+     <y>820</y>
+     <width>540</width>
+     <height>110</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
-    <string>Config</string>
+    <string>License
+Plate</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonSecurity">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="QLabel" name="labelSecurityText">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>5</y>
-     <width>500</width>
-     <height>300</height>
+     <x>690</x>
+     <y>220</y>
+     <width>540</width>
+     <height>110</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Security</string>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
-  <widget class="QPushButton" name="buttonDateTime">
+  <widget class="QLabel" name="labelFactoryDefaultText">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>5</y>
-     <width>500</width>
-     <height>300</height>
+     <x>690</x>
+     <y>520</y>
+     <width>540</width>
+     <height>110</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::StrongFocus</enum>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
-    <string>Date &amp;&amp; Time</string>
+    <string>Factory
+Default</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelInformationText">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>820</y>
+     <width>540</width>
+     <height>110</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string>Information</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelConfigText">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>220</y>
+     <width>540</width>
+     <height>110</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string>Config</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelLanguageText">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>520</y>
+     <width>540</width>
+     <height>110</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string>Language</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelCloseText">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>820</y>
+     <width>540</width>
+     <height>110</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomImageLabel</class>
+   <extends>QLabel</extends>
+   <header>ui/customwidget/customimagelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

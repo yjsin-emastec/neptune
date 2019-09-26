@@ -50,5 +50,66 @@
         <file>images/pb_split9_pressed.png</file>
         <file>images/flip.png</file>
         <file>images/mirror.png</file>
+        <file>images/dvrsetup/system/close.png</file>
+        <file>images/dvrsetup/system/close2.png</file>
+        <file>images/dvrsetup/system/config.png</file>
+        <file>images/dvrsetup/system/config2.png</file>
+        <file>images/dvrsetup/system/datetime.png</file>
+        <file>images/dvrsetup/system/datetime2.png</file>
+        <file>images/dvrsetup/system/factorydefault.png</file>
+        <file>images/dvrsetup/system/factorydefault2.png</file>
+        <file>images/dvrsetup/system/information.png</file>
+        <file>images/dvrsetup/system/information2.png</file>
+        <file>images/dvrsetup/system/language.png</file>
+        <file>images/dvrsetup/system/language2.png</file>
+        <file>images/dvrsetup/system/licenseplate.png</file>
+        <file>images/dvrsetup/system/licenseplate2.png</file>
+        <file>images/dvrsetup/system/security.png</file>
+        <file>images/dvrsetup/system/security2.png</file>
+        <file>images/dvrsetup/system/upgrade.png</file>
+        <file>images/dvrsetup/system/upgrade2.png</file>
+        <file>images/dvrsetup/record/event.png</file>
+        <file>images/dvrsetup/record/event2.png</file>
+        <file>images/dvrsetup/record/normal.png</file>
+        <file>images/dvrsetup/record/normal2.png</file>
+        <file>images/dvrsetup/display/cameraname.png</file>
+        <file>images/dvrsetup/display/cameraname2.png</file>
+        <file>images/dvrsetup/display/osd.png</file>
+        <file>images/dvrsetup/display/osd2.png</file>
+        <file>images/dvrsetup/display/videoout.png</file>
+        <file>images/dvrsetup/display/videoout2.png</file>
+        <file>images/dvrsetup/display/blank.png</file>
+        <file>images/dvrsetup/device/diskformat.png</file>
+        <file>images/dvrsetup/device/diskformat2.png</file>
+        <file>images/dvrsetup/device/impactsensitivity.png</file>
+        <file>images/dvrsetup/device/impactsensitivity2.png</file>
+        <file>images/dvrsetup/device/videoinput.png</file>
+        <file>images/dvrsetup/device/videoinput2.png</file>
+        <file>images/main/audiomute.png</file>
+        <file>images/main/audiomute2.png</file>
+        <file>images/main/search.png</file>
+        <file>images/main/search2.png</file>
+        <file>images/main/setup.png</file>
+        <file>images/main/setup2.png</file>
+        <file>images/main/audio1.png</file>
+        <file>images/main/audio1f.png</file>
+        <file>images/main/audio2.png</file>
+        <file>images/main/audio2f.png</file>
+        <file>images/main/audio3.png</file>
+        <file>images/main/audio3f.png</file>
+        <file>images/main/audio4.png</file>
+        <file>images/main/audio4f.png</file>
+        <file>images/main/audio5.png</file>
+        <file>images/main/audio5f.png</file>
+        <file>images/main/audio6.png</file>
+        <file>images/main/audio6f.png</file>
+        <file>images/main/audio7.png</file>
+        <file>images/main/audio7f.png</file>
+        <file>images/main/audio8.png</file>
+        <file>images/main/audio8f.png</file>
+        <file>images/main/shutdown.png</file>
+        <file>images/main/shutdown2.png</file>
+        <file>images/search/log.png</file>
+        <file>images/search/log2.png</file>
     </qresource>
 </RCC>

@@ -113,7 +113,8 @@ SOURCES      += src/main.cpp                                                    
                 src/test/testeventcontroller.cpp                                                     \
                 src/search/systemlogpage.cpp                                                         \
                 src/search/functiondialog.cpp                                                        \
-                src/dvrsetup/device/videoinput/videoinputbar.cpp
+                src/dvrsetup/device/videoinput/videoinputbar.cpp                                     \
+                src/ui/customwidget/customimagelabel.cpp
 
 HEADERS      += src/login/logindialog.h                                                              \
                 src/ui/keyboard/uikeyboarddialog.h                                                   \
@@ -164,7 +165,8 @@ HEADERS      += src/login/logindialog.h                                         
                 src/test/testeventcontroller.h                                                       \
                 src/search/systemlogpage.h                                                           \
                 src/search/functiondialog.h                                                          \
-                src/dvrsetup/device/videoinput/videoinputbar.h
+                src/dvrsetup/device/videoinput/videoinputbar.h                                       \
+                src/ui/customwidget/customimagelabel.h
 
 FORMS        += src/login/logindialog.ui                                                             \
                 src/ui/numkeypaddialog/numkeypaddialog.ui                                            \

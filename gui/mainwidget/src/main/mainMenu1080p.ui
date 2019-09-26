@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1653</width>
-    <height>813</height>
+    <width>1479</width>
+    <height>749</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,8 +27,8 @@
     <rect>
      <x>4</x>
      <y>4</y>
-     <width>1645</width>
-     <height>805</height>
+     <width>1471</width>
+     <height>741</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -37,126 +37,190 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPushButton" name="buttonAudio">
+   <widget class="CustomImageLabel" name="buttonSetup">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>410</y>
-      <width>525</width>
-      <height>375</height>
+      <x>195</x>
+      <y>60</y>
+      <width>181</width>
+      <height>181</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="CustomImageLabel" name="buttonSearch">
+    <property name="geometry">
+     <rect>
+      <x>645</x>
+      <y>60</y>
+      <width>181</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="CustomImageLabel" name="buttonNotAvailable">
+    <property name="geometry">
+     <rect>
+      <x>1095</x>
+      <y>60</y>
+      <width>181</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="CustomImageLabel" name="buttonAudio">
+    <property name="geometry">
+     <rect>
+      <x>195</x>
+      <y>410</y>
+      <width>181</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="CustomImageLabel" name="buttonShutdown">
+    <property name="geometry">
+     <rect>
+      <x>645</x>
+      <y>410</y>
+      <width>181</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="CustomImageLabel" name="buttonClose">
+    <property name="geometry">
+     <rect>
+      <x>1095</x>
+      <y>410</y>
+      <width>181</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSetupText">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>260</y>
+      <width>450</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Setup</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSearchText">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>260</y>
+      <width>450</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelNotAvailableText">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>260</y>
+      <width>450</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>N/A</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAudioText">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>610</y>
+      <width>450</width>
+      <height>81</height>
+     </rect>
     </property>
     <property name="text">
      <string>Audio
 Mute/1/2/3/4</string>
     </property>
-   </widget>
-   <widget class="QPushButton" name="buttonNotAvailable">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>1100</x>
-      <y>20</y>
-      <width>525</width>
-      <height>375</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string>N/A</string>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="buttonShutdown">
+   <widget class="QLabel" name="labelShutdownText">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>410</y>
-      <width>525</width>
-      <height>375</height>
+      <x>510</x>
+      <y>610</y>
+      <width>450</width>
+      <height>81</height>
      </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
     </property>
     <property name="text">
      <string>Shutdown</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QPushButton" name="buttonClose">
+   <widget class="QLabel" name="labelCloseText">
     <property name="geometry">
      <rect>
-      <x>1100</x>
-      <y>410</y>
-      <width>525</width>
-      <height>375</height>
+      <x>960</x>
+      <y>610</y>
+      <width>450</width>
+      <height>81</height>
      </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
     </property>
     <property name="text">
      <string>Close</string>
     </property>
-   </widget>
-   <widget class="QPushButton" name="buttonSearch">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>20</y>
-      <width>525</width>
-      <height>375</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string>Search</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonSetup">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>525</width>
-      <height>375</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string>Setup</string>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomImageLabel</class>
+   <extends>QLabel</extends>
+   <header>ui/customwidget/customimagelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

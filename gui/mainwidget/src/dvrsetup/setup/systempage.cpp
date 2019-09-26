@@ -20,54 +20,70 @@ SystemPage::SystemPage(QWidget *parent)
         Ui::SystemPage ui720;
         ui720.setupUi(this);
 
-        buttonDateTime       = ui720.buttonDateTime;
-        buttonSecurity       = ui720.buttonSecurity;
-        buttonConfig         = ui720.buttonConfig;
-        buttonUpgrade        = ui720.buttonUpgrade;
-        buttonFactoryDefault = ui720.buttonFactoryDefault;
-        buttonLanguage       = ui720.buttonLanguage;
-        buttonLicensePlate   = ui720.buttonLicensePlate;
-        buttonInformation    = ui720.buttonInformation;
-        buttonClose          = ui720.buttonClose;
+        buttonDateTime          = ui720.buttonDateTime;
+        buttonSecurity          = ui720.buttonSecurity;
+        buttonConfig            = ui720.buttonConfig;
+        buttonUpgrade           = ui720.buttonUpgrade;
+        buttonFactoryDefault    = ui720.buttonFactoryDefault;
+        buttonLanguage          = ui720.buttonLanguage;
+        buttonLicensePlate      = ui720.buttonLicensePlate;
+        buttonInformation       = ui720.buttonInformation;
+        buttonClose             = ui720.buttonClose;
 
-        //yjsin [17/10/12] if text is long, change font size
-        if(utils_cfg_cmp_item(SystemCfg.language, "FRENCH") == 0)
-        {
-            buttonLicensePlate->setStyleSheet("font:43px;color:white");
-        }
-        else if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-        {
-            buttonUpgrade->setStyleSheet("font:40px;color:white");
-        }
-        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-        {
-            buttonFactoryDefault->setStyleSheet("font:40px;color:white");
-        }
+        labelDateTimeText       = ui720.labelDateTimeText;
+        labelSecurityText       = ui720.labelSecurityText;
+        labelConfigText         = ui720.labelConfigText;
+        labelUpgradeText        = ui720.labelUpgradeText;
+        labelFactoryDefaultText = ui720.labelFactoryDefaultText;
+        labelLanguageText       = ui720.labelLanguageText;
+        labelLicensePalteText   = ui720.labelLicensePlateText;
+        labelInformationText    = ui720.labelInformationText;
+        labelCloseText          = ui720.labelCloseText;
+
+        labelDateTimeText       ->setStyleSheet("font:40px;");
+        labelSecurityText       ->setStyleSheet("font:40px;");
+        labelConfigText         ->setStyleSheet("font:40px;");
+        labelUpgradeText        ->setStyleSheet("font:40px;");
+        labelFactoryDefaultText ->setStyleSheet("font:40px;");
+        labelLanguageText       ->setStyleSheet("font:40px;");
+        labelLicensePalteText   ->setStyleSheet("font:40px;");
+        labelInformationText    ->setStyleSheet("font:40px;");
+        labelCloseText          ->setStyleSheet("font:40px;");
     }
     else
     {
         Ui::SystemPage1080p ui1080;
         ui1080.setupUi(this);
 
-        buttonDateTime       = ui1080.buttonDateTime;
-        buttonSecurity       = ui1080.buttonSecurity;
-        buttonConfig         = ui1080.buttonConfig;
-        buttonUpgrade        = ui1080.buttonUpgrade;
-        buttonFactoryDefault = ui1080.buttonFactoryDefault;
-        buttonLanguage       = ui1080.buttonLanguage;
-        buttonLicensePlate   = ui1080.buttonLicensePlate;
-        buttonInformation    = ui1080.buttonInformation;
-        buttonClose          = ui1080.buttonClose;
+        buttonDateTime          = ui1080.buttonDateTime;
+        buttonSecurity          = ui1080.buttonSecurity;
+        buttonConfig            = ui1080.buttonConfig;
+        buttonUpgrade           = ui1080.buttonUpgrade;
+        buttonFactoryDefault    = ui1080.buttonFactoryDefault;
+        buttonLanguage          = ui1080.buttonLanguage;
+        buttonLicensePlate      = ui1080.buttonLicensePlate;
+        buttonInformation       = ui1080.buttonInformation;
+        buttonClose             = ui1080.buttonClose;
 
-        //yjsin [19/02/21] if text is long, change font size
-        if(utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
-        {
-            buttonUpgrade->setStyleSheet("font:63px;color:white");
-        }
-        else if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
-        {
-            buttonFactoryDefault->setStyleSheet("font:58px;color:white");
-        }
+        labelDateTimeText       = ui1080.labelDateTimeText;
+        labelSecurityText       = ui1080.labelSecurityText;
+        labelConfigText         = ui1080.labelConfigText;
+        labelUpgradeText        = ui1080.labelUpgradeText;
+        labelFactoryDefaultText = ui1080.labelFactoryDefaultText;
+        labelLanguageText       = ui1080.labelLanguageText;
+        labelLicensePalteText   = ui1080.labelLicensePlateText;
+        labelInformationText    = ui1080.labelInformationText;
+        labelCloseText          = ui1080.labelCloseText;
+
+        labelDateTimeText       ->setStyleSheet("font:65px;");
+        labelSecurityText       ->setStyleSheet("font:65px;");
+        labelConfigText         ->setStyleSheet("font:65px;");
+        labelUpgradeText        ->setStyleSheet("font:65px;");
+        labelFactoryDefaultText ->setStyleSheet("font:65px;");
+        labelLanguageText       ->setStyleSheet("font:65px;");
+        labelLicensePalteText   ->setStyleSheet("font:65px;");
+        labelInformationText    ->setStyleSheet("font:65px;");
+        labelCloseText          ->setStyleSheet("font:65px;");
     }
 
     setPalette(QPalette(QColor(26, 32, 46)));
@@ -83,15 +99,66 @@ SystemPage::SystemPage(QWidget *parent)
     licensePlateDialog  = NULL;
     informationDialog   = NULL;
 
-    connect(buttonDateTime,       SIGNAL(released()), this, SLOT(onButtonDateTime()));
-    connect(buttonSecurity,       SIGNAL(released()), this, SLOT(onButtonSecurity()));
-    connect(buttonConfig,         SIGNAL(released()), this, SLOT(onButtonConfig()));
-    connect(buttonUpgrade,        SIGNAL(released()), this, SLOT(onButtonUpgrade()));
-    connect(buttonFactoryDefault, SIGNAL(released()), this, SLOT(onButtonFactoryDefault()));
-    connect(buttonLanguage,       SIGNAL(released()), this, SLOT(onButtonLanguage()));
-    connect(buttonLicensePlate,   SIGNAL(released()), this, SLOT(onButtonLicensePlate()));
-    connect(buttonInformation,    SIGNAL(released()), this, SLOT(onButtonInformation()));
-    connect(buttonClose,          SIGNAL(released()), this, SLOT(onButtonClose()));
+    iconImageNormal[0].load(":images/dvrsetup/system/datetime.png");
+    iconImageNormal[1].load(":images/dvrsetup/system/security.png");
+    iconImageNormal[2].load(":images/dvrsetup/system/config.png");
+    iconImageNormal[3].load(":images/dvrsetup/system/upgrade.png");
+    iconImageNormal[4].load(":images/dvrsetup/system/factorydefault.png");
+    iconImageNormal[5].load(":images/dvrsetup/system/language.png");
+    iconImageNormal[6].load(":images/dvrsetup/system/licenseplate.png");
+    iconImageNormal[7].load(":images/dvrsetup/system/information.png");
+    iconImageNormal[8].load(":images/dvrsetup/system/close.png");
+
+    iconImageFocus[0].load(":images/dvrsetup/system/datetime2.png");
+    iconImageFocus[1].load(":images/dvrsetup/system/security2.png");
+    iconImageFocus[2].load(":images/dvrsetup/system/config2.png");
+    iconImageFocus[3].load(":images/dvrsetup/system/upgrade2.png");
+    iconImageFocus[4].load(":images/dvrsetup/system/factorydefault2.png");
+    iconImageFocus[5].load(":images/dvrsetup/system/language2.png");
+    iconImageFocus[6].load(":images/dvrsetup/system/licenseplate2.png");
+    iconImageFocus[7].load(":images/dvrsetup/system/information2.png");
+    iconImageFocus[8].load(":images/dvrsetup/system/close2.png");
+
+    buttonDateTime      ->setPixmap(iconImageNormal[0]);
+    buttonSecurity      ->setPixmap(iconImageNormal[1]);
+    buttonConfig        ->setPixmap(iconImageNormal[2]);
+    buttonUpgrade       ->setPixmap(iconImageNormal[3]);
+    buttonFactoryDefault->setPixmap(iconImageNormal[4]);
+    buttonLanguage      ->setPixmap(iconImageNormal[5]);
+    buttonLicensePlate  ->setPixmap(iconImageNormal[6]);
+    buttonInformation   ->setPixmap(iconImageNormal[7]);
+    buttonClose         ->setPixmap(iconImageNormal[8]);
+
+    buttonDateTime      ->setScaledContents(true);  //resize img to label size
+    buttonDateTime      ->setScaledContents(true);
+    buttonSecurity      ->setScaledContents(true);
+    buttonConfig        ->setScaledContents(true);
+    buttonUpgrade       ->setScaledContents(true);
+    buttonFactoryDefault->setScaledContents(true);
+    buttonLanguage      ->setScaledContents(true);
+    buttonLicensePlate  ->setScaledContents(true);
+    buttonInformation   ->setScaledContents(true);
+    buttonClose         ->setScaledContents(true);
+
+    connect(buttonDateTime,         SIGNAL(pressed()), this, SLOT(onButtonDateTime()));
+    connect(buttonSecurity,         SIGNAL(pressed()), this, SLOT(onButtonSecurity()));
+    connect(buttonConfig,           SIGNAL(pressed()), this, SLOT(onButtonConfig()));
+    connect(buttonUpgrade,          SIGNAL(pressed()), this, SLOT(onButtonUpgrade()));
+    connect(buttonFactoryDefault,   SIGNAL(pressed()), this, SLOT(onButtonFactoryDefault()));
+    connect(buttonLanguage,         SIGNAL(pressed()), this, SLOT(onButtonLanguage()));
+    connect(buttonLicensePlate,     SIGNAL(pressed()), this, SLOT(onButtonLicensePlate()));
+    connect(buttonInformation,      SIGNAL(pressed()), this, SLOT(onButtonInformation()));
+    connect(buttonClose,            SIGNAL(pressed()), this, SLOT(onButtonClose()));
+
+    connect(buttonDateTime,         SIGNAL(focusIn()), this, SLOT(setFocusDateTime()));
+    connect(buttonSecurity,         SIGNAL(focusIn()), this, SLOT(setFocusSecurity()));
+    connect(buttonConfig,           SIGNAL(focusIn()), this, SLOT(setFocusConfig()));
+    connect(buttonUpgrade,          SIGNAL(focusIn()), this, SLOT(setFocusUpgrade()));
+    connect(buttonFactoryDefault,   SIGNAL(focusIn()), this, SLOT(setFocusFactoryDefault()));
+    connect(buttonLanguage,         SIGNAL(focusIn()), this, SLOT(setFocusLanguage()));
+    connect(buttonLicensePlate,     SIGNAL(focusIn()), this, SLOT(setFocusLicensePlate()));
+    connect(buttonInformation,      SIGNAL(focusIn()), this, SLOT(setFocusInformation()));
+    connect(buttonClose,            SIGNAL(focusIn()), this, SLOT(setFocusClose()));
 }
 SystemPage::~SystemPage()
 {
@@ -353,4 +420,92 @@ void SystemPage::dateFormatChanged(int val)
     }
 
     DateFormat = val;
+}
+void SystemPage::setFocusTabLayout()        { changeFocus(0); }
+void SystemPage::setFocusDateTime()         { changeFocus(1); }
+void SystemPage::setFocusSecurity()         { changeFocus(2); }
+void SystemPage::setFocusConfig()           { changeFocus(3); }
+void SystemPage::setFocusUpgrade()          { changeFocus(4); }
+void SystemPage::setFocusFactoryDefault()   { changeFocus(5); }
+void SystemPage::setFocusLanguage()         { changeFocus(6); }
+void SystemPage::setFocusLicensePlate()     { changeFocus(7); }
+void SystemPage::setFocusInformation()      { changeFocus(8); }
+void SystemPage::setFocusClose()            { changeFocus(9); }
+void SystemPage::changeFocus(int n)
+{
+    buttonDateTime      ->setPixmap(iconImageNormal[0]);
+    buttonSecurity      ->setPixmap(iconImageNormal[1]);
+    buttonConfig        ->setPixmap(iconImageNormal[2]);
+    buttonUpgrade       ->setPixmap(iconImageNormal[3]);
+    buttonFactoryDefault->setPixmap(iconImageNormal[4]);
+    buttonLanguage      ->setPixmap(iconImageNormal[5]);
+    buttonLicensePlate  ->setPixmap(iconImageNormal[6]);
+    buttonInformation   ->setPixmap(iconImageNormal[7]);
+    buttonClose         ->setPixmap(iconImageNormal[8]);
+
+    buttonDateTime      ->setFocusState(false);
+    buttonSecurity      ->setFocusState(false);
+    buttonConfig        ->setFocusState(false);
+    buttonUpgrade       ->setFocusState(false);
+    buttonFactoryDefault->setFocusState(false);
+    buttonLanguage      ->setFocusState(false);
+    buttonLicensePlate  ->setFocusState(false);
+    buttonInformation   ->setFocusState(false);
+    buttonClose         ->setFocusState(false);
+
+    switch(n)
+    {
+        case 0 :
+            break;
+
+        case 1 :
+            buttonDateTime      ->setPixmap(iconImageFocus[0]);
+            buttonDateTime      ->setFocusState(true);
+            break;
+
+        case 2:
+            buttonSecurity      ->setPixmap(iconImageFocus[1]);
+            buttonSecurity      ->setFocusState(true);
+            break;
+
+        case 3:
+            buttonConfig        ->setPixmap(iconImageFocus[2]);
+            buttonConfig        ->setFocusState(true);
+            break;
+
+        case 4:
+            buttonUpgrade       ->setPixmap(iconImageFocus[3]);
+            buttonUpgrade       ->setFocusState(true);
+            break;
+
+        case 5:
+            buttonFactoryDefault->setPixmap(iconImageFocus[4]);
+            buttonFactoryDefault->setFocusState(true);
+            break;
+
+        case 6:
+            buttonLanguage      ->setPixmap(iconImageFocus[5]);
+            buttonLanguage      ->setFocusState(true);
+            break;
+
+        case 7:
+            buttonLicensePlate  ->setPixmap(iconImageFocus[6]);
+            buttonLicensePlate  ->setFocusState(true);
+            break;
+
+        case 8:
+            buttonInformation   ->setPixmap(iconImageFocus[7]);
+            buttonInformation   ->setFocusState(true);
+            break;
+
+        case 9:
+            buttonClose         ->setPixmap(iconImageFocus[8]);
+            buttonClose         ->setFocusState(true);
+            break;
+
+        default :
+            buttonDateTime      ->setPixmap(iconImageFocus[0]);
+            buttonDateTime      ->setFocusState(true);
+            break;
+    }
 }

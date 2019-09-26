@@ -4,6 +4,7 @@
 #include <QtGui/QWidget>
 #include "ui_displaypage.h"
 #include "ui_displaypage1080p.h"
+#include "ui/customwidget/customimagelabel.h"
 
 class TextMessageDialog;
 class CameraNameDialog;
@@ -18,10 +19,19 @@ public:
     DisplayPage(QWidget *parent = 0);
     ~DisplayPage();
 
-    QPushButton *buttonVideoOutput;
-    QPushButton *buttonCameraName;
-    QPushButton *buttonOsd;
-    QPushButton *buttonClose;
+    CustomImageLabel *buttonVideoOutput;
+    CustomImageLabel *buttonCameraName;
+    CustomImageLabel *buttonNotAvailable;
+    CustomImageLabel *buttonOsd;
+    CustomImageLabel *buttonNotAvailable2;
+    CustomImageLabel *buttonClose;
+
+    QLabel *labelVideoOutputText;
+    QLabel *labelCameraNameText;
+    QLabel *labelNotAvailableText;
+    QLabel *labelOsdText;
+    QLabel *labelNotAvailableText2;
+    QLabel *labelCloseText;
 
 signals:
     void saveDisplayPage(int type);
@@ -29,18 +39,27 @@ signals:
 	void closeSetupMenu(void);
 
 public slots:
-
-private slots:
 	void onButtonCameraName(void);
 	void onButtonVideoOutput(void);
 	void onButtonOsd(void);
 	void onButtonClose(void);
+
+    void setFocusVideoOutput(void);
+    void setFocusCameraName(void);
+    void setFocusOsd(void);
+    void setFocusClose(void);
+    void setFocusTabLayout(void);
 
 private:
     TextMessageDialog  *msgBox;
 	CameraNameDialog   *cameraNameDialog;
 	VideoOutputDialog  *videoOutputDialog;
 	OsdDialog          *osdDialog;
+
+    QPixmap iconImageNormal[6];
+    QPixmap iconImageFocus[6];
+
+    void changeFocus(int n);
 };
 
 #endif // DISPLAYPAGE_H

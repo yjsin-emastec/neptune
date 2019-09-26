@@ -16,191 +16,189 @@
   <property name="autoFillBackground">
    <bool>true</bool>
   </property>
-  <widget class="QPushButton" name="buttonClose">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="CustomImageLabel" name="buttonVideo">
    <property name="geometry">
     <rect>
-     <x>1220</x>
-     <y>470</y>
-     <width>500</width>
-     <height>400</height>
+     <x>270</x>
+     <y>140</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
-    <string>Close</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonDiskFormat">
+  <widget class="CustomImageLabel" name="buttonTrigger">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>470</y>
-     <width>500</width>
-     <height>400</height>
+     <x>870</x>
+     <y>140</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
-    <string>SSD Format</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="buttonVideo">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="CustomImageLabel" name="buttonGsensor">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>60</y>
-     <width>500</width>
-     <height>400</height>
+     <x>1470</x>
+     <y>140</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
    </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
+   <property name="text">
+    <string/>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
+  </widget>
+  <widget class="CustomImageLabel" name="buttonBuzzer">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>550</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="CustomImageLabel" name="buttonFormat">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>550</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="CustomImageLabel" name="buttonClose">
+   <property name="geometry">
+    <rect>
+     <x>1470</x>
+     <y>550</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelVideoText">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>340</y>
+     <width>541</width>
+     <height>161</height>
+    </rect>
    </property>
    <property name="text">
     <string>Video Input</string>
    </property>
-  </widget>
-  <widget class="QPushButton" name="buttonGsensor">
-   <property name="enabled">
-    <bool>true</bool>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
+  </widget>
+  <widget class="QLabel" name="labelTriggerText">
    <property name="geometry">
     <rect>
-     <x>1220</x>
-     <y>60</y>
-     <width>500</width>
-     <height>400</height>
+     <x>690</x>
+     <y>340</y>
+     <width>541</width>
+     <height>161</height>
     </rect>
    </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
+   <property name="text">
+    <string>Trigger Input</string>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelGsensorText">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>340</y>
+     <width>541</width>
+     <height>161</height>
+    </rect>
    </property>
    <property name="text">
     <string>Impact
 Sensitivity</string>
    </property>
-  </widget>
-  <widget class="QPushButton" name="buttonBuzzer">
-   <property name="enabled">
-    <bool>true</bool>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
+  </widget>
+  <widget class="QLabel" name="labelBuzzerText">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>470</y>
-     <width>500</width>
-     <height>400</height>
+     <x>90</x>
+     <y>750</y>
+     <width>541</width>
+     <height>161</height>
     </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="text">
     <string>Buzzer Output</string>
    </property>
-  </widget>
-  <widget class="QPushButton" name="buttonTrigger">
-   <property name="enabled">
-    <bool>true</bool>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
+  </widget>
+  <widget class="QLabel" name="labelFormatText">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>60</y>
-     <width>500</width>
-     <height>400</height>
+     <x>690</x>
+     <y>750</y>
+     <width>541</width>
+     <height>161</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
+   <property name="text">
+    <string>SSD Format</string>
    </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>150</height>
-    </size>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
+  </widget>
+  <widget class="QLabel" name="labelCloseText">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>750</y>
+     <width>541</width>
+     <height>161</height>
+    </rect>
    </property>
    <property name="text">
-    <string>Trigger Input</string>
+    <string>Close</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomImageLabel</class>
+   <extends>QLabel</extends>
+   <header>ui/customwidget/customimagelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

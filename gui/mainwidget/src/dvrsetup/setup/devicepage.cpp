@@ -15,24 +15,52 @@ DevicePage::DevicePage(QWidget *parent)
         Ui::DevicePage ui720;
         ui720.setupUi(this);
 
-        buttonVideo = ui720.buttonVideo;
-        buttonTrigger = ui720.buttonTrigger;
-        buttonGsensor = ui720.buttonGsensor;
-        buttonBuzzer = ui720.buttonBuzzer;
-        buttonDiskFormat = ui720.buttonDiskFormat;
-        buttonClose = ui720.buttonClose;
+        buttonVideo         = ui720.buttonVideo;
+        buttonTrigger       = ui720.buttonTrigger;
+        buttonGsensor       = ui720.buttonGsensor;
+        buttonBuzzer        = ui720.buttonBuzzer;
+        buttonFormat        = ui720.buttonFormat;
+        buttonClose         = ui720.buttonClose;
+
+        labelVideoText      = ui720.labelVideoText;
+        labelTriggerText    = ui720.labelTriggerText;
+        labelGsensorText    = ui720.labelGsensorText;
+        labelBuzzerText     = ui720.labelBuzzerText;
+        labelFormatText     = ui720.labelFormatText;
+        labelCloseText      = ui720.labelCloseText;
+
+        labelVideoText      ->setStyleSheet("font: 40px;");
+        labelTriggerText    ->setStyleSheet("font: 40px;");
+        labelGsensorText    ->setStyleSheet("font: 40px;");
+        labelBuzzerText     ->setStyleSheet("font: 40px;");
+        labelFormatText     ->setStyleSheet("font: 40px;");
+        labelCloseText      ->setStyleSheet("font: 40px;");
     }
     else
     {
         Ui::DevicePage1080p ui1080;
         ui1080.setupUi(this);
 
-        buttonVideo = ui1080.buttonVideo;
-        buttonTrigger = ui1080.buttonTrigger;
-        buttonGsensor = ui1080.buttonGsensor;
-        buttonBuzzer = ui1080.buttonBuzzer;
-        buttonDiskFormat = ui1080.buttonDiskFormat;
-        buttonClose = ui1080.buttonClose;
+        buttonVideo         = ui1080.buttonVideo;
+        buttonTrigger       = ui1080.buttonTrigger;
+        buttonGsensor       = ui1080.buttonGsensor;
+        buttonBuzzer        = ui1080.buttonBuzzer;
+        buttonFormat        = ui1080.buttonFormat;
+        buttonClose         = ui1080.buttonClose;
+
+        labelVideoText      = ui1080.labelVideoText;
+        labelTriggerText    = ui1080.labelTriggerText;
+        labelGsensorText    = ui1080.labelGsensorText;
+        labelBuzzerText     = ui1080.labelBuzzerText;
+        labelFormatText     = ui1080.labelFormatText;
+        labelCloseText      = ui1080.labelCloseText;
+
+        labelVideoText      ->setStyleSheet("font:65px;");
+        labelTriggerText    ->setStyleSheet("font:65px;");
+        labelGsensorText    ->setStyleSheet("font:65px;");
+        labelBuzzerText     ->setStyleSheet("font:65px;");
+        labelFormatText     ->setStyleSheet("font:65px;");
+        labelCloseText      ->setStyleSheet("font:65px;");
     }
 
     setPalette(QPalette(QColor(26, 32, 46)));
@@ -45,15 +73,49 @@ DevicePage::DevicePage(QWidget *parent)
     buzzerDialog        = NULL;
 
     appmgr_get_disk_info(&diskInfo[0]);
-    if(diskInfo[0].smartInfo_ata_id)    { buttonDiskFormat->setText(tr("HDD Format")); }
-    else                                { buttonDiskFormat->setText(tr("SSD Format")); }
+    if(diskInfo[0].smartInfo_ata_id)    { labelFormatText->setText(tr("HDD Format")); }
+    else                                { labelFormatText->setText(tr("SSD Format")); }
 
-    connect(buttonVideo,       SIGNAL(released()), this, SLOT(onButtonVideo()));
-    connect(buttonTrigger,     SIGNAL(released()), this, SLOT(onButtonTrigger()));
-    connect(buttonGsensor,     SIGNAL(released()), this, SLOT(onButtonGsensor()));
-    connect(buttonBuzzer,      SIGNAL(released()), this, SLOT(onButtonBuzzer()));
-    connect(buttonDiskFormat,  SIGNAL(released()), this, SLOT(onDiskFormat()));
-    connect(buttonClose,       SIGNAL(released()), this, SLOT(onButtonClose()));
+    iconImageNormal[0].load(":images/dvrsetup/device/videoinput.png");
+    iconImageNormal[1].load(":images/dvrsetup/device/videoinput.png");
+    iconImageNormal[2].load(":images/dvrsetup/device/impactsensitivity.png");
+    iconImageNormal[3].load(":images/dvrsetup/display/videoout.png");
+    iconImageNormal[4].load(":images/dvrsetup/device/diskformat.png");
+    iconImageNormal[5].load(":images/dvrsetup/system/close.png");
+
+    iconImageFocus[0].load(":images/dvrsetup/device/videoinput2.png");
+    iconImageFocus[1].load(":images/dvrsetup/device/videoinput2.png");
+    iconImageFocus[2].load(":images/dvrsetup/device/impactsensitivity2.png");
+    iconImageFocus[3].load(":images/dvrsetup/display/videoout2.png");
+    iconImageFocus[4].load(":images/dvrsetup/device/diskformat2.png");
+    iconImageFocus[5].load(":images/dvrsetup/system/close2.png");
+
+    buttonVideo     ->setPixmap(iconImageNormal[0]);
+    buttonTrigger   ->setPixmap(iconImageNormal[1]);
+    buttonGsensor   ->setPixmap(iconImageNormal[2]);
+    buttonBuzzer    ->setPixmap(iconImageNormal[3]);
+    buttonFormat    ->setPixmap(iconImageNormal[4]);
+    buttonClose     ->setPixmap(iconImageNormal[5]);
+
+    buttonVideo     ->setScaledContents(true);
+    buttonTrigger   ->setScaledContents(true);
+    buttonGsensor   ->setScaledContents(true);
+    buttonBuzzer    ->setScaledContents(true);
+    buttonFormat    ->setScaledContents(true);
+    buttonClose     ->setScaledContents(true);
+
+    connect(buttonVideo,        SIGNAL(pressed()), this, SLOT(onButtonVideo()));
+    connect(buttonTrigger,      SIGNAL(pressed()), this, SLOT(onButtonTrigger()));
+    connect(buttonGsensor,      SIGNAL(pressed()), this, SLOT(onButtonGsensor()));
+    connect(buttonBuzzer,       SIGNAL(pressed()), this, SLOT(onButtonBuzzer()));
+    connect(buttonFormat,       SIGNAL(pressed()), this, SLOT(onButtonFormat()));
+    connect(buttonClose,        SIGNAL(pressed()), this, SLOT(onButtonClose()));
+    connect(buttonVideo,        SIGNAL(focusIn()), this, SLOT(setFocusVideo()));
+    connect(buttonTrigger,      SIGNAL(focusIn()), this, SLOT(setFocusTrigger()));
+    connect(buttonGsensor,      SIGNAL(focusIn()), this, SLOT(setFocusGsensor()));
+    connect(buttonBuzzer,       SIGNAL(focusIn()), this, SLOT(setFocusBuzzer()));
+    connect(buttonFormat,       SIGNAL(focusIn()), this, SLOT(setFocusFormat()));
+    connect(buttonClose,        SIGNAL(focusIn()), this, SLOT(setFocusClose()));
 }
 DevicePage::~DevicePage()
 {
@@ -188,7 +250,7 @@ void DevicePage::onButtonBuzzer(void)
     delete buzzerDialog;
     buzzerDialog = NULL;
 }
-void DevicePage::onDiskFormat(void)
+void DevicePage::onButtonFormat(void)
 {
     emit escapeTabFocus();
 
@@ -230,4 +292,68 @@ void DevicePage::onButtonClose()
 {
     emit escapeTabFocus();
     emit closeSetupMenu();
+}
+void DevicePage::setFocusTabLayout()    { changeFocus(0); }
+void DevicePage::setFocusVideo()        { changeFocus(1); }
+void DevicePage::setFocusTrigger()      { changeFocus(2); }
+void DevicePage::setFocusGsensor()      { changeFocus(3); }
+void DevicePage::setFocusBuzzer()       { changeFocus(4); }
+void DevicePage::setFocusFormat()       { changeFocus(5); }
+void DevicePage::setFocusClose()        { changeFocus(6); }
+void DevicePage::changeFocus(int n)
+{
+    buttonVideo     ->setPixmap(iconImageNormal[0]);
+    buttonTrigger   ->setPixmap(iconImageNormal[1]);
+    buttonGsensor   ->setPixmap(iconImageNormal[2]);
+    buttonBuzzer    ->setPixmap(iconImageNormal[3]);
+    buttonFormat    ->setPixmap(iconImageNormal[4]);
+    buttonClose     ->setPixmap(iconImageNormal[5]);
+
+    buttonVideo     ->setFocusState(false);
+    buttonTrigger   ->setFocusState(false);
+    buttonGsensor   ->setFocusState(false);
+    buttonBuzzer    ->setFocusState(false);
+    buttonFormat    ->setFocusState(false);
+    buttonClose     ->setFocusState(false);
+
+    switch(n)
+    {
+        case 0 :
+            break;
+
+        case 1 :
+            buttonVideo     ->setPixmap(iconImageFocus[0]);
+            buttonVideo     ->setFocusState(true);
+            break;
+
+        case 2 :
+            buttonTrigger   ->setPixmap(iconImageFocus[1]);
+            buttonTrigger   ->setFocusState(true);
+            break;
+
+        case 3 :
+            buttonGsensor   ->setPixmap(iconImageFocus[2]);
+            buttonGsensor   ->setFocusState(true);
+            break;
+
+        case 4 :
+            buttonBuzzer    ->setPixmap(iconImageFocus[3]);
+            buttonBuzzer    ->setFocusState(true);
+            break;
+
+        case 5 :
+            buttonFormat    ->setPixmap(iconImageFocus[4]);
+            buttonFormat    ->setFocusState(true);
+            break;
+
+        case 6 :
+            buttonClose     ->setPixmap(iconImageFocus[5]);
+            buttonClose     ->setFocusState(true);
+            break;
+
+        default :
+            buttonVideo     ->setPixmap(iconImageFocus[0]);
+            buttonVideo     ->setFocusState(true);
+            break;
+    }
 }
