@@ -158,10 +158,18 @@ void VideoInputBar::onButtonMirror()
             case 6 : { dst = DeviceCfg.camera_mirror06; break; }
             case 7 : { dst = DeviceCfg.camera_mirror07; break; }
 #endif
+            default: { dst = NULL;                             }
         }
 
-        if( infoMirror[i] == 1 )            { utils_cfg_cpy_item(dst, "MIRROR"); }
-        else                                { utils_cfg_cpy_item(dst, "NORMAL"); }
+        if( dst != NULL )
+        {
+            if( infoMirror[i] == 1 )        { utils_cfg_cpy_item(dst, "MIRROR"); }
+            else                            { utils_cfg_cpy_item(dst, "NORMAL"); }
+        }
+        else
+        {
+            qDebug("[Error] %s, DeviceCfg struct member dose not exitst.", __func__);
+        }
     }
     emit videoInputPreview();
 }
@@ -206,10 +214,18 @@ void VideoInputBar::onButtonFlip()
             case 6 : { dst = DeviceCfg.camera_flip06; break; }
             case 7 : { dst = DeviceCfg.camera_flip07; break; }
 #endif
+            default: { dst = NULL;                           }
         }
 
-        if( infoFlip[i] == 1 )              { utils_cfg_cpy_item(dst, "DOWN"); }
-        else                                { utils_cfg_cpy_item(dst, "UP");   }
+        if( dst != NULL )
+        {
+            if( infoFlip[i] == 1 )          { utils_cfg_cpy_item(dst, "DOWN"); }
+            else                            { utils_cfg_cpy_item(dst, "UP");   }
+        }
+        else
+        {
+            qDebug("[Error] %s, DeviceCfg struct member dose not exitst.", __func__);
+        }
     }
     emit videoInputPreview();
 }
