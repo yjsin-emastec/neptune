@@ -79,11 +79,8 @@ PlayTimeBar::PlayTimeBar(QWidget *parent)
                 "::groove { margin: 30px; height: 30px; background-color: rgb(255,255,255,0);}"
                 "::handle { image: url(:/images/slider_handle.png); width: 60px; margin: -30px}");
     }
-#if( DEVINFO_VIDEONUM == 8 )
-    CH_COUNT=8;
-#else
+
     CH_COUNT=devInfo.videoNum;
-#endif
 
     sliderPlayTime->move(TL_LEFT_MARGIN-TL_SLIDER_HANDLE_GAP, TL_UP_MARGIN-TL_SLIDER_HEIGHT);
     sliderPlayTime->setRange(0, TL_WIDTH-1);

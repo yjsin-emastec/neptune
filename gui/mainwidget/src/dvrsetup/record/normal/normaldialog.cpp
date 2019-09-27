@@ -489,11 +489,7 @@ void NormalDialog::onButtonFrameAll()
 int NormalDialog::getMaxFrame(int chNum)
 {
     int currentMaxFrame;
-#if( DEVINFO_VIDEONUM == 8 )
-    int arVIS[8];
-#else
     int arVIS[devInfo.videoNum];
-#endif
 
     ver_get_vis_list(arVIS);
 
@@ -522,11 +518,7 @@ int NormalDialog::getMaxFrame(int chNum)
 int NormalDialog::getMaxFrame(int chNum)
 {
     int currentMaxFrame;
-#if( DEVINFO_VIDEONUM == 8 )
-    int arVIS[8];
-#else
     int arVIS[devInfo.videoNum];
-#endif
 
     ver_get_vis_list(arVIS);
 

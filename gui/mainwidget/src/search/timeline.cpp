@@ -5,11 +5,8 @@
 TimeLine::TimeLine(QWidget *parent)
     : QWidget(parent)
 {
-#if( DEVINFO_VIDEONUM == 8 )
-    CH_COUNT=8;
-#else
     CH_COUNT=devInfo.videoNum;
-#endif
+
     isDrawRecord=true;
     focusStatus=1;
     updateTimeLinePixmap();

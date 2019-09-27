@@ -256,11 +256,7 @@ void PlayBarDialog::resumePlayback(int isAviBackup, int sec)
         }
         else
         {
-#if( DEVINFO_VIDEONUM == 8 )
-            for(int i = 0; i < 8; i++)
-#else
             for(int i = 0; i < devInfo.videoNum; i++)
-#endif
             {
                 chMask |= (1 << i);
             }
@@ -420,11 +416,7 @@ void PlayBarDialog::onButtonAudio(void)
     }
     else
     {
-#if( DEVINFO_VIDEONUM == 8 )
-        if(indexAudio > 8 )
-#else
         if( indexAudio > devInfo.videoNum)
-#endif
         {
             indexAudio = LIVE_AUDIO_MUTE;
         }

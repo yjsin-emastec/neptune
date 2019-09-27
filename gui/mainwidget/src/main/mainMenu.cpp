@@ -123,11 +123,8 @@ void MainMenu::onButtonSearch()
 }
 void MainMenu::onButtonAudio()
 {
-#if( DEVINFO_VIDEONUM == 8 )
-    if(indexAudio > 8 || indexAudio < 0)    { indexAudio = 0; }
-#else
     if(indexAudio > devInfo.videoNum || indexAudio < 0)   { indexAudio = 0; }
-#endif
+
     if(currentSplit==Split_1)
     {
         if(indexAudio == AUDIO_LIVE_MUTE-1)
@@ -241,11 +238,7 @@ void MainMenu::initMainMenu(void)
         indexAudio = 1;
         appmgr_set_audio_output_mix(AUDIO_LIVE_MUTE, LIVE_AUDIO_MUTE);
     }
-#if( DEVINFO_VIDEONUM == 8 )
-    else if(audioStatus >= LIVE_AUDIO_SINGLE_1 && audioStatus <= 8+1)
-#else
     else if (audioStatus >= LIVE_AUDIO_SINGLE_1 && audioStatus <= devInfo.videoNum+1)
-#endif
     {
         labelAudioText->setText(QString("%1 %2").arg(tr("Audio"), QString::number(audioStatus-1)));
         updateAudioIcon(audioStatus);
@@ -275,11 +268,7 @@ void MainMenu::onUpdateAudioButton()
 
         indexAudio=1;
     }
-#if( DEVINFO_VIDEONUM == 8 )
-    else if(audioOutCH >= LIVE_AUDIO_SINGLE_1 && audioOutCH <= 8+1)
-#else
     else if(audioOutCH >= LIVE_AUDIO_SINGLE_1 && audioOutCH <= devInfo.videoNum+1)
-#endif
     {
         labelAudioText->setText(QString("%1 %2").arg(tr("Audio"), QString::number(audioOutCH-1)));
         updateAudioIcon(audioOutCH);
