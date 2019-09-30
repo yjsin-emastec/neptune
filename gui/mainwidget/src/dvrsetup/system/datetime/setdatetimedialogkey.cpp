@@ -61,47 +61,48 @@ void SetDateTimeDialog::keyPressEvent(QKeyEvent *event)
     {
         case Qt::Key_Up :
 
-            if     ( buttonTimeFormat->hasFocus())                  { buttonSave->setFocus();       }
-            else if( buttonGpsSync->hasFocus())                     { buttonClose->setFocus();      }
+            if     ( buttonGpsSync->hasFocus() )                    { buttonSave->setFocus();       }
+            else if( buttonTimeFormat->hasFocus() )                 { buttonClose->setFocus();      }
             else if( comboBoxTimeZone->hasFocus() && isKeyLock )    { changeComboBoxValue(1);       }
-            else if( comboBoxTimeZone->hasFocus() )                 { buttonTimeFormat->setFocus(); }
+            else if( comboBoxTimeZone->hasFocus() )                 { buttonGpsSync->setFocus();    }
             else if( dateTimeEdit->hasFocus() && isKeyLock )        { dateTimeEdit->stepUp();       }
             else if( dateTimeEdit->hasFocus() )
             {
-                if ( comboBoxTimeZone->isEnabled() )                { comboBoxTimeZone->setFocus(); }
-                else                                                { buttonTimeFormat->setFocus(); }
+                if( comboBoxTimeZone->isEnabled() )                 { comboBoxTimeZone->setFocus(); }
+                else                                                { buttonGpsSync->setFocus();    }
             }
             else if( buttonSave->hasFocus() || buttonClose->hasFocus() )
             {
-                if ( dateTimeEdit->isEnabled() )                    { dateTimeEdit->setFocus();     }
+                if( dateTimeEdit->isEnabled() )                     { dateTimeEdit->setFocus();     }
                 else                                                { comboBoxTimeZone->setFocus(); }
             }
+
             break;
 
         case Qt::Key_Down :
 
-            if     ( buttonTimeFormat->hasFocus() || buttonGpsSync->hasFocus() )
+            if     ( buttonGpsSync->hasFocus() || buttonTimeFormat->hasFocus() )
             {
-                if ( comboBoxTimeZone->isEnabled() )                { comboBoxTimeZone->setFocus(); }
+                if( comboBoxTimeZone->isEnabled() )                 { comboBoxTimeZone->setFocus(); }
                 else                                                { dateTimeEdit->setFocus();     }
             }
             else if( comboBoxTimeZone->hasFocus() && isKeyLock )    { changeComboBoxValue(2);       }
             else if( comboBoxTimeZone->hasFocus() )
             {
-                if ( dateTimeEdit->isEnabled() )                    { dateTimeEdit->setFocus();     }
+                if( dateTimeEdit->isEnabled() )                     { dateTimeEdit->setFocus();     }
                 else                                                { buttonSave->setFocus();       }
             }
             else if( dateTimeEdit->hasFocus() && isKeyLock )        { dateTimeEdit->stepDown();     }
             else if( dateTimeEdit->hasFocus() )                     { buttonSave->setFocus();       }
-            else if( buttonSave->hasFocus() )                       { buttonTimeFormat->setFocus(); }
-            else if( buttonClose->hasFocus() )                      { buttonGpsSync->setFocus();    }
+            else if( buttonSave->hasFocus() )                       { buttonGpsSync->setFocus();    }
+            else if( buttonClose->hasFocus() )                      { buttonTimeFormat->setFocus(); }
 
             break;
 
         case Qt::Key_Left :
 
-            if     ( buttonTimeFormat->hasFocus() )                 { buttonGpsSync->setFocus();    }
-            else if( buttonGpsSync->hasFocus() )                    { buttonTimeFormat->setFocus(); }
+            if     ( buttonGpsSync->hasFocus() )                    { buttonTimeFormat->setFocus(); }
+            else if( buttonTimeFormat->hasFocus() )                 { buttonGpsSync->setFocus();    }
             else if( dateTimeEdit->hasFocus() && isKeyLock )        { changeDateTimeEditFocus(1);   }
             else if( buttonSave->hasFocus() )                       { buttonClose->setFocus();      }
             else if( buttonClose->hasFocus() )                      { buttonSave->setFocus();       }
@@ -110,8 +111,8 @@ void SetDateTimeDialog::keyPressEvent(QKeyEvent *event)
 
         case Qt::Key_Right :
 
-            if     ( buttonTimeFormat->hasFocus() )                 { buttonGpsSync->setFocus();    }
-            else if( buttonGpsSync->hasFocus() )                    { buttonTimeFormat->setFocus(); }
+            if     ( buttonGpsSync->hasFocus() )                    { buttonTimeFormat->setFocus(); }
+            else if( buttonTimeFormat->hasFocus() )                 { buttonGpsSync->setFocus();    }
             else if( dateTimeEdit->hasFocus() && isKeyLock )        { changeDateTimeEditFocus(2);   }
             else if( buttonSave->hasFocus() )                       { buttonClose->setFocus();      }
             else if( buttonClose->hasFocus() )                      { buttonSave->setFocus();       }
@@ -120,8 +121,8 @@ void SetDateTimeDialog::keyPressEvent(QKeyEvent *event)
 
         case Qt::Key_Enter :
 
-            if     ( buttonTimeFormat->hasFocus() )                 { onButtonTimeFormat();         }
-            else if( buttonGpsSync->hasFocus() )                    { onButtonGpsSync();            }
+            if     ( buttonGpsSync->hasFocus() )                    { onButtonGpsSync();            }
+            else if( buttonTimeFormat->hasFocus() )                 { onButtonTimeFormat();         }
             else if( comboBoxTimeZone->hasFocus() )                 { isKeyLock = true;             }
             else if( dateTimeEdit->hasFocus() )                     { isKeyLock = true;             }
             else if( buttonSave->hasFocus() )                       { onButtonSave();               }

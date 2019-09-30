@@ -80,7 +80,7 @@
    <widget class="QPushButton" name="buttonTimeFormat">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>560</x>
       <y>30</y>
       <width>511</width>
       <height>181</height>
@@ -93,7 +93,7 @@
    <widget class="QPushButton" name="buttonGpsSync">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>30</x>
       <y>30</y>
       <width>511</width>
       <height>181</height>
@@ -201,7 +201,7 @@
    <widget class="QLabel" name="labelTimeFormatBorder">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>550</x>
       <y>20</y>
       <width>531</width>
       <height>201</height>
@@ -217,7 +217,7 @@
    <widget class="QLabel" name="labelGpsSyncBorder">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>20</x>
       <y>20</y>
       <width>531</width>
       <height>201</height>

@@ -69,7 +69,7 @@ SetDateTimeDialog::SetDateTimeDialog(QWidget *parent, int dateFormat, cfg_dls_t 
     dateTimeEdit->installEventFilter(this);
     comboBoxTimeZone->installEventFilter(this);
 
-    buttonTimeFormat->setFocus();
+    buttonGpsSync->setFocus();
     isKeyLock = false;
 }
 SetDateTimeDialog::~SetDateTimeDialog()
