@@ -14,7 +14,16 @@
    <string>Dialog</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_Dialog">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <item>
@@ -26,7 +35,16 @@
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_Border">
-      <property name="margin">
+      <property name="leftMargin">
+       <number>3</number>
+      </property>
+      <property name="topMargin">
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
+       <number>3</number>
+      </property>
+      <property name="bottomMargin">
        <number>3</number>
       </property>
       <item>
@@ -112,8 +130,6 @@
          <property name="font">
           <font>
            <pointsize>30</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
           </font>
          </property>
          <property name="text">
@@ -153,8 +169,6 @@
          <property name="font">
           <font>
            <pointsize>30</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
           </font>
          </property>
          <property name="text">
@@ -194,9 +208,7 @@
          <property name="font">
           <font>
            <pointsize>30</pointsize>
-           <weight>75</weight>
            <italic>false</italic>
-           <bold>true</bold>
           </font>
          </property>
          <property name="text">
@@ -236,8 +248,6 @@
          <property name="font">
           <font>
            <pointsize>30</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
           </font>
          </property>
          <property name="text">
