@@ -27,14 +27,14 @@ typedef struct
 /* value - 1 use HIIR,  value - 0 - don't use HIIR */
 #define GPIO_DEVS_HIIR                _IOWR(GPIO_DEVS_IOC_MAGIC, 3, GpioDevsRW)
 
-#define	WATCHDOG_IOCTL_BASE           'W'
-#define	WDIOC_GETSUPPORT              _IOR(WATCHDOG_IOCTL_BASE, 0, struct watchdog_info)
-#define	WDIOC_SETOPTIONS              _IOR(WATCHDOG_IOCTL_BASE, 4, int)
-#define	WDIOC_KEEPALIVE               _IOR(WATCHDOG_IOCTL_BASE, 5, int)
-#define	WDIOC_SETTIMEOUT              _IOWR(WATCHDOG_IOCTL_BASE, 6, int)
+#define WATCHDOG_IOCTL_BASE           'W'
+#define WDIOC_GETSUPPORT              _IOR(WATCHDOG_IOCTL_BASE, 0, struct watchdog_info)
+#define WDIOC_SETOPTIONS              _IOR(WATCHDOG_IOCTL_BASE, 4, int)
+#define WDIOC_KEEPALIVE               _IOR(WATCHDOG_IOCTL_BASE, 5, int)
+#define WDIOC_SETTIMEOUT              _IOWR(WATCHDOG_IOCTL_BASE, 6, int)
 
-#define	WDIOS_DISABLECARD             0x0001 /* Turn off the watchdog timer */
-#define	WDIOS_ENABLECARD              0x0002 /* Turn on the watchdog timer */
+#define WDIOS_DISABLECARD             0x0001 /* Turn off the watchdog timer */
+#define WDIOS_ENABLECARD              0x0002 /* Turn on the watchdog timer */
 
 int  gpio_dev_get_acc_power_status    (void);
 int  gpio_dev_get_trigger             (int *value);

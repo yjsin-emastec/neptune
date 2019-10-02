@@ -6,8 +6,8 @@ extern "C"{
 #endif
 
 enum {
-	DEV_RS232_KEYPAD = 0,
-	DEV_MAX,
+    DEV_RS232_KEYPAD = 0,
+    DEV_MAX,
 };
 
 int  devmgr_dev_init                    (int maxSensor, int maxAlarm);

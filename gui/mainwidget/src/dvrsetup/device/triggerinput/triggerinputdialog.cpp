@@ -473,121 +473,9 @@ TriggerInputDialog::~TriggerInputDialog()
 {
 }
 
-#if 1   //yjsin DeviceCfg was defined up to 4ch
 void TriggerInputDialog::initTriggerInputConfig(void)
 {
     buttonSourceDn[0]->setFocus();
-
-    //source init
-    QString source[NUMOFCH];
-    source[0] = QString(DeviceCfg.trigger1_source);
-    source[1] = QString(DeviceCfg.trigger2_source);
-    source[2] = QString(DeviceCfg.trigger3_source);
-    source[3] = QString(DeviceCfg.trigger4_source);
-
-    for(int i=0; i<NUMOFCH; i++)
-    {
-        if( source[i].split("CAM").length() == 2 )
-        {
-            QStringList strList = source[i].split("CAM");
-            infoSource[i] = strList[1].toInt();
-
-            if( (infoSource[i] <= 0) || (infoSource[i] > NUMOFCH) )
-            {
-                qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid source value";
-                infoSource[i] = i+1;
-            }
-        }
-        else
-        {
-            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid source config";
-            infoSource[i] = i+1;
-        }
-        updateSourceLabel(i);
-    }
-
-
-    //delay init
-    QString delay[NUMOFCH];
-    delay[0] = QString(DeviceCfg.trigger1_delay);
-    delay[1] = QString(DeviceCfg.trigger2_delay);
-    delay[2] = QString(DeviceCfg.trigger3_delay);
-    delay[3] = QString(DeviceCfg.trigger4_delay);
-
-    for(int i=0; i<NUMOFCH; i++)
-    {
-        if( delay[i].split("SEC").length() == 2 )
-        {
-            QStringList strList = delay[i].split("SEC");
-            infoDelay[i] = strList[0].toInt();
-
-            if( infoDelay[i] < 0 || infoDelay[i] > 20 )
-            {
-                qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid delay value";
-                infoDelay[i] = 2;
-            }
-        }
-        else
-        {
-            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid delay config";
-            infoDelay[i] = 2;
-        }
-        updateDelayLabel(i);
-    }
-
-
-    //priority init
-    int priority[NUMOFCH];
-    priority[0] = QString(DeviceCfg.trigger1_priority).toInt();
-    priority[1] = QString(DeviceCfg.trigger2_priority).toInt();
-    priority[2] = QString(DeviceCfg.trigger3_priority).toInt();
-    priority[3] = QString(DeviceCfg.trigger4_priority).toInt();
-
-    for(int i=0; i<NUMOFCH; i++)
-    {
-        if( (priority[i]>=1) && (priority[i]<=NUMOFCH))
-        {
-            infoPriority[i] = priority[i];
-        }
-        else
-        {
-            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid priority value";
-            infoPriority[i] = i+1;
-        }
-        updatePriorityLabel(i);
-    }
-
-
-    //audio init
-    QString audio[NUMOFCH];
-    audio[0] = QString(DeviceCfg.trigger1_audio);
-    audio[1] = QString(DeviceCfg.trigger2_audio);
-    audio[2] = QString(DeviceCfg.trigger3_audio);
-    audio[3] = QString(DeviceCfg.trigger4_audio);
-
-    for(int i=0; i<NUMOFCH; i++)
-    {
-        if( audio[i].compare("OUTPUT") == 0 )
-        {
-            infoAudio[i] = true;
-        }
-        else if( audio[i].compare("MUTE") == 2 )
-        {
-            infoAudio[i] = false;
-        }
-        else
-        {
-            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid audio config";
-            infoAudio[i] = true;
-        }
-        updateAudioLabel(i);
-    }
-}
-#else
-void TriggerInputDialog::initTriggerInputConfig(void)
-{
-    buttonSourceDn[0]->setFocus();
-
 
     //source init
     QString source[NUMOFCH];
@@ -698,14 +586,18 @@ void TriggerInputDialog::initTriggerInputConfig(void)
         {
             infoAudio[i] = true;
         }
-        else
+        else if( audio[i].compare("MUTE") == 0 )
         {
             infoAudio[i] = false;
+        }
+        else
+        {
+            qDebug() << "[Error]TriggerInputDialog::initTriggerInputConfig invalid audio config";
+            infoAudio[i] = true;
         }
         updateAudioLabel(i);
     }
 }
-#endif
 
 void TriggerInputDialog::updateSourceLabel(int ch)
 {
@@ -1031,13 +923,10 @@ void TriggerInputDialog::onButtonSave()
             case 1 :    { dst = DeviceCfg.trigger2_source; break; }
             case 2 :    { dst = DeviceCfg.trigger3_source; break; }
             case 3 :    { dst = DeviceCfg.trigger4_source; break; }
-/*
-            // yjsin DeviceCfg was defined up to 4ch
             case 4 :    { dst = DeviceCfg.trigger5_source; break; }
             case 5 :    { dst = DeviceCfg.trigger6_source; break; }
             case 6 :    { dst = DeviceCfg.trigger7_source; break; }
             case 7 :    { dst = DeviceCfg.trigger8_source; break; }
-*/
             default :   { dst = NULL; }
         }
 
@@ -1062,13 +951,10 @@ void TriggerInputDialog::onButtonSave()
             case 1 :    { dst = DeviceCfg.trigger2_delay; break; }
             case 2 :    { dst = DeviceCfg.trigger3_delay; break; }
             case 3 :    { dst = DeviceCfg.trigger4_delay; break; }
-/*
-            // yjsin DeviceCfg was defined up to 4ch
-            case 0 :    { dst = DeviceCfg.trigger5_delay; break; }
-            case 1 :    { dst = DeviceCfg.trigger6_delay; break; }
-            case 2 :    { dst = DeviceCfg.trigger7_delay; break; }
-            case 3 :    { dst = DeviceCfg.trigger8_delay; break; }
-*/
+            case 4 :    { dst = DeviceCfg.trigger5_delay; break; }
+            case 5 :    { dst = DeviceCfg.trigger6_delay; break; }
+            case 6 :    { dst = DeviceCfg.trigger7_delay; break; }
+            case 7 :    { dst = DeviceCfg.trigger8_delay; break; }
             default :   { dst = NULL; }
         }
 
@@ -1115,13 +1001,10 @@ void TriggerInputDialog::onButtonSave()
             case 1 :    { dst = DeviceCfg.trigger2_priority; break; }
             case 2 :    { dst = DeviceCfg.trigger3_priority; break; }
             case 3 :    { dst = DeviceCfg.trigger4_priority; break; }
-/*
-            // yjsin DeviceCfg was defined up to 4ch
             case 4 :    { dst = DeviceCfg.trigger5_priority; break; }
             case 5 :    { dst = DeviceCfg.trigger6_priority; break; }
             case 6 :    { dst = DeviceCfg.trigger7_priority; break; }
             case 7 :    { dst = DeviceCfg.trigger8_priority; break; }
-*/
             default :   { dst = NULL; }
         }
 
@@ -1155,13 +1038,10 @@ void TriggerInputDialog::onButtonSave()
             case 1 :    { dst = DeviceCfg.trigger2_audio; break; }
             case 2 :    { dst = DeviceCfg.trigger3_audio; break; }
             case 3 :    { dst = DeviceCfg.trigger4_audio; break; }
-/*
-            // yjsin DeviceCfg was defined up to 4ch
             case 4 :    { dst = DeviceCfg.trigger5_audio; break; }
             case 5 :    { dst = DeviceCfg.trigger6_audio; break; }
             case 6 :    { dst = DeviceCfg.trigger7_audio; break; }
             case 7 :    { dst = DeviceCfg.trigger8_audio; break; }
-*/
             default :   { dst = NULL; }
         }
 
@@ -1171,7 +1051,6 @@ void TriggerInputDialog::onButtonSave()
         }
         else
         {
-
             QString src;
             if( infoAudio[i] )  { src = "OUTPUT"; }
             else                { src = "MUTE";   }

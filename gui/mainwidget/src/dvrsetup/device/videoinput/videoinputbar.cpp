@@ -23,15 +23,18 @@ VideoInputBar::VideoInputBar(QWidget *parent)
         buttonCh[8] = ui720.buttonChAll;
 
         buttonMirror = ui720.buttonMirror;
-        buttonFlip = ui720.buttonFlip;
-        buttonClose = ui720.buttonClose;
+        buttonFlip   = ui720.buttonFlip;
+        buttonRotate = ui720.buttonRotate;
+        buttonClose  = ui720.buttonClose;
 
         buttonMirror->setIcon(QIcon(":/images/mirror.png"));
         buttonMirror->setIconSize(QSize(60,60));
-        buttonFlip->setIcon(QIcon(":images/flip.png"));
-        buttonFlip->setIconSize(QSize(60,60));
-        buttonClose->setIcon(QIcon(":images/close2.png"));
-        buttonClose->setIconSize(QSize(60,60));
+        buttonFlip  ->setIcon(QIcon(":images/flip.png"));
+        buttonFlip  ->setIconSize(QSize(60,60));
+        buttonRotate->setIcon(QIcon(":/images/rotate.png"));
+        buttonRotate->setIconSize(QSize(60,60));
+        buttonClose ->setIcon(QIcon(":images/close2.png"));
+        buttonClose ->setIconSize(QSize(60,60));
     }
     else
     {
@@ -51,15 +54,18 @@ VideoInputBar::VideoInputBar(QWidget *parent)
         buttonCh[8] = ui1080.buttonChAll;
 
         buttonMirror = ui1080.buttonMirror;
-        buttonFlip = ui1080.buttonFlip;
-        buttonClose = ui1080.buttonClose;
+        buttonFlip   = ui1080.buttonFlip;
+        buttonRotate = ui1080.buttonRotate;
+        buttonClose  = ui1080.buttonClose;
 
         buttonMirror->setIcon(QIcon(":images/mirror.png"));
         buttonMirror->setIconSize(QSize(80,80));
-        buttonFlip->setIcon(QIcon(":images/flip.png"));
-        buttonFlip->setIconSize(QSize(80,80));
-        buttonClose->setIcon(QIcon(":images/close2.png"));
-        buttonClose->setIconSize(QSize(80,80));
+        buttonFlip  ->setIcon(QIcon(":images/flip.png"));
+        buttonFlip  ->setIconSize(QSize(80,80));
+        buttonRotate->setIcon(QIcon(":images/rotate.png"));
+        buttonRotate->setIconSize(QSize(80,80));
+        buttonClose ->setIcon(QIcon(":images/close2.png"));
+        buttonClose ->setIconSize(QSize(80,80));
     }
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
@@ -77,6 +83,7 @@ VideoInputBar::VideoInputBar(QWidget *parent)
     connect(buttonCh[8],   SIGNAL(clicked()), this, SLOT(onButtonChAll()));
     connect(buttonMirror,  SIGNAL(clicked()), this, SLOT(onButtonMirror()));
     connect(buttonFlip,    SIGNAL(clicked()), this, SLOT(onButtonFlip()));
+    connect(buttonRotate,  SIGNAL(clicked()), this, SLOT(onButtonRotate()));
     connect(buttonClose,   SIGNAL(clicked()), this, SLOT(onButtonClose()));
 }
 VideoInputBar::~VideoInputBar()
@@ -93,28 +100,11 @@ void VideoInputBar::onButtonCh8()   { onButtonCh(7); }
 void VideoInputBar::onButtonChAll()
 {
     selectedCh = NUMOFCH;
-
-    int countM = 0;
-    int countF = 0;
-
-    for(int ch=0; ch<NUMOFCH; ch++)
-    {
-        if( infoMirror[ch] == 1 )           { countM++; }
-        if( infoFlip[ch] == 1 )             { countF++; }
-    }
-
-    if( countM >= NUMOFCH )                 { infoMirror[NUMOFCH] = 1; }
-    else                                    { infoMirror[NUMOFCH] = 0; }
-
-    if( countF >= NUMOFCH )                 { infoFlip[NUMOFCH] = 1; }
-    else                                    { infoFlip[NUMOFCH] = 0; }
-
     updateButton();
 }
 void VideoInputBar::onButtonCh(int n)
 {
     selectedCh = n;
-
     updateButton();
 }
 void VideoInputBar::onButtonMirror()
@@ -140,38 +130,8 @@ void VideoInputBar::onButtonMirror()
         else                                { infoMirror[selectedCh] = 0; }
     }
 
+    saveConfig();
     updateButton();
-
-    //save config for preview
-    for(int i=0; i<devInfo.videoNum; i++)
-    {
-        char *dst = NULL;
-        switch(i)
-        {
-            case 0 : { dst = DeviceCfg.camera_mirror00; break; }
-            case 1 : { dst = DeviceCfg.camera_mirror01; break; }
-            case 2 : { dst = DeviceCfg.camera_mirror02; break; }
-            case 3 : { dst = DeviceCfg.camera_mirror03; break; }
-#if 0 // yjsin DeviceCfg was defined up to 4ch
-            case 4 : { dst = DeviceCfg.camera_mirror04; break; }
-            case 5 : { dst = DeviceCfg.camera_mirror05; break; }
-            case 6 : { dst = DeviceCfg.camera_mirror06; break; }
-            case 7 : { dst = DeviceCfg.camera_mirror07; break; }
-#endif
-            default: { dst = NULL;                             }
-        }
-
-        if( dst != NULL )
-        {
-            if( infoMirror[i] == 1 )        { utils_cfg_cpy_item(dst, "MIRROR"); }
-            else                            { utils_cfg_cpy_item(dst, "NORMAL"); }
-        }
-        else
-        {
-            qDebug("[Error] %s, DeviceCfg struct member dose not exitst.", __func__);
-        }
-    }
-    emit videoInputPreview();
 }
 void VideoInputBar::onButtonFlip()
 {
@@ -196,9 +156,98 @@ void VideoInputBar::onButtonFlip()
         else                                { infoFlip[selectedCh] = 0; }
     }
 
+    saveConfig();
     updateButton();
+}
+void VideoInputBar::onButtonRotate()
+{
+    if( selectedCh >= NUMOFCH )             //selectCh All
+    {
+        int count = 0;
 
-    //save config for preview
+        for(int i=0; i<NUMOFCH; i++)
+        {
+            if( infoRotate[i] == infoRotate[0] )    { count++; }
+        }
+
+        for(int i=0; i<=NUMOFCH; i++)
+        {
+            if( count < NUMOFCH )           { infoRotate[i] = 0; }
+            else
+            {
+                if( infoRotate[i]>=270 )    { infoRotate[i] = 0; }
+                else                        { infoRotate[i] += 90; }
+            }
+        }
+    }
+    else
+    {
+        if( infoRotate[selectedCh]>=270 )   { infoRotate[selectedCh] = 0; }
+        else                                { infoRotate[selectedCh] += 90; }
+    }
+
+    saveConfig();
+    updateButton();
+}
+void VideoInputBar::onButtonClose()
+{
+    accept();
+}
+void VideoInputBar::setInfo(int mirror[], int flip[], int rotate[])
+{
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        infoMirror[i] = mirror[i];
+        infoFlip[i]   = flip[i];
+        infoRotate[i] = rotate[i];
+    }
+
+    selectedCh = NUMOFCH;
+    buttonCh[selectedCh]->setFocus();
+
+    saveConfig();
+    updateButton();
+}
+void VideoInputBar::getInfo(int mirror[], int flip[], int rotate[])
+{
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        mirror[i] = infoMirror[i];
+        flip[i]   = infoFlip[i];
+        rotate[i] = infoRotate[i];
+    }
+}
+void VideoInputBar::saveConfig()
+{
+    //save mirror config for preview
+    for(int i=0; i<devInfo.videoNum; i++)
+    {
+        char *dst = NULL;
+        switch(i)
+        {
+            case 0 : { dst = DeviceCfg.camera_mirror00; break; }
+            case 1 : { dst = DeviceCfg.camera_mirror01; break; }
+            case 2 : { dst = DeviceCfg.camera_mirror02; break; }
+            case 3 : { dst = DeviceCfg.camera_mirror03; break; }
+            case 4 : { dst = DeviceCfg.camera_mirror04; break; }
+            case 5 : { dst = DeviceCfg.camera_mirror05; break; }
+            case 6 : { dst = DeviceCfg.camera_mirror06; break; }
+            case 7 : { dst = DeviceCfg.camera_mirror07; break; }
+            default: { dst = NULL;                             }
+        }
+
+        if( dst != NULL )
+        {
+            if( infoMirror[i] == 1 )        { utils_cfg_cpy_item(dst, "MIRROR"); }
+            else                            { utils_cfg_cpy_item(dst, "NORMAL"); }
+        }
+        else
+        {
+            qDebug("[Error] %s, DeviceCfg struct member dose not exitst.", __func__);
+        }
+    }
+
+    //save flip config for preview
     for(int i=0; i<devInfo.videoNum; i++)
     {
         char *dst = NULL;
@@ -208,12 +257,10 @@ void VideoInputBar::onButtonFlip()
             case 1 : { dst = DeviceCfg.camera_flip01; break; }
             case 2 : { dst = DeviceCfg.camera_flip02; break; }
             case 3 : { dst = DeviceCfg.camera_flip03; break; }
-#if 0 // yjsin DeviceCfg was defined up to 4ch
             case 4 : { dst = DeviceCfg.camera_flip04; break; }
             case 5 : { dst = DeviceCfg.camera_flip05; break; }
             case 6 : { dst = DeviceCfg.camera_flip06; break; }
             case 7 : { dst = DeviceCfg.camera_flip07; break; }
-#endif
             default: { dst = NULL;                           }
         }
 
@@ -227,43 +274,48 @@ void VideoInputBar::onButtonFlip()
             qDebug("[Error] %s, DeviceCfg struct member dose not exitst.", __func__);
         }
     }
+
+    //save rotate config for preview
+    for(int i=0; i<devInfo.videoNum; i++)
+    {
+        char *dst = NULL;
+        switch(i)
+        {
+            case 0 : { dst = DeviceCfg.camera_rotate00; break; }
+            case 1 : { dst = DeviceCfg.camera_rotate01; break; }
+            case 2 : { dst = DeviceCfg.camera_rotate02; break; }
+            case 3 : { dst = DeviceCfg.camera_rotate03; break; }
+            case 4 : { dst = DeviceCfg.camera_rotate04; break; }
+            case 5 : { dst = DeviceCfg.camera_rotate05; break; }
+            case 6 : { dst = DeviceCfg.camera_rotate06; break; }
+            case 7 : { dst = DeviceCfg.camera_rotate07; break; }
+            default: { dst = NULL;                             }
+        }
+
+        if( dst != NULL )
+        {
+            sprintf(dst, "%d", infoRotate[i]);
+        }
+        else
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+    }
+
     emit videoInputPreview();
-}
-void VideoInputBar::onButtonClose()
-{
-    accept();
-}
-void VideoInputBar::setInfo(int mirror[], int flip[])
-{
-    for(int i=0; i<NUMOFCH; i++)
-    {
-        infoMirror[i] = mirror[i];
-        infoFlip[i] = flip[i];
-    }
-
-    selectedCh = NUMOFCH;
-    buttonCh[selectedCh]->setFocus();
-
-    updateButton();
-}
-void VideoInputBar::getInfo(int mirror[], int flip[])
-{
-    for(int i=0; i<NUMOFCH; i++)
-    {
-        mirror[i] = infoMirror[i];
-        flip[i] = infoFlip[i];
-    }
 }
 void VideoInputBar::updateButton()
 {
-    //update mirror, flip button state
+    //update mirror, flip, rotate button state
     int countM = 0;
     int countF = 0;
+    int countR = 0;
 
     for(int i=0; i<NUMOFCH; i++)
     {
         if( infoMirror[i] == 1 )            { countM++; }
-        if( infoFlip[i] == 1)               { countF++; }
+        if( infoFlip[i]   == 1 )            { countF++; }
+        if( infoRotate[i] != 0 )            { countR++; }
     }
 
     if( countM >= NUMOFCH )                 { infoMirror[NUMOFCH] = 1; }
@@ -272,11 +324,17 @@ void VideoInputBar::updateButton()
     if( countF >= NUMOFCH )                 { infoFlip[NUMOFCH] = 1; }
     else                                    { infoFlip[NUMOFCH] = 0; }
 
+    if( countR >= NUMOFCH )                 { infoRotate[NUMOFCH] = 1; }
+    else                                    { infoRotate[NUMOFCH] = 0; }
+
     if( infoMirror[selectedCh] == 1 )       { buttonMirror->setStyleSheet("QPushButton{background-color:rgb(6, 86, 159);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
     else                                    { buttonMirror->setStyleSheet("QPushButton{background-color:rgb(67, 74, 86);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
 
-    if( infoFlip[selectedCh] == 1)          { buttonFlip->setStyleSheet("QPushButton{background-color:rgb(6, 86, 159);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
-    else                                    { buttonFlip->setStyleSheet("QPushButton{background-color:rgb(67, 74, 86);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
+    if( infoFlip[selectedCh]   == 1 )       { buttonFlip  ->setStyleSheet("QPushButton{background-color:rgb(6, 86, 159);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
+    else                                    { buttonFlip  ->setStyleSheet("QPushButton{background-color:rgb(67, 74, 86);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
+
+    if( infoRotate[selectedCh] != 0 )       { buttonRotate->setStyleSheet("QPushButton{background-color:rgb(6, 86, 159);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
+    else                                    { buttonRotate->setStyleSheet("QPushButton{background-color:rgb(67, 74, 86);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
 
     //change background color
     for(int i=0; i<=NUMOFCH; i++)
@@ -291,86 +349,91 @@ void VideoInputBar::keyPressEvent(QKeyEvent *event)
     {
         case Qt::Key_Up:
 
-            if     ( buttonCh[8]->hasFocus()  )     { buttonCh[0]->setFocus();  }
-            else if( buttonCh[0]->hasFocus()  )     { buttonCh[1]->setFocus();  }
-            else if( buttonCh[1]->hasFocus()  )     { buttonCh[2]->setFocus();  }
-            else if( buttonCh[2]->hasFocus()  )     { buttonCh[3]->setFocus();  }
-            else if( buttonCh[3]->hasFocus()  )     { buttonCh[4]->setFocus();  }
-            else if( buttonCh[4]->hasFocus()  )     { buttonCh[5]->setFocus();  }
-            else if( buttonCh[5]->hasFocus()  )     { buttonCh[6]->setFocus();  }
-            else if( buttonCh[6]->hasFocus()  )     { buttonCh[7]->setFocus();  }
-            else if( buttonCh[7]->hasFocus()  )     { buttonMirror->setFocus(); }
-            else if( buttonMirror->hasFocus() )     { buttonFlip->setFocus();   }
-            else if( buttonFlip->hasFocus()   )     { buttonClose->setFocus();  }
-            else if( buttonClose->hasFocus()  )     { buttonCh[8]->setFocus();  }
+            if     ( buttonCh[8] ->hasFocus() )     { buttonCh[0] ->setFocus(); }
+            else if( buttonCh[0] ->hasFocus() )     { buttonCh[1] ->setFocus(); }
+            else if( buttonCh[1] ->hasFocus() )     { buttonCh[2] ->setFocus(); }
+            else if( buttonCh[2] ->hasFocus() )     { buttonCh[3] ->setFocus(); }
+            else if( buttonCh[3] ->hasFocus() )     { buttonCh[4] ->setFocus(); }
+            else if( buttonCh[4] ->hasFocus() )     { buttonCh[5] ->setFocus(); }
+            else if( buttonCh[5] ->hasFocus() )     { buttonCh[6] ->setFocus(); }
+            else if( buttonCh[6] ->hasFocus() )     { buttonCh[7] ->setFocus(); }
+            else if( buttonCh[7] ->hasFocus() )     { buttonMirror->setFocus(); }
+            else if( buttonMirror->hasFocus() )     { buttonFlip  ->setFocus(); }
+            else if( buttonFlip  ->hasFocus() )     { buttonRotate->setFocus(); }
+            else if( buttonRotate->hasFocus() )     { buttonClose ->setFocus(); }
+            else if( buttonClose ->hasFocus() )     { buttonCh[8] ->setFocus(); }
 
             break;
 
         case Qt::Key_Down:
 
-            if     ( buttonCh[8]->hasFocus()  )     { buttonClose->setFocus();  }
-            else if( buttonCh[0]->hasFocus()  )     { buttonCh[8]->setFocus();  }
-            else if( buttonCh[1]->hasFocus()  )     { buttonCh[0]->setFocus();  }
-            else if( buttonCh[2]->hasFocus()  )     { buttonCh[1]->setFocus();  }
-            else if( buttonCh[3]->hasFocus()  )     { buttonCh[2]->setFocus();  }
-            else if( buttonCh[4]->hasFocus()  )     { buttonCh[3]->setFocus();  }
-            else if( buttonCh[5]->hasFocus()  )     { buttonCh[4]->setFocus();  }
-            else if( buttonCh[6]->hasFocus()  )     { buttonCh[5]->setFocus();  }
-            else if( buttonCh[7]->hasFocus()  )     { buttonCh[6]->setFocus();  }
-            else if( buttonMirror->hasFocus() )     { buttonCh[7]->setFocus();  }
-            else if( buttonFlip->hasFocus()   )     { buttonMirror->setFocus(); }
-            else if( buttonClose->hasFocus()  )     { buttonFlip->setFocus();   }
+            if     ( buttonCh[8] ->hasFocus() )     { buttonClose ->setFocus(); }
+            else if( buttonCh[0] ->hasFocus() )     { buttonCh[8] ->setFocus(); }
+            else if( buttonCh[1] ->hasFocus() )     { buttonCh[0] ->setFocus(); }
+            else if( buttonCh[2] ->hasFocus() )     { buttonCh[1] ->setFocus(); }
+            else if( buttonCh[3] ->hasFocus() )     { buttonCh[2] ->setFocus(); }
+            else if( buttonCh[4] ->hasFocus() )     { buttonCh[3] ->setFocus(); }
+            else if( buttonCh[5] ->hasFocus() )     { buttonCh[4] ->setFocus(); }
+            else if( buttonCh[6] ->hasFocus() )     { buttonCh[5] ->setFocus(); }
+            else if( buttonCh[7] ->hasFocus() )     { buttonCh[6] ->setFocus(); }
+            else if( buttonMirror->hasFocus() )     { buttonCh[7] ->setFocus(); }
+            else if( buttonFlip  ->hasFocus() )     { buttonMirror->setFocus(); }
+            else if( buttonRotate->hasFocus() )     { buttonFlip  ->setFocus(); }
+            else if( buttonClose ->hasFocus() )     { buttonRotate->setFocus(); }
 
             break;
 
         case Qt::Key_Left:
 
-            if     ( buttonCh[8]->hasFocus()  )     { buttonClose->setFocus();  }
-            else if( buttonCh[0]->hasFocus()  )     { buttonCh[8]->setFocus();  }
-            else if( buttonCh[1]->hasFocus()  )     { buttonCh[0]->setFocus();  }
-            else if( buttonCh[2]->hasFocus()  )     { buttonCh[1]->setFocus();  }
-            else if( buttonCh[3]->hasFocus()  )     { buttonCh[2]->setFocus();  }
-            else if( buttonCh[4]->hasFocus()  )     { buttonCh[3]->setFocus();  }
-            else if( buttonCh[5]->hasFocus()  )     { buttonCh[4]->setFocus();  }
-            else if( buttonCh[6]->hasFocus()  )     { buttonCh[5]->setFocus();  }
-            else if( buttonCh[7]->hasFocus()  )     { buttonCh[6]->setFocus();  }
-            else if( buttonMirror->hasFocus() )     { buttonCh[7]->setFocus();  }
-            else if( buttonFlip->hasFocus()   )     { buttonMirror->setFocus(); }
-            else if( buttonClose->hasFocus()  )     { buttonFlip->setFocus();   }
+            if     ( buttonCh[8] ->hasFocus() )     { buttonClose ->setFocus(); }
+            else if( buttonCh[0] ->hasFocus() )     { buttonCh[8] ->setFocus(); }
+            else if( buttonCh[1] ->hasFocus() )     { buttonCh[0] ->setFocus(); }
+            else if( buttonCh[2] ->hasFocus() )     { buttonCh[1] ->setFocus(); }
+            else if( buttonCh[3] ->hasFocus() )     { buttonCh[2] ->setFocus(); }
+            else if( buttonCh[4] ->hasFocus() )     { buttonCh[3] ->setFocus(); }
+            else if( buttonCh[5] ->hasFocus() )     { buttonCh[4] ->setFocus(); }
+            else if( buttonCh[6] ->hasFocus() )     { buttonCh[5] ->setFocus(); }
+            else if( buttonCh[7] ->hasFocus() )     { buttonCh[6] ->setFocus(); }
+            else if( buttonMirror->hasFocus() )     { buttonCh[7] ->setFocus(); }
+            else if( buttonFlip  ->hasFocus() )     { buttonMirror->setFocus(); }
+            else if( buttonRotate->hasFocus() )     { buttonFlip  ->setFocus(); }
+            else if( buttonClose ->hasFocus() )     { buttonRotate->setFocus(); }
 
             break;
 
         case Qt::Key_Right:
 
-            if     ( buttonCh[8]->hasFocus()  )     { buttonCh[0]->setFocus();  }
-            else if( buttonCh[0]->hasFocus()  )     { buttonCh[1]->setFocus();  }
-            else if( buttonCh[1]->hasFocus()  )     { buttonCh[2]->setFocus();  }
-            else if( buttonCh[2]->hasFocus()  )     { buttonCh[3]->setFocus();  }
-            else if( buttonCh[3]->hasFocus()  )     { buttonCh[4]->setFocus();  }
-            else if( buttonCh[4]->hasFocus()  )     { buttonCh[5]->setFocus();  }
-            else if( buttonCh[5]->hasFocus()  )     { buttonCh[6]->setFocus();  }
-            else if( buttonCh[6]->hasFocus()  )     { buttonCh[7]->setFocus();  }
-            else if( buttonCh[7]->hasFocus()  )     { buttonMirror->setFocus(); }
-            else if( buttonMirror->hasFocus() )     { buttonFlip->setFocus();   }
-            else if( buttonFlip->hasFocus()   )     { buttonClose->setFocus();  }
-            else if( buttonClose->hasFocus()  )     { buttonCh[8]->setFocus();  }
+            if     ( buttonCh[8] ->hasFocus() )     { buttonCh[0] ->setFocus(); }
+            else if( buttonCh[0] ->hasFocus() )     { buttonCh[1] ->setFocus(); }
+            else if( buttonCh[1] ->hasFocus() )     { buttonCh[2] ->setFocus(); }
+            else if( buttonCh[2] ->hasFocus() )     { buttonCh[3] ->setFocus(); }
+            else if( buttonCh[3] ->hasFocus() )     { buttonCh[4] ->setFocus(); }
+            else if( buttonCh[4] ->hasFocus() )     { buttonCh[5] ->setFocus(); }
+            else if( buttonCh[5] ->hasFocus() )     { buttonCh[6] ->setFocus(); }
+            else if( buttonCh[6] ->hasFocus() )     { buttonCh[7] ->setFocus(); }
+            else if( buttonCh[7] ->hasFocus() )     { buttonMirror->setFocus(); }
+            else if( buttonMirror->hasFocus() )     { buttonFlip  ->setFocus(); }
+            else if( buttonFlip  ->hasFocus() )     { buttonRotate->setFocus(); }
+            else if( buttonRotate->hasFocus() )     { buttonClose ->setFocus(); }
+            else if( buttonClose ->hasFocus() )     { buttonCh[8] ->setFocus(); }
 
             break;
 
         case Qt::Key_Enter:
 
-            if     ( buttonCh[8]->hasFocus()  )     { onButtonChAll();          }
-            else if( buttonCh[0]->hasFocus()  )     { onButtonCh(0);            }
-            else if( buttonCh[1]->hasFocus()  )     { onButtonCh(1);            }
-            else if( buttonCh[2]->hasFocus()  )     { onButtonCh(2);            }
-            else if( buttonCh[3]->hasFocus()  )     { onButtonCh(3);            }
-            else if( buttonCh[4]->hasFocus()  )     { onButtonCh(4);            }
-            else if( buttonCh[5]->hasFocus()  )     { onButtonCh(5);            }
-            else if( buttonCh[6]->hasFocus()  )     { onButtonCh(6);            }
-            else if( buttonCh[7]->hasFocus()  )     { onButtonCh(7);            }
+            if     ( buttonCh[8] ->hasFocus() )     { onButtonChAll();          }
+            else if( buttonCh[0] ->hasFocus() )     { onButtonCh(0);            }
+            else if( buttonCh[1] ->hasFocus() )     { onButtonCh(1);            }
+            else if( buttonCh[2] ->hasFocus() )     { onButtonCh(2);            }
+            else if( buttonCh[3] ->hasFocus() )     { onButtonCh(3);            }
+            else if( buttonCh[4] ->hasFocus() )     { onButtonCh(4);            }
+            else if( buttonCh[5] ->hasFocus() )     { onButtonCh(5);            }
+            else if( buttonCh[6] ->hasFocus() )     { onButtonCh(6);            }
+            else if( buttonCh[7] ->hasFocus() )     { onButtonCh(7);            }
             else if( buttonMirror->hasFocus() )     { onButtonMirror();         }
-            else if( buttonFlip->hasFocus()   )     { onButtonFlip();           }
-            else if( buttonClose->hasFocus()  )     { onButtonClose();          }
+            else if( buttonFlip  ->hasFocus() )     { onButtonFlip();           }
+            else if( buttonRotate->hasFocus() )     { onButtonRotate();         }
+            else if( buttonClose ->hasFocus() )     { onButtonClose();          }
 
             break;
 

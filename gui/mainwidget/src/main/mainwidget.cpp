@@ -467,7 +467,7 @@ void MainWidget::onSaveDevicePage(int type)
     }
     else if(type == 4) // Trigger Input
     {
-        for(int ii=0; ii < 4; ii++)
+        for(int ii=0; ii < devInfo.videoNum; ii++)
         {
             QString str = QString("Trg%1 S:%2 D:%3 P:%4 A:%5").arg(
                     QString::number(ii+1),
@@ -488,10 +488,11 @@ void MainWidget::onSaveDevicePage(int type)
     {
         for(int ii=0; ii<devInfo.videoNum; ii++)
         {
-            QString str = QString("VI%1 M:%2 F:%3").arg(
+            QString str = QString("VI%1 M:%2 F:%3 R:%4").arg(
                     QString::number(ii+1),
                     QString::fromUtf8(DeviceCfg.camera_mirror00+ii*8),
-                    QString::fromUtf8(DeviceCfg.camera_flip00+ii*8));
+                    QString::fromUtf8(DeviceCfg.camera_flip00+ii*8),
+                    QString::fromUtf8(DeviceCfg.camera_rotate00+ii*8));
             appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
         }
 
@@ -594,24 +595,18 @@ void MainWidget::onSaveDisplayPage(int type)
     }
     else if(type == 4) // OSD
     {
-#if 1 //yjsin DisplayCfg.osd_gps is not defined
-        QString str = QString("OSD CAM:%1 NoV:%2 Bar:%3 Rec:%4 CIn:%5").arg(
+        QString str = QString("OSD Cam:%1 NoV:%2 Bar:%3").arg(
                 QString::fromUtf8(DisplayCfg.osd_chname),
                 QString::fromUtf8(DisplayCfg.osd_viloss),
-                QString::fromUtf8(DisplayCfg.osd_status),
-                QString::fromUtf8(DisplayCfg.osd_record),
-                QString::fromUtf8(DisplayCfg.osd_camera));
+                QString::fromUtf8(DisplayCfg.osd_status));
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
-#else
-        QString str = QString("OSD CAM:%1 NoV:%2 Bar:%3 Rec:%4 Gps:%5 CIn:%6").arg(
-                QString::fromUtf8(DisplayCfg.osd_chname),
-                QString::fromUtf8(DisplayCfg.osd_viloss),
-                QString::fromUtf8(DisplayCfg.osd_status),
+
+        str = QString("OSD Rec:%1 Gps:%2 CIn:%3").arg(
                 QString::fromUtf8(DisplayCfg.osd_record),
                 QString::fromUtf8(DisplayCfg.osd_gps),
-                QString::formUtf8(DisplayCfg.osd_camera));
+                QString::fromUtf8(DisplayCfg.osd_camera));
         appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
-#endif
+
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));

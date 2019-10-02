@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ARCH=`cat ../arch.txt`
+
 echo "Copy shared library to \"$1\"" &&
 
 cp libappmanager.so    $1 &&
@@ -27,5 +29,8 @@ cp libmediabackup.so   $1 &&
 cp libipc.so           $1 &&
 cp libosal.so          $1 &&
 cp cmdServer           $1 &&
+if [ "${ARCH}" = "arm-hisiv100" ]; then
+cp libhimem.so         $1
+fi
 
 echo "Copy done."

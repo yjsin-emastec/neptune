@@ -111,5 +111,6 @@
         <file>images/main/shutdown2.png</file>
         <file>images/search/log.png</file>
         <file>images/search/log2.png</file>
+        <file>images/rotate.png</file>
     </qresource>
 </RCC>

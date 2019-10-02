@@ -80,22 +80,12 @@ void OsdDialog::initOsdConfig(void)
         default: { buttonRecordStatus->setText(QString("%1\n%2").arg(tr("Record Status"),tr("On")));            indexRecordStatus = 1; break; }
     }
 
-#if 1 //yjsin DisplayCfg.osd_gps is not defined
-    if( (indexCameraName==0) && (indexNoVideo==0) && (indexRecordStatus==0) )
-    {
-        buttonGpsStatus->setText(QString("%1\n%2").arg(tr("Gps Status"), tr("Off")));                           indexGpsStatus    = 0;
-    }
-    else
-    {
-        buttonGpsStatus->setText(QString("%1\n%2").arg(tr("Gps Status"), tr("On")));                            indexGpsStatus    = 1;
-    }
-#else
     switch(utils_cfg_cmp_item(DisplayCfg.osd_gps, "OFF"))
     {
         case 0 : { buttonGpsStatus->setText(QString("%1\n%2").arg(tr("Gps Status"), tr("Off")));                indexGpsStatus    = 0; break; }
         default: { buttonGpsStatus->setText(QString("%1\n%2").arg(tr("Gps Status"), tr("On")));                 indexGpsStatus    = 1; break; }
     }
-#endif
+
     switch(utils_cfg_cmp_item(DisplayCfg.osd_camera, "OFF"))
     {
         case 0 : { buttonCameraInfo->setText(QString("%1\n%2").arg(tr("Camera Info"), tr("Off")));              indexCameraInfo   = 0; break; }
@@ -163,21 +153,6 @@ void OsdDialog::onRecordStatus()
         indexRecordStatus = 1;
     }
 }
-#if 1 //yjsin DisplayCfg.osd_gps is not defined
-void OsdDialog::onGpsStatus()
-{
-    if(indexGpsStatus == 1)
-    {
-        buttonGpsStatus->setText(QString("%1\n%2").arg(tr("Gps Status"), tr("Off")));
-        indexGpsStatus = 0;
-    }
-    else
-    {
-        buttonGpsStatus->setText(QString("%1\n%2").arg(tr("Gps Status"), tr("On")));
-        indexGpsStatus = 1;
-    }
-}
-#else
 void OsdDialog::onGpsStatus()
 {
     if(indexGpsStatus == 1)
@@ -193,7 +168,6 @@ void OsdDialog::onGpsStatus()
         indexGpsStatus = 1;
     }
 }
-#endif
 void OsdDialog::onCameraInfo()
 {
     if(indexCameraInfo == 1)

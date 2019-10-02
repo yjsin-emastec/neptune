@@ -45,6 +45,17 @@ public slots:
     void onButtonFlip8();
     void onButtonFlipAll();
 
+    void onButtonRotate(int ch);
+    void onButtonRotate1();
+    void onButtonRotate2();
+    void onButtonRotate3();
+    void onButtonRotate4();
+    void onButtonRotate5();
+    void onButtonRotate6();
+    void onButtonRotate7();
+    void onButtonRotate8();
+    void onButtonRotateAll();
+
     void onButtonPreview();
     void onButtonSave();
     void onButtonClose();
@@ -56,12 +67,15 @@ protected:
 private:
     int infoMirror[NUMOFCH+1];
     int infoFlip[NUMOFCH+1];
+    int infoRotate[NUMOFCH+1];
     int backupMirror[NUMOFCH+1];
     int backupFlip[NUMOFCH+1];
+    int backupRotate[NUMOFCH+1];
 
     QFrame *frame;
     QPushButton *buttonMirror[NUMOFCH+1];
     QPushButton *buttonFlip[NUMOFCH+1];
+    QPushButton *buttonRotate[NUMOFCH+1];
     QPushButton *buttonPreview;
     QPushButton *buttonSave;
     QPushButton *buttonClose;

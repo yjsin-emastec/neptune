@@ -43,18 +43,30 @@ VideoInputDialog::VideoInputDialog(QWidget *parent)
         buttonFlip[7] = ui720.buttonFlip8;
         buttonFlip[8] = ui720.buttonFlipAll;
 
+        buttonRotate[0] = ui720.buttonRotate1;
+        buttonRotate[1] = ui720.buttonRotate2;
+        buttonRotate[2] = ui720.buttonRotate3;
+        buttonRotate[3] = ui720.buttonRotate4;
+        buttonRotate[4] = ui720.buttonRotate5;
+        buttonRotate[5] = ui720.buttonRotate6;
+        buttonRotate[6] = ui720.buttonRotate7;
+        buttonRotate[7] = ui720.buttonRotate8;
+        buttonRotate[8] = ui720.buttonRotateAll;
+
         buttonPreview = ui720.buttonPreview;
-        buttonSave = ui720.buttonSave;
-        buttonClose = ui720.buttonClose;
+        buttonSave    = ui720.buttonSave;
+        buttonClose   = ui720.buttonClose;
 
         for(int i=0; i<=NUMOFCH; i++)
         {
-            labelCh[i]->setStyleSheet("font:40px;");
+            labelCh[i]     ->setStyleSheet("font:40px;");
             buttonMirror[i]->setStyleSheet("font:40px;");
-            buttonFlip[i]->setStyleSheet("font:40px;");
+            buttonFlip[i]  ->setStyleSheet("font:40px;");
+            buttonRotate[i]->setStyleSheet("font:40px;");
         }
         buttonMirror[NUMOFCH]->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
         buttonFlip[NUMOFCH]  ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonRotate[NUMOFCH]->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
 
         if( utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {
@@ -102,18 +114,30 @@ VideoInputDialog::VideoInputDialog(QWidget *parent)
         buttonFlip[7] = ui1080.buttonFlip8;
         buttonFlip[8] = ui1080.buttonFlipAll;
 
+        buttonRotate[0] = ui1080.buttonRotate1;
+        buttonRotate[1] = ui1080.buttonRotate2;
+        buttonRotate[2] = ui1080.buttonRotate3;
+        buttonRotate[3] = ui1080.buttonRotate4;
+        buttonRotate[4] = ui1080.buttonRotate5;
+        buttonRotate[5] = ui1080.buttonRotate6;
+        buttonRotate[6] = ui1080.buttonRotate7;
+        buttonRotate[7] = ui1080.buttonRotate8;
+        buttonRotate[8] = ui1080.buttonRotateAll;
+
         buttonPreview = ui1080.buttonPreview;
-        buttonSave = ui1080.buttonSave;
-        buttonClose = ui1080.buttonClose;
+        buttonSave    = ui1080.buttonSave;
+        buttonClose   = ui1080.buttonClose;
 
         for(int i=0; i<=NUMOFCH; i++)
         {
-            labelCh[i]->setStyleSheet("font:60px;");
+            labelCh[i]     ->setStyleSheet("font:60px;");
             buttonMirror[i]->setStyleSheet("font:60px;");
-            buttonFlip[i]->setStyleSheet("font:60px");
+            buttonFlip[i]  ->setStyleSheet("font:60px");
+            buttonRotate[i]->setStyleSheet("font:60px;");
         }
         buttonMirror[NUMOFCH]->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
         buttonFlip[NUMOFCH]  ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonRotate[NUMOFCH]->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
 
         if( utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {
@@ -150,9 +174,19 @@ VideoInputDialog::VideoInputDialog(QWidget *parent)
     connect(buttonFlip[7],   SIGNAL(clicked()), this, SLOT(onButtonFlip8()));
     connect(buttonFlip[8],   SIGNAL(clicked()), this, SLOT(onButtonFlipAll()));
 
-    connect(buttonPreview,SIGNAL(released()), this, SLOT(onButtonPreview()));
-    connect(buttonSave,   SIGNAL(released()), this, SLOT(onButtonSave()));
-    connect(buttonClose,  SIGNAL(released()), this, SLOT(onButtonClose()));
+    connect(buttonRotate[0], SIGNAL(clicked()), this, SLOT(onButtonRotate1()));
+    connect(buttonRotate[1], SIGNAL(clicked()), this, SLOT(onButtonRotate2()));
+    connect(buttonRotate[2], SIGNAL(clicked()), this, SLOT(onButtonRotate3()));
+    connect(buttonRotate[3], SIGNAL(clicked()), this, SLOT(onButtonRotate4()));
+    connect(buttonRotate[4], SIGNAL(clicked()), this, SLOT(onButtonRotate5()));
+    connect(buttonRotate[5], SIGNAL(clicked()), this, SLOT(onButtonRotate6()));
+    connect(buttonRotate[6], SIGNAL(clicked()), this, SLOT(onButtonRotate7()));
+    connect(buttonRotate[7], SIGNAL(clicked()), this, SLOT(onButtonRotate8()));
+    connect(buttonRotate[8], SIGNAL(clicked()), this, SLOT(onButtonRotateAll()));
+
+    connect(buttonPreview,   SIGNAL(released()),this, SLOT(onButtonPreview()));
+    connect(buttonSave,      SIGNAL(released()),this, SLOT(onButtonSave()));
+    connect(buttonClose,     SIGNAL(released()),this, SLOT(onButtonClose()));
 
     videoInputBar=NULL;
 }
@@ -166,12 +200,10 @@ void VideoInputDialog::initVideoInputConfig(void)
     mirror[1] = QString(DeviceCfg.camera_mirror01);
     mirror[2] = QString(DeviceCfg.camera_mirror02);
     mirror[3] = QString(DeviceCfg.camera_mirror03);
-#if 0 // yjsin DeviceCfg was defined up to 4ch
     mirror[4] = QString(DeviceCfg.camera_mirror04);
     mirror[5] = QString(DeviceCfg.camera_mirror05);
     mirror[6] = QString(DeviceCfg.camera_mirror06);
     mirror[7] = QString(DeviceCfg.camera_mirror07);
-#endif
 
     for(int i=0; i<NUMOFCH; i++)
     {
@@ -184,12 +216,10 @@ void VideoInputDialog::initVideoInputConfig(void)
     flip[1] = QString(DeviceCfg.camera_flip01);
     flip[2] = QString(DeviceCfg.camera_flip02);
     flip[3] = QString(DeviceCfg.camera_flip03);
-#if 0 // yjsin DeviceCfg was defined up to 4ch
     flip[4] = QString(DeviceCfg.camera_flip04);
     flip[5] = QString(DeviceCfg.camera_flip05);
     flip[6] = QString(DeviceCfg.camera_flip06);
     flip[7] = QString(DeviceCfg.camera_flip07);
-#endif
 
     for(int i=0; i<NUMOFCH; i++)
     {
@@ -197,13 +227,24 @@ void VideoInputDialog::initVideoInputConfig(void)
         else                                { infoFlip[i] = 0; }
     }
 
+    infoRotate[0] = atoi(DeviceCfg.camera_rotate00);
+    infoRotate[1] = atoi(DeviceCfg.camera_rotate01);
+    infoRotate[2] = atoi(DeviceCfg.camera_rotate02);
+    infoRotate[3] = atoi(DeviceCfg.camera_rotate03);
+    infoRotate[4] = atoi(DeviceCfg.camera_rotate04);
+    infoRotate[5] = atoi(DeviceCfg.camera_rotate05);
+    infoRotate[6] = atoi(DeviceCfg.camera_rotate06);
+    infoRotate[7] = atoi(DeviceCfg.camera_rotate07);
+
     //backup config for preview
     for(int i=0; i<NUMOFCH; i++)
     {
         backupMirror[i] = infoMirror[i];
-        backupFlip[i] = infoFlip[i];
+        backupFlip[i]   = infoFlip[i];
+        backupRotate[i] = infoRotate[i];
     }
 
+    buttonMirror[8]->setFocus();
     updateButton();
 }
 void VideoInputDialog::updateButton()
@@ -215,6 +256,8 @@ void VideoInputDialog::updateButton()
 
         if( infoFlip[i] == 1 )              { buttonFlip[i]->setText(tr("Down"));    }
         else                                { buttonFlip[i]->setText(tr("Up"));   }
+
+        buttonRotate[i]->setText(QString("%1%2").arg(QString::number(infoRotate[i]), tr("°")));
     }
 }
 void VideoInputDialog::onButtonMirror(int ch)
@@ -281,6 +324,43 @@ void VideoInputDialog::onButtonFlipAll()
 
     updateButton();
 }
+void VideoInputDialog::onButtonRotate(int ch)
+{
+    if( infoRotate[ch]>=270 )   { infoRotate[ch]=0; }
+    else                        { infoRotate[ch]+=90; }
+
+    updateButton();
+}
+
+void VideoInputDialog::onButtonRotate1()    { onButtonRotate(0); }
+void VideoInputDialog::onButtonRotate2()    { onButtonRotate(1); }
+void VideoInputDialog::onButtonRotate3()    { onButtonRotate(2); }
+void VideoInputDialog::onButtonRotate4()    { onButtonRotate(3); }
+void VideoInputDialog::onButtonRotate5()    { onButtonRotate(4); }
+void VideoInputDialog::onButtonRotate6()    { onButtonRotate(5); }
+void VideoInputDialog::onButtonRotate7()    { onButtonRotate(6); }
+void VideoInputDialog::onButtonRotate8()    { onButtonRotate(7); }
+void VideoInputDialog::onButtonRotateAll()
+{
+    int count = 0;
+
+    for(int ch=0; ch<NUMOFCH; ch++)
+    {
+        if( infoRotate[ch] == infoRotate[0] )   { count++; }
+    }
+
+    for(int ch=0; ch<NUMOFCH; ch++)
+    {
+        if( count < NUMOFCH )               { infoRotate[ch] = 0; }
+        else
+        {
+            if( infoRotate[ch]>=270 )       { infoRotate[ch] = 0; }
+            else                            { infoRotate[ch] += 90; }
+        }
+    }
+
+    updateButton();
+}
 void VideoInputDialog::onButtonPreview()
 {
     emit makeTransparent(1);
@@ -296,7 +376,7 @@ void VideoInputDialog::onButtonPreview()
         videoInputBar->setWindowOpacity(1);
     }
 
-    videoInputBar->setInfo(infoMirror, infoFlip);
+    videoInputBar->setInfo(infoMirror, infoFlip, infoRotate);
     videoInputBar->move( (mainWidth-(videoInputBar->width()))/2, mainHeight-(videoInputBar->height()) );
 
     if( videoInputBar->exec() )
@@ -305,7 +385,7 @@ void VideoInputDialog::onButtonPreview()
         emit makeTransparent(0);
         this->setWindowOpacity(1);
 
-        videoInputBar->getInfo(infoMirror, infoFlip);
+        videoInputBar->getInfo(infoMirror, infoFlip, infoRotate);
         updateButton();
     }
 }
@@ -441,14 +521,11 @@ void VideoInputDialog::onButtonSave()
             case 1 :    { dst = DeviceCfg.camera_mirror01; break; }
             case 2 :    { dst = DeviceCfg.camera_mirror02; break; }
             case 3 :    { dst = DeviceCfg.camera_mirror03; break; }
-/*
-            // yjsin DeviceCfg was defined up to 4ch
             case 4 :    { dst = DeviceCfg.camera_mirror04; break; }
             case 5 :    { dst = DeviceCfg.camera_mirror05; break; }
             case 6 :    { dst = DeviceCfg.camera_mirror06; break; }
             case 7 :    { dst = DeviceCfg.camera_mirror07; break; }
-*/
-            default :   { dst = NULL; }
+            default:    { dst = NULL; }
         }
 
         if( dst == NULL )
@@ -467,14 +544,11 @@ void VideoInputDialog::onButtonSave()
             case 1 :    { dst = DeviceCfg.camera_flip01; break; }
             case 2 :    { dst = DeviceCfg.camera_flip02; break; }
             case 3 :    { dst = DeviceCfg.camera_flip03; break; }
-/*
-            // yjsin DeviceCfg was defined up to 4ch
             case 4 :    { dst = DeviceCfg.camera_flip04; break; }
             case 5 :    { dst = DeviceCfg.camera_flip05; break; }
             case 6 :    { dst = DeviceCfg.camera_flip06; break; }
             case 7 :    { dst = DeviceCfg.camera_flip07; break; }
-*/
-            default :   { dst = NULL; }
+            default:    { dst = NULL; }
         }
 
         if( dst == NULL )
@@ -485,6 +559,28 @@ void VideoInputDialog::onButtonSave()
         {
             if( infoFlip[i] == 1 )      { utils_cfg_cpy_item(dst, "DOWN"); }
             else                        { utils_cfg_cpy_item(dst, "UP");   }
+        }
+
+        switch(i)
+        {
+            case 0 :    { dst = DeviceCfg.camera_rotate00; break; }
+            case 1 :    { dst = DeviceCfg.camera_rotate01; break; }
+            case 2 :    { dst = DeviceCfg.camera_rotate02; break; }
+            case 3 :    { dst = DeviceCfg.camera_rotate03; break; }
+            case 4 :    { dst = DeviceCfg.camera_rotate04; break; }
+            case 5 :    { dst = DeviceCfg.camera_rotate05; break; }
+            case 6 :    { dst = DeviceCfg.camera_rotate06; break; }
+            case 7 :    { dst = DeviceCfg.camera_rotate07; break; }
+            default:    { dst = NULL; }
+        }
+
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            sprintf(dst, "%d", infoRotate[i]);
         }
     }
 
@@ -509,14 +605,11 @@ void VideoInputDialog::onButtonClose()
             case 1 :    { dst = DeviceCfg.camera_mirror01; break; }
             case 2 :    { dst = DeviceCfg.camera_mirror02; break; }
             case 3 :    { dst = DeviceCfg.camera_mirror03; break; }
-/*
-            // yjsin DeviceCfg was defined up to 4ch
             case 4 :    { dst = DeviceCfg.camera_mirror04; break; }
             case 5 :    { dst = DeviceCfg.camera_mirror05; break; }
             case 6 :    { dst = DeviceCfg.camera_mirror06; break; }
             case 7 :    { dst = DeviceCfg.camera_mirror07; break; }
-*/
-            default :   { dst = NULL; }
+            default:    { dst = NULL; }
         }
 
         if( dst == NULL )
@@ -535,14 +628,11 @@ void VideoInputDialog::onButtonClose()
             case 1 :    { dst = DeviceCfg.camera_flip01; break; }
             case 2 :    { dst = DeviceCfg.camera_flip02; break; }
             case 3 :    { dst = DeviceCfg.camera_flip03; break; }
-/*
-            // yjsin DeviceCfg was defined up to 4ch
             case 4 :    { dst = DeviceCfg.camera_flip04; break; }
             case 5 :    { dst = DeviceCfg.camera_flip05; break; }
             case 6 :    { dst = DeviceCfg.camera_flip06; break; }
             case 7 :    { dst = DeviceCfg.camera_flip07; break; }
-*/
-            default :   { dst = NULL; }
+            default:    { dst = NULL; }
         }
 
         if( dst == NULL )
@@ -553,6 +643,28 @@ void VideoInputDialog::onButtonClose()
         {
             if( backupFlip[i] == 1 )    { utils_cfg_cpy_item(dst, "DOWN"); }
             else                        { utils_cfg_cpy_item(dst, "UP");   }
+        }
+
+        switch(i)
+        {
+            case 0 :    { dst = DeviceCfg.camera_rotate00; break; }
+            case 1 :    { dst = DeviceCfg.camera_rotate01; break; }
+            case 2 :    { dst = DeviceCfg.camera_rotate02; break; }
+            case 3 :    { dst = DeviceCfg.camera_rotate03; break; }
+            case 4 :    { dst = DeviceCfg.camera_rotate04; break; }
+            case 5 :    { dst = DeviceCfg.camera_rotate05; break; }
+            case 6 :    { dst = DeviceCfg.camera_rotate06; break; }
+            case 7 :    { dst = DeviceCfg.camera_rotate07; break; }
+            default:    { dst = NULL; }
+        }
+
+        if( dst == NULL )
+        {
+            qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+        }
+        else
+        {
+            sprintf(dst, "%d", backupFlip[i]);
         }
     }
 
@@ -566,131 +678,191 @@ void VideoInputDialog::keyPressEvent(QKeyEvent *event)
     {
         case Qt::Key_Up:
 
-                 if( buttonMirror[8]->hasFocus())   { buttonPreview->setFocus();    }
-            else if( buttonMirror[0]->hasFocus())   { buttonMirror[8]->setFocus();  }
-            else if( buttonMirror[1]->hasFocus())   { buttonMirror[0]->setFocus();  }
-            else if( buttonMirror[2]->hasFocus())   { buttonMirror[1]->setFocus();  }
-            else if( buttonMirror[3]->hasFocus())   { buttonMirror[2]->setFocus();  }
-            else if( buttonMirror[4]->hasFocus())   { buttonMirror[3]->setFocus();  }
-            else if( buttonMirror[5]->hasFocus())   { buttonMirror[4]->setFocus();  }
-            else if( buttonMirror[6]->hasFocus())   { buttonMirror[5]->setFocus();  }
-            else if( buttonMirror[7]->hasFocus())   { buttonMirror[6]->setFocus();  }
-            else if( buttonFlip[8]->hasFocus())     { buttonClose->setFocus();      }
-            else if( buttonFlip[0]->hasFocus())     { buttonFlip[8]->setFocus();    }
-            else if( buttonFlip[1]->hasFocus())     { buttonFlip[0]->setFocus();    }
-            else if( buttonFlip[2]->hasFocus())     { buttonFlip[1]->setFocus();    }
-            else if( buttonFlip[3]->hasFocus())     { buttonFlip[2]->setFocus();    }
-            else if( buttonFlip[4]->hasFocus())     { buttonFlip[3]->setFocus();    }
-            else if( buttonFlip[5]->hasFocus())     { buttonFlip[4]->setFocus();    }
-            else if( buttonFlip[6]->hasFocus())     { buttonFlip[5]->setFocus();    }
-            else if( buttonFlip[7]->hasFocus())     { buttonFlip[6]->setFocus();    }
-            else if( buttonPreview->hasFocus())     { buttonMirror[7]->setFocus();  }
-            else if( buttonSave->hasFocus())        { buttonFlip[7]->setFocus();    }
-            else if( buttonClose->hasFocus())       { buttonFlip[7]->setFocus();    }
+            if     ( buttonMirror[8]->hasFocus() )  { buttonPreview  ->setFocus(); }
+            else if( buttonMirror[0]->hasFocus() )  { buttonMirror[8]->setFocus(); }
+            else if( buttonMirror[1]->hasFocus() )  { buttonMirror[0]->setFocus(); }
+            else if( buttonMirror[2]->hasFocus() )  { buttonMirror[1]->setFocus(); }
+            else if( buttonMirror[3]->hasFocus() )  { buttonMirror[2]->setFocus(); }
+            else if( buttonMirror[4]->hasFocus() )  { buttonMirror[3]->setFocus(); }
+            else if( buttonMirror[5]->hasFocus() )  { buttonMirror[4]->setFocus(); }
+            else if( buttonMirror[6]->hasFocus() )  { buttonMirror[5]->setFocus(); }
+            else if( buttonMirror[7]->hasFocus() )  { buttonMirror[6]->setFocus(); }
+
+            else if( buttonFlip[8]  ->hasFocus() )  { buttonSave     ->setFocus(); }
+            else if( buttonFlip[0]  ->hasFocus() )  { buttonFlip[8]  ->setFocus(); }
+            else if( buttonFlip[1]  ->hasFocus() )  { buttonFlip[0]  ->setFocus(); }
+            else if( buttonFlip[2]  ->hasFocus() )  { buttonFlip[1]  ->setFocus(); }
+            else if( buttonFlip[3]  ->hasFocus() )  { buttonFlip[2]  ->setFocus(); }
+            else if( buttonFlip[4]  ->hasFocus() )  { buttonFlip[3]  ->setFocus(); }
+            else if( buttonFlip[5]  ->hasFocus() )  { buttonFlip[4]  ->setFocus(); }
+            else if( buttonFlip[6]  ->hasFocus() )  { buttonFlip[5]  ->setFocus(); }
+            else if( buttonFlip[7]  ->hasFocus() )  { buttonFlip[6]  ->setFocus(); }
+
+            else if( buttonRotate[8]->hasFocus() )  { buttonClose    ->setFocus(); }
+            else if( buttonRotate[0]->hasFocus() )  { buttonRotate[8]->setFocus(); }
+            else if( buttonRotate[1]->hasFocus() )  { buttonRotate[0]->setFocus(); }
+            else if( buttonRotate[2]->hasFocus() )  { buttonRotate[1]->setFocus(); }
+            else if( buttonRotate[3]->hasFocus() )  { buttonRotate[2]->setFocus(); }
+            else if( buttonRotate[4]->hasFocus() )  { buttonRotate[3]->setFocus(); }
+            else if( buttonRotate[5]->hasFocus() )  { buttonRotate[4]->setFocus(); }
+            else if( buttonRotate[6]->hasFocus() )  { buttonRotate[5]->setFocus(); }
+            else if( buttonRotate[7]->hasFocus() )  { buttonRotate[6]->setFocus(); }
+
+            else if( buttonPreview  ->hasFocus() )  { buttonMirror[7]->setFocus(); }
+            else if( buttonSave     ->hasFocus() )  { buttonFlip[7]  ->setFocus(); }
+            else if( buttonClose    ->hasFocus() )  { buttonRotate[7]->setFocus(); }
 
             break;
 
         case Qt::Key_Down:
 
-                 if( buttonMirror[8]->hasFocus())   { buttonMirror[0]->setFocus();  }
-            else if( buttonMirror[0]->hasFocus())   { buttonMirror[1]->setFocus();  }
-            else if( buttonMirror[1]->hasFocus())   { buttonMirror[2]->setFocus();  }
-            else if( buttonMirror[2]->hasFocus())   { buttonMirror[3]->setFocus();  }
-            else if( buttonMirror[3]->hasFocus())   { buttonMirror[4]->setFocus();  }
-            else if( buttonMirror[4]->hasFocus())   { buttonMirror[5]->setFocus();  }
-            else if( buttonMirror[5]->hasFocus())   { buttonMirror[6]->setFocus();  }
-            else if( buttonMirror[6]->hasFocus())   { buttonMirror[7]->setFocus();  }
-            else if( buttonMirror[7]->hasFocus())   { buttonPreview->setFocus();    }
-            else if( buttonFlip[8]->hasFocus())     { buttonFlip[0]->setFocus();    }
-            else if( buttonFlip[0]->hasFocus())     { buttonFlip[1]->setFocus();    }
-            else if( buttonFlip[1]->hasFocus())     { buttonFlip[2]->setFocus();    }
-            else if( buttonFlip[2]->hasFocus())     { buttonFlip[3]->setFocus();    }
-            else if( buttonFlip[3]->hasFocus())     { buttonFlip[4]->setFocus();    }
-            else if( buttonFlip[4]->hasFocus())     { buttonFlip[5]->setFocus();    }
-            else if( buttonFlip[5]->hasFocus())     { buttonFlip[6]->setFocus();    }
-            else if( buttonFlip[6]->hasFocus())     { buttonFlip[7]->setFocus();    }
-            else if( buttonFlip[7]->hasFocus())     { buttonClose->setFocus();      }
-            else if( buttonPreview->hasFocus())     { buttonMirror[8]->setFocus();  }
-            else if( buttonSave->hasFocus())        { buttonFlip[8]->setFocus();    }
-            else if( buttonClose->hasFocus())       { buttonFlip[8]->setFocus();    }
+            if     ( buttonMirror[8]->hasFocus() )  { buttonMirror[0]->setFocus(); }
+            else if( buttonMirror[0]->hasFocus() )  { buttonMirror[1]->setFocus(); }
+            else if( buttonMirror[1]->hasFocus() )  { buttonMirror[2]->setFocus(); }
+            else if( buttonMirror[2]->hasFocus() )  { buttonMirror[3]->setFocus(); }
+            else if( buttonMirror[3]->hasFocus() )  { buttonMirror[4]->setFocus(); }
+            else if( buttonMirror[4]->hasFocus() )  { buttonMirror[5]->setFocus(); }
+            else if( buttonMirror[5]->hasFocus() )  { buttonMirror[6]->setFocus(); }
+            else if( buttonMirror[6]->hasFocus() )  { buttonMirror[7]->setFocus(); }
+            else if( buttonMirror[7]->hasFocus() )  { buttonPreview  ->setFocus(); }
+
+            else if( buttonFlip[8]  ->hasFocus() )  { buttonFlip[0]  ->setFocus(); }
+            else if( buttonFlip[0]  ->hasFocus() )  { buttonFlip[1]  ->setFocus(); }
+            else if( buttonFlip[1]  ->hasFocus() )  { buttonFlip[2]  ->setFocus(); }
+            else if( buttonFlip[2]  ->hasFocus() )  { buttonFlip[3]  ->setFocus(); }
+            else if( buttonFlip[3]  ->hasFocus() )  { buttonFlip[4]  ->setFocus(); }
+            else if( buttonFlip[4]  ->hasFocus() )  { buttonFlip[5]  ->setFocus(); }
+            else if( buttonFlip[5]  ->hasFocus() )  { buttonFlip[6]  ->setFocus(); }
+            else if( buttonFlip[6]  ->hasFocus() )  { buttonFlip[7]  ->setFocus(); }
+            else if( buttonFlip[7]  ->hasFocus() )  { buttonSave     ->setFocus(); }
+
+            else if( buttonRotate[8]->hasFocus() )  { buttonRotate[0]->setFocus(); }
+            else if( buttonRotate[0]->hasFocus() )  { buttonRotate[1]->setFocus(); }
+            else if( buttonRotate[1]->hasFocus() )  { buttonRotate[2]->setFocus(); }
+            else if( buttonRotate[2]->hasFocus() )  { buttonRotate[3]->setFocus(); }
+            else if( buttonRotate[3]->hasFocus() )  { buttonRotate[4]->setFocus(); }
+            else if( buttonRotate[4]->hasFocus() )  { buttonRotate[5]->setFocus(); }
+            else if( buttonRotate[5]->hasFocus() )  { buttonRotate[6]->setFocus(); }
+            else if( buttonRotate[6]->hasFocus() )  { buttonRotate[7]->setFocus(); }
+            else if( buttonRotate[7]->hasFocus() )  { buttonClose    ->setFocus(); }
+
+            else if( buttonPreview  ->hasFocus() )  { buttonMirror[8]->setFocus(); }
+            else if( buttonSave     ->hasFocus() )  { buttonFlip[8]  ->setFocus(); }
+            else if( buttonClose    ->hasFocus() )  { buttonRotate[8]->setFocus(); }
 
             break;
 
         case Qt::Key_Left:
 
-                 if( buttonMirror[8]->hasFocus())    { buttonFlip[8]->setFocus();   }
-            else if( buttonMirror[0]->hasFocus())    { buttonFlip[0]->setFocus();   }
-            else if( buttonMirror[1]->hasFocus())    { buttonFlip[1]->setFocus();   }
-            else if( buttonMirror[2]->hasFocus())    { buttonFlip[2]->setFocus();   }
-            else if( buttonMirror[3]->hasFocus())    { buttonFlip[3]->setFocus();   }
-            else if( buttonMirror[4]->hasFocus())    { buttonFlip[4]->setFocus();   }
-            else if( buttonMirror[5]->hasFocus())    { buttonFlip[5]->setFocus();   }
-            else if( buttonMirror[6]->hasFocus())    { buttonFlip[6]->setFocus();   }
-            else if( buttonMirror[7]->hasFocus())    { buttonFlip[7]->setFocus();   }
-            else if( buttonFlip[8]->hasFocus())      { buttonMirror[8]->setFocus(); }
-            else if( buttonFlip[0]->hasFocus())      { buttonMirror[0]->setFocus(); }
-            else if( buttonFlip[1]->hasFocus())      { buttonMirror[1]->setFocus(); }
-            else if( buttonFlip[2]->hasFocus())      { buttonMirror[2]->setFocus(); }
-            else if( buttonFlip[3]->hasFocus())      { buttonMirror[3]->setFocus(); }
-            else if( buttonFlip[4]->hasFocus())      { buttonMirror[4]->setFocus(); }
-            else if( buttonFlip[5]->hasFocus())      { buttonMirror[5]->setFocus(); }
-            else if( buttonFlip[6]->hasFocus())      { buttonMirror[6]->setFocus(); }
-            else if( buttonFlip[7]->hasFocus())      { buttonMirror[7]->setFocus(); }
-            else if( buttonPreview->hasFocus())      { buttonClose->setFocus();     }
-            else if( buttonSave->hasFocus())         { buttonPreview->setFocus();   }
-            else if( buttonClose->hasFocus())        { buttonSave->setFocus();      }
+            if     ( buttonMirror[8]->hasFocus() )  { buttonRotate[8]->setFocus(); }
+            else if( buttonMirror[0]->hasFocus() )  { buttonRotate[0]->setFocus(); }
+            else if( buttonMirror[1]->hasFocus() )  { buttonRotate[1]->setFocus(); }
+            else if( buttonMirror[2]->hasFocus() )  { buttonRotate[2]->setFocus(); }
+            else if( buttonMirror[3]->hasFocus() )  { buttonRotate[3]->setFocus(); }
+            else if( buttonMirror[4]->hasFocus() )  { buttonRotate[4]->setFocus(); }
+            else if( buttonMirror[5]->hasFocus() )  { buttonRotate[5]->setFocus(); }
+            else if( buttonMirror[6]->hasFocus() )  { buttonRotate[6]->setFocus(); }
+            else if( buttonMirror[7]->hasFocus() )  { buttonRotate[7]->setFocus(); }
+
+            else if( buttonFlip[8]  ->hasFocus() )  { buttonMirror[8]->setFocus(); }
+            else if( buttonFlip[0]  ->hasFocus() )  { buttonMirror[0]->setFocus(); }
+            else if( buttonFlip[1]  ->hasFocus() )  { buttonMirror[1]->setFocus(); }
+            else if( buttonFlip[2]  ->hasFocus() )  { buttonMirror[2]->setFocus(); }
+            else if( buttonFlip[3]  ->hasFocus() )  { buttonMirror[3]->setFocus(); }
+            else if( buttonFlip[4]  ->hasFocus() )  { buttonMirror[4]->setFocus(); }
+            else if( buttonFlip[5]  ->hasFocus() )  { buttonMirror[5]->setFocus(); }
+            else if( buttonFlip[6]  ->hasFocus() )  { buttonMirror[6]->setFocus(); }
+            else if( buttonFlip[7]  ->hasFocus() )  { buttonMirror[7]->setFocus(); }
+
+            else if( buttonRotate[8]->hasFocus() )  { buttonFlip[8]  ->setFocus(); }
+            else if( buttonRotate[0]->hasFocus() )  { buttonFlip[0]  ->setFocus(); }
+            else if( buttonRotate[1]->hasFocus() )  { buttonFlip[1]  ->setFocus(); }
+            else if( buttonRotate[2]->hasFocus() )  { buttonFlip[2]  ->setFocus(); }
+            else if( buttonRotate[3]->hasFocus() )  { buttonFlip[3]  ->setFocus(); }
+            else if( buttonRotate[4]->hasFocus() )  { buttonFlip[4]  ->setFocus(); }
+            else if( buttonRotate[5]->hasFocus() )  { buttonFlip[5]  ->setFocus(); }
+            else if( buttonRotate[6]->hasFocus() )  { buttonFlip[6]  ->setFocus(); }
+            else if( buttonRotate[7]->hasFocus() )  { buttonFlip[7]  ->setFocus(); }
+
+            else if( buttonPreview  ->hasFocus() )  { buttonClose    ->setFocus(); }
+            else if( buttonSave     ->hasFocus() )  { buttonPreview  ->setFocus(); }
+            else if( buttonClose    ->hasFocus() )  { buttonSave     ->setFocus(); }
 
             break;;
 
         case Qt::Key_Right:
 
-                 if( buttonMirror[8]->hasFocus())    { buttonFlip[8]->setFocus();   }
-            else if( buttonMirror[0]->hasFocus())    { buttonFlip[0]->setFocus();   }
-            else if( buttonMirror[1]->hasFocus())    { buttonFlip[1]->setFocus();   }
-            else if( buttonMirror[2]->hasFocus())    { buttonFlip[2]->setFocus();   }
-            else if( buttonMirror[3]->hasFocus())    { buttonFlip[3]->setFocus();   }
-            else if( buttonMirror[4]->hasFocus())    { buttonFlip[4]->setFocus();   }
-            else if( buttonMirror[5]->hasFocus())    { buttonFlip[5]->setFocus();   }
-            else if( buttonMirror[6]->hasFocus())    { buttonFlip[6]->setFocus();   }
-            else if( buttonMirror[7]->hasFocus())    { buttonFlip[7]->setFocus();   }
-            else if( buttonFlip[8]->hasFocus())      { buttonMirror[8]->setFocus(); }
-            else if( buttonFlip[0]->hasFocus())      { buttonMirror[0]->setFocus(); }
-            else if( buttonFlip[1]->hasFocus())      { buttonMirror[1]->setFocus(); }
-            else if( buttonFlip[2]->hasFocus())      { buttonMirror[2]->setFocus(); }
-            else if( buttonFlip[3]->hasFocus())      { buttonMirror[3]->setFocus(); }
-            else if( buttonFlip[4]->hasFocus())      { buttonMirror[4]->setFocus(); }
-            else if( buttonFlip[5]->hasFocus())      { buttonMirror[5]->setFocus(); }
-            else if( buttonFlip[6]->hasFocus())      { buttonMirror[6]->setFocus(); }
-            else if( buttonFlip[7]->hasFocus())      { buttonMirror[7]->setFocus(); }
-            else if( buttonPreview->hasFocus())      { buttonSave->setFocus();      }
-            else if( buttonSave->hasFocus())         { buttonClose->setFocus();     }
-            else if( buttonClose->hasFocus())        { buttonPreview->setFocus();   }
+            if     ( buttonMirror[8]->hasFocus() )  { buttonFlip[8]  ->setFocus(); }
+            else if( buttonMirror[0]->hasFocus() )  { buttonFlip[0]  ->setFocus(); }
+            else if( buttonMirror[1]->hasFocus() )  { buttonFlip[1]  ->setFocus(); }
+            else if( buttonMirror[2]->hasFocus() )  { buttonFlip[2]  ->setFocus(); }
+            else if( buttonMirror[3]->hasFocus() )  { buttonFlip[3]  ->setFocus(); }
+            else if( buttonMirror[4]->hasFocus() )  { buttonFlip[4]  ->setFocus(); }
+            else if( buttonMirror[5]->hasFocus() )  { buttonFlip[5]  ->setFocus(); }
+            else if( buttonMirror[6]->hasFocus() )  { buttonFlip[6]  ->setFocus(); }
+            else if( buttonMirror[7]->hasFocus() )  { buttonFlip[7]  ->setFocus(); }
 
-            break;;
+            else if( buttonFlip[8]  ->hasFocus() )  { buttonRotate[8]->setFocus(); }
+            else if( buttonFlip[0]  ->hasFocus() )  { buttonRotate[0]->setFocus(); }
+            else if( buttonFlip[1]  ->hasFocus() )  { buttonRotate[1]->setFocus(); }
+            else if( buttonFlip[2]  ->hasFocus() )  { buttonRotate[2]->setFocus(); }
+            else if( buttonFlip[3]  ->hasFocus() )  { buttonRotate[3]->setFocus(); }
+            else if( buttonFlip[4]  ->hasFocus() )  { buttonRotate[4]->setFocus(); }
+            else if( buttonFlip[5]  ->hasFocus() )  { buttonRotate[5]->setFocus(); }
+            else if( buttonFlip[6]  ->hasFocus() )  { buttonRotate[6]->setFocus(); }
+            else if( buttonFlip[7]  ->hasFocus() )  { buttonRotate[7]->setFocus(); }
+
+            else if( buttonRotate[8]->hasFocus() )  { buttonMirror[8]->setFocus(); }
+            else if( buttonRotate[0]->hasFocus() )  { buttonMirror[0]->setFocus(); }
+            else if( buttonRotate[1]->hasFocus() )  { buttonMirror[1]->setFocus(); }
+            else if( buttonRotate[2]->hasFocus() )  { buttonMirror[2]->setFocus(); }
+            else if( buttonRotate[3]->hasFocus() )  { buttonMirror[3]->setFocus(); }
+            else if( buttonRotate[4]->hasFocus() )  { buttonMirror[4]->setFocus(); }
+            else if( buttonRotate[5]->hasFocus() )  { buttonMirror[5]->setFocus(); }
+            else if( buttonRotate[6]->hasFocus() )  { buttonMirror[6]->setFocus(); }
+            else if( buttonRotate[7]->hasFocus() )  { buttonMirror[7]->setFocus(); }
+
+            else if( buttonPreview  ->hasFocus() )  { buttonSave     ->setFocus(); }
+            else if( buttonSave     ->hasFocus() )  { buttonClose    ->setFocus(); }
+            else if( buttonClose    ->hasFocus() )  { buttonPreview  ->setFocus(); }
+
+            break;
 
         case Qt::Key_Enter:
 
-                 if( buttonMirror[8]->hasFocus())    { onButtonMirrorAll();         }
-            else if( buttonMirror[0]->hasFocus())    { onButtonMirror(0);           }
-            else if( buttonMirror[1]->hasFocus())    { onButtonMirror(1);           }
-            else if( buttonMirror[2]->hasFocus())    { onButtonMirror(2);           }
-            else if( buttonMirror[3]->hasFocus())    { onButtonMirror(3);           }
-            else if( buttonMirror[4]->hasFocus())    { onButtonMirror(4);           }
-            else if( buttonMirror[5]->hasFocus())    { onButtonMirror(5);           }
-            else if( buttonMirror[6]->hasFocus())    { onButtonMirror(6);           }
-            else if( buttonMirror[7]->hasFocus())    { onButtonMirror(7);           }
-            else if( buttonFlip[8]->hasFocus())      { onButtonFlipAll();           }
-            else if( buttonFlip[0]->hasFocus())      { onButtonFlip(0);             }
-            else if( buttonFlip[1]->hasFocus())      { onButtonFlip(1);             }
-            else if( buttonFlip[2]->hasFocus())      { onButtonFlip(2);             }
-            else if( buttonFlip[3]->hasFocus())      { onButtonFlip(3);             }
-            else if( buttonFlip[4]->hasFocus())      { onButtonFlip(4);             }
-            else if( buttonFlip[5]->hasFocus())      { onButtonFlip(5);             }
-            else if( buttonFlip[6]->hasFocus())      { onButtonFlip(6);             }
-            else if( buttonFlip[7]->hasFocus())      { onButtonFlip(7);             }
-            else if( buttonPreview->hasFocus())      { onButtonPreview();           }
-            else if( buttonSave->hasFocus())         { onButtonSave();              }
-            else if( buttonClose->hasFocus())        { onButtonClose();             }
+            if     ( buttonMirror[8]->hasFocus() )  { onButtonMirrorAll();         }
+            else if( buttonMirror[0]->hasFocus() )  { onButtonMirror(0);           }
+            else if( buttonMirror[1]->hasFocus() )  { onButtonMirror(1);           }
+            else if( buttonMirror[2]->hasFocus() )  { onButtonMirror(2);           }
+            else if( buttonMirror[3]->hasFocus() )  { onButtonMirror(3);           }
+            else if( buttonMirror[4]->hasFocus() )  { onButtonMirror(4);           }
+            else if( buttonMirror[5]->hasFocus() )  { onButtonMirror(5);           }
+            else if( buttonMirror[6]->hasFocus() )  { onButtonMirror(6);           }
+            else if( buttonMirror[7]->hasFocus() )  { onButtonMirror(7);           }
+
+            else if( buttonFlip[8]  ->hasFocus() )  { onButtonFlipAll();           }
+            else if( buttonFlip[0]  ->hasFocus() )  { onButtonFlip(0);             }
+            else if( buttonFlip[1]  ->hasFocus() )  { onButtonFlip(1);             }
+            else if( buttonFlip[2]  ->hasFocus() )  { onButtonFlip(2);             }
+            else if( buttonFlip[3]  ->hasFocus() )  { onButtonFlip(3);             }
+            else if( buttonFlip[4]  ->hasFocus() )  { onButtonFlip(4);             }
+            else if( buttonFlip[5]  ->hasFocus() )  { onButtonFlip(5);             }
+            else if( buttonFlip[6]  ->hasFocus() )  { onButtonFlip(6);             }
+            else if( buttonFlip[7]  ->hasFocus() )  { onButtonFlip(7);             }
+
+            else if( buttonRotate[8]->hasFocus() )  { onButtonRotateAll();         }
+            else if( buttonRotate[0]->hasFocus() )  { onButtonRotate(0);           }
+            else if( buttonRotate[1]->hasFocus() )  { onButtonRotate(1);           }
+            else if( buttonRotate[2]->hasFocus() )  { onButtonRotate(2);           }
+            else if( buttonRotate[3]->hasFocus() )  { onButtonRotate(3);           }
+            else if( buttonRotate[4]->hasFocus() )  { onButtonRotate(4);           }
+            else if( buttonRotate[5]->hasFocus() )  { onButtonRotate(5);           }
+            else if( buttonRotate[6]->hasFocus() )  { onButtonRotate(6);           }
+            else if( buttonRotate[7]->hasFocus() )  { onButtonRotate(7);           }
+
+            else if( buttonPreview  ->hasFocus() )  { onButtonPreview();           }
+            else if( buttonSave     ->hasFocus() )  { onButtonSave();              }
+            else if( buttonClose    ->hasFocus() )  { onButtonClose();             }
 
             break;
 

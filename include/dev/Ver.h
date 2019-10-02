@@ -7,9 +7,9 @@ extern "C"{
 #endif
 #endif
 
-#define	VER_MODEL_NAME_FILE   "/tmp/sysinfo/MODEL"
-#define	VER_TRIGGER_INFO_FILE "/tmp/sysinfo/TRIGGER"
-#define	VER_AUDIO_INFO_FILE   "/tmp/sysinfo/AUDIO"
+#define VER_MODEL_NAME_FILE      "/tmp/sysinfo/MODEL"
+#define VER_TRIGGER_INFO_FILE    "/tmp/sysinfo/TRIGGER"
+#define VER_AUDIO_INFO_FILE      "/tmp/sysinfo/AUDIO"
 
 //----------------------------------------------------------------------------
 // Types and defines:

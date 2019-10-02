@@ -15,8 +15,8 @@ public :
     VideoInputBar(QWidget *parent = 0);
     ~VideoInputBar();
 
-    void setInfo(int[], int[]);
-    void getInfo(int[], int[]);
+    void setInfo(int mirror[], int flip[], int rotate[]);
+    void getInfo(int mirror[], int flip[], int rotate[]);
 
 signals :
     void videoInputPreview();
@@ -34,6 +34,7 @@ private slots :
     void onButtonChAll();
     void onButtonMirror();
     void onButtonFlip();
+    void onButtonRotate();
     void onButtonClose();
 
 protected :
@@ -44,12 +45,15 @@ private :
     QPushButton *buttonCh[NUMOFCH+1];
     QPushButton *buttonMirror;
     QPushButton *buttonFlip;
+    QPushButton *buttonRotate;
     QPushButton *buttonClose;
 
     int selectedCh;
     int infoMirror[NUMOFCH+1];
     int infoFlip[NUMOFCH+1];
+    int infoRotate[NUMOFCH+1];
 
+    void saveConfig();
     void updateButton();
 };
 

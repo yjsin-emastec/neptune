@@ -32,6 +32,7 @@ typedef struct
     char osd_status              [MAX_DIS_OSD_LEN];
     char osd_record              [MAX_DIS_OSD_LEN];
     char osd_camera              [MAX_DIS_OSD_LEN];
+    char osd_gps                 [MAX_DIS_OSD_LEN];
 } display_property_t;
 
 //----------------------------------------------------------------------------

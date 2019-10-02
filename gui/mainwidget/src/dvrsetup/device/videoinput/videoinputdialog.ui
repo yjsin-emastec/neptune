@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>939</width>
+    <width>1229</width>
     <height>679</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
     <rect>
      <x>4</x>
      <y>4</y>
-     <width>931</width>
+     <width>1220</width>
      <height>671</height>
     </rect>
    </property>
@@ -31,7 +31,7 @@
    <widget class="QPushButton" name="buttonSave">
     <property name="geometry">
      <rect>
-      <x>505</x>
+      <x>795</x>
       <y>570</y>
       <width>201</width>
       <height>91</height>
@@ -44,7 +44,7 @@
    <widget class="QPushButton" name="buttonClose">
     <property name="geometry">
      <rect>
-      <x>715</x>
+      <x>1005</x>
       <y>570</y>
       <width>201</width>
       <height>91</height>
@@ -59,7 +59,7 @@
      <rect>
       <x>20</x>
       <y>20</y>
-      <width>151</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
@@ -76,9 +76,9 @@
    <widget class="QLabel" name="labelMirrorAll">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>20</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -95,9 +95,9 @@
    <widget class="QLabel" name="labelFlipAll">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>20</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -116,7 +116,7 @@
      <rect>
       <x>20</x>
       <y>80</y>
-      <width>151</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
@@ -135,7 +135,7 @@
      <rect>
       <x>20</x>
       <y>140</y>
-      <width>151</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
@@ -154,7 +154,7 @@
      <rect>
       <x>20</x>
       <y>200</y>
-      <width>151</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
@@ -173,7 +173,7 @@
      <rect>
       <x>20</x>
       <y>260</y>
-      <width>151</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
@@ -192,7 +192,7 @@
      <rect>
       <x>20</x>
       <y>320</y>
-      <width>151</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
@@ -211,7 +211,7 @@
      <rect>
       <x>20</x>
       <y>380</y>
-      <width>151</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
@@ -230,7 +230,7 @@
      <rect>
       <x>20</x>
       <y>440</y>
-      <width>151</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
@@ -249,7 +249,7 @@
      <rect>
       <x>20</x>
       <y>500</y>
-      <width>151</width>
+      <width>161</width>
       <height>61</height>
      </rect>
     </property>
@@ -266,9 +266,9 @@
    <widget class="QLabel" name="labelMirror1">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>80</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -285,9 +285,9 @@
    <widget class="QLabel" name="labelMirror2">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>140</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -304,9 +304,9 @@
    <widget class="QLabel" name="labelMirror3">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>200</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -323,9 +323,9 @@
    <widget class="QLabel" name="labelMirror4">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>260</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -342,9 +342,9 @@
    <widget class="QLabel" name="labelMirror5">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>320</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -361,9 +361,9 @@
    <widget class="QLabel" name="labelMirror6">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>380</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -380,9 +380,9 @@
    <widget class="QLabel" name="labelMirror7">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>440</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -399,9 +399,9 @@
    <widget class="QLabel" name="labelMirror8">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>500</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -418,9 +418,9 @@
    <widget class="QLabel" name="labelFlip1">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>80</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -437,9 +437,9 @@
    <widget class="QLabel" name="labelFlip2">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>140</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -456,9 +456,9 @@
    <widget class="QLabel" name="labelFlip3">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>200</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -475,9 +475,9 @@
    <widget class="QLabel" name="labelFlip4">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>260</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -494,9 +494,9 @@
    <widget class="QLabel" name="labelFlip5">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>320</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -513,9 +513,9 @@
    <widget class="QLabel" name="labelFlip6">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>380</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -532,9 +532,9 @@
    <widget class="QLabel" name="labelFlip7">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>440</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -551,9 +551,9 @@
    <widget class="QLabel" name="labelFlip8">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>500</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -570,9 +570,9 @@
    <widget class="QPushButton" name="buttonMirrorAll">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>20</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -583,9 +583,9 @@
    <widget class="QPushButton" name="buttonFlipAll">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>20</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -596,35 +596,35 @@
    <widget class="QPushButton" name="buttonMirror1">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>80</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Normal</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonMirror2">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>140</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Mirror</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonMirror3">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>200</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -635,9 +635,9 @@
    <widget class="QPushButton" name="buttonMirror4">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>260</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -648,9 +648,9 @@
    <widget class="QPushButton" name="buttonMirror5">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>320</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -661,9 +661,9 @@
    <widget class="QPushButton" name="buttonMirror6">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>380</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -674,9 +674,9 @@
    <widget class="QPushButton" name="buttonMirror7">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>440</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -687,9 +687,9 @@
    <widget class="QPushButton" name="buttonMirror8">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>500</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -700,35 +700,35 @@
    <widget class="QPushButton" name="buttonFlip1">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>80</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Up</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonFlip2">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>140</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Down</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonFlip3">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>200</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -739,9 +739,9 @@
    <widget class="QPushButton" name="buttonFlip4">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>260</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -752,9 +752,9 @@
    <widget class="QPushButton" name="buttonFlip5">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>320</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -765,9 +765,9 @@
    <widget class="QPushButton" name="buttonFlip6">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>380</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -778,9 +778,9 @@
    <widget class="QPushButton" name="buttonFlip7">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>440</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -791,9 +791,9 @@
    <widget class="QPushButton" name="buttonFlip8">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>520</x>
       <y>500</y>
-      <width>371</width>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -812,6 +812,294 @@
     </property>
     <property name="text">
      <string>Preview</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotateAll">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>20</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotate1">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>80</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotate2">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>140</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotate3">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>200</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotate4">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>260</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotate5">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>320</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotate6">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>380</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotate7">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>440</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotate8">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>500</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRotateAll">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>20</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rotate</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRotate1">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>80</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string notr="true">0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRotate2">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>140</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string notr="true">90</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRotate3">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>200</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string notr="true">180</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRotate4">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>260</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string notr="true">270</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRotate5">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>320</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRotate6">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>380</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRotate7">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>440</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRotate8">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>500</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
