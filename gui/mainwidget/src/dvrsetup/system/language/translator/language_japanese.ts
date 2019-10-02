@@ -3870,8 +3870,8 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.cpp" line="100"/>
         <location filename="../../../display/osd/osddialog.cpp" line="115"/>
         <location filename="../../../display/osd/osddialog.cpp" line="145"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="161"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="177"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="160"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="175"/>
         <source>Off</source>
         <translation>オフ</translation>
     </message>
@@ -3884,8 +3884,8 @@ Off/On</source>
         <location filename="../../../display/osd/osddialog.cpp" line="106"/>
         <location filename="../../../display/osd/osddialog.cpp" line="121"/>
         <location filename="../../../display/osd/osddialog.cpp" line="151"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="168"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="183"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="166"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="181"/>
         <source>On</source>
         <translation>オン</translation>
     </message>
@@ -3912,16 +3912,16 @@ Off/On</source>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="85"/>
         <location filename="../../../display/osd/osddialog.cpp" line="86"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="161"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="168"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="160"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="166"/>
         <source>Gps Status</source>
         <translation>GPS 状態</translation>
     </message>
     <message>
         <location filename="../../../display/osd/osddialog.cpp" line="91"/>
         <location filename="../../../display/osd/osddialog.cpp" line="92"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="177"/>
-        <location filename="../../../display/osd/osddialog.cpp" line="183"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="175"/>
+        <location filename="../../../display/osd/osddialog.cpp" line="181"/>
         <source>Camera Info</source>
         <translation>カメラ情報</translation>
     </message>
@@ -5869,6 +5869,11 @@ You must delete data or set time.</source>
         <translation>デフォルト</translation>
     </message>
     <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="89"/>
+        <source>All</source>
+        <translation>すべて</translation>
+    </message>
+    <message>
         <source>Trigger5</source>
         <translation type="obsolete">トリガー5</translation>
     </message>
@@ -5905,8 +5910,8 @@ You must delete data or set time.</source>
         <translation type="obsolete">トリガー4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="837"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="981"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="940"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1084"/>
         <source>PRIORITY REDUNDANT</source>
         <translation>優先順位のエラー</translation>
     </message>
@@ -5926,29 +5931,29 @@ You must delete data or set time.</source>
         <translation type="obsolete">警告</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="469"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="464"/>
         <source>Trigger</source>
         <translation>トリガー</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="604"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="599"/>
         <source>CAM</source>
         <translation>CAM</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="608"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="603"/>
         <source>Sec</source>
         <translation>秒</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="838"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="982"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="941"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1085"/>
         <source>Priority is redundant.</source>
         <translation>優先順位が冗長です。</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="838"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="982"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="941"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1085"/>
         <source>Please check priority.</source>
         <translation>優先順位を確認してください。</translation>
     </message>
@@ -5959,7 +5964,7 @@ You must delete data or set time.</source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="260"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="2989"/>
         <source>Source</source>
         <translation>ソース</translation>
     </message>
@@ -6004,7 +6009,7 @@ You must delete data or set time.</source>
         <translation type="obsolete">分割 6</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="298"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3002"/>
         <source>Delay</source>
         <translation>ディレー</translation>
     </message>
@@ -6093,7 +6098,7 @@ You must delete data or set time.</source>
         <translation type="obsolete">20 秒</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="279"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3015"/>
         <source>Priority</source>
         <translation>優先順位</translation>
     </message>
@@ -6114,17 +6119,17 @@ You must delete data or set time.</source>
         <translation type="obsolete">4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="317"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3028"/>
         <source>Audio</source>
         <translation>オーディオ</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="622"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="617"/>
         <source>Mute</source>
         <translation>オフ</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="618"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="613"/>
         <source>Output</source>
         <translation>オン</translation>
     </message>
@@ -6169,22 +6174,27 @@ You must delete data or set time.</source>
         <translation type="obsolete">トリガー8</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="221"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="50"/>
+        <source>All</source>
+        <translation>すべて</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="2989"/>
         <source>Source</source>
         <translation>ソース</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="240"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3002"/>
         <source>Delay</source>
         <translation>ディレー</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="259"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3015"/>
         <source>Priority</source>
         <translation>優先順位</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="278"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3028"/>
         <source>Audio</source>
         <translation>オーディオ</translation>
     </message>

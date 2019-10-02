@@ -12,6 +12,11 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
 
         frame = ui720.frame;
 
+        buttonSourceAll   = ui720.buttonSourceAll;
+        buttonDelayAll    = ui720.buttonDelayAll;
+        buttonPriorityAll = ui720.buttonPriorityAll;
+        buttonAudioAll    = ui720.buttonAudioAll;
+
         labelTrigger[0] = ui720.labelTrigger1;
         labelTrigger[1] = ui720.labelTrigger2;
         labelTrigger[2] = ui720.labelTrigger3;
@@ -129,14 +134,14 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelAudio[6] = ui720.labelAudio7;
         labelAudio[7] = ui720.labelAudio8;
 
-        labelSourceTitle = ui720.labelSource;
-        labelDelayTitle = ui720.labelDelay;
-        labelPriorityTitle = ui720.labelPriority;
-        labelAudioTitle = ui720.labelAudio;
-
         buttonDefault = ui720.buttonDefault;
-        buttonSave = ui720.buttonSave;
-        buttonClose = ui720.buttonClose;
+        buttonSave    = ui720.buttonSave;
+        buttonClose   = ui720.buttonClose;
+
+        buttonSourceAll  ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonDelayAll   ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonPriorityAll->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonAudioAll   ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
 
         for( int i=0; i<NUMOFCH; i++)
         {
@@ -161,11 +166,6 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
             buttonAudioDn[i]->setIconSize(QSize(40,40));
         }
 
-        labelSourceTitle->setStyleSheet("font:45px;");
-        labelDelayTitle->setStyleSheet("font:45px;");
-        labelPriorityTitle->setStyleSheet("font:45px;");
-        labelAudioTitle->setStyleSheet("font:45px;");
-
         if( utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 )
         {
             buttonDefault->resize(361, 91);
@@ -177,11 +177,6 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         else if( utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
         {
             buttonDefault->resize(281, 91);
-
-            labelSourceTitle->setStyleSheet("font:40px;");
-            labelDelayTitle->setStyleSheet("font:40px;");
-            labelPriorityTitle->setStyleSheet("font:40px;");
-            labelAudioTitle->setStyleSheet("font:40px;");
         }
         else if( utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0 )
         {
@@ -194,6 +189,11 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         ui1080.setupUi(this);
 
         frame = ui1080.frame;
+
+        buttonSourceAll   = ui1080.buttonSourceAll;
+        buttonDelayAll    = ui1080.buttonDelayAll;
+        buttonPriorityAll = ui1080.buttonPriorityAll;
+        buttonAudioAll    = ui1080.buttonAudioAll;
 
         labelTrigger[0] = ui1080.labelTrigger1;
         labelTrigger[1] = ui1080.labelTrigger2;
@@ -312,14 +312,14 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelAudio[6] = ui1080.labelAudio7;
         labelAudio[7] = ui1080.labelAudio8;
 
-        labelSourceTitle = ui1080.labelSource;
-        labelDelayTitle = ui1080.labelDelay;
-        labelPriorityTitle = ui1080.labelPriority;
-        labelAudioTitle = ui1080.labelAudio;
-
         buttonDefault = ui1080.buttonDefault;
-        buttonSave = ui1080.buttonSave;
-        buttonClose = ui1080.buttonClose;
+        buttonSave    = ui1080.buttonSave;
+        buttonClose   = ui1080.buttonClose;
+
+        buttonSourceAll  ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonDelayAll   ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonPriorityAll->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonAudioAll   ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
 
         for( int i=0; i<NUMOFCH; i++)
         {
@@ -344,11 +344,6 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
             buttonAudioDn[i]->setIconSize(QSize(70,70));
         }
 
-        labelSourceTitle->setStyleSheet("font:70px;");
-        labelDelayTitle->setStyleSheet("font:70px;");
-        labelPriorityTitle->setStyleSheet("font:70px;");
-        labelAudioTitle->setStyleSheet("font:70px;");
-
         if( utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 )
         {
             for(int i=0; i<NUMOFCH; i++)
@@ -368,11 +363,6 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
                 labelTrigger[i]->setStyleSheet("font:48px;");
             }
             buttonDefault->resize(401, 131);
-
-            labelSourceTitle->setStyleSheet("font:60px;");
-            labelDelayTitle->setStyleSheet("font:60px;");
-            labelPriorityTitle->setStyleSheet("font:60px;");
-            labelAudioTitle->setStyleSheet("font:60px;");
         }
         else if( utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0 )
         {
@@ -384,6 +374,11 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
 
     setPalette(QPalette(QColor(255, 128, 64)));
     frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
+
+    connect(buttonSourceAll,     SIGNAL(clicked()), this, SLOT(onButtonSourceAll()));
+    connect(buttonDelayAll,      SIGNAL(clicked()), this, SLOT(onButtonDelayAll()));
+    connect(buttonPriorityAll,   SIGNAL(clicked()), this, SLOT(onButtonPriorityAll()));
+    connect(buttonAudioAll,      SIGNAL(clicked()), this, SLOT(onButtonAudioAll()));
 
     connect(buttonSourceUp[0],   SIGNAL(clicked()), this, SLOT(onButtonSourceUp1()));
     connect(buttonSourceUp[1],   SIGNAL(clicked()), this, SLOT(onButtonSourceUp2()));
@@ -475,7 +470,7 @@ TriggerInputDialog::~TriggerInputDialog()
 
 void TriggerInputDialog::initTriggerInputConfig(void)
 {
-    buttonSourceDn[0]->setFocus();
+    buttonSourceAll->setFocus();
 
     //source init
     QString source[NUMOFCH];
@@ -509,7 +504,6 @@ void TriggerInputDialog::initTriggerInputConfig(void)
         updateSourceLabel(i);
     }
 
-
     //delay init
     QString delay[NUMOFCH];
     delay[0] = QString(DeviceCfg.trigger1_delay);
@@ -542,7 +536,6 @@ void TriggerInputDialog::initTriggerInputConfig(void)
         updateDelayLabel(i);
     }
 
-
     //priority init
     int priority[NUMOFCH];
     priority[0] = QString(DeviceCfg.trigger1_priority).toInt();
@@ -567,7 +560,6 @@ void TriggerInputDialog::initTriggerInputConfig(void)
         }
         updatePriorityLabel(i);
     }
-
 
     //audio init
     QString audio[NUMOFCH];
@@ -622,6 +614,150 @@ void TriggerInputDialog::updateAudioLabel(int ch)
         labelAudio[ch]->setText(tr("Mute"));
     }
 }
+void TriggerInputDialog::onButtonSourceAll()
+{
+    int maxVal = 0;
+    int count = 0;
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if     ( infoSource[i] > maxVal )   { maxVal = infoSource[i]; }
+        else if( infoSource[i] == maxVal )  { count++; }
+    }
+
+    if( count == NUMOFCH-1 )
+    {
+        for(int i=0; i<NUMOFCH; i++)
+        {
+            if( maxVal>=NUMOFCH) { maxVal=0; }
+            for(int i=0; i<NUMOFCH; i++)
+            {
+                infoSource[i] = maxVal+1;
+                updateSourceLabel(i);
+            }
+        }
+    }
+    else
+    {
+        for( int i=0; i<NUMOFCH; i++)
+        {
+            infoSource[i] = maxVal;
+            updateSourceLabel(i);
+        }
+    }
+}
+void TriggerInputDialog::onButtonDelayAll()
+{
+    int maxVal = -1;
+    int count = 0;
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if     ( infoDelay[i] > maxVal )    { maxVal = infoDelay[i]; }
+        else if( infoDelay[i] == maxVal )   { count++; }
+    }
+
+    if( count >= NUMOFCH-1 )
+    {
+        for(int i=0; i<NUMOFCH; i++)
+        {
+            if( maxVal>=20 )   { maxVal=-1; }
+            for( int i=0; i<NUMOFCH; i++)
+            {
+                infoDelay[i] = maxVal+1;
+                updateDelayLabel(i);
+            }
+        }
+    }
+    else
+    {
+        for( int i=0; i<NUMOFCH; i++)
+        {
+            infoDelay[i] = maxVal;
+            updateDelayLabel(i);
+        }
+    }
+}
+void TriggerInputDialog::onButtonPriorityAll()
+{
+    if( checkPriorityRedundant() != 0 )
+    {
+        int checkArr[NUMOFCH];
+        memset(checkArr, 0, sizeof(checkArr));
+
+        for(int i=0; i<NUMOFCH; i++)
+        {
+            if( checkArr[infoPriority[i]-1] == 0 )
+            {
+                checkArr[infoPriority[i]-1] = 1;
+            }
+            else
+            {
+                infoPriority[i] = 0;
+            }
+        }
+
+        for(int i=0; i<NUMOFCH; i++)
+        {
+            if( infoPriority[i] == 0 )
+            {
+                for(int j=0; j<NUMOFCH; j++)
+                {
+                    if( checkArr[j] == 0 )
+                    {
+                        infoPriority[i] = j+1;
+                        checkArr[j] = 1;
+                        updatePriorityLabel(i);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
+void TriggerInputDialog::onButtonAudioAll()
+{
+    int countT = 0, countF = 0;
+
+    for( int i=0; i<NUMOFCH; i++)
+    {
+        if(infoAudio[i] == false )  { countF++; }
+        else                        { countT++; }
+    }
+
+    if( countT == NUMOFCH )
+    {
+        for(int i=0; i<NUMOFCH; i++)
+        {
+            infoAudio[i] = false;
+            updateAudioLabel(i);
+        }
+    }
+    else if( countF == NUMOFCH )
+    {
+        for(int i=0; i<NUMOFCH; i++)
+        {
+            infoAudio[i] = true;
+            updateAudioLabel(i);
+        }
+    }
+    else if( countT >= NUMOFCH/2 )
+    {
+        for(int i=0; i<NUMOFCH; i++)
+        {
+            infoAudio[i] = true;
+            updateAudioLabel(i);
+        }
+    }
+    else
+    {
+        for(int i=0; i<NUMOFCH; i++)
+        {
+            infoAudio[i] = false;
+            updateAudioLabel(i);
+        }
+    }
+}
 
 void TriggerInputDialog::onButtonSourceUp1()    { onButtonSourceUp(0); }
 void TriggerInputDialog::onButtonSourceUp2()    { onButtonSourceUp(1); }
@@ -643,6 +779,7 @@ void TriggerInputDialog::onButtonSourceDn8()    { onButtonSourceDn(7); }
 
 void TriggerInputDialog::onButtonSourceUp(int ch)
 {
+    qDebug() << "TriggerInputDialog::onButtonSourceUp() infoSource["<<ch<<"]:" << infoSource[ch];
     if( infoSource[ch] >= NUMOFCH ) { infoSource[ch] = 0; }
 
     infoSource[ch]++;
@@ -676,14 +813,14 @@ void TriggerInputDialog::onButtonDelayDn8()     { onButtonDelayDn(7); }
 
 void TriggerInputDialog::onButtonDelayUp(int ch)
 {
-    if( infoDelay[ch] >= 20 ) { infoDelay[ch] = 0; }
+    if( infoDelay[ch] >= 20 ) { infoDelay[ch] = -1; }
 
     infoDelay[ch]++;
     updateDelayLabel(ch);
 }
 void TriggerInputDialog::onButtonDelayDn(int ch)
 {
-    if( infoDelay[ch] <= 1 ) { infoDelay[ch] = 21; }
+    if( infoDelay[ch] <= 0 ) { infoDelay[ch] = 21; }
 
     infoDelay[ch]--;
     updateDelayLabel(ch);
@@ -1080,47 +1217,51 @@ void TriggerInputDialog::onButtonDefault()
 
 void TriggerInputDialog::keyPressEvent(QKeyEvent *event)
 {
+
     switch(event->key())
     {
         case Qt::Key_Up:
         {
-            if     ( buttonSourceDn[0]->hasFocus()   )      { buttonDefault->setFocus();       }
-            else if( buttonSourceDn[1]->hasFocus()   )      { buttonSourceDn[0]->setFocus();   }
-            else if( buttonSourceDn[2]->hasFocus()   )      { buttonSourceDn[1]->setFocus();   }
-            else if( buttonSourceDn[3]->hasFocus()   )      { buttonSourceDn[2]->setFocus();   }
-            else if( buttonSourceDn[4]->hasFocus()   )      { buttonSourceDn[3]->setFocus();   }
-            else if( buttonSourceDn[5]->hasFocus()   )      { buttonSourceDn[4]->setFocus();   }
-            else if( buttonSourceDn[6]->hasFocus()   )      { buttonSourceDn[5]->setFocus();   }
-            else if( buttonSourceDn[7]->hasFocus()   )      { buttonSourceDn[6]->setFocus();   }
+            if     ( buttonSourceAll    ->hasFocus() )      { buttonDefault      ->setFocus(); }
+            else if( buttonSourceDn[0]  ->hasFocus() )      { buttonSourceAll    ->setFocus(); }
+            else if( buttonSourceDn[1]  ->hasFocus() )      { buttonSourceDn[0]  ->setFocus(); }
+            else if( buttonSourceDn[2]  ->hasFocus() )      { buttonSourceDn[1]  ->setFocus(); }
+            else if( buttonSourceDn[3]  ->hasFocus() )      { buttonSourceDn[2]  ->setFocus(); }
+            else if( buttonSourceDn[4]  ->hasFocus() )      { buttonSourceDn[3]  ->setFocus(); }
+            else if( buttonSourceDn[5]  ->hasFocus() )      { buttonSourceDn[4]  ->setFocus(); }
+            else if( buttonSourceDn[6]  ->hasFocus() )      { buttonSourceDn[5]  ->setFocus(); }
+            else if( buttonSourceDn[7]  ->hasFocus() )      { buttonSourceDn[6]  ->setFocus(); }
 
-            else if( buttonSourceUp[0]->hasFocus()   )      { buttonDefault->setFocus();       }
-            else if( buttonSourceUp[1]->hasFocus()   )      { buttonSourceUp[0]->setFocus();   }
-            else if( buttonSourceUp[2]->hasFocus()   )      { buttonSourceUp[1]->setFocus();   }
-            else if( buttonSourceUp[3]->hasFocus()   )      { buttonSourceUp[2]->setFocus();   }
-            else if( buttonSourceUp[4]->hasFocus()   )      { buttonSourceUp[3]->setFocus();   }
-            else if( buttonSourceUp[5]->hasFocus()   )      { buttonSourceUp[4]->setFocus();   }
-            else if( buttonSourceUp[6]->hasFocus()   )      { buttonSourceUp[5]->setFocus();   }
-            else if( buttonSourceUp[7]->hasFocus()   )      { buttonSourceUp[6]->setFocus();   }
+            else if( buttonSourceUp[0]  ->hasFocus() )      { buttonSourceAll    ->setFocus(); }
+            else if( buttonSourceUp[1]  ->hasFocus() )      { buttonSourceUp[0]  ->setFocus(); }
+            else if( buttonSourceUp[2]  ->hasFocus() )      { buttonSourceUp[1]  ->setFocus(); }
+            else if( buttonSourceUp[3]  ->hasFocus() )      { buttonSourceUp[2]  ->setFocus(); }
+            else if( buttonSourceUp[4]  ->hasFocus() )      { buttonSourceUp[3]  ->setFocus(); }
+            else if( buttonSourceUp[5]  ->hasFocus() )      { buttonSourceUp[4]  ->setFocus(); }
+            else if( buttonSourceUp[6]  ->hasFocus() )      { buttonSourceUp[5]  ->setFocus(); }
+            else if( buttonSourceUp[7]  ->hasFocus() )      { buttonSourceUp[6]  ->setFocus(); }
 
-            else if( buttonDelayDn[0]->hasFocus()    )      { buttonDelayDn[7]->setFocus();    }
-            else if( buttonDelayDn[1]->hasFocus()    )      { buttonDelayDn[0]->setFocus();    }
-            else if( buttonDelayDn[2]->hasFocus()    )      { buttonDelayDn[1]->setFocus();    }
-            else if( buttonDelayDn[3]->hasFocus()    )      { buttonDelayDn[2]->setFocus();    }
-            else if( buttonDelayDn[4]->hasFocus()    )      { buttonDelayDn[3]->setFocus();    }
-            else if( buttonDelayDn[5]->hasFocus()    )      { buttonDelayDn[4]->setFocus();    }
-            else if( buttonDelayDn[6]->hasFocus()    )      { buttonDelayDn[5]->setFocus();    }
-            else if( buttonDelayDn[7]->hasFocus()    )      { buttonDelayDn[6]->setFocus();    }
+            else if( buttonDelayAll     ->hasFocus() )      { buttonDelayDn[7]   ->setFocus(); }
+            else if( buttonDelayDn[0]   ->hasFocus() )      { buttonDelayAll     ->setFocus(); }
+            else if( buttonDelayDn[1]   ->hasFocus() )      { buttonDelayDn[0]   ->setFocus(); }
+            else if( buttonDelayDn[2]   ->hasFocus() )      { buttonDelayDn[1]   ->setFocus(); }
+            else if( buttonDelayDn[3]   ->hasFocus() )      { buttonDelayDn[2]   ->setFocus(); }
+            else if( buttonDelayDn[4]   ->hasFocus() )      { buttonDelayDn[3]   ->setFocus(); }
+            else if( buttonDelayDn[5]   ->hasFocus() )      { buttonDelayDn[4]   ->setFocus(); }
+            else if( buttonDelayDn[6]   ->hasFocus() )      { buttonDelayDn[5]   ->setFocus(); }
+            else if( buttonDelayDn[7]   ->hasFocus() )      { buttonDelayDn[6]   ->setFocus(); }
 
-            else if( buttonDelayUp[0]->hasFocus()    )      { buttonDelayUp[7]->setFocus();    }
-            else if( buttonDelayUp[1]->hasFocus()    )      { buttonDelayUp[0]->setFocus();    }
-            else if( buttonDelayUp[2]->hasFocus()    )      { buttonDelayUp[1]->setFocus();    }
-            else if( buttonDelayUp[3]->hasFocus()    )      { buttonDelayUp[2]->setFocus();    }
-            else if( buttonDelayUp[4]->hasFocus()    )      { buttonDelayUp[3]->setFocus();    }
-            else if( buttonDelayUp[5]->hasFocus()    )      { buttonDelayUp[4]->setFocus();    }
-            else if( buttonDelayUp[6]->hasFocus()    )      { buttonDelayUp[5]->setFocus();    }
-            else if( buttonDelayUp[7]->hasFocus()    )      { buttonDelayUp[6]->setFocus();    }
+            else if( buttonDelayUp[0]   ->hasFocus() )      { buttonDelayAll     ->setFocus(); }
+            else if( buttonDelayUp[1]   ->hasFocus() )      { buttonDelayUp[0]   ->setFocus(); }
+            else if( buttonDelayUp[2]   ->hasFocus() )      { buttonDelayUp[1]   ->setFocus(); }
+            else if( buttonDelayUp[3]   ->hasFocus() )      { buttonDelayUp[2]   ->setFocus(); }
+            else if( buttonDelayUp[4]   ->hasFocus() )      { buttonDelayUp[3]   ->setFocus(); }
+            else if( buttonDelayUp[5]   ->hasFocus() )      { buttonDelayUp[4]   ->setFocus(); }
+            else if( buttonDelayUp[6]   ->hasFocus() )      { buttonDelayUp[5]   ->setFocus(); }
+            else if( buttonDelayUp[7]   ->hasFocus() )      { buttonDelayUp[6]   ->setFocus(); }
 
-            else if( buttonPriorityDn[0]->hasFocus() )      { buttonSave->setFocus();          }
+            else if( buttonPriorityAll  ->hasFocus() )      { buttonSave         ->setFocus(); }
+            else if( buttonPriorityDn[0]->hasFocus() )      { buttonPriorityAll  ->setFocus(); }
             else if( buttonPriorityDn[1]->hasFocus() )      { buttonPriorityDn[0]->setFocus(); }
             else if( buttonPriorityDn[2]->hasFocus() )      { buttonPriorityDn[1]->setFocus(); }
             else if( buttonPriorityDn[3]->hasFocus() )      { buttonPriorityDn[2]->setFocus(); }
@@ -1129,7 +1270,7 @@ void TriggerInputDialog::keyPressEvent(QKeyEvent *event)
             else if( buttonPriorityDn[6]->hasFocus() )      { buttonPriorityDn[5]->setFocus(); }
             else if( buttonPriorityDn[7]->hasFocus() )      { buttonPriorityDn[6]->setFocus(); }
 
-            else if( buttonPriorityUp[0]->hasFocus() )      { buttonSave->setFocus();          }
+            else if( buttonPriorityUp[0]->hasFocus() )      { buttonPriorityAll  ->setFocus(); }
             else if( buttonPriorityUp[1]->hasFocus() )      { buttonPriorityUp[0]->setFocus(); }
             else if( buttonPriorityUp[2]->hasFocus() )      { buttonPriorityUp[1]->setFocus(); }
             else if( buttonPriorityUp[3]->hasFocus() )      { buttonPriorityUp[2]->setFocus(); }
@@ -1138,68 +1279,72 @@ void TriggerInputDialog::keyPressEvent(QKeyEvent *event)
             else if( buttonPriorityUp[6]->hasFocus() )      { buttonPriorityUp[5]->setFocus(); }
             else if( buttonPriorityUp[7]->hasFocus() )      { buttonPriorityUp[6]->setFocus(); }
 
-            else if( buttonAudioDn[0]->hasFocus()    )      { buttonClose->setFocus();         }
-            else if( buttonAudioDn[1]->hasFocus()    )      { buttonAudioDn[0]->setFocus();    }
-            else if( buttonAudioDn[2]->hasFocus()    )      { buttonAudioDn[1]->setFocus();    }
-            else if( buttonAudioDn[3]->hasFocus()    )      { buttonAudioDn[2]->setFocus();    }
-            else if( buttonAudioDn[4]->hasFocus()    )      { buttonAudioDn[3]->setFocus();    }
-            else if( buttonAudioDn[5]->hasFocus()    )      { buttonAudioDn[4]->setFocus();    }
-            else if( buttonAudioDn[6]->hasFocus()    )      { buttonAudioDn[5]->setFocus();    }
-            else if( buttonAudioDn[7]->hasFocus()    )      { buttonAudioDn[6]->setFocus();    }
+            else if( buttonAudioAll     ->hasFocus() )      { buttonClose        ->setFocus(); }
+            else if( buttonAudioDn[0]   ->hasFocus() )      { buttonAudioAll     ->setFocus(); }
+            else if( buttonAudioDn[1]   ->hasFocus() )      { buttonAudioDn[0]   ->setFocus(); }
+            else if( buttonAudioDn[2]   ->hasFocus() )      { buttonAudioDn[1]   ->setFocus(); }
+            else if( buttonAudioDn[3]   ->hasFocus() )      { buttonAudioDn[2]   ->setFocus(); }
+            else if( buttonAudioDn[4]   ->hasFocus() )      { buttonAudioDn[3]   ->setFocus(); }
+            else if( buttonAudioDn[5]   ->hasFocus() )      { buttonAudioDn[4]   ->setFocus(); }
+            else if( buttonAudioDn[6]   ->hasFocus() )      { buttonAudioDn[5]   ->setFocus(); }
+            else if( buttonAudioDn[7]   ->hasFocus() )      { buttonAudioDn[6]   ->setFocus(); }
 
-            else if( buttonAudioUp[0]->hasFocus()    )      { buttonClose->setFocus();         }
-            else if( buttonAudioUp[1]->hasFocus()    )      { buttonAudioUp[0]->setFocus();    }
-            else if( buttonAudioUp[2]->hasFocus()    )      { buttonAudioUp[1]->setFocus();    }
-            else if( buttonAudioUp[3]->hasFocus()    )      { buttonAudioUp[2]->setFocus();    }
-            else if( buttonAudioUp[4]->hasFocus()    )      { buttonAudioUp[3]->setFocus();    }
-            else if( buttonAudioUp[5]->hasFocus()    )      { buttonAudioUp[4]->setFocus();    }
-            else if( buttonAudioUp[6]->hasFocus()    )      { buttonAudioUp[5]->setFocus();    }
-            else if( buttonAudioUp[7]->hasFocus()    )      { buttonAudioUp[6]->setFocus();    }
+            else if( buttonAudioUp[0]   ->hasFocus() )      { buttonAudioAll     ->setFocus(); }
+            else if( buttonAudioUp[1]   ->hasFocus() )      { buttonAudioUp[0]   ->setFocus(); }
+            else if( buttonAudioUp[2]   ->hasFocus() )      { buttonAudioUp[1]   ->setFocus(); }
+            else if( buttonAudioUp[3]   ->hasFocus() )      { buttonAudioUp[2]   ->setFocus(); }
+            else if( buttonAudioUp[4]   ->hasFocus() )      { buttonAudioUp[3]   ->setFocus(); }
+            else if( buttonAudioUp[5]   ->hasFocus() )      { buttonAudioUp[4]   ->setFocus(); }
+            else if( buttonAudioUp[6]   ->hasFocus() )      { buttonAudioUp[5]   ->setFocus(); }
+            else if( buttonAudioUp[7]   ->hasFocus() )      { buttonAudioUp[6]   ->setFocus(); }
 
-            else if( buttonDefault->hasFocus()       )      { buttonSourceDn[7]->setFocus();   }
-            else if( buttonSave->hasFocus()          )      { buttonPriorityDn[7]->setFocus(); }
-            else if( buttonClose->hasFocus()         )      { buttonAudioDn[7]->setFocus();    }
+            else if( buttonDefault      ->hasFocus() )      { buttonSourceDn[7]  ->setFocus(); }
+            else if( buttonSave         ->hasFocus() )      { buttonPriorityDn[7]->setFocus(); }
+            else if( buttonClose        ->hasFocus() )      { buttonAudioDn[7]   ->setFocus(); }
 
             break;
         }
         case Qt::Key_Down:
         {
-            if     ( buttonSourceDn[0]->hasFocus()   )      { buttonSourceDn[1]->setFocus();   }
-            else if( buttonSourceDn[1]->hasFocus()   )      { buttonSourceDn[2]->setFocus();   }
-            else if( buttonSourceDn[2]->hasFocus()   )      { buttonSourceDn[3]->setFocus();   }
-            else if( buttonSourceDn[3]->hasFocus()   )      { buttonSourceDn[4]->setFocus();   }
-            else if( buttonSourceDn[4]->hasFocus()   )      { buttonSourceDn[5]->setFocus();   }
-            else if( buttonSourceDn[5]->hasFocus()   )      { buttonSourceDn[6]->setFocus();   }
-            else if( buttonSourceDn[6]->hasFocus()   )      { buttonSourceDn[7]->setFocus();   }
-            else if( buttonSourceDn[7]->hasFocus()   )      { buttonDefault->setFocus();       }
+            if     ( buttonSourceAll    ->hasFocus() )      { buttonSourceDn[0]  ->setFocus(); }
+            else if( buttonSourceDn[0]  ->hasFocus() )      { buttonSourceDn[1]  ->setFocus(); }
+            else if( buttonSourceDn[1]  ->hasFocus() )      { buttonSourceDn[2]  ->setFocus(); }
+            else if( buttonSourceDn[2]  ->hasFocus() )      { buttonSourceDn[3]  ->setFocus(); }
+            else if( buttonSourceDn[3]  ->hasFocus() )      { buttonSourceDn[4]  ->setFocus(); }
+            else if( buttonSourceDn[4]  ->hasFocus() )      { buttonSourceDn[5]  ->setFocus(); }
+            else if( buttonSourceDn[5]  ->hasFocus() )      { buttonSourceDn[6]  ->setFocus(); }
+            else if( buttonSourceDn[6]  ->hasFocus() )      { buttonSourceDn[7]  ->setFocus(); }
+            else if( buttonSourceDn[7]  ->hasFocus() )      { buttonDefault      ->setFocus(); }
 
-            else if( buttonSourceUp[0]->hasFocus()   )      { buttonSourceUp[1]->setFocus();   }
-            else if( buttonSourceUp[1]->hasFocus()   )      { buttonSourceUp[2]->setFocus();   }
-            else if( buttonSourceUp[2]->hasFocus()   )      { buttonSourceUp[3]->setFocus();   }
-            else if( buttonSourceUp[3]->hasFocus()   )      { buttonSourceUp[4]->setFocus();   }
-            else if( buttonSourceUp[4]->hasFocus()   )      { buttonSourceUp[5]->setFocus();   }
-            else if( buttonSourceUp[5]->hasFocus()   )      { buttonSourceUp[6]->setFocus();   }
-            else if( buttonSourceUp[6]->hasFocus()   )      { buttonSourceUp[7]->setFocus();   }
-            else if( buttonSourceUp[7]->hasFocus()   )      { buttonDefault->setFocus();       }
+            else if( buttonSourceUp[0]  ->hasFocus() )      { buttonSourceUp[1]  ->setFocus(); }
+            else if( buttonSourceUp[1]  ->hasFocus() )      { buttonSourceUp[2]  ->setFocus(); }
+            else if( buttonSourceUp[2]  ->hasFocus() )      { buttonSourceUp[3]  ->setFocus(); }
+            else if( buttonSourceUp[3]  ->hasFocus() )      { buttonSourceUp[4]  ->setFocus(); }
+            else if( buttonSourceUp[4]  ->hasFocus() )      { buttonSourceUp[5]  ->setFocus(); }
+            else if( buttonSourceUp[5]  ->hasFocus() )      { buttonSourceUp[6]  ->setFocus(); }
+            else if( buttonSourceUp[6]  ->hasFocus() )      { buttonSourceUp[7]  ->setFocus(); }
+            else if( buttonSourceUp[7]  ->hasFocus() )      { buttonDefault      ->setFocus(); }
 
-            else if( buttonDelayDn[0]->hasFocus()    )      { buttonDelayDn[1]->setFocus();    }
-            else if( buttonDelayDn[1]->hasFocus()    )      { buttonDelayDn[2]->setFocus();    }
-            else if( buttonDelayDn[2]->hasFocus()    )      { buttonDelayDn[3]->setFocus();    }
-            else if( buttonDelayDn[3]->hasFocus()    )      { buttonDelayDn[4]->setFocus();    }
-            else if( buttonDelayDn[4]->hasFocus()    )      { buttonDelayDn[5]->setFocus();    }
-            else if( buttonDelayDn[5]->hasFocus()    )      { buttonDelayDn[6]->setFocus();    }
-            else if( buttonDelayDn[6]->hasFocus()    )      { buttonDelayDn[7]->setFocus();    }
-            else if( buttonDelayDn[7]->hasFocus()    )      { buttonDelayDn[0]->setFocus();    }
+            else if( buttonDelayAll     ->hasFocus() )      { buttonDelayDn[0]   ->setFocus(); }
+            else if( buttonDelayDn[0]   ->hasFocus() )      { buttonDelayDn[1]   ->setFocus(); }
+            else if( buttonDelayDn[1]   ->hasFocus() )      { buttonDelayDn[2]   ->setFocus(); }
+            else if( buttonDelayDn[2]   ->hasFocus() )      { buttonDelayDn[3]   ->setFocus(); }
+            else if( buttonDelayDn[3]   ->hasFocus() )      { buttonDelayDn[4]   ->setFocus(); }
+            else if( buttonDelayDn[4]   ->hasFocus() )      { buttonDelayDn[5]   ->setFocus(); }
+            else if( buttonDelayDn[5]   ->hasFocus() )      { buttonDelayDn[6]   ->setFocus(); }
+            else if( buttonDelayDn[6]   ->hasFocus() )      { buttonDelayDn[7]   ->setFocus(); }
+            else if( buttonDelayDn[7]   ->hasFocus() )      { buttonDelayAll     ->setFocus(); }
 
-            else if( buttonDelayUp[0]->hasFocus()    )      { buttonDelayUp[1]->setFocus();    }
-            else if( buttonDelayUp[1]->hasFocus()    )      { buttonDelayUp[2]->setFocus();    }
-            else if( buttonDelayUp[2]->hasFocus()    )      { buttonDelayUp[3]->setFocus();    }
-            else if( buttonDelayUp[3]->hasFocus()    )      { buttonDelayUp[4]->setFocus();    }
-            else if( buttonDelayUp[4]->hasFocus()    )      { buttonDelayUp[5]->setFocus();    }
-            else if( buttonDelayUp[5]->hasFocus()    )      { buttonDelayUp[6]->setFocus();    }
-            else if( buttonDelayUp[6]->hasFocus()    )      { buttonDelayUp[7]->setFocus();    }
-            else if( buttonDelayUp[7]->hasFocus()    )      { buttonDelayUp[0]->setFocus();    }
+            else if( buttonDelayUp[0]   ->hasFocus() )      { buttonDelayUp[1]   ->setFocus(); }
+            else if( buttonDelayUp[1]   ->hasFocus() )      { buttonDelayUp[2]   ->setFocus(); }
+            else if( buttonDelayUp[2]   ->hasFocus() )      { buttonDelayUp[3]   ->setFocus(); }
+            else if( buttonDelayUp[3]   ->hasFocus() )      { buttonDelayUp[4]   ->setFocus(); }
+            else if( buttonDelayUp[4]   ->hasFocus() )      { buttonDelayUp[5]   ->setFocus(); }
+            else if( buttonDelayUp[5]   ->hasFocus() )      { buttonDelayUp[6]   ->setFocus(); }
+            else if( buttonDelayUp[6]   ->hasFocus() )      { buttonDelayUp[7]   ->setFocus(); }
+            else if( buttonDelayUp[7]   ->hasFocus() )      { buttonDelayAll     ->setFocus(); }
 
+            else if( buttonPriorityAll  ->hasFocus() )      { buttonPriorityDn[0]->setFocus(); }
             else if( buttonPriorityDn[0]->hasFocus() )      { buttonPriorityDn[1]->setFocus(); }
             else if( buttonPriorityDn[1]->hasFocus() )      { buttonPriorityDn[2]->setFocus(); }
             else if( buttonPriorityDn[2]->hasFocus() )      { buttonPriorityDn[3]->setFocus(); }
@@ -1207,7 +1352,7 @@ void TriggerInputDialog::keyPressEvent(QKeyEvent *event)
             else if( buttonPriorityDn[4]->hasFocus() )      { buttonPriorityDn[5]->setFocus(); }
             else if( buttonPriorityDn[5]->hasFocus() )      { buttonPriorityDn[6]->setFocus(); }
             else if( buttonPriorityDn[6]->hasFocus() )      { buttonPriorityDn[7]->setFocus(); }
-            else if( buttonPriorityDn[7]->hasFocus() )      { buttonSave->setFocus();          }
+            else if( buttonPriorityDn[7]->hasFocus() )      { buttonSave         ->setFocus(); }
 
             else if( buttonPriorityUp[0]->hasFocus() )      { buttonPriorityUp[1]->setFocus(); }
             else if( buttonPriorityUp[1]->hasFocus() )      { buttonPriorityUp[2]->setFocus(); }
@@ -1216,78 +1361,82 @@ void TriggerInputDialog::keyPressEvent(QKeyEvent *event)
             else if( buttonPriorityUp[4]->hasFocus() )      { buttonPriorityUp[5]->setFocus(); }
             else if( buttonPriorityUp[5]->hasFocus() )      { buttonPriorityUp[6]->setFocus(); }
             else if( buttonPriorityUp[6]->hasFocus() )      { buttonPriorityUp[7]->setFocus(); }
-            else if( buttonPriorityUp[7]->hasFocus() )      { buttonSave->setFocus();          }
+            else if( buttonPriorityUp[7]->hasFocus() )      { buttonSave         ->setFocus(); }
 
-            else if( buttonAudioDn[0]->hasFocus()    )      { buttonAudioDn[1]->setFocus();    }
-            else if( buttonAudioDn[1]->hasFocus()    )      { buttonAudioDn[2]->setFocus();    }
-            else if( buttonAudioDn[2]->hasFocus()    )      { buttonAudioDn[3]->setFocus();    }
-            else if( buttonAudioDn[3]->hasFocus()    )      { buttonAudioDn[4]->setFocus();    }
-            else if( buttonAudioDn[4]->hasFocus()    )      { buttonAudioDn[5]->setFocus();    }
-            else if( buttonAudioDn[5]->hasFocus()    )      { buttonAudioDn[6]->setFocus();    }
-            else if( buttonAudioDn[6]->hasFocus()    )      { buttonAudioDn[7]->setFocus();    }
-            else if( buttonAudioDn[7]->hasFocus()    )      { buttonClose->setFocus();         }
+            else if( buttonAudioAll     ->hasFocus() )      { buttonAudioDn[0]   ->setFocus(); }
+            else if( buttonAudioDn[0]   ->hasFocus() )      { buttonAudioDn[1]   ->setFocus(); }
+            else if( buttonAudioDn[1]   ->hasFocus() )      { buttonAudioDn[2]   ->setFocus(); }
+            else if( buttonAudioDn[2]   ->hasFocus() )      { buttonAudioDn[3]   ->setFocus(); }
+            else if( buttonAudioDn[3]   ->hasFocus() )      { buttonAudioDn[4]   ->setFocus(); }
+            else if( buttonAudioDn[4]   ->hasFocus() )      { buttonAudioDn[5]   ->setFocus(); }
+            else if( buttonAudioDn[5]   ->hasFocus() )      { buttonAudioDn[6]   ->setFocus(); }
+            else if( buttonAudioDn[6]   ->hasFocus() )      { buttonAudioDn[7]   ->setFocus(); }
+            else if( buttonAudioDn[7]   ->hasFocus() )      { buttonClose        ->setFocus(); }
 
-            else if( buttonAudioUp[0]->hasFocus()    )      { buttonAudioUp[1]->setFocus();    }
-            else if( buttonAudioUp[1]->hasFocus()    )      { buttonAudioUp[2]->setFocus();    }
-            else if( buttonAudioUp[2]->hasFocus()    )      { buttonAudioUp[3]->setFocus();    }
-            else if( buttonAudioUp[3]->hasFocus()    )      { buttonAudioUp[4]->setFocus();    }
-            else if( buttonAudioUp[4]->hasFocus()    )      { buttonAudioUp[5]->setFocus();    }
-            else if( buttonAudioUp[5]->hasFocus()    )      { buttonAudioUp[6]->setFocus();    }
-            else if( buttonAudioUp[6]->hasFocus()    )      { buttonAudioUp[7]->setFocus();    }
-            else if( buttonAudioUp[7]->hasFocus()    )      { buttonClose->setFocus();         }
+            else if( buttonAudioUp[0]   ->hasFocus() )      { buttonAudioUp[1]   ->setFocus(); }
+            else if( buttonAudioUp[1]   ->hasFocus() )      { buttonAudioUp[2]   ->setFocus(); }
+            else if( buttonAudioUp[2]   ->hasFocus() )      { buttonAudioUp[3]   ->setFocus(); }
+            else if( buttonAudioUp[3]   ->hasFocus() )      { buttonAudioUp[4]   ->setFocus(); }
+            else if( buttonAudioUp[4]   ->hasFocus() )      { buttonAudioUp[5]   ->setFocus(); }
+            else if( buttonAudioUp[5]   ->hasFocus() )      { buttonAudioUp[6]   ->setFocus(); }
+            else if( buttonAudioUp[6]   ->hasFocus() )      { buttonAudioUp[7]   ->setFocus(); }
+            else if( buttonAudioUp[7]   ->hasFocus() )      { buttonClose        ->setFocus(); }
 
-            else if( buttonDefault->hasFocus()       )      { buttonSourceDn[0]->setFocus();   }
-            else if( buttonSave->hasFocus()          )      { buttonPriorityDn[0]->setFocus(); }
-            else if( buttonClose->hasFocus()         )      { buttonAudioDn[0]->setFocus();    }
+            else if( buttonDefault      ->hasFocus() )      { buttonSourceAll    ->setFocus(); }
+            else if( buttonSave         ->hasFocus() )      { buttonPriorityAll  ->setFocus(); }
+            else if( buttonClose        ->hasFocus() )      { buttonAudioAll     ->setFocus(); }
 
             break;
         }
         case Qt::Key_Left:
         {
-            if     ( buttonSourceDn[0]->hasFocus()   )      { buttonAudioUp[0]->setFocus();    }
-            else if( buttonSourceDn[1]->hasFocus()   )      { buttonAudioUp[1]->setFocus();    }
-            else if( buttonSourceDn[2]->hasFocus()   )      { buttonAudioUp[2]->setFocus();    }
-            else if( buttonSourceDn[3]->hasFocus()   )      { buttonAudioUp[3]->setFocus();    }
-            else if( buttonSourceDn[4]->hasFocus()   )      { buttonAudioUp[4]->setFocus();    }
-            else if( buttonSourceDn[5]->hasFocus()   )      { buttonAudioUp[5]->setFocus();    }
-            else if( buttonSourceDn[6]->hasFocus()   )      { buttonAudioUp[6]->setFocus();    }
-            else if( buttonSourceDn[7]->hasFocus()   )      { buttonAudioUp[7]->setFocus();    }
+            if     ( buttonSourceAll    ->hasFocus() )      { buttonAudioAll     ->setFocus(); }
+            else if( buttonSourceDn[0]  ->hasFocus() )      { buttonAudioUp[0]   ->setFocus(); }
+            else if( buttonSourceDn[1]  ->hasFocus() )      { buttonAudioUp[1]   ->setFocus(); }
+            else if( buttonSourceDn[2]  ->hasFocus() )      { buttonAudioUp[2]   ->setFocus(); }
+            else if( buttonSourceDn[3]  ->hasFocus() )      { buttonAudioUp[3]   ->setFocus(); }
+            else if( buttonSourceDn[4]  ->hasFocus() )      { buttonAudioUp[4]   ->setFocus(); }
+            else if( buttonSourceDn[5]  ->hasFocus() )      { buttonAudioUp[5]   ->setFocus(); }
+            else if( buttonSourceDn[6]  ->hasFocus() )      { buttonAudioUp[6]   ->setFocus(); }
+            else if( buttonSourceDn[7]  ->hasFocus() )      { buttonAudioUp[7]   ->setFocus(); }
 
-            else if( buttonSourceUp[0]->hasFocus()   )      { buttonSourceDn[0]->setFocus();   }
-            else if( buttonSourceUp[1]->hasFocus()   )      { buttonSourceDn[1]->setFocus();   }
-            else if( buttonSourceUp[2]->hasFocus()   )      { buttonSourceDn[2]->setFocus();   }
-            else if( buttonSourceUp[3]->hasFocus()   )      { buttonSourceDn[3]->setFocus();   }
-            else if( buttonSourceUp[4]->hasFocus()   )      { buttonSourceDn[4]->setFocus();   }
-            else if( buttonSourceUp[5]->hasFocus()   )      { buttonSourceDn[5]->setFocus();   }
-            else if( buttonSourceUp[6]->hasFocus()   )      { buttonSourceDn[6]->setFocus();   }
-            else if( buttonSourceUp[7]->hasFocus()   )      { buttonSourceDn[7]->setFocus();   }
+            else if( buttonSourceUp[0]  ->hasFocus() )      { buttonSourceDn[0]  ->setFocus(); }
+            else if( buttonSourceUp[1]  ->hasFocus() )      { buttonSourceDn[1]  ->setFocus(); }
+            else if( buttonSourceUp[2]  ->hasFocus() )      { buttonSourceDn[2]  ->setFocus(); }
+            else if( buttonSourceUp[3]  ->hasFocus() )      { buttonSourceDn[3]  ->setFocus(); }
+            else if( buttonSourceUp[4]  ->hasFocus() )      { buttonSourceDn[4]  ->setFocus(); }
+            else if( buttonSourceUp[5]  ->hasFocus() )      { buttonSourceDn[5]  ->setFocus(); }
+            else if( buttonSourceUp[6]  ->hasFocus() )      { buttonSourceDn[6]  ->setFocus(); }
+            else if( buttonSourceUp[7]  ->hasFocus() )      { buttonSourceDn[7]  ->setFocus(); }
 
-            else if( buttonDelayDn[0]->hasFocus()    )      { buttonSourceUp[0]->setFocus();   }
-            else if( buttonDelayDn[1]->hasFocus()    )      { buttonSourceUp[1]->setFocus();   }
-            else if( buttonDelayDn[2]->hasFocus()    )      { buttonSourceUp[2]->setFocus();   }
-            else if( buttonDelayDn[3]->hasFocus()    )      { buttonSourceUp[3]->setFocus();   }
-            else if( buttonDelayDn[4]->hasFocus()    )      { buttonSourceUp[4]->setFocus();   }
-            else if( buttonDelayDn[5]->hasFocus()    )      { buttonSourceUp[5]->setFocus();   }
-            else if( buttonDelayDn[6]->hasFocus()    )      { buttonSourceUp[6]->setFocus();   }
-            else if( buttonDelayDn[7]->hasFocus()    )      { buttonSourceUp[7]->setFocus();   }
+            else if( buttonDelayAll     ->hasFocus() )      { buttonSourceAll    ->setFocus(); }
+            else if( buttonDelayDn[0]   ->hasFocus() )      { buttonSourceUp[0]  ->setFocus(); }
+            else if( buttonDelayDn[1]   ->hasFocus() )      { buttonSourceUp[1]  ->setFocus(); }
+            else if( buttonDelayDn[2]   ->hasFocus() )      { buttonSourceUp[2]  ->setFocus(); }
+            else if( buttonDelayDn[3]   ->hasFocus() )      { buttonSourceUp[3]  ->setFocus(); }
+            else if( buttonDelayDn[4]   ->hasFocus() )      { buttonSourceUp[4]  ->setFocus(); }
+            else if( buttonDelayDn[5]   ->hasFocus() )      { buttonSourceUp[5]  ->setFocus(); }
+            else if( buttonDelayDn[6]   ->hasFocus() )      { buttonSourceUp[6]  ->setFocus(); }
+            else if( buttonDelayDn[7]   ->hasFocus() )      { buttonSourceUp[7]  ->setFocus(); }
 
-            else if( buttonDelayUp[0]->hasFocus()    )      { buttonDelayDn[0]->setFocus();    }
-            else if( buttonDelayUp[1]->hasFocus()    )      { buttonDelayDn[1]->setFocus();    }
-            else if( buttonDelayUp[2]->hasFocus()    )      { buttonDelayDn[2]->setFocus();    }
-            else if( buttonDelayUp[3]->hasFocus()    )      { buttonDelayDn[3]->setFocus();    }
-            else if( buttonDelayUp[4]->hasFocus()    )      { buttonDelayDn[4]->setFocus();    }
-            else if( buttonDelayUp[5]->hasFocus()    )      { buttonDelayDn[5]->setFocus();    }
-            else if( buttonDelayUp[6]->hasFocus()    )      { buttonDelayDn[6]->setFocus();    }
-            else if( buttonDelayUp[7]->hasFocus()    )      { buttonDelayDn[7]->setFocus();    }
+            else if( buttonDelayUp[0]   ->hasFocus() )      { buttonDelayDn[0]   ->setFocus(); }
+            else if( buttonDelayUp[1]   ->hasFocus() )      { buttonDelayDn[1]   ->setFocus(); }
+            else if( buttonDelayUp[2]   ->hasFocus() )      { buttonDelayDn[2]   ->setFocus(); }
+            else if( buttonDelayUp[3]   ->hasFocus() )      { buttonDelayDn[3]   ->setFocus(); }
+            else if( buttonDelayUp[4]   ->hasFocus() )      { buttonDelayDn[4]   ->setFocus(); }
+            else if( buttonDelayUp[5]   ->hasFocus() )      { buttonDelayDn[5]   ->setFocus(); }
+            else if( buttonDelayUp[6]   ->hasFocus() )      { buttonDelayDn[6]   ->setFocus(); }
+            else if( buttonDelayUp[7]   ->hasFocus() )      { buttonDelayDn[7]   ->setFocus(); }
 
-            else if( buttonPriorityDn[0]->hasFocus() )      { buttonDelayUp[0]->setFocus();    }
-            else if( buttonPriorityDn[1]->hasFocus() )      { buttonDelayUp[1]->setFocus();    }
-            else if( buttonPriorityDn[2]->hasFocus() )      { buttonDelayUp[2]->setFocus();    }
-            else if( buttonPriorityDn[3]->hasFocus() )      { buttonDelayUp[3]->setFocus();    }
-            else if( buttonPriorityDn[4]->hasFocus() )      { buttonDelayUp[4]->setFocus();    }
-            else if( buttonPriorityDn[5]->hasFocus() )      { buttonDelayUp[5]->setFocus();    }
-            else if( buttonPriorityDn[6]->hasFocus() )      { buttonDelayUp[6]->setFocus();    }
-            else if( buttonPriorityDn[7]->hasFocus() )      { buttonDelayUp[7]->setFocus();    }
+            else if( buttonPriorityAll  ->hasFocus() )      { buttonDelayAll     ->setFocus(); }
+            else if( buttonPriorityDn[0]->hasFocus() )      { buttonDelayUp[0]   ->setFocus(); }
+            else if( buttonPriorityDn[1]->hasFocus() )      { buttonDelayUp[1]   ->setFocus(); }
+            else if( buttonPriorityDn[2]->hasFocus() )      { buttonDelayUp[2]   ->setFocus(); }
+            else if( buttonPriorityDn[3]->hasFocus() )      { buttonDelayUp[3]   ->setFocus(); }
+            else if( buttonPriorityDn[4]->hasFocus() )      { buttonDelayUp[4]   ->setFocus(); }
+            else if( buttonPriorityDn[5]->hasFocus() )      { buttonDelayUp[5]   ->setFocus(); }
+            else if( buttonPriorityDn[6]->hasFocus() )      { buttonDelayUp[6]   ->setFocus(); }
+            else if( buttonPriorityDn[7]->hasFocus() )      { buttonDelayUp[7]   ->setFocus(); }
 
             else if( buttonPriorityUp[0]->hasFocus() )      { buttonPriorityDn[0]->setFocus(); }
             else if( buttonPriorityUp[1]->hasFocus() )      { buttonPriorityDn[1]->setFocus(); }
@@ -1298,68 +1447,72 @@ void TriggerInputDialog::keyPressEvent(QKeyEvent *event)
             else if( buttonPriorityUp[6]->hasFocus() )      { buttonPriorityDn[6]->setFocus(); }
             else if( buttonPriorityUp[7]->hasFocus() )      { buttonPriorityDn[7]->setFocus(); }
 
-            else if( buttonAudioDn[0]->hasFocus()    )      { buttonPriorityUp[0]->setFocus(); }
-            else if( buttonAudioDn[1]->hasFocus()    )      { buttonPriorityUp[1]->setFocus(); }
-            else if( buttonAudioDn[2]->hasFocus()    )      { buttonPriorityUp[2]->setFocus(); }
-            else if( buttonAudioDn[3]->hasFocus()    )      { buttonPriorityUp[3]->setFocus(); }
-            else if( buttonAudioDn[4]->hasFocus()    )      { buttonPriorityUp[4]->setFocus(); }
-            else if( buttonAudioDn[5]->hasFocus()    )      { buttonPriorityUp[5]->setFocus(); }
-            else if( buttonAudioDn[6]->hasFocus()    )      { buttonPriorityUp[6]->setFocus(); }
-            else if( buttonAudioDn[7]->hasFocus()    )      { buttonPriorityUp[7]->setFocus(); }
+            else if( buttonAudioAll     ->hasFocus() )      { buttonPriorityAll  ->setFocus(); }
+            else if( buttonAudioDn[0]   ->hasFocus() )      { buttonPriorityUp[0]->setFocus(); }
+            else if( buttonAudioDn[1]   ->hasFocus() )      { buttonPriorityUp[1]->setFocus(); }
+            else if( buttonAudioDn[2]   ->hasFocus() )      { buttonPriorityUp[2]->setFocus(); }
+            else if( buttonAudioDn[3]   ->hasFocus() )      { buttonPriorityUp[3]->setFocus(); }
+            else if( buttonAudioDn[4]   ->hasFocus() )      { buttonPriorityUp[4]->setFocus(); }
+            else if( buttonAudioDn[5]   ->hasFocus() )      { buttonPriorityUp[5]->setFocus(); }
+            else if( buttonAudioDn[6]   ->hasFocus() )      { buttonPriorityUp[6]->setFocus(); }
+            else if( buttonAudioDn[7]   ->hasFocus() )      { buttonPriorityUp[7]->setFocus(); }
 
-            else if( buttonAudioUp[0]->hasFocus()    )      { buttonAudioDn[0]->setFocus();    }
-            else if( buttonAudioUp[1]->hasFocus()    )      { buttonAudioDn[1]->setFocus();    }
-            else if( buttonAudioUp[2]->hasFocus()    )      { buttonAudioDn[2]->setFocus();    }
-            else if( buttonAudioUp[3]->hasFocus()    )      { buttonAudioDn[3]->setFocus();    }
-            else if( buttonAudioUp[4]->hasFocus()    )      { buttonAudioDn[4]->setFocus();    }
-            else if( buttonAudioUp[5]->hasFocus()    )      { buttonAudioDn[5]->setFocus();    }
-            else if( buttonAudioUp[6]->hasFocus()    )      { buttonAudioDn[6]->setFocus();    }
-            else if( buttonAudioUp[7]->hasFocus()    )      { buttonAudioDn[7]->setFocus();    }
+            else if( buttonAudioUp[0]   ->hasFocus() )      { buttonAudioDn[0]   ->setFocus(); }
+            else if( buttonAudioUp[1]   ->hasFocus() )      { buttonAudioDn[1]   ->setFocus(); }
+            else if( buttonAudioUp[2]   ->hasFocus() )      { buttonAudioDn[2]   ->setFocus(); }
+            else if( buttonAudioUp[3]   ->hasFocus() )      { buttonAudioDn[3]   ->setFocus(); }
+            else if( buttonAudioUp[4]   ->hasFocus() )      { buttonAudioDn[4]   ->setFocus(); }
+            else if( buttonAudioUp[5]   ->hasFocus() )      { buttonAudioDn[5]   ->setFocus(); }
+            else if( buttonAudioUp[6]   ->hasFocus() )      { buttonAudioDn[6]   ->setFocus(); }
+            else if( buttonAudioUp[7]   ->hasFocus() )      { buttonAudioDn[7]   ->setFocus(); }
 
-            else if( buttonDefault->hasFocus()       )      { buttonClose->setFocus();         }
-            else if( buttonSave->hasFocus()          )      { buttonDefault->setFocus();       }
-            else if( buttonClose->hasFocus()         )      { buttonSave->setFocus();          }
+            else if( buttonDefault      ->hasFocus() )      { buttonClose        ->setFocus(); }
+            else if( buttonSave         ->hasFocus() )      { buttonDefault      ->setFocus(); }
+            else if( buttonClose        ->hasFocus() )      { buttonSave         ->setFocus(); }
 
             break;
         }
         case Qt::Key_Right:
         {
-            if     ( buttonSourceDn[0]->hasFocus()   )      { buttonSourceUp[0]->setFocus();   }
-            else if( buttonSourceDn[1]->hasFocus()   )      { buttonSourceUp[1]->setFocus();   }
-            else if( buttonSourceDn[2]->hasFocus()   )      { buttonSourceUp[2]->setFocus();   }
-            else if( buttonSourceDn[3]->hasFocus()   )      { buttonSourceUp[3]->setFocus();   }
-            else if( buttonSourceDn[4]->hasFocus()   )      { buttonSourceUp[4]->setFocus();   }
-            else if( buttonSourceDn[5]->hasFocus()   )      { buttonSourceUp[5]->setFocus();   }
-            else if( buttonSourceDn[6]->hasFocus()   )      { buttonSourceUp[6]->setFocus();   }
-            else if( buttonSourceDn[7]->hasFocus()   )      { buttonSourceUp[7]->setFocus();   }
+            if     ( buttonSourceAll    ->hasFocus() )      { buttonDelayAll     ->setFocus(); }
+            else if( buttonSourceDn[0]  ->hasFocus() )      { buttonSourceUp[0]  ->setFocus(); }
+            else if( buttonSourceDn[1]  ->hasFocus() )      { buttonSourceUp[1]  ->setFocus(); }
+            else if( buttonSourceDn[2]  ->hasFocus() )      { buttonSourceUp[2]  ->setFocus(); }
+            else if( buttonSourceDn[3]  ->hasFocus() )      { buttonSourceUp[3]  ->setFocus(); }
+            else if( buttonSourceDn[4]  ->hasFocus() )      { buttonSourceUp[4]  ->setFocus(); }
+            else if( buttonSourceDn[5]  ->hasFocus() )      { buttonSourceUp[5]  ->setFocus(); }
+            else if( buttonSourceDn[6]  ->hasFocus() )      { buttonSourceUp[6]  ->setFocus(); }
+            else if( buttonSourceDn[7]  ->hasFocus() )      { buttonSourceUp[7]  ->setFocus(); }
 
-            else if( buttonSourceUp[0]->hasFocus()   )      { buttonDelayDn[0]->setFocus();    }
-            else if( buttonSourceUp[1]->hasFocus()   )      { buttonDelayDn[1]->setFocus();    }
-            else if( buttonSourceUp[2]->hasFocus()   )      { buttonDelayDn[2]->setFocus();    }
-            else if( buttonSourceUp[3]->hasFocus()   )      { buttonDelayDn[3]->setFocus();    }
-            else if( buttonSourceUp[4]->hasFocus()   )      { buttonDelayDn[4]->setFocus();    }
-            else if( buttonSourceUp[5]->hasFocus()   )      { buttonDelayDn[5]->setFocus();    }
-            else if( buttonSourceUp[6]->hasFocus()   )      { buttonDelayDn[6]->setFocus();    }
-            else if( buttonSourceUp[7]->hasFocus()   )      { buttonDelayDn[7]->setFocus();    }
+            else if( buttonSourceUp[0]  ->hasFocus() )      { buttonDelayDn[0]   ->setFocus(); }
+            else if( buttonSourceUp[1]  ->hasFocus() )      { buttonDelayDn[1]   ->setFocus(); }
+            else if( buttonSourceUp[2]  ->hasFocus() )      { buttonDelayDn[2]   ->setFocus(); }
+            else if( buttonSourceUp[3]  ->hasFocus() )      { buttonDelayDn[3]   ->setFocus(); }
+            else if( buttonSourceUp[4]  ->hasFocus() )      { buttonDelayDn[4]   ->setFocus(); }
+            else if( buttonSourceUp[5]  ->hasFocus() )      { buttonDelayDn[5]   ->setFocus(); }
+            else if( buttonSourceUp[6]  ->hasFocus() )      { buttonDelayDn[6]   ->setFocus(); }
+            else if( buttonSourceUp[7]  ->hasFocus() )      { buttonDelayDn[7]   ->setFocus(); }
 
-            else if( buttonDelayDn[0]->hasFocus()    )      { buttonDelayUp[0]->setFocus();    }
-            else if( buttonDelayDn[1]->hasFocus()    )      { buttonDelayUp[1]->setFocus();    }
-            else if( buttonDelayDn[2]->hasFocus()    )      { buttonDelayUp[2]->setFocus();    }
-            else if( buttonDelayDn[3]->hasFocus()    )      { buttonDelayUp[3]->setFocus();    }
-            else if( buttonDelayDn[4]->hasFocus()    )      { buttonDelayUp[4]->setFocus();    }
-            else if( buttonDelayDn[5]->hasFocus()    )      { buttonDelayUp[5]->setFocus();    }
-            else if( buttonDelayDn[6]->hasFocus()    )      { buttonDelayUp[6]->setFocus();    }
-            else if( buttonDelayDn[7]->hasFocus()    )      { buttonDelayUp[7]->setFocus();    }
+            else if( buttonDelayAll     ->hasFocus() )      { buttonPriorityAll  ->setFocus(); }
+            else if( buttonDelayDn[0]   ->hasFocus() )      { buttonDelayUp[0]   ->setFocus(); }
+            else if( buttonDelayDn[1]   ->hasFocus() )      { buttonDelayUp[1]   ->setFocus(); }
+            else if( buttonDelayDn[2]   ->hasFocus() )      { buttonDelayUp[2]   ->setFocus(); }
+            else if( buttonDelayDn[3]   ->hasFocus() )      { buttonDelayUp[3]   ->setFocus(); }
+            else if( buttonDelayDn[4]   ->hasFocus() )      { buttonDelayUp[4]   ->setFocus(); }
+            else if( buttonDelayDn[5]   ->hasFocus() )      { buttonDelayUp[5]   ->setFocus(); }
+            else if( buttonDelayDn[6]   ->hasFocus() )      { buttonDelayUp[6]   ->setFocus(); }
+            else if( buttonDelayDn[7]   ->hasFocus() )      { buttonDelayUp[7]   ->setFocus(); }
 
-            else if( buttonDelayUp[0]->hasFocus()    )      { buttonPriorityDn[0]->setFocus(); }
-            else if( buttonDelayUp[1]->hasFocus()    )      { buttonPriorityDn[1]->setFocus(); }
-            else if( buttonDelayUp[2]->hasFocus()    )      { buttonPriorityDn[2]->setFocus(); }
-            else if( buttonDelayUp[3]->hasFocus()    )      { buttonPriorityDn[3]->setFocus(); }
-            else if( buttonDelayUp[4]->hasFocus()    )      { buttonPriorityDn[4]->setFocus(); }
-            else if( buttonDelayUp[5]->hasFocus()    )      { buttonPriorityDn[5]->setFocus(); }
-            else if( buttonDelayUp[6]->hasFocus()    )      { buttonPriorityDn[6]->setFocus(); }
-            else if( buttonDelayUp[7]->hasFocus()    )      { buttonPriorityDn[7]->setFocus(); }
+            else if( buttonDelayUp[0]   ->hasFocus() )      { buttonPriorityDn[0]->setFocus(); }
+            else if( buttonDelayUp[1]   ->hasFocus() )      { buttonPriorityDn[1]->setFocus(); }
+            else if( buttonDelayUp[2]   ->hasFocus() )      { buttonPriorityDn[2]->setFocus(); }
+            else if( buttonDelayUp[3]   ->hasFocus() )      { buttonPriorityDn[3]->setFocus(); }
+            else if( buttonDelayUp[4]   ->hasFocus() )      { buttonPriorityDn[4]->setFocus(); }
+            else if( buttonDelayUp[5]   ->hasFocus() )      { buttonPriorityDn[5]->setFocus(); }
+            else if( buttonDelayUp[6]   ->hasFocus() )      { buttonPriorityDn[6]->setFocus(); }
+            else if( buttonDelayUp[7]   ->hasFocus() )      { buttonPriorityDn[7]->setFocus(); }
 
+            else if( buttonPriorityAll  ->hasFocus() )      { buttonAudioAll     ->setFocus(); }
             else if( buttonPriorityDn[0]->hasFocus() )      { buttonPriorityUp[0]->setFocus(); }
             else if( buttonPriorityDn[1]->hasFocus() )      { buttonPriorityUp[1]->setFocus(); }
             else if( buttonPriorityDn[2]->hasFocus() )      { buttonPriorityUp[2]->setFocus(); }
@@ -1369,116 +1522,121 @@ void TriggerInputDialog::keyPressEvent(QKeyEvent *event)
             else if( buttonPriorityDn[6]->hasFocus() )      { buttonPriorityUp[6]->setFocus(); }
             else if( buttonPriorityDn[7]->hasFocus() )      { buttonPriorityUp[7]->setFocus(); }
 
-            else if( buttonPriorityUp[0]->hasFocus() )      { buttonAudioDn[0]->setFocus();    }
-            else if( buttonPriorityUp[1]->hasFocus() )      { buttonAudioDn[1]->setFocus();    }
-            else if( buttonPriorityUp[2]->hasFocus() )      { buttonAudioDn[2]->setFocus();    }
-            else if( buttonPriorityUp[3]->hasFocus() )      { buttonAudioDn[3]->setFocus();    }
-            else if( buttonPriorityUp[4]->hasFocus() )      { buttonAudioDn[4]->setFocus();    }
-            else if( buttonPriorityUp[5]->hasFocus() )      { buttonAudioDn[5]->setFocus();    }
-            else if( buttonPriorityUp[6]->hasFocus() )      { buttonAudioDn[6]->setFocus();    }
-            else if( buttonPriorityUp[7]->hasFocus() )      { buttonAudioDn[7]->setFocus();    }
+            else if( buttonPriorityUp[0]->hasFocus() )      { buttonAudioDn[0]   ->setFocus(); }
+            else if( buttonPriorityUp[1]->hasFocus() )      { buttonAudioDn[1]   ->setFocus(); }
+            else if( buttonPriorityUp[2]->hasFocus() )      { buttonAudioDn[2]   ->setFocus(); }
+            else if( buttonPriorityUp[3]->hasFocus() )      { buttonAudioDn[3]   ->setFocus(); }
+            else if( buttonPriorityUp[4]->hasFocus() )      { buttonAudioDn[4]   ->setFocus(); }
+            else if( buttonPriorityUp[5]->hasFocus() )      { buttonAudioDn[5]   ->setFocus(); }
+            else if( buttonPriorityUp[6]->hasFocus() )      { buttonAudioDn[6]   ->setFocus(); }
+            else if( buttonPriorityUp[7]->hasFocus() )      { buttonAudioDn[7]   ->setFocus(); }
 
-            else if( buttonAudioDn[0]->hasFocus()    )      { buttonAudioUp[0]->setFocus();    }
-            else if( buttonAudioDn[1]->hasFocus()    )      { buttonAudioUp[1]->setFocus();    }
-            else if( buttonAudioDn[2]->hasFocus()    )      { buttonAudioUp[2]->setFocus();    }
-            else if( buttonAudioDn[3]->hasFocus()    )      { buttonAudioUp[3]->setFocus();    }
-            else if( buttonAudioDn[4]->hasFocus()    )      { buttonAudioUp[4]->setFocus();    }
-            else if( buttonAudioDn[5]->hasFocus()    )      { buttonAudioUp[5]->setFocus();    }
-            else if( buttonAudioDn[6]->hasFocus()    )      { buttonAudioUp[6]->setFocus();    }
-            else if( buttonAudioDn[7]->hasFocus()    )      { buttonAudioUp[7]->setFocus();    }
+            else if( buttonAudioAll     ->hasFocus() )      { buttonSourceAll    ->setFocus(); }
+            else if( buttonAudioDn[0]   ->hasFocus() )      { buttonAudioUp[0]   ->setFocus(); }
+            else if( buttonAudioDn[1]   ->hasFocus() )      { buttonAudioUp[1]   ->setFocus(); }
+            else if( buttonAudioDn[2]   ->hasFocus() )      { buttonAudioUp[2]   ->setFocus(); }
+            else if( buttonAudioDn[3]   ->hasFocus() )      { buttonAudioUp[3]   ->setFocus(); }
+            else if( buttonAudioDn[4]   ->hasFocus() )      { buttonAudioUp[4]   ->setFocus(); }
+            else if( buttonAudioDn[5]   ->hasFocus() )      { buttonAudioUp[5]   ->setFocus(); }
+            else if( buttonAudioDn[6]   ->hasFocus() )      { buttonAudioUp[6]   ->setFocus(); }
+            else if( buttonAudioDn[7]   ->hasFocus() )      { buttonAudioUp[7]   ->setFocus(); }
 
-            else if( buttonAudioUp[0]->hasFocus()    )      { buttonSourceDn[0]->setFocus();   }
-            else if( buttonAudioUp[1]->hasFocus()    )      { buttonSourceDn[1]->setFocus();   }
-            else if( buttonAudioUp[2]->hasFocus()    )      { buttonSourceDn[2]->setFocus();   }
-            else if( buttonAudioUp[3]->hasFocus()    )      { buttonSourceDn[3]->setFocus();   }
-            else if( buttonAudioUp[4]->hasFocus()    )      { buttonSourceDn[4]->setFocus();   }
-            else if( buttonAudioUp[5]->hasFocus()    )      { buttonSourceDn[5]->setFocus();   }
-            else if( buttonAudioUp[6]->hasFocus()    )      { buttonSourceDn[6]->setFocus();   }
-            else if( buttonAudioUp[7]->hasFocus()    )      { buttonSourceDn[7]->setFocus();   }
+            else if( buttonAudioUp[0]   ->hasFocus() )      { buttonSourceDn[0]  ->setFocus(); }
+            else if( buttonAudioUp[1]   ->hasFocus() )      { buttonSourceDn[1]  ->setFocus(); }
+            else if( buttonAudioUp[2]   ->hasFocus() )      { buttonSourceDn[2]  ->setFocus(); }
+            else if( buttonAudioUp[3]   ->hasFocus() )      { buttonSourceDn[3]  ->setFocus(); }
+            else if( buttonAudioUp[4]   ->hasFocus() )      { buttonSourceDn[4]  ->setFocus(); }
+            else if( buttonAudioUp[5]   ->hasFocus() )      { buttonSourceDn[5]  ->setFocus(); }
+            else if( buttonAudioUp[6]   ->hasFocus() )      { buttonSourceDn[6]  ->setFocus(); }
+            else if( buttonAudioUp[7]   ->hasFocus() )      { buttonSourceDn[7]  ->setFocus(); }
 
-            else if( buttonDefault->hasFocus()       )      { buttonSave->setFocus();          }
-            else if( buttonSave->hasFocus()          )      { buttonClose->setFocus();         }
-            else if( buttonClose->hasFocus()         )      { buttonDefault->setFocus();       }
+            else if( buttonDefault      ->hasFocus() )      { buttonSave         ->setFocus(); }
+            else if( buttonSave         ->hasFocus() )      { buttonClose        ->setFocus(); }
+            else if( buttonClose        ->hasFocus() )      { buttonDefault      ->setFocus(); }
 
             break;
         }
         case Qt::Key_Enter:
         {
-            if     ( buttonSourceDn[0]->hasFocus()   )      { onButtonSourceDn(0);             }
-            else if( buttonSourceDn[1]->hasFocus()   )      { onButtonSourceDn(1);             }
-            else if( buttonSourceDn[2]->hasFocus()   )      { onButtonSourceDn(2);             }
-            else if( buttonSourceDn[3]->hasFocus()   )      { onButtonSourceDn(3);             }
-            else if( buttonSourceDn[4]->hasFocus()   )      { onButtonSourceDn(4);             }
-            else if( buttonSourceDn[5]->hasFocus()   )      { onButtonSourceDn(5);             }
-            else if( buttonSourceDn[6]->hasFocus()   )      { onButtonSourceDn(6);             }
-            else if( buttonSourceDn[7]->hasFocus()   )      { onButtonSourceDn(7);             }
+            if     ( buttonSourceAll    ->hasFocus() )      { onButtonSourceAll();             }
+            else if( buttonSourceDn[0]  ->hasFocus() )      { onButtonSourceDn(0);             }
+            else if( buttonSourceDn[1]  ->hasFocus() )      { onButtonSourceDn(1);             }
+            else if( buttonSourceDn[2]  ->hasFocus() )      { onButtonSourceDn(2);             }
+            else if( buttonSourceDn[3]  ->hasFocus() )      { onButtonSourceDn(3);             }
+            else if( buttonSourceDn[4]  ->hasFocus() )      { onButtonSourceDn(4);             }
+            else if( buttonSourceDn[5]  ->hasFocus() )      { onButtonSourceDn(5);             }
+            else if( buttonSourceDn[6]  ->hasFocus() )      { onButtonSourceDn(6);             }
+            else if( buttonSourceDn[7]  ->hasFocus() )      { onButtonSourceDn(7);             }
 
-            else if( buttonSourceUp[0]->hasFocus()   )      { onButtonSourceUp(0);             }
-            else if( buttonSourceUp[1]->hasFocus()   )      { onButtonSourceUp(1);             }
-            else if( buttonSourceUp[2]->hasFocus()   )      { onButtonSourceUp(2);             }
-            else if( buttonSourceUp[3]->hasFocus()   )      { onButtonSourceUp(3);             }
-            else if( buttonSourceUp[4]->hasFocus()   )      { onButtonSourceUp(4);             }
-            else if( buttonSourceUp[5]->hasFocus()   )      { onButtonSourceUp(5);             }
-            else if( buttonSourceUp[6]->hasFocus()   )      { onButtonSourceUp(6);             }
-            else if( buttonSourceUp[7]->hasFocus()   )      { onButtonSourceUp(7);             }
+            else if( buttonSourceUp[0]  ->hasFocus() )      { onButtonSourceUp(0);             }
+            else if( buttonSourceUp[1]  ->hasFocus() )      { onButtonSourceUp(1);             }
+            else if( buttonSourceUp[2]  ->hasFocus() )      { onButtonSourceUp(2);             }
+            else if( buttonSourceUp[3]  ->hasFocus() )      { onButtonSourceUp(3);             }
+            else if( buttonSourceUp[4]  ->hasFocus() )      { onButtonSourceUp(4);             }
+            else if( buttonSourceUp[5]  ->hasFocus() )      { onButtonSourceUp(5);             }
+            else if( buttonSourceUp[6]  ->hasFocus() )      { onButtonSourceUp(6);             }
+            else if( buttonSourceUp[7]  ->hasFocus() )      { onButtonSourceUp(7);             }
 
-            else if( buttonDelayDn[0]->hasFocus()    )      { onButtonDelayDn(0);              }
-            else if( buttonDelayDn[1]->hasFocus()    )      { onButtonDelayDn(1);              }
-            else if( buttonDelayDn[2]->hasFocus()    )      { onButtonDelayDn(2);              }
-            else if( buttonDelayDn[3]->hasFocus()    )      { onButtonDelayDn(3);              }
-            else if( buttonDelayDn[4]->hasFocus()    )      { onButtonDelayDn(4);              }
-            else if( buttonDelayDn[5]->hasFocus()    )      { onButtonDelayDn(5);              }
-            else if( buttonDelayDn[6]->hasFocus()    )      { onButtonDelayDn(6);              }
-            else if( buttonDelayDn[7]->hasFocus()    )      { onButtonDelayDn(7);              }
+            else if( buttonDelayAll     ->hasFocus() )      { onButtonDelayAll();              }
+            else if( buttonDelayDn[0]   ->hasFocus() )      { onButtonDelayDn(0);              }
+            else if( buttonDelayDn[1]   ->hasFocus() )      { onButtonDelayDn(1);              }
+            else if( buttonDelayDn[2]   ->hasFocus() )      { onButtonDelayDn(2);              }
+            else if( buttonDelayDn[3]   ->hasFocus() )      { onButtonDelayDn(3);              }
+            else if( buttonDelayDn[4]   ->hasFocus() )      { onButtonDelayDn(4);              }
+            else if( buttonDelayDn[5]   ->hasFocus() )      { onButtonDelayDn(5);              }
+            else if( buttonDelayDn[6]   ->hasFocus() )      { onButtonDelayDn(6);              }
+            else if( buttonDelayDn[7]   ->hasFocus() )      { onButtonDelayDn(7);              }
 
-            else if( buttonDelayUp[0]->hasFocus()    )      { onButtonDelayUp(0);              }
-            else if( buttonDelayUp[1]->hasFocus()    )      { onButtonDelayUp(1);              }
-            else if( buttonDelayUp[2]->hasFocus()    )      { onButtonDelayUp(2);              }
-            else if( buttonDelayUp[3]->hasFocus()    )      { onButtonDelayUp(3);              }
-            else if( buttonDelayUp[4]->hasFocus()    )      { onButtonDelayUp(4);              }
-            else if( buttonDelayUp[5]->hasFocus()    )      { onButtonDelayUp(5);              }
-            else if( buttonDelayUp[6]->hasFocus()    )      { onButtonDelayUp(6);              }
-            else if( buttonDelayUp[7]->hasFocus()    )      { onButtonDelayUp(7);              }
+            else if( buttonDelayUp[0]   ->hasFocus() )      { onButtonDelayUp(0);              }
+            else if( buttonDelayUp[1]   ->hasFocus() )      { onButtonDelayUp(1);              }
+            else if( buttonDelayUp[2]   ->hasFocus() )      { onButtonDelayUp(2);              }
+            else if( buttonDelayUp[3]   ->hasFocus() )      { onButtonDelayUp(3);              }
+            else if( buttonDelayUp[4]   ->hasFocus() )      { onButtonDelayUp(4);              }
+            else if( buttonDelayUp[5]   ->hasFocus() )      { onButtonDelayUp(5);              }
+            else if( buttonDelayUp[6]   ->hasFocus() )      { onButtonDelayUp(6);              }
+            else if( buttonDelayUp[7]   ->hasFocus() )      { onButtonDelayUp(7);              }
 
+            else if( buttonPriorityAll  ->hasFocus() )      { onButtonPriorityAll();           }
             else if( buttonPriorityDn[0]->hasFocus() )      { onButtonPriorityDn(0);           }
-            else if( buttonPriorityDn[1]->hasFocus() )      { onButtonPriorityDn(0);           }
-            else if( buttonPriorityDn[2]->hasFocus() )      { onButtonPriorityDn(0);           }
-            else if( buttonPriorityDn[3]->hasFocus() )      { onButtonPriorityDn(0);           }
-            else if( buttonPriorityDn[4]->hasFocus() )      { onButtonPriorityDn(0);           }
-            else if( buttonPriorityDn[5]->hasFocus() )      { onButtonPriorityDn(0);           }
-            else if( buttonPriorityDn[6]->hasFocus() )      { onButtonPriorityDn(0);           }
-            else if( buttonPriorityDn[7]->hasFocus() )      { onButtonPriorityDn(0);           }
+            else if( buttonPriorityDn[1]->hasFocus() )      { onButtonPriorityDn(1);           }
+            else if( buttonPriorityDn[2]->hasFocus() )      { onButtonPriorityDn(2);           }
+            else if( buttonPriorityDn[3]->hasFocus() )      { onButtonPriorityDn(3);           }
+            else if( buttonPriorityDn[4]->hasFocus() )      { onButtonPriorityDn(4);           }
+            else if( buttonPriorityDn[5]->hasFocus() )      { onButtonPriorityDn(5);           }
+            else if( buttonPriorityDn[6]->hasFocus() )      { onButtonPriorityDn(6);           }
+            else if( buttonPriorityDn[7]->hasFocus() )      { onButtonPriorityDn(7);           }
 
             else if( buttonPriorityUp[0]->hasFocus() )      { onButtonPriorityUp(0);           }
-            else if( buttonPriorityUp[1]->hasFocus() )      { onButtonPriorityUp(0);           }
-            else if( buttonPriorityUp[2]->hasFocus() )      { onButtonPriorityUp(0);           }
-            else if( buttonPriorityUp[3]->hasFocus() )      { onButtonPriorityUp(0);           }
-            else if( buttonPriorityUp[4]->hasFocus() )      { onButtonPriorityUp(0);           }
-            else if( buttonPriorityUp[5]->hasFocus() )      { onButtonPriorityUp(0);           }
-            else if( buttonPriorityUp[6]->hasFocus() )      { onButtonPriorityUp(0);           }
-            else if( buttonPriorityUp[7]->hasFocus() )      { onButtonPriorityUp(0);           }
+            else if( buttonPriorityUp[1]->hasFocus() )      { onButtonPriorityUp(1);           }
+            else if( buttonPriorityUp[2]->hasFocus() )      { onButtonPriorityUp(2);           }
+            else if( buttonPriorityUp[3]->hasFocus() )      { onButtonPriorityUp(3);           }
+            else if( buttonPriorityUp[4]->hasFocus() )      { onButtonPriorityUp(4);           }
+            else if( buttonPriorityUp[5]->hasFocus() )      { onButtonPriorityUp(5);           }
+            else if( buttonPriorityUp[6]->hasFocus() )      { onButtonPriorityUp(6);           }
+            else if( buttonPriorityUp[7]->hasFocus() )      { onButtonPriorityUp(7);           }
 
-            else if( buttonAudioDn[0]->hasFocus()    )      { onButtonAudioDn(0);              }
-            else if( buttonAudioDn[1]->hasFocus()    )      { onButtonAudioDn(0);              }
-            else if( buttonAudioDn[2]->hasFocus()    )      { onButtonAudioDn(0);              }
-            else if( buttonAudioDn[3]->hasFocus()    )      { onButtonAudioDn(0);              }
-            else if( buttonAudioDn[4]->hasFocus()    )      { onButtonAudioDn(0);              }
-            else if( buttonAudioDn[5]->hasFocus()    )      { onButtonAudioDn(0);              }
-            else if( buttonAudioDn[6]->hasFocus()    )      { onButtonAudioDn(0);              }
-            else if( buttonAudioDn[7]->hasFocus()    )      { onButtonAudioDn(0);              }
+            else if( buttonAudioAll     ->hasFocus() )      { onButtonAudioAll();              }
+            else if( buttonAudioDn[0]   ->hasFocus() )      { onButtonAudioDn(0);              }
+            else if( buttonAudioDn[1]   ->hasFocus() )      { onButtonAudioDn(1);              }
+            else if( buttonAudioDn[2]   ->hasFocus() )      { onButtonAudioDn(2);              }
+            else if( buttonAudioDn[3]   ->hasFocus() )      { onButtonAudioDn(3);              }
+            else if( buttonAudioDn[4]   ->hasFocus() )      { onButtonAudioDn(4);              }
+            else if( buttonAudioDn[5]   ->hasFocus() )      { onButtonAudioDn(5);              }
+            else if( buttonAudioDn[6]   ->hasFocus() )      { onButtonAudioDn(6);              }
+            else if( buttonAudioDn[7]   ->hasFocus() )      { onButtonAudioDn(7);              }
 
-            else if( buttonAudioUp[0]->hasFocus()    )      { onButtonAudioUp(0);              }
-            else if( buttonAudioUp[1]->hasFocus()    )      { onButtonAudioUp(0);              }
-            else if( buttonAudioUp[2]->hasFocus()    )      { onButtonAudioUp(0);              }
-            else if( buttonAudioUp[3]->hasFocus()    )      { onButtonAudioUp(0);              }
-            else if( buttonAudioUp[4]->hasFocus()    )      { onButtonAudioUp(0);              }
-            else if( buttonAudioUp[5]->hasFocus()    )      { onButtonAudioUp(0);              }
-            else if( buttonAudioUp[6]->hasFocus()    )      { onButtonAudioUp(0);              }
-            else if( buttonAudioUp[7]->hasFocus()    )      { onButtonAudioUp(0);              }
+            else if( buttonAudioUp[0]   ->hasFocus() )      { onButtonAudioUp(0);              }
+            else if( buttonAudioUp[1]   ->hasFocus() )      { onButtonAudioUp(1);              }
+            else if( buttonAudioUp[2]   ->hasFocus() )      { onButtonAudioUp(2);              }
+            else if( buttonAudioUp[3]   ->hasFocus() )      { onButtonAudioUp(3);              }
+            else if( buttonAudioUp[4]   ->hasFocus() )      { onButtonAudioUp(4);              }
+            else if( buttonAudioUp[5]   ->hasFocus() )      { onButtonAudioUp(5);              }
+            else if( buttonAudioUp[6]   ->hasFocus() )      { onButtonAudioUp(6);              }
+            else if( buttonAudioUp[7]   ->hasFocus() )      { onButtonAudioUp(7);              }
 
-            else if( buttonDefault->hasFocus()       )      { onButtonDefault();               }
-            else if( buttonSave->hasFocus()          )      { onButtonSave();                  }
-            else if( buttonClose->hasFocus()         )      { reject();                        }
+            else if( buttonDefault      ->hasFocus() )      { onButtonDefault();               }
+            else if( buttonSave         ->hasFocus() )      { onButtonSave();                  }
+            else if( buttonClose        ->hasFocus() )      { reject();                        }
 
             break;
         }
@@ -1489,4 +1647,3 @@ void TriggerInputDialog::keyPressEvent(QKeyEvent *event)
         }
     }
 }
-

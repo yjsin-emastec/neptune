@@ -23,6 +23,11 @@ signals:
 
 private slots:
 
+    void onButtonSourceAll();
+    void onButtonDelayAll();
+    void onButtonPriorityAll();
+    void onButtonAudioAll();
+
     void onButtonSourceUp1();
     void onButtonSourceUp2();
     void onButtonSourceUp3();
@@ -115,6 +120,7 @@ private:
     QPushButton *buttonPriorityDn[NUMOFCH];
     QPushButton *buttonAudioUp[NUMOFCH];
     QPushButton *buttonAudioDn[NUMOFCH];
+    QPushButton *buttonSourceAll, *buttonDelayAll, *buttonPriorityAll, *buttonAudioAll;
 
     QLabel *labelTrigger[NUMOFCH];
     QLabel *labelSource[NUMOFCH];
@@ -122,19 +128,14 @@ private:
     QLabel *labelPriority[NUMOFCH];
     QLabel *labelAudio[NUMOFCH];
 
-    QLabel *labelSourceTitle;
-    QLabel *labelDelayTitle;
-    QLabel *labelPriorityTitle;
-    QLabel *labelAudioTitle;
-
     QPushButton *buttonDefault;
     QPushButton *buttonSave;
     QPushButton *buttonClose;
 
-    int infoSource[NUMOFCH];
-    int infoDelay[NUMOFCH];
-    int infoPriority[NUMOFCH];
-    bool infoAudio[NUMOFCH];
+    int infoSource[NUMOFCH+1];
+    int infoDelay[NUMOFCH+1];
+    int infoPriority[NUMOFCH+1];
+    bool infoAudio[NUMOFCH+1];
 
     void updateSourceLabel(int ch);
     void updateDelayLabel(int ch);

@@ -47,7 +47,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string>All</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -66,7 +66,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Trigger1</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -85,7 +85,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Trigger2</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -104,7 +104,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Trigger3</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -123,7 +123,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Trigger4</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -142,7 +142,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Trigger5</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -161,7 +161,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Trigger6</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -180,7 +180,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Trigger7</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -199,13 +199,13 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Trigger8</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="labelSource">
+   <widget class="QLabel" name="labelSourceAll">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -218,13 +218,13 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Source</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="labelDelay">
+   <widget class="QLabel" name="labelDelayAll">
     <property name="geometry">
      <rect>
       <x>700</x>
@@ -237,13 +237,13 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Delay</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="labelPriority">
+   <widget class="QLabel" name="labelPriorityAll">
     <property name="geometry">
      <rect>
       <x>1100</x>
@@ -256,13 +256,13 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Priority</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="labelAudio">
+   <widget class="QLabel" name="labelAudioAll">
     <property name="geometry">
      <rect>
       <x>1460</x>
@@ -275,7 +275,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -294,7 +294,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">CAM 1</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -351,7 +351,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">0 Sec</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -447,7 +447,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">1</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -504,7 +504,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">On</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1758,7 +1758,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Off</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2974,6 +2974,58 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSourceAll">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>30</y>
+      <width>401</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Source</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDelayAll">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>30</y>
+      <width>401</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delay</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPriorityAll">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>30</y>
+      <width>361</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Priority</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonAudioAll">
+    <property name="geometry">
+     <rect>
+      <x>1460</x>
+      <y>30</y>
+      <width>381</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Audio</string>
     </property>
    </widget>
   </widget>
