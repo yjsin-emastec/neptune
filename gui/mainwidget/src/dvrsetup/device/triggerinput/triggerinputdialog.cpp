@@ -25,6 +25,7 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelTrigger[5] = ui720.labelTrigger6;
         labelTrigger[6] = ui720.labelTrigger7;
         labelTrigger[7] = ui720.labelTrigger8;
+        labelTrigger[8] = ui720.labelAll;
 
         buttonSourceUp[0] = ui720.buttonSourceUp1;
         buttonSourceUp[1] = ui720.buttonSourceUp2;
@@ -52,6 +53,7 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelSource[5] = ui720.labelSource6;
         labelSource[6] = ui720.labelSource7;
         labelSource[7] = ui720.labelSource8;
+        labelSource[8] = ui720.labelSourceAll;
 
         buttonDelayUp[0] = ui720.buttonDelayUp1;
         buttonDelayUp[1] = ui720.buttonDelayUp2;
@@ -79,6 +81,7 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelDelay[5] = ui720.labelDelay6;
         labelDelay[6] = ui720.labelDelay7;
         labelDelay[7] = ui720.labelDelay8;
+        labelDelay[8] = ui720.labelDelayAll;
 
         buttonPriorityUp[0] = ui720.buttonPriorityUp1;
         buttonPriorityUp[1] = ui720.buttonPriorityUp2;
@@ -106,6 +109,7 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelPriority[5] = ui720.labelPriority6;
         labelPriority[6] = ui720.labelPriority7;
         labelPriority[7] = ui720.labelPriority8;
+        labelPriority[8] = ui720.labelPriorityAll;
 
         buttonAudioUp[0] = ui720.buttonAudioUp1;
         buttonAudioUp[1] = ui720.buttonAudioUp2;
@@ -133,15 +137,22 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelAudio[5] = ui720.labelAudio6;
         labelAudio[6] = ui720.labelAudio7;
         labelAudio[7] = ui720.labelAudio8;
+        labelAudio[8] = ui720.labelAudioAll;
 
         buttonDefault = ui720.buttonDefault;
         buttonSave    = ui720.buttonSave;
         buttonClose   = ui720.buttonClose;
 
-        buttonSourceAll  ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonDelayAll   ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonPriorityAll->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonAudioAll   ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonSourceAll         ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonDelayAll          ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonPriorityAll       ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonAudioAll          ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+
+        labelTrigger[NUMOFCH]   ->setStyleSheet("font:40px; background-color:rgb(06,86,159);");
+        labelSource[NUMOFCH]    ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelDelay[NUMOFCH]     ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelPriority[NUMOFCH]  ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelAudio[NUMOFCH]     ->setStyleSheet("background-color:rgb(06,86,159);");
 
         for( int i=0; i<NUMOFCH; i++)
         {
@@ -164,11 +175,16 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
             buttonAudioUp[i]->setIconSize(QSize(40,40));
             buttonAudioDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
             buttonAudioDn[i]->setIconSize(QSize(40,40));
+
+            labelTrigger[i]->setStyleSheet("font:38px;");
         }
 
         if( utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 )
         {
-            buttonDefault->resize(361, 91);
+            for(int i=0; i<NUMOFCH; i++)
+            {
+                labelTrigger[i]->setStyleSheet("font:32px;");
+            }
         }
         else if( utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {
@@ -203,6 +219,7 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelTrigger[5] = ui1080.labelTrigger6;
         labelTrigger[6] = ui1080.labelTrigger7;
         labelTrigger[7] = ui1080.labelTrigger8;
+        labelTrigger[8] = ui1080.labelAll;
 
         buttonSourceUp[0] = ui1080.buttonSourceUp1;
         buttonSourceUp[1] = ui1080.buttonSourceUp2;
@@ -230,6 +247,7 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelSource[5] = ui1080.labelSource6;
         labelSource[6] = ui1080.labelSource7;
         labelSource[7] = ui1080.labelSource8;
+        labelSource[8] = ui1080.labelSourceAll;
 
         buttonDelayUp[0] = ui1080.buttonDelayUp1;
         buttonDelayUp[1] = ui1080.buttonDelayUp2;
@@ -257,6 +275,7 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelDelay[5] = ui1080.labelDelay6;
         labelDelay[6] = ui1080.labelDelay7;
         labelDelay[7] = ui1080.labelDelay8;
+        labelDelay[8] = ui1080.labelDelayAll;
 
         buttonPriorityUp[0] = ui1080.buttonPriorityUp1;
         buttonPriorityUp[1] = ui1080.buttonPriorityUp2;
@@ -284,6 +303,7 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelPriority[5] = ui1080.labelPriority6;
         labelPriority[6] = ui1080.labelPriority7;
         labelPriority[7] = ui1080.labelPriority8;
+        labelPriority[8] = ui1080.labelPriorityAll;
 
         buttonAudioUp[0] = ui1080.buttonAudioUp1;
         buttonAudioUp[1] = ui1080.buttonAudioUp2;
@@ -311,37 +331,46 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
         labelAudio[5] = ui1080.labelAudio6;
         labelAudio[6] = ui1080.labelAudio7;
         labelAudio[7] = ui1080.labelAudio8;
+        labelAudio[8] = ui1080.labelAudioAll;
 
         buttonDefault = ui1080.buttonDefault;
         buttonSave    = ui1080.buttonSave;
         buttonClose   = ui1080.buttonClose;
 
-        buttonSourceAll  ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonDelayAll   ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonPriorityAll->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonAudioAll   ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonSourceAll         ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonDelayAll          ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonPriorityAll       ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonAudioAll          ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+
+        labelTrigger[NUMOFCH]   ->setStyleSheet("font:60px; background-color:rgb(06,86,159);");
+        labelSource[NUMOFCH]    ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelDelay[NUMOFCH]     ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelPriority[NUMOFCH]  ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelAudio[NUMOFCH]     ->setStyleSheet("background-color:rgb(06,86,159);");
 
         for( int i=0; i<NUMOFCH; i++)
         {
             buttonSourceUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
-            buttonSourceUp[i]->setIconSize(QSize(70,70));
+            buttonSourceUp[i]->setIconSize(QSize(60,60));
             buttonSourceDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
-            buttonSourceDn[i]->setIconSize(QSize(70,70));
+            buttonSourceDn[i]->setIconSize(QSize(60,60));
 
             buttonDelayUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
-            buttonDelayUp[i]->setIconSize(QSize(70,70));
+            buttonDelayUp[i]->setIconSize(QSize(60,60));
             buttonDelayDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
-            buttonDelayDn[i]->setIconSize(QSize(70,70));
+            buttonDelayDn[i]->setIconSize(QSize(60,60));
 
             buttonPriorityUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
-            buttonPriorityUp[i]->setIconSize(QSize(70,70));
+            buttonPriorityUp[i]->setIconSize(QSize(60,60));
             buttonPriorityDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
-            buttonPriorityDn[i]->setIconSize(QSize(70,70));
+            buttonPriorityDn[i]->setIconSize(QSize(60,60));
 
             buttonAudioUp[i]->setIcon(QIcon(":/images/arrow_up.png"));
-            buttonAudioUp[i]->setIconSize(QSize(70,70));
+            buttonAudioUp[i]->setIconSize(QSize(60,60));
             buttonAudioDn[i]->setIcon(QIcon(":/images/arrow_down.png"));
-            buttonAudioDn[i]->setIconSize(QSize(70,70));
+            buttonAudioDn[i]->setIconSize(QSize(60,60));
+
+            labelTrigger[i]->setStyleSheet("font:58px;");
         }
 
         if( utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0 )
@@ -350,7 +379,6 @@ TriggerInputDialog::TriggerInputDialog(QWidget *parent)
             {
                 labelTrigger[i]->setStyleSheet("font:50px;");
             }
-            buttonDefault->resize(481, 131);
         }
         else if( utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {

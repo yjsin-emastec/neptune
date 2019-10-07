@@ -34,7 +34,7 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QLabel" name="labelTrigger">
+   <widget class="QLabel" name="labelAll">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -351,7 +351,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string notr="true">0 Sec</string>
+     <string notr="true">2 Sec</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

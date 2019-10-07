@@ -1053,7 +1053,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string notr="true">0 Sec</string>
+     <string notr="true">2 Sec</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

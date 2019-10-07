@@ -591,7 +591,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Frame</string>
+     <string notr="true">30Fps</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonFrame2">
@@ -604,7 +604,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Frame</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonFrame3">
@@ -617,7 +617,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Frame</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonFrame4">
@@ -630,7 +630,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Frame</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonQuality1">
@@ -643,7 +643,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string notr="true">High</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonQuality2">
@@ -656,7 +656,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string notr="true">Middle</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonQuality3">
@@ -669,7 +669,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string notr="true">Low</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonQuality4">
@@ -682,7 +682,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonRecording1">
@@ -695,7 +695,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string notr="true">ON</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonRecording2">
@@ -708,7 +708,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string notr="true">OFF</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonRecording3">
@@ -721,7 +721,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonRecording4">
@@ -734,7 +734,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonAudio1">
@@ -747,7 +747,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string notr="true">ON</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonAudio2">
@@ -760,7 +760,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string notr="true">OFF</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonAudio3">
@@ -773,7 +773,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonAudio4">
@@ -786,7 +786,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonDefault">
@@ -977,7 +977,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Frame</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonFrame6">
@@ -990,7 +990,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Frame</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonFrame7">
@@ -1003,7 +1003,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Frame</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonFrame8">
@@ -1016,7 +1016,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Frame</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="labelQuality5">
@@ -1105,7 +1105,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonQuality6">
@@ -1118,7 +1118,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonQuality7">
@@ -1131,7 +1131,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonQuality8">
@@ -1144,7 +1144,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="labelRecording5">
@@ -1233,7 +1233,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonRecording6">
@@ -1246,7 +1246,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonRecording7">
@@ -1259,7 +1259,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonRecording8">
@@ -1272,7 +1272,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="labelAudio5">
@@ -1361,7 +1361,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonAudio6">
@@ -1374,7 +1374,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonAudio7">
@@ -1387,7 +1387,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonAudio8">
@@ -1400,7 +1400,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
    </widget>
   </widget>

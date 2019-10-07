@@ -57,6 +57,7 @@ public slots:
     void onButtonRotateAll();
 
     void onButtonPreview();
+    void onButtonDefault();
     void onButtonSave();
     void onButtonClose();
     void onVideoInputPreview();
@@ -77,9 +78,14 @@ private:
     QPushButton *buttonFlip[NUMOFCH+1];
     QPushButton *buttonRotate[NUMOFCH+1];
     QPushButton *buttonPreview;
+    QPushButton *buttonDefault;
     QPushButton *buttonSave;
     QPushButton *buttonClose;
+
     QLabel *labelCh[NUMOFCH+1];
+    QLabel *labelMirror[NUMOFCH+1];
+    QLabel *labelFlip[NUMOFCH+1];
+    QLabel *labelRotate[NUMOFCH+1];
 
     VideoInputBar *videoInputBar;
 

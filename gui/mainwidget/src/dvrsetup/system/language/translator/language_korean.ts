@@ -3656,14 +3656,6 @@ Off/On</source>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="542"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="594"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="607"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="620"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="633"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="980"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="993"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1006"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1019"/>
         <source>Frame</source>
         <translation>프레임</translation>
     </message>
@@ -3702,80 +3694,56 @@ Off/On</source>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="555"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="646"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="659"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="672"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="685"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1108"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1121"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1134"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1147"/>
         <source>Quality</source>
         <translation>품질</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="379"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="642"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="380"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="643"/>
         <source>Low</source>
         <translation>낮음</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="380"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="643"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="381"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="644"/>
         <source>Middle</source>
         <translation>보통</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="381"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="382"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="644"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="383"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="645"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="646"/>
         <source>High</source>
         <translation>높음</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="568"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="698"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="711"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="724"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="737"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1236"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1249"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1262"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1275"/>
         <source>Recording</source>
         <translation>녹화</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="386"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="392"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="688"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="733"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="387"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="393"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="689"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="734"/>
         <source>Off</source>
         <translation>끄기</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="387"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="388"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="393"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="389"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="394"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="689"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="395"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="690"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="734"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="691"/>
         <location filename="../../../record/normal/normaldialog.cpp" line="735"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="736"/>
         <source>On</source>
         <translation>켜기</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="581"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="750"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="763"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="776"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="789"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1364"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1377"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1390"/>
-        <location filename="../../../record/normal/normaldialog.ui" line="1403"/>
         <source>Audio</source>
         <translation>녹음</translation>
     </message>
@@ -3836,14 +3804,6 @@ Off/On</source>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="581"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="750"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="763"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="776"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="789"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1364"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1377"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1390"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1403"/>
         <source>Audio</source>
         <translation>녹음</translation>
     </message>
@@ -3873,40 +3833,16 @@ Off/On</source>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="555"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="646"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="659"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="672"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="685"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1108"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1121"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1134"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1147"/>
         <source>Quality</source>
         <translation>품질</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="568"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="698"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="711"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="724"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="737"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1236"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1249"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1262"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1275"/>
         <source>Recording</source>
         <translation>녹화</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="542"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="594"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="607"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="620"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="633"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="980"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="993"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1006"/>
-        <location filename="../../../record/normal/normaldialog1080p.ui" line="1019"/>
         <source>Frame</source>
         <translation>프레임</translation>
     </message>
@@ -6339,8 +6275,8 @@ You must delete data or set time.</source>
         <translation type="obsolete">트리거 4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="940"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1084"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1000"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1144"/>
         <source>PRIORITY REDUNDANT</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>우선순위 오류</translation>
@@ -6362,29 +6298,29 @@ You must delete data or set time.</source>
         <translation type="obsolete">  경고</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="464"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="490"/>
         <source>Trigger</source>
         <translation>트리거</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="599"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="622"/>
         <source>CAM</source>
         <translation>채널</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="603"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="626"/>
         <source>Sec</source>
         <translation>초</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="941"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1085"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1001"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1145"/>
         <source>Priority is redundant.</source>
         <translation>우선순위가 중복됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="941"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1085"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1001"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1145"/>
         <source>Please check priority.</source>
         <translation>우선순위를 확인하십시오.</translation>
     </message>
@@ -6556,12 +6492,12 @@ You must delete data or set time.</source>
         <translation>오디오</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="617"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="640"/>
         <source>Mute</source>
         <translation>끄기</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="613"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="636"/>
         <source>Output</source>
         <translation>켜기</translation>
     </message>
@@ -7391,31 +7327,36 @@ You must delete data or set time.</source>
         <translation>회전</translation>
     </message>
     <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="1115"/>
+        <source>Default</source>
+        <translation>기본값</translation>
+    </message>
+    <message>
         <source>Camera1</source>
         <translation type="obsolete">채널 1</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="255"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="351"/>
         <source>Normal</source>
         <translation>반전 안함</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="254"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="350"/>
         <source>Mirror</source>
         <translation>좌우 반전</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="258"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="354"/>
         <source>Up</source>
         <translation>반전 안함</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="260"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="356"/>
         <source>Â°</source>
         <translation>°</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="257"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="353"/>
         <source>Down</source>
         <translation>상하 반전</translation>
     </message>
@@ -7540,6 +7481,11 @@ You must delete data or set time.</source>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="998"/>
         <source>Rotate</source>
         <translation>회전</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="1127"/>
+        <source>Default</source>
+        <translation>기본값</translation>
     </message>
 </context>
 <context>

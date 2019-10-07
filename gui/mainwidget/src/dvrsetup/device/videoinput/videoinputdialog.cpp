@@ -13,16 +13,6 @@ VideoInputDialog::VideoInputDialog(QWidget *parent)
 
         frame = ui720.frame;
 
-        labelCh[0] = ui720.labelCh1;
-        labelCh[1] = ui720.labelCh2;
-        labelCh[2] = ui720.labelCh3;
-        labelCh[3] = ui720.labelCh4;
-        labelCh[4] = ui720.labelCh5;
-        labelCh[5] = ui720.labelCh6;
-        labelCh[6] = ui720.labelCh7;
-        labelCh[7] = ui720.labelCh8;
-        labelCh[8] = ui720.labelAll;
-
         buttonMirror[0] = ui720.buttonMirror1;
         buttonMirror[1] = ui720.buttonMirror2;
         buttonMirror[2] = ui720.buttonMirror3;
@@ -54,8 +44,49 @@ VideoInputDialog::VideoInputDialog(QWidget *parent)
         buttonRotate[8] = ui720.buttonRotateAll;
 
         buttonPreview = ui720.buttonPreview;
+        buttonDefault = ui720.buttonDefault;
         buttonSave    = ui720.buttonSave;
         buttonClose   = ui720.buttonClose;
+
+        labelCh[0] = ui720.labelCh1;
+        labelCh[1] = ui720.labelCh2;
+        labelCh[2] = ui720.labelCh3;
+        labelCh[3] = ui720.labelCh4;
+        labelCh[4] = ui720.labelCh5;
+        labelCh[5] = ui720.labelCh6;
+        labelCh[6] = ui720.labelCh7;
+        labelCh[7] = ui720.labelCh8;
+        labelCh[8] = ui720.labelAll;
+
+        labelMirror[0] = ui720.labelMirror1;
+        labelMirror[1] = ui720.labelMirror2;
+        labelMirror[2] = ui720.labelMirror3;
+        labelMirror[3] = ui720.labelMirror4;
+        labelMirror[4] = ui720.labelMirror5;
+        labelMirror[5] = ui720.labelMirror6;
+        labelMirror[6] = ui720.labelMirror7;
+        labelMirror[7] = ui720.labelMirror8;
+        labelMirror[8] = ui720.labelMirrorAll;
+
+        labelFlip[0] = ui720.labelFlip1;
+        labelFlip[1] = ui720.labelFlip2;
+        labelFlip[2] = ui720.labelFlip3;
+        labelFlip[3] = ui720.labelFlip4;
+        labelFlip[4] = ui720.labelFlip5;
+        labelFlip[5] = ui720.labelFlip6;
+        labelFlip[6] = ui720.labelFlip7;
+        labelFlip[7] = ui720.labelFlip8;
+        labelFlip[8] = ui720.labelFlipAll;
+
+        labelRotate[0] = ui720.labelRotate1;
+        labelRotate[1] = ui720.labelRotate2;
+        labelRotate[2] = ui720.labelRotate3;
+        labelRotate[3] = ui720.labelRotate4;
+        labelRotate[4] = ui720.labelRotate5;
+        labelRotate[5] = ui720.labelRotate6;
+        labelRotate[6] = ui720.labelRotate7;
+        labelRotate[7] = ui720.labelRotate8;
+        labelRotate[8] = ui720.labelRotateAll;
 
         for(int i=0; i<=NUMOFCH; i++)
         {
@@ -63,18 +94,30 @@ VideoInputDialog::VideoInputDialog(QWidget *parent)
             buttonMirror[i]->setStyleSheet("font:40px;");
             buttonFlip[i]  ->setStyleSheet("font:40px;");
             buttonRotate[i]->setStyleSheet("font:40px;");
+
+            labelMirror[i] ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelFlip[i]   ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelRotate[i] ->setStyleSheet("background-color:rgb(50,57,83);");
         }
+
         buttonMirror[NUMOFCH]->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
         buttonFlip[NUMOFCH]  ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
         buttonRotate[NUMOFCH]->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
 
+        labelCh[NUMOFCH]     ->setStyleSheet("font:40px; background-color:rgb(06,86,159);");
+        labelMirror[NUMOFCH] ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelFlip[NUMOFCH]   ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelRotate[NUMOFCH] ->setStyleSheet("background-color:rgb(06,86,159);");
+
         if( utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {
             buttonPreview->resize(270,91);
+            buttonDefault->setGeometry(15+270+10, 570, 270, 90);
         }
         else if( utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
         {
             buttonPreview->resize(300,91);
+            buttonDefault->setGeometry(15+300+10, 570, 300, 90);
         }
     }
     else
@@ -83,16 +126,6 @@ VideoInputDialog::VideoInputDialog(QWidget *parent)
         ui1080.setupUi(this);
 
         frame = ui1080.frame;
-
-        labelCh[0] = ui1080.labelCh1;
-        labelCh[1] = ui1080.labelCh2;
-        labelCh[2] = ui1080.labelCh3;
-        labelCh[3] = ui1080.labelCh4;
-        labelCh[4] = ui1080.labelCh5;
-        labelCh[5] = ui1080.labelCh6;
-        labelCh[6] = ui1080.labelCh7;
-        labelCh[7] = ui1080.labelCh8;
-        labelCh[8] = ui1080.labelAll;
 
         buttonMirror[0] = ui1080.buttonMirror1;
         buttonMirror[1] = ui1080.buttonMirror2;
@@ -125,8 +158,49 @@ VideoInputDialog::VideoInputDialog(QWidget *parent)
         buttonRotate[8] = ui1080.buttonRotateAll;
 
         buttonPreview = ui1080.buttonPreview;
+        buttonDefault = ui1080.buttonDefault;
         buttonSave    = ui1080.buttonSave;
         buttonClose   = ui1080.buttonClose;
+
+        labelCh[0] = ui1080.labelCh1;
+        labelCh[1] = ui1080.labelCh2;
+        labelCh[2] = ui1080.labelCh3;
+        labelCh[3] = ui1080.labelCh4;
+        labelCh[4] = ui1080.labelCh5;
+        labelCh[5] = ui1080.labelCh6;
+        labelCh[6] = ui1080.labelCh7;
+        labelCh[7] = ui1080.labelCh8;
+        labelCh[8] = ui1080.labelAll;
+
+        labelMirror[0] = ui1080.labelMirror1;
+        labelMirror[1] = ui1080.labelMirror2;
+        labelMirror[2] = ui1080.labelMirror3;
+        labelMirror[3] = ui1080.labelMirror4;
+        labelMirror[4] = ui1080.labelMirror5;
+        labelMirror[5] = ui1080.labelMirror6;
+        labelMirror[6] = ui1080.labelMirror7;
+        labelMirror[7] = ui1080.labelMirror8;
+        labelMirror[8] = ui1080.labelMirrorAll;
+
+        labelFlip[0] = ui1080.labelFlip1;
+        labelFlip[1] = ui1080.labelFlip2;
+        labelFlip[2] = ui1080.labelFlip3;
+        labelFlip[3] = ui1080.labelFlip4;
+        labelFlip[4] = ui1080.labelFlip5;
+        labelFlip[5] = ui1080.labelFlip6;
+        labelFlip[6] = ui1080.labelFlip7;
+        labelFlip[7] = ui1080.labelFlip8;
+        labelFlip[8] = ui1080.labelFlipAll;
+
+        labelRotate[0] = ui1080.labelRotate1;
+        labelRotate[1] = ui1080.labelRotate2;
+        labelRotate[2] = ui1080.labelRotate3;
+        labelRotate[3] = ui1080.labelRotate4;
+        labelRotate[4] = ui1080.labelRotate5;
+        labelRotate[5] = ui1080.labelRotate6;
+        labelRotate[6] = ui1080.labelRotate7;
+        labelRotate[7] = ui1080.labelRotate8;
+        labelRotate[8] = ui1080.labelRotateAll;
 
         for(int i=0; i<=NUMOFCH; i++)
         {
@@ -134,18 +208,30 @@ VideoInputDialog::VideoInputDialog(QWidget *parent)
             buttonMirror[i]->setStyleSheet("font:60px;");
             buttonFlip[i]  ->setStyleSheet("font:60px");
             buttonRotate[i]->setStyleSheet("font:60px;");
+
+            labelMirror[i] ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelFlip[i]   ->setStyleSheet("background-color:rgb(50,57,83);");
+            labelRotate[i] ->setStyleSheet("background-color:rgb(50,57,83);");
         }
+
         buttonMirror[NUMOFCH]->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
         buttonFlip[NUMOFCH]  ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
         buttonRotate[NUMOFCH]->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
 
+        labelCh[NUMOFCH]     ->setStyleSheet("font:60px; background-color:rgb(06,86,159);");
+        labelMirror[NUMOFCH] ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelFlip[NUMOFCH]   ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelRotate[NUMOFCH] ->setStyleSheet("background-color:rgb(06,86,159);");
+
         if( utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {
             buttonPreview->resize(380,131);
+            buttonDefault->setGeometry(25+380+20, 860, 390, 130);
         }
         else if( utils_cfg_cmp_item(SystemCfg.language, "JAPANESE") == 0)
         {
             buttonPreview->resize(420,131);
+            buttonDefault->setGeometry(25+420+20, 860, 400, 130);
         }
     }
 
@@ -185,6 +271,7 @@ VideoInputDialog::VideoInputDialog(QWidget *parent)
     connect(buttonRotate[8], SIGNAL(clicked()), this, SLOT(onButtonRotateAll()));
 
     connect(buttonPreview,   SIGNAL(released()),this, SLOT(onButtonPreview()));
+    connect(buttonDefault,   SIGNAL(released()),this, SLOT(onButtonDefault()));
     connect(buttonSave,      SIGNAL(released()),this, SLOT(onButtonSave()));
     connect(buttonClose,     SIGNAL(released()),this, SLOT(onButtonClose()));
 
@@ -193,6 +280,7 @@ VideoInputDialog::VideoInputDialog(QWidget *parent)
 VideoInputDialog::~VideoInputDialog()
 {
 }
+
 void VideoInputDialog::initVideoInputConfig(void)
 {
     QString mirror[NUMOFCH];
@@ -392,6 +480,17 @@ void VideoInputDialog::onButtonPreview()
 void VideoInputDialog::onVideoInputPreview()
 {
     emit videoInputPreview();
+}
+void VideoInputDialog::onButtonDefault()
+{
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        infoMirror[i] = 0;
+        infoFlip[i] = 0;
+        infoRotate[i] = 0;
+    }
+
+    updateButton();
 }
 #if 0   //yjsin save DeviceCfg for emd-s10
 void VideoInputDialog::onButtonSave()

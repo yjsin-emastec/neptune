@@ -29,11 +29,7 @@ VideoOutputDialog::VideoOutputDialog(QWidget *parent)
         label6 = ui720.label6;
 
         //yjsin [18/01/22] if text is long, change button size.
-        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
-        {
-            buttonDefault->setGeometry(13, 540, 350, 91);
-        }
-        else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {
             buttonDefault->setGeometry(13, 540, 300, 91);
             button_cvbs_width->setStyleSheet("font:45px;");
@@ -77,11 +73,7 @@ VideoOutputDialog::VideoOutputDialog(QWidget *parent)
         label6 = ui1080.label6;
 
         //yjsin [19/02/21] if text is long, change button size.
-        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
-        {
-            buttonDefault->resize(480, 131);
-        }
-        else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {
             buttonDefault->resize(370, 131);
         }

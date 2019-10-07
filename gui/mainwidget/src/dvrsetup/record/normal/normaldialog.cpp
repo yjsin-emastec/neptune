@@ -12,6 +12,7 @@ NormalDialog::NormalDialog(QWidget *parent)
         ui720.setupUi(this);
 
         frame = ui720.frame;
+
         buttonFrame[0] = ui720.buttonFrame1;
         buttonFrame[1] = ui720.buttonFrame2;
         buttonFrame[2] = ui720.buttonFrame3;
@@ -121,25 +122,19 @@ NormalDialog::NormalDialog(QWidget *parent)
             buttonAudio[ch]    ->setStyleSheet("font:40px;");
         }
 
-        buttonFrame[8]    ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonQuality[8]  ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonRecording[8]->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonAudio[8]    ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonFrame[NUMOFCH]    ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonQuality[NUMOFCH]  ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonRecording[NUMOFCH]->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonAudio[NUMOFCH]    ->setStyleSheet("QPushButton{font:40px; background-color:rgb(06,86,159);} QPushButton:focus{background-color:rgb(152,14,69);}");
 
-        labelCh[8]        ->setStyleSheet("font:40px; background-color:rgb(50,57,83);");
-        labelFrame[8]     ->setStyleSheet("background-color:rgb(50,57,83);");
-        labelQuality[8]   ->setStyleSheet("background-color:rgb(50,57,83);");
-        labelRecording[8] ->setStyleSheet("background-color:rgb(50,57,83);");
-        labelAudio[8]     ->setStyleSheet("background-color:rgb(50,57,83);");
+        labelCh[NUMOFCH]        ->setStyleSheet("font:40px; background-color:rgb(06,86,159);");
+        labelFrame[NUMOFCH]     ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelQuality[NUMOFCH]   ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelRecording[NUMOFCH] ->setStyleSheet("background-color:rgb(06,86,159);");
+        labelAudio[NUMOFCH]     ->setStyleSheet("background-color:rgb(06,86,159);");
 
         //yjsin [19/01/02] if text is long, change font size and label location and size
-        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
-        {
-            buttonDefault->resize(320, 91);
-            buttonDefault->setStyleSheet("font:40px");
-            buttonReload->move(15+320+10, 570);
-        }
-        else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {
             buttonDefault->resize(280, 91);
             buttonReload->setGeometry(15+280+10, 570, 251, 91);
@@ -269,24 +264,19 @@ NormalDialog::NormalDialog(QWidget *parent)
             buttonAudio[ch]    ->setStyleSheet("font:60px;");
         }
 
-        buttonFrame[8]    ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonQuality[8]  ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonRecording[8]->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
-        buttonAudio[8]    ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonFrame[NUMOFCH]    ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonQuality[NUMOFCH]  ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonRecording[NUMOFCH]->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
+        buttonAudio[NUMOFCH]    ->setStyleSheet("QPushButton{font:60px; background-color:rgb(06,86,159);}QPushButton:focus{background-color:rgb(152,14,69);}");
 
-        labelCh[8]        ->setStyleSheet("font:60px; background-color:rgb(50,57,83);");
-        labelFrame[8]     ->setStyleSheet("background-color:rgb(50,57,83);");
-        labelQuality[8]   ->setStyleSheet("background-color:rgb(50,57,83);");
-        labelRecording[8] ->setStyleSheet("background-color:rgb(50,57,83);");
-        labelAudio[8]     ->setStyleSheet("background-color:rgb(50,57,83);");
+        labelCh[NUMOFCH]        ->setStyleSheet("font:60px; background-color:rgb(06,86,159);");
+        labelFrame[NUMOFCH]     ->setStyleSheet("background-color:rgb(50,57,83);");
+        labelQuality[NUMOFCH]   ->setStyleSheet("background-color:rgb(50,57,83);");
+        labelRecording[NUMOFCH] ->setStyleSheet("background-color:rgb(50,57,83);");
+        labelAudio[NUMOFCH]     ->setStyleSheet("background-color:rgb(50,57,83);");
 
         //yjsin [19/02/21] if text is long, change label location and size
-        if(utils_cfg_cmp_item(SystemCfg.language, "SPANISH") == 0)
-        {
-            buttonDefault->resize(500, 131);
-            buttonReload->move(25+500+20, 860);
-        }
-        else if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
+        if(utils_cfg_cmp_item(SystemCfg.language, "ITALIAN") == 0)
         {
             buttonDefault->resize(400, 131);
             buttonReload->setGeometry(25+400+20, 860, 400, 131);

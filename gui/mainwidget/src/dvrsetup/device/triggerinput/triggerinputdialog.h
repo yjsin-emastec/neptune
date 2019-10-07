@@ -122,11 +122,11 @@ private:
     QPushButton *buttonAudioDn[NUMOFCH];
     QPushButton *buttonSourceAll, *buttonDelayAll, *buttonPriorityAll, *buttonAudioAll;
 
-    QLabel *labelTrigger[NUMOFCH];
-    QLabel *labelSource[NUMOFCH];
-    QLabel *labelDelay[NUMOFCH];
-    QLabel *labelPriority[NUMOFCH];
-    QLabel *labelAudio[NUMOFCH];
+    QLabel *labelTrigger[NUMOFCH+1];
+    QLabel *labelSource[NUMOFCH+1];
+    QLabel *labelDelay[NUMOFCH+1];
+    QLabel *labelPriority[NUMOFCH+1];
+    QLabel *labelAudio[NUMOFCH+1];
 
     QPushButton *buttonDefault;
     QPushButton *buttonSave;
