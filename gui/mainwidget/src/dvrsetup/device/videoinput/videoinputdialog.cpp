@@ -315,14 +315,24 @@ void VideoInputDialog::initVideoInputConfig(void)
         else                                { infoFlip[i] = 0; }
     }
 
-    infoRotate[0] = atoi(DeviceCfg.camera_rotate00);
-    infoRotate[1] = atoi(DeviceCfg.camera_rotate01);
-    infoRotate[2] = atoi(DeviceCfg.camera_rotate02);
-    infoRotate[3] = atoi(DeviceCfg.camera_rotate03);
-    infoRotate[4] = atoi(DeviceCfg.camera_rotate04);
-    infoRotate[5] = atoi(DeviceCfg.camera_rotate05);
-    infoRotate[6] = atoi(DeviceCfg.camera_rotate06);
-    infoRotate[7] = atoi(DeviceCfg.camera_rotate07);
+    QString rotate[NUMOFCH];
+    rotate[0] = QString(DeviceCfg.camera_rotate00);
+    rotate[1] = QString(DeviceCfg.camera_rotate01);
+    rotate[2] = QString(DeviceCfg.camera_rotate02);
+    rotate[3] = QString(DeviceCfg.camera_rotate03);
+    rotate[4] = QString(DeviceCfg.camera_rotate04);
+    rotate[5] = QString(DeviceCfg.camera_rotate05);
+    rotate[6] = QString(DeviceCfg.camera_rotate06);
+    rotate[7] = QString(DeviceCfg.camera_rotate07);
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if     (rotate[i].compare(  "0")==0)    { infoRotate[i] =   0; }
+        else if(rotate[i].compare( "90")==0)    { infoRotate[i] =  90; }
+        else if(rotate[i].compare("180")==0)    { infoRotate[i] = 180; }
+        else if(rotate[i].compare("270")==0)    { infoRotate[i] = 270; }
+        else                                    { infoRotate[i] =   0; }
+    }
 
     //backup config for preview
     for(int i=0; i<NUMOFCH; i++)
@@ -339,11 +349,11 @@ void VideoInputDialog::updateButton()
 {
     for(int i=0; i<NUMOFCH; i++)
     {
-        if( infoMirror[i] == 1 )            { buttonMirror[i]->setText(tr("Mirror"));  }
-        else                                { buttonMirror[i]->setText(tr("Normal")); }
+        if( infoMirror[i] == 1 )            { buttonMirror[i]->setText(tr("Mirror"));   }
+        else                                { buttonMirror[i]->setText(tr("Normal"));   }
 
-        if( infoFlip[i] == 1 )              { buttonFlip[i]->setText(tr("Down"));    }
-        else                                { buttonFlip[i]->setText(tr("Up"));   }
+        if( infoFlip[i] == 1 )              { buttonFlip[i]->setText(tr("Down"));       }
+        else                                { buttonFlip[i]->setText(tr("Up"));         }
 
         buttonRotate[i]->setText(QString("%1%2").arg(QString::number(infoRotate[i]), tr("°")));
     }
@@ -679,7 +689,11 @@ void VideoInputDialog::onButtonSave()
         }
         else
         {
-            sprintf(dst, "%d", infoRotate[i]);
+            if     ( infoRotate[i] ==   0 )     { utils_cfg_cpy_item(dst,   "0"); }
+            else if( infoRotate[i] ==  90 )     { utils_cfg_cpy_item(dst,  "90"); }
+            else if( infoRotate[i] == 180 )     { utils_cfg_cpy_item(dst, "180"); }
+            else if( infoRotate[i] == 270 )     { utils_cfg_cpy_item(dst, "270"); }
+            else                                { utils_cfg_cpy_item(dst,   "0"); }
         }
     }
 
@@ -763,7 +777,11 @@ void VideoInputDialog::onButtonClose()
         }
         else
         {
-            sprintf(dst, "%d", backupFlip[i]);
+            if     ( backupRotate[i] ==   0 )   { utils_cfg_cpy_item(dst,   "0"); }
+            else if( backupRotate[i] ==  90 )   { utils_cfg_cpy_item(dst,  "90"); }
+            else if( backupRotate[i] == 180 )   { utils_cfg_cpy_item(dst, "180"); }
+            else if( backupRotate[i] == 270 )   { utils_cfg_cpy_item(dst, "270"); }
+            else                                { utils_cfg_cpy_item(dst,   "0"); }
         }
     }
 

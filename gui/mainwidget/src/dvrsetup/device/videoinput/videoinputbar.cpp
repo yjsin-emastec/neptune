@@ -294,7 +294,11 @@ void VideoInputBar::saveConfig()
 
         if( dst != NULL )
         {
-            sprintf(dst, "%d", infoRotate[i]);
+            if     ( infoRotate[i] ==   0 ) { utils_cfg_cpy_item(dst,   "0"); }
+            else if( infoRotate[i] ==  90 ) { utils_cfg_cpy_item(dst,  "90"); }
+            else if( infoRotate[i] == 180 ) { utils_cfg_cpy_item(dst, "180"); }
+            else if( infoRotate[i] == 270 ) { utils_cfg_cpy_item(dst, "270"); }
+            else                            { utils_cfg_cpy_item(dst,   "0"); }
         }
         else
         {
