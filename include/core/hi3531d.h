@@ -671,6 +671,9 @@ HI_S32 hiViMemConfig(HiDev *pHiDev);
 HI_S32 hiVideoInChange(HiDev *pHiDev, HI3531D_VI_MODE_E preViMode, HI_U32 vis, HI3531D_VI_MODE_E curViMode, HI_U32 channel);
 HI_S32 hiViBindVpssEach(HiDev *pHiDev, int xBlock, int channel);
 HI_S32 hiViUnBindVpssEach(HiDev *pHiDev, int xBlock, int channel);
+#if 1 // GyverJeong [19/10/10]
+ROTATE_E *hiViGetRotate(void);
+#endif
 
 // Eastern VDEC
 HI_S32 hiVdecConfig(HiDev *pHiDev);

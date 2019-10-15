@@ -15,13 +15,16 @@
 void MainWidget::createVideoPane(int isReset)
 {
     QString str;
+#if 1 // GyverJeong [19/10/14]
+    int videoNum = (devInfo.videoNum == 8)?devInfo.videoNum+1:devInfo.videoNum;
+#endif
 
     int paneWidth  = (int)(mainWidth  / getMaxSplit());
     int paneHeight = (int)(mainHeight / getMaxSplit());
 
     qDebug("%s + \n", __func__);
 
-    for(int ii = 0; ii < devInfo.videoNum; ii++)
+    for(int ii = 0; ii < videoNum; ii++)
     {
         QByteArray text = QByteArray::fromHex((char *)DisplayCfg.channel_name[ii]);
 
@@ -29,7 +32,18 @@ void MainWidget::createVideoPane(int isReset)
 
         videoPane[ii] = new VideoPane(ii, str, this);
         videoPane[ii]->resize(paneWidth, paneHeight);
+#if 1 // GyverJeong [19/10/14]
+        if(ii == 8 && ii == devInfo.videoNum)
+        {
+            videoPane[ii]->move((4%getMaxSplit()) * paneWidth, (4/getMaxSplit()) * paneHeight);
+        }
+        else
+        {
+            videoPane[ii]->move(((ii>3?ii+1:ii)%getMaxSplit()) * paneWidth, ((ii>3?ii+1:ii)/getMaxSplit()) * paneHeight);
+        }
+#else
         videoPane[ii]->move((ii%getMaxSplit()) * paneWidth, (ii/getMaxSplit()) * paneHeight);
+#endif
 
         connect(videoPane[ii], SIGNAL(videoPaneMouseRightClicked  (int)), this, SLOT(videoPaneRightClicked  (int)));
         connect(videoPane[ii], SIGNAL(videoPaneMouseClicked       (int)), this, SLOT(videoPaneClicked       (int)));
@@ -50,7 +64,7 @@ void MainWidget::createVideoPane(int isReset)
         currentChannelNum = 0;
         splitStartChNum   = 0;
 
-        for(int ii = 0; ii < devInfo.videoNum; ii++)
+        for(int ii = 0; ii < videoNum; ii++)
         {
             videoPane[ii]->hide();
         }
@@ -360,13 +374,16 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
 void MainWidget::rotateSplit()
 {
     int ret = -1;
+#if 1 // GyverJeong [19/10/14]
+    int videoNum = (devInfo.videoNum == 8)?devInfo.videoNum+1:devInfo.videoNum;
+#endif
 
     if(operationMode <= OPMODE_INIT)
     {
         return;
     }
 
-    for(int ii = 0; ii < devInfo.videoNum; ii++)
+    for(int ii = 0; ii < videoNum; ii++)
     {
         videoPane[ii]->zoomAction = false;
     }
@@ -411,7 +428,7 @@ void MainWidget::rotateSplit()
         {
             case Split_1:
             {
-                if(devInfo.videoNum <= 4)       { ret = splitScreen(Split_4);  }
+                if     (devInfo.videoNum <= 4)  { ret = splitScreen(Split_4);  }
                 else if(devInfo.videoNum <= 9)  { ret = splitScreen(Split_9);  }
                 else if(devInfo.videoNum <= 16) { ret = splitScreen(Split_16); }
 
@@ -468,6 +485,10 @@ void MainWidget::rotateOneChannel(int ch)
 }
 int MainWidget::splitScreen(int split)
 {
+#if 1 // GyverJeong [19/10/14]
+    int videoNum = (devInfo.videoNum == 8)?devInfo.videoNum+1:devInfo.videoNum;
+#endif
+
     for(int ii = 0; ii < devInfo.videoNum; ii++)
     {
         videoPane[ii]->setZoomOut();
@@ -515,7 +536,7 @@ int MainWidget::splitScreen(int split)
         split = getMaxSplit();
     }
 
-    for(ii = 0; ii < devInfo.videoNum; ii++)
+    for(ii = 0; ii < videoNum; ii++)
     {
         videoPane[ii]->hide();
     }
@@ -579,17 +600,35 @@ int MainWidget::splitScreen(int split)
         emit updateSplitButton();
     }
 
-    for(ii = 0; ii < devInfo.videoNum; ii++)
+    for(ii = 0; ii < videoNum; ii++)
     {
         int vidCh = firstCh + ii;
 
+#if 1 // GyverJeong [19/10/14]
+        if(vidCh >= videoNum)
+        {
+            vidCh -= videoNum;
+        }
+#else
         if(vidCh >= devInfo.videoNum)
         {
             vidCh -= devInfo.videoNum;
         }
+#endif
 
         videoPane[vidCh]->resize( paneWidth, paneHeight);
+#if 1 // GyverJeong [19/10/14]
+        if(ii == 8 && ii == devInfo.videoNum)
+        {
+            videoPane[vidCh]->move((4%split) * paneWidth, (4/split) * paneHeight);
+        }
+        else
+        {
+            videoPane[vidCh]->move(((ii>3?ii+1:ii)%split) * paneWidth, ((ii>3?ii+1:ii)/split) * paneHeight);
+        }
+#else
         videoPane[vidCh]->move((ii%split) * paneWidth, (ii/split) * paneHeight);
+#endif
 
         if(ver_get_oem() == OEM_DAEJI)
         {
@@ -642,6 +681,9 @@ int MainWidget::splitScreen(int split)
 }
 void MainWidget::setSplitScreen(int startCh, int selectCh, int split)
 {
+#if 1 // GyverJeong [19/10/14]
+    int videoNum = (devInfo.videoNum == 8)?devInfo.videoNum+1:devInfo.videoNum;
+#endif
     if( currentSplit != Split_1 ) { currentSplitOld=currentSplit; }
     currentSplit = split;
     currentChannelNum=selectCh;
@@ -663,7 +705,7 @@ void MainWidget::setSplitScreen(int startCh, int selectCh, int split)
         split = getMaxSplit();
     }
 
-    for(ii = 0; ii < devInfo.videoNum; ii++)
+    for(ii = 0; ii < videoNum; ii++)
     {
         videoPane[ii]->hide();
     }
@@ -678,17 +720,35 @@ void MainWidget::setSplitScreen(int startCh, int selectCh, int split)
     splitStartChNum = firstCh;
     currentSplit    = split;
 
-    for(ii = 0; ii < devInfo.videoNum; ii++)
+    for(ii = 0; ii < videoNum; ii++)
     {
         int vidCh = firstCh + ii;
 
+#if 1 // GyverJeong [19/10/14]
+        if(vidCh >= videoNum)
+        {
+            vidCh -= videoNum;
+        }
+#else
         if(vidCh >= devInfo.videoNum)
         {
             vidCh -= devInfo.videoNum;
         }
+#endif
 
         videoPane[vidCh]->resize(paneWidth, paneHeight);
+#if 1 // GyverJeong [19/10/14]
+        if(ii == 8 && ii == devInfo.videoNum)
+        {
+            videoPane[vidCh]->move((4%split) * paneWidth, (4/split) * paneHeight);
+        }
+        else
+        {
+            videoPane[vidCh]->move(((ii>3?ii+1:ii)%split) * paneWidth, ((ii>3?ii+1:ii)/split) * paneHeight);
+        }
+#else
         videoPane[vidCh]->move((ii%split) * paneWidth, (ii/split) * paneHeight);
+#endif
 
         if(ver_get_oem() == OEM_DAEJI)
         {

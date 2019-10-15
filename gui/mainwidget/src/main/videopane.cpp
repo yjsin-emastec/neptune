@@ -483,6 +483,13 @@ void VideoPane::mouseDoubleClickEvent(QMouseEvent *event)
         return;
     }
 
+#if 1 // GyverJeong [19/10/14]
+    if(videoPaneNo == 8 && videoPaneNo == devInfo.videoNum)
+    {
+        return;
+    }
+#endif
+
     if(event->button() == Qt::LeftButton)
     {
         zoomAction      = false;
