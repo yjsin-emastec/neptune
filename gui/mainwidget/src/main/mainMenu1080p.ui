@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1479</width>
-    <height>749</height>
+    <width>1269</width>
+    <height>789</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,8 +27,8 @@
     <rect>
      <x>4</x>
      <y>4</y>
-     <width>1471</width>
-     <height>741</height>
+     <width>1261</width>
+     <height>781</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -40,89 +40,128 @@
    <widget class="CustomImageLabel" name="buttonSetup">
     <property name="geometry">
      <rect>
-      <x>195</x>
-      <y>60</y>
-      <width>181</width>
-      <height>181</height>
+      <x>10</x>
+      <y>10</y>
+      <width>431</width>
+      <height>371</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
     </property>
    </widget>
    <widget class="CustomImageLabel" name="buttonSearch">
     <property name="geometry">
      <rect>
-      <x>645</x>
-      <y>60</y>
-      <width>181</width>
-      <height>181</height>
+      <x>440</x>
+      <y>10</y>
+      <width>381</width>
+      <height>371</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
     </property>
    </widget>
    <widget class="CustomImageLabel" name="buttonNotAvailable">
     <property name="geometry">
      <rect>
-      <x>1095</x>
-      <y>60</y>
-      <width>181</width>
-      <height>181</height>
+      <x>820</x>
+      <y>10</y>
+      <width>431</width>
+      <height>371</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
     </property>
    </widget>
    <widget class="CustomImageLabel" name="buttonAudio">
     <property name="geometry">
      <rect>
-      <x>195</x>
-      <y>410</y>
-      <width>181</width>
-      <height>181</height>
+      <x>10</x>
+      <y>380</y>
+      <width>431</width>
+      <height>391</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
     </property>
    </widget>
    <widget class="CustomImageLabel" name="buttonShutdown">
     <property name="geometry">
      <rect>
-      <x>645</x>
-      <y>410</y>
-      <width>181</width>
-      <height>181</height>
+      <x>440</x>
+      <y>380</y>
+      <width>381</width>
+      <height>391</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
     </property>
    </widget>
    <widget class="CustomImageLabel" name="buttonClose">
     <property name="geometry">
      <rect>
-      <x>1095</x>
-      <y>410</y>
-      <width>181</width>
-      <height>181</height>
+      <x>820</x>
+      <y>380</y>
+      <width>431</width>
+      <height>391</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
     </property>
    </widget>
    <widget class="QLabel" name="labelSetupText">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>260</y>
-      <width>450</width>
+      <y>300</y>
+      <width>381</width>
       <height>81</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string>Setup</string>
@@ -134,11 +173,14 @@
    <widget class="QLabel" name="labelSearchText">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>260</y>
-      <width>450</width>
+      <x>440</x>
+      <y>300</y>
+      <width>381</width>
       <height>81</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string>Search</string>
@@ -150,11 +192,14 @@
    <widget class="QLabel" name="labelNotAvailableText">
     <property name="geometry">
      <rect>
-      <x>960</x>
-      <y>260</y>
-      <width>450</width>
+      <x>820</x>
+      <y>300</y>
+      <width>381</width>
       <height>81</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string>N/A</string>
@@ -167,10 +212,13 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>610</y>
-      <width>450</width>
+      <y>660</y>
+      <width>381</width>
       <height>81</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string>Audio
@@ -183,11 +231,14 @@ Mute/1/2/3/4</string>
    <widget class="QLabel" name="labelShutdownText">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>610</y>
-      <width>450</width>
+      <x>440</x>
+      <y>660</y>
+      <width>381</width>
       <height>81</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string>Shutdown</string>
@@ -199,11 +250,14 @@ Mute/1/2/3/4</string>
    <widget class="QLabel" name="labelCloseText">
     <property name="geometry">
      <rect>
-      <x>960</x>
-      <y>610</y>
-      <width>450</width>
+      <x>820</x>
+      <y>660</y>
+      <width>381</width>
       <height>81</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string>Close</string>
@@ -212,6 +266,18 @@ Mute/1/2/3/4</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <zorder>labelSearchText</zorder>
+   <zorder>labelCloseText</zorder>
+   <zorder>labelShutdownText</zorder>
+   <zorder>labelNotAvailableText</zorder>
+   <zorder>labelAudioText</zorder>
+   <zorder>labelSetupText</zorder>
+   <zorder>buttonNotAvailable</zorder>
+   <zorder>buttonSetup</zorder>
+   <zorder>buttonSearch</zorder>
+   <zorder>buttonShutdown</zorder>
+   <zorder>buttonAudio</zorder>
+   <zorder>buttonClose</zorder>
   </widget>
  </widget>
  <customwidgets>

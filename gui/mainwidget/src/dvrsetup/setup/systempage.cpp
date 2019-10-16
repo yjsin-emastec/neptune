@@ -40,15 +40,27 @@ SystemPage::SystemPage(QWidget *parent)
         labelInformationText    = ui720.labelInformationText;
         labelCloseText          = ui720.labelCloseText;
 
-        labelDateTimeText       ->setStyleSheet("font:40px;");
-        labelSecurityText       ->setStyleSheet("font:40px;");
-        labelConfigText         ->setStyleSheet("font:40px;");
-        labelUpgradeText        ->setStyleSheet("font:40px;");
-        labelFactoryDefaultText ->setStyleSheet("font:40px;");
-        labelLanguageText       ->setStyleSheet("font:40px;");
-        labelLicensePalteText   ->setStyleSheet("font:40px;");
-        labelInformationText    ->setStyleSheet("font:40px;");
-        labelCloseText          ->setStyleSheet("font:40px;");
+        buttonDateTime          ->setStyleSheet("padding-top: 30px;");
+        buttonSecurity          ->setStyleSheet("padding-top: 30px;");
+        buttonConfig            ->setStyleSheet("padding-top: 30px;");
+        buttonUpgrade           ->setStyleSheet("padding-top: 20px;");
+        buttonFactoryDefault    ->setStyleSheet("padding-top: 20px;");
+        buttonLanguage          ->setStyleSheet("padding-top: 20px;");
+        buttonLicensePlate      ->setStyleSheet("padding-top: 20px;");
+        buttonInformation       ->setStyleSheet("padding-top: 20px;");
+        buttonClose             ->setStyleSheet("padding-top: 20px;");
+
+        labelDateTimeText       ->setStyleSheet("font: 40px;");
+        labelSecurityText       ->setStyleSheet("font: 40px;");
+        labelConfigText         ->setStyleSheet("font: 40px;");
+        labelUpgradeText        ->setStyleSheet("font: 40px;");
+        labelFactoryDefaultText ->setStyleSheet("font: 40px;");
+        labelLanguageText       ->setStyleSheet("font: 40px;");
+        labelLicensePalteText   ->setStyleSheet("font: 40px;");
+        labelInformationText    ->setStyleSheet("font: 40px;");
+        labelCloseText          ->setStyleSheet("font: 40px;");
+
+        iconSize = 120;
     }
     else
     {
@@ -75,15 +87,27 @@ SystemPage::SystemPage(QWidget *parent)
         labelInformationText    = ui1080.labelInformationText;
         labelCloseText          = ui1080.labelCloseText;
 
-        labelDateTimeText       ->setStyleSheet("font:65px;");
-        labelSecurityText       ->setStyleSheet("font:65px;");
-        labelConfigText         ->setStyleSheet("font:65px;");
-        labelUpgradeText        ->setStyleSheet("font:65px;");
-        labelFactoryDefaultText ->setStyleSheet("font:65px;");
-        labelLanguageText       ->setStyleSheet("font:65px;");
-        labelLicensePalteText   ->setStyleSheet("font:65px;");
-        labelInformationText    ->setStyleSheet("font:65px;");
-        labelCloseText          ->setStyleSheet("font:65px;");
+        buttonDateTime          ->setStyleSheet("padding-top: 50px;");
+        buttonSecurity          ->setStyleSheet("padding-top: 50px;");
+        buttonConfig            ->setStyleSheet("padding-top: 50px;");
+        buttonUpgrade           ->setStyleSheet("padding-top: 40px;");
+        buttonFactoryDefault    ->setStyleSheet("padding-top: 40px;");
+        buttonLanguage          ->setStyleSheet("padding-top: 40px;");
+        buttonLicensePlate      ->setStyleSheet("padding-top: 40px;");
+        buttonInformation       ->setStyleSheet("padding-top: 40px;");
+        buttonClose             ->setStyleSheet("padding-top: 40px;");
+
+        labelDateTimeText       ->setStyleSheet("font: 65px;");
+        labelSecurityText       ->setStyleSheet("font: 65px;");
+        labelConfigText         ->setStyleSheet("font: 65px;");
+        labelUpgradeText        ->setStyleSheet("font: 65px;");
+        labelFactoryDefaultText ->setStyleSheet("font: 65px;");
+        labelLanguageText       ->setStyleSheet("font: 65px;");
+        labelLicensePalteText   ->setStyleSheet("font: 65px;");
+        labelInformationText    ->setStyleSheet("font: 65px;");
+        labelCloseText          ->setStyleSheet("font: 65px;");
+
+        iconSize = 180;
     }
 
     setPalette(QPalette(QColor(26, 32, 46)));
@@ -119,26 +143,15 @@ SystemPage::SystemPage(QWidget *parent)
     iconImageFocus[7].load(":images/dvrsetup/system/information2.png");
     iconImageFocus[8].load(":images/dvrsetup/system/close2.png");
 
-    buttonDateTime      ->setPixmap(iconImageNormal[0]);
-    buttonSecurity      ->setPixmap(iconImageNormal[1]);
-    buttonConfig        ->setPixmap(iconImageNormal[2]);
-    buttonUpgrade       ->setPixmap(iconImageNormal[3]);
-    buttonFactoryDefault->setPixmap(iconImageNormal[4]);
-    buttonLanguage      ->setPixmap(iconImageNormal[5]);
-    buttonLicensePlate  ->setPixmap(iconImageNormal[6]);
-    buttonInformation   ->setPixmap(iconImageNormal[7]);
-    buttonClose         ->setPixmap(iconImageNormal[8]);
-
-    buttonDateTime      ->setScaledContents(true);  //resize img to label size
-    buttonDateTime      ->setScaledContents(true);
-    buttonSecurity      ->setScaledContents(true);
-    buttonConfig        ->setScaledContents(true);
-    buttonUpgrade       ->setScaledContents(true);
-    buttonFactoryDefault->setScaledContents(true);
-    buttonLanguage      ->setScaledContents(true);
-    buttonLicensePlate  ->setScaledContents(true);
-    buttonInformation   ->setScaledContents(true);
-    buttonClose         ->setScaledContents(true);
+    buttonDateTime      ->setPixmap(iconImageNormal[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonSecurity      ->setPixmap(iconImageNormal[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonConfig        ->setPixmap(iconImageNormal[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonUpgrade       ->setPixmap(iconImageNormal[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonFactoryDefault->setPixmap(iconImageNormal[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonLanguage      ->setPixmap(iconImageNormal[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonLicensePlate  ->setPixmap(iconImageNormal[6].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonInformation   ->setPixmap(iconImageNormal[7].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonClose         ->setPixmap(iconImageNormal[8].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 
     connect(buttonDateTime,         SIGNAL(pressed()), this, SLOT(onButtonDateTime()));
     connect(buttonSecurity,         SIGNAL(pressed()), this, SLOT(onButtonSecurity()));
@@ -433,15 +446,15 @@ void SystemPage::setFocusInformation()      { changeFocus(8); }
 void SystemPage::setFocusClose()            { changeFocus(9); }
 void SystemPage::changeFocus(int n)
 {
-    buttonDateTime      ->setPixmap(iconImageNormal[0]);
-    buttonSecurity      ->setPixmap(iconImageNormal[1]);
-    buttonConfig        ->setPixmap(iconImageNormal[2]);
-    buttonUpgrade       ->setPixmap(iconImageNormal[3]);
-    buttonFactoryDefault->setPixmap(iconImageNormal[4]);
-    buttonLanguage      ->setPixmap(iconImageNormal[5]);
-    buttonLicensePlate  ->setPixmap(iconImageNormal[6]);
-    buttonInformation   ->setPixmap(iconImageNormal[7]);
-    buttonClose         ->setPixmap(iconImageNormal[8]);
+    buttonDateTime      ->setPixmap(iconImageNormal[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonSecurity      ->setPixmap(iconImageNormal[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonConfig        ->setPixmap(iconImageNormal[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonUpgrade       ->setPixmap(iconImageNormal[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonFactoryDefault->setPixmap(iconImageNormal[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonLanguage      ->setPixmap(iconImageNormal[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonLicensePlate  ->setPixmap(iconImageNormal[6].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonInformation   ->setPixmap(iconImageNormal[7].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonClose         ->setPixmap(iconImageNormal[8].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 
     buttonDateTime      ->setFocusState(false);
     buttonSecurity      ->setFocusState(false);
@@ -459,52 +472,52 @@ void SystemPage::changeFocus(int n)
             break;
 
         case 1 :
-            buttonDateTime      ->setPixmap(iconImageFocus[0]);
+            buttonDateTime      ->setPixmap(iconImageFocus[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonDateTime      ->setFocusState(true);
             break;
 
         case 2:
-            buttonSecurity      ->setPixmap(iconImageFocus[1]);
+            buttonSecurity      ->setPixmap(iconImageFocus[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonSecurity      ->setFocusState(true);
             break;
 
         case 3:
-            buttonConfig        ->setPixmap(iconImageFocus[2]);
+            buttonConfig        ->setPixmap(iconImageFocus[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonConfig        ->setFocusState(true);
             break;
 
         case 4:
-            buttonUpgrade       ->setPixmap(iconImageFocus[3]);
+            buttonUpgrade       ->setPixmap(iconImageFocus[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonUpgrade       ->setFocusState(true);
             break;
 
         case 5:
-            buttonFactoryDefault->setPixmap(iconImageFocus[4]);
+            buttonFactoryDefault->setPixmap(iconImageFocus[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonFactoryDefault->setFocusState(true);
             break;
 
         case 6:
-            buttonLanguage      ->setPixmap(iconImageFocus[5]);
+            buttonLanguage      ->setPixmap(iconImageFocus[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonLanguage      ->setFocusState(true);
             break;
 
         case 7:
-            buttonLicensePlate  ->setPixmap(iconImageFocus[6]);
+            buttonLicensePlate  ->setPixmap(iconImageFocus[6].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonLicensePlate  ->setFocusState(true);
             break;
 
         case 8:
-            buttonInformation   ->setPixmap(iconImageFocus[7]);
+            buttonInformation   ->setPixmap(iconImageFocus[7].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonInformation   ->setFocusState(true);
             break;
 
         case 9:
-            buttonClose         ->setPixmap(iconImageFocus[8]);
+            buttonClose         ->setPixmap(iconImageFocus[8].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonClose         ->setFocusState(true);
             break;
 
         default :
-            buttonDateTime      ->setPixmap(iconImageFocus[0]);
+            buttonDateTime      ->setPixmap(iconImageFocus[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonDateTime      ->setFocusState(true);
             break;
     }

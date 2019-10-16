@@ -21,9 +21,15 @@ RecordPage::RecordPage(QWidget *parent)
         labelEventText  = ui720.labelEventText;
         labelCloseText  = ui720.labelCloseText;
 
+        buttonNormal    ->setStyleSheet("padding-top: 50px;");
+        buttonEvent     ->setStyleSheet("padding-top: 50px;");
+        buttonClose     ->setStyleSheet("padding-top: 50px;");
+
         labelNormalText->setStyleSheet("font: 40px;");
         labelEventText ->setStyleSheet("font: 40px;");
-        labelCloseText ->setStyleSheet("font: 40px");
+        labelCloseText ->setStyleSheet("font: 40px;");
+
+        iconSize = 180;
     }
     else
     {
@@ -38,9 +44,15 @@ RecordPage::RecordPage(QWidget *parent)
         labelEventText  = ui1080.labelEventText;
         labelCloseText  = ui1080.labelCloseText;
 
+        buttonNormal    ->setStyleSheet("padding-top: 100px;");
+        buttonEvent     ->setStyleSheet("padding-top: 100px;");
+        buttonClose     ->setStyleSheet("padding-top: 100px;");
+
         labelNormalText->setStyleSheet("font: 65px;");
         labelEventText ->setStyleSheet("font: 65px;");
         labelCloseText ->setStyleSheet("font: 65px;");
+
+        iconSize = 270;
     }
 
     setPalette(QPalette(QColor(26, 32, 46)));
@@ -56,13 +68,9 @@ RecordPage::RecordPage(QWidget *parent)
     iconImageFocus[1].load(":images/dvrsetup/record/event2.png");
     iconImageFocus[2].load(":images/dvrsetup/system/close2.png");
 
-    buttonNormal->setPixmap(iconImageNormal[0]);
-    buttonEvent->setPixmap(iconImageNormal[1]);
-    buttonClose->setPixmap(iconImageNormal[2]);
-
-    buttonNormal->setScaledContents(true);
-    buttonEvent->setScaledContents(true);
-    buttonClose->setScaledContents(true);
+    buttonNormal    ->setPixmap(iconImageNormal[0].scaled(iconSize, Qt::KeepAspectRatio));
+    buttonEvent     ->setPixmap(iconImageNormal[0].scaled(iconSize, Qt::KeepAspectRatio));
+    buttonClose     ->setPixmap(iconImageNormal[0].scaled(iconSize, Qt::KeepAspectRatio));
 
     connect(buttonNormal, SIGNAL(pressed()), this, SLOT(onButtonNormal()));
     connect(buttonEvent,  SIGNAL(pressed()), this, SLOT(onButtonEvent()));
@@ -137,9 +145,9 @@ void RecordPage::setFocusEvent()        { changeFocus(2); }
 void RecordPage::setFocusClose()        { changeFocus(3); }
 void RecordPage::changeFocus(int n)
 {
-    buttonNormal->setPixmap(iconImageNormal[0]);
-    buttonEvent->setPixmap(iconImageNormal[1]);
-    buttonClose->setPixmap(iconImageNormal[2]);
+    buttonNormal    ->setPixmap(iconImageNormal[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonEvent     ->setPixmap(iconImageNormal[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonClose     ->setPixmap(iconImageNormal[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 
     buttonNormal->setFocusState(false);
     buttonEvent->setFocusState(false);
@@ -151,22 +159,22 @@ void RecordPage::changeFocus(int n)
             break;
 
         case 1 :
-            buttonNormal->setPixmap(iconImageFocus[0]);
+            buttonNormal    ->setPixmap(iconImageFocus[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonNormal->setFocusState(true);
             break;
 
         case 2 :
-            buttonEvent->setPixmap(iconImageFocus[1]);
+            buttonEvent     ->setPixmap(iconImageFocus[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonEvent->setFocusState(true);
             break;
 
         case 3 :
-            buttonClose->setPixmap(iconImageFocus[2]);
+            buttonClose     ->setPixmap(iconImageFocus[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonClose->setFocusState(true);
             break;
 
         default :
-            buttonNormal->setPixmap(iconImageFocus[0]);
+            buttonNormal    ->setPixmap(iconImageFocus[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonNormal->setFocusState(true);
             break;
     }

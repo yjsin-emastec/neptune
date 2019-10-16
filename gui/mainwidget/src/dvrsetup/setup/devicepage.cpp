@@ -29,12 +29,21 @@ DevicePage::DevicePage(QWidget *parent)
         labelFormatText     = ui720.labelFormatText;
         labelCloseText      = ui720.labelCloseText;
 
+        buttonVideo         ->setStyleSheet("padding-top: 50px;");
+        buttonTrigger       ->setStyleSheet("padding-top: 50px;");
+        buttonGsensor       ->setStyleSheet("padding-top: 50px;");
+        buttonBuzzer        ->setStyleSheet("padding-top: 20px;");
+        buttonFormat        ->setStyleSheet("padding-top: 20px;");
+        buttonClose         ->setStyleSheet("padding-top: 20px;");
+
         labelVideoText      ->setStyleSheet("font: 40px;");
         labelTriggerText    ->setStyleSheet("font: 40px;");
         labelGsensorText    ->setStyleSheet("font: 40px;");
         labelBuzzerText     ->setStyleSheet("font: 40px;");
         labelFormatText     ->setStyleSheet("font: 40px;");
         labelCloseText      ->setStyleSheet("font: 40px;");
+
+        iconSize = 140;
     }
     else
     {
@@ -55,12 +64,21 @@ DevicePage::DevicePage(QWidget *parent)
         labelFormatText     = ui1080.labelFormatText;
         labelCloseText      = ui1080.labelCloseText;
 
-        labelVideoText      ->setStyleSheet("font:65px;");
-        labelTriggerText    ->setStyleSheet("font:65px;");
-        labelGsensorText    ->setStyleSheet("font:65px;");
-        labelBuzzerText     ->setStyleSheet("font:65px;");
-        labelFormatText     ->setStyleSheet("font:65px;");
-        labelCloseText      ->setStyleSheet("font:65px;");
+        buttonVideo         ->setStyleSheet("padding-top: 50px;");
+        buttonTrigger       ->setStyleSheet("padding-top: 50px;");
+        buttonGsensor       ->setStyleSheet("padding-top: 50px;");
+        buttonBuzzer        ->setStyleSheet("padding-top: 30px;");
+        buttonFormat        ->setStyleSheet("padding-top: 30px;");
+        buttonClose         ->setStyleSheet("padding-top: 30px;");
+
+        labelVideoText      ->setStyleSheet("font: 65px;");
+        labelTriggerText    ->setStyleSheet("font: 65px;");
+        labelGsensorText    ->setStyleSheet("font: 65px;");
+        labelBuzzerText     ->setStyleSheet("font: 65px;");
+        labelFormatText     ->setStyleSheet("font: 65px;");
+        labelCloseText      ->setStyleSheet("font: 65px;");
+
+        iconSize = 230;
     }
 
     setPalette(QPalette(QColor(26, 32, 46)));
@@ -90,19 +108,12 @@ DevicePage::DevicePage(QWidget *parent)
     iconImageFocus[4].load(":images/dvrsetup/device/diskformat2.png");
     iconImageFocus[5].load(":images/dvrsetup/system/close2.png");
 
-    buttonVideo     ->setPixmap(iconImageNormal[0]);
-    buttonTrigger   ->setPixmap(iconImageNormal[1]);
-    buttonGsensor   ->setPixmap(iconImageNormal[2]);
-    buttonBuzzer    ->setPixmap(iconImageNormal[3]);
-    buttonFormat    ->setPixmap(iconImageNormal[4]);
-    buttonClose     ->setPixmap(iconImageNormal[5]);
-
-    buttonVideo     ->setScaledContents(true);
-    buttonTrigger   ->setScaledContents(true);
-    buttonGsensor   ->setScaledContents(true);
-    buttonBuzzer    ->setScaledContents(true);
-    buttonFormat    ->setScaledContents(true);
-    buttonClose     ->setScaledContents(true);
+    buttonVideo     ->setPixmap(iconImageNormal[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonTrigger   ->setPixmap(iconImageNormal[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonGsensor   ->setPixmap(iconImageNormal[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonBuzzer    ->setPixmap(iconImageNormal[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonFormat    ->setPixmap(iconImageNormal[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonClose     ->setPixmap(iconImageNormal[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 
     connect(buttonVideo,        SIGNAL(pressed()), this, SLOT(onButtonVideo()));
     connect(buttonTrigger,      SIGNAL(pressed()), this, SLOT(onButtonTrigger()));
@@ -302,12 +313,12 @@ void DevicePage::setFocusFormat()       { changeFocus(5); }
 void DevicePage::setFocusClose()        { changeFocus(6); }
 void DevicePage::changeFocus(int n)
 {
-    buttonVideo     ->setPixmap(iconImageNormal[0]);
-    buttonTrigger   ->setPixmap(iconImageNormal[1]);
-    buttonGsensor   ->setPixmap(iconImageNormal[2]);
-    buttonBuzzer    ->setPixmap(iconImageNormal[3]);
-    buttonFormat    ->setPixmap(iconImageNormal[4]);
-    buttonClose     ->setPixmap(iconImageNormal[5]);
+    buttonVideo     ->setPixmap(iconImageNormal[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonTrigger   ->setPixmap(iconImageNormal[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonGsensor   ->setPixmap(iconImageNormal[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonBuzzer    ->setPixmap(iconImageNormal[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonFormat    ->setPixmap(iconImageNormal[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonClose     ->setPixmap(iconImageNormal[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 
     buttonVideo     ->setFocusState(false);
     buttonTrigger   ->setFocusState(false);
@@ -322,37 +333,37 @@ void DevicePage::changeFocus(int n)
             break;
 
         case 1 :
-            buttonVideo     ->setPixmap(iconImageFocus[0]);
+            buttonVideo     ->setPixmap(iconImageFocus[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonVideo     ->setFocusState(true);
             break;
 
         case 2 :
-            buttonTrigger   ->setPixmap(iconImageFocus[1]);
+            buttonTrigger   ->setPixmap(iconImageFocus[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonTrigger   ->setFocusState(true);
             break;
 
         case 3 :
-            buttonGsensor   ->setPixmap(iconImageFocus[2]);
+            buttonGsensor   ->setPixmap(iconImageFocus[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonGsensor   ->setFocusState(true);
             break;
 
         case 4 :
-            buttonBuzzer    ->setPixmap(iconImageFocus[3]);
+            buttonBuzzer    ->setPixmap(iconImageFocus[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonBuzzer    ->setFocusState(true);
             break;
 
         case 5 :
-            buttonFormat    ->setPixmap(iconImageFocus[4]);
+            buttonFormat    ->setPixmap(iconImageFocus[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonFormat    ->setFocusState(true);
             break;
 
         case 6 :
-            buttonClose     ->setPixmap(iconImageFocus[5]);
+            buttonClose     ->setPixmap(iconImageFocus[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonClose     ->setFocusState(true);
             break;
 
         default :
-            buttonVideo     ->setPixmap(iconImageFocus[0]);
+            buttonVideo     ->setPixmap(iconImageFocus[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonVideo     ->setFocusState(true);
             break;
     }

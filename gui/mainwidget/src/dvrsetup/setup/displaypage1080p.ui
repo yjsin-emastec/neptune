@@ -22,89 +22,128 @@
   <widget class="CustomImageLabel" name="buttonVideoOutput">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>140</y>
-     <width>181</width>
-     <height>181</height>
+     <x>60</x>
+     <y>40</y>
+     <width>601</width>
+     <height>461</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="CustomImageLabel" name="buttonCameraName">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>140</y>
-     <width>181</width>
-     <height>181</height>
+     <x>660</x>
+     <y>40</y>
+     <width>601</width>
+     <height>461</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="CustomImageLabel" name="buttonNotAvailable">
    <property name="geometry">
     <rect>
-     <x>1470</x>
-     <y>140</y>
-     <width>181</width>
-     <height>181</height>
+     <x>1260</x>
+     <y>40</y>
+     <width>601</width>
+     <height>461</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="CustomImageLabel" name="buttonOsd">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>550</y>
-     <width>181</width>
-     <height>181</height>
+     <x>60</x>
+     <y>500</y>
+     <width>601</width>
+     <height>441</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="CustomImageLabel" name="buttonNotAvailable2">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>550</y>
-     <width>181</width>
-     <height>181</height>
+     <x>660</x>
+     <y>500</y>
+     <width>601</width>
+     <height>441</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="CustomImageLabel" name="buttonClose">
    <property name="geometry">
     <rect>
-     <x>1470</x>
-     <y>550</y>
-     <width>181</width>
-     <height>181</height>
+     <x>1260</x>
+     <y>500</y>
+     <width>601</width>
+     <height>441</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="QLabel" name="labelVideoOutputText">
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>340</y>
+     <y>330</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Video Output</string>
@@ -117,10 +156,13 @@
    <property name="geometry">
     <rect>
      <x>690</x>
-     <y>340</y>
+     <y>330</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Camera Name</string>
@@ -133,10 +175,13 @@
    <property name="geometry">
     <rect>
      <x>1290</x>
-     <y>340</y>
+     <y>330</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -149,10 +194,13 @@
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>750</y>
+     <y>770</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>OSD</string>
@@ -165,10 +213,13 @@
    <property name="geometry">
     <rect>
      <x>690</x>
-     <y>750</y>
+     <y>770</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>N/A</string>
@@ -181,10 +232,13 @@
    <property name="geometry">
     <rect>
      <x>1290</x>
-     <y>750</y>
+     <y>770</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Close</string>
@@ -193,6 +247,18 @@
     <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
+  <zorder>labelNotAvailableText2</zorder>
+  <zorder>labelCameraNameText</zorder>
+  <zorder>labelCloseText</zorder>
+  <zorder>labelVideoOutputText</zorder>
+  <zorder>labelOsdText</zorder>
+  <zorder>labelNotAvailableText</zorder>
+  <zorder>buttonNotAvailable</zorder>
+  <zorder>buttonCameraName</zorder>
+  <zorder>buttonVideoOutput</zorder>
+  <zorder>buttonNotAvailable2</zorder>
+  <zorder>buttonOsd</zorder>
+  <zorder>buttonClose</zorder>
  </widget>
  <customwidgets>
   <customwidget>

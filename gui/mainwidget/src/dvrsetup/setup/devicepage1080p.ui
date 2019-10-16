@@ -19,89 +19,128 @@
   <widget class="CustomImageLabel" name="buttonVideo">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>140</y>
-     <width>181</width>
-     <height>181</height>
+     <x>60</x>
+     <y>40</y>
+     <width>601</width>
+     <height>461</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="CustomImageLabel" name="buttonTrigger">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>140</y>
-     <width>181</width>
-     <height>181</height>
+     <x>660</x>
+     <y>40</y>
+     <width>601</width>
+     <height>461</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="CustomImageLabel" name="buttonGsensor">
    <property name="geometry">
     <rect>
-     <x>1470</x>
-     <y>140</y>
-     <width>181</width>
-     <height>181</height>
+     <x>1260</x>
+     <y>40</y>
+     <width>601</width>
+     <height>461</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="CustomImageLabel" name="buttonBuzzer">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>550</y>
-     <width>181</width>
-     <height>181</height>
+     <x>60</x>
+     <y>500</y>
+     <width>601</width>
+     <height>441</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="CustomImageLabel" name="buttonFormat">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>550</y>
-     <width>181</width>
-     <height>181</height>
+     <x>660</x>
+     <y>500</y>
+     <width>601</width>
+     <height>441</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="CustomImageLabel" name="buttonClose">
    <property name="geometry">
     <rect>
-     <x>1470</x>
-     <y>550</y>
-     <width>181</width>
-     <height>181</height>
+     <x>1260</x>
+     <y>500</y>
+     <width>601</width>
+     <height>441</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="QLabel" name="labelVideoText">
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>340</y>
+     <y>330</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Video Input</string>
@@ -114,10 +153,13 @@
    <property name="geometry">
     <rect>
      <x>690</x>
-     <y>340</y>
+     <y>330</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Trigger Input</string>
@@ -130,10 +172,13 @@
    <property name="geometry">
     <rect>
      <x>1290</x>
-     <y>340</y>
+     <y>330</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Impact
@@ -147,10 +192,13 @@ Sensitivity</string>
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>750</y>
+     <y>770</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Buzzer Output</string>
@@ -163,10 +211,13 @@ Sensitivity</string>
    <property name="geometry">
     <rect>
      <x>690</x>
-     <y>750</y>
+     <y>770</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>SSD Format</string>
@@ -179,10 +230,13 @@ Sensitivity</string>
    <property name="geometry">
     <rect>
      <x>1290</x>
-     <y>750</y>
+     <y>770</y>
      <width>541</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Close</string>
@@ -191,6 +245,18 @@ Sensitivity</string>
     <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
+  <zorder>labelFormatText</zorder>
+  <zorder>labelVideoText</zorder>
+  <zorder>labelGsensorText</zorder>
+  <zorder>labelTriggerText</zorder>
+  <zorder>labelBuzzerText</zorder>
+  <zorder>labelCloseText</zorder>
+  <zorder>buttonClose</zorder>
+  <zorder>buttonGsensor</zorder>
+  <zorder>buttonFormat</zorder>
+  <zorder>buttonVideo</zorder>
+  <zorder>buttonTrigger</zorder>
+  <zorder>buttonBuzzer</zorder>
  </widget>
  <customwidgets>
   <customwidget>

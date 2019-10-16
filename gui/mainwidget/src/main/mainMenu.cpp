@@ -25,12 +25,21 @@ MainMenu::MainMenu(QWidget *parent)
         labelShutdownText       = ui720.labelShutdownText;
         labelCloseText          = ui720.labelCloseText;
 
+        buttonSetup             ->setStyleSheet("padding-top: 40px; padding-left:  30px;");
+        buttonSearch            ->setStyleSheet("padding-top: 40px;");
+        buttonNotAvailable      ->setStyleSheet("padding-top: 40px; padding-right: 30px;");
+        buttonAudio             ->setStyleSheet("padding-top: 20px; padding-left:  30px;");
+        buttonShutdown          ->setStyleSheet("padding-top: 20px;");
+        buttonClose             ->setStyleSheet("padding-top: 20px; padding-right: 30px;");
+
         labelSetupText          ->setStyleSheet("font: 40px;");
         labelSearchText         ->setStyleSheet("font: 40px;");
         labelNotAvailableText   ->setStyleSheet("font: 40px;");
         labelAudioText          ->setStyleSheet("font: 40px;");
         labelShutdownText       ->setStyleSheet("font: 40px;");
         labelCloseText          ->setStyleSheet("font: 40px;");
+
+        iconSize = 140;
     }
     else
     {
@@ -53,12 +62,21 @@ MainMenu::MainMenu(QWidget *parent)
         labelShutdownText       = ui1080.labelShutdownText;
         labelCloseText          = ui1080.labelCloseText;
 
+        buttonSetup             ->setStyleSheet("padding-top: 50px; padding-left:  50px;");
+        buttonSearch            ->setStyleSheet("padding-top: 50px;");
+        buttonNotAvailable      ->setStyleSheet("padding-top: 50px; padding-right: 50px;");
+        buttonAudio             ->setStyleSheet("padding-top: 40px; padding-left:  50px;");
+        buttonShutdown          ->setStyleSheet("padding-top: 40px;");
+        buttonClose             ->setStyleSheet("padding-top: 40px; padding-right: 50px;");
+
         labelSetupText          ->setStyleSheet("font: 65px;");
         labelSearchText         ->setStyleSheet("font: 65px;");
         labelNotAvailableText   ->setStyleSheet("font: 65px;");
         labelAudioText          ->setStyleSheet("font: 65px;");
         labelShutdownText       ->setStyleSheet("font: 65px;");
         labelCloseText          ->setStyleSheet("font: 65px;");
+
+        iconSize = 230;
     }
 
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
@@ -80,19 +98,12 @@ MainMenu::MainMenu(QWidget *parent)
     iconImageFocus[4].load(":images/main/shutdown2.png");
     iconImageFocus[5].load(":images/dvrsetup/system/close2.png");
 
-    buttonSetup         ->setPixmap(iconImageNormal[0]);
-    buttonSearch        ->setPixmap(iconImageNormal[1]);
-    buttonNotAvailable  ->setPixmap(iconImageNormal[2]);
-    buttonAudio         ->setPixmap(iconImageNormal[3]);
-    buttonShutdown      ->setPixmap(iconImageNormal[4]);
-    buttonClose         ->setPixmap(iconImageNormal[5]);
-
-    buttonSetup         ->setScaledContents(true);
-    buttonSearch        ->setScaledContents(true);
-    buttonNotAvailable  ->setScaledContents(true);
-    buttonAudio         ->setScaledContents(true);
-    buttonShutdown      ->setScaledContents(true);
-    buttonClose         ->setScaledContents(true);
+    buttonSetup         ->setPixmap(iconImageNormal[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonSearch        ->setPixmap(iconImageNormal[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonNotAvailable  ->setPixmap(iconImageNormal[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonAudio         ->setPixmap(iconImageNormal[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonShutdown      ->setPixmap(iconImageNormal[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonClose         ->setPixmap(iconImageNormal[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 
     connect(buttonSetup,    SIGNAL(pressed()), this, SLOT(onButtonSetup()));
     connect(buttonSearch,   SIGNAL(pressed()), this, SLOT(onButtonSearch()));
@@ -300,7 +311,7 @@ void MainMenu::updateAudioIcon(int audioNum)
         default :   { iconImageNormal[3].load(":images/main/audiomute.png");   iconImageFocus[3].load(":images/main/audiomute2.png");  break; }
     }
 
-    buttonAudio->setPixmap(iconImageFocus[3]);
+    buttonAudio->setPixmap(iconImageFocus[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 }
 
 void MainMenu::setFocusSetup()      { changeFocus(1); }
@@ -311,12 +322,12 @@ void MainMenu::setFocusClose()      { changeFocus(6); }
 
 void MainMenu::changeFocus(int n)
 {
-    buttonSetup         ->setPixmap(iconImageNormal[0]);
-    buttonSearch        ->setPixmap(iconImageNormal[1]);
-    buttonNotAvailable  ->setPixmap(iconImageNormal[2]);
-    buttonAudio         ->setPixmap(iconImageNormal[3]);
-    buttonShutdown      ->setPixmap(iconImageNormal[4]);
-    buttonClose         ->setPixmap(iconImageNormal[5]);
+    buttonSetup         ->setPixmap(iconImageNormal[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonSearch        ->setPixmap(iconImageNormal[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));;
+    buttonNotAvailable  ->setPixmap(iconImageNormal[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonAudio         ->setPixmap(iconImageNormal[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonShutdown      ->setPixmap(iconImageNormal[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonClose         ->setPixmap(iconImageNormal[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 
     buttonSetup         ->setFocusState(false);
     buttonSearch        ->setFocusState(false);
@@ -328,12 +339,12 @@ void MainMenu::changeFocus(int n)
     switch(n)
     {
         case 1 :
-            buttonSetup->setPixmap(iconImageFocus[0]);
+            buttonSetup->setPixmap(iconImageFocus[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonSetup->setFocusState(true);
             break;
 
         case 2 :
-            buttonSearch->setPixmap(iconImageFocus[1]);
+            buttonSearch->setPixmap(iconImageFocus[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonSearch->setFocusState(true);
             break;
 
@@ -343,22 +354,22 @@ void MainMenu::changeFocus(int n)
             break;
 
         case 4 :
-            buttonAudio->setPixmap(iconImageFocus[3]);
+            buttonAudio->setPixmap(iconImageFocus[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonAudio->setFocusState(true);
             break;
 
         case 5 :
-            buttonShutdown->setPixmap(iconImageFocus[4]);
+            buttonShutdown->setPixmap(iconImageFocus[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonShutdown->setFocusState(true);
             break;
 
         case 6 :
-            buttonClose->setPixmap(iconImageFocus[5]);
+            buttonClose->setPixmap(iconImageFocus[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonClose->setFocusState(true);
             break;
 
         default :
-            buttonSetup->setPixmap(iconImageFocus[0]);
+            buttonSetup->setPixmap(iconImageFocus[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonSetup->setFocusState(true);
             break;
     }

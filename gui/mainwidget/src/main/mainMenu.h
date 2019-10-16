@@ -72,6 +72,8 @@ private:
 
     void changeFocus(int n);
     void updateAudioIcon(int audioNum);
+
+    int iconSize;
 };
 
 #endif // MAINMENU_H

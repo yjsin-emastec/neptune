@@ -27,12 +27,21 @@ DisplayPage::DisplayPage(QWidget *parent)
         labelNotAvailableText2  = ui720.labelNotAvailableText2;
         labelCloseText          = ui720.labelCloseText;
 
+        buttonVideoOutput       ->setStyleSheet("padding-top: 50px;");
+        buttonCameraName        ->setStyleSheet("padding-top: 50px;");
+        buttonNotAvailable      ->setStyleSheet("padding-top: 50px;");
+        buttonOsd               ->setStyleSheet("padding-top: 20px;");
+        buttonNotAvailable2     ->setStyleSheet("padding-top: 20px;");
+        buttonClose             ->setStyleSheet("padding-top: 20px;");
+
         labelVideoOutputText    ->setStyleSheet("font: 40px;");
         labelCameraNameText     ->setStyleSheet("font: 40px;");
         labelNotAvailableText   ->setStyleSheet("font: 40px;");
         labelOsdText            ->setStyleSheet("font: 40px;");
         labelNotAvailableText2  ->setStyleSheet("font: 40px;");
         labelCloseText          ->setStyleSheet("font: 40px;");
+
+        iconSize = 140;
     }
     else
     {
@@ -53,12 +62,21 @@ DisplayPage::DisplayPage(QWidget *parent)
         labelNotAvailableText2  = ui1080.labelNotAvailableText2;
         labelCloseText          = ui1080.labelCloseText;
 
+        buttonVideoOutput       ->setStyleSheet("padding-top: 50px;");
+        buttonCameraName        ->setStyleSheet("padding-top: 50px;");
+        buttonNotAvailable      ->setStyleSheet("padding-top: 50px;");
+        buttonOsd               ->setStyleSheet("padding-top: 30px;");
+        buttonNotAvailable2     ->setStyleSheet("padding-top: 30px;");
+        buttonClose             ->setStyleSheet("padding-top: 30px;");
+
         labelVideoOutputText    ->setStyleSheet("font: 65px;");
         labelCameraNameText     ->setStyleSheet("font: 65px;");
         labelNotAvailableText   ->setStyleSheet("font: 65px;");
         labelOsdText            ->setStyleSheet("font: 65px;");
         labelNotAvailableText2  ->setStyleSheet("font: 65px;");
         labelCloseText          ->setStyleSheet("font: 65px;");
+
+        iconSize = 230;
     }
 
     setPalette(QPalette(QColor(26, 32, 46)));
@@ -83,19 +101,12 @@ DisplayPage::DisplayPage(QWidget *parent)
     //iconImageFocus[4].load(":images/dvrsetup/display/blank2.png");
     iconImageFocus[5].load(":images/dvrsetup/system/close2.png");
 
-    buttonVideoOutput   ->setPixmap(iconImageNormal[0]);
-    buttonCameraName    ->setPixmap(iconImageNormal[1]);
-    buttonNotAvailable  ->setPixmap(iconImageNormal[2]);
-    buttonOsd           ->setPixmap(iconImageNormal[3]);
-    buttonNotAvailable2 ->setPixmap(iconImageNormal[4]);
-    buttonClose         ->setPixmap(iconImageNormal[5]);
-
-    buttonVideoOutput   ->setScaledContents(true);
-    buttonCameraName    ->setScaledContents(true);
-    buttonNotAvailable  ->setScaledContents(true);
-    buttonOsd           ->setScaledContents(true);
-    buttonNotAvailable2 ->setScaledContents(true);
-    buttonClose         ->setScaledContents(true);
+    buttonVideoOutput   ->setPixmap(iconImageNormal[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonCameraName    ->setPixmap(iconImageNormal[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonNotAvailable  ->setPixmap(iconImageNormal[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonOsd           ->setPixmap(iconImageNormal[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonNotAvailable2 ->setPixmap(iconImageNormal[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonClose         ->setPixmap(iconImageNormal[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 
     connect(buttonVideoOutput, SIGNAL(pressed()), this, SLOT(onButtonVideoOutput()));
     connect(buttonCameraName,  SIGNAL(pressed()), this, SLOT(onButtonCameraName()));
@@ -214,12 +225,12 @@ void DisplayPage::setFocusOsd()         { changeFocus(4); }
 void DisplayPage::setFocusClose()       { changeFocus(6); }
 void DisplayPage::changeFocus(int n)
 {
-    buttonVideoOutput   ->setPixmap(iconImageNormal[0]);
-    buttonCameraName    ->setPixmap(iconImageNormal[1]);
-    //buttonNotAvailable  ->setPixmap(iconImageNormal[2]);
-    buttonOsd           ->setPixmap(iconImageNormal[3]);
-    //buttonNotAvailable2 ->setPixmap(iconImageNormal[4]);
-    buttonClose         ->setPixmap(iconImageNormal[5]);
+    buttonVideoOutput   ->setPixmap(iconImageNormal[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonCameraName    ->setPixmap(iconImageNormal[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonNotAvailable  ->setPixmap(iconImageNormal[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonOsd           ->setPixmap(iconImageNormal[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonNotAvailable2 ->setPixmap(iconImageNormal[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonClose         ->setPixmap(iconImageNormal[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 
     buttonVideoOutput   ->setFocusState(false);
     buttonCameraName    ->setFocusState(false);
@@ -232,34 +243,35 @@ void DisplayPage::changeFocus(int n)
             break;
 
         case 1 :
-            buttonVideoOutput->setPixmap(iconImageFocus[0]);
-            buttonVideoOutput->setFocusState(true);
+
+            buttonVideoOutput   ->setPixmap(iconImageFocus[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+            buttonVideoOutput   ->setFocusState(true);
             break;
 
         case 2 :
-            buttonCameraName->setPixmap(iconImageFocus[1]);
-            buttonCameraName->setFocusState(true);
+            buttonCameraName    ->setPixmap(iconImageFocus[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+            buttonCameraName    ->setFocusState(true);
             break;
 
         case 3 :
             break;
 
         case 4 :
-            buttonOsd->setPixmap(iconImageFocus[3]);
-            buttonOsd->setFocusState(true);
+            buttonOsd           ->setPixmap(iconImageFocus[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+            buttonOsd           ->setFocusState(true);
             break;
 
         case 5 :
             break;
 
         case 6 :
-            buttonClose->setPixmap(iconImageFocus[5]);
-            buttonClose->setFocusState(true);
+            buttonClose         ->setPixmap(iconImageFocus[5].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+            buttonClose         ->setFocusState(true);
             break;
 
         default :
-            buttonVideoOutput->setPixmap(iconImageFocus[0]);
-            buttonVideoOutput->setFocusState(true);
+            buttonVideoOutput   ->setPixmap(iconImageFocus[0].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+            buttonVideoOutput   ->setFocusState(true);
             break;
     }
 }

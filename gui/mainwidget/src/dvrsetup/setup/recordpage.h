@@ -49,6 +49,8 @@ private:
     QPixmap iconImageFocus[3];
 
     void changeFocus(int n);
+
+    int iconSize;
 };
 
 #endif // RECORDPAGE_H

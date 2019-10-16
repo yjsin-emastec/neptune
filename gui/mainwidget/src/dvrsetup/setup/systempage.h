@@ -89,6 +89,8 @@ private:
     QPixmap iconImageFocus[9];
 
     void changeFocus(int n);
+
+    int iconSize;
 };
 
 #endif // SYSTEMPAGE_H

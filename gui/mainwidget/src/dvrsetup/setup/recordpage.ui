@@ -19,24 +19,33 @@
   <widget class="CustomImageLabel" name="buttonNormal">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>220</y>
-     <width>120</width>
-     <height>120</height>
+     <x>39</x>
+     <y>160</y>
+     <width>401</width>
+     <height>301</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="QLabel" name="labelNormalText">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>350</y>
-     <width>360</width>
-     <height>101</height>
+     <x>59</x>
+     <y>410</y>
+     <width>361</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Normal</string>
@@ -48,37 +57,52 @@
   <widget class="CustomImageLabel" name="buttonEvent">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>220</y>
-     <width>120</width>
-     <height>120</height>
+     <x>439</x>
+     <y>160</y>
+     <width>401</width>
+     <height>301</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="CustomImageLabel" name="buttonClose">
    <property name="geometry">
     <rect>
-     <x>980</x>
-     <y>220</y>
-     <width>120</width>
-     <height>120</height>
+     <x>839</x>
+     <y>160</y>
+     <width>401</width>
+     <height>301</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="QLabel" name="labelEventText">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>350</y>
-     <width>360</width>
-     <height>101</height>
+     <x>459</x>
+     <y>410</y>
+     <width>361</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Event</string>
@@ -90,11 +114,14 @@
   <widget class="QLabel" name="labelCloseText">
    <property name="geometry">
     <rect>
-     <x>860</x>
-     <y>350</y>
-     <width>360</width>
-     <height>101</height>
+     <x>859</x>
+     <y>410</y>
+     <width>361</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string>Close</string>
@@ -103,6 +130,12 @@
     <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
+  <zorder>labelCloseText</zorder>
+  <zorder>labelNormalText</zorder>
+  <zorder>labelEventText</zorder>
+  <zorder>buttonNormal</zorder>
+  <zorder>buttonEvent</zorder>
+  <zorder>buttonClose</zorder>
  </widget>
  <customwidgets>
   <customwidget>

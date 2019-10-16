@@ -33,11 +33,18 @@ SearchDialog::SearchDialog(QWidget *parent)
         frameTitle      ->setStyleSheet("background-color:rgb(67, 74, 86)");
         frameContents   ->setStyleSheet("background-color:rgb(26, 32, 46)");
 
+        buttonNormal    ->setStyleSheet("padding-top: 50px; background-color:rgb(255,255,255,0);");
+        buttonEvent     ->setStyleSheet("padding-top: 50px; background-color:rgb(255,255,255,0);");
+        buttonLog       ->setStyleSheet("padding-top: 50px; background-color:rgb(255,255,255,0);");
+        buttonClose     ->setStyleSheet("padding-top: 50px; background-color:rgb(255,255,255,0);");
+
         labelTitleText  ->setStyleSheet("font: 65px;");
         labelNormalText ->setStyleSheet("font: 40px;");
         labelEventText  ->setStyleSheet("font: 40px;");
         labelLogText    ->setStyleSheet("font: 40px;");
         labelCloseText  ->setStyleSheet("font: 40px;");
+
+        iconSize = 160;
     }
     else
     {
@@ -63,11 +70,18 @@ SearchDialog::SearchDialog(QWidget *parent)
         frameTitle      ->setStyleSheet("background-color:rgb(67, 74, 86)");
         frameContents   ->setStyleSheet("background-color:rgb(26, 32, 46)");
 
+        buttonNormal    ->setStyleSheet("padding-top: 80px; background-color:rgb(255,255,255,0);");
+        buttonEvent     ->setStyleSheet("padding-top: 80px; background-color:rgb(255,255,255,0);");
+        buttonLog       ->setStyleSheet("padding-top: 80px; background-color:rgb(255,255,255,0);");
+        buttonClose     ->setStyleSheet("padding-top: 80px; background-color:rgb(255,255,255,0);");
+
         labelTitleText  ->setStyleSheet("font: 90px;");
         labelNormalText ->setStyleSheet("font: 65px;");
         labelEventText  ->setStyleSheet("font: 65px;");
         labelLogText    ->setStyleSheet("font: 65px;");
         labelCloseText  ->setStyleSheet("font: 65px;");
+
+        iconSize = 240;
     }
 
 	setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
@@ -91,17 +105,11 @@ SearchDialog::SearchDialog(QWidget *parent)
     iconImageFocus[3].load(":images/search/log2.png");
     iconImageFocus[4].load(":images/dvrsetup/system/close2.png");
 
-    buttonTitle ->setPixmap(iconImageNormal[0]);
-    buttonNormal->setPixmap(iconImageNormal[1]);
-    buttonEvent ->setPixmap(iconImageNormal[2]);
-    buttonLog   ->setPixmap(iconImageNormal[3]);
-    buttonClose ->setPixmap(iconImageNormal[4]);
-
-    buttonTitle ->setScaledContents(true);
-    buttonNormal->setScaledContents(true);
-    buttonEvent ->setScaledContents(true);
-    buttonLog   ->setScaledContents(true);
-    buttonClose ->setScaledContents(true);
+    buttonTitle     ->setPixmap(iconImageNormal[0].scaled(iconSize*1.3, iconSize*1.3, Qt::KeepAspectRatio));
+    buttonNormal    ->setPixmap(iconImageNormal[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonEvent     ->setPixmap(iconImageNormal[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonLog       ->setPixmap(iconImageNormal[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonClose     ->setPixmap(iconImageNormal[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 
     connect(buttonNormal, SIGNAL(pressed()), this, SLOT(onNormal()));
     connect(buttonEvent,  SIGNAL(pressed()), this, SLOT(onEvent()));
@@ -252,10 +260,10 @@ void SearchDialog::setFocusClose()      { changeFocus(3); }
 
 void SearchDialog::changeFocus(int n)
 {
-    buttonNormal->setPixmap(iconImageNormal[1]);
-    buttonEvent ->setPixmap(iconImageNormal[2]);
-    buttonLog   ->setPixmap(iconImageNormal[3]);
-    buttonClose ->setPixmap(iconImageNormal[4]);
+    buttonNormal->setPixmap(iconImageNormal[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonEvent ->setPixmap(iconImageNormal[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonLog   ->setPixmap(iconImageNormal[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
+    buttonClose ->setPixmap(iconImageNormal[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
 
     buttonNormal->setFocusState(false);
     buttonEvent ->setFocusState(false);
@@ -265,46 +273,42 @@ void SearchDialog::changeFocus(int n)
     switch(n)
     {
         case 0 :
-            buttonNormal->setPixmap(iconImageFocus[1]);
+            buttonNormal->setPixmap(iconImageFocus[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonNormal->setFocusState(true);
             break;
 
         case 1 :
-            buttonEvent ->setPixmap(iconImageFocus[2]);
+            buttonEvent ->setPixmap(iconImageFocus[2].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonEvent ->setFocusState(true);
             break;
 
         case 2 :
-            buttonLog   ->setPixmap(iconImageFocus[3]);
+            buttonLog   ->setPixmap(iconImageFocus[3].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonLog   ->setFocusState(true);
             break;
 
         case 3 :
-            buttonClose ->setPixmap(iconImageFocus[4]);
+            buttonClose ->setPixmap(iconImageFocus[4].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonClose ->setFocusState(true);
             break;
 
         default :
-            buttonNormal->setPixmap(iconImageFocus[1]);
+            buttonNormal->setPixmap(iconImageFocus[1].scaled(iconSize, iconSize, Qt::KeepAspectRatio));
             buttonNormal->setFocusState(true);
             break;
     }
 }
 void SearchDialog::keyPressEvent(QKeyEvent *event)
 {
-    qDebug() << "keyPressEvent";
-
     switch(event->key())
     {
         case Qt::Key_Up:
         {
-        qDebug()<<"up";
-            if     (calendarPage ->isVisible())   		{ qDebug()<<"calendar"; calendarPage  ->KeyPressEvent(Qt::Key_Up);    }
-            else if(eventPage    ->isVisible())         { qDebug()<<"eventPage"; eventPage     ->KeyPressEvent(Qt::Key_Up);    }
-            else if(systemLogPage->isVisible())         { qDebug()<<"systemlog"; systemLogPage ->KeyPressEvent(Qt::Key_Up);    }
+            if     (calendarPage ->isVisible())   		{ calendarPage  ->KeyPressEvent(Qt::Key_Up);    }
+            else if(eventPage    ->isVisible())         { eventPage     ->KeyPressEvent(Qt::Key_Up);    }
+            else if(systemLogPage->isVisible())         { systemLogPage ->KeyPressEvent(Qt::Key_Up);    }
             else
             {
-                qDebug()<<"searchpage";
                 if     (buttonNormal->hasFocusState())  { setFocusLog();    }
                 else if(buttonEvent ->hasFocusState())  { setFocusClose();  }
                 else if(buttonLog   ->hasFocusState())  { setFocusNormal(); }

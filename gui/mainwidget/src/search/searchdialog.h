@@ -75,6 +75,8 @@ private:
     QPixmap iconImageFocus[5];
 
     void changeFocus(int n);
+
+    int iconSize;
 };
 
 #endif // SEARCHDIALOG_H

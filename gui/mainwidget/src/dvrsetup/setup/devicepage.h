@@ -73,6 +73,8 @@ private:
     QPixmap iconImageFocus[6];
 
     void changeFocus(int n);
+
+    int iconSize;
 };
 
 #endif // DEVICEPAGE_H
