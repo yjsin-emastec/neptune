@@ -1,6 +1,7 @@
 DEFINES      += _TTY_POSIX_                                                                          \
                 QT_BASE                                                                              \
                 QT_SHARED                                                                            \
+                HI3521                                                                               \
 
 TRANSLATIONS  = src/dvrsetup/system/language/translator/language_english.ts                          \
                 src/dvrsetup/system/language/translator/language_korean.ts                           \

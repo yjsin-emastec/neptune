@@ -969,11 +969,22 @@ void MainWidget::updateDvrEvent(live_event_t *live)
                 {
                     if(checkVIS[i] != ver_vis_unknown)
                     {
+#if defined(HI3531D) // GyverJeong [19/10/15]
+                        if(checkVIS[i] == ver_vis_hd_1080_25p || checkVIS[i] == ver_vis_hd_1080_50p || checkVIS[i] == ver_vis_hd_1080_i50)
+                        {
+                            if(cfgMain.rec.record_main.fr_hd[i] > 25)
+                            {
+                                cfgMain.rec.record_main.fr_hd[i]  = 25;
+                                cfgSetup.rec.record_main.fr_hd[i] = 25;
+                            }
+                        }
+#else
                         if(cfgMain.rec.record_main.fr_hd[i] > 15)
                         {
                             cfgMain.rec.record_main.fr_hd[i]  = 15;
                             cfgSetup.rec.record_main.fr_hd[i] = 15;
                         }
+#endif
                     }
 
                     cfgMain.rec.record_main.resolution[i]  = RESOLUTION_HD_1920x1080;

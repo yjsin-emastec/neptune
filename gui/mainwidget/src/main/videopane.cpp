@@ -129,6 +129,31 @@ VideoPane::VideoPane(int chNum, const QString & text, QWidget *parent)
         labelDaejiLogo1080->hide();
     }
 
+#if 1 // GyverJeong [19/10/18]
+    if(chNum == 8 && ver_get_oem() == OEM_EASTERN)
+    {
+        switch(mainHeight)
+        {
+            case  720:
+                labelLogo240 = new QLabel(this);
+                labelLogo240->setPixmap(QPixmap(":/images/eastern/eastern_426x240.png"));
+                labelLogo240->setMouseTracking(true);
+                labelLogo240->adjustSize();
+                labelLogo240->setAlignment(Qt::AlignCenter);
+                labelLogo240->show();
+                break;
+            case 1080:
+                labelLogo360 = new QLabel(this);
+                labelLogo360->setPixmap(QPixmap(":/images/eastern/eastern_640x360.png"));
+                labelLogo360->setMouseTracking(true);
+                labelLogo360->adjustSize();
+                labelLogo360->setAlignment(Qt::AlignCenter);
+                labelLogo360->show();
+                break;
+        }
+    }
+#endif
+
     if((videoPaneNo == devInfo.videoNum) && (devInfo.videoNum == 8 || devInfo.videoNum == 16))
     {
         int paneWidth, paneHeight, w, h;

@@ -124,6 +124,10 @@ private:
                                            *labelDaejiLogo540,
                                            *labelDaejiLogo360,
                                            *labelRecord;
+#if 1 // GyverJeong [19/10/18]
+    QLabel                                 *labelLogo240;
+    QLabel                                 *labelLogo360;
+#endif
 
     QString                                 strChannelName,
                                             m_viewChName,
