@@ -1341,66 +1341,66 @@ void PlayBarDialog::keyPressEvent(QKeyEvent *event)
     {
         case Qt::Key_Up :
         {
-            if( !EventSearchPB && (( timeBar->getTimeLineStatus() == 2 ) || ( timeBar->getTimeLineStatus() ==4 )) )
+            if( EventSearchPB )
             {
-                if( playbackSpeed == PB_SPEED_1 )
-                {
-                    appmgr_search_set_jump_level(1,1);
-                }
-                else
-                {
-                    appmgr_search_set_jump_level(1,5);
-                }
+                break;
             }
-
+            else if( (timeBar->getTimeLineStatus() == 1) || (timeBar->getTimeLineStatus() == 3) )
+            {
+                appmgr_search_set_jump_level(1, 180);
+            }
+            else
+            {
+                appmgr_search_set_jump_level(1, 5);
+            }
             break;
         }
         case Qt::Key_Down :
         {
-            if( !EventSearchPB && (( timeBar->getTimeLineStatus() == 2 ) || ( timeBar->getTimeLineStatus() ==4 )) )
+            if( EventSearchPB )
             {
-                if( playbackSpeed == PB_SPEED_1 )
-                {
-                    appmgr_search_set_jump_level(0,1);
-                }
-                else
-                {
-                    appmgr_search_set_jump_level(0,5);
-                }
+                break;
             }
-
+            else if( (timeBar->getTimeLineStatus() == 1) || (timeBar->getTimeLineStatus() == 3) )
+            {
+                appmgr_search_set_jump_level(0, 180);
+            }
+            else
+            {
+                appmgr_search_set_jump_level(0, 5);
+            }
             break;
         }
         case Qt::Key_Left :
         {
-            if( !EventSearchPB )
+            if( EventSearchPB )
             {
-                if( timeBar->getTimeLineStatus() == 1 || timeBar->getTimeLineStatus() == 3 )
-                {
-                    appmgr_search_set_jump_level(0,60);
-                }
-                else
-                {
-                    appmgr_search_set_jump_level(0,5);
-                }
+                break;
             }
-
+            else if( (timeBar->getTimeLineStatus() == 1) || (timeBar->getTimeLineStatus() == 3) )
+            {
+                appmgr_search_set_jump_level(0, 60);
+            }
+            else
+            {
+                appmgr_search_set_jump_level(0, 1);
+            }
             break;
         }
         case Qt::Key_Right :
         {
-            if( !EventSearchPB )
+            if( EventSearchPB )
             {
-                if( timeBar->getTimeLineStatus() == 1 || timeBar->getTimeLineStatus() == 3 )
-                {
-                    appmgr_search_set_jump_level(1,60);
-                }
-                else
-                {
-                    appmgr_search_set_jump_level(1,5);
-                }
+                break;
             }
-
+            else if( (timeBar->getTimeLineStatus() == 1) || (timeBar->getTimeLineStatus() == 3) )
+            {
+                appmgr_search_set_jump_level(1, 60);
+            }
+            else
+            {
+                appmgr_search_set_jump_level(1, 1);
+            }
             break;
         }
         case Qt::Key_Enter:

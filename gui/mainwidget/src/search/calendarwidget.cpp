@@ -151,18 +151,23 @@ void CalendarWidget::drawFocus(QPainter *painter)
 {
     QRect border;
     QRect rect((selectedPos%7)*m_cellWidth, m_headHeight+(selectedPos/7)*m_cellHeight, m_cellWidth, m_cellHeight);
+    QColor focusColor;
+    int borderWidth = 6;
 
-    border.setRect(rect.x(), rect.y(), rect.width(), 4);
-    painter->fillRect(border, QColor(255, 128, 64));
+    if( focusStatus == 1)   { focusColor.setRgb(255,0,0); }
+    else                    { focusColor.setRgb(255,128,64); }
 
-    border.setRect(rect.x(), rect.y(), 4, rect.height());
-    painter->fillRect(border, QColor(255, 128, 64));
+    border.setRect(rect.x(), rect.y(), rect.width(), borderWidth);
+    painter->fillRect(border, focusColor);
 
-    border.setRect(rect.x() + rect.width() - 4, rect.y(), 4, rect.height());
-    painter->fillRect(border, QColor(255, 128, 64));
+    border.setRect(rect.x(), rect.y(), borderWidth, rect.height());
+    painter->fillRect(border, focusColor);
 
-    border.setRect(rect.x(), rect.y() + rect.height() - 4, rect.width(), 4);
-    painter->fillRect(border, QColor(255, 128, 64));
+    border.setRect(rect.x() + rect.width() - borderWidth, rect.y(), borderWidth, rect.height());
+    painter->fillRect(border, focusColor);
+
+    border.setRect(rect.x(), rect.y() + rect.height() - borderWidth, rect.width(), borderWidth);
+    painter->fillRect(border, focusColor);
 }
 void CalendarWidget::drawHeaderCell(QPainter *painter, const QRect &rect, int weekday)
 {
@@ -535,4 +540,6 @@ void CalendarWidget::mouseDoubleClickEvent(QMouseEvent *event)
 void CalendarWidget::setFocusStatus(int status)
 {
     focusStatus = status;
+
+    update();
 }

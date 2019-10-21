@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include <QTime>
+class QSlider;
+class QLabel;
 class TimeLine : public QWidget
 {
     Q_OBJECT
@@ -23,6 +25,10 @@ signals:
 public slots:
     void onDrawTimeLine(bool state);
 
+    void timeSliderPressed();
+    void timeSliderMoved(int);
+    void timeSliderReleased();
+
 protected:
     void paintEvent(QPaintEvent *event);
 
@@ -37,9 +43,13 @@ private:
     int TL_UP_MARGIN;
     int TL_WIDTH;
     int CH_WIDTH;
+    int TL_SLIDER_HEIGHT;
+    int TL_SLIDER_HANDLE_GAP;
+
     int NUM_15SEC_PER_MIN;
     int NUM_MIN_PER_HOUR;
     int NUM_PIXEL_PER_MIN;
+    int NUM_TICK_SIZE;
 
     int CH_COUNT;
     int fontSize;
@@ -51,6 +61,11 @@ private:
     int selectMinute;
     int focusStatus;
     bool isDrawRecord;
+
+    bool isSliderDrag;
+
+    QSlider *sliderSearchTime;
+    QLabel *labelSearchTime;
 };
 
 #endif // TIMELINE_H

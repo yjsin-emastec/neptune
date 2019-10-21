@@ -7,8 +7,75 @@ TimeLine::TimeLine(QWidget *parent)
 {
     CH_COUNT=devInfo.videoNum;
 
-    isDrawRecord=true;
-    focusStatus=1;
+    isDrawRecord    = true;
+    focusStatus     = 1;
+    isSliderDrag    = false;
+    selectHour      = 0;
+    selectMinute    = 0;
+
+    sliderSearchTime = new QSlider(Qt::Horizontal, this);
+
+    if(mainHeight == 720)
+    {
+        TL_HEIGHT               = 16;
+        TL_LEFT_MARGIN          = 190;
+        TL_UP_MARGIN            = 25;
+        TL_WIDTH                = 960;
+        CH_WIDTH                = 80;
+        TL_SLIDER_HEIGHT        = 20;
+        TL_SLIDER_HANDLE_GAP    = 20;
+
+        NUM_15SEC_PER_MIN       = 12;
+        NUM_MIN_PER_HOUR        = 20;
+        NUM_PIXEL_PER_MIN       = 2;
+        NUM_TICK_SIZE           = 4;
+
+        fontSize                = 24;
+        textWidth               = 38;
+        textHeight              = 23;
+        lineSize                = 1;
+
+        sliderSearchTime->setStyleSheet("QSlider { background-color:rgb(0,0,0,0);}"
+                "::groove { margin:0 20px; height: 20px; background-color: rgb(255,255,255,0);}"
+                "::handle { image: url(:/images/slider_handle.png); width: 40px;  margin: 0 -20px;}");
+    }
+    else
+    {
+        TL_HEIGHT               = 27;
+        TL_LEFT_MARGIN          = 280;
+        TL_UP_MARGIN            = 44;
+        TL_WIDTH                = 1440;
+        CH_WIDTH                = 120;
+        TL_SLIDER_HEIGHT        = 30;
+        TL_SLIDER_HANDLE_GAP    = 30;
+
+        NUM_15SEC_PER_MIN       = 4;
+        NUM_MIN_PER_HOUR        = 60;
+        NUM_PIXEL_PER_MIN       = 1;
+        NUM_TICK_SIZE           = 6;
+
+        fontSize                = 38;
+        textWidth               = 58;
+        textHeight              = 38;
+        lineSize                = 2;
+
+        sliderSearchTime->setStyleSheet("QSlider { background-color:rgb(0,0,0,0);}"
+                "::groove { margin: 30px; height: 30px; background-color: rgb(255,255,255,0);}"
+                "::handle { image: url(:/images/slider_handle.png); width: 60px; margin: -30px}");
+    }
+
+    sliderSearchTime->move(TL_LEFT_MARGIN-TL_SLIDER_HANDLE_GAP, TL_UP_MARGIN-TL_SLIDER_HEIGHT);
+    sliderSearchTime->setRange(0, TL_WIDTH-1);
+    sliderSearchTime->resize(TL_WIDTH+TL_SLIDER_HANDLE_GAP*2 , TL_SLIDER_HEIGHT);
+    sliderSearchTime->setPageStep(0);
+    sliderSearchTime->setFocusPolicy(Qt::NoFocus);
+    sliderSearchTime->setLayoutDirection(Qt::LeftToRight);
+    sliderSearchTime->show();
+
+    connect(sliderSearchTime, SIGNAL(sliderPressed()),   this, SLOT(timeSliderPressed()));
+    connect(sliderSearchTime, SIGNAL(valueChanged(int)), this, SLOT(timeSliderMoved(int)));
+    connect(sliderSearchTime, SIGNAL(sliderReleased()),  this, SLOT(timeSliderReleased()));
+
     updateTimeLinePixmap();
 }
 TimeLine::~TimeLine()
@@ -23,6 +90,85 @@ void TimeLine::paintEvent(QPaintEvent *event)
 {
     QStylePainter painter(this);
     painter.drawPixmap(0, 0, timeLinepixmap);
+
+    if( focusStatus != 1 )
+    {
+        //draw select time
+        QString hour, min, ap, time;
+
+        if( utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") ==0 )       //12Hour
+        {
+            int h;
+            if( selectHour>12 )
+            {
+                h = selectHour-12;
+                ap = "PM";
+            }
+            else if( selectHour == 12 )
+            {
+                h= selectHour;
+                ap = "PM";
+            }
+            else
+            {
+                h = selectHour;
+                ap = "AM";
+            }
+
+            if( h<10 )
+            {
+                hour = QString("%1%2").arg("0", QString::number(h));
+            }
+            else
+            {
+                hour = QString("%1").arg(QString::number(h));
+            }
+        }
+        else                                                                //24Hour
+        {
+            ap="";
+
+            if( selectHour<10 )
+            {
+                hour = QString("%1%2").arg("0", QString::number(selectHour));
+            }
+            else
+            {
+                hour = QString("%1").arg(QString::number(selectHour));
+            }
+        }
+
+        if( selectMinute<10 )
+        {
+            min = QString("%1%2").arg("0", QString::number(selectMinute));
+        }
+        else
+        {
+            min = QString("%1").arg(QString::number(selectMinute));
+        }
+        time = QString("%1:%2 %3").arg(hour, min, ap);
+
+        QFont font;
+        font.setPixelSize(fontSize+5);
+        painter.setFont(font);
+        painter.setPen(QColor(255, 255, 255));
+        painter.drawText(( TL_LEFT_MARGIN-textWidth*5)/2, TL_UP_MARGIN+((TL_HEIGHT*CH_COUNT)-textHeight)/2, textWidth*5, textHeight, Qt::AlignCenter, time );
+
+        //draw time tick
+        painter.setPen(QColor(255, 0, 0));
+        painter.setBrush(QColor(255, 0, 0));
+
+        if( focusStatus == 2 )
+        {
+            QRect bar( TL_LEFT_MARGIN + (selectHour*NUM_MIN_PER_HOUR*NUM_PIXEL_PER_MIN) + (selectMinute/(15*NUM_15SEC_PER_MIN/60)*NUM_PIXEL_PER_MIN) - NUM_TICK_SIZE/2, TL_UP_MARGIN, NUM_TICK_SIZE, TL_UP_MARGIN+TL_HEIGHT*8 );
+            painter.drawRect(bar);
+        }
+        else
+        {
+            QRect bar( TL_LEFT_MARGIN + selectMinute*(TL_WIDTH/60) - NUM_TICK_SIZE/2, TL_UP_MARGIN, NUM_TICK_SIZE,TL_UP_MARGIN+ TL_HEIGHT*8);
+            painter.drawRect(bar);
+        }
+    }
 }
 void TimeLine::updateTimeLinePixmap()
 {
@@ -50,35 +196,11 @@ void TimeLine::paintHourBorder(QPainter *painter)
 {
     if(mainHeight == 720)
     {
-        TL_HEIGHT = 16;
-        TL_LEFT_MARGIN = 60;
-        TL_UP_MARGIN = 25;
-        TL_WIDTH = 960;
-        CH_WIDTH = 80;
-        NUM_15SEC_PER_MIN = 12;
-        NUM_MIN_PER_HOUR = 20;
         NUM_PIXEL_PER_MIN = 2;
-
-        fontSize=24;
-        textWidth=38;
-        textHeight=23;
-        lineSize=1;
     }
     else
     {
-        TL_HEIGHT=27;
-        TL_LEFT_MARGIN = 90;
-        TL_UP_MARGIN = 44;
-        TL_WIDTH = 1440;
-        CH_WIDTH = 120;
-        NUM_15SEC_PER_MIN = 4;
-        NUM_MIN_PER_HOUR = 60;
         NUM_PIXEL_PER_MIN = 1;
-
-        fontSize=38;
-        textWidth=58;
-        textHeight=38;
-        lineSize=2;
     }
 
     qDebug(" ............. paintHourBorder + ");
@@ -116,20 +238,12 @@ void TimeLine::paintHourBorder(QPainter *painter)
 
     for(int i = 0; i < 25; i++)
     {
-        //draw focus rect
-        if( focusStatus == 2 && i == selectHour )
-        {
-            painter->setPen(QPen(QColor(39,0,79)));
-            painter->setBrush(QColor(255,0,0));
-
-            QRect focusRect(TL_LEFT_MARGIN+((TL_WIDTH/24)*i)-textWidth/2, 0, textWidth, textHeight);
-            painter->drawRect(focusRect);
-        }
-
         painter->setPen(QColor(255, 255, 255));
         str = tr("%1").arg(i);
         painter->drawText(TL_LEFT_MARGIN+((TL_WIDTH/24)*i)-textWidth/2, (TL_UP_MARGIN-textHeight)-(TL_UP_MARGIN-textHeight)/2, textWidth, textHeight, textFlag, str);
     }
+
+    sliderSearchTime->setValue( (selectHour*NUM_MIN_PER_HOUR*NUM_PIXEL_PER_MIN) + (selectMinute/(15*NUM_15SEC_PER_MIN/60) * NUM_PIXEL_PER_MIN) );
 
     if(isDrawRecord)
     {
@@ -265,26 +379,6 @@ void TimeLine::paintHourBorder(QPainter *painter)
         painter->drawLine(TL_LEFT_MARGIN+((TL_WIDTH/24)*i), TL_UP_MARGIN, TL_LEFT_MARGIN+((TL_WIDTH/24)*i), TL_UP_MARGIN+(TL_HEIGHT*CH_COUNT));
     }
 
-    if( focusStatus != 1 )
-    {
-        //draw select time
-        QString time;
-        if( selectHour < 10 )
-        {
-            time = QString("%1%2").arg("0").arg(selectHour);
-        }
-        else
-        {
-            time = QString::number(selectHour);
-        }
-
-        font.setPixelSize(fontSize+5);
-        painter->setFont(font);
-        painter->setPen(QColor(255, 255, 255));
-
-        painter->drawText(( TL_LEFT_MARGIN-textWidth)/2, TL_UP_MARGIN+((TL_HEIGHT*CH_COUNT)-textHeight)/2, textWidth, textHeight, textFlag, time );
-    }
-
     qDebug(" ............. paintHourBorder - ");
 }
 void TimeLine::paintMinuteBorder(QPainter *painter)
@@ -333,20 +427,12 @@ void TimeLine::paintMinuteBorder(QPainter *painter)
 
     for(int i = 0; i <= 60; i=i+5)
     {
-        //draw focus rect
-        if( i == selectMinute )
-        {
-            painter->setPen(QPen(QColor(39,0,79)));
-            painter->setBrush(QColor(255,0,0));
-
-            QRect focusRect(TL_LEFT_MARGIN+ ((TL_WIDTH/60)*i)- textWidth/2, 0, textWidth, textHeight);
-            painter->drawRect(focusRect);
-        }
-
         painter->setPen(QColor(255, 255, 255));
         str = tr("%1").arg(i);
         painter->drawText(TL_LEFT_MARGIN+((TL_WIDTH/60)*i)-textWidth/2, (TL_UP_MARGIN-textHeight)-(TL_UP_MARGIN-textHeight)/2 , textWidth, textHeight, textFlag, str);
     }
+
+    sliderSearchTime->setValue( selectMinute*(TL_WIDTH/60));
 
     if(isDrawRecord)
     {
@@ -446,7 +532,6 @@ void TimeLine::paintMinuteBorder(QPainter *painter)
         }
     }
 
-
     //draw horizontal line
     painter->setPen(QPen(QColor(39,0,79), 2, Qt::SolidLine));
 
@@ -470,23 +555,6 @@ void TimeLine::paintMinuteBorder(QPainter *painter)
         painter->drawLine(TL_LEFT_MARGIN+((TL_WIDTH/60)*i), TL_UP_MARGIN, TL_LEFT_MARGIN+((TL_WIDTH/60)*i), TL_UP_MARGIN+(TL_HEIGHT*CH_COUNT));
     }
 
-    //draw select time
-    QString time;
-    if( selectHour < 10 )
-    {
-        time = QString("%1%2").arg("0").arg(selectHour);
-    }
-    else
-    {
-        time = QString::number(selectHour);
-    }
-
-    font.setPixelSize(fontSize+5);
-    painter->setFont(font);
-    painter->setPen(QColor(255, 255, 255));
-
-    painter->drawText(( TL_LEFT_MARGIN-textWidth)/2 , TL_UP_MARGIN + ((TL_HEIGHT*CH_COUNT)-textHeight)/2, textWidth, textHeight, textFlag, time );
-
     qDebug(" ............. paintMinuteBorder - ");
 }
 void TimeLine::mousePressEvent(QMouseEvent *e)
@@ -494,50 +562,59 @@ void TimeLine::mousePressEvent(QMouseEvent *e)
     int x=e->pos().x();
     int y=e->pos().y();
 
-    if( (x>TL_LEFT_MARGIN) && (x<TL_LEFT_MARGIN+TL_WIDTH) && (y>0) && (y<TL_UP_MARGIN) )
+    if( (x>TL_LEFT_MARGIN) && (x<TL_LEFT_MARGIN+TL_WIDTH) && (y>TL_UP_MARGIN ) && (y<TL_UP_MARGIN+TL_HEIGHT*CH_COUNT) )
     {
-        if(focusStatus != 3)
+        if( e->button() == Qt::LeftButton)          //move select time
         {
-            selectHour = (x-TL_LEFT_MARGIN)/(TL_WIDTH/24);
-            focusStatus = 3;
-        }
-        else
-        {
-            focusStatus = 2;
-        }
+            if( focusStatus == 1 )
+            {
+                focusStatus = 2;
+                selectHour = (x-TL_LEFT_MARGIN)/(TL_WIDTH/24);
+                selectMinute = ((x-TL_LEFT_MARGIN)-(selectHour*NUM_MIN_PER_HOUR*NUM_PIXEL_PER_MIN)) / NUM_PIXEL_PER_MIN * (15*NUM_15SEC_PER_MIN/60);
+                emit changeFocus(focusStatus);
+            }
+            else if( focusStatus == 2 )
+            {
+                selectHour = (x-TL_LEFT_MARGIN)/(TL_WIDTH/24);
+                selectMinute = ((x-TL_LEFT_MARGIN)-(selectHour*NUM_MIN_PER_HOUR*NUM_PIXEL_PER_MIN)) / NUM_PIXEL_PER_MIN * (15*NUM_15SEC_PER_MIN/60);
+            }
+            else
+            {
+                selectMinute = ((x-TL_LEFT_MARGIN)/(TL_WIDTH/60));
+            }
 
-        updateTimeLinePixmap();
-        emit changeFocus(focusStatus);
-    }
-    else if( (x>TL_LEFT_MARGIN) && (x<TL_LEFT_MARGIN+TL_WIDTH) && (y>TL_UP_MARGIN ) && (y<TL_UP_MARGIN+TL_HEIGHT*CH_COUNT) )
-    {
-        if(focusStatus == 1)
+            updateTimeLinePixmap();
+        }
+        else if( e->button() == Qt::RightButton)    //change time format
         {
-            selectHour = (x-TL_LEFT_MARGIN)/(TL_WIDTH/24);
-            focusStatus=2;
+            if( focusStatus != 3 )
+            {
+                focusStatus = 3;
+            }
+            else
+            {
+                focusStatus = 2;
+            }
+
+            updateTimeLinePixmap();
             emit changeFocus(focusStatus);
         }
-        if(focusStatus == 2)
-        {
-            selectHour = (x-TL_LEFT_MARGIN)/(TL_WIDTH/24);
-        }
-        else
-        {
-            selectMinute = ((x-TL_LEFT_MARGIN)/(TL_WIDTH/60))/5*5;
-        }
-
-        updateTimeLinePixmap();
     }
     else if( (x>0) && (x<TL_LEFT_MARGIN) )
     {
-        if(focusStatus == 2)
+        if( focusStatus == 1 )
         {
-            focusStatus=3;
+            focusStatus = 2;
             emit changeFocus(focusStatus);
         }
-        else if(focusStatus ==3 )
+        else if( focusStatus == 2 )
         {
-            focusStatus=2;
+            focusStatus = 3;
+            emit changeFocus(focusStatus);
+        }
+        else if( focusStatus == 3 )
+        {
+            focusStatus = 2;
             emit changeFocus(focusStatus);
         }
     }
@@ -547,78 +624,124 @@ void TimeLine::mouseDoubleClickEvent(QMouseEvent *e)
     int x=e->pos().x();
     int y=e->pos().y();
 
-    if( (x>TL_LEFT_MARGIN) && (x<TL_LEFT_MARGIN+TL_WIDTH) && (y>TL_UP_MARGIN ) && (y<TL_UP_MARGIN+TL_HEIGHT*CH_COUNT) )
+    if(e->button() == Qt::LeftButton)
     {
-        emit startPlayback(QTime(selectHour, selectMinute, 0));
+        if( (x>TL_LEFT_MARGIN) && (x<TL_LEFT_MARGIN+TL_WIDTH) && (y>TL_UP_MARGIN ) && (y<TL_UP_MARGIN+TL_HEIGHT*CH_COUNT) )
+        {
+            emit startPlayback(QTime(selectHour, selectMinute, 0));
+        }
     }
 }
-
 void TimeLine::setFocusStatus(int status)
 {
     focusStatus=status;
 
-    if( focusStatus == 1)       { selectHour = 0; }
-    else if( focusStatus == 2 ) { selectMinute =0; }
+    if( focusStatus == 1 )
+    {
+        selectHour = selectMinute = 0;
+        sliderSearchTime->hide();
+    }
+    else
+    {
+        sliderSearchTime->show();
+    }
 
     updateTimeLinePixmap();
 }
+void TimeLine::timeSliderMoved(int val)
+{
+    if( isSliderDrag )
+    {
+        if( focusStatus == 2 )
+        {
+            selectHour  = val/(TL_WIDTH/24);
+            selectMinute = (val-(selectHour*NUM_MIN_PER_HOUR*NUM_PIXEL_PER_MIN)) / NUM_PIXEL_PER_MIN * (15*NUM_15SEC_PER_MIN/60);
+        }
+        else
+        {
+            if( val%(TL_WIDTH/60) !=0 )
+            {
+                int temp = val - val%(TL_WIDTH/60);
+
+                selectMinute = temp/(TL_WIDTH/60);
+                sliderSearchTime->setValue(temp);
+            }
+            else
+            {
+                selectMinute = val/(TL_WIDTH/60);
+            }
+        }
+    }
+
+    update();
+}
+void TimeLine::timeSliderPressed()
+{
+    isSliderDrag =true;
+}
+void TimeLine::timeSliderReleased()
+{
+    isSliderDrag = false;
+}
+
 void TimeLine::KeyPressEvent(int key)
 {
     switch(key)
     {
         case Qt::Key_Up:
         {
-            if(focusStatus == 2)
+            if( focusStatus == 2 )
             {
-                if( selectHour < 23) { selectHour++; }
-                else                 { selectHour=0; }
+                selectHour += 3;
+                if( selectHour>23 )     { selectHour = selectHour%24; }
+
             }
-            else if(focusStatus == 3)
+            else if( focusStatus == 3 )
             {
-                if( selectMinute < 55) { selectMinute+=5; }
-                else                   { selectMinute=0;  }
+                selectMinute += 5;
+                if( selectMinute>59 )   { selectMinute = selectMinute%60; }
             }
             break;
         }
         case Qt::Key_Down:
         {
-            if(focusStatus == 2)
+            if( focusStatus == 2 )
             {
-                if( selectHour >= 1 ) { selectHour--; }
-                else                  { selectHour=23; }
+                selectHour -= 3;
+                if( selectHour<0 )      { selectHour = 24+(selectHour%24); }
             }
-            else if( focusStatus ==3)
+            else if( focusStatus == 3 )
             {
-                if( selectMinute >= 5) { selectMinute-=5; }
-                else                   { selectMinute=55; }
+                selectMinute -= 5;
+                if( selectMinute<0 )    { selectMinute = 60+(selectMinute%60); }
             }
             break;
         }
         case Qt::Key_Left:
         {
-            if(focusStatus == 2)
+            if( focusStatus == 2 )
             {
-                if( selectHour >= 1 ) { selectHour--; }
-                else                  { selectHour=23; }
+                selectHour -= 1;
+                if( selectHour<0 )      { selectHour = 24+(selectHour%24); }
             }
-            else if( focusStatus ==3)
+            else if( focusStatus == 3 )
             {
-                if( selectMinute >= 5) { selectMinute-=5; }
-                else                   { selectMinute=55; }
+                selectMinute -= 1;
+                if( selectMinute<0 )    { selectMinute = 60+(selectMinute%60); }
             }
             break;
         }
         case Qt::Key_Right:
         {
-            if(focusStatus == 2)
+            if( focusStatus == 2 )
             {
-                if( selectHour < 23) { selectHour++; }
-                else                 { selectHour=0; }
+                selectHour += 1;
+                if( selectHour>23 )     { selectHour = selectHour%24; }
             }
-            else if(focusStatus == 3)
+            else if( focusStatus == 3 )
             {
-                if( selectMinute < 55) { selectMinute+=5; }
-                else                   { selectMinute=0;  }
+                selectMinute += 1;
+                if( selectMinute>59 )   { selectMinute = selectMinute%60; }
             }
             break;
         }
@@ -628,20 +751,20 @@ void TimeLine::KeyPressEvent(int key)
             {
                 emit changeFocus(3);
             }
-            else if( focusStatus ==3 )
+            else if( focusStatus == 3 )
             {
-                emit startPlayback(QTime(selectHour, selectMinute, 0));
+                emit changeFocus(2);
             }
 
             break;
         }
         case Qt::Key_Escape:
         {
-            if( focusStatus ==2)
+            if( focusStatus == 2)
             {
                 emit changeFocus(1);
             }
-            else if( focusStatus ==3 )
+            else if( focusStatus == 3 )
             {
                 emit changeFocus(2);
             }

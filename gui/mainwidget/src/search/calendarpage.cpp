@@ -26,15 +26,14 @@ CalendarPage::CalendarPage(QWidget *parent)
     connect(timeLine, SIGNAL(startPlayback(QTime)), calendar, SLOT(onStartPlayback(QTime)));
 
     buttonPrevious = new QPushButton();
-    buttonPrevious->setText(tr("Previous"));
-    buttonPrevious->setFixedSize(220,76);
+    buttonPrevious->setFocusPolicy(Qt::NoFocus);
 
     buttonClose = new QPushButton();
-    buttonClose->setText(tr("Close"));
-    buttonClose->setFixedSize(220,76);
+    buttonClose->setFocusPolicy(Qt::NoFocus);
 
     if(mainHeight == 720)
     {
+        iconSize = 60;
         if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
         {
             buttonPrevious->setStyleSheet("font:40px;color:white");
@@ -45,8 +44,8 @@ CalendarPage::CalendarPage(QWidget *parent)
     {
         this->resize(1920, 1080);
         frame->resize(1920-8, 1080-8);
-        buttonPrevious->setFixedSize(330,130);
-        buttonClose->setFixedSize(330,130);
+        iconSize = 110;
+
         buttonPrevMonth->setMinimumWidth(200);
         buttonPrevMonth->setMinimumHeight(110);
         buttonNextMonth->setMinimumWidth(200);
@@ -88,6 +87,14 @@ CalendarPage::CalendarPage(QWidget *parent)
     curMonthIndex = 0;
     focusStatus=1;
 
+    buttonPrevious->setFixedSize(iconSize+25, iconSize+15);
+    buttonPrevious->setIcon(QIcon(":images/previous.png"));
+    buttonPrevious->setIconSize(QSize(iconSize, iconSize));
+
+    buttonClose->setFixedSize(iconSize+25, iconSize+15);
+    buttonClose->setIcon(QIcon(":images/close2.png"));
+    buttonClose->setIconSize(QSize(iconSize, iconSize));
+
     UpdateDates(-1);
 
     QTimer::singleShot(100, this, SLOT(onUpdateTimeLine()));
@@ -122,11 +129,13 @@ void CalendarPage::CreateNavigationWidget()
     buttonPrevMonth->setText("<<");
     buttonPrevMonth->setMinimumWidth(100);
     buttonPrevMonth->setMinimumHeight(60);
+    buttonPrevMonth->setFocusPolicy(Qt::NoFocus);
 
     buttonNextMonth = new QPushButton;
     buttonNextMonth->setText(">>");
     buttonNextMonth->setMinimumWidth(100);
     buttonNextMonth->setMinimumHeight(60);
+    buttonNextMonth->setFocusPolicy(Qt::NoFocus);
 
     lableDate = new QLabel(tr("Aug, 2016"));
     lableDate->setStyleSheet("color:white; font-size:48px;");

@@ -45,6 +45,7 @@ private:
     void UpdateMonthLabel();
     int  curMonthIndex;
     int  focusStatus;
+    int  iconSize;
 
     QLabel          *lableDate;
     CalendarWidget  *calendar;

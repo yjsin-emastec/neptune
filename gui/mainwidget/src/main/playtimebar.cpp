@@ -1581,19 +1581,6 @@ void PlayTimeBar::mousePressEvent(QMouseEvent *event)
 
     if(event->button() == Qt::LeftButton)
     {
-        switch(timeLineStatus)
-        {
-            case 1 : { timeLineStatus = 2; break; }
-            case 2 : { timeLineStatus = 1; break; }
-            case 3 : { timeLineStatus = 4; break; }
-            case 4 : { timeLineStatus = 3; break; }
-        }
-
-        updateSlider();
-        updateTimeLinePixmap();
-    }
-    else if(event->button() == Qt::RightButton)
-    {
         sliderValue = event->x() - TL_LEFT_MARGIN;
 
         if(playbackDirection == PB_FF)
@@ -1613,6 +1600,19 @@ void PlayTimeBar::mousePressEvent(QMouseEvent *event)
             xPos = sliderValue + TL_LEFT_MARGIN;
             update();
         }
+    }
+    else if(event->button() == Qt::RightButton)
+    {
+        switch(timeLineStatus)
+        {
+            case 1 : { timeLineStatus = 2; break; }
+            case 2 : { timeLineStatus = 1; break; }
+            case 3 : { timeLineStatus = 4; break; }
+            case 4 : { timeLineStatus = 3; break; }
+        }
+
+        updateSlider();
+        updateTimeLinePixmap();
     }
 }
 int PlayTimeBar::getTimeLineStatus()
