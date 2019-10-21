@@ -33,7 +33,7 @@ VideoInputBar::VideoInputBar(QWidget *parent)
         buttonFlip  ->setIconSize(QSize(60,60));
         buttonRotate->setIcon(QIcon(":/images/rotate.png"));
         buttonRotate->setIconSize(QSize(60,60));
-        buttonClose ->setIcon(QIcon(":images/close2.png"));
+        buttonClose ->setIcon(QIcon(":images/previous.png"));
         buttonClose ->setIconSize(QSize(60,60));
     }
     else
@@ -64,7 +64,7 @@ VideoInputBar::VideoInputBar(QWidget *parent)
         buttonFlip  ->setIconSize(QSize(80,80));
         buttonRotate->setIcon(QIcon(":images/rotate.png"));
         buttonRotate->setIconSize(QSize(80,80));
-        buttonClose ->setIcon(QIcon(":images/close2.png"));
+        buttonClose ->setIcon(QIcon(":images/previous.png"));
         buttonClose ->setIconSize(QSize(80,80));
     }
     setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
