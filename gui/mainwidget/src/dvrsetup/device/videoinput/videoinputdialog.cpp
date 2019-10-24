@@ -826,6 +826,7 @@ void VideoInputDialog::keyPressEvent(QKeyEvent *event)
             else if( buttonRotate[7]->hasFocus() )  { buttonRotate[6]->setFocus(); }
 
             else if( buttonPreview  ->hasFocus() )  { buttonMirror[7]->setFocus(); }
+            else if( buttonDefault  ->hasFocus() )  { buttonMirror[7]->setFocus(); }
             else if( buttonSave     ->hasFocus() )  { buttonFlip[7]  ->setFocus(); }
             else if( buttonClose    ->hasFocus() )  { buttonRotate[7]->setFocus(); }
 
@@ -864,6 +865,7 @@ void VideoInputDialog::keyPressEvent(QKeyEvent *event)
             else if( buttonRotate[7]->hasFocus() )  { buttonClose    ->setFocus(); }
 
             else if( buttonPreview  ->hasFocus() )  { buttonMirror[8]->setFocus(); }
+            else if( buttonDefault  ->hasFocus() )  { buttonMirror[8]->setFocus(); }
             else if( buttonSave     ->hasFocus() )  { buttonFlip[8]  ->setFocus(); }
             else if( buttonClose    ->hasFocus() )  { buttonRotate[8]->setFocus(); }
 
@@ -902,7 +904,8 @@ void VideoInputDialog::keyPressEvent(QKeyEvent *event)
             else if( buttonRotate[7]->hasFocus() )  { buttonFlip[7]  ->setFocus(); }
 
             else if( buttonPreview  ->hasFocus() )  { buttonClose    ->setFocus(); }
-            else if( buttonSave     ->hasFocus() )  { buttonPreview  ->setFocus(); }
+            else if( buttonDefault  ->hasFocus() )  { buttonPreview  ->setFocus(); }
+            else if( buttonSave     ->hasFocus() )  { buttonDefault  ->setFocus(); }
             else if( buttonClose    ->hasFocus() )  { buttonSave     ->setFocus(); }
 
             break;;
@@ -939,7 +942,8 @@ void VideoInputDialog::keyPressEvent(QKeyEvent *event)
             else if( buttonRotate[6]->hasFocus() )  { buttonMirror[6]->setFocus(); }
             else if( buttonRotate[7]->hasFocus() )  { buttonMirror[7]->setFocus(); }
 
-            else if( buttonPreview  ->hasFocus() )  { buttonSave     ->setFocus(); }
+            else if( buttonPreview  ->hasFocus() )  { buttonDefault  ->setFocus(); }
+            else if( buttonDefault  ->hasFocus() )  { buttonSave     ->setFocus(); }
             else if( buttonSave     ->hasFocus() )  { buttonClose    ->setFocus(); }
             else if( buttonClose    ->hasFocus() )  { buttonPreview  ->setFocus(); }
 
@@ -978,6 +982,7 @@ void VideoInputDialog::keyPressEvent(QKeyEvent *event)
             else if( buttonRotate[7]->hasFocus() )  { onButtonRotate(7);           }
 
             else if( buttonPreview  ->hasFocus() )  { onButtonPreview();           }
+            else if( buttonDefault  ->hasFocus() )  { onButtonDefault();           }
             else if( buttonSave     ->hasFocus() )  { onButtonSave();              }
             else if( buttonClose    ->hasFocus() )  { onButtonClose();             }
 
