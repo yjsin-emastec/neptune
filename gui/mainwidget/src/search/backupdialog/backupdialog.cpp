@@ -507,7 +507,9 @@ void BackupDialog::keyPressEvent(QKeyEvent *event)
         }
         case Qt::Key_Enter:
         {
-                 if(dateTimeStart->hasFocus())                               { isKeyLock = true;           }
+
+            if     (dateTimeStart->hasFocus() && isKeyLock)                  { isKeyLock = false;          }
+            else if(dateTimeStart->hasFocus())                               { isKeyLock = true;           }
             else if(buttonEnd->hasFocus())                                   { onButtonEnd();              }
             else if(buttonBackup->hasFocus())                                { onButtonBackup();           }
             else if(buttonClose->hasFocus())                                 { onButtonClose();            }

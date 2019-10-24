@@ -1055,7 +1055,9 @@ void EventLogPage::KeyPressEvent(int key)
         }
         case Qt::Key_Enter:
         {
-            if(searchStartTime->hasFocus() || searchEndTime->hasFocus())               { isKeyLock = true;               }
+            if     (searchStartTime->hasFocus() && isKeyLock)                          { isKeyLock = false;              }
+            else if(searchEndTime->hasFocus() && isKeyLock)                            { isKeyLock = false;              }
+            else if(searchStartTime->hasFocus() || searchEndTime->hasFocus())          { isKeyLock = true;               }
             else if(buttonFilter->hasFocus())                                          { onButtonFilter();               }
             else if(buttonSort->hasFocus())                                            { onButtonSort();                 }
             else if(buttonSearch->hasFocus())                                          { onButtonSearch();               }

@@ -412,7 +412,11 @@ void TimeSetDialog::keyPressEvent(QKeyEvent *event)
 
         case Qt::Key_Enter:
 
-            if(dateTimeSystem->hasFocus())
+            if(dateTimeSystem->hasFocus() && isKeyLock)
+            {
+                isKeyLock = false;
+            }
+            else if(dateTimeSystem->hasFocus())
             {
                 isKeyLock = true;
             }

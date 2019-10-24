@@ -212,7 +212,11 @@ void RtcSetDialog::keyPressEvent(QKeyEvent *event)
 
         case Qt::Key_Enter:
 
-            if(dateTimeRtc->hasFocus())
+            if(dateTimeRtc->hasFocus() && isKeyLock )
+            {
+                isKeyLock = false;
+            }
+            else if(dateTimeRtc->hasFocus())
             {
                 isKeyLock = true;
             }

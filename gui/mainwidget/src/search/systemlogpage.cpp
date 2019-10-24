@@ -819,13 +819,15 @@ void SystemLogPage::KeyPressEvent(int key)
             }
             else
             {
-                if( searchStartTime->hasFocus() || searchEndTime->hasFocus())   { isKeyLock=true;     }
-                else if(buttonSearch->hasFocus())                               { onButtonSearch();   }
-                else if(buttonFunction->hasFocus())                             { onButtonFunction(); }
-                else if(buttonPageDn->hasFocus())                               { onButtonPageDn();   }
-                else if(buttonPageUp->hasFocus())                               { onButtonPageUp();   }
-                else if(buttonPrevious->hasFocus())                             { onButtonPrevious(); }
-                else if(buttonClose->hasFocus())                                { onButtonClose();    }
+                if     (searchStartTime->hasFocus() && isKeyLock)                   { isKeyLock = false;  }
+                else if(searchEndTime->hasFocus() && isKeyLock)                     { isKeyLock = false;  }
+                else if(searchStartTime->hasFocus() || searchEndTime->hasFocus())   { isKeyLock = true;   }
+                else if(buttonSearch->hasFocus())                                   { onButtonSearch();   }
+                else if(buttonFunction->hasFocus())                                 { onButtonFunction(); }
+                else if(buttonPageDn->hasFocus())                                   { onButtonPageDn();   }
+                else if(buttonPageUp->hasFocus())                                   { onButtonPageUp();   }
+                else if(buttonPrevious->hasFocus())                                 { onButtonPrevious(); }
+                else if(buttonClose->hasFocus())                                    { onButtonClose();    }
             }
             break;
         }

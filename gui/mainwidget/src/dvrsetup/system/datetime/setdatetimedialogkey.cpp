@@ -124,6 +124,7 @@ void SetDateTimeDialog::keyPressEvent(QKeyEvent *event)
             if     ( buttonGpsSync->hasFocus() )                    { onButtonGpsSync();            }
             else if( buttonTimeFormat->hasFocus() )                 { onButtonTimeFormat();         }
             else if( comboBoxTimeZone->hasFocus() )                 { isKeyLock = true;             }
+            else if( dateTimeEdit->hasFocus() && isKeyLock)         { isKeyLock = false;            }
             else if( dateTimeEdit->hasFocus() )                     { isKeyLock = true;             }
             else if( buttonSave->hasFocus() )                       { onButtonSave();               }
             else if( buttonClose->hasFocus() )                      { onButtonClose();              }
