@@ -1,6 +1,7 @@
 #include <QtGui>
 #include "backupdialog.h"
 #include "main/mainglobal.h"
+#include "textmessagebox/textmessagedialog.h"
 
 BackupDialog::BackupDialog(QWidget *parent)
     : QDialog(parent)
@@ -196,6 +197,7 @@ void BackupDialog::onButtonEnd()
 }
 void BackupDialog::onButtonBackup()
 {
+#if 0   // yjsin [19/10/24] bug occur during backup
     dateTimeStart  ->setEnabled(false);
     buttonEnd      ->setEnabled(false);
     buttonBackup   ->setEnabled(false);
@@ -238,6 +240,15 @@ void BackupDialog::onButtonBackup()
     pBackupContext->calculation       = 0;
     BackupTimer();
     (void)aif_backup_start(pBackupContext);
+#else
+
+
+    TextMessageDialog *msgBox = new TextMessageDialog("Notice", "On the construction.", 2, this);
+    msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
+    if(msgBox->exec()) { ; }
+
+    delete msgBox;
+#endif
 }
 void BackupDialog::onButtonClose()
 {
