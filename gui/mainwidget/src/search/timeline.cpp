@@ -91,68 +91,79 @@ void TimeLine::paintEvent(QPaintEvent *event)
     QStylePainter painter(this);
     painter.drawPixmap(0, 0, timeLinepixmap);
 
-    if( focusStatus != 1 )
+
+    //draw select time
+    QString hour, min, ap, time;
+
+    if( utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") ==0 )       //12Hour
     {
-        //draw select time
-        QString hour, min, ap, time;
-
-        if( utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") ==0 )       //12Hour
+        int h;
+        if( selectHour>12 )
         {
-            int h;
-            if( selectHour>12 )
-            {
-                h = selectHour-12;
-                ap = "PM";
-            }
-            else if( selectHour == 12 )
-            {
-                h= selectHour;
-                ap = "PM";
-            }
-            else
-            {
-                h = selectHour;
-                ap = "AM";
-            }
-
-            if( h<10 )
-            {
-                hour = QString("%1%2").arg("0", QString::number(h));
-            }
-            else
-            {
-                hour = QString("%1").arg(QString::number(h));
-            }
+            h = selectHour-12;
+            ap = "PM";
         }
-        else                                                                //24Hour
+        else if( selectHour == 12 )
         {
-            ap="";
-
-            if( selectHour<10 )
-            {
-                hour = QString("%1%2").arg("0", QString::number(selectHour));
-            }
-            else
-            {
-                hour = QString("%1").arg(QString::number(selectHour));
-            }
-        }
-
-        if( selectMinute<10 )
-        {
-            min = QString("%1%2").arg("0", QString::number(selectMinute));
+            h= selectHour;
+            ap = "PM";
         }
         else
         {
-            min = QString("%1").arg(QString::number(selectMinute));
+            h = selectHour;
+            ap = "AM";
         }
-        time = QString("%1:%2 %3").arg(hour, min, ap);
 
-        QFont font;
-        font.setPixelSize(fontSize+5);
-        painter.setFont(font);
+        if( h<10 )
+        {
+            hour = QString("%1%2").arg("0", QString::number(h));
+        }
+        else
+        {
+            hour = QString("%1").arg(QString::number(h));
+        }
+    }
+    else                                                                //24Hour
+    {
+        ap="24H";
+
+        if( selectHour<10 )
+        {
+            hour = QString("%1%2").arg("0", QString::number(selectHour));
+        }
+        else
+        {
+            hour = QString("%1").arg(QString::number(selectHour));
+        }
+    }
+
+    if( selectMinute<10 )
+    {
+        min = QString("%1%2").arg("0", QString::number(selectMinute));
+    }
+    else
+    {
+        min = QString("%1").arg(QString::number(selectMinute));
+    }
+    time = QString("%1:%2").arg(hour, min);
+
+    QFont font;
+    font.setPixelSize(fontSize*1.5);
+    painter.setFont(font);
+
+
+    if( focusStatus == 1)
+    {
         painter.setPen(QColor(255, 255, 255));
-        painter.drawText(( TL_LEFT_MARGIN-textWidth*5)/2, TL_UP_MARGIN+((TL_HEIGHT*CH_COUNT)-textHeight)/2, textWidth*5, textHeight, Qt::AlignCenter, time );
+        painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, ap);
+        painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)*2-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, time );
+    }
+    else
+    {
+        painter.setPen(QColor(255, 128, 64));
+        painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, ap);
+        painter.setPen(QColor(255, 255, 255));
+        painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)*2-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, time );
 
         //draw time tick
         painter.setPen(QColor(255, 0, 0));
