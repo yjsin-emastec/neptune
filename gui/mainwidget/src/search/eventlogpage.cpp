@@ -93,16 +93,20 @@ EventLogPage::EventLogPage(QWidget *parent)
 
     buttonPlay = new QPushButton(tr("Play"));
     buttonPlay->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    buttonPlay->setFixedSize(QSize(530, 100));
+    buttonPlay->setFixedSize(QSize(380, 210));
     buttonPlay->setEnabled(false);
 
-    buttonPrevious = new QPushButton(tr("Previous"));
+    buttonPrevious = new QPushButton();
     buttonPrevious->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    buttonPrevious->setFixedSize(QSize(260, 90));
+    buttonPrevious->setFixedSize(QSize(150, 100));
+    buttonPrevious->setIcon(QIcon(":/images/previous.png"));
+    buttonPrevious->setIconSize(QSize(70, 70));
 
-    buttonClose = new QPushButton(tr("Close"));
+    buttonClose = new QPushButton();
     buttonClose->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    buttonClose->setFixedSize(QSize(260, 90));
+    buttonClose->setFixedSize(QSize(150, 100));
+    buttonClose->setIcon(QIcon(":/images/close.png"));
+    buttonClose->setIconSize(QSize(70, 70));
 
     QHBoxLayout *mainLayout   = new QHBoxLayout;
     QVBoxLayout *menuVLayout0 = new QVBoxLayout;
@@ -112,7 +116,6 @@ EventLogPage::EventLogPage(QWidget *parent)
     QHBoxLayout *menuHLayout4 = new QHBoxLayout;
     QHBoxLayout *menuHLayout5 = new QHBoxLayout;
     QHBoxLayout *menuHLayout6 = new QHBoxLayout;
-    QHBoxLayout *menuHLayout7 = new QHBoxLayout;
 
     menuHLayout1->addWidget(labelStartTime);
     menuHLayout1->addWidget(searchStartTime);
@@ -131,10 +134,13 @@ EventLogPage::EventLogPage(QWidget *parent)
     menuHLayout5->addWidget(labelPage);
     menuHLayout5->addWidget(buttonNextLogPage);
 
-    menuHLayout6->addWidget(buttonPlay);
+    QVBoxLayout *menuVLayout1 = new QVBoxLayout;
 
-    menuHLayout7->addWidget(buttonPrevious);
-    menuHLayout7->addWidget(buttonClose);
+    menuVLayout1->addWidget(buttonPrevious);
+    menuVLayout1->addWidget(buttonClose);
+
+    menuHLayout6->addWidget(buttonPlay);
+    menuHLayout6->addLayout(menuVLayout1);
 
     menuVLayout0->addLayout(menuHLayout1);
     menuVLayout0->addLayout(menuHLayout2);
@@ -142,7 +148,6 @@ EventLogPage::EventLogPage(QWidget *parent)
     menuVLayout0->addLayout(menuHLayout4);
     menuVLayout0->addLayout(menuHLayout5);
     menuVLayout0->addLayout(menuHLayout6);
-    menuVLayout0->addLayout(menuHLayout7);
 
     mainLayout->addWidget(eventLogView);
     mainLayout->addLayout(menuVLayout0);
@@ -195,10 +200,12 @@ EventLogPage::EventLogPage(QWidget *parent)
         labelPage->setFixedSize(QSize(400,130));
         buttonNextLogPage->setFixedSize(QSize(190,130));
 
-        buttonPlay->setFixedSize(QSize(800, 140));
+        buttonPlay->setFixedSize(QSize(600,265));
+        buttonPrevious->setFixedSize(QSize(190,130));
+        buttonClose->setFixedSize(QSize(190,130));
 
-        buttonPrevious->setFixedSize(QSize(395,130));
-        buttonClose->setFixedSize(QSize(395,130));
+        buttonPrevious->setIconSize(QSize(100, 100));
+        buttonClose->setIconSize(QSize(100, 100));
 
         eventLogView->setColumnWidth(0, 560);
         eventLogView->setColumnWidth(1, 290);
@@ -910,56 +917,56 @@ void EventLogPage::KeyPressEvent(int key)
     {
         case Qt::Key_Up:
         {
-            if(searchStartTime->hasFocus() && isKeyLock)                           { searchStartTime->stepUp();      }
-            else if(searchEndTime->hasFocus() && isKeyLock)                        { searchEndTime->stepUp();        }
-            else if(eventLogView->hasFocus())                                      { itemViewSelectChange(0);        }
-            else if(searchStartTime->hasFocus())                                   { buttonPrevious->setFocus();     }
-            else if(searchEndTime->hasFocus())                                     { searchStartTime->setFocus();    }
-            else if(buttonFilter->hasFocus())                                      { searchEndTime->setFocus();      }
-            else if(buttonSort->hasFocus())                                        { searchEndTime->setFocus();      }
-            else if(buttonSearch->hasFocus())                                      { buttonFilter->setFocus();       }
-            else if(buttonPrevLogPage->hasFocus())                                 { buttonSearch->setFocus();       }
-            else if(buttonNextLogPage->hasFocus())                                 { buttonSearch->setFocus();       }
-            else if(buttonPlay->hasFocus() && buttonNextLogPage->isEnabled())      { buttonNextLogPage->setFocus();  }
-            else if(buttonPlay->hasFocus() && buttonPrevLogPage->isEnabled())      { buttonPrevLogPage->setFocus();  }
-            else if(buttonPlay->hasFocus())                                        { buttonSearch->setFocus();       }
-            else if(buttonPrevious->hasFocus() && buttonPlay->isEnabled())         { buttonPlay->setFocus();         }
-            else if(buttonPrevious->hasFocus() && buttonNextLogPage->isEnabled())  { buttonNextLogPage->setFocus();  }
-            else if(buttonPrevious->hasFocus() && buttonPrevLogPage->isEnabled())  { buttonPrevLogPage->setFocus();  }
-            else if(buttonPrevious->hasFocus())                                    { buttonSearch->setFocus();       }
-            else if(buttonClose->hasFocus() && buttonPlay->isEnabled())            { buttonPlay->setFocus();         }
-            else if(buttonClose->hasFocus() && buttonNextLogPage->isEnabled())     { buttonNextLogPage->setFocus();  }
-            else if(buttonClose->hasFocus() && buttonPrevLogPage->isEnabled())     { buttonPrevLogPage->setFocus();  }
-            else if(buttonClose->hasFocus())                                       { buttonSearch->setFocus();       }
+            if     (eventLogView->hasFocus())                                           { itemViewSelectChange(0);       }
+            else if(searchStartTime->hasFocus() && isKeyLock)                           { searchStartTime->stepUp();     }
+            else if(searchStartTime->hasFocus() && buttonPlay->isEnabled())             { buttonPlay->setFocus();        }
+            else if(searchStartTime->hasFocus())                                        { buttonClose->setFocus();       }
+            else if(searchEndTime->hasFocus() && isKeyLock)                             { searchEndTime->stepUp();       }
+            else if(searchEndTime->hasFocus())                                          { searchStartTime->setFocus();   }
+            else if(buttonFilter->hasFocus())                                           { searchEndTime->setFocus();     }
+            else if(buttonSort->hasFocus())                                             { searchEndTime->setFocus();     }
+            else if(buttonSearch->hasFocus())                                           { buttonFilter->setFocus();      }
+            else if(buttonPrevLogPage->hasFocus())                                      { buttonSearch->setFocus();      }
+            else if(buttonNextLogPage->hasFocus())                                      { buttonSearch->setFocus();      }
+            else if(buttonPlay->hasFocus() && buttonPrevLogPage->isEnabled())           { buttonPrevLogPage->setFocus(); }
+            else if(buttonPlay->hasFocus() && buttonNextLogPage->isEnabled())           { buttonNextLogPage->setFocus(); }
+            else if(buttonPlay->hasFocus())                                             { buttonSearch->setFocus();      }
+            else if(buttonPrevious->hasFocus() && buttonNextLogPage->isEnabled())       { buttonNextLogPage->setFocus(); }
+            else if(buttonPrevious->hasFocus() && buttonPrevLogPage->isEnabled())       { buttonPrevLogPage->setFocus(); }
+            else if(buttonPrevious->hasFocus())                                         { buttonSearch->setFocus();      }
+            else if(buttonClose->hasFocus())                                            { buttonPrevious->setFocus();    }
 
             break;
         }
         case Qt::Key_Down:
         {
-            if(searchStartTime->hasFocus() && isKeyLock)                           { searchStartTime->stepDown();    }
-            else if(searchEndTime->hasFocus() && isKeyLock)                        { searchEndTime->stepDown();      }
-            else if(eventLogView->hasFocus())                                      { itemViewSelectChange(1);        }
-            else if(searchStartTime->hasFocus())                                   { searchEndTime->setFocus();      }
-            else if(searchEndTime->hasFocus())                                     { buttonFilter->setFocus();       }
-            else if(buttonFilter->hasFocus())                                      { buttonSearch->setFocus();       }
-            else if(buttonSort->hasFocus())                                        { buttonSearch->setFocus();       }
-            else if(buttonSearch->hasFocus() && buttonNextLogPage->isEnabled())    { buttonNextLogPage->setFocus();  }
-            else if(buttonSearch->hasFocus() && buttonPrevLogPage->isEnabled())    { buttonPrevLogPage->setFocus();  }
-            else if(buttonSearch->hasFocus() && buttonPlay->isEnabled())           { buttonPlay->setFocus();         }
-            else if(buttonSearch->hasFocus())                                      { buttonPrevious->setFocus();     }
-            else if(buttonNextLogPage->hasFocus() && buttonPlay->isEnabled())      { buttonPlay->setFocus();         }
-            else if(buttonNextLogPage->hasFocus())                                 { buttonPrevious->setFocus();     }
-            else if(buttonPrevLogPage->hasFocus() && buttonPlay->isEnabled())      { buttonPlay->setFocus();         }
-            else if(buttonPrevLogPage->hasFocus())                                 { buttonPrevious->setFocus();     }
-            else if(buttonPlay->hasFocus())                                        { buttonPrevious->setFocus();     }
-            else if(buttonPrevious->hasFocus())                                    { searchStartTime->setFocus();    }
-            else if(buttonClose->hasFocus())                                       { searchStartTime->setFocus();    }
+
+            if     (eventLogView->hasFocus())                                           { itemViewSelectChange(1);       }
+            else if(searchStartTime->hasFocus() && isKeyLock)                           { searchStartTime->stepDown();   }
+            else if(searchStartTime->hasFocus())                                        { searchEndTime->setFocus();     }
+            else if(searchEndTime->hasFocus() && isKeyLock)                             { searchEndTime->stepDown();     }
+            else if(searchEndTime->hasFocus())                                          { buttonFilter->setFocus();      }
+            else if(buttonFilter->hasFocus())                                           { buttonSearch->setFocus();      }
+            else if(buttonSort->hasFocus())                                             { buttonSearch->setFocus();      }
+            else if(buttonSearch->hasFocus() && buttonNextLogPage->isEnabled())         { buttonNextLogPage->setFocus(); }
+            else if(buttonSearch->hasFocus() && buttonPrevLogPage->isEnabled())         { buttonPrevLogPage->setFocus(); }
+            else if(buttonSearch->hasFocus() && buttonPlay->isEnabled())                { buttonPlay->setFocus();        }
+            else if(buttonSearch->hasFocus())                                           { buttonPrevious->setFocus();    }
+            else if(buttonPrevLogPage->hasFocus() && buttonPlay->isEnabled())           { buttonPlay->setFocus();        }
+            else if(buttonPrevLogPage->hasFocus())                                      { buttonPrevious->setFocus();    }
+            else if(buttonNextLogPage->hasFocus() && buttonPlay->isEnabled())           { buttonPlay->setFocus();        }
+            else if(buttonNextLogPage->hasFocus())                                      { buttonPrevious->setFocus();    }
+            else if(buttonPlay->hasFocus())                                             { searchStartTime->setFocus();   }
+            else if(buttonPrevious->hasFocus())                                         { buttonClose->setFocus();       }
+            else if(buttonClose->hasFocus())                                            { searchStartTime->setFocus();   }
 
             break;
         }
         case Qt::Key_Left:
         {
-            if(searchStartTime->hasFocus() && isKeyLock)
+            if     (eventLogView->hasFocus() && buttonPlay->isEnabled())                { buttonPlay->setFocus();        }
+            else if(eventLogView->hasFocus())                                           { buttonSearch->setFocus();      }
+            else if(searchStartTime->hasFocus() && isKeyLock)
             {
                 switch(searchStartTime->currentSectionIndex())
                 {
@@ -984,26 +991,28 @@ void EventLogPage::KeyPressEvent(int key)
             else if((searchStartTime->hasFocus()   ||  searchEndTime->hasFocus() ||
                      buttonFilter->hasFocus()      ||  buttonSearch->hasFocus()  ||
                      buttonPrevLogPage->hasFocus() ||  buttonPlay->hasFocus()    ||
-                     buttonPrevious->hasFocus())   && (eventLogView->model()->rowCount() > 0))
+                     buttonNextLogPage->hasFocus() && !buttonPrevLogPage->isEnabled() ||
+                     buttonPrevious->hasFocus()    && !buttonPlay->isEnabled()        ||
+                     buttonClose->hasFocus()       && !buttonPlay->isEnabled())
+                     && (eventLogView->model()->rowCount() > 0))
             {
                 setFocusToLogView();
             }
-            else if(buttonFilter->hasFocus())                                          { buttonSort->setFocus();        }
-            else if(buttonSort->hasFocus())                                            { buttonFilter->setFocus();      }
-            else if(buttonNextLogPage->hasFocus() && buttonPrevLogPage->isEnabled())   { buttonPrevLogPage->setFocus(); }
-            else if(buttonNextLogPage->hasFocus() &&
-                   !buttonPrevLogPage->isEnabled() &&
-                    eventLogView->model()->rowCount() > 0)                             { setFocusToLogView();           }
-            else if(buttonPrevious->hasFocus())                                        { buttonClose->setFocus();       }
-            else if(buttonClose->hasFocus())                                           { buttonPrevious->setFocus();    }
-            else if(eventLogView->hasFocus() && buttonPlay->isEnabled())               { buttonPlay->setFocus();        }
-            else if(eventLogView->hasFocus())                                          { buttonSearch->setFocus();      }
+            else if(buttonFilter->hasFocus())                                          { buttonSort->setFocus();         }
+            else if(buttonSort->hasFocus())                                            { buttonFilter->setFocus();       }
+            else if(buttonPrevLogPage->hasFocus() && buttonNextLogPage->isEnabled())   { buttonNextLogPage->setFocus();  }
+            else if(buttonNextLogPage->hasFocus() && buttonPrevLogPage->isEnabled())   { buttonPrevLogPage->setFocus();  }
+            else if(buttonPlay->hasFocus())                                            { buttonPrevious->setFocus();     }
+            else if(buttonPrevious->hasFocus() && buttonPlay->isEnabled())             { buttonPlay->setFocus();         }
+            else if(buttonClose->hasFocus() && buttonPlay->isEnabled())                { buttonPlay->setFocus();         }
 
             break;
         }
         case Qt::Key_Right:
         {
-            if(searchStartTime->hasFocus() && isKeyLock)
+            if     (eventLogView->hasFocus() && buttonPlay->isEnabled())                { buttonPlay->setFocus();        }
+            else if(eventLogView->hasFocus())                                           { buttonSearch->setFocus();      }
+            else if(searchStartTime->hasFocus() && isKeyLock)
             {
                 switch(searchStartTime->currentSectionIndex())
                 {
@@ -1027,21 +1036,20 @@ void EventLogPage::KeyPressEvent(int key)
             }
             else if((searchStartTime->hasFocus()   ||  searchEndTime->hasFocus() ||
                      buttonSort->hasFocus()        ||  buttonSearch->hasFocus()  ||
-                     buttonNextLogPage->hasFocus() ||  buttonPlay->hasFocus()    ||
-                     buttonClose->hasFocus())      && (eventLogView->model()->rowCount() > 0))
+                     buttonNextLogPage->hasFocus() ||
+                     buttonPrevious->hasFocus()    ||  buttonClose->hasFocus()   ||
+                     buttonPrevLogPage->hasFocus() && !buttonNextLogPage->isEnabled())
+                     && (eventLogView->model()->rowCount() > 0))
             {
                 setFocusToLogView();
             }
-            else if(buttonSort->hasFocus())                                            { buttonFilter->setFocus();       }
             else if(buttonFilter->hasFocus())                                          { buttonSort->setFocus();         }
+            else if(buttonSort->hasFocus())                                            { buttonFilter->setFocus();       }
             else if(buttonPrevLogPage->hasFocus() && buttonNextLogPage->isEnabled())   { buttonNextLogPage->setFocus();  }
-            else if(buttonPrevLogPage->hasFocus() &&
-                   !buttonNextLogPage->isEnabled() &&
-                    eventLogView->model()->rowCount() > 0)                             { setFocusToLogView();            }
-            else if(buttonPrevious->hasFocus())                                        { buttonClose->setFocus();        }
-            else if(buttonClose->hasFocus())                                           { buttonPrevious->setFocus();     }
-            else if(eventLogView->hasFocus() && buttonPlay->isEnabled())               { buttonPlay->setFocus();         }
-            else if(eventLogView->hasFocus())                                          { buttonSearch->setFocus();       }
+            else if(buttonNextLogPage->hasFocus() && buttonPrevLogPage->isEnabled())   { buttonPrevLogPage->setFocus();  }
+            else if(buttonPlay->hasFocus())                                            { buttonPrevious->setFocus();     }
+            else if(buttonPrevious->hasFocus() && buttonPlay->isEnabled())             { buttonPlay->setFocus();         }
+            else if(buttonClose->hasFocus() && buttonPlay->isEnabled())                { buttonPlay->setFocus();         }
 
             break;
         }

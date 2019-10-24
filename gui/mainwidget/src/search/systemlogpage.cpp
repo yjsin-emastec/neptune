@@ -173,7 +173,7 @@ SystemLogPage::SystemLogPage(QWidget *parent)
     buttonPrevious ->setIconSize(QSize(iconSize,iconSize));
     buttonPrevious ->adjustSize ();
 
-    buttonClose    ->setIcon    (QIcon(":/images/close2.png"));
+    buttonClose    ->setIcon    (QIcon(":/images/close.png"));
     buttonClose    ->setIconSize(QSize(iconSize,iconSize));
     buttonClose    ->adjustSize ();
 

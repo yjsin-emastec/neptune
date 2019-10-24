@@ -92,8 +92,9 @@ CalendarPage::CalendarPage(QWidget *parent)
     buttonPrevious->setIconSize(QSize(iconSize, iconSize));
 
     buttonClose->setFixedSize(iconSize+25, iconSize+15);
-    buttonClose->setIcon(QIcon(":images/close2.png"));
+    buttonClose->setIcon(QIcon(":images/close.png"));
     buttonClose->setIconSize(QSize(iconSize, iconSize));
+
 
     UpdateDates(-1);
 

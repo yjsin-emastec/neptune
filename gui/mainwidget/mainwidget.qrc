@@ -25,7 +25,6 @@
         <file>images/still_image.png</file>
         <file>images/pause.png</file>
         <file>images/close.png</file>
-        <file>images/close2.png</file>
         <file>images/previous.png</file>
         <file>images/search.png</file>
         <file>images/function.png</file>
@@ -114,5 +113,6 @@
         <file>images/rotate.png</file>
         <file>images/eastern/eastern_426x240.png</file>
         <file>images/eastern/eastern_640x360.png</file>
+        <file>images/previous2.png</file>
     </qresource>
 </RCC>
