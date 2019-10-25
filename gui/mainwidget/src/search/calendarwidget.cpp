@@ -288,12 +288,9 @@ void CalendarWidget::mousePressEvent(QMouseEvent *event)
     {
         int clickPos = event->pos().x()/m_cellWidth + ((event->pos().y()-m_headHeight)/m_cellHeight)*7;
 
-        if(clickPos != selectedPos)
-        {
-            moveFocus(clickPos);
-            focusStatus = 1;
-            emit changeFocus(focusStatus);
-        }
+        moveFocus(clickPos);
+        focusStatus = 1;
+        emit changeFocus(focusStatus);
     }
 }
 void CalendarWidget::moveFocus(int pos)

@@ -150,35 +150,23 @@ void TimeLine::paintEvent(QPaintEvent *event)
     QFont font;
     font.setPixelSize(fontSize*1.5);
     painter.setFont(font);
+    painter.setPen(QColor(255, 255, 255));
+    painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, ap);
+    painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)*2-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, time );
 
+    //draw time tick
+    painter.setPen(QColor(255, 0, 0));
+    painter.setBrush(QColor(255, 0, 0));
 
-    if( focusStatus == 1)
+    if( focusStatus == 2 )
     {
-        painter.setPen(QColor(255, 255, 255));
-        painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, ap);
-        painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)*2-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, time );
+        QRect bar( TL_LEFT_MARGIN + (selectHour*NUM_MIN_PER_HOUR*NUM_PIXEL_PER_MIN) + (selectMinute/(15*NUM_15SEC_PER_MIN/60)*NUM_PIXEL_PER_MIN) - NUM_TICK_SIZE/2, TL_UP_MARGIN, NUM_TICK_SIZE, TL_UP_MARGIN+TL_HEIGHT*8 );
+        painter.drawRect(bar);
     }
-    else
+    else if( focusStatus == 3 )
     {
-        painter.setPen(QColor(255, 128, 64));
-        painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, ap);
-        painter.setPen(QColor(255, 255, 255));
-        painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)*2-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, time );
-
-        //draw time tick
-        painter.setPen(QColor(255, 0, 0));
-        painter.setBrush(QColor(255, 0, 0));
-
-        if( focusStatus == 2 )
-        {
-            QRect bar( TL_LEFT_MARGIN + (selectHour*NUM_MIN_PER_HOUR*NUM_PIXEL_PER_MIN) + (selectMinute/(15*NUM_15SEC_PER_MIN/60)*NUM_PIXEL_PER_MIN) - NUM_TICK_SIZE/2, TL_UP_MARGIN, NUM_TICK_SIZE, TL_UP_MARGIN+TL_HEIGHT*8 );
-            painter.drawRect(bar);
-        }
-        else
-        {
-            QRect bar( TL_LEFT_MARGIN + selectMinute*(TL_WIDTH/60) - NUM_TICK_SIZE/2, TL_UP_MARGIN, NUM_TICK_SIZE,TL_UP_MARGIN+ TL_HEIGHT*8);
-            painter.drawRect(bar);
-        }
+        QRect bar( TL_LEFT_MARGIN + selectMinute*(TL_WIDTH/60) - NUM_TICK_SIZE/2, TL_UP_MARGIN, NUM_TICK_SIZE,TL_UP_MARGIN+ TL_HEIGHT*8);
+        painter.drawRect(bar);
     }
 }
 void TimeLine::updateTimeLinePixmap()
@@ -613,20 +601,33 @@ void TimeLine::mousePressEvent(QMouseEvent *e)
     }
     else if( (x>0) && (x<TL_LEFT_MARGIN) )
     {
-        if( focusStatus == 1 )
+        if( e->button() == Qt::LeftButton )
         {
-            focusStatus = 2;
-            emit changeFocus(focusStatus);
+            if( focusStatus == 1 )
+            {
+                focusStatus = 2;
+                selectHour = 0;
+                selectMinute = 0;
+                emit changeFocus(focusStatus);
+            }
         }
-        else if( focusStatus == 2 )
+        else if( e->button() == Qt::RightButton )
         {
-            focusStatus = 3;
-            emit changeFocus(focusStatus);
-        }
-        else if( focusStatus == 3 )
-        {
-            focusStatus = 2;
-            emit changeFocus(focusStatus);
+            if( focusStatus == 1 )
+            {
+                focusStatus = 2;
+                emit changeFocus(focusStatus);
+            }
+            else if( focusStatus == 2 )
+            {
+                focusStatus = 3;
+                emit changeFocus(focusStatus);
+            }
+            else if( focusStatus == 3 )
+            {
+                focusStatus = 2;
+                emit changeFocus(focusStatus);
+            }
         }
     }
 }
