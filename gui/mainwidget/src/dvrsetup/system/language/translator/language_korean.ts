@@ -256,8 +256,8 @@
     </message>
     <message>
         <location filename="../../../../search/backupdialog/backupdialog.ui" line="172"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="183"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="293"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="184"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="304"/>
         <source>1 minute</source>
         <translation>1 분</translation>
     </message>
@@ -280,88 +280,88 @@
         <translation type="obsolete">USB메모리를 삽입하고 시간을 선택하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="156"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="157"/>
         <source>Insert a USB memory.</source>
         <translation>USB 메모리를 삽입하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="158"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="159"/>
         <source>Please insert a USB memory.</source>
         <translation>USB 메모리를 삽입하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="164"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="165"/>
         <source>Insert a USB memory and Select time.</source>
         <translation>USB 삽입 후 시간을 선택하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="166"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="167"/>
         <source>Please insert a USB memory and Select time.</source>
         <translation>USB 삽입 후 시간을 선택하십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="184"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="185"/>
         <source>2 minutes</source>
         <translation>2 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="185"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="186"/>
         <source>3 minutes</source>
         <translation>3 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="186"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="187"/>
         <source>4 minutes</source>
         <translation>4 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="187"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="188"/>
         <source>5 minutes</source>
         <translation>5 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="188"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="189"/>
         <source>6 minutes</source>
         <translation>6 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="189"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="190"/>
         <source>7 minutes</source>
         <translation>7 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="190"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="191"/>
         <source>8 minutes</source>
         <translation>8 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="191"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="192"/>
         <source>9 minutes</source>
         <translation>9 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="192"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="193"/>
         <source>10 minutes</source>
         <translation>10 분</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="282"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="293"/>
         <source>seconds</source>
         <translation>초</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="331"/>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="378"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="342"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="389"/>
         <source>CAM</source>
         <translation>채널</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="349"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="360"/>
         <source>Not found USB memory.</source>
         <translation>USB 메모리를 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="401"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="412"/>
         <source>Don&apos;t remove USB memory.</source>
         <translation>USB 메모리를 제거하지 마십시오.</translation>
     </message>
@@ -370,12 +370,12 @@
         <translation type="obsolete">USB 메모리를 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="378"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="389"/>
         <source>No Data</source>
         <translation>데이터 없음</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="386"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="397"/>
         <source>Lack of USB Capacity</source>
         <translation>USB 용량 부족</translation>
     </message>
@@ -384,12 +384,12 @@
         <translation type="obsolete">USB메모리를 제거하지 마십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="407"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="418"/>
         <source>Preparing...</source>
         <translation>준비 중입니다...</translation>
     </message>
     <message>
-        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="417"/>
+        <location filename="../../../../search/backupdialog/backupdialog.cpp" line="428"/>
         <source>Completion</source>
         <translation>완료</translation>
     </message>
@@ -531,7 +531,7 @@ Output: Off/On</source>
         <translation>달력 페이지</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="140"/>
+        <location filename="../../../../search/calendarpage.cpp" line="141"/>
         <source>Aug, 2016</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>2016년 8월</translation>
@@ -545,67 +545,67 @@ Output: Off/On</source>
         <translation type="obsolete">닫기</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="261"/>
+        <location filename="../../../../search/calendarpage.cpp" line="262"/>
         <source>Jan</source>
         <translation>1월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="262"/>
+        <location filename="../../../../search/calendarpage.cpp" line="263"/>
         <source>Feb</source>
         <translation>2월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="263"/>
+        <location filename="../../../../search/calendarpage.cpp" line="264"/>
         <source>Mar</source>
         <translation>3월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="264"/>
+        <location filename="../../../../search/calendarpage.cpp" line="265"/>
         <source>Apr</source>
         <translation>4월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="265"/>
+        <location filename="../../../../search/calendarpage.cpp" line="266"/>
         <source>May</source>
         <translation>5월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="266"/>
+        <location filename="../../../../search/calendarpage.cpp" line="267"/>
         <source>Jun</source>
         <translation>6월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="267"/>
+        <location filename="../../../../search/calendarpage.cpp" line="268"/>
         <source>Jul</source>
         <translation>7월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="268"/>
+        <location filename="../../../../search/calendarpage.cpp" line="269"/>
         <source>Aug</source>
         <translation>8월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="269"/>
+        <location filename="../../../../search/calendarpage.cpp" line="270"/>
         <source>Sep</source>
         <translation>9월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="270"/>
+        <location filename="../../../../search/calendarpage.cpp" line="271"/>
         <source>Oct</source>
         <translation>10월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="271"/>
+        <location filename="../../../../search/calendarpage.cpp" line="272"/>
         <source>Nov</source>
         <translation>11월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="272"/>
+        <location filename="../../../../search/calendarpage.cpp" line="273"/>
         <source>Dec</source>
         <translation>12월</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="275"/>
+        <location filename="../../../../search/calendarpage.cpp" line="276"/>
         <source>%1, %2</source>
         <oldsource>%1%2%3</oldsource>
         <translatorcomment>표시 안됨</translatorcomment>
@@ -6059,8 +6059,17 @@ Upgrade</source>
         <translation type="obsolete">CAM%1</translation>
     </message>
     <message>
-        <location filename="../../../../search/timeline.cpp" line="243"/>
-        <location filename="../../../../search/timeline.cpp" line="432"/>
+        <source>Time</source>
+        <translation type="obsolete">시간</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/timeline.cpp" line="128"/>
+        <source>TIME</source>
+        <translation>시간</translation>
+    </message>
+    <message>
+        <location filename="../../../../search/timeline.cpp" line="241"/>
+        <location filename="../../../../search/timeline.cpp" line="430"/>
         <source>%1</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>%1</translation>

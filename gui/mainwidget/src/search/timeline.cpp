@@ -95,10 +95,15 @@ void TimeLine::paintEvent(QPaintEvent *event)
     //draw select time
     QString hour, min, ap, time;
 
-    if( utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") ==0 )       //12Hour
+    if( utils_cfg_cmp_item(SystemCfg.time_format, "12HOUR") == 0 )      //12Hour
     {
         int h;
-        if( selectHour>12 )
+        if( selectHour == 0 )
+        {
+            h = selectHour+12;
+            ap = "AM";
+        }
+        else if( selectHour > 12 )
         {
             h = selectHour-12;
             ap = "PM";
@@ -114,7 +119,7 @@ void TimeLine::paintEvent(QPaintEvent *event)
             ap = "AM";
         }
 
-        if( h<10 )
+        if( h < 10 )
         {
             hour = QString("%1%2").arg("0", QString::number(h));
         }
@@ -125,9 +130,9 @@ void TimeLine::paintEvent(QPaintEvent *event)
     }
     else                                                                //24Hour
     {
-        ap="24H";
+        ap=tr("TIME");
 
-        if( selectHour<10 )
+        if( selectHour < 10 )
         {
             hour = QString("%1%2").arg("0", QString::number(selectHour));
         }
@@ -137,7 +142,7 @@ void TimeLine::paintEvent(QPaintEvent *event)
         }
     }
 
-    if( selectMinute<10 )
+    if( selectMinute < 10 )
     {
         min = QString("%1%2").arg("0", QString::number(selectMinute));
     }
