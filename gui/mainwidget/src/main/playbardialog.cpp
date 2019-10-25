@@ -171,7 +171,7 @@ void PlayBarDialog::createPlaySpeedControlButtons(void)
     buttonClose    ->setSizePolicy   (QSizePolicy::Fixed, QSizePolicy::Fixed);
     buttonClose    ->setFixedSize    (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonClose    ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
-    buttonClose    ->setIcon         (QIcon(":/images/previous2.png"));
+    buttonClose    ->setIcon         (QIcon(":/images/close2.png"));
 
     buttonSplit    ->setIconSize     (QSize(PLAYBAR_BTN_SIZE, PLAYBAR_BTN_SIZE));
     buttonSplit    ->setIcon         (QIcon(":/images/pb_split9.png"));
