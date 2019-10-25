@@ -130,14 +130,14 @@ void PlayTimeBar::paintEvent(QPaintEvent *event)
     {
         painter.setPen(QColor(255, 0, 0));
         painter.setBrush(QColor(255, 0, 0)); // video data
-        QRect bar(xPos-NUM_TICK_SIZE/2, TL_UP_MARGIN, NUM_TICK_SIZE, TL_HEIGHT);
+        QRect bar(xPos-NUM_TICK_SIZE/2, TL_UP_MARGIN-NUM_TICK_SIZE/2, NUM_TICK_SIZE, TL_HEIGHT+NUM_TICK_SIZE/2);
         painter.drawRect(bar);
     }
     else
     {
         painter.setPen(QColor(255, 0, 0));
         painter.setBrush(QColor(255, 0, 0)); // video data
-        QRect bar(TL_LEFT_MARGIN, TL_UP_MARGIN, NUM_TICK_SIZE, TL_HEIGHT);
+        QRect bar(TL_LEFT_MARGIN, TL_UP_MARGIN-NUM_TICK_SIZE/2, NUM_TICK_SIZE, TL_HEIGHT+NUM_TICK_SIZE/2);
         painter.drawRect(bar);
     }
 }

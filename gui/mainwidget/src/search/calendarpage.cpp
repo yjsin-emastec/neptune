@@ -44,12 +44,8 @@ CalendarPage::CalendarPage(QWidget *parent)
     {
         this->resize(1920, 1080);
         frame->resize(1920-8, 1080-8);
-        iconSize = 110;
+        iconSize = 105;
 
-        buttonPrevMonth->setMinimumWidth(200);
-        buttonPrevMonth->setMinimumHeight(110);
-        buttonNextMonth->setMinimumWidth(200);
-        buttonNextMonth->setMinimumHeight(110);
         lableDate->setStyleSheet("color:white; font-size:70px;");
 
         if(utils_cfg_cmp_item(SystemCfg.language, "GERMAN") == 0)
