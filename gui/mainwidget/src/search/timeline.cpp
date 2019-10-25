@@ -91,7 +91,6 @@ void TimeLine::paintEvent(QPaintEvent *event)
     QStylePainter painter(this);
     painter.drawPixmap(0, 0, timeLinepixmap);
 
-
     //draw select time
     QString hour, min, ap, time;
 
@@ -157,6 +156,9 @@ void TimeLine::paintEvent(QPaintEvent *event)
     painter.setFont(font);
     painter.setPen(QColor(255, 255, 255));
     painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, ap);
+
+    font.setPixelSize(fontSize*1.7);
+    painter.setFont(font);
     painter.drawText( (TL_LEFT_MARGIN-textWidth*4)/2, (this->height()/3)*2-((textHeight*1.5)/2), textWidth*4, textHeight*1.5, Qt::AlignCenter, time );
 
     //draw time tick
@@ -767,19 +769,6 @@ void TimeLine::KeyPressEvent(int key)
             if(focusStatus == 2)
             {
                 emit changeFocus(3);
-            }
-            else if( focusStatus == 3 )
-            {
-                emit changeFocus(2);
-            }
-
-            break;
-        }
-        case Qt::Key_Escape:
-        {
-            if( focusStatus == 2)
-            {
-                emit changeFocus(1);
             }
             else if( focusStatus == 3 )
             {

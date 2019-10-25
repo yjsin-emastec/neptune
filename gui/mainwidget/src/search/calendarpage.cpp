@@ -466,8 +466,7 @@ void CalendarPage::KeyPressEvent(int key)
         }
         case Qt::Key_Escape:
         {
-            if(focusStatus == 1) { onButtonPrevious(); }
-            else                 { timeLine->KeyPressEvent(key); }
+            onButtonPrevious();
 
             break;
         }

@@ -1420,27 +1420,7 @@ void PlayBarDialog::keyPressEvent(QKeyEvent *event)
         }
         case Qt::Key_Escape:
         {
-            if( !EventSearchPB )
-            {
-                if( timeBar->getTimeLineStatus() == 1 || timeBar->getTimeLineStatus() == 3 )
-                {
-                    closeSearchBar();
-                }
-                else
-                {
-                    switch(timeBar->getTimeLineStatus())
-                    {
-                        case 1 : { timeBar->setTimeLineStatus(2); break; }
-                        case 2 : { timeBar->setTimeLineStatus(1); break; }
-                        case 3 : { timeBar->setTimeLineStatus(4); break; }
-                        case 4 : { timeBar->setTimeLineStatus(3); break; }
-                    }
-                }
-            }
-            else
-            {
-                closeSearchBar();
-            }
+            closeSearchBar();
 
             break;
         }

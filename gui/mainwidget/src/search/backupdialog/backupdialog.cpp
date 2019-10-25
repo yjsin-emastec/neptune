@@ -243,7 +243,7 @@ void BackupDialog::onButtonBackup()
 #else
 
 
-    TextMessageDialog *msgBox = new TextMessageDialog("Notice", "On the construction.", 2, this);
+    TextMessageDialog *msgBox = new TextMessageDialog("Notice", "Under Construction", 2, this);
     msgBox->move((appmgr_get_mainwidget_width()-msgBox->sizeHint().width())/2,(appmgr_get_mainwidget_height()-msgBox->sizeHint().height())/2);
     if(msgBox->exec()) { ; }
 
