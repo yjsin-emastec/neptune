@@ -713,13 +713,18 @@ void TimeLine::KeyPressEvent(int key)
             {
                 selectHour += 3;
                 if( selectHour>23 )     { selectHour = selectHour%24; }
-
             }
             else if( focusStatus == 3 )
             {
                 selectMinute += 5;
-                if( selectMinute>59 )   { selectMinute = selectMinute%60; }
+                if( selectMinute>59 )
+                {
+                    selectMinute = selectMinute%60;
+                    selectHour++;
+                    if( selectHour>23 ) { selectHour = selectHour%24; }
+                }
             }
+
             break;
         }
         case Qt::Key_Down:
@@ -732,8 +737,14 @@ void TimeLine::KeyPressEvent(int key)
             else if( focusStatus == 3 )
             {
                 selectMinute -= 5;
-                if( selectMinute<0 )    { selectMinute = 60+(selectMinute%60); }
+                if( selectMinute<0 )
+                {
+                    selectMinute = 60+(selectMinute%60);
+                    selectHour--;
+                    if( selectHour<0 )  { selectHour = 24+(selectHour%24); }
+                }
             }
+
             break;
         }
         case Qt::Key_Left:
@@ -746,8 +757,14 @@ void TimeLine::KeyPressEvent(int key)
             else if( focusStatus == 3 )
             {
                 selectMinute -= 1;
-                if( selectMinute<0 )    { selectMinute = 60+(selectMinute%60); }
+                if( selectMinute<0 )
+                {
+                    selectMinute = 60+(selectMinute%60);
+                    selectHour--;
+                    if( selectHour<0 )  { selectHour = 24+(selectHour%24); }
+                }
             }
+
             break;
         }
         case Qt::Key_Right:
@@ -760,8 +777,14 @@ void TimeLine::KeyPressEvent(int key)
             else if( focusStatus == 3 )
             {
                 selectMinute += 1;
-                if( selectMinute>59 )   { selectMinute = selectMinute%60; }
+                if( selectMinute>59 )
+                {
+                    selectMinute = selectMinute%60;
+                    selectHour++;
+                    if( selectHour>23 ) { selectHour = selectHour%24; }
+                }
             }
+
             break;
         }
         case Qt::Key_Enter:
