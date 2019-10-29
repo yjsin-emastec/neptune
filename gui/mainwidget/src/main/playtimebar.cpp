@@ -433,9 +433,9 @@ void PlayTimeBar::drawTimeLine3(QPainter *painter)
                 {
                     if((audioEndPos >= 0) && (bAudioExist == false))
                     {
-                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2+1 );
                         painter->fillRect(rect, QColor(65, 232, 23));
-                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2 );
+                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2+1 );
                         painter->fillRect(rect, QColor(235, 173, 71));
                         videoStartPos = audioStartPos = -1;
                         videoEndPos   = audioEndPos = -1;
@@ -454,7 +454,7 @@ void PlayTimeBar::drawTimeLine3(QPainter *painter)
                             audioStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + (i * NUM_MINIMUM_PIXEL);
                             audioEndPos   = 0;
 
-                            rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight);
+                            rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight+1 );
                             painter->fillRect(rect, QColor(65, 232, 23));
 
                             videoStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_MIN_PER_HOUR * NUM_MINIMUM_PIXEL) + (i * NUM_MINIMUM_PIXEL);
@@ -474,14 +474,14 @@ void PlayTimeBar::drawTimeLine3(QPainter *painter)
                     {
                         if(audioStartPos >= 0)
                         {
-                            rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                            rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2+1 );
                             painter->fillRect(rect, QColor(65, 232, 23));
-                            rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2 );
+                            rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2+1 );
                             painter->fillRect(rect, QColor(235, 173, 71));
                         }
                         else
                         {
-                            rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight );
+                            rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight+1 );
                             painter->fillRect(rect, QColor(65, 232, 23));
                         }
 
@@ -496,14 +496,14 @@ void PlayTimeBar::drawTimeLine3(QPainter *painter)
         {
             if(audioStartPos >= 0)
             {
-                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2+1 );
                 painter->fillRect(rect, QColor(65, 232, 23));
-                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2 );
+                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2+1 );
                 painter->fillRect(rect, QColor(235, 173, 71));
             }
             else
             {
-                rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight );
+                rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight+1 );
                 painter->fillRect(rect, QColor(65, 232, 23));
             }
 
@@ -807,9 +807,9 @@ void PlayTimeBar::drawTimeLine4(QPainter *painter)
             {
                 if( (audioEndPos >= 0) && (bAudioExist == false) )
                 {
-                    rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                    rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2+1 );
                     painter->fillRect(rect, QColor(65, 232, 23));
-                    rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2 );
+                    rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2+1 );
                     painter->fillRect(rect, QColor(235, 173, 71));
 
                     videoStartPos = audioStartPos = -1;
@@ -829,7 +829,7 @@ void PlayTimeBar::drawTimeLine4(QPainter *painter)
                         audioStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_15SEC_PER_PIXEL);
                         audioEndPos   = 0;
 
-                        rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos , recordRectHeight );
+                        rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, videoEndPos , recordRectHeight+1 );
                         painter->fillRect(rect, QColor(65, 232, 23));
 
                         videoStartPos = (resizeTimeLine_LeftGap + TL_LEFT_MARGIN) + (k * NUM_15SEC_PER_PIXEL);
@@ -849,14 +849,14 @@ void PlayTimeBar::drawTimeLine4(QPainter *painter)
                 {
                     if(audioStartPos >= 0)
                     {
-                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2+1 );
                         painter->fillRect(rect, QColor(65, 232, 23));
-                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2 );
+                        rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j+recordRectHeight/2, audioEndPos, recordRectHeight/2+1 );
                         painter->fillRect(rect, QColor(235, 173, 71));
                     }
                     else
                     {
-                        rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight );
+                        rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight+1 );
                         painter->fillRect(rect, QColor(65, 232, 23));
                     }
 
@@ -870,14 +870,14 @@ void PlayTimeBar::drawTimeLine4(QPainter *painter)
         {
             if(audioStartPos >= 0)
             {
-                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2 );
+                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, audioEndPos, recordRectHeight/2+1 );
                 painter->fillRect(rect, QColor(65, 232, 23));
-                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j+recordRectHeight/2 , audioEndPos, recordRectHeight/2 );
+                rect.setRect(audioStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j+recordRectHeight/2 , audioEndPos, recordRectHeight/2+1 );
                 painter->fillRect(rect, QColor(235, 173, 71));
             }
             else
             {
-                rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight );
+                rect.setRect(videoStartPos, TL_UP_MARGIN+lineSize/2+(recordRectHeight+lineSize)*j, videoEndPos, recordRectHeight+1 );
                 painter->fillRect(rect, QColor(65, 232, 23));
             }
 
