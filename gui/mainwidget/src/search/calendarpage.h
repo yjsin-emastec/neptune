@@ -24,6 +24,7 @@ public:
 
 public slots:
     void onChangeFocus(int status);
+    void onUpdateCalendar();
 
 signals:
     void previousSearch (int type);
@@ -37,6 +38,7 @@ private slots:
     void onButtonNextMonth();
     void onButtonPrevious();
     void onButtonClose();
+    void onTimerUpdate();
 
 private:
     void CreateNavigationWidget();
@@ -46,6 +48,7 @@ private:
     int  curMonthIndex;
     int  focusStatus;
     int  iconSize;
+    int  prevYear, prevMonth;
 
     QLabel          *lableDate;
     CalendarWidget  *calendar;
@@ -54,6 +57,8 @@ private:
                     *buttonNextMonth,
                     *buttonPrevious,
                     *buttonClose;
+    QTimer *updateTimer;
+    bool isUpdate;
 };
 
 #endif // CALENDARPAGE_H

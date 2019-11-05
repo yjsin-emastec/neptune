@@ -21,6 +21,7 @@ public:
     void initFocus(void);
     int getSelectedPos(void);
     void setFocusStatus(int status);
+    void timerUpdate();
 
 signals:
     void selectedDateChanged(const QDate &newDate);
@@ -54,7 +55,6 @@ private:
     int m_headHeight, m_cellHeight, m_cellWidth, pageIndex;
     int selectedPos;
     int fontSize;
-
     int focusStatus;
 };
 

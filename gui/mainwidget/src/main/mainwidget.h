@@ -53,6 +53,7 @@ signals:
     void systemLogBackup    (void);
     void updateSplitButton();
     void updateTriggerState(int);
+    void updateCalendar();
 
 public slots:
     void videoPaneClicked(int ch);

@@ -81,7 +81,9 @@ CalendarPage::CalendarPage(QWidget *parent)
     setLayout(mainLayout);
 
     curMonthIndex = 0;
-    focusStatus=1;
+    focusStatus = 1;
+    prevYear = -1;
+    prevMonth = -1;
 
     buttonPrevious->setFixedSize(iconSize+25, iconSize+15);
     buttonPrevious->setIcon(QIcon(":images/previous.png"));
@@ -91,10 +93,11 @@ CalendarPage::CalendarPage(QWidget *parent)
     buttonClose->setIcon(QIcon(":images/close.png"));
     buttonClose->setIconSize(QSize(iconSize, iconSize));
 
-
     UpdateDates(-1);
 
-    QTimer::singleShot(100, this, SLOT(onUpdateTimeLine()));
+    isUpdate = false;
+    updateTimer = new QTimer(this);
+    connect(updateTimer, SIGNAL(timeout()), this, SLOT(onTimerUpdate()));
 }
 CalendarPage::~CalendarPage()
 {
@@ -105,14 +108,27 @@ void CalendarPage::onUpdateTimeLine()
 }
 void CalendarPage::onButtonPrevious()
 {
+    updateTimer->stop();
     emit previousSearch(0);
 }
 void CalendarPage::onButtonClose()
 {
+    updateTimer->stop();
     emit closeSearch(0);
+}
+void CalendarPage::onTimerUpdate()
+{
+    isUpdate = true;
+    QuerySearchData(0);
+}
+void CalendarPage::onUpdateCalendar()
+{
+    updateTimer->start(1000*60);
+    onTimerUpdate();
 }
 void CalendarPage::onStartPlayback()
 {
+    updateTimer->stop();
     emit startPlayback();
 }
 void CalendarPage::ResetSearch()
@@ -170,6 +186,71 @@ bool CalendarPage::UpdateDates(int type)
     {
         return false;
     }
+    if( isUpdate )
+    {
+        isUpdate = false;
+
+        appmgr_apply_dls_to_calendar_log(calendarData, calDataCount);
+
+        if( calDataCount==0 && calendarData[0].year==0 && calendarData[0].month==0 )
+        {
+            //when no data
+            QDate date = QDate::currentDate();
+            calendarData[0].year = date.year();
+            calendarData[0].month = date.month();
+            curMonthIndex = 0;
+
+            calendar->SetCurrentPageIndex(curMonthIndex,1);
+            calendar->timerUpdate();
+
+            buttonPrevMonth->setEnabled(false);
+            buttonNextMonth->setEnabled(false);
+            isExistDate = false;
+            return isExistDate;
+        }
+        else if( calendarData[0].year != prevYear || calendarData[0].month != prevMonth )
+        {
+            //when overwriting
+            curMonthIndex = 0;
+            calendar->SetCurrentPageIndex(curMonthIndex,1);
+            calendar->timerUpdate();
+
+            buttonPrevMonth->setEnabled(false);
+            if( curMonthIndex < calDataCount-1 )
+            {
+                buttonNextMonth->setEnabled(true);
+            }
+            else
+            {
+                buttonNextMonth->setEnabled(false);
+            }
+            UpdateMonthLabel();
+        }
+        else
+        {
+            //when timeline update
+            calendar->timerUpdate();
+
+            if( curMonthIndex>0 && calDataCount!=0 )
+            {
+                buttonPrevMonth->setEnabled(true);
+            }
+            else
+            {
+                buttonPrevMonth->setEnabled(false);
+            }
+            if( curMonthIndex < calDataCount-1 )
+            {
+                buttonNextMonth->setEnabled(true);
+            }
+            else
+            {
+                buttonNextMonth->setEnabled(false);
+            }
+        }
+
+        return isExistDate;
+    }
 
     appmgr_apply_dls_to_calendar_log(calendarData, calDataCount);
 
@@ -206,6 +287,10 @@ bool CalendarPage::UpdateDates(int type)
 }
 void CalendarPage::onButtonPrevMonth()
 {
+    focusStatus=1;
+    calendar->setFocusStatus(focusStatus);
+    timeLine->setFocusStatus(focusStatus);
+
     curMonthIndex--;
 
     if(curMonthIndex < 0)
@@ -229,6 +314,10 @@ void CalendarPage::onButtonPrevMonth()
 }
 void CalendarPage::onButtonNextMonth()
 {
+    focusStatus=1;
+    calendar->setFocusStatus(focusStatus);
+    timeLine->setFocusStatus(focusStatus);
+
     curMonthIndex++;
 
     if(curMonthIndex > (calDataCount - 1))
@@ -271,6 +360,9 @@ void CalendarPage::UpdateMonthLabel()
 
     str = tr("%1, %2").arg(str).arg(calendarData[curMonthIndex].year);
     lableDate->setText(str);
+
+    prevYear = calendarData[0].year;
+    prevMonth = calendarData[0].month;
 }
 void CalendarPage::UpdateSelectTime()
 {
@@ -304,6 +396,8 @@ void CalendarPage::UpdateSelectTime()
     focusStatus=1;
     calendar->setFocusStatus(focusStatus);
     timeLine->setFocusStatus(focusStatus);
+
+    updateTimer->start(1000*60);
 }
 void CalendarPage::onChangeFocus(int status)
 {

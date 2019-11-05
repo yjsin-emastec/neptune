@@ -172,6 +172,11 @@ void SearchDialog::onButtonClose(int type)
         case 2: { appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, "System Log Exit" ); }   break;
     }
 }
+void SearchDialog::onUpdateCalendar()
+{
+    calendarPage->onUpdateCalendar();
+}
+
 void SearchDialog::onStartPlayback(void)
 {
 	QDialog::accept();
@@ -252,7 +257,6 @@ void SearchDialog::onSearchCalendarUpdate(int type)
 {
 	calendarPage->UpdateDates(type);
 }
-
 void SearchDialog::setFocusNormal()     { changeFocus(0); }
 void SearchDialog::setFocusEvent()      { changeFocus(1); }
 void SearchDialog::setFocusLog()        { changeFocus(2); }

@@ -64,6 +64,7 @@ private slots:
     void onButtonClose      (int type);
     void onHideCalendarPage (int type);
     void onStartPlayback    ();
+    void onUpdateCalendar();
 
 private:
     QStackedLayout  *stackedLayout;

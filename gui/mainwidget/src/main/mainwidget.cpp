@@ -953,6 +953,7 @@ void MainWidget::createPopupDialog()
         connect(this, SIGNAL(systemLogCount  ()),       searchDialog, SLOT(onSystemLogCount  ()));
         connect(this, SIGNAL(systemLogData   ()),       searchDialog, SLOT(onSystemLogData   ()));
         connect(this, SIGNAL(systemLogBackup ()),       searchDialog, SLOT(onSystemLogBackup ()));
+        connect(this, SIGNAL(updateCalendar()),         searchDialog, SLOT(onUpdateCalendar()));
     }
 
     if(!backupDialog)
@@ -1767,6 +1768,7 @@ void MainWidget::stopPlayback()
     {
         searchDialog = new SearchDialog(this);
     }
+    emit updateCalendar();
 
     int res = searchDialog->exec();
 

@@ -540,3 +540,8 @@ void CalendarWidget::setFocusStatus(int status)
 
     update();
 }
+void CalendarWidget::timerUpdate()
+{
+    FindData(m_selectedDate);
+    update();
+}
