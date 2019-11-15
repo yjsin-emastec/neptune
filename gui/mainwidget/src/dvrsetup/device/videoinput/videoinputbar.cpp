@@ -2,6 +2,74 @@
 #include "videoinputbar.h"
 #include "main/mainglobal.h"
 
+#if defined(HI3521)
+VideoInputBar::VideoInputBar(QWidget *parent)
+    : QDialog(parent)
+{
+    if( mainHeight == 720 )
+    {
+        Ui::VideoInputBar ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+
+        buttonCh[0] = ui720.buttonCh1;
+        buttonCh[1] = ui720.buttonCh2;
+        buttonCh[2] = ui720.buttonCh3;
+        buttonCh[3] = ui720.buttonCh4;
+        buttonCh[4] = ui720.buttonChAll;
+
+        buttonMirror = ui720.buttonMirror;
+        buttonFlip   = ui720.buttonFlip;
+        buttonClose  = ui720.buttonClose;
+
+        buttonMirror->setIcon(QIcon(":/images/mirror.png"));
+        buttonMirror->setIconSize(QSize(60,60));
+        buttonFlip  ->setIcon(QIcon(":images/flip.png"));
+        buttonFlip  ->setIconSize(QSize(60,60));
+        buttonClose ->setIcon(QIcon(":images/previous.png"));
+        buttonClose ->setIconSize(QSize(60,60));
+    }
+    else
+    {
+        Ui::VideoInputBar1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+
+        buttonCh[0] = ui1080.buttonCh1;
+        buttonCh[1] = ui1080.buttonCh2;
+        buttonCh[2] = ui1080.buttonCh3;
+        buttonCh[3] = ui1080.buttonCh4;
+        buttonCh[4] = ui1080.buttonChAll;
+
+        buttonMirror = ui1080.buttonMirror;
+        buttonFlip   = ui1080.buttonFlip;
+        buttonClose  = ui1080.buttonClose;
+
+        buttonMirror->setIcon(QIcon(":images/mirror.png"));
+        buttonMirror->setIconSize(QSize(80,80));
+        buttonFlip  ->setIcon(QIcon(":images/flip.png"));
+        buttonFlip  ->setIconSize(QSize(80,80));
+        buttonClose ->setIcon(QIcon(":images/previous.png"));
+        buttonClose ->setIconSize(QSize(80,80));
+    }
+    setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
+
+    setPalette(QPalette(QColor(255, 128, 64)));
+    frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
+
+    connect(buttonCh[0],   SIGNAL(clicked()), this, SLOT(onButtonCh1()));
+    connect(buttonCh[1],   SIGNAL(clicked()), this, SLOT(onButtonCh2()));
+    connect(buttonCh[2],   SIGNAL(clicked()), this, SLOT(onButtonCh3()));
+    connect(buttonCh[3],   SIGNAL(clicked()), this, SLOT(onButtonCh4()));
+    connect(buttonCh[4],   SIGNAL(clicked()), this, SLOT(onButtonCh5()));
+    connect(buttonMirror,  SIGNAL(clicked()), this, SLOT(onButtonMirror()));
+    connect(buttonFlip,    SIGNAL(clicked()), this, SLOT(onButtonFlip()));
+    connect(buttonClose,   SIGNAL(clicked()), this, SLOT(onButtonClose()));
+}
+
+#elif defined(HI3531D)
 VideoInputBar::VideoInputBar(QWidget *parent)
     : QDialog(parent)
 {
@@ -86,6 +154,9 @@ VideoInputBar::VideoInputBar(QWidget *parent)
     connect(buttonRotate,  SIGNAL(clicked()), this, SLOT(onButtonRotate()));
     connect(buttonClose,   SIGNAL(clicked()), this, SLOT(onButtonClose()));
 }
+#endif
+
+
 VideoInputBar::~VideoInputBar()
 {
 }
@@ -220,7 +291,7 @@ void VideoInputBar::getInfo(int mirror[], int flip[], int rotate[])
 void VideoInputBar::saveConfig()
 {
     //save mirror config for preview
-    for(int i=0; i<devInfo.videoNum; i++)
+    for(int i=0; i<NUMOFCH; i++)
     {
         char *dst = NULL;
         switch(i)
@@ -248,7 +319,7 @@ void VideoInputBar::saveConfig()
     }
 
     //save flip config for preview
-    for(int i=0; i<devInfo.videoNum; i++)
+    for(int i=0; i<NUMOFCH; i++)
     {
         char *dst = NULL;
         switch(i)
@@ -276,7 +347,7 @@ void VideoInputBar::saveConfig()
     }
 
     //save rotate config for preview
-    for(int i=0; i<devInfo.videoNum; i++)
+    for(int i=0; i<NUMOFCH; i++)
     {
         char *dst = NULL;
         switch(i)
@@ -308,6 +379,46 @@ void VideoInputBar::saveConfig()
 
     emit videoInputPreview();
 }
+
+#if defined(HI3521)
+void VideoInputBar::updateButton()
+{
+    //update mirror, flip, rotate button state
+    int countM = 0;
+    int countF = 0;
+    int countR = 0;
+
+    for(int i=0; i<NUMOFCH; i++)
+    {
+        if( infoMirror[i] == 1 )            { countM++; }
+        if( infoFlip[i]   == 1 )            { countF++; }
+        if( infoRotate[i] != 0 )            { countR++; }
+    }
+
+    if( countM >= NUMOFCH )                 { infoMirror[NUMOFCH] = 1; }
+    else                                    { infoMirror[NUMOFCH] = 0; }
+
+    if( countF >= NUMOFCH )                 { infoFlip[NUMOFCH] = 1; }
+    else                                    { infoFlip[NUMOFCH] = 0; }
+
+    if( countR >= NUMOFCH )                 { infoRotate[NUMOFCH] = 1; }
+    else                                    { infoRotate[NUMOFCH] = 0; }
+
+    if( infoMirror[selectedCh] == 1 )       { buttonMirror->setStyleSheet("QPushButton{background-color:rgb(6, 86, 159);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
+    else                                    { buttonMirror->setStyleSheet("QPushButton{background-color:rgb(67, 74, 86);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
+
+    if( infoFlip[selectedCh]   == 1 )       { buttonFlip  ->setStyleSheet("QPushButton{background-color:rgb(6, 86, 159);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
+    else                                    { buttonFlip  ->setStyleSheet("QPushButton{background-color:rgb(67, 74, 86);} QPushButton:focus{background-color:rgb(152, 14, 69);}"); }
+
+    //change background color
+    for(int i=0; i<=NUMOFCH; i++)
+    {
+         buttonCh[i]->setStyleSheet("QPushButton{background-color:rgb(67, 74, 86);} QPushButton:focus{background-color:rgb(152, 14, 69);}");
+    }
+    buttonCh[selectedCh]->setStyleSheet("QPushButton{background-color:rgb(6, 86, 159);} QPushButton:focus{background-color:rgb(152, 14, 69);}");
+}
+
+#elif defined(HI3531D)
 void VideoInputBar::updateButton()
 {
     //update mirror, flip, rotate button state
@@ -347,6 +458,91 @@ void VideoInputBar::updateButton()
     }
     buttonCh[selectedCh]->setStyleSheet("QPushButton{background-color:rgb(6, 86, 159);} QPushButton:focus{background-color:rgb(152, 14, 69);}");
 }
+#endif
+
+#if defined(HI3521)
+void VideoInputBar::keyPressEvent(QKeyEvent *event)
+{
+    switch(event->key())
+    {
+        case Qt::Key_Up:
+
+            if     ( buttonCh[4] ->hasFocus() )     { buttonCh[0] ->setFocus(); }
+            else if( buttonCh[0] ->hasFocus() )     { buttonCh[1] ->setFocus(); }
+            else if( buttonCh[1] ->hasFocus() )     { buttonCh[2] ->setFocus(); }
+            else if( buttonCh[2] ->hasFocus() )     { buttonCh[3] ->setFocus(); }
+            else if( buttonCh[3] ->hasFocus() )     { buttonMirror->setFocus(); }
+            else if( buttonMirror->hasFocus() )     { buttonFlip  ->setFocus(); }
+            else if( buttonFlip  ->hasFocus() )     { buttonClose ->setFocus(); }
+            else if( buttonClose ->hasFocus() )     { buttonCh[4] ->setFocus(); }
+
+            break;
+
+        case Qt::Key_Down:
+
+            if     ( buttonCh[4] ->hasFocus() )     { buttonClose ->setFocus(); }
+            else if( buttonCh[0] ->hasFocus() )     { buttonCh[4] ->setFocus(); }
+            else if( buttonCh[1] ->hasFocus() )     { buttonCh[0] ->setFocus(); }
+            else if( buttonCh[2] ->hasFocus() )     { buttonCh[1] ->setFocus(); }
+            else if( buttonCh[3] ->hasFocus() )     { buttonCh[2] ->setFocus(); }
+            else if( buttonMirror->hasFocus() )     { buttonCh[3] ->setFocus(); }
+            else if( buttonFlip  ->hasFocus() )     { buttonMirror->setFocus(); }
+            else if( buttonClose ->hasFocus() )     { buttonFlip  ->setFocus(); }
+
+            break;
+
+        case Qt::Key_Left:
+
+            if     ( buttonCh[4] ->hasFocus() )     { buttonClose ->setFocus(); }
+            else if( buttonCh[0] ->hasFocus() )     { buttonCh[4] ->setFocus(); }
+            else if( buttonCh[1] ->hasFocus() )     { buttonCh[0] ->setFocus(); }
+            else if( buttonCh[2] ->hasFocus() )     { buttonCh[1] ->setFocus(); }
+            else if( buttonCh[3] ->hasFocus() )     { buttonCh[2] ->setFocus(); }
+            else if( buttonMirror->hasFocus() )     { buttonCh[3] ->setFocus(); }
+            else if( buttonFlip  ->hasFocus() )     { buttonMirror->setFocus(); }
+            else if( buttonClose ->hasFocus() )     { buttonFlip  ->setFocus(); }
+
+            break;
+
+        case Qt::Key_Right:
+
+            if     ( buttonCh[4] ->hasFocus() )     { buttonCh[0] ->setFocus(); }
+            else if( buttonCh[0] ->hasFocus() )     { buttonCh[1] ->setFocus(); }
+            else if( buttonCh[1] ->hasFocus() )     { buttonCh[2] ->setFocus(); }
+            else if( buttonCh[2] ->hasFocus() )     { buttonCh[3] ->setFocus(); }
+            else if( buttonCh[3] ->hasFocus() )     { buttonMirror->setFocus(); }
+            else if( buttonMirror->hasFocus() )     { buttonFlip  ->setFocus(); }
+            else if( buttonFlip  ->hasFocus() )     { buttonClose ->setFocus(); }
+            else if( buttonClose ->hasFocus() )     { buttonCh[4] ->setFocus(); }
+
+            break;
+
+        case Qt::Key_Enter:
+
+            if     ( buttonCh[4] ->hasFocus() )     { onButtonChAll();          }
+            else if( buttonCh[0] ->hasFocus() )     { onButtonCh(0);            }
+            else if( buttonCh[1] ->hasFocus() )     { onButtonCh(1);            }
+            else if( buttonCh[2] ->hasFocus() )     { onButtonCh(2);            }
+            else if( buttonCh[3] ->hasFocus() )     { onButtonCh(3);            }
+            else if( buttonMirror->hasFocus() )     { onButtonMirror();         }
+            else if( buttonFlip  ->hasFocus() )     { onButtonFlip();           }
+            else if( buttonClose ->hasFocus() )     { onButtonClose();          }
+
+            break;
+
+        case Qt::Key_Escape:
+
+            onButtonClose();
+
+            break;
+
+        default:
+
+            return;
+    }
+}
+
+#elif defined(HI3531D)
 void VideoInputBar::keyPressEvent(QKeyEvent *event)
 {
     switch(event->key())
@@ -452,3 +648,4 @@ void VideoInputBar::keyPressEvent(QKeyEvent *event)
             return;
     }
 }
+#endif

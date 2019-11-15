@@ -242,7 +242,17 @@ FORMS        += src/login/logindialog.ui                                        
                 src/ui/keyboard/uikeyboarddialog.ui                                                  \
                 src/main/playbardialog1080p.ui                                                       \
                 src/dvrsetup/device/videoinput/videoinputbar.ui                                      \
-                src/dvrsetup/device/videoinput/videoinputbar1080p.ui
+                src/dvrsetup/device/videoinput/videoinputbar1080p.ui                                 \
+                src/dvrsetup/record/normal/normaldialog_ch4.ui                                       \
+                src/dvrsetup/record/normal/normaldialog1080p_ch4.ui                                  \
+                src/dvrsetup/display/cameraname/cameranamedialog_ch4.ui                              \
+                src/dvrsetup/display/cameraname/cameranamedialog1080p_ch4.ui                         \
+                src/dvrsetup/device/videoinput/videoinputbar_ch4.ui                                  \
+                src/dvrsetup/device/videoinput/videoinputbar1080p_ch4.ui                             \
+                src/dvrsetup/device/videoinput/videoinputdialog_ch4.ui                               \
+                src/dvrsetup/device/videoinput/videoinputdialog1080p_ch4.ui                          \
+                src/dvrsetup/device/triggerinput/triggerinputdialog_ch4.ui                           \
+                src/dvrsetup/device/triggerinput/triggerinputdialog1080p_ch4.ui
 
 RESOURCES    += mainwidget.qrc
 

@@ -2,11 +2,18 @@
 #define NORMALDIALOG_H
 
 #include <QtGui/QDialog>
-#include "ui_normaldialog.h"
-#include "ui_normaldialog1080p.h"
 #include "DVR.h"
 
+#if defined(HI3521)
+#include "ui_normaldialog_ch4.h"
+#include "ui_normaldialog1080p_ch4.h"
+#define NUMOFCH 4
+
+#elif defined(HI3531D)
+#include "ui_normaldialog.h"
+#include "ui_normaldialog1080p.h"
 #define NUMOFCH 8
+#endif
 
 class NormalDialog : public QDialog
 {

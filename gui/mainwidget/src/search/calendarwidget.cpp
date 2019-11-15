@@ -467,9 +467,9 @@ void CalendarWidget::mouseDoubleClickEvent(QMouseEvent *event)
 {
     int hour, kk, sec = 0;
 
-#if 1
+#if defined(HI3521)
     int ch = 0xf, split = Split_4;
-#else
+#elif defined(HI3531D)
     int ch = 0xf, split = Split_9;
 #endif
     struct tm tmNow;

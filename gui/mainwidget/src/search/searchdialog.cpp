@@ -89,8 +89,12 @@ SearchDialog::SearchDialog(QWidget *parent)
 	setPalette(QPalette(QColor(255, 128, 64)));
 	frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
 
-	pbChBit = 0xf;
+#if defined(HI3521)
+    pbSplit = Split_4;
+#elif defined(HI3531D)
     pbSplit = Split_9;
+#endif
+	pbChBit = 0xf;
 	SelectPbSplit = pbType = recType = 0;
 
     iconImageNormal[0].load(":images/main/search.png");

@@ -17,7 +17,7 @@ TimeLine::TimeLine(QWidget *parent)
 
     if(mainHeight == 720)
     {
-        TL_HEIGHT               = 16;
+        TL_HEIGHT               = 128/CH_COUNT;
         TL_LEFT_MARGIN          = 190;
         TL_UP_MARGIN            = 25;
         TL_WIDTH                = 960;
@@ -41,7 +41,7 @@ TimeLine::TimeLine(QWidget *parent)
     }
     else
     {
-        TL_HEIGHT               = 24;
+        TL_HEIGHT               = 192/CH_COUNT;
         TL_LEFT_MARGIN          = 280;
         TL_UP_MARGIN            = 44;
         TL_WIDTH                = 1440;
@@ -78,6 +78,7 @@ TimeLine::TimeLine(QWidget *parent)
 
     updateTimeLinePixmap();
 }
+
 TimeLine::~TimeLine()
 {
 }
@@ -167,12 +168,12 @@ void TimeLine::paintEvent(QPaintEvent *event)
 
     if( focusStatus == 2 )
     {
-        QRect bar( TL_LEFT_MARGIN + (selectHour*NUM_MIN_PER_HOUR*NUM_PIXEL_PER_MIN) + (selectMinute/(15*NUM_15SEC_PER_MIN/60)*NUM_PIXEL_PER_MIN) - NUM_TICK_SIZE/2, TL_UP_MARGIN-NUM_TICK_SIZE/2, NUM_TICK_SIZE, TL_UP_MARGIN+TL_HEIGHT*8+NUM_TICK_SIZE/2 );
+        QRect bar( TL_LEFT_MARGIN + (selectHour*NUM_MIN_PER_HOUR*NUM_PIXEL_PER_MIN) + (selectMinute/(15*NUM_15SEC_PER_MIN/60)*NUM_PIXEL_PER_MIN) - NUM_TICK_SIZE/2, TL_UP_MARGIN-NUM_TICK_SIZE/2, NUM_TICK_SIZE, TL_UP_MARGIN+TL_HEIGHT*CH_COUNT+NUM_TICK_SIZE/2 );
         painter.drawRect(bar);
     }
     else if( focusStatus == 3 )
     {
-        QRect bar( TL_LEFT_MARGIN + selectMinute*(TL_WIDTH/60) - NUM_TICK_SIZE/2, TL_UP_MARGIN-NUM_TICK_SIZE/2, NUM_TICK_SIZE,TL_UP_MARGIN+TL_HEIGHT*8+NUM_TICK_SIZE/2);
+        QRect bar( TL_LEFT_MARGIN + selectMinute*(TL_WIDTH/60) - NUM_TICK_SIZE/2, TL_UP_MARGIN-NUM_TICK_SIZE/2, NUM_TICK_SIZE,TL_UP_MARGIN+TL_HEIGHT*CH_COUNT+NUM_TICK_SIZE/2);
         painter.drawRect(bar);
     }
 }

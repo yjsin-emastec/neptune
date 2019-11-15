@@ -3,6 +3,89 @@
 #include "ui/keyboard/uikeyboarddialog.h"
 #include "main/mainglobal.h"
 
+#if defined(HI3521)
+CameraNameDialog::CameraNameDialog(QWidget *parent)
+    : QDialog(parent)
+{
+    if(mainHeight == 720)
+    {
+        Ui::CameraNameDialog ui720;
+        ui720.setupUi(this);
+
+        frame = ui720.frame;
+
+        labelCameraName[0] = ui720.labelCameraName1;
+        labelCameraName[1] = ui720.labelCameraName2;
+        labelCameraName[2] = ui720.labelCameraName3;
+        labelCameraName[3] = ui720.labelCameraName4;
+
+        lineEditName[0] = ui720.lineEditName1;
+        lineEditName[1] = ui720.lineEditName2;
+        lineEditName[2] = ui720.lineEditName3;
+        lineEditName[3] = ui720.lineEditName4;
+
+        buttonVirtualKeyboard[0] = ui720.buttonVirtualKeyboard1;
+        buttonVirtualKeyboard[1] = ui720.buttonVirtualKeyboard2;
+        buttonVirtualKeyboard[2] = ui720.buttonVirtualKeyboard3;
+        buttonVirtualKeyboard[3] = ui720.buttonVirtualKeyboard4;
+
+        buttonSave  = ui720.buttonSave;
+        buttonClose = ui720.buttonClose;
+
+        for(int i=0; i<NUMOFCH; i++)
+        {
+            labelCameraName[i]->setStyleSheet("font:48px;");
+            lineEditName[i]->setStyleSheet("font:48px;");
+        }
+    }
+    else
+    {
+        Ui::CameraNameDialog1080p ui1080;
+        ui1080.setupUi(this);
+
+        frame = ui1080.frame;
+
+        labelCameraName[0] = ui1080.labelCameraName1;
+        labelCameraName[1] = ui1080.labelCameraName2;
+        labelCameraName[2] = ui1080.labelCameraName3;
+        labelCameraName[3] = ui1080.labelCameraName4;
+
+        lineEditName[0] = ui1080.lineEditName1;
+        lineEditName[1] = ui1080.lineEditName2;
+        lineEditName[2] = ui1080.lineEditName3;
+        lineEditName[3] = ui1080.lineEditName4;
+
+        buttonVirtualKeyboard[0] = ui1080.buttonVirtualKeyboard1;
+        buttonVirtualKeyboard[1] = ui1080.buttonVirtualKeyboard2;
+        buttonVirtualKeyboard[2] = ui1080.buttonVirtualKeyboard3;
+        buttonVirtualKeyboard[3] = ui1080.buttonVirtualKeyboard4;
+
+        buttonSave  = ui1080.buttonSave;
+        buttonClose = ui1080.buttonClose;
+
+        for(int i=0; i<NUMOFCH; i++)
+        {
+            labelCameraName[i]->setStyleSheet("font:60px;");
+        }
+    }
+
+    setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
+
+    setPalette(QPalette(QColor(255, 128, 64)));
+    frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
+    buttonVirtualKeyboard[0]->setFocus();
+    keyboard = NULL;
+
+    connect(buttonVirtualKeyboard[0], SIGNAL(released()), this, SLOT(onCameraName1()));
+    connect(buttonVirtualKeyboard[1], SIGNAL(released()), this, SLOT(onCameraName2()));
+    connect(buttonVirtualKeyboard[2], SIGNAL(released()), this, SLOT(onCameraName3()));
+    connect(buttonVirtualKeyboard[3], SIGNAL(released()), this, SLOT(onCameraName4()));
+
+    connect(buttonSave,               SIGNAL(released()), this, SLOT(accept()));
+    connect(buttonClose,              SIGNAL(released()), this, SLOT(reject()));
+}
+
+#elif defined(HI3531D)
 CameraNameDialog::CameraNameDialog(QWidget *parent)
     : QDialog(parent)
 {
@@ -43,7 +126,7 @@ CameraNameDialog::CameraNameDialog(QWidget *parent)
         buttonSave  = ui720.buttonSave;
         buttonClose = ui720.buttonClose;
 
-        for(int i=0; i<8; i++)
+        for(int i=0; i<NUMOFCH; i++)
         {
             labelCameraName[i]->setStyleSheet("font:40px;");
             lineEditName[i]->setStyleSheet("font:45px;");
@@ -86,18 +169,18 @@ CameraNameDialog::CameraNameDialog(QWidget *parent)
         buttonSave  = ui1080.buttonSave;
         buttonClose = ui1080.buttonClose;
 
-        for(int i=0; i<8; i++)
+        for(int i=0; i<NUMOFCH; i++)
         {
             labelCameraName[i]->setStyleSheet("font:60px;");
         }
     }
 
-	setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
+    setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
-	setPalette(QPalette(QColor(255, 128, 64)));
-	frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
+    setPalette(QPalette(QColor(255, 128, 64)));
+    frame->setStyleSheet(".QFrame{background: rgb(39, 0, 79);}");
     buttonVirtualKeyboard[0]->setFocus();
-	keyboard = NULL;
+    keyboard = NULL;
 
     connect(buttonVirtualKeyboard[0], SIGNAL(released()), this, SLOT(onCameraName1()));
     connect(buttonVirtualKeyboard[1], SIGNAL(released()), this, SLOT(onCameraName2()));
@@ -110,6 +193,8 @@ CameraNameDialog::CameraNameDialog(QWidget *parent)
     connect(buttonSave,               SIGNAL(released()), this, SLOT(accept()));
     connect(buttonClose,              SIGNAL(released()), this, SLOT(reject()));
 }
+#endif
+
 CameraNameDialog::~CameraNameDialog()
 {
 }
@@ -119,7 +204,7 @@ void CameraNameDialog::initCameraNameConfig(void)
 	QString str;
 	QByteArray text;
 
-    for(int i=0; i<8; i++)
+    for(int i=0; i<NUMOFCH; i++)
     {
         text = QByteArray::fromHex((char *)DisplayCfg.channel_name[ch++]);
         str = QString::fromUtf8(text.data());
@@ -162,11 +247,71 @@ void CameraNameDialog::onCameraName6() { onCameraName(5); }
 void CameraNameDialog::onCameraName7() { onCameraName(6); }
 void CameraNameDialog::onCameraName8() { onCameraName(7); }
 
+#if defined(HI3521)
 void CameraNameDialog::keyPressEvent(QKeyEvent *event)
 {
-	switch(event->key())
-	{
-		case Qt::Key_Up:
+    switch(event->key())
+    {
+        case Qt::Key_Up:
+
+                 if(buttonVirtualKeyboard[0]->hasFocus())   { buttonClose->setFocus();              }
+            else if(buttonVirtualKeyboard[1]->hasFocus())   { buttonVirtualKeyboard[0]->setFocus(); }
+            else if(buttonVirtualKeyboard[2]->hasFocus())   { buttonVirtualKeyboard[1]->setFocus(); }
+            else if(buttonVirtualKeyboard[3]->hasFocus())   { buttonVirtualKeyboard[2]->setFocus(); }
+            else if(buttonSave ->hasFocus())                { buttonVirtualKeyboard[3]->setFocus(); }
+            else if(buttonClose->hasFocus())                { buttonVirtualKeyboard[3]->setFocus(); }
+
+            return;
+
+        case Qt::Key_Down:
+
+                if(buttonVirtualKeyboard[0]->hasFocus())    { buttonVirtualKeyboard[1]->setFocus(); }
+           else if(buttonVirtualKeyboard[1]->hasFocus())    { buttonVirtualKeyboard[2]->setFocus(); }
+           else if(buttonVirtualKeyboard[2]->hasFocus())    { buttonVirtualKeyboard[3]->setFocus(); }
+           else if(buttonVirtualKeyboard[3]->hasFocus())    { buttonClose->setFocus(); }
+           else if(buttonSave ->hasFocus())                 { buttonVirtualKeyboard[0]->setFocus(); }
+           else if(buttonClose->hasFocus())                 { buttonVirtualKeyboard[0]->setFocus(); }
+
+            return;
+
+        case Qt::Key_Left:
+
+                 if(buttonSave ->hasFocus())                { buttonClose->setFocus();              }
+            else if(buttonClose->hasFocus())                { buttonSave->setFocus();               }
+
+            return;
+
+        case Qt::Key_Right:
+
+                 if(buttonSave ->hasFocus())                { buttonClose->setFocus();              }
+            else if(buttonClose->hasFocus())                { buttonSave->setFocus();               }
+
+            return;
+
+        case Qt::Key_Enter:
+
+            break;
+
+        case Qt::Key_Escape:
+
+            reject();
+
+            return;
+
+        default:
+
+            return;
+    }
+
+    QDialog::keyPressEvent(event);
+}
+
+#elif defined(HI3531D)
+void CameraNameDialog::keyPressEvent(QKeyEvent *event)
+{
+    switch(event->key())
+    {
+        case Qt::Key_Up:
 
                  if(buttonVirtualKeyboard[0]->hasFocus())   { buttonClose->setFocus();              }
             else if(buttonVirtualKeyboard[1]->hasFocus())   { buttonVirtualKeyboard[0]->setFocus(); }
@@ -179,9 +324,9 @@ void CameraNameDialog::keyPressEvent(QKeyEvent *event)
             else if(buttonSave ->hasFocus())                { buttonVirtualKeyboard[7]->setFocus(); }
             else if(buttonClose->hasFocus())                { buttonVirtualKeyboard[7]->setFocus(); }
 
-			return;
+            return;
 
-		case Qt::Key_Down:
+        case Qt::Key_Down:
 
                 if(buttonVirtualKeyboard[0]->hasFocus())    { buttonVirtualKeyboard[1]->setFocus(); }
            else if(buttonVirtualKeyboard[1]->hasFocus())    { buttonVirtualKeyboard[2]->setFocus(); }
@@ -194,41 +339,38 @@ void CameraNameDialog::keyPressEvent(QKeyEvent *event)
            else if(buttonSave ->hasFocus())                 { buttonVirtualKeyboard[0]->setFocus(); }
            else if(buttonClose->hasFocus())                 { buttonVirtualKeyboard[0]->setFocus(); }
 
-			return;
+            return;
 
-		case Qt::Key_Left:
-
-                 if(buttonSave ->hasFocus())                { buttonClose->setFocus();              }
-            else if(buttonClose->hasFocus())                { buttonSave->setFocus();               }
-
-			return;
-
-		case Qt::Key_Right:
+        case Qt::Key_Left:
 
                  if(buttonSave ->hasFocus())                { buttonClose->setFocus();              }
             else if(buttonClose->hasFocus())                { buttonSave->setFocus();               }
 
-			return;
+            return;
 
-		case Qt::Key_Enter:
+        case Qt::Key_Right:
 
-			break;
+                 if(buttonSave ->hasFocus())                { buttonClose->setFocus();              }
+            else if(buttonClose->hasFocus())                { buttonSave->setFocus();               }
 
-		case Qt::Key_Escape:
+            return;
 
-			reject();
+        case Qt::Key_Enter:
 
-			return;
+            break;
 
-		default:
+        case Qt::Key_Escape:
 
-			return;
-	}
+            reject();
 
-	QDialog::keyPressEvent(event);
+            return;
+
+        default:
+
+            return;
+    }
+
+    QDialog::keyPressEvent(event);
 }
 
-void CameraNameDialog::keyReleaseEvent(QKeyEvent *event)
-{
-	return;
-}
+#endif

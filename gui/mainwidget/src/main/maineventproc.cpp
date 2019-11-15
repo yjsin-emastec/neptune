@@ -832,8 +832,7 @@ void MainWidget::doDvrEvent(Event *e)
         }
         case Send_QT_RESET_RECORD_ICON:
         {
-            //for(int ii = 0; ii < devInfo.videoNum; ii++)
-            for(int ii = 0; ii < 8; ii++)
+            for(int ii = 0; ii < devInfo.videoNum; ii++)
             {
                 isDrawRecordIcon = 0;
                 videoPane[ii]->setRecordingDetect(0x0, 0x0, 0x0, 0x0);

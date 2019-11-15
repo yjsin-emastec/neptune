@@ -2,9 +2,18 @@
 #define CAMERANAMEDIALOG_H
 
 #include <QtGui/QDialog>
+#include "DVR.h"
+
+#if defined(HI3521)
+#include "ui_cameranamedialog_ch4.h"
+#include "ui_cameranamedialog1080p_ch4.h"
+#define NUMOFCH 4
+
+#elif defined(HI3531D)
 #include "ui_cameranamedialog.h"
 #include "ui_cameranamedialog1080p.h"
-#include "DVR.h"
+#define NUMOFCH 8
+#endif
 
 class CameraNameDialog;
 class UiKeyboardDialog;
@@ -33,16 +42,15 @@ public slots:
 
 protected:
     void keyPressEvent(QKeyEvent *event);
-	void keyReleaseEvent(QKeyEvent *event);
 	
 private:
 	UiKeyboardDialog *keyboard;
 
     QFrame *frame;
 
-    QLabel *labelCameraName[8];
-    QLineEdit *lineEditName[8];
-    QPushButton *buttonVirtualKeyboard[8];
+    QLabel *labelCameraName[NUMOFCH];
+    QLineEdit *lineEditName[NUMOFCH];
+    QPushButton *buttonVirtualKeyboard[NUMOFCH];
 
     QPushButton *buttonSave;
     QPushButton *buttonClose;

@@ -19,6 +19,7 @@ PlayTimeBar::PlayTimeBar(QWidget *parent)
     resizeTimeLine_LeftGap  = 0;
     timeLineStatus          = 1;
     currentPbHour           = 0;
+    CH_COUNT                = devInfo.videoNum;
 
     setPalette(QPalette(QColor(39, 0, 79)));
     setAutoFillBackground(true);
@@ -79,8 +80,6 @@ PlayTimeBar::PlayTimeBar(QWidget *parent)
                 "::groove { margin: 30px; height: 30px; background-color: rgb(255,255,255,0);}"
                 "::handle { image: url(:/images/slider_handle.png); width: 60px; margin: -30px}");
     }
-
-    CH_COUNT=devInfo.videoNum;
 
     sliderPlayTime->move(TL_LEFT_MARGIN-TL_SLIDER_HANDLE_GAP, TL_UP_MARGIN-TL_SLIDER_HEIGHT);
     sliderPlayTime->setRange(0, TL_WIDTH-1);

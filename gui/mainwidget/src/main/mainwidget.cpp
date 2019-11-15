@@ -775,6 +775,68 @@ void MainWidget::createPlayBar()
 
     qDebug("%s - \n", __func__);
 }
+
+#if defined(HI3521)
+void MainWidget::onChangeSplit()
+{
+    if( operationMode == OPMODE_PLAYBACK )
+    {
+        switch( currentSplit )
+        {
+            case Split_1 :
+            {
+            qDebug() << "currentChannelNum : " << currentChannelNum;
+                int temp=currentChannelNum;
+                if( (mainPbChannel & 0x01<<0) || (mainPbChannel & 0x01<<1)
+                 || (mainPbChannel & 0x01<<2) || (mainPbChannel & 0x01<<3) )
+                {
+                    currentChannelNum=0;
+                    splitScreen(Split_4);
+                }
+                else
+                {
+                    currentChannelNum=4;
+                    splitScreen(Split_4);
+                }
+                currentChannelNum = temp;
+
+                break;
+            }
+
+            default :
+            {
+                splitScreen(Split_1);
+            }
+        }
+    }
+    else
+    {
+        switch( currentSplit )
+        {
+            case Split_1 :
+            {
+                int temp=currentChannelNum;
+                currentChannelNum = 0;
+                splitScreen(Split_4);
+                currentChannelNum = temp;
+
+                break;
+            }
+            case Split_4 :
+            {
+                splitScreen(Split_1);
+
+                break;
+            }
+            default :
+            {
+                splitScreen(Split_4);
+            }
+        }
+    }
+}
+
+#elif defined(HI3531D)
 void MainWidget::onChangeSplit()
 {
     if( operationMode == OPMODE_PLAYBACK )
@@ -890,6 +952,8 @@ void MainWidget::onChangeSplit()
         }
     }
 }
+#endif
+
 void MainWidget::createMainMenu()
 {
     qDebug("%s + \n", __func__);

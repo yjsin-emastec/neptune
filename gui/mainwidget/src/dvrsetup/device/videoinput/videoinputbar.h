@@ -2,10 +2,18 @@
 #define VIDEOINPUTBAR_H
 
 #include <QtGui/QDialog>
+
+#if defined(HI3521)
+#include "ui_videoinputbar_ch4.h"
+#include "ui_videoinputbar1080p_ch4.h"
+#define NUMOFCH 4
+
+#elif defined(HI3531D)
 #include "ui_videoinputbar.h"
 #include "ui_videoinputbar1080p.h"
-
 #define NUMOFCH 8
+
+#endif
 
 class VideoInputBar : public QDialog
 {
