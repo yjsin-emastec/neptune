@@ -486,6 +486,27 @@ void MainWidget::onSaveDevicePage(int type)
     }
     else if(type == 5) // Video Input
     {
+#if defined(HI3521)
+        for(int ii=0; ii<devInfo.videoNum; ii++)
+        {
+            QString str = QString("VI%1 M:%2 F:%3").arg(
+                    QString::number(ii+1),
+                    QString::fromUtf8(DeviceCfg.camera_mirror00+ii*8),
+                    QString::fromUtf8(DeviceCfg.camera_flip00+ii*8));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+        }
+/*      //yjsin [19/11/21] DeviceCfg.camera_type not exist
+        for(int ii=0; ii<devInfo.videoNum; ii++)
+        {
+            QString str = QString("VI%1 M:%2 F:%3 T:%4").arg(
+                    QString::number(ii+1),
+                    QString::fromUtf8(DeviceCfg.camera_mirror00+ii*8),
+                    QString::fromUtf8(DeviceCfg.camera_flip00+ii*8),
+                    QString::fromUtf8(DeviceCfg.camera_type00+ii*8));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+        }
+*/
+#elif defined(HI3531D)
         for(int ii=0; ii<devInfo.videoNum; ii++)
         {
             QString str = QString("VI%1 M:%2 F:%3 R:%4").arg(
@@ -495,7 +516,19 @@ void MainWidget::onSaveDevicePage(int type)
                     QString::fromUtf8(DeviceCfg.camera_rotate00+ii*8));
             appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
         }
-
+/*      //yjsin [19/11/21] DeviceCfg.camera_type not exist
+        for(int ii=0; ii<devInfo.videoNum; ii++)
+        {
+            QString str = QString("VI%1 M:%2 F:%3 R:%4 T:%5").arg(
+                    QString::number(ii+1),
+                    QString::fromUtf8(DeviceCfg.camera_mirror00+ii*8),
+                    QString::fromUtf8(DeviceCfg.camera_flip00+ii*8),
+                    QString::fromUtf8(DeviceCfg.camera_rotate00+ii*8),
+                    QString::fromUtf8(DeviceCfg.camera_type00+ii*8));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+        }
+*/
+#endif
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));

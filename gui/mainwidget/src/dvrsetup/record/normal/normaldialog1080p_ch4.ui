@@ -162,7 +162,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -181,7 +181,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Frame Rate</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -200,7 +200,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -219,7 +219,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -238,7 +238,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -257,7 +257,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -276,7 +276,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Frame Rate</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -295,7 +295,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Frame Rate</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -314,7 +314,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -333,7 +333,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Frame Rate</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -352,7 +352,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -371,7 +371,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Frame Rate</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -390,7 +390,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -409,7 +409,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -428,7 +428,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -447,7 +447,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -466,7 +466,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -485,7 +485,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Audio</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -504,7 +504,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Quality</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -523,7 +523,7 @@
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>Recording</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

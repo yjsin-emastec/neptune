@@ -63,6 +63,17 @@ public slots:
     void onButtonRotate8();
     void onButtonRotateAll();
 
+    void onButtonType(int ch);
+    void onButtonType1();
+    void onButtonType2();
+    void onButtonType3();
+    void onButtonType4();
+    void onButtonType5();
+    void onButtonType6();
+    void onButtonType7();
+    void onButtonType8();
+    void onButtonTypeAll();
+
     void onButtonPreview();
     void onButtonDefault();
     void onButtonSave();
@@ -76,14 +87,17 @@ private:
     int infoMirror[NUMOFCH+1];
     int infoFlip[NUMOFCH+1];
     int infoRotate[NUMOFCH+1];
+    int infoType[NUMOFCH+1];
     int backupMirror[NUMOFCH+1];
     int backupFlip[NUMOFCH+1];
     int backupRotate[NUMOFCH+1];
+    int backupType[NUMOFCH+1];
 
     QFrame *frame;
     QPushButton *buttonMirror[NUMOFCH+1];
     QPushButton *buttonFlip[NUMOFCH+1];
     QPushButton *buttonRotate[NUMOFCH+1];
+    QPushButton *buttonType[NUMOFCH+1];
     QPushButton *buttonPreview;
     QPushButton *buttonDefault;
     QPushButton *buttonSave;
@@ -93,6 +107,7 @@ private:
     QLabel *labelMirror[NUMOFCH+1];
     QLabel *labelFlip[NUMOFCH+1];
     QLabel *labelRotate[NUMOFCH+1];
+    QLabel *labelType[NUMOFCH+1];
 
     VideoInputBar *videoInputBar;
 

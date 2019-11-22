@@ -492,72 +492,72 @@ Désactivé/Activé</translation>
         <translation type="obsolete">Fermer</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="141"/>
+        <location filename="../../../../search/calendarpage.cpp" line="153"/>
         <source>Aug, 2016</source>
         <translation>Août 2016</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="262"/>
+        <location filename="../../../../search/calendarpage.cpp" line="347"/>
         <source>Jan</source>
         <translation>Jan</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="263"/>
+        <location filename="../../../../search/calendarpage.cpp" line="348"/>
         <source>Feb</source>
         <translation>Fév</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="264"/>
+        <location filename="../../../../search/calendarpage.cpp" line="349"/>
         <source>Mar</source>
         <translation>Mer</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="265"/>
+        <location filename="../../../../search/calendarpage.cpp" line="350"/>
         <source>Apr</source>
         <translation>Avr</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="266"/>
+        <location filename="../../../../search/calendarpage.cpp" line="351"/>
         <source>May</source>
         <translation>Mai</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="267"/>
+        <location filename="../../../../search/calendarpage.cpp" line="352"/>
         <source>Jun</source>
         <translation>Jun</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="268"/>
+        <location filename="../../../../search/calendarpage.cpp" line="353"/>
         <source>Jul</source>
         <translation>Juil</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="269"/>
+        <location filename="../../../../search/calendarpage.cpp" line="354"/>
         <source>Aug</source>
         <translation>Août</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="270"/>
+        <location filename="../../../../search/calendarpage.cpp" line="355"/>
         <source>Sep</source>
         <translation>Sep</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="271"/>
+        <location filename="../../../../search/calendarpage.cpp" line="356"/>
         <source>Oct</source>
         <translation>Oct</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="272"/>
+        <location filename="../../../../search/calendarpage.cpp" line="357"/>
         <source>Nov</source>
         <translation>Nov</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="273"/>
+        <location filename="../../../../search/calendarpage.cpp" line="358"/>
         <source>Dec</source>
         <translation>Déc</translation>
     </message>
     <message>
-        <location filename="../../../../search/calendarpage.cpp" line="276"/>
+        <location filename="../../../../search/calendarpage.cpp" line="361"/>
         <source>%1, %2</source>
         <translation>%1. %2</translation>
     </message>
@@ -604,36 +604,43 @@ Désactivé/Activé</translation>
     <name>CameraNameDialog</name>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="14"/>
+        <location filename="../../../display/cameraname/cameranamedialog_ch4.ui" line="14"/>
         <source>CAMERA NAME PROPERTY</source>
         <translation>NOM DE CAMÉRA PROPRIÉTÉ</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="44"/>
+        <location filename="../../../display/cameraname/cameranamedialog_ch4.ui" line="44"/>
         <source>Ch.1</source>
         <translation>Ch.1</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="110"/>
+        <location filename="../../../display/cameraname/cameranamedialog_ch4.ui" line="110"/>
         <source>Ch.2</source>
         <translation>Ch.2</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="151"/>
+        <location filename="../../../display/cameraname/cameranamedialog_ch4.ui" line="151"/>
         <source>Ch.3</source>
         <translation>Ch.3</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="192"/>
+        <location filename="../../../display/cameraname/cameranamedialog_ch4.ui" line="192"/>
         <source>Ch.4</source>
         <translation>Ch.4</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="351"/>
+        <location filename="../../../display/cameraname/cameranamedialog_ch4.ui" line="351"/>
         <source>Save</source>
         <translation>Stocker</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="364"/>
+        <location filename="../../../display/cameraname/cameranamedialog_ch4.ui" line="364"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
@@ -670,6 +677,10 @@ Désactivé/Activé</translation>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="630"/>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="649"/>
         <location filename="../../../display/cameraname/cameranamedialog.ui" line="668"/>
+        <location filename="../../../display/cameraname/cameranamedialog_ch4.ui" line="94"/>
+        <location filename="../../../display/cameraname/cameranamedialog_ch4.ui" line="236"/>
+        <location filename="../../../display/cameraname/cameranamedialog_ch4.ui" line="255"/>
+        <location filename="../../../display/cameraname/cameranamedialog_ch4.ui" line="274"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -690,6 +701,7 @@ Désactivé/Activé</translation>
     <name>CameraNameDialog1080p</name>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="14"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p_ch4.ui" line="14"/>
         <source>CAMERA NAME PROPERTY</source>
         <translation>NOM DE CAMÉRA PROPRIÉTÉ</translation>
     </message>
@@ -706,6 +718,10 @@ Désactivé/Activé</translation>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="630"/>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="649"/>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="668"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p_ch4.ui" line="94"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p_ch4.ui" line="236"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p_ch4.ui" line="255"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p_ch4.ui" line="274"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -723,31 +739,37 @@ Désactivé/Activé</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="44"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p_ch4.ui" line="44"/>
         <source>Ch.1</source>
         <translation>Ch.1</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="189"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p_ch4.ui" line="351"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="202"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p_ch4.ui" line="364"/>
         <source>Save</source>
         <translation>Stocker</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="218"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p_ch4.ui" line="110"/>
         <source>Ch.2</source>
         <translation>Ch.2</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="237"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p_ch4.ui" line="151"/>
         <source>Ch.3</source>
         <translation>Ch.3</translation>
     </message>
     <message>
         <location filename="../../../display/cameraname/cameranamedialog1080p.ui" line="256"/>
+        <location filename="../../../display/cameraname/cameranamedialog1080p_ch4.ui" line="192"/>
         <source>Ch.4</source>
         <translation>Ch.4</translation>
     </message>
@@ -3090,28 +3112,28 @@ Muet/1/2/3/4</translation>
         <translation>Temps écoulé</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="857"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1267"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1313"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1381"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1467"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1510"/>
+        <location filename="../../../../main/maineventproc.cpp" line="856"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1266"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1312"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1380"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1466"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1509"/>
         <location filename="../../../../main/mainscreen.cpp" line="100"/>
         <location filename="../../../../main/mainscreen.cpp" line="150"/>
         <source>NOTICE</source>
         <translation>REMARQUER</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="857"/>
+        <location filename="../../../../main/maineventproc.cpp" line="856"/>
         <source>SATA Error Count</source>
         <translation>Nombre d&apos;erreurs SATA</translation>
     </message>
     <message>
-        <location filename="../../../../main/maineventproc.cpp" line="1267"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1313"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1381"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1467"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1510"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1266"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1312"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1380"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1466"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1509"/>
         <location filename="../../../../main/mainscreen.cpp" line="100"/>
         <location filename="../../../../main/mainscreen.cpp" line="150"/>
         <source>Current status is trigger.</source>
@@ -3281,7 +3303,7 @@ L&apos;état actuel est déclenché.</translation>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="811"/>
         <location filename="../../../../main/mainwidget.cpp" line="635"/>
-        <location filename="../../../../main/mainwidget.cpp" line="1071"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1136"/>
         <source>POWER OFF</source>
         <translation>ÉTEINDRE</translation>
     </message>
@@ -3311,17 +3333,17 @@ Turn off the power.</source>
 Éteignez l&apos;alimentation.</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1071"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1136"/>
         <source>Do you want to shutdown the system?</source>
         <translation>Voulez-vous arrêter le système?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1562"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1627"/>
         <source>SEARCH</source>
         <translation>CHERCHER</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1562"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1627"/>
         <source>No SSD</source>
         <translation>Pas de Stockage</translation>
     </message>
@@ -3355,6 +3377,7 @@ No Disk
     <name>NormalDialog</name>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="14"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="14"/>
         <source>NORMAL PROPERTY</source>
         <translation>PROPRIÉTÉ NORMALE</translation>
     </message>
@@ -3372,6 +3395,7 @@ No Disk
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="802"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="802"/>
         <source>Default</source>
         <translation>Défaut</translation>
     </message>
@@ -3395,11 +3419,13 @@ Désactivé / Activé</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="54"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="54"/>
         <source>Save</source>
         <translation>Stocker</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="41"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="41"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
@@ -3425,26 +3451,31 @@ Désactivé / Activé</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="70"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="70"/>
         <source>All</source>
         <translation>Tout</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="89"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="89"/>
         <source>Ch.1</source>
         <translation>Ch.1</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="108"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="108"/>
         <source>Ch.3</source>
         <translation>Ch.3</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="127"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="127"/>
         <source>Ch.2</source>
         <translation>Ch.2</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="146"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="146"/>
         <source>Ch.4</source>
         <translation>Ch.4</translation>
     </message>
@@ -3474,11 +3505,17 @@ Désactivé / Activé</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="542"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="542"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="594"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="607"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="620"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="633"/>
         <source>Frame</source>
         <translation>Charpente</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="815"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="815"/>
         <source>Reload</source>
         <translation>Revenir</translation>
     </message>
@@ -3512,56 +3549,71 @@ Désactivé / Activé</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="555"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="555"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="646"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="659"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="672"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="685"/>
         <source>Quality</source>
         <translation>Qualité</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="369"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="632"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="625"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="891"/>
         <source>Low</source>
         <translation>Faible</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="370"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="633"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="626"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="892"/>
         <source>Middle</source>
         <translation>Milieu</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="371"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="372"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="634"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="635"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="627"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="628"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="893"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="894"/>
         <source>High</source>
         <translation>Haute</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="568"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="568"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="698"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="711"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="724"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="737"/>
         <source>Recording</source>
         <translation>Enregistrer</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="376"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="382"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="678"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="723"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="632"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="638"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="937"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="982"/>
         <source>Off</source>
         <translation>Désactivé</translation>
     </message>
     <message>
-        <location filename="../../../record/normal/normaldialog.cpp" line="377"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="378"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="383"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="384"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="679"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="680"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="724"/>
-        <location filename="../../../record/normal/normaldialog.cpp" line="725"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="633"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="634"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="639"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="640"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="938"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="939"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="983"/>
+        <location filename="../../../record/normal/normaldialog.cpp" line="984"/>
         <source>On</source>
         <translation>Activé</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog.ui" line="581"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="581"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="750"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="763"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="776"/>
+        <location filename="../../../record/normal/normaldialog_ch4.ui" line="789"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
@@ -3582,46 +3634,59 @@ Désactivé / Activé</translation>
     <name>NormalDialog1080p</name>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="14"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="14"/>
         <source>NORMAL PROPERTY</source>
         <translation>PROPRIÉTÉ NORMALE</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="41"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="41"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="54"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="54"/>
         <source>Save</source>
         <translation>Stocker</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="70"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="70"/>
         <source>All</source>
         <translation>Tout</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="89"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="89"/>
         <source>Ch.1</source>
         <translation>Ch.1</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="108"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="108"/>
         <source>Ch.3</source>
         <translation>Ch.3</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="127"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="127"/>
         <source>Ch.2</source>
         <translation>Ch.2</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="146"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="146"/>
         <source>Ch.4</source>
         <translation>Ch.4</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="581"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="581"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="750"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="763"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="776"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="789"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
@@ -3651,26 +3716,43 @@ Désactivé / Activé</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="555"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="555"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="646"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="659"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="672"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="685"/>
         <source>Quality</source>
         <translation>Qualité</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="568"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="568"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="698"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="711"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="724"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="737"/>
         <source>Recording</source>
         <translation>Enregistrer</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="542"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="542"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="594"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="607"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="620"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="633"/>
         <source>Frame</source>
         <translation>Charpente</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="802"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="802"/>
         <source>Default</source>
         <translation>Défaut</translation>
     </message>
     <message>
         <location filename="../../../record/normal/normaldialog1080p.ui" line="815"/>
+        <location filename="../../../record/normal/normaldialog1080p_ch4.ui" line="815"/>
         <source>Reload</source>
         <translation>Revenir</translation>
     </message>
@@ -4286,15 +4368,15 @@ Désactivé/Activé</translation>
         <translation type="obsolete">%1:00</translation>
     </message>
     <message>
-        <location filename="../../../../main/playtimebar.cpp" line="956"/>
-        <location filename="../../../../main/playtimebar.cpp" line="1408"/>
-        <location filename="../../../../main/playtimebar.cpp" line="1459"/>
+        <location filename="../../../../main/playtimebar.cpp" line="955"/>
+        <location filename="../../../../main/playtimebar.cpp" line="1407"/>
+        <location filename="../../../../main/playtimebar.cpp" line="1458"/>
         <source>PM</source>
         <translation>PM</translation>
     </message>
     <message>
-        <location filename="../../../../main/playtimebar.cpp" line="960"/>
-        <location filename="../../../../main/playtimebar.cpp" line="1455"/>
+        <location filename="../../../../main/playtimebar.cpp" line="959"/>
+        <location filename="../../../../main/playtimebar.cpp" line="1454"/>
         <source>AM</source>
         <translation>AM</translation>
     </message>
@@ -5798,13 +5880,13 @@ Upgrade</source>
         <translation type="obsolete">Heure</translation>
     </message>
     <message>
-        <location filename="../../../../search/timeline.cpp" line="128"/>
+        <location filename="../../../../search/timeline.cpp" line="133"/>
         <source>TIME</source>
         <translation>TEMPS</translation>
     </message>
     <message>
-        <location filename="../../../../search/timeline.cpp" line="241"/>
-        <location filename="../../../../search/timeline.cpp" line="430"/>
+        <location filename="../../../../search/timeline.cpp" line="249"/>
+        <location filename="../../../../search/timeline.cpp" line="438"/>
         <source>%1</source>
         <translation>%1</translation>
     </message>
@@ -5948,26 +6030,31 @@ Effacer données ou définir le temps.</translation>
     <name>TriggerInputDialog</name>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="14"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="14"/>
         <source>TRIGGER INPUT PROPERTY</source>
         <translation>PROPRIÉTÉ D&apos;ENTRÉE DE DÉPLACEMENT</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="47"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="47"/>
         <source>Save</source>
         <translation>Stocker</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="60"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="60"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="73"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="73"/>
         <source>Default</source>
         <translation>Défaut</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="89"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="89"/>
         <source>All</source>
         <translation>Tout</translation>
     </message>
@@ -6008,8 +6095,8 @@ Effacer données ou définir le temps.</translation>
         <translation type="obsolete">Trigger4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1002"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1146"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1370"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1515"/>
         <source>PRIORITY REDUNDANT</source>
         <translation>REDONDANT PRIORITAIRE</translation>
     </message>
@@ -6029,29 +6116,30 @@ Effacer données ou définir le temps.</translation>
         <translation type="obsolete">ATTENTION</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="492"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="368"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="860"/>
         <source>Trigger</source>
         <translation>Trigger</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="624"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="992"/>
         <source>CAM</source>
         <translation>CAM</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="628"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="996"/>
         <source>Sec</source>
         <translation>Sec</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1003"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1147"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1371"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1516"/>
         <source>Priority is redundant.</source>
         <translation>La priorité est redondante.</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1003"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1147"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1371"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1516"/>
         <source>Please check priority.</source>
         <translation>Veuillez vérifier la priorité.</translation>
     </message>
@@ -6063,6 +6151,7 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="2989"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1585"/>
         <source>Source</source>
         <translation>Source</translation>
     </message>
@@ -6108,6 +6197,7 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3002"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1598"/>
         <source>Delay</source>
         <translation>Retard</translation>
     </message>
@@ -6197,6 +6287,7 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3015"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1611"/>
         <source>Priority</source>
         <translation>Priorité</translation>
     </message>
@@ -6218,16 +6309,17 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3028"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1624"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="642"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1010"/>
         <source>Mute</source>
         <translation>Muet</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="638"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1006"/>
         <source>Output</source>
         <translation>Sortie</translation>
     </message>
@@ -6236,6 +6328,7 @@ Effacer données ou définir le temps.</translation>
     <name>TriggerInputDialog1080p</name>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="14"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="14"/>
         <source>TRIGGER INPUT PROPERTY</source>
         <translation>PROPRIÉTÉ D&apos;ENTRÉE DE DÉPLACEMENT</translation>
     </message>
@@ -6273,26 +6366,31 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="50"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="50"/>
         <source>All</source>
         <translation>Tout</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="2989"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1585"/>
         <source>Source</source>
         <translation>Source</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3002"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1598"/>
         <source>Delay</source>
         <translation>Retard</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3015"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1611"/>
         <source>Priority</source>
         <translation>Priorité</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3028"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1624"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
@@ -6302,11 +6400,13 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="408"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="332"/>
         <source>Save</source>
         <translation>Stocker</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="421"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="345"/>
         <source>Cancle</source>
         <translation>Annuler</translation>
     </message>
@@ -6320,6 +6420,7 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="434"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="358"/>
         <source>Default</source>
         <translation>Défaut</translation>
     </message>
@@ -6806,31 +6907,37 @@ Effacer données ou définir le temps.</translation>
     <name>VideoInputBar</name>
     <message>
         <location filename="../../../device/videoinput/videoinputbar.ui" line="14"/>
+        <location filename="../../../device/videoinput/videoinputbar_ch4.ui" line="14"/>
         <source>Dialog</source>
         <translation>Dialogue</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputbar.ui" line="54"/>
+        <location filename="../../../device/videoinput/videoinputbar_ch4.ui" line="54"/>
         <source>A</source>
         <translation>T</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputbar.ui" line="67"/>
+        <location filename="../../../device/videoinput/videoinputbar_ch4.ui" line="67"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputbar.ui" line="83"/>
+        <location filename="../../../device/videoinput/videoinputbar_ch4.ui" line="83"/>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputbar.ui" line="96"/>
+        <location filename="../../../device/videoinput/videoinputbar_ch4.ui" line="96"/>
         <source>3</source>
         <translation>3</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputbar.ui" line="109"/>
+        <location filename="../../../device/videoinput/videoinputbar_ch4.ui" line="109"/>
         <source>4</source>
         <translation>4</translation>
     </message>
@@ -6859,31 +6966,37 @@ Effacer données ou définir le temps.</translation>
     <name>VideoInputBar1080p</name>
     <message>
         <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="14"/>
+        <location filename="../../../device/videoinput/videoinputbar1080p_ch4.ui" line="14"/>
         <source>Dialog</source>
         <translation>Dialogue</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="41"/>
+        <location filename="../../../device/videoinput/videoinputbar1080p_ch4.ui" line="41"/>
         <source>A</source>
         <translation>T</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="54"/>
+        <location filename="../../../device/videoinput/videoinputbar1080p_ch4.ui" line="54"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="67"/>
+        <location filename="../../../device/videoinput/videoinputbar1080p_ch4.ui" line="67"/>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="80"/>
+        <location filename="../../../device/videoinput/videoinputbar1080p_ch4.ui" line="80"/>
         <source>3</source>
         <translation>3</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputbar1080p.ui" line="93"/>
+        <location filename="../../../device/videoinput/videoinputbar1080p_ch4.ui" line="93"/>
         <source>4</source>
         <translation>4</translation>
     </message>
@@ -6912,6 +7025,7 @@ Effacer données ou définir le temps.</translation>
     <name>VideoInputDialog</name>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="14"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="14"/>
         <source>VIDEO INPUT PROPERTY</source>
         <translation>PROPRIÉTÉ D&apos;ENTRÉE VIDÉO</translation>
     </message>
@@ -6935,36 +7049,43 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="41"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="41"/>
         <source>Save</source>
         <translation>Stocker</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="54"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="54"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="70"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="70"/>
         <source>All</source>
         <translation>Tout</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="127"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="127"/>
         <source>Ch.1</source>
         <translation>Ch.1</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="146"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="146"/>
         <source>Ch.2</source>
         <translation>Ch.2</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="165"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="165"/>
         <source>Ch.3</source>
         <translation>Ch.3</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="184"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="184"/>
         <source>Ch.4</source>
         <translation>Ch.4</translation>
     </message>
@@ -6990,16 +7111,19 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="580"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="352"/>
         <source>Mirror Mode</source>
         <translation>Miroir Mode</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="593"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="365"/>
         <source>Flip Mode</source>
         <translation>Flip Mode</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="814"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="482"/>
         <source>Preview</source>
         <translation>Aperçu</translation>
     </message>
@@ -7010,35 +7134,51 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="1115"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="495"/>
         <source>Default</source>
         <translation>Défaut</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.ui" line="1299"/>
+        <source>Type</source>
+        <translation>Type</translation>
     </message>
     <message>
         <source>Camera1</source>
         <translation type="obsolete">Caméra1</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="353"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="637"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="649"/>
         <source>Normal</source>
         <translation>Normal</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="352"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="636"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="648"/>
         <source>Mirror</source>
         <translation>Miroir</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="356"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="640"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="652"/>
         <source>Up</source>
         <translation>En haut</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="358"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="654"/>
         <source>Â°</source>
         <translation>°</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="355"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="658"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="663"/>
+        <source>Auto</source>
+        <translation>Auto</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="639"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="651"/>
         <source>Down</source>
         <translation>En bas</translation>
     </message>
@@ -7067,6 +7207,7 @@ Effacer données ou définir le temps.</translation>
     <name>VideoInputDialog1080p</name>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="14"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="14"/>
         <source>VIDEO INPUT PROPERTY</source>
         <translation>PROPRIÉTÉ D&apos;ENTRÉE VIDÉO</translation>
     </message>
@@ -7090,36 +7231,43 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="41"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="41"/>
         <source>Save</source>
         <translation>Stocker</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="54"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="54"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="70"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="70"/>
         <source>All</source>
         <translation>Tout</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="127"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="127"/>
         <source>Ch.1</source>
         <translation>Ch.1</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="146"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="146"/>
         <source>Ch.2</source>
         <translation>Ch.2</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="165"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="165"/>
         <source>Ch.3</source>
         <translation>Ch.3</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="184"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="184"/>
         <source>Ch.4</source>
         <translation>Ch.4</translation>
     </message>
@@ -7145,16 +7293,19 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="276"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="200"/>
         <source>Preview</source>
         <translation>Aperçu</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="593"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="365"/>
         <source>Mirror Mode</source>
         <translation>Miroir Mode</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="710"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="430"/>
         <source>Flip Mode</source>
         <translation>Flip Mode</translation>
     </message>
@@ -7165,8 +7316,14 @@ Effacer données ou définir le temps.</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="1127"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="495"/>
         <source>Default</source>
         <translation>Défaut</translation>
+    </message>
+    <message>
+        <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="1311"/>
+        <source>Type</source>
+        <translation>Type</translation>
     </message>
 </context>
 <context>
