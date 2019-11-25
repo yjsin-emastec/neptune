@@ -619,7 +619,7 @@ void PlayBarDialog::rewFrameClicked(void)
 
     displaySpeed();
 
-    if(playbackState == PB_PLAY)
+    if(playbackState == PB_PLAY && playbackSpeed == PB_SPEED_1)
     {
         if(indexAudio == 1)
         {
@@ -634,6 +634,25 @@ void PlayBarDialog::rewFrameClicked(void)
                 appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
             }
             else if(currentSplit == Split_4)
+            {
+                if(splitStartChNum==0)
+                {
+                    if( indexAudio <= LIVE_AUDIO_SINGLE_4)
+                    {
+                        OutputAudio(indexAudio-2);
+                        appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
+                    }
+                }
+                else
+                {
+                    if( indexAudio >= LIVE_AUDIO_SINGLE_5)
+                    {
+                        OutputAudio(indexAudio-2);
+                        appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
+                    }
+                }
+            }
+            else
             {
                 OutputAudio(indexAudio-2);
                 appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
@@ -805,7 +824,7 @@ void PlayBarDialog::fowardFrameClicked(void)
 
     displaySpeed();
 
-    if(playbackState == PB_PLAY)
+    if(playbackState == PB_PLAY && playbackSpeed == PB_SPEED_1)
     {
         if(indexAudio == 1)
         {
@@ -820,6 +839,25 @@ void PlayBarDialog::fowardFrameClicked(void)
                 appmgr_search_set_audio_mute_on_off(AUDIO_PB, currentChannelNum);
             }
             else if(currentSplit == Split_4)
+            {
+                if(splitStartChNum==0)
+                {
+                    if( indexAudio <= LIVE_AUDIO_SINGLE_4)
+                    {
+                        OutputAudio(indexAudio-2);
+                        appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
+                    }
+                }
+                else
+                {
+                    if( indexAudio >= LIVE_AUDIO_SINGLE_5)
+                    {
+                        OutputAudio(indexAudio-2);
+                        appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
+                    }
+                }
+            }
+            else
             {
                 OutputAudio(indexAudio-2);
                 appmgr_search_set_audio_mute_on_off(AUDIO_PB, indexAudio-2);
