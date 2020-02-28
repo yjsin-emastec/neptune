@@ -1091,26 +1091,26 @@ DISK is not existed.
         <translation>HDD 포맷</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="270"/>
+        <location filename="../../../setup/devicepage.cpp" line="287"/>
         <source>HDD FORMAT</source>
         <translation>HDD 포맷</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="270"/>
+        <location filename="../../../setup/devicepage.cpp" line="287"/>
         <source>Are you sure to format HDD?
 System will restart after format.</source>
         <translation>HDD를 포맷 하시겠습니까?
 포맷 후 시스템을 재시작합니다.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="271"/>
+        <location filename="../../../setup/devicepage.cpp" line="288"/>
         <source>Are you sure to format SSD?
 System will restart after format.</source>
         <translation>SSD를 포맷 하시겠습니까?
 포맷 후 시스템을 재시작합니다.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="292"/>
+        <location filename="../../../setup/devicepage.cpp" line="309"/>
         <source>SSD does not exist.</source>
         <translation>SSD가 없습니다.</translation>
     </message>
@@ -1128,8 +1128,8 @@ HDD를 포맷 하시겠습니까?
 포맷 후 시스템을 재시작합니다.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="271"/>
-        <location filename="../../../setup/devicepage.cpp" line="292"/>
+        <location filename="../../../setup/devicepage.cpp" line="288"/>
+        <location filename="../../../setup/devicepage.cpp" line="309"/>
         <source>SSD FORMAT</source>
         <translation>SSD 포맷</translation>
     </message>
@@ -1702,6 +1702,27 @@ HDMI 해상도를 변경하시겠습니까?
         <location filename="../../../setup/displaypage1080p.ui" line="206"/>
         <source>OSD</source>
         <translation>OSD</translation>
+    </message>
+</context>
+<context>
+    <name>EditMarkerDialog</name>
+    <message>
+        <location filename="../../../device/triggerinput/editmarkerdialog.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>대화상자</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/editmarkerdialog.cpp" line="289"/>
+        <source>Â°</source>
+        <translation>°</translation>
+    </message>
+</context>
+<context>
+    <name>EditMarkerDialog1080p</name>
+    <message>
+        <location filename="../../../device/triggerinput/editmarkerdialog1080p.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>대화상자</translation>
     </message>
 </context>
 <context>
@@ -3248,7 +3269,7 @@ Mute/1/2/3/4</source>
         <location filename="../../../../main/maineventproc.cpp" line="1312"/>
         <location filename="../../../../main/maineventproc.cpp" line="1380"/>
         <location filename="../../../../main/maineventproc.cpp" line="1466"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1509"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1511"/>
         <location filename="../../../../main/mainscreen.cpp" line="100"/>
         <location filename="../../../../main/mainscreen.cpp" line="150"/>
         <source>NOTICE</source>
@@ -3264,7 +3285,7 @@ Mute/1/2/3/4</source>
         <location filename="../../../../main/maineventproc.cpp" line="1312"/>
         <location filename="../../../../main/maineventproc.cpp" line="1380"/>
         <location filename="../../../../main/maineventproc.cpp" line="1466"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1509"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1511"/>
         <location filename="../../../../main/mainscreen.cpp" line="100"/>
         <location filename="../../../../main/mainscreen.cpp" line="150"/>
         <source>Current status is trigger.</source>
@@ -3467,8 +3488,8 @@ Current status is trigger.</source>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="811"/>
-        <location filename="../../../../main/mainwidget.cpp" line="635"/>
-        <location filename="../../../../main/mainwidget.cpp" line="1136"/>
+        <location filename="../../../../main/mainwidget.cpp" line="692"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1206"/>
         <source>POWER OFF</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>전원 종료</translation>
@@ -3492,24 +3513,24 @@ Do you want to shutdown the system?</source>
 녹화를 종료하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="635"/>
+        <location filename="../../../../main/mainwidget.cpp" line="692"/>
         <source>System was shutdown successfully.
 Turn off the power.</source>
         <translation>정상적으로 종료됐습니다.
 전원을 끄십시오.</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1136"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1206"/>
         <source>Do you want to shutdown the system?</source>
         <translation>녹화를 종료하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1627"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1697"/>
         <source>SEARCH</source>
         <translation>검색</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1627"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1697"/>
         <source>No SSD</source>
         <translation>저장장치 없음</translation>
     </message>
@@ -5495,62 +5516,62 @@ On</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="80"/>
+        <location filename="../../../setup/setupdialog.cpp" line="86"/>
         <source>System</source>
         <translation>시스템</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="81"/>
+        <location filename="../../../setup/setupdialog.cpp" line="87"/>
         <source>Record</source>
         <translation>녹화</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="82"/>
+        <location filename="../../../setup/setupdialog.cpp" line="88"/>
         <source>Display</source>
         <translation>화면</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="83"/>
+        <location filename="../../../setup/setupdialog.cpp" line="89"/>
         <source>Device</source>
         <translation>장치</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="106"/>
+        <location filename="../../../setup/setupdialog.cpp" line="112"/>
         <source> SYSTEM </source>
         <translation> 시스템 </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="107"/>
+        <location filename="../../../setup/setupdialog.cpp" line="113"/>
         <source> RECORD </source>
         <translation> 녹화 </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="108"/>
+        <location filename="../../../setup/setupdialog.cpp" line="114"/>
         <source> DISPLAY </source>
         <translation> 화면 </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="109"/>
+        <location filename="../../../setup/setupdialog.cpp" line="115"/>
         <source> DEVICE </source>
         <translation> 장치 </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="113"/>
+        <location filename="../../../setup/setupdialog.cpp" line="119"/>
         <source>SYSTEM</source>
         <translation>시스템</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="114"/>
+        <location filename="../../../setup/setupdialog.cpp" line="120"/>
         <source>RECORD</source>
         <translation>녹화</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="115"/>
+        <location filename="../../../setup/setupdialog.cpp" line="121"/>
         <source>DISPLAY</source>
         <translation>화면</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="116"/>
+        <location filename="../../../setup/setupdialog.cpp" line="122"/>
         <source>DEVICE</source>
         <translation>장치</translation>
     </message>
@@ -6330,6 +6351,12 @@ You must delete data or set time.</source>
         <translation>모두</translation>
     </message>
     <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="993"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="1025"/>
+        <source>Marker</source>
+        <translation>마커</translation>
+    </message>
+    <message>
         <source>Trigger5</source>
         <translation type="obsolete">트리거 5</translation>
     </message>
@@ -6367,8 +6394,8 @@ You must delete data or set time.</source>
         <translation type="obsolete">트리거 4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1370"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1515"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1285"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1430"/>
         <source>PRIORITY REDUNDANT</source>
         <translatorcomment>표시 안됨</translatorcomment>
         <translation>우선순위 오류</translation>
@@ -6390,30 +6417,40 @@ You must delete data or set time.</source>
         <translation type="obsolete">  경고</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="368"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="860"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="370"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="734"/>
         <source>Trigger</source>
         <translation>트리거</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="992"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="905"/>
         <source>CAM</source>
         <translation>채널</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="996"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="909"/>
         <source>Sec</source>
         <translation>초</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1371"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1516"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
+        <source>On</source>
+        <translation>켜기</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="934"/>
+        <source>Off</source>
+        <translation>끄기</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1286"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1431"/>
         <source>Priority is redundant.</source>
         <translation>우선순위가 중복됐습니다.</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1371"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1516"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1286"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1431"/>
         <source>Please check priority.</source>
         <translation>우선순위를 확인하십시오.</translation>
     </message>
@@ -6425,7 +6462,7 @@ You must delete data or set time.</source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="2989"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="941"/>
         <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1585"/>
         <source>Source</source>
         <translation>대상</translation>
@@ -6471,7 +6508,7 @@ You must delete data or set time.</source>
         <translation type="obsolete">6 분할</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3002"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="954"/>
         <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1598"/>
         <source>Delay</source>
         <translation>유지시간</translation>
@@ -6561,7 +6598,7 @@ You must delete data or set time.</source>
         <translation type="obsolete">20 초</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3015"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="967"/>
         <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1611"/>
         <source>Priority</source>
         <translation>우선순위</translation>
@@ -6583,18 +6620,18 @@ You must delete data or set time.</source>
         <translation type="obsolete">4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3028"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="980"/>
         <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1624"/>
         <source>Audio</source>
         <translation>오디오</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1010"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="923"/>
         <source>Mute</source>
         <translation>끄기</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1006"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="919"/>
         <source>Output</source>
         <translation>켜기</translation>
     </message>
@@ -6646,41 +6683,47 @@ You must delete data or set time.</source>
         <translation>모두</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="2989"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="941"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1585"/>
         <source>Source</source>
         <translation>대상</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3002"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="954"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1598"/>
         <source>Delay</source>
         <translation>유지시간</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3015"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="967"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1611"/>
         <source>Priority</source>
         <translation>우선순위</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3028"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="980"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1624"/>
         <source>Audio</source>
         <translation>오디오</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="993"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="1177"/>
+        <source>Marker</source>
+        <translation>마커</translation>
     </message>
     <message>
         <source>CAM 1</source>
         <translation type="obsolete">채널 1</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="408"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="332"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="332"/>
         <source>Save</source>
         <translation>저장</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="421"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="345"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="345"/>
         <source>Cancle</source>
         <translation>취소</translation>
@@ -6694,7 +6737,7 @@ You must delete data or set time.</source>
         <translation type="obsolete">취소</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="434"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="358"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="358"/>
         <source>Default</source>
         <translation>기본값</translation>
@@ -7463,6 +7506,7 @@ You must delete data or set time.</source>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="1299"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="527"/>
         <source>Type</source>
         <translation>종류</translation>
     </message>
@@ -7471,37 +7515,39 @@ You must delete data or set time.</source>
         <translation type="obsolete">채널 1</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="637"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="649"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="674"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="696"/>
         <source>Normal</source>
         <translation>반전 안함</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="636"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="648"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="673"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="695"/>
         <source>Mirror</source>
         <translation>좌우 반전</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="640"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="652"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="677"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="699"/>
         <source>Up</source>
         <translation>반전 안함</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="654"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="701"/>
         <source>Â°</source>
         <translation>°</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="658"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="663"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="681"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="686"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="705"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="710"/>
         <source>Auto</source>
         <translation>자동</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="639"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="651"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="676"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="698"/>
         <source>Down</source>
         <translation>상하 반전</translation>
     </message>
@@ -7646,6 +7692,7 @@ You must delete data or set time.</source>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="1311"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="546"/>
         <source>Type</source>
         <translation>종류</translation>
     </message>

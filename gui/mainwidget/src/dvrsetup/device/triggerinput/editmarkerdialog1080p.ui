@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditMarkerDialog1080p</class>
+ <widget class="QDialog" name="EditMarkerDialog1080p">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>120</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>4</y>
+     <width>1912</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="labelCh">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>11</y>
+      <width>121</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderXUp">
+    <property name="geometry">
+     <rect>
+      <x>431</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderXDn">
+    <property name="geometry">
+     <rect>
+      <x>431</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderYUp">
+    <property name="geometry">
+     <rect>
+      <x>731</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderYDn">
+    <property name="geometry">
+     <rect>
+      <x>731</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderWUp">
+    <property name="geometry">
+     <rect>
+      <x>1031</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderWDn">
+    <property name="geometry">
+     <rect>
+      <x>1031</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderHUp">
+    <property name="geometry">
+     <rect>
+      <x>1331</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderHDn">
+    <property name="geometry">
+     <rect>
+      <x>1331</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderSUp">
+    <property name="geometry">
+     <rect>
+      <x>1631</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderSDn">
+    <property name="geometry">
+     <rect>
+      <x>1631</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderChUp">
+    <property name="geometry">
+     <rect>
+      <x>131</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderChDn">
+    <property name="geometry">
+     <rect>
+      <x>131</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderReload">
+    <property name="geometry">
+     <rect>
+      <x>1721</x>
+      <y>11</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTextX">
+    <property name="geometry">
+     <rect>
+      <x>221</x>
+      <y>11</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTextY">
+    <property name="geometry">
+     <rect>
+      <x>521</x>
+      <y>11</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTextW">
+    <property name="geometry">
+     <rect>
+      <x>821</x>
+      <y>11</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTextH">
+    <property name="geometry">
+     <rect>
+      <x>1121</x>
+      <y>11</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTextS">
+    <property name="geometry">
+     <rect>
+      <x>1421</x>
+      <y>11</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBorderClose_2">
+    <property name="geometry">
+     <rect>
+      <x>1811</x>
+      <y>11</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSDn">
+    <property name="geometry">
+     <rect>
+      <x>1631</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_down.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonHDn">
+    <property name="geometry">
+     <rect>
+      <x>1331</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_down.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonWDn">
+    <property name="geometry">
+     <rect>
+      <x>1031</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_down.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonYUp">
+    <property name="geometry">
+     <rect>
+      <x>731</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_up.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonYDn">
+    <property name="geometry">
+     <rect>
+      <x>731</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_down.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonXUp">
+    <property name="geometry">
+     <rect>
+      <x>431</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_up.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonChUp">
+    <property name="geometry">
+     <rect>
+      <x>131</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_up.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonXDn">
+    <property name="geometry">
+     <rect>
+      <x>431</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_down.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonChDn">
+    <property name="geometry">
+     <rect>
+      <x>131</x>
+      <y>56</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_down.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonWUp">
+    <property name="geometry">
+     <rect>
+      <x>1031</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_up.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonHUp">
+    <property name="geometry">
+     <rect>
+      <x>1331</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_up.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSUp">
+    <property name="geometry">
+     <rect>
+      <x>1631</x>
+      <y>11</y>
+      <width>91</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/arrow_up.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonClose">
+    <property name="geometry">
+     <rect>
+      <x>1811</x>
+      <y>11</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/previous.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>75</width>
+      <height>75</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonReload">
+    <property name="geometry">
+     <rect>
+      <x>1721</x>
+      <y>11</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(67, 74, 86);
+}
+QPushButton:focus
+{
+	background-color: rgb(152, 14, 69);
+}
+QPushButton:disabled
+{
+	color: gray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/images/reload.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>75</width>
+      <height>75</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

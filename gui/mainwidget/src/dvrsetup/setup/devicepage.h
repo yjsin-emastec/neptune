@@ -41,6 +41,9 @@ signals:
 	void closeSetupMenu(void);
     void makeTransparent(int n);
     void videoInputPreview();
+    void viewMarkerEdit(int state);
+    void changeMarkerChannel(int ch);
+    void updateMarker(QPoint p1, QPoint p2, QPoint p3, QPoint p4);
 
 public slots:
 	void onButtonVideo(void);
@@ -60,6 +63,9 @@ public slots:
 
     void onMakeTransparent(int n);
     void onVideoInputPreview();
+    void onViewMarkerEdit(int state);
+    void onChangeMarkerChannel(int ch);
+    void onUpdateMarker(QPoint p1, QPoint p2, QPoint p3, QPoint p4);
 
 private:
 	TextMessageDialog   *msgBox;

@@ -3,6 +3,7 @@
 
 #include <QtGui/QDialog>
 #include "textmessagebox/textmessagedialog.h"
+#include "editmarkerdialog.h"
 #include "DVR.h"
 
 #if defined(HI3521)
@@ -27,141 +28,118 @@ public:
     void initTriggerInputConfig(void);
 
 signals:
+    void viewMarkerEdit(int state);
+    void makeTransparent(int n);
+    void changeMarkerChannel(int ch);
+    void updateMarker(QPoint p1, QPoint p2, QPoint p3, QPoint p4);
 
 private slots:
-
     void onButtonSourceAll();
     void onButtonDelayAll();
     void onButtonPriorityAll();
     void onButtonAudioAll();
+    void onButtonMarkerAll();
 
-    void onButtonSourceUp1();
-    void onButtonSourceUp2();
-    void onButtonSourceUp3();
-    void onButtonSourceUp4();
-    void onButtonSourceUp5();
-    void onButtonSourceUp6();
-    void onButtonSourceUp7();
-    void onButtonSourceUp8();
+    void onButtonSource1();
+    void onButtonSource2();
+    void onButtonSource3();
+    void onButtonSource4();
+    void onButtonSource5();
+    void onButtonSource6();
+    void onButtonSource7();
+    void onButtonSource8();
 
-    void onButtonSourceDn1();
-    void onButtonSourceDn2();
-    void onButtonSourceDn3();
-    void onButtonSourceDn4();
-    void onButtonSourceDn5();
-    void onButtonSourceDn6();
-    void onButtonSourceDn7();
-    void onButtonSourceDn8();
+    void onButtonDelay1();
+    void onButtonDelay2();
+    void onButtonDelay3();
+    void onButtonDelay4();
+    void onButtonDelay5();
+    void onButtonDelay6();
+    void onButtonDelay7();
+    void onButtonDelay8();
 
-    void onButtonDelayUp1();
-    void onButtonDelayUp2();
-    void onButtonDelayUp3();
-    void onButtonDelayUp4();
-    void onButtonDelayUp5();
-    void onButtonDelayUp6();
-    void onButtonDelayUp7();
-    void onButtonDelayUp8();
+    void onButtonPriority1();
+    void onButtonPriority2();
+    void onButtonPriority3();
+    void onButtonPriority4();
+    void onButtonPriority5();
+    void onButtonPriority6();
+    void onButtonPriority7();
+    void onButtonPriority8();
 
-    void onButtonDelayDn1();
-    void onButtonDelayDn2();
-    void onButtonDelayDn3();
-    void onButtonDelayDn4();
-    void onButtonDelayDn5();
-    void onButtonDelayDn6();
-    void onButtonDelayDn7();
-    void onButtonDelayDn8();
+    void onButtonAudio1();
+    void onButtonAudio2();
+    void onButtonAudio3();
+    void onButtonAudio4();
+    void onButtonAudio5();
+    void onButtonAudio6();
+    void onButtonAudio7();
+    void onButtonAudio8();
 
-    void onButtonPriorityUp1();
-    void onButtonPriorityUp2();
-    void onButtonPriorityUp3();
-    void onButtonPriorityUp4();
-    void onButtonPriorityUp5();
-    void onButtonPriorityUp6();
-    void onButtonPriorityUp7();
-    void onButtonPriorityUp8();
-
-    void onButtonPriorityDn1();
-    void onButtonPriorityDn2();
-    void onButtonPriorityDn3();
-    void onButtonPriorityDn4();
-    void onButtonPriorityDn5();
-    void onButtonPriorityDn6();
-    void onButtonPriorityDn7();
-    void onButtonPriorityDn8();
-
-    void onButtonAudioUp1();
-    void onButtonAudioUp2();
-    void onButtonAudioUp3();
-    void onButtonAudioUp4();
-    void onButtonAudioUp5();
-    void onButtonAudioUp6();
-    void onButtonAudioUp7();
-    void onButtonAudioUp8();
-
-    void onButtonAudioDn1();
-    void onButtonAudioDn2();
-    void onButtonAudioDn3();
-    void onButtonAudioDn4();
-    void onButtonAudioDn5();
-    void onButtonAudioDn6();
-    void onButtonAudioDn7();
-    void onButtonAudioDn8();
+    void onButtonMarker1();
+    void onButtonMarker2();
+    void onButtonMarker3();
+    void onButtonMarker4();
+    void onButtonMarker5();
+    void onButtonMarker6();
+    void onButtonMarker7();
+    void onButtonMarker8();
 
     void onButtonSave();
     void onButtonDefault();
+    void onButtonEditMarker();
 
+    void onChangeMarkerChannel(int ch);
+    void onUpdateMarker(QPoint p1, QPoint p2, QPoint p3, QPoint p4);
 
 protected:
     void keyPressEvent(QKeyEvent *event);
 
-
 private:
-
     QFrame *frame;
 
-    QPushButton *buttonSourceUp[NUMOFCH];
-    QPushButton *buttonSourceDn[NUMOFCH];
-    QPushButton *buttonDelayUp[NUMOFCH];
-    QPushButton *buttonDelayDn[NUMOFCH];
-    QPushButton *buttonPriorityUp[NUMOFCH];
-    QPushButton *buttonPriorityDn[NUMOFCH];
-    QPushButton *buttonAudioUp[NUMOFCH];
-    QPushButton *buttonAudioDn[NUMOFCH];
-    QPushButton *buttonSourceAll, *buttonDelayAll, *buttonPriorityAll, *buttonAudioAll;
+    QLabel *labelTrigger[NUMOFCH];
+    QLabel *labelAll;
+    QLabel *labelSourceAll;
+    QLabel *labelDelayAll;
+    QLabel *labelPriorityAll;
+    QLabel *labelAudioAll;
+    QLabel *labelMarkerAll;
 
-    QLabel *labelTrigger[NUMOFCH+1];
-    QLabel *labelSource[NUMOFCH+1];
-    QLabel *labelDelay[NUMOFCH+1];
-    QLabel *labelPriority[NUMOFCH+1];
-    QLabel *labelAudio[NUMOFCH+1];
+    QPushButton *buttonSourceAll, *buttonDelayAll, *buttonPriorityAll, *buttonAudioAll, *buttonMarkerAll;
+    QPushButton *buttonSource[NUMOFCH];
+    QPushButton *buttonDelay[NUMOFCH];
+    QPushButton *buttonPriority[NUMOFCH];
+    QPushButton *buttonAudio[NUMOFCH];
+    QPushButton *buttonMarker[NUMOFCH];
 
     QPushButton *buttonDefault;
+    QPushButton *buttonEditMarker;
     QPushButton *buttonSave;
     QPushButton *buttonClose;
 
-    int infoSource[NUMOFCH+1];
-    int infoDelay[NUMOFCH+1];
-    int infoPriority[NUMOFCH+1];
-    bool infoAudio[NUMOFCH+1];
+    int infoSource[NUMOFCH];
+    int infoDelay[NUMOFCH];
+    int infoPriority[NUMOFCH];
+    bool infoAudio[NUMOFCH];
+    bool infoMarker[NUMOFCH];
 
     void updateSourceLabel(int ch);
     void updateDelayLabel(int ch);
     void updatePriorityLabel(int ch);
     void updateAudioLabel(int ch);
+    void updateMarkerLabel(int ch);
 
-    void onButtonSourceUp(int ch);
-    void onButtonSourceDn(int ch);
-    void onButtonDelayUp(int ch);
-    void onButtonDelayDn(int ch);
-    void onButtonPriorityUp(int ch);
-    void onButtonPriorityDn(int ch);
-    void onButtonAudioUp(int ch);
-    void onButtonAudioDn(int ch);
+    void onButtonSource(int ch);
+    void onButtonDelay(int ch);
+    void onButtonPriority(int ch);
+    void onButtonAudio(int ch);
+    void onButtonMarker(int ch);
 
     int checkPriorityRedundant();
 
     TextMessageDialog *msgBox;
-
+    EditMarkerDialog *editMarkerDialog;
 };
 
 #endif // TRIGGERINPUTDIALOG_H

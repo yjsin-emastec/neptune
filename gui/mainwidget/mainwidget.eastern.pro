@@ -115,7 +115,9 @@ SOURCES      += src/main.cpp                                                    
                 src/search/systemlogpage.cpp                                                         \
                 src/search/functiondialog.cpp                                                        \
                 src/dvrsetup/device/videoinput/videoinputbar.cpp                                     \
-                src/ui/customwidget/customimagelabel.cpp
+                src/ui/customwidget/customimagelabel.cpp                                             \
+                src/main/markerdialog.cpp                                                            \
+                src/dvrsetup/device/triggerinput/editmarkerdialog.cpp
 
 HEADERS      += src/login/logindialog.h                                                              \
                 src/ui/keyboard/uikeyboarddialog.h                                                   \
@@ -167,7 +169,9 @@ HEADERS      += src/login/logindialog.h                                         
                 src/search/systemlogpage.h                                                           \
                 src/search/functiondialog.h                                                          \
                 src/dvrsetup/device/videoinput/videoinputbar.h                                       \
-                src/ui/customwidget/customimagelabel.h
+                src/ui/customwidget/customimagelabel.h                                               \
+                src/main/markerdialog.h                                                              \
+                src/dvrsetup/device/triggerinput/editmarkerdialog.h
 
 FORMS        += src/login/logindialog.ui                                                             \
                 src/ui/numkeypaddialog/numkeypaddialog.ui                                            \
@@ -252,7 +256,9 @@ FORMS        += src/login/logindialog.ui                                        
                 src/dvrsetup/device/videoinput/videoinputdialog_ch4.ui                               \
                 src/dvrsetup/device/videoinput/videoinputdialog1080p_ch4.ui                          \
                 src/dvrsetup/device/triggerinput/triggerinputdialog_ch4.ui                           \
-                src/dvrsetup/device/triggerinput/triggerinputdialog1080p_ch4.ui
+                src/dvrsetup/device/triggerinput/triggerinputdialog1080p_ch4.ui                      \
+                src/dvrsetup/device/triggerinput/editmarkerdialog.ui                                 \
+                src/dvrsetup/device/triggerinput/editmarkerdialog1080p.ui
 
 RESOURCES    += mainwidget.qrc
 

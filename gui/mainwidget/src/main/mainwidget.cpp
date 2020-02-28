@@ -478,6 +478,29 @@ void MainWidget::onSaveDevicePage(int type)
             appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
         }
 
+        if( markerDialog->isChangedConfig() )
+        {
+            QString str;
+#if 1       //marker config don't exist
+            str = QString("Marker log Save");
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+#else
+            str = QString("Marker Left S: %1, %2 E: %3, %4").arg(
+                        QString::fromUtf8(DeviceCfg.trigger_marker_left_start_x),
+                        QString::fromUtf8(DeviceCfg.trigger_marker_left_start_y),
+                        QString::fromUtf8(DeviceCfg.trigger_marker_left_end_x),
+                        QString::fromUtf8(DeviceCfg.trigger_marker_left_end_y));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+
+            str = QString("Marker Right S: %1, %2 E: %3, %4").arg(
+                        QString::fromUtf8(DeviceCfg.trigger_marker_right_start_x),
+                        QString::fromUtf8(DeviceCfg.trigger_marker_right_start_y),
+                        QString::fromUtf8(DeviceCfg.trigger_marker_right_end_x),
+                        QString::fromUtf8(DeviceCfg.trigger_marker_right_end_y));
+            appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
+#endif
+        }
+
         setConfigString();
         appmgr_cfg_change();
         memcpy(&cfgMain, &cfgSetup, sizeof(cfg_setup_data_t));
@@ -528,6 +551,7 @@ void MainWidget::onSaveDevicePage(int type)
             appmgr_write_system_log(SYSTEM_LOG_TYPE_ALL, str.toStdString().c_str());
         }
 */
+
 #endif
         setConfigString();
         appmgr_cfg_change();
@@ -1013,15 +1037,17 @@ void MainWidget::createPopupDialog()
     {
         setupDialog = new SetupDialog(this);
 
-        connect(setupDialog, SIGNAL(setupChangeSplit(int)),    this,        SLOT(splitChannelBySetup(int)));
-        connect(setupDialog, SIGNAL(saveSystemPage(int, int)), this,        SLOT(onSaveSystemPage(int, int)));
-        connect(setupDialog, SIGNAL(saveRecordPage(int)),      this,        SLOT(onSaveRecordPage(int)));
-        connect(setupDialog, SIGNAL(saveDisplayPage(int)),     this,        SLOT(onSaveDisplayPage(int)));
-        connect(setupDialog, SIGNAL(saveDevicePage(int)),      this,        SLOT(onSaveDevicePage(int)));
-        connect(setupDialog, SIGNAL(videoInputPreview()),      this,        SLOT(onVideoInputPreview()));
-        connect(this,        SIGNAL(configProgress(int, int)), setupDialog, SLOT(updateConfigProgress(int, int)));
-        connect(this,        SIGNAL(upgradeProgress(int)),     setupDialog, SLOT(onUpgradeProgress(int)));
-
+        connect(setupDialog, SIGNAL(setupChangeSplit(int)),                     this,        SLOT(splitChannelBySetup(int)));
+        connect(setupDialog, SIGNAL(saveSystemPage(int, int)),                  this,        SLOT(onSaveSystemPage(int, int)));
+        connect(setupDialog, SIGNAL(saveRecordPage(int)),                       this,        SLOT(onSaveRecordPage(int)));
+        connect(setupDialog, SIGNAL(saveDisplayPage(int)),                      this,        SLOT(onSaveDisplayPage(int)));
+        connect(setupDialog, SIGNAL(saveDevicePage(int)),                       this,        SLOT(onSaveDevicePage(int)));
+        connect(setupDialog, SIGNAL(videoInputPreview()),                       this,        SLOT(onVideoInputPreview()));
+        connect(setupDialog, SIGNAL(viewMarkerEdit(int)),                       this,        SLOT(onViewMarkerEdit(int)));
+        connect(setupDialog, SIGNAL(changeMarkerChannel(int)),                  this,        SLOT(onChangeMarkerChannel(int)));
+        connect(setupDialog, SIGNAL(updateMarker(QPoint,QPoint,QPoint,QPoint)), this,        SLOT(onUpdateMarker(QPoint, QPoint, QPoint, QPoint)));
+        connect(this,        SIGNAL(configProgress(int, int)),                  setupDialog, SLOT(updateConfigProgress(int, int)));
+        connect(this,        SIGNAL(upgradeProgress(int)),                      setupDialog, SLOT(onUpgradeProgress(int)));
 
         if(mainHeight == 720)
         {
@@ -1081,6 +1107,12 @@ void MainWidget::createPopupDialog()
     }
 
     qDebug("%s - \n", __func__);
+}
+void MainWidget::createMarker()
+{
+    markerDialog = new MarkerDialog(this);
+    markerDialog->resize(mainWidth, mainHeight);
+    markerDialog->move(0, 0);
 }
 bool MainWidget::checkPassword(int mode, int *userId)
 {
@@ -2695,4 +2727,43 @@ void MainWidget::onVideoInputPreview()
     appmgr_save_setup(0, &cfgMain);
     appmgr_cfg_sync();
     appmgr_config_videoIn();
+}
+void MainWidget::onViewMarkerEdit(int state)
+{
+    if( state )
+    {
+        markerDialog->initMarker();
+        markerDialog->show();
+    }
+    else
+    {
+        markerDialog->hide();
+        eventPopupOneChannel(EVENT_POPUP_SENSOR_OFF, 0);
+    }
+}
+void MainWidget::onChangeMarkerChannel(int ch)
+{
+    int paneWidth, paneHeight;
+
+    for(int ii = 0; ii < devInfo.videoNum; ii++)
+    {
+        videoPane[ii]->zoomAction = false;
+        videoPane[ii]->setAudioOutput(0);
+        videoPane[ii]->hide();
+    }
+
+    videoPane[ch]->setGpsStatus(appmgr_get_gps_connected());
+    paneWidth  = (int)(mainWidth  / Split_1);
+    paneHeight = (int)(mainHeight / Split_1);
+
+    appmgr_set_video_split(ch, Split_1);
+
+    videoPane[ch]->resize(paneWidth, paneHeight);
+    videoPane[ch]->move((0%Split_1) * paneWidth, (0/Split_1) * paneHeight);
+
+    videoPane[ch]->show();
+}
+void MainWidget::onUpdateMarker(QPoint p1, QPoint p2, QPoint p3, QPoint p4)
+{
+    markerDialog->updateMarker(p1, p2, p3, p4);
 }

@@ -53,23 +53,26 @@ SetupDialog::SetupDialog(QWidget *parent)
 
     createTabLayout();
 
-    connect(systemPage,     SIGNAL(saveSystemPage(int, int)),  this,        SLOT(onSaveSystemPage(int, int)));
-    connect(systemPage,     SIGNAL(escapeTabFocus(void)),      this,        SLOT(onEscapeTabFocus(void)));
-    connect(systemPage,     SIGNAL(closeSetupMenu(void)),      this,        SLOT(reject()));
-    connect(recordPage,     SIGNAL(saveRecordPage(int)),       this,        SLOT(onSaveRecordPage(int)));
-    connect(recordPage,     SIGNAL(escapeTabFocus(void)),      this,        SLOT(onEscapeTabFocus(void)));
-    connect(recordPage,     SIGNAL(closeSetupMenu(void)),      this,        SLOT(reject()));
-    connect(displayPage,    SIGNAL(saveDisplayPage(int)),      this,        SLOT(onSaveDisplayPage(int)));
-    connect(displayPage,    SIGNAL(escapeTabFocus(void)),      this,        SLOT(onEscapeTabFocus(void)));
-    connect(displayPage,    SIGNAL(closeSetupMenu(void)),      this,        SLOT(reject()));
-    connect(devicePage,     SIGNAL(saveDevicePage(int)),       this,        SLOT(onSaveDevicePage(int)));
-    connect(devicePage,     SIGNAL(escapeTabFocus(void)),      this,        SLOT(onEscapeTabFocus(void)));
-    connect(devicePage,     SIGNAL(closeSetupMenu(void)),      this,        SLOT(reject()));
-    connect(devicePage,     SIGNAL(makeTransparent(int)),      this,        SLOT(onMakeTransparent(int)));
-    connect(devicePage,     SIGNAL(videoInputPreview()),       this,        SLOT(onVideoInputPreview()));
-    connect(this,           SIGNAL(upgradeProgress(int)),      systemPage,  SLOT(onUpgradeProgress(int)));
-    connect(tabLayout,      SIGNAL(currentChanged(int)),       this,        SLOT(setupPageChanged(int)));
-    connect(button_Cancel,  SIGNAL(released()),                this,        SLOT(reject()));
+    connect(systemPage,     SIGNAL(saveSystemPage(int, int)),                   this,        SLOT(onSaveSystemPage(int, int)));
+    connect(systemPage,     SIGNAL(escapeTabFocus(void)),                       this,        SLOT(onEscapeTabFocus(void)));
+    connect(systemPage,     SIGNAL(closeSetupMenu(void)),                       this,        SLOT(reject()));
+    connect(recordPage,     SIGNAL(saveRecordPage(int)),                        this,        SLOT(onSaveRecordPage(int)));
+    connect(recordPage,     SIGNAL(escapeTabFocus(void)),                       this,        SLOT(onEscapeTabFocus(void)));
+    connect(recordPage,     SIGNAL(closeSetupMenu(void)),                       this,        SLOT(reject()));
+    connect(displayPage,    SIGNAL(saveDisplayPage(int)),                       this,        SLOT(onSaveDisplayPage(int)));
+    connect(displayPage,    SIGNAL(escapeTabFocus(void)),                       this,        SLOT(onEscapeTabFocus(void)));
+    connect(displayPage,    SIGNAL(closeSetupMenu(void)),                       this,        SLOT(reject()));
+    connect(devicePage,     SIGNAL(saveDevicePage(int)),                        this,        SLOT(onSaveDevicePage(int)));
+    connect(devicePage,     SIGNAL(escapeTabFocus(void)),                       this,        SLOT(onEscapeTabFocus(void)));
+    connect(devicePage,     SIGNAL(closeSetupMenu(void)),                       this,        SLOT(reject()));
+    connect(devicePage,     SIGNAL(makeTransparent(int)),                       this,        SLOT(onMakeTransparent(int)));
+    connect(devicePage,     SIGNAL(videoInputPreview()),                        this,        SLOT(onVideoInputPreview()));
+    connect(devicePage,     SIGNAL(viewMarkerEdit(int)),                        this,        SLOT(onViewMarkerEdit(int)));
+    connect(devicePage,     SIGNAL(changeMarkerChannel(int)),                   this,        SLOT(onChangeMarkerChannel(int)));
+    connect(devicePage,     SIGNAL(updateMarker(QPoint,QPoint,QPoint,QPoint)),  this,        SLOT(onUpdateMarker(QPoint,QPoint,QPoint,QPoint)));
+    connect(this,           SIGNAL(upgradeProgress(int)),                       systemPage,  SLOT(onUpgradeProgress(int)));
+    connect(tabLayout,      SIGNAL(currentChanged(int)),                        this,        SLOT(setupPageChanged(int)));
+    connect(button_Cancel,  SIGNAL(released()),                                 this,        SLOT(reject()));
 
     indexSystem = indexRecord = indexDisplay = indexDevice = 0;
 }
@@ -238,6 +241,18 @@ void SetupDialog::onMakeTransparent(int n)
 void SetupDialog::onVideoInputPreview()
 {
     emit videoInputPreview();
+}
+void SetupDialog::onViewMarkerEdit(int state)
+{
+    emit viewMarkerEdit(state);
+}
+void SetupDialog::onChangeMarkerChannel(int ch)
+{
+    emit changeMarkerChannel(ch);
+}
+void SetupDialog::onUpdateMarker(QPoint p1, QPoint p2, QPoint p3, QPoint p4)
+{
+    emit updateMarker(p1, p2, p3, p4);
 }
 void SetupDialog::mousePressEvent(QMouseEvent *event)
 {

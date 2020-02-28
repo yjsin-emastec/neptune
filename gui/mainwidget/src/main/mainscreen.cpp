@@ -344,8 +344,38 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
             }
 
             videoPane[ch]->show();
+
             emit updateSplitButton();
             emit updateTriggerState(isTrigger);
+
+#if 1       //marker config don't exist
+            //markerDialog->initMarker();
+            //markerDialog->show();
+#else
+            char *cmpItem;
+            switch(ch)
+            {
+                case 0 :    { cmpItem = DeviceCfg.trigger1_marker; break; }
+                case 1 :    { cmpItem = DeviceCfg.trigger2_marker; break; }
+                case 2 :    { cmpItem = DeviceCfg.trigger3_marker; break; }
+                case 3 :    { cmpItem = DeviceCfg.trigger4_marker; break; }
+                case 4 :    { cmpItem = DeviceCfg.trigger5_marker; break; }
+                case 5 :    { cmpItem = DeviceCfg.trigger6_marker; break; }
+                case 6 :    { cmpItem = DeviceCfg.trigger7_marker; break; }
+                case 7 :    { cmpItem = DeviceCfg.trigger8_marker; break; }
+                default :   { cmpItem = NULL; }
+            }
+
+            if( cmpItem == NULL )
+            {
+                qDebug("[Error] %s, DeviceCfg struct member does not exist.", __func__ );
+            }
+            else if( utils_cfg_cmp_item( cmpItem, "ON" ) )
+            {
+                markerDialog->initMarker();
+                markerDialog->show();
+            }
+#endif
         }
         else if(type == EVENT_POPUP_SENSOR_OFF)
         {
@@ -368,6 +398,11 @@ void MainWidget::eventPopupOneChannel(int type, int ch)
             splitScreen(currentSplit);
 
             emit updateTriggerState(isTrigger);
+
+            if( markerDialog->isVisible() )
+            {
+                markerDialog->hide();
+            }
         }
     }
 }

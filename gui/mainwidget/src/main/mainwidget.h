@@ -5,6 +5,7 @@
 #include "DVR.h"
 #include "eventrecvthread.h"
 #include "mainMenu.h"
+#include "markerdialog.h"
 
 class MainMenu;
 class SetupDialog;
@@ -92,6 +93,9 @@ public slots:
     void onChangeSplit();
     void onChangePrevAudio(int index);
     void onVideoInputPreview();
+    void onViewMarkerEdit(int state);
+    void onChangeMarkerChannel(int ch);
+    void onUpdateMarker(QPoint p1, QPoint p2, QPoint p3, QPoint p4);
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -109,6 +113,7 @@ private:
     void createPopupDialog();
     void createVideoPane(int isReset);
     void createMainMenu(void);
+    void createMarker();
     void loadStyleSheet();
     void showOsd(int show);
     void passNumpadKeypadEvent(unsigned char code);
@@ -151,6 +156,7 @@ private:
     QTranslator                 *selTranslator;
     VideoPane                   *videoPane[MAX_VIDEO_CH+1];
     live_event_t                 liveEvent;
+    MarkerDialog                *markerDialog;
 
     int                          preAudio,
                                  keyAudio,

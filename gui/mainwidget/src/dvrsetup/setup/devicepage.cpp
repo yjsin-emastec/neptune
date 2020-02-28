@@ -178,6 +178,10 @@ void DevicePage::onButtonTrigger(void)
     if(!triggerInputDialog)
     {
         triggerInputDialog = new TriggerInputDialog(this);
+        connect(triggerInputDialog, SIGNAL(viewMarkerEdit(int)),  this, SLOT(onViewMarkerEdit(int)));
+        connect(triggerInputDialog, SIGNAL(makeTransparent(int)), this, SLOT(onMakeTransparent(int)));
+        connect(triggerInputDialog, SIGNAL(changeMarkerChannel(int)), this, SLOT(onChangeMarkerChannel(int)));
+        connect(triggerInputDialog, SIGNAL(updateMarker(QPoint,QPoint,QPoint,QPoint)), this, SLOT(onUpdateMarker(QPoint,QPoint,QPoint,QPoint)));
 
         if(!triggerInputDialog)
         {
@@ -200,6 +204,18 @@ void DevicePage::onButtonTrigger(void)
 
     delete triggerInputDialog;
     triggerInputDialog = NULL;
+}
+void DevicePage::onViewMarkerEdit(int state)
+{
+    emit viewMarkerEdit(state);
+}
+void DevicePage::onChangeMarkerChannel(int ch)
+{
+    emit changeMarkerChannel(ch);
+}
+void DevicePage::onUpdateMarker(QPoint p1, QPoint p2, QPoint p3, QPoint p4)
+{
+    emit updateMarker(p1, p2, p3, p4);
 }
 void DevicePage::onButtonGsensor(void)
 {

@@ -501,6 +501,7 @@ void MainWidget::initializeSystem()
     createStatusBar(0);
     createPlayBar(); 
     createMainMenu();
+    createMarker();
 
     isShowOsd = 2;
     showOsd(0);

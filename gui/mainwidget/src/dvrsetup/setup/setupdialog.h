@@ -39,6 +39,9 @@ signals:
     void saveDevicePage(int type);
     void upgradeProgress(int percent);
     void videoInputPreview();
+    void viewMarkerEdit(int state);
+    void changeMarkerChannel(int ch);
+    void updateMarker(QPoint p1, QPoint p2, QPoint p3, QPoint p4);
 
 protected:
     void keyPressEvent(QKeyEvent *event);
@@ -57,6 +60,9 @@ private slots:
     void onEscapeTabFocus(void);
     void onMakeTransparent(int n);
     void onVideoInputPreview();
+    void onViewMarkerEdit(int state);
+    void onChangeMarkerChannel(int ch);
+    void onUpdateMarker(QPoint p1, QPoint p2, QPoint p3, QPoint p4);
 
 private:
     void createTabLayout();

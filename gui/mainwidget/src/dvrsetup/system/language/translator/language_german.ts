@@ -1014,26 +1014,26 @@ Speicher  ist nicht vorhanden.</translation>
         <translation>HDD Format</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="270"/>
+        <location filename="../../../setup/devicepage.cpp" line="287"/>
         <source>HDD FORMAT</source>
         <translation>HDD Format</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="270"/>
+        <location filename="../../../setup/devicepage.cpp" line="287"/>
         <source>Are you sure to format HDD?
 System will restart after format.</source>
         <translation>Sind Sie sicher, HDD zu formatieren?
 Das System startet nach dem Formatieren neu.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="271"/>
+        <location filename="../../../setup/devicepage.cpp" line="288"/>
         <source>Are you sure to format SSD?
 System will restart after format.</source>
         <translation>Sind Sie sicher, SSD zu formatieren?
 Das System startet nach dem Formatieren neu.</translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="292"/>
+        <location filename="../../../setup/devicepage.cpp" line="309"/>
         <source>SSD does not exist.</source>
         <translation>Speicher  ist nicht vorhanden.</translation>
     </message>
@@ -1052,8 +1052,8 @@ Das System startet nach dem Formatieren neu.
 </translation>
     </message>
     <message>
-        <location filename="../../../setup/devicepage.cpp" line="271"/>
-        <location filename="../../../setup/devicepage.cpp" line="292"/>
+        <location filename="../../../setup/devicepage.cpp" line="288"/>
+        <location filename="../../../setup/devicepage.cpp" line="309"/>
         <source>SSD FORMAT</source>
         <translation>SSD Format</translation>
     </message>
@@ -1603,6 +1603,27 @@ Wenn ja, startet das System neu.</translation>
         <location filename="../../../setup/displaypage1080p.ui" line="206"/>
         <source>OSD</source>
         <translation>OSD</translation>
+    </message>
+</context>
+<context>
+    <name>EditMarkerDialog</name>
+    <message>
+        <location filename="../../../device/triggerinput/editmarkerdialog.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Dialog</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/editmarkerdialog.cpp" line="289"/>
+        <source>Â°</source>
+        <translation>°</translation>
+    </message>
+</context>
+<context>
+    <name>EditMarkerDialog1080p</name>
+    <message>
+        <location filename="../../../device/triggerinput/editmarkerdialog1080p.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Dialog</translation>
     </message>
 </context>
 <context>
@@ -3073,7 +3094,7 @@ Stumm/1/2/3/4</translation>
         <location filename="../../../../main/maineventproc.cpp" line="1312"/>
         <location filename="../../../../main/maineventproc.cpp" line="1380"/>
         <location filename="../../../../main/maineventproc.cpp" line="1466"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1509"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1511"/>
         <location filename="../../../../main/mainscreen.cpp" line="100"/>
         <location filename="../../../../main/mainscreen.cpp" line="150"/>
         <source>NOTICE</source>
@@ -3089,7 +3110,7 @@ Stumm/1/2/3/4</translation>
         <location filename="../../../../main/maineventproc.cpp" line="1312"/>
         <location filename="../../../../main/maineventproc.cpp" line="1380"/>
         <location filename="../../../../main/maineventproc.cpp" line="1466"/>
-        <location filename="../../../../main/maineventproc.cpp" line="1509"/>
+        <location filename="../../../../main/maineventproc.cpp" line="1511"/>
         <location filename="../../../../main/mainscreen.cpp" line="100"/>
         <location filename="../../../../main/mainscreen.cpp" line="150"/>
         <source>Current status is trigger.</source>
@@ -3258,8 +3279,8 @@ Aktueller Status ist TRIGGER.</translation>
     </message>
     <message>
         <location filename="../../../../main/maineventproc.cpp" line="811"/>
-        <location filename="../../../../main/mainwidget.cpp" line="635"/>
-        <location filename="../../../../main/mainwidget.cpp" line="1136"/>
+        <location filename="../../../../main/mainwidget.cpp" line="692"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1206"/>
         <source>POWER OFF</source>
         <translation>AUSSCHALTEN</translation>
     </message>
@@ -3282,24 +3303,24 @@ Do you want to shutdown the system?</source>
 Möchten Sie das System herunterfahren?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="635"/>
+        <location filename="../../../../main/mainwidget.cpp" line="692"/>
         <source>System was shutdown successfully.
 Turn off the power.</source>
         <translation>Das System wurde erfolgreich beendet.
 Schalten Sie die Stromversorgung aus.</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1136"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1206"/>
         <source>Do you want to shutdown the system?</source>
         <translation>Möchten Sie das System herunterfahren?</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1627"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1697"/>
         <source>SEARCH</source>
         <translation>SUCHE</translation>
     </message>
     <message>
-        <location filename="../../../../main/mainwidget.cpp" line="1627"/>
+        <location filename="../../../../main/mainwidget.cpp" line="1697"/>
         <source>No SSD</source>
         <translation>Kein SSD</translation>
     </message>
@@ -5198,62 +5219,62 @@ An</translation>
         <translation>Zumachen</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="80"/>
+        <location filename="../../../setup/setupdialog.cpp" line="86"/>
         <source>System</source>
         <translation>System</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="81"/>
+        <location filename="../../../setup/setupdialog.cpp" line="87"/>
         <source>Record</source>
         <translation>Aufnahme</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="82"/>
+        <location filename="../../../setup/setupdialog.cpp" line="88"/>
         <source>Display</source>
         <translation>Anzeige</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="83"/>
+        <location filename="../../../setup/setupdialog.cpp" line="89"/>
         <source>Device</source>
         <translation>Gerät</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="106"/>
+        <location filename="../../../setup/setupdialog.cpp" line="112"/>
         <source> SYSTEM </source>
         <translation> SYSTEM </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="107"/>
+        <location filename="../../../setup/setupdialog.cpp" line="113"/>
         <source> RECORD </source>
         <translation> AUFNAHME </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="108"/>
+        <location filename="../../../setup/setupdialog.cpp" line="114"/>
         <source> DISPLAY </source>
         <translation> ANZEIGE </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="109"/>
+        <location filename="../../../setup/setupdialog.cpp" line="115"/>
         <source> DEVICE </source>
         <translation> GERÄT </translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="113"/>
+        <location filename="../../../setup/setupdialog.cpp" line="119"/>
         <source>SYSTEM</source>
         <translation>SYSTEM</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="114"/>
+        <location filename="../../../setup/setupdialog.cpp" line="120"/>
         <source>RECORD</source>
         <translation>AUFNAHME</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="115"/>
+        <location filename="../../../setup/setupdialog.cpp" line="121"/>
         <source>DISPLAY</source>
         <translation>ANZEIGE</translation>
     </message>
     <message>
-        <location filename="../../../setup/setupdialog.cpp" line="116"/>
+        <location filename="../../../setup/setupdialog.cpp" line="122"/>
         <source>DEVICE</source>
         <translation>GERÄT</translation>
     </message>
@@ -6009,6 +6030,12 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
         <translation>Alle</translation>
     </message>
     <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="993"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="1025"/>
+        <source>Marker</source>
+        <translation>Marker</translation>
+    </message>
+    <message>
         <source>Trigger5</source>
         <translation type="obsolete">Trigger5</translation>
     </message>
@@ -6045,8 +6072,8 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
         <translation type="obsolete">Trigger4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1370"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1515"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1285"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1430"/>
         <source>PRIORITY REDUNDANT</source>
         <translation>PRIORITÄT FEHLER</translation>
     </message>
@@ -6066,30 +6093,40 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
         <translation type="obsolete">WARNUNG</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="368"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="860"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="370"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="734"/>
         <source>Trigger</source>
         <translation>Trigger</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="992"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="905"/>
         <source>CAM</source>
         <translation>KAM</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="996"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="909"/>
         <source>Sec</source>
         <translation>Sek</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1371"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1516"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="930"/>
+        <source>On</source>
+        <translation>AN</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="934"/>
+        <source>Off</source>
+        <translation>Aus</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1286"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1431"/>
         <source>Priority is redundant.</source>
         <translation>Die Prioritäten wurden dupliziert.</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1371"/>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1516"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1286"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1431"/>
         <source>Please check priority.</source>
         <translation>Bitte überprüfen Sie die Priorität.</translation>
     </message>
@@ -6100,7 +6137,7 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
 %2</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="2989"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="941"/>
         <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1585"/>
         <source>Source</source>
         <translation>Quelle</translation>
@@ -6146,7 +6183,7 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
         <translation type="obsolete">Aufgeteilt 6</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3002"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="954"/>
         <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1598"/>
         <source>Delay</source>
         <translation>Verzögern</translation>
@@ -6236,7 +6273,7 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
         <translation type="obsolete">20 sek</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3015"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="967"/>
         <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1611"/>
         <source>Priority</source>
         <translation>Priorität</translation>
@@ -6258,18 +6295,18 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
         <translation type="obsolete">4</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="3028"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.ui" line="980"/>
         <location filename="../../../device/triggerinput/triggerinputdialog_ch4.ui" line="1624"/>
         <source>Audio</source>
         <translation>Audio</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1010"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="923"/>
         <source>Mute</source>
         <translation>Aus</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="1006"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog.cpp" line="919"/>
         <source>Output</source>
         <translation>An</translation>
     </message>
@@ -6321,41 +6358,47 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
         <translation>Alle</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="2989"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="941"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1585"/>
         <source>Source</source>
         <translation>Quelle</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3002"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="954"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1598"/>
         <source>Delay</source>
         <translation>Verzögern</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3015"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="967"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1611"/>
         <source>Priority</source>
         <translation>Priorität</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="3028"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="980"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="1624"/>
         <source>Audio</source>
         <translation>Audio</translation>
+    </message>
+    <message>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="993"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="1177"/>
+        <source>Marker</source>
+        <translation>Marker</translation>
     </message>
     <message>
         <source>CAM 1</source>
         <translation type="obsolete">KAM 1</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="408"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="332"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="332"/>
         <source>Save</source>
         <translation>Sparen</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="421"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="345"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="345"/>
         <source>Cancle</source>
         <translation>Widerruf</translation>
@@ -6369,7 +6412,7 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
         <translation type="obsolete">Widerruf</translation>
     </message>
     <message>
-        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="434"/>
+        <location filename="../../../device/triggerinput/triggerinputdialog1080p.ui" line="358"/>
         <location filename="../../../device/triggerinput/triggerinputdialog1080p_ch4.ui" line="358"/>
         <source>Default</source>
         <translation>Standard</translation>
@@ -7090,6 +7133,7 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog.ui" line="1299"/>
+        <location filename="../../../device/videoinput/videoinputdialog_ch4.ui" line="527"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
@@ -7098,37 +7142,39 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
         <translation type="obsolete">Kamera1</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="637"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="649"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="674"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="696"/>
         <source>Normal</source>
         <translation>Normal</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="636"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="648"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="673"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="695"/>
         <source>Mirror</source>
         <translation>Spiegel</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="640"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="652"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="677"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="699"/>
         <source>Up</source>
         <translation>Oben</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="654"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="701"/>
         <source>Â°</source>
         <translation>°</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="658"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="663"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="681"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="686"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="705"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="710"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="639"/>
-        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="651"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="676"/>
+        <location filename="../../../device/videoinput/videoinputdialog.cpp" line="698"/>
         <source>Down</source>
         <translation>Nieder</translation>
     </message>
@@ -7272,6 +7318,7 @@ Sie müssen Daten löschen oder Zeit einstellen.</translation>
     </message>
     <message>
         <location filename="../../../device/videoinput/videoinputdialog1080p.ui" line="1311"/>
+        <location filename="../../../device/videoinput/videoinputdialog1080p_ch4.ui" line="546"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
